@@ -2,12 +2,6 @@
 
 - [Algorithm Examples](#algorithm-examples)
   - [Topics](#topics)
-    - [Data Structure](#data-structure)
-      - [Stack](#stack)
-      - [Queue](#queue)
-      - [Linked List](#linked-list)
-      - [Hash Table](#hash-table)
-      - [Hash Function](#hash-function)
     - [Sort](#sort)
       - [Bubble Sort](#bubble-sort)
       - [Bucket Sort](#bucket-sort)
@@ -17,31 +11,9 @@
       - [Merge Sort](#merge-sort)
       - [Quick Sort](#quick-sort)
       - [Selection Sort](#selection-sort)
-    - [Tree](#tree)
-      - [Binary Search Tree](#binary-search-tree)
-      - [Read Black Tree](#read-black-tree)
-      - [Red Black Tree](#red-black-tree)
-      - [B Tree](#b-tree)
-      - [Van Emde Boas Tree](#van-emde-boas-tree)
-    - [Graph](#graph)
-      - [Breadth First Search (BFS)](#breadth-first-search-bfs)
-      - [Depth First Search (DFS)](#depth-first-search-dfs)
-      - [Min Spanning Tree](#min-spanning-tree)
-      - [Min Spanning Tree Kruskal](#min-spanning-tree-kruskal)
-      - [Min Spanning Tree Prim](#min-spanning-tree-prim)
-      - [Dijkstra](#dijkstra)
   - [References](#references)
 
 ## Topics
-
-### Data Structure
-Code: [python](https://), [go](https://), [java](https://)([test](https://))
-
-#### Stack
-#### Queue
-#### Linked List
-#### Hash Table
-#### Hash Function
 
 ### Sort
 
@@ -117,25 +89,6 @@ $$
 - Worst case: $O(n^2)$
   - when sorted in ascending order, if you want to sort in descending order (vice versa)
 - Average case: $O(n^2)$
-
-### Tree
-
-Code: [python](https://), [go](https://), [java](https://)([test](https://))
-#### Binary Search Tree
-#### Read Black Tree
-#### Red Black Tree
-#### B Tree
-#### Van Emde Boas Tree
-
-### Graph
-
-Code: [python](https://), [go](https://), [java](https://)([test](https://))
-#### Breadth First Search (BFS)
-#### Depth First Search (DFS)
-#### Min Spanning Tree
-#### Min Spanning Tree Kruskal
-#### Min Spanning Tree Prim
-#### Dijkstra
 
 ## References
 
