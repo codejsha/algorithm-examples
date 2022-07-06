@@ -1,50 +1,49 @@
 # Algorithm Examples
 
 - [Algorithm Examples](#algorithm-examples)
-  - [Topics](#topics)
-    - [Sort](#sort)
-      - [Bubble Sort](#bubble-sort)
-      - [Bucket Sort](#bucket-sort)
-      - [Counting Sort](#counting-sort)
-      - [Heap Sort](#heap-sort)
-      - [Insertion Sort](#insertion-sort)
-      - [Merge Sort](#merge-sort)
-      - [Quick Sort](#quick-sort)
-      - [Selection Sort](#selection-sort)
+  - [Sort](#sort)
+    - [Bubble Sort](#bubble-sort)
+    - [Bucket Sort](#bucket-sort)
+    - [Counting Sort](#counting-sort)
+    - [Heap Sort](#heap-sort)
+    - [Insertion Sort](#insertion-sort)
+    - [Merge Sort](#merge-sort)
+    - [Quick Sort](#quick-sort)
+    - [Selection Sort](#selection-sort)
   - [References](#references)
 
 ## Topics
 
-### Sort
+## Sort
 
 Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithms/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithms/src/test/java/com/example/demo/sort))
 
-#### Bubble Sort
+### Bubble Sort
 
 - Best case: O(n)
   - if the list is already sorted
 - Worst case: $O(n^2)$
 - Average case: $O(n^2)$
 
-#### Bucket Sort
+### Bucket Sort
 
 - Best case: $O(n + k)$
 - Worst case: $O(n^2)$
 - Average case: $O(n)$
 
-#### Counting Sort
+### Counting Sort
 
 - Best case: $O(n + k)$
 - Worst case: $O(n + k)$
 - Average case: $O(n + k)$
 
-#### Heap Sort
+### Heap Sort
 
 - Best case: $O(n log n)$
 - Worst case: $O(n log n)$
 - Average case: $O(n log n)$
 
-#### Insertion Sort
+### Insertion Sort
 
 - Best case: $O(n)$
   - if the list is already sorted
@@ -57,7 +56,7 @@ Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algor
 - Features
   - one of the fastest algorithms for sorting very small arrays (around 10 elements)
 
-#### Merge Sort
+### Merge Sort
 
 - Best case: $O(n log n)$
   - running time of sorting for input length $n$ is $T(n)$
@@ -74,7 +73,7 @@ $$
 - Features
   - divide and conquer algorithm
 
-#### Quick Sort
+### Quick Sort
 
 - Best case: $O(n log n)$
 - Worst case: $O(n^2)$
@@ -82,7 +81,7 @@ $$
 - Features
   - devide and conquer algorithm
 
-#### Selection Sort
+### Selection Sort
 
 - Best case: $O(n^2)$
   - if the list is already sorted
