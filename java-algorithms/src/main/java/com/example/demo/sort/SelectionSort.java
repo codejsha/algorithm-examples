@@ -14,10 +14,10 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Thread)
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
-public class SelectionSort {
+    public class SelectionSort {
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(InsertionSort.class.getSimpleName())
+                .include(SelectionSort.class.getSimpleName())
                 .forks(1)
                 .build();
         new Runner(opt).run();
