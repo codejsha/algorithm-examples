@@ -79,7 +79,7 @@ $$
 - Worst case: $O(n^2)$
 - Average case: $O(n log n)$
 - Features
-  - devide and conquer algorithm
+  - divide and conquer algorithm
 
 ### Selection Sort
 
