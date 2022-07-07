@@ -12,8 +12,6 @@
     - [Selection Sort](#selection-sort)
   - [References](#references)
 
-## Topics
-
 ## Sort
 
 Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithms/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithms/src/test/java/com/example/demo/sort))
