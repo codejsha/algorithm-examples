@@ -1,7 +1,7 @@
-#include <vector>
-
 #ifndef CPP_ALGORITHM_INTERVAL_SUBSET_SUM_PROBLEM_H
 #define CPP_ALGORITHM_INTERVAL_SUBSET_SUM_PROBLEM_H
+
+#include <vector>
 
 namespace problem
 {
