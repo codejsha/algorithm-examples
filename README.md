@@ -24,8 +24,6 @@
   - if the list is already sorted
 - Worst case: $O(n^2)$
 - Average case: $O(n^2)$
-- References
-  - https://en.wikipedia.org/wiki/Bubble_sort
 
 ### Bucket Sort
 
@@ -40,8 +38,6 @@
 - Best case: $O(n + k)$
 - Worst case: $O(n + k)$
 - Average case: $O(n + k)$
-- References
-  - https://en.wikipedia.org/wiki/Counting_sort
 
 ### Heap Sort
 
@@ -49,8 +45,6 @@
 - Best case: $O(n log n)$
 - Worst case: $O(n log n)$
 - Average case: $O(n log n)$
-- References
-  - https://en.wikipedia.org/wiki/Heapsort
 
 ### Insertion Sort
 
@@ -65,8 +59,6 @@
   - this case has quadratic running time
 - Features
   - one of the fastest algorithms for sorting very small arrays (around 10 elements)
-- References
-  - https://en.wikipedia.org/wiki/Insertion_sort
 
 ### Merge Sort
 
@@ -85,8 +77,6 @@ $$
 - Average case: $O(n log n)$
 - Features
   - divide and conquer algorithm
-- References
-  - https://en.wikipedia.org/wiki/Merge_sort
 
 ### Quick Sort
 
@@ -96,8 +86,6 @@ $$
 - Average case: $O(n log n)$
 - Features
   - divide and conquer algorithm
-- References
-  - https://en.wikipedia.org/wiki/Quicksort
 
 ### Selection Sort
 
@@ -107,8 +95,6 @@ $$
 - Worst case: $O(n^2)$
   - when sorted in ascending order, if you want to sort in descending order (vice versa)
 - Average case: $O(n^2)$
-- References
-  - https://en.wikipedia.org/wiki/Selection_sort
 
 ## Problem solving
 
@@ -124,3 +110,11 @@ Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorit
 
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - 프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략 by 구종만 (Algorithmic Problem Solving Strategies)
+- Wikipedia
+  - https://en.wikipedia.org/wiki/Bubble_sort
+  - https://en.wikipedia.org/wiki/Counting_sort
+  - https://en.wikipedia.org/wiki/Heapsort
+  - https://en.wikipedia.org/wiki/Insertion_sort
+  - https://en.wikipedia.org/wiki/Merge_sort
+  - https://en.wikipedia.org/wiki/Quicksort
+  - https://en.wikipedia.org/wiki/Selection_sort
