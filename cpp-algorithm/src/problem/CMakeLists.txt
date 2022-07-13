@@ -1,0 +1,6 @@
+add_library(problem STATIC interval_subset_sum_problem.cpp)
+target_include_directories(problem PUBLIC .)
+
+add_executable(interval_subset_sum_problem interval_subset_sum_problem.cpp)
+target_link_libraries(interval_subset_sum_problem PRIVATE common_util)
+set_property(TARGET interval_subset_sum_problem PROPERTY CXX_STANDARD 20)
