@@ -4,13 +4,15 @@
 
 void combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, int count)
 {
+    const auto size = static_cast<int>(seq.size());
+
     if (count == 0)
     {
         util::PrintSequence(selected_items);
         return;
     }
 
-    for (int i = 0; i < seq.size(); ++i)
+    for (int i = 0; i < size; ++i)
     {
         selected_items.push_back(seq[i]);
         SelectItem(seq, selected_items, count - 1);

@@ -4,7 +4,7 @@
 
 int problem::SimpleSubsetSum(const std::vector<int>& seq)
 {
-    auto size = seq.size();
+    const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
 
     for (int prev = 0; prev < size; ++prev)
@@ -25,7 +25,7 @@ int problem::SimpleSubsetSum(const std::vector<int>& seq)
 
 int problem::SimpleSubsetSum2(const std::vector<int>& seq)
 {
-    auto size = seq.size();
+    const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
 
     for (int prev = 0; prev < size; ++prev)
@@ -41,7 +41,7 @@ int problem::SimpleSubsetSum2(const std::vector<int>& seq)
     return max;
 }
 
-int problem::DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int high)
+int problem::DivideAndConquerSubsetSum(const std::vector<int>& seq, const int low, const int high)
 {
     if (low == high)
     {
@@ -49,9 +49,9 @@ int problem::DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int
     }
 
     // left subset and right subset
-    auto mid = static_cast<int>(std::floor((low + high) / 2));
-    auto left_max = DivideAndConquerSubsetSum(seq, low, mid);
-    auto right_max = DivideAndConquerSubsetSum(seq, mid + 1, high);
+    const auto mid = static_cast<int>(std::floor((low + high) / 2));
+    const auto left_max = DivideAndConquerSubsetSum(seq, low, mid);
+    const auto right_max = DivideAndConquerSubsetSum(seq, mid + 1, high);
 
     // cross subset
     auto left_cross_max = 0;
@@ -74,7 +74,7 @@ int problem::DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int
 
 int problem::DynamicProgrammingSubsetSum(const std::vector<int>& seq)
 {
-    auto size = seq.size();
+    const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
     auto sum = 0;
 

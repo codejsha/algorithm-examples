@@ -5,7 +5,9 @@
 
 std::vector<int> sort::InsertionSort(std::vector<int>& seq)
 {
-    for (int index = 1; index < seq.size(); ++index)
+    const auto size = static_cast<int>(seq.size());
+
+    for (int index = 1; index < size; ++index)
     {
         auto key = index;
         while ((key > 0) && (seq[key] < seq[key - 1]))
