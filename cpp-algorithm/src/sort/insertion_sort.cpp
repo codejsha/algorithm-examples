@@ -26,7 +26,7 @@ int main()
     std::cout << "Sequence:" << std::endl;
     util::PrintSequence(seq);
 
+    const auto result = sort::InsertionSort(seq);
     std::cout << "Insertion sort:" << std::endl;
-    auto result = sort::InsertionSort(seq);
     util::PrintSequence(result);
 }

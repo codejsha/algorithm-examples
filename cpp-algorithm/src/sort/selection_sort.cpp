@@ -27,7 +27,7 @@ int main()
     std::cout << "Sequence:" << std::endl;
     util::PrintSequence(seq);
 
+    const auto result = sort::SelectionSort(seq);
     std::cout << "Selection sort:" << std::endl;
-    auto result = sort::SelectionSort(seq);
     util::PrintSequence(result);
 }

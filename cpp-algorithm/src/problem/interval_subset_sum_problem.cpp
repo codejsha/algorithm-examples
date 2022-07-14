@@ -89,24 +89,24 @@ int problem::DynamicProgrammingSubsetSum(const std::vector<int>& seq)
 
 int main()
 {
-    auto seq = util::GenerateSequence(8, -10, 10);
+    const auto seq = util::GenerateSequence(8, -10, 10);
 
     std::cout << "Sequence:" << std::endl;
     util::PrintSequence(seq);
 
-    std::cout << "Max subset sum (simple loop):" << std::endl;
     auto result = problem::SimpleSubsetSum(seq);
+    std::cout << "Max subset sum (simple loop):" << std::endl;
     std::cout << result << std::endl;
 
-    std::cout << "Max subset sum (simple loop 2):" << std::endl;
     auto result2 = problem::SimpleSubsetSum2(seq);
+    std::cout << "Max subset sum (simple loop 2):" << std::endl;
     std::cout << result2 << std::endl;
 
-    std::cout << "Max subset sum (divide and conquer):" << std::endl;
     auto result3 = problem::DivideAndConquerSubsetSum(seq, 0, static_cast<int>(seq.size() - 1));
+    std::cout << "Max subset sum (divide and conquer):" << std::endl;
     std::cout << result3 << std::endl;
 
-    std::cout << "Max subset sum (dynamic programming):" << std::endl;
     auto result4 = problem::DynamicProgrammingSubsetSum(seq);
+    std::cout << "Max subset sum (dynamic programming):" << std::endl;
     std::cout << result4 << std::endl;
 }

@@ -2,7 +2,7 @@
 #include "util.h"
 #include <iostream>
 
-void combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, int count)
+void combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, const int count)
 {
     const auto size = static_cast<int>(seq.size());
 
@@ -27,7 +27,7 @@ int main()
     std::cout << "Sequence:" << std::endl;
     util::PrintSequence(seq);
 
-    std::cout << "Combination:" << std::endl;
     std::vector<int> selected_items;
+    std::cout << "Combination:" << std::endl;
     combination::SelectItem(seq, selected_items, 2);
 }
