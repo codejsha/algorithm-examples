@@ -1,5 +1,4 @@
-add_library(sort STATIC insertion_sort.cpp selection_sort.cpp)
-target_include_directories(sort PUBLIC .)
+include_directories(${CMAKE_SOURCE_DIR}/src/include)
 
 add_executable(insertion_sort insertion_sort.cpp)
 target_link_libraries(insertion_sort PRIVATE common_util)

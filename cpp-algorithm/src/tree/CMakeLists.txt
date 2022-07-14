@@ -1,5 +1,4 @@
-add_library(tree STATIC binary_search_tree.cpp)
-target_include_directories(tree PUBLIC .)
+include_directories(${CMAKE_SOURCE_DIR}/src/include)
 
 add_executable(binary_search_tree binary_search_tree.cpp)
 target_link_libraries(binary_search_tree PRIVATE common_util)

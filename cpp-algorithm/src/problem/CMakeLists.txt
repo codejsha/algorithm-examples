@@ -1,10 +1,7 @@
-add_library(problem STATIC interval_subset_sum_problem.cpp)
-target_include_directories(problem PUBLIC .)
+add_executable(combination_problem combination_problem.cpp)
+target_link_libraries(combination_problem PRIVATE common_util)
+set_property(TARGET combination_problem PROPERTY CXX_STANDARD 20)
 
 add_executable(interval_subset_sum_problem interval_subset_sum_problem.cpp)
 target_link_libraries(interval_subset_sum_problem PRIVATE common_util)
 set_property(TARGET interval_subset_sum_problem PROPERTY CXX_STANDARD 20)
-
-add_executable(combination_problem combination_problem.cpp)
-target_link_libraries(combination_problem PRIVATE common_util)
-set_property(TARGET combination_problem PROPERTY CXX_STANDARD 20)
