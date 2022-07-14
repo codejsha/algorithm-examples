@@ -10,6 +10,8 @@
     - [Merge Sort](#merge-sort)
     - [Quick Sort](#quick-sort)
     - [Selection Sort](#selection-sort)
+  - [Tree](#tree)
+    - [Binary search tree](#binary-search-tree)
   - [Problem solving](#problem-solving)
     - [Interval subset sum](#interval-subset-sum)
     - [Combination](#combination)
@@ -95,6 +97,12 @@ $$
 - Worst case: $O(n^2)$
   - when sorted in ascending order, if you want to sort in descending order (vice versa)
 - Average case: $O(n^2)$
+
+## Tree
+
+### Binary search tree
+
+Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)
 
 ## Problem solving
 
