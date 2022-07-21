@@ -50,7 +50,7 @@
 
 ### Insertion Sort
 
-- Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+- Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 - Best case: $O(n)$
   - if the list is already sorted
   - this case has linear running time
@@ -91,7 +91,7 @@ $$
 
 ### Selection Sort
 
-- Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+- Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 - Best case: $O(n^2)$
   - if the list is already sorted
 - Worst case: $O(n^2)$
@@ -102,17 +102,17 @@ $$
 
 ### Binary search tree
 
-Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)
+Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 
 ## Problem solving
 
 ### Interval subset sum
 
-Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)
+Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
 
 ### Combination
 
-Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)
+Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
 
 ## References
 

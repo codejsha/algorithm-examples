@@ -18,15 +18,3 @@ std::vector<int> sort::InsertionSort(std::vector<int>& seq)
     }
     return seq;
 }
-
-int main()
-{
-    auto seq = util::GenerateSequence(5, 1, 100);
-
-    std::cout << "Sequence:" << std::endl;
-    util::PrintSequence(seq);
-
-    const auto result = sort::InsertionSort(seq);
-    std::cout << "Insertion sort:" << std::endl;
-    util::PrintSequence(result);
-}
