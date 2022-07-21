@@ -118,11 +118,10 @@ Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorit
 
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - 프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략 by 구종만 (Algorithmic Problem Solving Strategies)
-- Wikipedia
-  - https://en.wikipedia.org/wiki/Bubble_sort
-  - https://en.wikipedia.org/wiki/Counting_sort
-  - https://en.wikipedia.org/wiki/Heapsort
-  - https://en.wikipedia.org/wiki/Insertion_sort
-  - https://en.wikipedia.org/wiki/Merge_sort
-  - https://en.wikipedia.org/wiki/Quicksort
-  - https://en.wikipedia.org/wiki/Selection_sort
+- [Bubble sort - Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+- [Counting sort - Wikipedia](https://en.wikipedia.org/wiki/Counting_sort)
+- [Heapsort - Wikipedia](https://en.wikipedia.org/wiki/Heapsort)
+- [Insertion sort - Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
+- [Merge sort - Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
+- [Quicksort - Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
+- [Selection sort - Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
