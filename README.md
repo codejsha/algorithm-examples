@@ -1,11 +1,19 @@
 # Algorithm Examples
 
 - [Algorithm Examples](#algorithm-examples)
+  - [Greedy](#greedy)
   - [Search](#search)
   - [Sort](#sort)
+  - [String](#string)
   - [Tree](#tree)
   - [Problem solving](#problem-solving)
+  - [Others](#others)
   - [References](#references)
+
+## Greedy
+
+- Cashier's Change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
+- Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
 
 ## Search
 
@@ -102,6 +110,10 @@ $$
   - when sorted in ascending order, if you want to sort in descending order (vice versa)
 - Average case: $O(n^2)$
 
+## String
+
+- Naive string search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/string))
+
 ## Tree
 
 - Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
@@ -110,6 +122,12 @@ $$
 
 - Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
 - Combination: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
+
+## Others
+
+- Base expansion: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
+- Binary operation (addition): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
+- Matrix Multiplication: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/matrix)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/matrix))
 
 ## References
 
