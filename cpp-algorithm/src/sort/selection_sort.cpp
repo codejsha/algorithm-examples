@@ -1,5 +1,4 @@
 #include "sort.h"
-#include "util.h"
 #include <iostream>
 #include <vector>
 

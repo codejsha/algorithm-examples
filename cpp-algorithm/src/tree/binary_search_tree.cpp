@@ -1,5 +1,4 @@
 #include "binary_search_tree.h"
-#include "util.h"
 #include <iostream>
 #include <vector>
 
