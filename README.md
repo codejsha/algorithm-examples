@@ -22,93 +22,91 @@
 
 ## Sort
 
-- Bubble Sort
-- Bucket Sort
-- Counting Sort
-- Heap Sort
-- Insertion Sort
-- Merge Sort
-- Quick Sort
-- Selection Sort
-
 **Bubble Sort**
 
-- Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: O(n)
-  - if the list is already sorted
-- Worst case: $O(n^2)$
-- Average case: $O(n^2)$
+[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+
+| **Case**    | **Time Complexity** | **Remarks**                   |
+| :---------- | :-----------------: | :---------------------------- |
+| **Best**    |       $O(n)$        | if the list is already sorted |
+| **Worst**   |      $O(n^2)$       |                               |
+| **Average** |      $O(n^2)$       |                               |
 
 **Bucket Sort**
 
-- Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: $O(n + k)$
-- Worst case: $O(n^2)$
-- Average case: $O(n)$
+[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+
+| **Case**    | **Time Complexity** | **Remarks** |
+| ----------- | :-----------------: | ----------- |
+| **Best**    |     $O(n + k)$      |             |
+| **Worst**   |      $O(n^2)$       |             |
+| **Average** |       $O(n)$        |             |
 
 **Counting Sort**
 
-- Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: $O(n + k)$
-- Worst case: $O(n + k)$
-- Average case: $O(n + k)$
+[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+
+| **Case**    | **Time Complexity** | **Remarks** |
+| ----------- | :-----------------: | ----------- |
+| **Best**    |     $O(n + k)$      |             |
+| **Worst**   |     $O(n + k)$      |             |
+| **Average** |     $O(n + k)$      |             |
 
 **Heap Sort**
 
-- Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: $O(n log n)$
-- Worst case: $O(n log n)$
-- Average case: $O(n log n)$
+[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+
+| **Case**    | **Time Complexity** | **Remarks** |
+| ----------- | :-----------------: | ----------- |
+| **Best**    |    $O(n log n)$     |             |
+| **Worst**   |    $O(n log n)$     |             |
+| **Average** |    $O(n log n)$     |             |
 
 **Insertion Sort**
 
-- Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: $O(n)$
-  - if the list is already sorted
-  - this case has linear running time
-- Worst case: $O(n^2)$
-  - if the list is sorted in reverse order
-  - this case has quadratic running time
-- Average case: $O(n^2)$
-  - this case has quadratic running time
-- Features
-  - one of the fastest algorithms for sorting very small arrays (around 10 elements)
+[c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+
+one of the fastest algorithms for sorting very small arrays (around 10 elements)
+
+| **Case**    | **Time Complexity** | **Remarks**                                                                        |
+| ----------- | :-----------------: | ---------------------------------------------------------------------------------- |
+| **Best**    |       $O(n)$        | * if the list is already sorted<br>* this case has linear running time             |
+| **Worst**   |      $O(n^2)$       | * if the list is sorted in reverse order<br>* this case has quadratic running time |
+| **Average** |      $O(n^2)$       | * this case has quadratic running time                                             |
 
 **Merge Sort**
 
-- Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: $O(n log n)$
-  - running time of sorting for input length $n$ is $T(n)$
+[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
-$$
-\begin{align*}
-T(n) &= 2T(n/2) + O(n) \\
-     &=> O(n log n)
-\end{align*}
-$$
+divide and conquer algorithm
 
-- Worst case: $O(n log n)$
-- Average case: $O(n log n)$
-- Features
-  - divide and conquer algorithm
+| **Case**    | **Time Complexity** | **Remarks**                                                                                              |
+| ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------- |
+| **Best**    |    $O(n log n)$     | * running time of sorting for input length $n$ is $T(n)$<br>* $T(n) = 2T(n/2) + O(n) \approx	O(n log n)$ |
+| **Worst**   |    $O(n log n)$     |                                                                                                          |
+| **Average** |    $O(n log n)$     |                                                                                                          |
 
 **Quick Sort**
 
-- Code: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: $O(n log n)$
-- Worst case: $O(n^2)$
-- Average case: $O(n log n)$
-- Features
-  - divide and conquer algorithm
+[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+
+divide and conquer algorithm
+
+| **Case**    | **Time Complexity** | **Remarks** |
+| ----------- | :-----------------: | ----------- |
+| **Best**    |    $O(n log n)$     |             |
+| **Worst**   |      $O(n^2)$       |             |
+| **Average** |    $O(n log n)$     |             |
 
 **Selection Sort**
 
-- Code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
-- Best case: $O(n^2)$
-  - if the list is already sorted
-- Worst case: $O(n^2)$
-  - when sorted in ascending order, if you want to sort in descending order (vice versa)
-- Average case: $O(n^2)$
+[c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
+
+| **Case**    | **Time Complexity** | **Remarks**                                                                            |
+| ----------- | :-----------------: | -------------------------------------------------------------------------------------- |
+| **Best**    |      $O(n^2)$       | * if the list is already sorted                                                        |
+| **Worst**   |      $O(n^2)$       | * when sorted in ascending order, if you want to sort in descending order (vice versa) |
+| **Average** |      $O(n^2)$       |                                                                                        |
 
 ## String
 
@@ -125,7 +123,7 @@ $$
 
 ## Others
 
-- Base expansion: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
+- Base expansion (base b expansion of n): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Binary operation (addition): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Matrix Multiplication: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/matrix)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/matrix))
 
