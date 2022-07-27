@@ -8,7 +8,10 @@ void combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_i
 
     if (count == 0)
     {
-        util::PrintSequence(selected_items);
+        if (selected_items[0] < selected_items[1])
+        {
+            util::PrintSequence(selected_items);
+        }
         return;
     }
 
