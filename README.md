@@ -125,7 +125,8 @@ divide and conquer algorithm
 
 - Base expansion (base b expansion of n): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Binary operation (addition): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
-- Matrix Multiplication: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/matrix)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/matrix))
+- Matrix multiplication: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/matrix)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/matrix))
+- Numbers (GCD, LCM): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 
 ## References
 
