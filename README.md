@@ -132,7 +132,7 @@ divide and conquer algorithm
 
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
-- 프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략 by 구종만 (Algorithmic Problem Solving Strategies)
+- Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
 - [Bubble sort - Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
 - [Counting sort - Wikipedia](https://en.wikipedia.org/wiki/Counting_sort)
 - [Heapsort - Wikipedia](https://en.wikipedia.org/wiki/Heapsort)
