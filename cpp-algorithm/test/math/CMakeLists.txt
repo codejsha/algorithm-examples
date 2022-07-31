@@ -6,5 +6,8 @@ enable_testing()
 add_executable(combination_test combination_test.cpp "${CMAKE_SOURCE_DIR}/src/math/combination.cpp")
 target_link_libraries(combination_test PRIVATE common_util gtest_main)
 
+add_executable(permutation_test permutation_test.cpp "${CMAKE_SOURCE_DIR}/src/math/permutation.cpp")
+target_link_libraries(permutation_test PRIVATE common_util gtest_main)
+
 include(GoogleTest)
 gtest_discover_tests(combination_test permutation_test)
