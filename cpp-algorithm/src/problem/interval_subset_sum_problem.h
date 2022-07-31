@@ -9,6 +9,6 @@ namespace problem
     int SimpleSubsetSum2(const std::vector<int>& seq);
     int DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int high);
     int DynamicProgrammingSubsetSum(const std::vector<int>& seq);
-}
+} // namespace problem
 
 #endif

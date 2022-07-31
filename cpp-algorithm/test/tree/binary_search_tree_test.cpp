@@ -14,11 +14,13 @@ TEST(BinarySearchTreeTest, InorderTreeWalk)
 
     const auto result = tree.InorderTreeWalk();
 
-    ASSERT_EQ(static_cast<int>(result.size()), static_cast<int>(expected_seq.size())) << "Vectors x and y are of unequal length";
+    ASSERT_EQ(static_cast<int>(result.size()), static_cast<int>(expected_seq.size()))
+        << "Vectors x and y are of unequal length";
 
     for (int i = 0; i < static_cast<int>(result.size()); ++i)
     {
-        ASSERT_EQ(result[i], expected_seq[i]) << "Vectors x and y differ at index " << i;
+        ASSERT_EQ(result[i], expected_seq[i])
+            << "Vectors x and y differ at index " << i;
     }
 }
 
@@ -131,6 +133,7 @@ TEST(BinarySearchTreeTest, Delete)
     {
         tree.Delete(element);
         const auto result = tree.InorderTreeWalk();
-        ASSERT_EQ(static_cast<int>(result.size()), --seq_size) << "Vectors x and y are of unequal length";
+        ASSERT_EQ(static_cast<int>(result.size()), --seq_size)
+            << "Vectors x and y are of unequal length";
     }
 }

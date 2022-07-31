@@ -46,6 +46,6 @@ namespace tree
         Node* RecursiveTreeSearch(Node* node, int value);
         static Node* IterativeTreeSearch(Node* node, int value);
     };
-}
+} // namespace tree
 
 #endif

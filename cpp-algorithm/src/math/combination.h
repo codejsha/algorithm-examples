@@ -6,6 +6,6 @@
 namespace combination
 {
     void SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, int count);
-}
+} // namespace combination
 
 #endif

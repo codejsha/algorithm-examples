@@ -6,6 +6,6 @@
 namespace fibonacci
 {
     int FibonacciMemoization(int number, std::vector<int>& memoization);
-}
+} // namespace fibonacci
 
 #endif

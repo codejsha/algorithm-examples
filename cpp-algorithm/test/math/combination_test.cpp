@@ -20,7 +20,7 @@ TEST(CombinationTest, Simple2)
 {
     auto seq = std::vector<int>{0, 1, 2, 3, 4, 5};
     std::vector<int> selected_items;
-    
+
     combination::SelectItem(seq, selected_items, 2);
     // result:
     // 0 1

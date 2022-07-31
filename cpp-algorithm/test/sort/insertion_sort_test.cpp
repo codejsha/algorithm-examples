@@ -8,10 +8,12 @@ TEST(InsertionSortTest, Simple)
 
     const auto result = sort::InsertionSort(seq);
 
-    ASSERT_EQ(static_cast<int>(result.size()), static_cast<int>(sorted_seq.size())) << "Vectors x and y are of unequal length";
+    ASSERT_EQ(static_cast<int>(result.size()), static_cast<int>(sorted_seq.size()))
+        << "Vectors x and y are of unequal length";
 
     for (int i = 0; i < static_cast<int>(result.size()); ++i)
     {
-        ASSERT_EQ(result[i], sorted_seq[i]) << "Vectors x and y differ at index " << i;
+        ASSERT_EQ(result[i], sorted_seq[i])
+            << "Vectors x and y differ at index " << i;
     }
 }

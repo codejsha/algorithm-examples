@@ -3,8 +3,9 @@
 
 #include <string>
 
-namespace permutation {
-    void Permutation(const std::string &str, const std::string &prefix);
-}
+namespace permutation
+{
+    void Permutation(const std::string& str, const std::string& prefix);
+} // namespace permutation
 
 #endif
