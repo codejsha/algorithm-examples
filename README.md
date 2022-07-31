@@ -2,6 +2,7 @@
 
 - [Algorithm Examples](#algorithm-examples)
   - [Greedy](#greedy)
+  - [Math](#math)
   - [Search](#search)
   - [Sort](#sort)
   - [String](#string)
@@ -14,6 +15,10 @@
 
 - Cashier's Change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
 - Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
+
+## Math
+
+- Combination: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
 
 ## Search
 
@@ -119,7 +124,6 @@ divide and conquer algorithm
 ## Problem solving
 
 - Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
-- Combination: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
 
 ## Others
 

@@ -1,6 +1,5 @@
-#include "combination_problem.h"
+#include "combination.h"
 #include "util.h"
-#include <iostream>
 
 void combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, const int count)
 {
