@@ -5,6 +5,9 @@
 
 namespace tree
 {
+    /// <summary>
+    /// Node of binary search tree.
+    /// </summary>
     struct Node
     {
         int value;
@@ -18,6 +21,9 @@ namespace tree
         }
     };
 
+    /// <summary>
+    /// Binary search tree.
+    /// </summary>
     class BinarySearchTree
     {
     public:
