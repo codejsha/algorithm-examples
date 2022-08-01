@@ -5,7 +5,7 @@
 
 namespace combination
 {
-    void SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, int count);
+    void SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, int subset_size);
 } // namespace combination
 
 #endif
