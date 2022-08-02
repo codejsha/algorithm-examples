@@ -1,7 +1,7 @@
 #include "interval_subset_sum_problem.h"
 #include <iostream>
 
-int problem::SimpleSubsetSum(const std::vector<int>& seq)
+int intervalsubset::SimpleSubsetSum(const std::vector<int>& seq)
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
@@ -22,7 +22,7 @@ int problem::SimpleSubsetSum(const std::vector<int>& seq)
     return max;
 }
 
-int problem::SimpleSubsetSum2(const std::vector<int>& seq)
+int intervalsubset::SimpleSubsetSum2(const std::vector<int>& seq)
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
@@ -40,7 +40,7 @@ int problem::SimpleSubsetSum2(const std::vector<int>& seq)
     return max;
 }
 
-int problem::DivideAndConquerSubsetSum(const std::vector<int>& seq, const int low, const int high)
+int intervalsubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, const int low, const int high)
 {
     if (low == high)
     {
@@ -71,7 +71,7 @@ int problem::DivideAndConquerSubsetSum(const std::vector<int>& seq, const int lo
     return std::max(std::max(left_max, right_max), left_cross_max + right_cross_max);
 }
 
-int problem::DynamicProgrammingSubsetSum(const std::vector<int>& seq)
+int intervalsubset::DynamicProgrammingSubsetSum(const std::vector<int>& seq)
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
