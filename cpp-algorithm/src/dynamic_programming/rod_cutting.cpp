@@ -1,4 +1,4 @@
-#include "rod_cutting_problem.h"
+#include "rod_cutting.h"
 #include <algorithm>
 
 int rodcutting::CutRod(const std::map<int, int>& price, const int length)

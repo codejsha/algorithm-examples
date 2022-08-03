@@ -1,4 +1,4 @@
-#include "rod_cutting_problem.h"
+#include "rod_cutting.h"
 #include <gtest/gtest.h>
 
 TEST(RodCuttingTest, Simple)
