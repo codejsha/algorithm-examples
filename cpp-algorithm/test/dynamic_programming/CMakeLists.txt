@@ -1,6 +1,8 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/dynamic_programming)
 
+enable_testing()
+
 add_executable(fibonacci_number_test fibonacci_number_test.cpp "${CMAKE_SOURCE_DIR}/src/dynamic_programming/fibonacci_number.cpp")
 target_link_libraries(fibonacci_number_test PRIVATE common_util gtest_main)
 
