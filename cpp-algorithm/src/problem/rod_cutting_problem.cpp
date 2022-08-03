@@ -67,3 +67,29 @@ int rodcutting::BottomUpCutRod(const std::map<int, int>& price, const int length
 
     return memo[length];
 }
+
+std::tuple<int, int> rodcutting::ExtendedBottomUpCutRod(const std::map<int, int>& price, const int length)
+{
+    // the memoization of the max revenue
+    std::vector<int> memo(static_cast<int>(price.size()) + 1, -1);
+    memo[0] = 0;
+
+    // the optimal size of the first piece to cut off
+    std::vector<int> optimal_first_peice(static_cast<int>(price.size()) + 1, -1);
+
+    for (int i = 1; i <= length; i++)
+    {
+        auto max_revenue = std::numeric_limits<int>::min();
+        for (int j = 1; j <= i; j++)
+        {
+            if (max_revenue < price.at(j) + memo[i - j])
+            {
+                max_revenue = price.at(j) + memo[i - j];
+                optimal_first_peice[i] = j;
+            }
+        }
+        memo[i] = max_revenue;
+    }
+
+    return std::make_tuple(memo[length], optimal_first_peice[length]);
+}
