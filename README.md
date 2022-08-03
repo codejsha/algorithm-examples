@@ -1,6 +1,7 @@
 # Algorithm Examples
 
 - [Algorithm Examples](#algorithm-examples)
+  - [Dynamic programming](#dynamic-programming)
   - [Greedy](#greedy)
   - [Mathematics](#mathematics)
   - [Search](#search)
@@ -10,9 +11,15 @@
   - [Problem solving](#problem-solving)
   - [References](#references)
 
+## Dynamic programming
+
+- Fibonacci number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
+- Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
+- Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
+
 ## Greedy
 
-- Cashier's Change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
+- Cashier's change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
 - Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
 
 ## Mathematics
@@ -20,7 +27,6 @@
 - Base expansion (base b expansion of n): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Binary operation (addition): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Combination: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
-- Fibonacci number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
 - Matrix multiplication: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Numbers (GCD, LCM): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Permutation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
@@ -32,87 +38,87 @@
 
 ## Sort
 
-**Bubble Sort**
+**Bubble sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
-| **Case**    | **Time Complexity** | **Remarks**                   |
+| **Case**    | **Time complexity** | **Remarks**                   |
 | :---------- | :-----------------: | :---------------------------- |
 | **Best**    |       $O(n)$        | if the list is already sorted |
 | **Worst**   |      $O(n^2)$       |                               |
 | **Average** |      $O(n^2)$       |                               |
 
-**Bucket Sort**
+**Bucket sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
-| **Case**    | **Time Complexity** | **Remarks** |
+| **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
 | **Best**    |     $O(n + k)$      |             |
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |       $O(n)$        |             |
 
-**Counting Sort**
+**Counting sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
-| **Case**    | **Time Complexity** | **Remarks** |
+| **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
 | **Best**    |     $O(n + k)$      |             |
 | **Worst**   |     $O(n + k)$      |             |
 | **Average** |     $O(n + k)$      |             |
 
-**Heap Sort**
+**Heap sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
-| **Case**    | **Time Complexity** | **Remarks** |
+| **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
 | **Best**    |    $O(n log n)$     |             |
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-**Insertion Sort**
+**Insertion sort**
 
 [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
 one of the fastest algorithms for sorting very small arrays (around 10 elements)
 
-| **Case**    | **Time Complexity** | **Remarks**                                                                        |
+| **Case**    | **Time complexity** | **Remarks**                                                                        |
 | ----------- | :-----------------: | ---------------------------------------------------------------------------------- |
 | **Best**    |       $O(n)$        | * if the list is already sorted<br>* this case has linear running time             |
 | **Worst**   |      $O(n^2)$       | * if the list is sorted in reverse order<br>* this case has quadratic running time |
 | **Average** |      $O(n^2)$       | * this case has quadratic running time                                             |
 
-**Merge Sort**
+**Merge sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
 divide and conquer algorithm
 
-| **Case**    | **Time Complexity** | **Remarks**                                                                                              |
+| **Case**    | **Time complexity** | **Remarks**                                                                                              |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------- |
 | **Best**    |    $O(n log n)$     | * running time of sorting for input length $n$ is $T(n)$<br>* $T(n) = 2T(n/2) + O(n) \approx	O(n log n)$ |
 | **Worst**   |    $O(n log n)$     |                                                                                                          |
 | **Average** |    $O(n log n)$     |                                                                                                          |
 
-**Quick Sort**
+**Quick sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
 divide and conquer algorithm
 
-| **Case**    | **Time Complexity** | **Remarks** |
+| **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
 | **Best**    |    $O(n log n)$     |             |
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |    $O(n log n)$     |             |
 
-**Selection Sort**
+**Selection sort**
 
 [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
-| **Case**    | **Time Complexity** | **Remarks**                                                                            |
+| **Case**    | **Time complexity** | **Remarks**                                                                            |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------- |
 | **Best**    |      $O(n^2)$       | * if the list is already sorted                                                        |
 | **Worst**   |      $O(n^2)$       | * when sorted in ascending order, if you want to sort in descending order (vice versa) |
@@ -129,7 +135,6 @@ divide and conquer algorithm
 ## Problem solving
 
 - Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
-- Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
 
 ## References
 
