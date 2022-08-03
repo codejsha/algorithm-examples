@@ -1,6 +1,6 @@
 import numpy as np
 
-from algorithm.matrix.matrix_multiplication import multiply_matrix
+from algorithm.math.matrix_multiplication import multiply_matrix
 
 
 def test_matrix_multiplication():
