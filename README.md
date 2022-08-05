@@ -15,7 +15,7 @@
 
 ## Introduction
 
-This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Additionally, the C++ project is based on [CMake](https://cmake.org/) project, and the Java project is based on [Spring Boot](https://spring.io/projects/spring-boot) project and use [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh).
+This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Additionally, the C++ project is based on [CMake](https://cmake.org/) project and use [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/). And the Java project is based on [Spring Boot](https://spring.io/projects/spring-boot) project and use [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh).
 
 ## Topics
 
@@ -150,11 +150,4 @@ divide and conquer algorithm
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
 - Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
-- Wikipedia:
-[Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort),
-[Counting sort](https://en.wikipedia.org/wiki/Counting_sort),
-[Heapsort](https://en.wikipedia.org/wiki/Heapsort),
-[Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort),
-[Merge sort](https://en.wikipedia.org/wiki/Merge_sort),
-[Quicksort](https://en.wikipedia.org/wiki/Quicksort),
-[Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
+- Wikipedia: [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort), [Counting sort](https://en.wikipedia.org/wiki/Counting_sort), [Heapsort](https://en.wikipedia.org/wiki/Heapsort), [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort), [Merge sort](https://en.wikipedia.org/wiki/Merge_sort), [Quicksort](https://en.wikipedia.org/wiki/Quicksort), [Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
