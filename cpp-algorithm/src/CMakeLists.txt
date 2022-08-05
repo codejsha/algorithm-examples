@@ -1,5 +1,6 @@
 add_subdirectory(dynamic_programming)
 add_subdirectory(include)
+add_subdirectory(greedy)
 add_subdirectory(math)
 add_subdirectory(problem)
 add_subdirectory(sort)
