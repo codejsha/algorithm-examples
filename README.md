@@ -1,29 +1,37 @@
 # Algorithm Examples
 
 - [Algorithm Examples](#algorithm-examples)
-  - [Dynamic programming](#dynamic-programming)
-  - [Greedy](#greedy)
-  - [Mathematics](#mathematics)
-  - [Search](#search)
-  - [Sort](#sort)
-  - [String](#string)
-  - [Tree](#tree)
+  - [Introduction](#introduction)
+  - [Topics](#topics)
+    - [Dynamic programming](#dynamic-programming)
+    - [Greedy](#greedy)
+    - [Mathematics](#mathematics)
+    - [Search](#search)
+    - [Sort](#sort)
+    - [String](#string)
+    - [Tree](#tree)
   - [Problem solving](#problem-solving)
   - [References](#references)
 
-## Dynamic programming
+## Introduction
+
+This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, python, and Java, and each language uses the following test framework: C++([Google Test](https://google.github.io/googletest/)), Python([pytest](https://docs.pytest.org/)), Java([JUnit](https://junit.org/)). Additionally, [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) was used for Java project.
+
+## Topics
+
+### Dynamic programming
 
 - Fibonacci number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 - Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 - Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 
-## Greedy
+### Greedy
 
 - Activity selection: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/greedy)) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
 - Cashier's change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
 - Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy))
 
-## Mathematics
+### Mathematics
 
 - Base expansion (base b expansion of n): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Binary operation (addition): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
@@ -32,12 +40,12 @@
 - Numbers (GCD, LCM): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - Permutation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
 
-## Search
+### Search
 
 - Binary search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search))
 - Linear search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search))
 
-## Sort
+### Sort
 
 **Bubble sort**
 
@@ -125,11 +133,11 @@ divide and conquer algorithm
 | **Worst**   |      $O(n^2)$       | * when sorted in ascending order, if you want to sort in descending order (vice versa) |
 | **Average** |      $O(n^2)$       |                                                                                        |
 
-## String
+### String
 
 - Naive string search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/string))
 
-## Tree
+### Tree
 
 - Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 
