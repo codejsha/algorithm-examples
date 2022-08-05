@@ -1,6 +1,6 @@
 #include "fibonacci_number.h"
 
-int fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memoization)
+int fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memo)
 {
     if (number <= 0)
     {
@@ -10,19 +10,19 @@ int fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memoi
     {
         return 1;
     }
-    else if (memoization[number] > 0)
+    else if (memo[number] > 0)
     {
-        return memoization[number];
+        return memo[number];
     }
     else
     {
-        memoization[number] = FibonacciDynamicTopDown(number - 1, memoization)
-                              + FibonacciDynamicTopDown(number - 2, memoization);
-        return memoization[number];
+        memo[number] = FibonacciDynamicTopDown(number - 1, memo)
+                              + FibonacciDynamicTopDown(number - 2, memo);
+        return memo[number];
     }
 }
 
-int fibonacci::FibonacciDynamicBottomUp(int number)
+int fibonacci::FibonacciDynamicBottomUp(const int number)
 {
     if (number <= 0)
     {
@@ -34,15 +34,15 @@ int fibonacci::FibonacciDynamicBottomUp(int number)
     }
     else
     {
-        std::vector<int> memoization(number + 1, -1);
-        memoization[0] = 0;
-        memoization[1] = 1;
+        std::vector<int> memo(number + 1, -1);
+        memo[0] = 0;
+        memo[1] = 1;
 
         for (auto i = 2; i < number; i++)
         {
-            memoization[i] = memoization[i - 1] + memoization[i - 2];
+            memo[i] = memo[i - 1] + memo[i - 2];
         }
 
-        return memoization[number - 1] + memoization[number - 2];
+        return memo[number - 1] + memo[number - 2];
     }
 }

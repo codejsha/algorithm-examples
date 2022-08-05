@@ -5,9 +5,9 @@ TEST(FibonacciNumberTest, DynamicProgrammingTopDown)
 {
     constexpr auto number = 8;
     constexpr auto expected_value = 21;
-    std::vector<int> memoization(number + 1, -1);
+    std::vector<int> memo(number + 1, -1);
 
-    const auto result = fibonacci::FibonacciDynamicTopDown(number, memoization);
+    const auto result = fibonacci::FibonacciDynamicTopDown(number, memo);
     ASSERT_EQ(result, expected_value);
 }
 
