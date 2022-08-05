@@ -47,7 +47,7 @@ This repository is an implementation of algorithms, data structures, and problem
 
 ### Sort
 
-**Bubble sort**
+- **Bubble sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
@@ -57,7 +57,7 @@ This repository is an implementation of algorithms, data structures, and problem
 | **Worst**   |      $O(n^2)$       |                               |
 | **Average** |      $O(n^2)$       |                               |
 
-**Bucket sort**
+- **Bucket sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
@@ -67,7 +67,7 @@ This repository is an implementation of algorithms, data structures, and problem
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |       $O(n)$        |             |
 
-**Counting sort**
+- **Counting sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
@@ -77,7 +77,7 @@ This repository is an implementation of algorithms, data structures, and problem
 | **Worst**   |     $O(n + k)$      |             |
 | **Average** |     $O(n + k)$      |             |
 
-**Heap sort**
+- **Heap sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
@@ -87,7 +87,7 @@ This repository is an implementation of algorithms, data structures, and problem
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-**Insertion sort**
+- **Insertion sort**
 
 [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
@@ -99,7 +99,7 @@ one of the fastest algorithms for sorting very small arrays (around 10 elements)
 | **Worst**   |      $O(n^2)$       | * if the list is sorted in reverse order<br>* this case has quadratic running time |
 | **Average** |      $O(n^2)$       | * this case has quadratic running time                                             |
 
-**Merge sort**
+- **Merge sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
@@ -111,7 +111,7 @@ divide and conquer algorithm
 | **Worst**   |    $O(n log n)$     |                                                                                                          |
 | **Average** |    $O(n log n)$     |                                                                                                          |
 
-**Quick sort**
+- **Quick sort**
 
 [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
@@ -123,7 +123,7 @@ divide and conquer algorithm
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |    $O(n log n)$     |             |
 
-**Selection sort**
+- **Selection sort**
 
 [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/demo/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/demo/sort))
 
