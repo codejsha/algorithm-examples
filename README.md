@@ -15,7 +15,7 @@
 
 ## Introduction
 
-This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, python, and Java, and each language uses the following test framework: C++([Google Test](https://google.github.io/googletest/)), Python([pytest](https://docs.pytest.org/)), Java([JUnit](https://junit.org/)). Additionally, [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) was used for Java project.
+This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Additionally, the C++ project is based on [CMake](https://cmake.org/) project, and the Java project is based on [Spring Boot](https://spring.io/projects/spring-boot) project and use [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh).
 
 ## Topics
 
