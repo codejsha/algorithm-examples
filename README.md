@@ -2,6 +2,8 @@
 
 - [Algorithm Examples](#algorithm-examples)
   - [Introduction](#introduction)
+  - [Data structures](#data-structures)
+    - [Tree](#tree)
   - [Topics](#topics)
     - [Dynamic programming](#dynamic-programming)
     - [Greedy](#greedy)
@@ -15,7 +17,19 @@
 
 ## Introduction
 
-This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Additionally, the C++ project is based on [CMake](https://cmake.org/) project and use [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/). And the Java project is based on [Spring Boot](https://spring.io/projects/spring-boot) project and use [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh).
+This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java).
+
+Additionally, each project is configured in the following environments:
+
+- C++ project: based on [CMake](https://cmake.org/) project and uses [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/)
+- Python project: uses [NumPy](https://numpy.org/) and [SciPy](https://www.scipy.org/)
+- Java project: based on [Spring Boot](https://spring.io/projects/spring-boot) project and uses [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh)
+
+## Data structures
+
+### Tree
+
+- Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 
 ## Topics
 
