@@ -1,6 +1,6 @@
 #include "fibonacci_number.h"
 
-int fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memo)
+auto Fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memo) -> int
 {
     if (number <= 0)
     {
@@ -22,7 +22,7 @@ int fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memo)
     }
 }
 
-int fibonacci::FibonacciDynamicBottomUp(const int number)
+auto Fibonacci::FibonacciDynamicBottomUp(const int number) -> int
 {
     if (number <= 0)
     {
@@ -38,7 +38,7 @@ int fibonacci::FibonacciDynamicBottomUp(const int number)
         memo[0] = 0;
         memo[1] = 1;
 
-        for (auto i = 2; i < number; i++)
+        for (auto i = 2; i < number; ++i)
         {
             memo[i] = memo[i - 1] + memo[i - 2];
         }

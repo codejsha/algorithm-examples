@@ -3,7 +3,7 @@
 
 #include <vector>
 
-namespace fibonacci
+namespace Fibonacci
 {
     /// <summary>
     /// Calculate the Fibonacci number using a top-down approach.
@@ -12,7 +12,7 @@ namespace fibonacci
     /// <param name="number">number to calculate</param>
     /// <param name="memo">memoization of previously calculated numbers</param>
     /// <returns>nth Fibonacci number</returns>
-    int FibonacciDynamicTopDown(int number, std::vector<int>& memo);
+    auto FibonacciDynamicTopDown(int number, std::vector<int>& memo) -> int;
 
     /// <summary>
     /// Calculate the Fibonacci number using a bottom-up approach.
@@ -20,7 +20,7 @@ namespace fibonacci
     /// </summary>
     /// <param name="number">number to calculate</param>
     /// <returns>nth Fibonacci number</returns>
-    int FibonacciDynamicBottomUp(int number);
+    auto FibonacciDynamicBottomUp(int number) -> int;
 } // namespace fibonacci
 
 #endif

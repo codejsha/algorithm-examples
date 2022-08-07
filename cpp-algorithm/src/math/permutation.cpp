@@ -13,7 +13,7 @@ void permutation::Permutation(const std::string& str, const std::string& prefix)
     }
     else
     {
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size; ++i)
         {
             const std::string rem = str.substr(0, i) + str.substr(i + 1);
             Permutation(rem, prefix + str[i]);
