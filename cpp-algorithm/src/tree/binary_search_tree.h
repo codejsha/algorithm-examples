@@ -1,57 +1,84 @@
 #ifndef CPP_ALGORITHM_BINARY_SEARCH_TREE_H
 #define CPP_ALGORITHM_BINARY_SEARCH_TREE_H
 
-#include <vector>
+#include "tree.h"
 
-namespace tree
+namespace Tree
 {
     /// <summary>
-    /// Node of binary search tree.
+    /// Node of binary search tree
     /// </summary>
-    struct Node
+    struct BinarySearchNode : BinaryNode<BinarySearchNode>
     {
-        int value;
-        Node* left;
-        Node* right;
-        Node* parent;
-
-        explicit Node(int value)
-            : value(value), left(nullptr), right(nullptr), parent(nullptr)
+        explicit BinarySearchNode(const int key)
+            : BinaryNode<BinarySearchNode>(key)
         {
         }
     };
 
     /// <summary>
-    /// Binary search tree.
+    /// Binary search tree
     /// </summary>
-    class BinarySearchTree
+    class BinarySearchTree : public BinaryTree<BinarySearchNode>
     {
     public:
-        void Insert(int value);
-        void Delete(int value);
+        auto Insert(const int key) -> void override;
+        auto Insert(BinarySearchNode* node) -> void override
+        {
+        }
+        auto Delete(const int key) -> void override;
+        auto Delete(BinarySearchNode* node) -> void override
+        {
+        }
 
-        Node* GetMinimum() const;
-        Node* GetMaximum() const;
-        Node* GetSuccessor(int value) const;
-        Node* GetPredecessor(int value) const;
+        [[nodiscard]] auto TreeMinimum() -> BinarySearchNode*;
+        [[nodiscard]] auto TreeMaximum() -> BinarySearchNode*;
+        [[nodiscard]] auto TreePredecessor(const int key) -> BinarySearchNode*;
+        [[nodiscard]] auto TreeSuccessor(const int key) -> BinarySearchNode*;
 
-        std::vector<int> InorderTreeWalk();
-        Node* RecursiveTreeSearch(int value);
-        Node* IterativeTreeSearch(int value) const;
+        /// <summary>
+        /// Recursive call to find a node
+        /// </summary>
+        /// <returns>found node</returns>
+        [[nodiscard]] auto RecursiveTreeSearch(const int key) -> BinarySearchNode*;
 
-    private:
-        Node* root_{};
+        /// <summary>
+        /// Iterative call to find a node
+        /// </summary>
+        /// <returns>found node</returns>
+        [[nodiscard]] auto IterativeTreeSearch(const int key) -> BinarySearchNode*;
 
-        void Insert(Node*& node, int value);
-        void Delete(Node*& node, int value);
+    protected:
+        auto Insert(BinarySearchNode*& ref, const int key) -> void override;
+        auto Insert(BinarySearchNode*& ref, BinarySearchNode* node) -> void override
+        {
+        }
+        auto Delete(BinarySearchNode*& ref, const int key) -> void override;
+        auto Delete(BinarySearchNode*& ref, BinarySearchNode* node) -> void override
+        {
+        }
 
-        static Node* GetMinimum(Node* node);
-        static Node* GetMaximum(Node* node);
+        auto TreeMinimum(BinarySearchNode* ref) -> BinarySearchNode*;
+        auto TreeMaximum(BinarySearchNode* ref) -> BinarySearchNode*;
+        auto TreePredecessor(BinarySearchNode* ref) -> BinarySearchNode*;
+        auto TreeSuccessor(BinarySearchNode* ref) -> BinarySearchNode*;
 
-        void InorderTreeWalk(const Node* node, std::vector<int>& values);
-        Node* RecursiveTreeSearch(Node* node, int value);
-        static Node* IterativeTreeSearch(Node* node, int value);
+        /// <summary>
+        /// Recursive call to find a node
+        /// </summary>
+        /// <param name="ref">reference node for tree search</param>
+        /// <param name="key">key to search for</param>
+        /// <returns>found node</returns>
+        auto RecursiveTreeSearch(BinarySearchNode* ref, const int key) -> BinarySearchNode*;
+
+        /// <summary>
+        /// Iterative call to find a node
+        /// </summary>
+        /// <param name="ref">reference node for tree search</param>
+        /// <param name="key">key to search for</param>
+        /// <returns>found node</returns>
+        auto IterativeTreeSearch(BinarySearchNode* ref, const int key) -> BinarySearchNode*;
     };
-} // namespace tree
+} // namespace Tree
 
 #endif

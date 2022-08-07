@@ -1,226 +1,216 @@
 #include "binary_search_tree.h"
-#include <iostream>
-#include <vector>
 
-void tree::BinarySearchTree::Insert(const int value)
+auto Tree::BinarySearchTree::Insert(const int key) -> void
 {
-    if (root_ == nullptr)
+    if (Root == nullptr)
     {
-        root_ = new Node(value);
+        Root = new BinarySearchNode(key);
         return;
     }
-    Insert(root_, value);
+    Insert(Root, key);
 }
 
-void tree::BinarySearchTree::Insert(Node*& node, const int value)
+auto Tree::BinarySearchTree::Delete(const int key) -> void
 {
-    if (node == nullptr)
+    if (Root == nullptr)
     {
-        node = new Node(value);
         return;
     }
-    if (value < node->value)
+    Delete(Root, key);
+}
+
+auto Tree::BinarySearchTree::TreeMinimum() -> BinarySearchNode*
+{
+    return TreeMinimum(Root);
+}
+
+auto Tree::BinarySearchTree::TreeMaximum() -> BinarySearchNode*
+{
+    return TreeMaximum(Root);
+}
+
+auto Tree::BinarySearchTree::TreePredecessor(const int key) -> BinarySearchNode*
+{
+    auto node = IterativeTreeSearch(key);
+
+    if (node == nullptr)
     {
-        Insert(node->left, value);
-        node->left->parent = node;
+        return nullptr;
+    }
+
+    if (node->Left != nullptr)
+    {
+        return TreeMaximum(node->Left);
+    }
+
+    auto parent = node->Parent;
+    while ((parent != nullptr) && (node == parent->Left))
+    {
+        node = parent;
+        parent = parent->Parent;
+    }
+
+    return parent;
+}
+
+auto Tree::BinarySearchTree::TreeSuccessor(const int key) -> BinarySearchNode*
+{
+    auto node = IterativeTreeSearch(key);
+
+    if (node == nullptr)
+    {
+        return nullptr;
+    }
+
+    if (node->Right != nullptr)
+    {
+        return TreeMinimum(node->Right);
+    }
+
+    auto parent = node->Parent;
+    while ((parent != nullptr) && (node == parent->Right))
+    {
+        node = parent;
+        parent = parent->Parent;
+    }
+
+    return parent;
+}
+
+auto Tree::BinarySearchTree::RecursiveTreeSearch(const int key) -> BinarySearchNode*
+{
+    return RecursiveTreeSearch(Root, key);
+}
+
+auto Tree::BinarySearchTree::IterativeTreeSearch(const int key) -> BinarySearchNode*
+{
+    return IterativeTreeSearch(Root, key);
+}
+
+auto Tree::BinarySearchTree::Insert(BinarySearchNode*& ref, const int key) -> void
+{
+    if (ref == nullptr)
+    {
+        ref = new BinarySearchNode(key);
+        return;
+    }
+    if (key < ref->Key)
+    {
+        Insert(ref->Left, key);
+        ref->Left->Parent = ref;
     }
     else
     {
-        Insert(node->right, value);
-        node->right->parent = node;
+        Insert(ref->Right, key);
+        ref->Right->Parent = ref;
     }
 }
 
-void tree::BinarySearchTree::Delete(const int value)
+auto Tree::BinarySearchTree::Delete(BinarySearchNode*& ref, const int key) -> void
 {
-    if (root_ == nullptr)
+    if (ref == nullptr)
     {
         return;
     }
-    Delete(root_, value);
-}
-
-void tree::BinarySearchTree::Delete(Node*& node, const int value)
-{
-    if (node == nullptr)
+    if (key < ref->Key)
     {
-        return;
+        Delete(ref->Left, key);
     }
-    if (value < node->value)
+    else if (key > ref->Key)
     {
-        Delete(node->left, value);
-    }
-    else if (value > node->value)
-    {
-        Delete(node->right, value);
+        Delete(ref->Right, key);
     }
     else
     {
         // leaf node
-        if (node->left == nullptr && node->right == nullptr)
+        if (ref->Left == nullptr && ref->Right == nullptr)
         {
-            delete node;
-            node = nullptr;
+            delete ref;
+            ref = nullptr;
         }
-        // node does not have left child node
-        else if (node->left == nullptr)
+        // ref node does not have left child node
+        else if (ref->Left == nullptr)
         {
-            const auto temp = node;
-            node = node->right;
-            node->parent = temp->parent;
+            const auto temp = ref;
+            ref = ref->Right;
+            ref->Parent = temp->Parent;
             delete temp;
         }
-        // node does not have right child node
-        else if (node->right == nullptr)
+        // ref node does not have right child node
+        else if (ref->Right == nullptr)
         {
-            const auto temp = node;
-            node = node->left;
-            node->parent = temp->parent;
+            const auto temp = ref;
+            ref = ref->Left;
+            ref->Parent = temp->Parent;
             delete temp;
         }
-        // node has left and right child node
+        // ref node has left and right child node
         else
         {
-            const auto temp = GetMinimum(node->right);
-            node->value = temp->value;
-            Delete(node->right, temp->value);
+            const auto temp = TreeMinimum(ref->Right);
+            ref->Key = temp->Key;
+            Delete(ref->Right, temp->Key);
         }
     }
 }
 
-std::vector<int> tree::BinarySearchTree::InorderTreeWalk()
+auto Tree::BinarySearchTree::TreeMinimum(BinarySearchNode* ref) -> BinarySearchNode*
 {
-    std::vector<int> values;
-    InorderTreeWalk(root_, values);
-    return values;
-}
-
-void tree::BinarySearchTree::InorderTreeWalk(const Node* node, std::vector<int>& values)
-{
-    if (node == nullptr)
+    while (ref->Left != nullptr)
     {
-        return;
+        ref = ref->Left;
     }
-    InorderTreeWalk(node->left, values);
-    values.push_back(node->value);
-    InorderTreeWalk(node->right, values);
+    return ref;
 }
 
-tree::Node* tree::BinarySearchTree::RecursiveTreeSearch(const int value)
+auto Tree::BinarySearchTree::TreeMaximum(BinarySearchNode* ref) -> BinarySearchNode*
 {
-    return RecursiveTreeSearch(root_, value);
-}
-
-tree::Node* tree::BinarySearchTree::RecursiveTreeSearch(Node* node, const int value)
-{
-    if ((node == nullptr) || value == node->value)
+    while (ref->Right != nullptr)
     {
-        return node;
+        ref = ref->Right;
+    }
+    return ref;
+}
+
+auto Tree::BinarySearchTree::TreePredecessor(BinarySearchNode* ref) -> BinarySearchNode*
+{
+    return TreePredecessor(ref->Key);
+}
+
+auto Tree::BinarySearchTree::TreeSuccessor(BinarySearchNode* ref) -> BinarySearchNode*
+{
+    return TreeSuccessor(ref->Key);
+}
+
+auto Tree::BinarySearchTree::RecursiveTreeSearch(BinarySearchNode* ref, const int key) -> BinarySearchNode*
+{
+    if ((ref == nullptr) || key == ref->Key)
+    {
+        return ref;
     }
 
-    if (value < node->value)
+    if (key < ref->Key)
     {
-        return RecursiveTreeSearch(node->left, value);
+        return RecursiveTreeSearch(ref->Left, key);
     }
     else
     {
-        return RecursiveTreeSearch(node->right, value);
+        return RecursiveTreeSearch(ref->Right, key);
     }
 }
 
-tree::Node* tree::BinarySearchTree::IterativeTreeSearch(const int value) const
+auto Tree::BinarySearchTree::IterativeTreeSearch(BinarySearchNode* ref, const int key) -> BinarySearchNode*
 {
-    return IterativeTreeSearch(root_, value);
-}
-
-tree::Node* tree::BinarySearchTree::IterativeTreeSearch(Node* node, const int value)
-{
-    while ((node != nullptr) && (value != node->value))
+    while ((ref != nullptr) && (key != ref->Key))
     {
-        if (value < node->value)
+        if (key < ref->Key)
         {
-            node = node->left;
+            ref = ref->Left;
         }
         else
         {
-            node = node->right;
+            ref = ref->Right;
         }
     }
-    return node;
-}
-
-tree::Node* tree::BinarySearchTree::GetMinimum() const
-{
-    return GetMinimum(root_);
-}
-
-tree::Node* tree::BinarySearchTree::GetMinimum(Node* node)
-{
-    while (node->left != nullptr)
-    {
-        node = node->left;
-    }
-    return node;
-}
-
-tree::Node* tree::BinarySearchTree::GetMaximum() const
-{
-    return GetMaximum(root_);
-}
-
-tree::Node* tree::BinarySearchTree::GetMaximum(Node* node)
-{
-    while (node->right != nullptr)
-    {
-        node = node->right;
-    }
-    return node;
-}
-
-tree::Node* tree::BinarySearchTree::GetSuccessor(const int value) const
-{
-    const Node* node = IterativeTreeSearch(value);
-
-    if (node == nullptr)
-    {
-        return nullptr;
-    }
-
-    if (node->right != nullptr)
-    {
-        return GetMinimum(node->right);
-    }
-
-    Node* parent = node->parent;
-    while ((parent != nullptr) && (node == parent->right))
-    {
-        node = parent;
-        parent = parent->parent;
-    }
-
-    return parent;
-}
-
-tree::Node* tree::BinarySearchTree::GetPredecessor(const int value) const
-{
-    const Node* node = IterativeTreeSearch(value);
-
-    if (node == nullptr)
-    {
-        return nullptr;
-    }
-
-    if (node->left != nullptr)
-    {
-        return GetMaximum(node->left);
-    }
-
-    Node* parent = node->parent;
-    while ((parent != nullptr) && (node == parent->left))
-    {
-        node = parent;
-        parent = parent->parent;
-    }
-
-    return parent;
+    return ref;
 }
