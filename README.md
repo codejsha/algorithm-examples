@@ -11,7 +11,6 @@
     - [Search](#search)
     - [Sort](#sort)
     - [String](#string)
-    - [Tree](#tree)
   - [Problem solving](#problem-solving)
   - [References](#references)
 
@@ -165,4 +164,5 @@ divide and conquer algorithm
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
 - Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
+- Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash
 - Wikipedia: [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort), [Counting sort](https://en.wikipedia.org/wiki/Counting_sort), [Heapsort](https://en.wikipedia.org/wiki/Heapsort), [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort), [Merge sort](https://en.wikipedia.org/wiki/Merge_sort), [Quicksort](https://en.wikipedia.org/wiki/Quicksort), [Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
