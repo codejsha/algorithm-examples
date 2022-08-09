@@ -2,7 +2,6 @@
 
 auto Tree::BTree::SplitChild(BTreeNode* node, const int index) -> void
 {
-    const auto keyCount = node->GetKeyCount();
     const auto leftChild = node->Children[index];
 
     //// create a right child node,
@@ -19,7 +18,7 @@ auto Tree::BTree::SplitChild(BTreeNode* node, const int index) -> void
         leftChild->Keys.end());
     rightChild->Keys = std::move(rightKeys);
     // get median key
-    auto medianKey = leftChild->Keys[Degree - 1];
+    const auto medianKey = leftChild->Keys[Degree - 1];
     // erase keys from median to the end
     leftChild->Keys.erase(
         leftChild->Keys.begin() + Degree - 1,
