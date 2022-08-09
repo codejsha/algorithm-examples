@@ -27,16 +27,17 @@ auto Tree::BTree::SplitChild(BTreeNode* node, const int index) -> void
     // split children of the left child
     if (leftChild->IsLeaf == false)
     {
-        auto rightChildChildren = std::vector<BTreeNode*>(
+        auto rightChildren = std::vector<BTreeNode*>(
             leftChild->Children.begin() + Degree,
             leftChild->Children.end());
-        rightChild->Children = std::move(rightChildChildren);
+        rightChild->Children = std::move(rightChildren);
         leftChild->Children.erase(
             leftChild->Children.begin() + Degree,
             leftChild->Children.end());
     }
 
-    /// insert a new right node, and move the median key to the parent node
+    //// insert a new right node,
+    //// and move the median key to the parent node
 
     // move the median key to parent node
     node->Keys.insert(node->Keys.begin() + index, medianKey);
