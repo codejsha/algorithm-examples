@@ -28,8 +28,8 @@ Additionally, each project is configured in the following environments:
 
 ### Tree
 
-- B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
-- Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
+- B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | The B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree `t`) 2) Every node other than the root must have at least `t-1` keys. 3) Every node may contain at most `2t-1` keys.
+- Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | In binary search tree, all internal nodes are stored in ordered state. If y is a child of x and y is a node in the left subtree, then $y.key <= x.key$, and if y is a node in the right subtree, then $y.key >= x.key$.
 
 ## Topics
 
@@ -162,4 +162,3 @@ divide and conquer algorithm
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
 - Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
 - Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash
-- Wikipedia: [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort), [Counting sort](https://en.wikipedia.org/wiki/Counting_sort), [Heapsort](https://en.wikipedia.org/wiki/Heapsort), [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort), [Merge sort](https://en.wikipedia.org/wiki/Merge_sort), [Quicksort](https://en.wikipedia.org/wiki/Quicksort), [Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
