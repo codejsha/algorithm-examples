@@ -16,7 +16,7 @@ target_link_libraries(rod_cutting_test PRIVATE common_util gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(
-	fibonacci_number_test 
-	longest_common_subsequence_test 
+	fibonacci_number_test
+	longest_common_subsequence_test
 	rod_cutting_test
 )

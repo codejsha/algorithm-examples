@@ -11,6 +11,6 @@ target_link_libraries(selection_sort_test PRIVATE common_util gtest gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(
-	insertion_sort_test 
+	insertion_sort_test
 	selection_sort_test
 )

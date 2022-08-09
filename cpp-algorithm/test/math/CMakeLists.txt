@@ -11,6 +11,6 @@ target_link_libraries(permutation_test PRIVATE common_util gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(
-	combination_test 
+	combination_test
 	permutation_test
 )
