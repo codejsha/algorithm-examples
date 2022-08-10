@@ -23,13 +23,7 @@ namespace Tree
     {
     public:
         auto Insert(const int key) -> void override;
-        auto Insert(BinarySearchNode* node) -> void override
-        {
-        }
         auto Delete(const int key) -> void override;
-        auto Delete(BinarySearchNode* node) -> void override
-        {
-        }
 
         [[nodiscard]] auto TreeMinimum() -> BinarySearchNode*;
         [[nodiscard]] auto TreeMaximum() -> BinarySearchNode*;
@@ -50,13 +44,7 @@ namespace Tree
 
     protected:
         auto Insert(BinarySearchNode*& ref, const int key) -> void override;
-        auto Insert(BinarySearchNode*& ref, BinarySearchNode* node) -> void override
-        {
-        }
         auto Delete(BinarySearchNode*& ref, const int key) -> void override;
-        auto Delete(BinarySearchNode*& ref, BinarySearchNode* node) -> void override
-        {
-        }
 
         auto TreeMinimum(BinarySearchNode* ref) -> BinarySearchNode*;
         auto TreeMaximum(BinarySearchNode* ref) -> BinarySearchNode*;

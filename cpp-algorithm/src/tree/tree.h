@@ -8,16 +8,17 @@ namespace Tree
     /// <summary>
     /// Node of tree
     /// </summary>
-    /// <typeparam name="T">type of node</typeparam>
-    template <typename T>
+    /// <typeparam name="T1">type of node</typeparam>
+    /// <typeparam name="T2">type of key</typeparam>
+    template <typename T1, typename T2>
     struct Node
     {
-        int Key;
-        T* Parent;
-        std::vector<T*> Children{};
+        T2 Key;
+        T1* Parent;
+        std::vector<T1*> Children{};
 
-        explicit Node(const int key)
-            : Key(key), Parent(nullptr)
+        explicit Node(T2 k)
+            : Key(k), Parent(nullptr)
         {
         }
     };
@@ -27,13 +28,13 @@ namespace Tree
     /// </summary>
     /// <typeparam name="T">type of node</typeparam>
     template <typename T>
-    struct BinaryNode : Node<T>
+    struct BinaryNode : Node<T, int>
     {
         T* Left;
         T* Right;
 
         explicit BinaryNode(const int key)
-            : Node<T>(key), Left(nullptr), Right(nullptr)
+            : Node<T, int>(key), Left(nullptr), Right(nullptr)
         {
         }
     };
@@ -41,8 +42,9 @@ namespace Tree
     /// <summary>
     /// Tree
     /// </summary>
-    /// <typeparam name="T">type of node</typeparam>
-    template <typename T>
+    /// <typeparam name="T1">type of node</typeparam>
+    /// <typeparam name="T2">type of key</typeparam>
+    template <typename T1, typename T2>
     class Tree
     {
     public:
@@ -66,16 +68,12 @@ namespace Tree
             return *this;
         }
 
-        virtual void Insert(const int key) = 0;
-        virtual void Insert(T* v) = 0;
-        virtual void Delete(const int key) = 0;
-        virtual void Delete(T* v) = 0;
+        virtual void Insert(T2 k) = 0;
+        virtual void Delete(T2 k) = 0;
 
     protected:
-        virtual void Insert(T*& t, const int key) = 0;
-        virtual void Insert(T*& t, T* v) = 0;
-        virtual void Delete(T*& t, const int key) = 0;
-        virtual void Delete(T*& t, T* v) = 0;
+        virtual void Insert(T1*& t, T2 k) = 0;
+        virtual void Delete(T1*& t, T2 k) = 0;
     };
 
     /// <summary>
@@ -83,7 +81,7 @@ namespace Tree
     /// </summary>
     /// <typeparam name="T">type of node</typeparam>
     template <typename T>
-    class BinaryTree : Tree<T>
+    class BinaryTree : Tree<T, int>
     {
     public:
         [[nodiscard]] auto GetRoot() const -> T*
