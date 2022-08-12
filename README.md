@@ -43,6 +43,12 @@ Additionally, each project is configured in the following environments:
     - If an $m$-ary tree of height $h$ has $l$ leaves, then $h \geq \lceil \log_{m}{l} \rceil$.
     - If the $m$-ary tree is full and balanced, then $h = \lceil \log_{m}{l} \rceil$.
 
+**Tree traversal**
+
+- Preorder traversal (root, left, right): best choice for applications where internal vertices must be explored before leaves.
+- Inorder traversal (left, root, right): best choice for applications where internal vertices must be explored in-order.
+- Postorder traversal (left, right, root): best choice for applications where leaves need to be explored before internal vertices.
+
 ## Topics
 
 ### Dynamic programming
