@@ -4,13 +4,13 @@
 
 auto Search::BreadthFirstSearch::Search(Vertex<char>& start, Vertex<char>& goal) -> Vertex<char>*
 {
-    start.Visited = true;
-
     if (start == goal)
     {
+        start.Visit = Finished;
         return &start;
     }
 
+    start.Visit = Visited;
     auto queue = std::queue<Vertex<char>*>{};
     queue.push(&start);
 
@@ -21,9 +21,9 @@ auto Search::BreadthFirstSearch::Search(Vertex<char>& start, Vertex<char>& goal)
 
         for (auto neighbor : vertex->Neighbors)
         {
-            if (neighbor->Visited == false)
+            if (neighbor->Visit == Unvisited)
             {
-                neighbor->Visited = true;
+                neighbor->Visit = Visited;
                 neighbor->Distance = vertex->Distance + 1;
                 neighbor->Predecessor = vertex;
                 queue.push(neighbor);
@@ -34,6 +34,7 @@ auto Search::BreadthFirstSearch::Search(Vertex<char>& start, Vertex<char>& goal)
                 }
             }
         }
+        vertex->Visit = Finished;
     }
     return {};
 }

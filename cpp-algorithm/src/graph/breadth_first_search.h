@@ -7,6 +7,16 @@
 namespace Search
 {
     /// <summary>
+    /// Visit status of the node
+    /// </summary>
+    enum VisitStatus
+    {
+        Unvisited,
+        Visited,
+        Finished
+    };
+
+    /// <summary>
     /// Vertex of graph
     /// </summary>
     /// <typeparam name="T">type of key</typeparam>
@@ -14,12 +24,12 @@ namespace Search
     struct Vertex
     {
         explicit Vertex(T id)
-            : Id(id), Visited(false), Predecessor(nullptr), Distance(0)
+            : Id(id), Visit(Unvisited), Predecessor(nullptr), Distance(0)
         {
         }
 
         T Id;
-        bool Visited;
+        VisitStatus Visit;
         std::set<Vertex<T>*> Neighbors;
         Vertex<T>* Predecessor;
         int Distance;
