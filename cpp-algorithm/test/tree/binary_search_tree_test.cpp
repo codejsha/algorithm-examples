@@ -1,5 +1,7 @@
 #include "binary_search_tree.h"
 #include "tree.h"
+
+#include <algorithm>
 #include <gtest/gtest.h>
 #include <ranges>
 

@@ -17,8 +17,8 @@ std::vector<int> util::GenerateSequence(const int size, const int min, const int
     std::vector<int> seq;
     std::random_device rd;
     std::mt19937 generator(rd());
-    const std::uniform_int_distribution<> distribution(min, max);
-
+    std::uniform_int_distribution<> distribution(min, max);
+    
     seq.reserve(size);
     for (int count = 0; count < size; ++count)
     {

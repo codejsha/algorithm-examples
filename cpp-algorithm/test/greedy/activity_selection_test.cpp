@@ -1,5 +1,6 @@
 #include "activity_selection.h"
 
+#include <algorithm>
 #include <gtest/gtest.h>
 #include <ranges>
 

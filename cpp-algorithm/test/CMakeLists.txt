@@ -1,6 +1,7 @@
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(dynamic_programming)
+add_subdirectory(graph)
 add_subdirectory(greedy)
 add_subdirectory(math)
 add_subdirectory(problem)
