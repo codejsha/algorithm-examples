@@ -2,7 +2,7 @@
 
 #include <queue>
 
-auto Search::BreadthFirstSearch::Search(Vertex<char>& start, Vertex<char>& goal) -> Vertex<char>*
+auto Graph::BreadthFirstSearch::Search(BfsVertex& start, BfsVertex& goal) -> BfsVertex*
 {
     if (start == goal)
     {
@@ -11,7 +11,7 @@ auto Search::BreadthFirstSearch::Search(Vertex<char>& start, Vertex<char>& goal)
     }
 
     start.Visit = Visited;
-    auto queue = std::queue<Vertex<char>*>{};
+    auto queue = std::queue<BfsVertex*>{};
     queue.push(&start);
 
     while (queue.empty() == false)

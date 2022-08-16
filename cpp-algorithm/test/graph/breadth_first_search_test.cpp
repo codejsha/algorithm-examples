@@ -5,16 +5,16 @@
 
 TEST(BreadthFirstSearchTest, SimpleSearch1)
 {
-    auto vertexR = Search::Vertex<char>('R');
-    auto vertexS = Search::Vertex<char>('S');
-    auto vertexT = Search::Vertex<char>('T');
-    auto vertexU = Search::Vertex<char>('U');
-    auto vertexV = Search::Vertex<char>('V');
-    auto vertexW = Search::Vertex<char>('W');
-    auto vertexX = Search::Vertex<char>('X');
-    auto vertexY = Search::Vertex<char>('Y');
+    auto vertexR = Graph::BfsVertex('R');
+    auto vertexS = Graph::BfsVertex('S');
+    auto vertexT = Graph::BfsVertex('T');
+    auto vertexU = Graph::BfsVertex('U');
+    auto vertexV = Graph::BfsVertex('V');
+    auto vertexW = Graph::BfsVertex('W');
+    auto vertexX = Graph::BfsVertex('X');
+    auto vertexY = Graph::BfsVertex('Y');
 
-    const auto graph = new Search::Graph();
+    const auto graph = new Graph::BfsGraph();
 
     graph->AddVertex(vertexR);
     graph->AddVertex(vertexS);
@@ -54,7 +54,7 @@ TEST(BreadthFirstSearchTest, SimpleSearch1)
     graph->AddEdge(vertexY, vertexU);
     graph->AddEdge(vertexY, vertexX);
 
-    const auto bfs = new Search::BreadthFirstSearch(*graph);
+    const auto bfs = new Graph::BreadthFirstSearch(*graph);
 
     auto& start = vertexS;
 
@@ -78,16 +78,16 @@ TEST(BreadthFirstSearchTest, SimpleSearch1)
 
 TEST(BreadthFirstSearchTest, SimpleSearch2)
 {
-    auto vertexR = Search::Vertex<char>('R');
-    auto vertexS = Search::Vertex<char>('S');
-    auto vertexT = Search::Vertex<char>('T');
-    auto vertexU = Search::Vertex<char>('U');
-    auto vertexV = Search::Vertex<char>('V');
-    auto vertexW = Search::Vertex<char>('W');
-    auto vertexX = Search::Vertex<char>('X');
-    auto vertexY = Search::Vertex<char>('Y');
+    auto vertexR = Graph::BfsVertex('R');
+    auto vertexS = Graph::BfsVertex('S');
+    auto vertexT = Graph::BfsVertex('T');
+    auto vertexU = Graph::BfsVertex('U');
+    auto vertexV = Graph::BfsVertex('V');
+    auto vertexW = Graph::BfsVertex('W');
+    auto vertexX = Graph::BfsVertex('X');
+    auto vertexY = Graph::BfsVertex('Y');
 
-    const auto graph = new Search::Graph();
+    const auto graph = new Graph::BfsGraph();
 
     graph->AddVertex(vertexR);
     graph->AddVertex(vertexS);
@@ -127,7 +127,7 @@ TEST(BreadthFirstSearchTest, SimpleSearch2)
     graph->AddEdge(vertexY, vertexU);
     graph->AddEdge(vertexY, vertexX);
 
-    const auto bfs = new Search::BreadthFirstSearch(*graph);
+    const auto bfs = new Graph::BreadthFirstSearch(*graph);
 
     auto& start = vertexS;
 
