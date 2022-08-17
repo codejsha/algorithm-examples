@@ -4,16 +4,6 @@
 namespace Graph
 {
     /// <summary>
-    /// Visit status of the node
-    /// </summary>
-    enum VisitStatus
-    {
-        Unvisited,
-        Visited,
-        Finished
-    };
-
-    /// <summary>
     /// Vertex of graph
     /// </summary>
     /// <typeparam name="T">type of key</typeparam>
@@ -21,12 +11,11 @@ namespace Graph
     struct Vertex
     {
         explicit Vertex(T id)
-            : Id(id), Visit(Unvisited)
+            : Id(id)
         {
         }
 
         T Id;
-        VisitStatus Visit;
         auto operator==(const Vertex& v) const -> bool;
     };
 
@@ -46,6 +35,15 @@ namespace Graph
         return false;
     }
 
+    /// <summary>
+    /// Visit status of the node
+    /// </summary>
+    enum VisitStatus
+    {
+        Unvisited,
+        Visited,
+        Finished
+    };
 } // namespace Graph
 
 #endif

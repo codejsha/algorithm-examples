@@ -14,12 +14,13 @@ namespace Graph
     struct DfsVertex : Vertex<char>
     {
         explicit DfsVertex(const char id)
-            : Vertex<char>(id), Predecessor(nullptr), DiscoveryTime(0), FinishingTime(0)
+            : Vertex<char>(id), Predecessor(nullptr), Visit(Unvisited), DiscoveryTime(0), FinishingTime(0)
         {
         }
 
         std::set<DfsVertex*> Neighbors;
         DfsVertex* Predecessor;
+        VisitStatus Visit;
         int DiscoveryTime;
         int FinishingTime;
     };

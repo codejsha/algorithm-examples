@@ -14,12 +14,13 @@ namespace Graph
     struct BfsVertex : Vertex<char>
     {
         explicit BfsVertex(const char id)
-            : Vertex<char>(id), Predecessor(nullptr), Distance(0)
+            : Vertex<char>(id), Predecessor(nullptr), Visit(Unvisited), Distance(0)
         {
         }
 
         std::set<BfsVertex*> Neighbors;
         BfsVertex* Predecessor;
+        VisitStatus Visit;
         int Distance;
     };
 
