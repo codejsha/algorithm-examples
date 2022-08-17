@@ -1,61 +1,32 @@
 #ifndef CPP_ALGORITHM_BREADTH_FIRST_SEARCH_H
 #define CPP_ALGORITHM_BREADTH_FIRST_SEARCH_H
 
+#include "graph.h"
+
 #include <set>
 #include <vector>
 
-namespace Search
+namespace Graph
 {
-    /// <summary>
-    /// Visit status of the node
-    /// </summary>
-    enum VisitStatus
-    {
-        Unvisited,
-        Visited,
-        Finished
-    };
-
     /// <summary>
     /// Vertex of graph
     /// </summary>
-    /// <typeparam name="T">type of key</typeparam>
-    template <typename T>
-    struct Vertex
+    struct BfsVertex : Vertex<char>
     {
-        explicit Vertex(T id)
-            : Id(id), Visit(Unvisited), Predecessor(nullptr), Distance(0)
+        explicit BfsVertex(const char id)
+            : Vertex<char>(id), Predecessor(nullptr), Distance(0)
         {
         }
 
-        T Id;
-        VisitStatus Visit;
-        std::set<Vertex<T>*> Neighbors;
-        Vertex<T>* Predecessor;
+        std::set<BfsVertex*> Neighbors;
+        BfsVertex* Predecessor;
         int Distance;
-        auto operator==(const Vertex& v) const -> bool;
     };
 
     /// <summary>
-    /// Equality operator ('equal to')
+    /// Breadth-first search graph
     /// </summary>
-    /// <typeparam name="T">type of key</typeparam>
-    /// <param name="v">vertex</param>
-    /// <returns>equal/not equal</returns>
-    template <typename T>
-    auto Vertex<T>::operator==(const Vertex& v) const -> bool
-    {
-        if (this->Id == v.Id)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    /// <summary>
-    /// Graph
-    /// </summary>
-    class Graph
+    class BfsGraph
     {
     public:
         /// <summary>
@@ -64,7 +35,7 @@ namespace Search
         /// <param name="u">vertex</param>
         /// <param name="v">vertex</param>
         /// <returns>void</returns>
-        auto AddEdge(Vertex<char>& u, Vertex<char>& v) -> void
+        auto AddEdge(BfsVertex& u, BfsVertex& v) -> void
         {
             AdjacencyList.emplace_back(&u, &v);
             u.Neighbors.insert(&v);
@@ -76,14 +47,14 @@ namespace Search
         /// </summary>
         /// <param name="v">vertex to add</param>
         /// <returns>void</returns>
-        auto AddVertex(Vertex<char>& v) -> void
+        auto AddVertex(BfsVertex& v) -> void
         {
             Vertices.push_back(&v);
         }
 
     private:
-        std::vector<Vertex<char>*> Vertices;
-        std::vector<std::tuple<Vertex<char>*, Vertex<char>*>> AdjacencyList;
+        std::vector<BfsVertex*> Vertices;
+        std::vector<std::tuple<BfsVertex*, BfsVertex*>> AdjacencyList;
     };
 
     /// <summary>
@@ -92,7 +63,7 @@ namespace Search
     class BreadthFirstSearch
     {
     public:
-        explicit BreadthFirstSearch(Graph& graph)
+        explicit BreadthFirstSearch(BfsGraph& graph)
             : Graph(graph)
         {
         }
@@ -103,11 +74,11 @@ namespace Search
         /// <param name="start">starting vertex</param>
         /// <param name="goal">goal vertex</param>
         /// <returns>goal vertex</returns>
-        auto Search(Vertex<char>& start, Vertex<char>& goal) -> Vertex<char>*;
+        auto Search(BfsVertex& start, BfsVertex& goal) -> BfsVertex*;
 
     private:
-        Graph& Graph;
+        BfsGraph& Graph;
     };
-} // namespace Search
+} // namespace Graph
 
 #endif
