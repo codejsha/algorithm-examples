@@ -98,12 +98,18 @@ namespace Graph
         }
 
         /// <summary>
-        /// Search the vertex by key
+        /// Perform depth-first search
         /// </summary>
-        /// <param name="start">starting vertex</param>
-        /// <param name="goal">goal vertex</param>
-        /// <returns>goal vertex</returns>
+        /// <param name="graph">graph</param>
+        /// <returns>void</returns>
         auto Search(DfsGraph& graph) -> void;
+
+        /// <summary>
+        /// Create depth-first forest
+        /// </summary>
+        /// <param name="graph">graph</param>
+        /// <param name="vertex">vertex</param>
+        /// <returns>void</returns>
         auto SearchVisit(DfsGraph& graph, DfsVertex& vertex) -> void;
 
     private:
