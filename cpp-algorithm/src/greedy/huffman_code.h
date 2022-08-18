@@ -24,8 +24,9 @@ namespace Huffman
     /// <summary>
     /// Comparator for minimal heap builds
     /// </summary>
-    struct MinComparator
+    class MinComparator
     {
+    public:
         bool operator()(const HuffmanNode* l, const HuffmanNode* r) const
         {
             return (l->Freq > r->Freq);
