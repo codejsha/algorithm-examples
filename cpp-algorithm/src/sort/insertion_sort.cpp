@@ -1,6 +1,6 @@
 #include "sort.h"
+
 #include <iostream>
-#include <vector>
 
 std::vector<int> sort::InsertionSort(std::vector<int>& seq)
 {

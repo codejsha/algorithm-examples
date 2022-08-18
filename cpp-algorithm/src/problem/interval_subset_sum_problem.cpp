@@ -1,4 +1,5 @@
 #include "interval_subset_sum_problem.h"
+
 #include <iostream>
 
 int intervalsubset::SimpleSubsetSum(const std::vector<int>& seq)

@@ -1,4 +1,5 @@
 #include "sort.h"
+
 #include <gtest/gtest.h>
 
 TEST(SelectionSortTest, Simple)

@@ -1,6 +1,5 @@
 #include "bellman_ford.h"
 
-#include <algorithm>
 #include <gtest/gtest.h>
 
 TEST(BellmanFordTest, Simple1)

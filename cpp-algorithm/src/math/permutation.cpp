@@ -1,6 +1,6 @@
 #include "permutation.h"
+
 #include <iostream>
-#include <string>
 
 void permutation::Permutation(const std::string& str, const std::string& prefix)
 {

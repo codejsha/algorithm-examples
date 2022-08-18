@@ -1,4 +1,5 @@
 #include "combination.h"
+
 #include <gtest/gtest.h>
 
 TEST(CombinationTest, Simple)

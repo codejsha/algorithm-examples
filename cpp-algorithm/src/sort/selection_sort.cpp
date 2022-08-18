@@ -1,6 +1,6 @@
 #include "sort.h"
+
 #include <iostream>
-#include <vector>
 
 std::vector<int> sort::SelectionSort(std::vector<int>& seq)
 {

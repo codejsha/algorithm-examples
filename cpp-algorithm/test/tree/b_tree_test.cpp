@@ -1,4 +1,5 @@
 #include "b_tree.h"
+
 #include <gtest/gtest.h>
 
 TEST(BTreeTest, SimpleInsert)

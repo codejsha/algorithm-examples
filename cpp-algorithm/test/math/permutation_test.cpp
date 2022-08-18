@@ -1,4 +1,5 @@
 #include "permutation.h"
+
 #include <gtest/gtest.h>
 
 TEST(PermutationTest, Simple)

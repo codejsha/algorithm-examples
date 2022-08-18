@@ -1,7 +1,7 @@
 #include "util.h"
+
 #include <iostream>
 #include <random>
-#include <vector>
 
 void util::PrintSequence(const std::vector<int>& seq)
 {

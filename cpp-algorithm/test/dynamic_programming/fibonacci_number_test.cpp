@@ -1,4 +1,5 @@
 #include "fibonacci_number.h"
+
 #include <gtest/gtest.h>
 
 TEST(FibonacciNumberTest, DynamicProgrammingTopDown)

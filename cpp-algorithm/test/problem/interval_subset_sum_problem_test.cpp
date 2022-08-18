@@ -1,4 +1,5 @@
 #include "interval_subset_sum_problem.h"
+
 #include <gtest/gtest.h>
 
 TEST(IntervalSubsetSumTest, Simple)

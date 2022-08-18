@@ -2,6 +2,7 @@
 #define CPP_ALGORITHM_HUFFMAN_CODE_H
 
 #include "tree.h"
+
 #include <map>
 #include <string>
 
