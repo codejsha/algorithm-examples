@@ -1,19 +1,20 @@
 # Algorithm Examples
 
-- [Algorithm Examples](#algorithm-examples)
-  - [Introduction](#introduction)
-  - [Data structures](#data-structures)
-    - [Tree](#tree)
-  - [Topics](#topics)
-    - [Dynamic programming](#dynamic-programming)
-    - [Graph](#graph)
-    - [Greedy](#greedy)
-    - [Mathematics](#mathematics)
-    - [Search](#search)
-    - [Sort](#sort)
-    - [String](#string)
-  - [Problem solving](#problem-solving)
-  - [References](#references)
+Table of Contents:
+
+- [Introduction](#introduction)
+- [Data structures](#data-structures)
+  - [Tree](#tree)
+- [Topics](#topics)
+  - [Dynamic programming](#dynamic-programming)
+  - [Graph](#graph)
+  - [Greedy](#greedy)
+  - [Mathematics](#mathematics)
+  - [Search](#search)
+  - [Sort](#sort)
+  - [String](#string)
+- [Problem solving](#problem-solving)
+- [References](#references)
 
 ## Introduction
 
