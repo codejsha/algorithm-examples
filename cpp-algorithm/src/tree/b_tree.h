@@ -56,7 +56,7 @@ namespace Tree
         auto SplitChild(BTreeNode* node, const int index) -> void;
 
         /// <summary>
-        /// Insert key if node is full
+        /// Insert key
         /// </summary>
         /// <param name="node">internal node</param>
         /// <param name="key">key</param>
