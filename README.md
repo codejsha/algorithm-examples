@@ -1,6 +1,6 @@
 # Algorithm Examples
 
-[한국어](README_ko-KR.md)
+[Korean](README_ko-KR.md)
 
 Table of Contents:
 
@@ -187,7 +187,7 @@ divide and conquer algorithm
 
 ## Problem solving
 
-- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
+- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving)) |
 
 ## References
 
