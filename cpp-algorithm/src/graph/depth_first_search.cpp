@@ -1,6 +1,6 @@
 #include "depth_first_search.h"
 
-auto Graph::DepthFirstSearch::Search(DfsGraph& graph) -> void
+void Graph::DepthFirstSearch::Search(DfsGraph& graph)
 {
     for (auto vertex : graph.GetVertices())
     {
@@ -11,14 +11,14 @@ auto Graph::DepthFirstSearch::Search(DfsGraph& graph) -> void
     }
 }
 
-auto Graph::DepthFirstSearch::SearchVisit(DfsGraph& graph, DfsVertex& vertex) -> void
+void Graph::DepthFirstSearch::SearchVisit(DfsGraph& graph, DfsVertex& vertex)
 {
     vertex.Visit = Visited;
     auto time = graph.GetTime() + 1;
     graph.SetTime(time);
     vertex.DiscoveryTime = time;
 
-    for (auto neighbor : vertex.Neighbors)
+    for (const auto neighbor : vertex.Neighbors)
     {
         if (neighbor->Visit == Unvisited)
         {

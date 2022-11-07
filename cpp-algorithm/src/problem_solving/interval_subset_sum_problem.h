@@ -3,12 +3,12 @@
 
 #include <vector>
 
-namespace intervalsubset
+namespace IntervalSubset
 {
     int SimpleSubsetSum(const std::vector<int>& seq);
     int SimpleSubsetSum2(const std::vector<int>& seq);
     int DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int high);
     int DynamicProgrammingSubsetSum(const std::vector<int>& seq);
-} // namespace intervalsubset
+}
 
 #endif

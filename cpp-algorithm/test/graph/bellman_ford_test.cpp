@@ -39,15 +39,15 @@ TEST(BellmanFordTest, Simple1)
     graph->BellmanFord(source);
 
     // weight
-    ASSERT_EQ(vertexS.Distance, 0);
-    ASSERT_EQ(vertexT.Distance, 2);
-    ASSERT_EQ(vertexX.Distance, 4);
-    ASSERT_EQ(vertexY.Distance, 7);
-    ASSERT_EQ(vertexZ.Distance, -2);
+    ASSERT_EQ(0, vertexS.Distance);
+    ASSERT_EQ(2, vertexT.Distance);
+    ASSERT_EQ(4, vertexX.Distance);
+    ASSERT_EQ(7, vertexY.Distance);
+    ASSERT_EQ(-2, vertexZ.Distance);
 
     // predecessor
-    ASSERT_EQ(vertexT.Predecessor->Id, 'X');
-    ASSERT_EQ(vertexX.Predecessor->Id, 'Y');
-    ASSERT_EQ(vertexY.Predecessor->Id, 'S');
-    ASSERT_EQ(vertexZ.Predecessor->Id, 'T');
+    ASSERT_EQ('X', vertexT.Predecessor->Id);
+    ASSERT_EQ('Y', vertexX.Predecessor->Id);
+    ASSERT_EQ('S', vertexY.Predecessor->Id);
+    ASSERT_EQ('T', vertexZ.Predecessor->Id);
 }

@@ -41,12 +41,12 @@ TEST(BTreeTest, SimpleInsert)
     const auto expectedB2 = std::vector<char>{'N', 'O'};
     const auto expectedB3 = std::vector<char>{'R', 'S', 'T', 'U', 'V'};
     const auto expectedB4 = std::vector<char>{'Y', 'Z'};
-    ASSERT_EQ(tree.GetRoot()->Keys, expectedB);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Keys, expectedB0);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Keys, expectedB1);
-    ASSERT_EQ(tree.GetRoot()->Children[2]->Keys, expectedB2);
-    ASSERT_EQ(tree.GetRoot()->Children[3]->Keys, expectedB3);
-    ASSERT_EQ(tree.GetRoot()->Children[4]->Keys, expectedB4);
+    ASSERT_EQ(expectedB, tree.GetRoot()->Keys);
+    ASSERT_EQ(expectedB0, tree.GetRoot()->Children[0]->Keys);
+    ASSERT_EQ(expectedB1, tree.GetRoot()->Children[1]->Keys);
+    ASSERT_EQ(expectedB2, tree.GetRoot()->Children[2]->Keys);
+    ASSERT_EQ(expectedB3, tree.GetRoot()->Children[3]->Keys);
+    ASSERT_EQ(expectedB4, tree.GetRoot()->Children[4]->Keys);
 
     // insert Q
     tree.Insert('Q');
@@ -57,13 +57,13 @@ TEST(BTreeTest, SimpleInsert)
     const auto expectedQ3 = std::vector<char>{'Q', 'R', 'S'};
     const auto expectedQ4 = std::vector<char>{'U', 'V'};
     const auto expectedQ5 = std::vector<char>{'Y', 'Z'};
-    ASSERT_EQ(tree.GetRoot()->Keys, expectedQ);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Keys, expectedQ0);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Keys, expectedQ1);
-    ASSERT_EQ(tree.GetRoot()->Children[2]->Keys, expectedQ2);
-    ASSERT_EQ(tree.GetRoot()->Children[3]->Keys, expectedQ3);
-    ASSERT_EQ(tree.GetRoot()->Children[4]->Keys, expectedQ4);
-    ASSERT_EQ(tree.GetRoot()->Children[5]->Keys, expectedQ5);
+    ASSERT_EQ(expectedQ, tree.GetRoot()->Keys);
+    ASSERT_EQ(expectedQ0, tree.GetRoot()->Children[0]->Keys);
+    ASSERT_EQ(expectedQ1, tree.GetRoot()->Children[1]->Keys);
+    ASSERT_EQ(expectedQ2, tree.GetRoot()->Children[2]->Keys);
+    ASSERT_EQ(expectedQ3, tree.GetRoot()->Children[3]->Keys);
+    ASSERT_EQ(expectedQ4, tree.GetRoot()->Children[4]->Keys);
+    ASSERT_EQ(expectedQ5, tree.GetRoot()->Children[5]->Keys);
 
     // insert L
     tree.Insert('L');
@@ -76,15 +76,15 @@ TEST(BTreeTest, SimpleInsert)
     const auto expectedL10 = std::vector<char>{'Q', 'R', 'S'};
     const auto expectedL11 = std::vector<char>{'U', 'V'};
     const auto expectedL12 = std::vector<char>{'Y', 'Z'};
-    ASSERT_EQ(tree.GetRoot()->Keys, expectedL);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Keys, expectedL0);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Children[0]->Keys, expectedL00);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Children[1]->Keys, expectedL01);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Children[2]->Keys, expectedL02);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Keys, expectedL1);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Children[0]->Keys, expectedL10);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Children[1]->Keys, expectedL11);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Children[2]->Keys, expectedL12);
+    ASSERT_EQ(expectedL, tree.GetRoot()->Keys);
+    ASSERT_EQ(expectedL0, tree.GetRoot()->Children[0]->Keys);
+    ASSERT_EQ(expectedL00, tree.GetRoot()->Children[0]->Children[0]->Keys);
+    ASSERT_EQ(expectedL01, tree.GetRoot()->Children[0]->Children[1]->Keys);
+    ASSERT_EQ(expectedL02, tree.GetRoot()->Children[0]->Children[2]->Keys);
+    ASSERT_EQ(expectedL1, tree.GetRoot()->Children[1]->Keys);
+    ASSERT_EQ(expectedL10, tree.GetRoot()->Children[1]->Children[0]->Keys);
+    ASSERT_EQ(expectedL11, tree.GetRoot()->Children[1]->Children[1]->Keys);
+    ASSERT_EQ(expectedL12, tree.GetRoot()->Children[1]->Children[2]->Keys);
 
     // insert F
     tree.Insert('F');
@@ -98,16 +98,16 @@ TEST(BTreeTest, SimpleInsert)
     const auto expectedF10 = std::vector<char>{'Q', 'R', 'S'};
     const auto expectedF11 = std::vector<char>{'U', 'V'};
     const auto expectedF12 = std::vector<char>{'Y', 'Z'};
-    ASSERT_EQ(tree.GetRoot()->Keys, expectedL);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Keys, expectedF0);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Children[0]->Keys, expectedF00);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Children[1]->Keys, expectedF01);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Children[2]->Keys, expectedF02);
-    ASSERT_EQ(tree.GetRoot()->Children[0]->Children[3]->Keys, expectedF03);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Keys, expectedF1);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Children[0]->Keys, expectedF10);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Children[1]->Keys, expectedF11);
-    ASSERT_EQ(tree.GetRoot()->Children[1]->Children[2]->Keys, expectedF12);
+    ASSERT_EQ(expectedL, tree.GetRoot()->Keys);
+    ASSERT_EQ(expectedF0, tree.GetRoot()->Children[0]->Keys);
+    ASSERT_EQ(expectedF00, tree.GetRoot()->Children[0]->Children[0]->Keys);
+    ASSERT_EQ(expectedF01, tree.GetRoot()->Children[0]->Children[1]->Keys);
+    ASSERT_EQ(expectedF02, tree.GetRoot()->Children[0]->Children[2]->Keys);
+    ASSERT_EQ(expectedF03, tree.GetRoot()->Children[0]->Children[3]->Keys);
+    ASSERT_EQ(expectedF1, tree.GetRoot()->Children[1]->Keys);
+    ASSERT_EQ(expectedF10, tree.GetRoot()->Children[1]->Children[0]->Keys);
+    ASSERT_EQ(expectedF11, tree.GetRoot()->Children[1]->Children[1]->Keys);
+    ASSERT_EQ(expectedF12, tree.GetRoot()->Children[1]->Children[2]->Keys);
 }
 
 TEST(BTreeTest, SimpleSearch)
@@ -150,23 +150,23 @@ TEST(BTreeTest, SimpleSearch)
     constexpr auto ch1 = 'B';
     const auto [node1, key1] = tree.Search(ch1);
     const auto resultKey1 = node1->Keys[key1];
-    ASSERT_EQ(resultKey1, ch1);
+    ASSERT_EQ(ch1, resultKey1);
 
     // search Q
     constexpr auto ch2 = 'Q';
     const auto [node2, key2] = tree.Search(ch2);
     const auto resultKey2 = node2->Keys[key2];
-    ASSERT_EQ(resultKey2, ch2);
+    ASSERT_EQ(ch2, resultKey2);
 
     // search L
     constexpr auto ch3 = 'L';
     const auto [node3, key3] = tree.Search(ch3);
     const auto resultKey3 = node3->Keys[key3];
-    ASSERT_EQ(resultKey3, ch3);
+    ASSERT_EQ(ch3, resultKey3);
 
     // search F
     constexpr auto ch4 = 'F';
     const auto [node4, key4] = tree.Search(ch4);
     const auto resultKey4 = node4->Keys[key4];
-    ASSERT_EQ(resultKey4, ch4);
+    ASSERT_EQ(ch4, resultKey4);
 }

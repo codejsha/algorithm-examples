@@ -18,5 +18,5 @@ TEST(LongestCommonSebsequenceTest, DynamicProgramming)
     CommonSubsequence::LongestCommonSubsequence(seq1, std::get<1>(matrix),
         seqLength1, seqLength2, result);
 
-    ASSERT_EQ(result, expectedResult);
+    ASSERT_EQ(expectedResult, result);
 }

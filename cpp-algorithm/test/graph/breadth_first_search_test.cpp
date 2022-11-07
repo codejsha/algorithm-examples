@@ -73,7 +73,7 @@ TEST(BreadthFirstSearchTest, SimpleSearch1)
 
     std::ranges::reverse(resultPath);
 
-    ASSERT_EQ(resultPath, expectedResult);
+    ASSERT_EQ(expectedResult, resultPath);
 }
 
 TEST(BreadthFirstSearchTest, SimpleSearch2)
@@ -146,5 +146,5 @@ TEST(BreadthFirstSearchTest, SimpleSearch2)
 
     std::ranges::reverse(resultPath);
 
-    ASSERT_EQ(resultPath, expectedResult);
+    ASSERT_EQ(expectedResult, resultPath);
 }

@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-void permutation::Permutation(const std::string& str, const std::string& prefix)
+void Permutation::Permutation(const std::string& str, const std::string& prefix)
 {
     const auto size = static_cast<int>(str.length());
 

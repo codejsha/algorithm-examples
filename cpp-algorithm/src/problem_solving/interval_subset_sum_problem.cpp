@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int intervalsubset::SimpleSubsetSum(const std::vector<int>& seq)
+int IntervalSubset::SimpleSubsetSum(const std::vector<int>& seq)
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
@@ -12,9 +12,9 @@ int intervalsubset::SimpleSubsetSum(const std::vector<int>& seq)
         for (int next = prev; next < size; ++next)
         {
             auto sum = 0;
-            for (int loop_index = prev; loop_index <= next; ++loop_index)
+            for (int loopIndex = prev; loopIndex <= next; ++loopIndex)
             {
-                sum += seq[loop_index];
+                sum += seq[loopIndex];
             }
             max = std::max(max, sum);
         }
@@ -23,7 +23,7 @@ int intervalsubset::SimpleSubsetSum(const std::vector<int>& seq)
     return max;
 }
 
-int intervalsubset::SimpleSubsetSum2(const std::vector<int>& seq)
+int IntervalSubset::SimpleSubsetSum2(const std::vector<int>& seq)
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
@@ -41,7 +41,7 @@ int intervalsubset::SimpleSubsetSum2(const std::vector<int>& seq)
     return max;
 }
 
-int intervalsubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, const int low, const int high)
+int IntervalSubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, const int low, const int high)
 {
     if (low == high)
     {
@@ -50,29 +50,29 @@ int intervalsubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, const
 
     // left subset and right subset
     const auto mid = static_cast<int>(std::floor((low + high) / 2));
-    const auto left_max = DivideAndConquerSubsetSum(seq, low, mid);
-    const auto right_max = DivideAndConquerSubsetSum(seq, mid + 1, high);
+    const auto leftMax = DivideAndConquerSubsetSum(seq, low, mid);
+    const auto rightMax = DivideAndConquerSubsetSum(seq, mid + 1, high);
 
     // cross subset
-    auto left_cross_max = 0;
-    auto right_cross_max = 0;
-    auto left_sum = 0;
-    auto right_sum = 0;
+    auto leftCrossMax = 0;
+    auto rightCrossMax = 0;
+    auto leftSum = 0;
+    auto rightSum = 0;
     for (int index = mid; index >= low; --index)
     {
-        left_sum += seq[index];
-        left_cross_max = std::max(left_cross_max, left_sum);
+        leftSum += seq[index];
+        leftCrossMax = std::max(leftCrossMax, leftSum);
     }
     for (int index = mid + 1; index <= high; ++index)
     {
-        right_sum += seq[index];
-        right_cross_max = std::max(right_cross_max, right_sum);
+        rightSum += seq[index];
+        rightCrossMax = std::max(rightCrossMax, rightSum);
     }
 
-    return std::max(std::max(left_max, right_max), left_cross_max + right_cross_max);
+    return std::max(std::max(leftMax, rightMax), leftCrossMax + rightCrossMax);
 }
 
-int intervalsubset::DynamicProgrammingSubsetSum(const std::vector<int>& seq)
+int IntervalSubset::DynamicProgrammingSubsetSum(const std::vector<int>& seq)
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();

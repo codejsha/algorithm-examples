@@ -2,19 +2,19 @@
 
 #include <stdexcept>
 
-auto Graph::BellmanFordGraph::AddEdge(BellmanFordVertex& u, BellmanFordVertex& v, int weight) -> void
+void Graph::BellmanFordGraph::AddEdge(BellmanFordVertex& u, BellmanFordVertex& v, int weight)
 {
     AdjacencyList.emplace_back(&u, &v);
     u.Neighbors.insert(&v);
     WeightList.insert(std::make_pair(std::make_pair(u.Id, v.Id), weight));
 }
 
-auto Graph::BellmanFordGraph::AddVertex(BellmanFordVertex& v) -> void
+void Graph::BellmanFordGraph::AddVertex(BellmanFordVertex& v)
 {
     Vertices.push_back(&v);
 }
 
-auto Graph::BellmanFordGraph::Relax(BellmanFordVertex& u, BellmanFordVertex& v) -> void
+void Graph::BellmanFordGraph::Relax(BellmanFordVertex& u, BellmanFordVertex& v)
 {
     if (v.Distance > (u.Distance + WeightList[std::make_pair(u.Id, v.Id)]))
     {
@@ -23,7 +23,7 @@ auto Graph::BellmanFordGraph::Relax(BellmanFordVertex& u, BellmanFordVertex& v) 
     }
 }
 
-auto Graph::BellmanFordGraph::BellmanFord(BellmanFordVertex& source) -> void
+void Graph::BellmanFordGraph::BellmanFord(BellmanFordVertex& source)
 {
     for (int i = 0; i < static_cast<int>(Vertices.size()) - 1; ++i)
     {

@@ -42,7 +42,7 @@ namespace Graph
         /// <param name="u">vertex</param>
         /// <param name="v">vertex</param>
         /// <returns>void</returns>
-        auto AddEdge(DfsVertex& u, DfsVertex& v) -> void
+        void AddEdge(DfsVertex& u, DfsVertex& v)
         {
             AdjacencyList.emplace_back(&u, &v);
 
@@ -55,7 +55,7 @@ namespace Graph
         /// </summary>
         /// <param name="v">vertex to add</param>
         /// <returns>void</returns>
-        auto AddVertex(DfsVertex& v) -> void
+        void AddVertex(DfsVertex& v)
         {
             Vertices.push_back(&v);
         }
@@ -70,12 +70,12 @@ namespace Graph
             return AdjacencyList;
         }
 
-        [[nodiscard]] auto GetTime() const -> int
+        [[nodiscard]] int GetTime() const
         {
             return Time;
         }
 
-        auto SetTime(const int time) -> void
+        void SetTime(const int time)
         {
             Time = time;
         }
@@ -102,7 +102,7 @@ namespace Graph
         /// </summary>
         /// <param name="graph">graph</param>
         /// <returns>void</returns>
-        auto Search(DfsGraph& graph) -> void;
+        void Search(DfsGraph& graph);
 
         /// <summary>
         /// Create depth-first forest
@@ -110,11 +110,11 @@ namespace Graph
         /// <param name="graph">graph</param>
         /// <param name="vertex">vertex</param>
         /// <returns>void</returns>
-        auto SearchVisit(DfsGraph& graph, DfsVertex& vertex) -> void;
+        void SearchVisit(DfsGraph& graph, DfsVertex& vertex);
 
     private:
         DfsGraph& Graph;
     };
-} // namespace Graph
+}
 
 #endif

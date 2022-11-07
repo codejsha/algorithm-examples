@@ -39,7 +39,7 @@ namespace Huffman
     /// </summary>
     /// <param name="freqMap">a map of char and frequency pairs</param>
     /// <returns>root node</returns>
-    auto HuffmanCode(const std::map<int, char>& freqMap) -> HuffmanNode*;
+    HuffmanNode* HuffmanCode(const std::map<int, char>& freqMap);
 
     /// <summary>
     /// Tree traversal to get the Huffman code
@@ -48,8 +48,7 @@ namespace Huffman
     /// <param name="code">prefix code</param>
     /// <param name="result">result of tree traversal</param>
     /// <returns>void</returns>
-    auto TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result) -> void;
-
-} // namespace Huffman
+    void TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result);
+}
 
 #endif

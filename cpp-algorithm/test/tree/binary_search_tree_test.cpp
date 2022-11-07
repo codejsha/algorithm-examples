@@ -17,11 +17,11 @@ TEST(BinarySearchTreeTest, PreorderTreeWalk)
     }
 
     const auto result = tree.PreorderTreeWalk();
-    ASSERT_EQ(static_cast<int>(result.size()), static_cast<int>(expectedSeq.size()))
+    ASSERT_EQ(static_cast<int>(expectedSeq.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto isEqual = std::ranges::equal(result, expectedSeq);
-    ASSERT_EQ(isEqual, true) << "Vectors input and result differ" << std::endl;
+    const auto isEqual = std::ranges::equal(expectedSeq, result);
+    ASSERT_EQ(true, isEqual) << "Vectors input and result differ" << std::endl;
 }
 
 TEST(BinarySearchTreeTest, InorderTreeWalk)
@@ -36,11 +36,11 @@ TEST(BinarySearchTreeTest, InorderTreeWalk)
     }
 
     const auto result = tree.InorderTreeWalk();
-    ASSERT_EQ(static_cast<int>(result.size()), static_cast<int>(expectedSeq.size()))
+    ASSERT_EQ(static_cast<int>(expectedSeq.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto isEqual = std::ranges::equal(result, expectedSeq);
-    ASSERT_EQ(isEqual, true) << "Vectors input and result differ" << std::endl;
+    const auto isEqual = std::ranges::equal(expectedSeq, result);
+    ASSERT_EQ(true, isEqual) << "Vectors input and result differ" << std::endl;
 }
 
 TEST(BinarySearchTreeTest, PostorderTreeWalk)
@@ -55,11 +55,11 @@ TEST(BinarySearchTreeTest, PostorderTreeWalk)
     }
 
     const auto result = tree.PostorderTreeWalk();
-    ASSERT_EQ(static_cast<int>(result.size()), static_cast<int>(expectedSeq.size()))
+    ASSERT_EQ(static_cast<int>(expectedSeq.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto isEqual = std::ranges::equal(result, expectedSeq);
-    ASSERT_EQ(isEqual, true) << "Vectors input and result differ" << std::endl;
+    const auto isEqual = std::ranges::equal(expectedSeq, result);
+    ASSERT_EQ(true, isEqual) << "Vectors input and result differ" << std::endl;
 }
 
 TEST(BinarySearchTreeTest, GetMinimum)
@@ -74,7 +74,7 @@ TEST(BinarySearchTreeTest, GetMinimum)
     }
 
     const auto result = tree.TreeMinimum();
-    ASSERT_EQ(result->Key, expectedValue);
+    ASSERT_EQ(expectedValue, result->Key);
 }
 
 TEST(BinarySearchTreeTest, GetMaximum)
@@ -89,7 +89,7 @@ TEST(BinarySearchTreeTest, GetMaximum)
     }
 
     const auto result = tree.TreeMaximum();
-    ASSERT_EQ(result->Key, expectedValue);
+    ASSERT_EQ(expectedValue, result->Key);
 }
 
 TEST(BinarySearchTreeTest, GetPredecessor)
@@ -104,7 +104,7 @@ TEST(BinarySearchTreeTest, GetPredecessor)
     }
 
     const auto result = tree.TreePredecessor(15);
-    ASSERT_EQ(result->Key, expectedValue);
+    ASSERT_EQ(expectedValue, result->Key);
 }
 
 TEST(BinarySearchTreeTest, GetSuccessor)
@@ -119,7 +119,7 @@ TEST(BinarySearchTreeTest, GetSuccessor)
     }
 
     const auto result = tree.TreeSuccessor(15);
-    ASSERT_EQ(result->Key, expectedValue);
+    ASSERT_EQ(expectedValue, result->Key);
 }
 
 TEST(BinarySearchTreeTest, RecursiveTreeSearch)
@@ -133,7 +133,7 @@ TEST(BinarySearchTreeTest, RecursiveTreeSearch)
     }
 
     const auto result = tree.RecursiveTreeSearch(seq.back());
-    ASSERT_EQ(result->Key, seq.back());
+    ASSERT_EQ(seq.back(), result->Key);
 }
 
 TEST(BinarySearchTreeTest, IterativeTreeSearch)
@@ -147,7 +147,7 @@ TEST(BinarySearchTreeTest, IterativeTreeSearch)
     }
 
     const auto result = tree.IterativeTreeSearch(seq.back());
-    ASSERT_EQ(result->Key, seq.back());
+    ASSERT_EQ(seq.back(), result->Key);
 }
 
 TEST(BinarySearchTreeTest, Delete)
@@ -165,7 +165,7 @@ TEST(BinarySearchTreeTest, Delete)
     {
         tree.Delete(element);
         const auto result = tree.InorderTreeWalk();
-        ASSERT_EQ(static_cast<int>(result.size()), --seqSize)
+        ASSERT_EQ(--seqSize, static_cast<int>(result.size()))
             << "Vectors input and result are of unequal length";
     }
 }

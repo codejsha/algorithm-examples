@@ -12,7 +12,7 @@ namespace Fibonacci
     /// <param name="number">number to calculate</param>
     /// <param name="memo">memoization of previously calculated numbers</param>
     /// <returns>nth Fibonacci number</returns>
-    auto FibonacciDynamicTopDown(int number, std::vector<int>& memo) -> int;
+    int FibonacciDynamicTopDown(int number, std::vector<int>& memo);
 
     /// <summary>
     /// Calculate the Fibonacci number using a bottom-up approach.
@@ -20,7 +20,7 @@ namespace Fibonacci
     /// </summary>
     /// <param name="number">number to calculate</param>
     /// <returns>nth Fibonacci number</returns>
-    auto FibonacciDynamicBottomUp(int number) -> int;
-} // namespace fibonacci
+    int FibonacciDynamicBottomUp(int number);
+}
 
 #endif

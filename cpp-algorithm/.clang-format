@@ -6,6 +6,7 @@ BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeBraces: Allman
 ColumnLimit: 0
 IndentWidth: 4
+FixNamespaceComments: False
 NamespaceIndentation: All
 PointerAlignment: Left
 TabWidth: 4

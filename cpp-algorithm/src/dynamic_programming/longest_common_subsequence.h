@@ -35,7 +35,6 @@ namespace CommonSubsequence
     /// <param name="directionMatrix">direction matrix</param>
     void PrintOptimalMatrix(const std::string& seq1, const std::string& seq2,
         const gsl_matrix_char* directionMatrix);
-
-} // namespace common_subsequence
+}
 
 #endif

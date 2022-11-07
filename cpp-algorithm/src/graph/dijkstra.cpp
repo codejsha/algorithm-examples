@@ -1,18 +1,18 @@
 #include "dijkstra.h"
 
-auto Graph::DijkstraGraph::AddEdge(DijkstraVertex& u, DijkstraVertex& v, int weight) -> void
+void Graph::DijkstraGraph::AddEdge(DijkstraVertex& u, DijkstraVertex& v, int weight)
 {
     AdjacencyList.emplace_back(&u, &v);
     u.Neighbors.insert(&v);
     WeightList.insert(std::make_pair(std::make_pair(u.Id, v.Id), weight));
 }
 
-auto Graph::DijkstraGraph::AddVertex(DijkstraVertex& v) -> void
+void Graph::DijkstraGraph::AddVertex(DijkstraVertex& v)
 {
     Vertices.push_back(&v);
 }
 
-auto Graph::DijkstraGraph::Relax(DijkstraVertex& u, DijkstraVertex& v) -> void
+void Graph::DijkstraGraph::Relax(DijkstraVertex& u, DijkstraVertex& v)
 {
     if (v.Distance > (u.Distance + WeightList[std::make_pair(u.Id, v.Id)]))
     {
@@ -21,7 +21,7 @@ auto Graph::DijkstraGraph::Relax(DijkstraVertex& u, DijkstraVertex& v) -> void
     }
 }
 
-auto Graph::DijkstraGraph::ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& minQueue) -> void
+void Graph::DijkstraGraph::ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& minQueue)
 {
     auto queue = std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>{};
     const auto minQueueSize = static_cast<int>(minQueue.size());
@@ -35,7 +35,7 @@ auto Graph::DijkstraGraph::ReorderQueue(std::priority_queue<DijkstraVertex*, std
     minQueue = std::move(queue);
 }
 
-auto Graph::DijkstraGraph::Dijkstra(DijkstraVertex& source) -> void
+void Graph::DijkstraGraph::Dijkstra(DijkstraVertex& source)
 {
     std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator> minQueue;
     for (auto v : Vertices)

@@ -2,8 +2,8 @@
 
 #include <iostream>
 
-auto CommonSubsequence::LongestCommonSubsequenceLength(const std::string& seq1, const std::string& seq2)
-    -> std::tuple<gsl_matrix_int*, gsl_matrix_char*>
+std::tuple<gsl_matrix_int*, gsl_matrix_char*> CommonSubsequence::LongestCommonSubsequenceLength(
+    const std::string& seq1, const std::string& seq2)
 {
     const auto seqLength1 = static_cast<int>(seq1.length());
     const auto seqLength2 = static_cast<int>(seq2.length());
@@ -41,8 +41,8 @@ auto CommonSubsequence::LongestCommonSubsequenceLength(const std::string& seq1, 
     return std::make_tuple(lengthMatrix, directionMatrix);
 }
 
-auto CommonSubsequence::LongestCommonSubsequence(const std::string& seq1, const gsl_matrix_char* directionMatrix,
-    const int length1, const int length2, std::string& result) -> void
+void CommonSubsequence::LongestCommonSubsequence(const std::string& seq1, const gsl_matrix_char* directionMatrix,
+    const int length1, const int length2, std::string& result)
 {
     if ((length1 == 0) || (length2 == 0))
     {
@@ -64,8 +64,8 @@ auto CommonSubsequence::LongestCommonSubsequence(const std::string& seq1, const 
     }
 }
 
-auto CommonSubsequence::PrintOptimalMatrix(const std::string& seq1, const std::string& seq2,
-    const gsl_matrix_char* directionMatrix) -> void
+void CommonSubsequence::PrintOptimalMatrix(const std::string& seq1, const std::string& seq2,
+    const gsl_matrix_char* directionMatrix)
 {
     const auto seqLength1 = static_cast<int>(seq1.length());
     const auto seqLength2 = static_cast<int>(seq2.length());

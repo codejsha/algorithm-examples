@@ -1,7 +1,7 @@
 #include "rod_cutting.h"
 #include <algorithm>
 
-auto RodCutting::CutRod(const std::map<int, int>& price, const int length) -> int
+int RodCutting::CutRod(const std::map<int, int>& price, const int length)
 {
     if (length == 0)
     {
@@ -18,13 +18,13 @@ auto RodCutting::CutRod(const std::map<int, int>& price, const int length) -> in
     return maxRevenue;
 }
 
-auto RodCutting::MemoizedCutRod(const std::map<int, int>& price, const int length) -> int
+int RodCutting::MemoizedCutRod(const std::map<int, int>& price, const int length)
 {
     std::vector<int> memo(static_cast<int>(price.size()) + 1, -1);
     return MemoizedCutRodAux(price, length, memo);
 }
 
-auto RodCutting::MemoizedCutRodAux(const std::map<int, int>& price, const int length, std::vector<int>& memo) -> int
+int RodCutting::MemoizedCutRodAux(const std::map<int, int>& price, const int length, std::vector<int>& memo)
 {
     auto maxRevenue = std::numeric_limits<int>::min();
 
@@ -50,7 +50,7 @@ auto RodCutting::MemoizedCutRodAux(const std::map<int, int>& price, const int le
     return maxRevenue;
 }
 
-auto RodCutting::BottomUpCutRod(const std::map<int, int>& price, const int length) -> int
+int RodCutting::BottomUpCutRod(const std::map<int, int>& price, const int length)
 {
     std::vector<int> memo(static_cast<int>(price.size()) + 1, -1);
     memo[0] = 0;
@@ -68,7 +68,7 @@ auto RodCutting::BottomUpCutRod(const std::map<int, int>& price, const int lengt
     return memo[length];
 }
 
-auto RodCutting::ExtendedBottomUpCutRod(const std::map<int, int>& price, const int length) -> std::tuple<int, int>
+std::tuple<int, int> RodCutting::ExtendedBottomUpCutRod(const std::map<int, int>& price, const int length)
 {
     // the memoization of the max revenue
     std::vector<int> memo(static_cast<int>(price.size()) + 1, -1);

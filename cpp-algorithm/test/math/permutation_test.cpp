@@ -6,7 +6,7 @@ TEST(PermutationTest, Simple)
 {
     const auto str = "abc";
 
-    permutation::Permutation(str, "");
+    Permutation::Permutation(str, "");
     // result:
     // abc
     // acb

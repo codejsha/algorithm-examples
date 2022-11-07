@@ -1,6 +1,6 @@
 #include "binary_search_tree.h"
 
-auto Tree::BinarySearchTree::Insert(const int key) -> void
+void Tree::BinarySearchTree::Insert(const int key)
 {
     if (Root == nullptr)
     {
@@ -10,7 +10,7 @@ auto Tree::BinarySearchTree::Insert(const int key) -> void
     Insert(Root, key);
 }
 
-auto Tree::BinarySearchTree::Delete(const int key) -> void
+void Tree::BinarySearchTree::Delete(const int key)
 {
     if (Root == nullptr)
     {
@@ -19,17 +19,17 @@ auto Tree::BinarySearchTree::Delete(const int key) -> void
     Delete(Root, key);
 }
 
-auto Tree::BinarySearchTree::TreeMinimum() -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreeMinimum()
 {
     return TreeMinimum(Root);
 }
 
-auto Tree::BinarySearchTree::TreeMaximum() -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreeMaximum()
 {
     return TreeMaximum(Root);
 }
 
-auto Tree::BinarySearchTree::TreePredecessor(const int key) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreePredecessor(const int key)
 {
     auto node = IterativeTreeSearch(key);
 
@@ -53,7 +53,7 @@ auto Tree::BinarySearchTree::TreePredecessor(const int key) -> BinarySearchNode*
     return parent;
 }
 
-auto Tree::BinarySearchTree::TreeSuccessor(const int key) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreeSuccessor(const int key)
 {
     auto node = IterativeTreeSearch(key);
 
@@ -77,17 +77,17 @@ auto Tree::BinarySearchTree::TreeSuccessor(const int key) -> BinarySearchNode*
     return parent;
 }
 
-auto Tree::BinarySearchTree::RecursiveTreeSearch(const int key) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::RecursiveTreeSearch(const int key)
 {
     return RecursiveTreeSearch(Root, key);
 }
 
-auto Tree::BinarySearchTree::IterativeTreeSearch(const int key) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::IterativeTreeSearch(const int key)
 {
     return IterativeTreeSearch(Root, key);
 }
 
-auto Tree::BinarySearchTree::Insert(BinarySearchNode*& ref, const int key) -> void
+void Tree::BinarySearchTree::Insert(BinarySearchNode*& ref, const int key)
 {
     if (ref == nullptr)
     {
@@ -106,7 +106,7 @@ auto Tree::BinarySearchTree::Insert(BinarySearchNode*& ref, const int key) -> vo
     }
 }
 
-auto Tree::BinarySearchTree::Delete(BinarySearchNode*& ref, const int key) -> void
+void Tree::BinarySearchTree::Delete(BinarySearchNode*& ref, const int key)
 {
     if (ref == nullptr)
     {
@@ -154,7 +154,7 @@ auto Tree::BinarySearchTree::Delete(BinarySearchNode*& ref, const int key) -> vo
     }
 }
 
-auto Tree::BinarySearchTree::TreeMinimum(BinarySearchNode* ref) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreeMinimum(BinarySearchNode* ref)
 {
     while (ref->Left != nullptr)
     {
@@ -163,7 +163,7 @@ auto Tree::BinarySearchTree::TreeMinimum(BinarySearchNode* ref) -> BinarySearchN
     return ref;
 }
 
-auto Tree::BinarySearchTree::TreeMaximum(BinarySearchNode* ref) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreeMaximum(BinarySearchNode* ref)
 {
     while (ref->Right != nullptr)
     {
@@ -172,17 +172,17 @@ auto Tree::BinarySearchTree::TreeMaximum(BinarySearchNode* ref) -> BinarySearchN
     return ref;
 }
 
-auto Tree::BinarySearchTree::TreePredecessor(BinarySearchNode* ref) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreePredecessor(BinarySearchNode* ref)
 {
     return TreePredecessor(ref->Key);
 }
 
-auto Tree::BinarySearchTree::TreeSuccessor(BinarySearchNode* ref) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::TreeSuccessor(BinarySearchNode* ref)
 {
     return TreeSuccessor(ref->Key);
 }
 
-auto Tree::BinarySearchTree::RecursiveTreeSearch(BinarySearchNode* ref, const int key) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::RecursiveTreeSearch(BinarySearchNode* ref, const int key)
 {
     if ((ref == nullptr) || key == ref->Key)
     {
@@ -199,7 +199,7 @@ auto Tree::BinarySearchTree::RecursiveTreeSearch(BinarySearchNode* ref, const in
     }
 }
 
-auto Tree::BinarySearchTree::IterativeTreeSearch(BinarySearchNode* ref, const int key) -> BinarySearchNode*
+Tree::BinarySearchNode* Tree::BinarySearchTree::IterativeTreeSearch(BinarySearchNode* ref, const int key)
 {
     while ((ref != nullptr) && (key != ref->Key))
     {

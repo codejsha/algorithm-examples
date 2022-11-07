@@ -39,15 +39,15 @@ TEST(DijkstraTest, Simple1)
     graph->Dijkstra(source);
 
     // weight
-    ASSERT_EQ(vertexS.Distance, 0);
-    ASSERT_EQ(vertexT.Distance, 8);
-    ASSERT_EQ(vertexX.Distance, 9);
-    ASSERT_EQ(vertexY.Distance, 5);
-    ASSERT_EQ(vertexZ.Distance, 7);
+    ASSERT_EQ(0, vertexS.Distance);
+    ASSERT_EQ(8, vertexT.Distance);
+    ASSERT_EQ(9, vertexX.Distance);
+    ASSERT_EQ(5, vertexY.Distance);
+    ASSERT_EQ(7, vertexZ.Distance);
 
     // predecessor
-    ASSERT_EQ(vertexT.Predecessor->Id, 'Y');
-    ASSERT_EQ(vertexX.Predecessor->Id, 'T');
-    ASSERT_EQ(vertexY.Predecessor->Id, 'S');
-    ASSERT_EQ(vertexZ.Predecessor->Id, 'Y');
+    ASSERT_EQ('Y', vertexT.Predecessor->Id);
+    ASSERT_EQ('T', vertexX.Predecessor->Id);
+    ASSERT_EQ('S', vertexY.Predecessor->Id);
+    ASSERT_EQ('Y', vertexZ.Predecessor->Id);
 }

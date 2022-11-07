@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-std::vector<int> sort::InsertionSort(std::vector<int>& seq)
+std::vector<int> Sort::InsertionSort(std::vector<int>& seq)
 {
     const auto size = static_cast<int>(seq.size());
 

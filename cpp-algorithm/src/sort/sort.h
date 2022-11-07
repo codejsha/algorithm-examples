@@ -3,7 +3,7 @@
 
 #include <vector>
 
-namespace sort
+namespace Sort
 {
     /// <summary>
     /// Selection sort algorithm.
@@ -18,6 +18,6 @@ namespace sort
     /// <param name="seq">sequence of elements</param>
     /// <returns>sorted sequence</returns>
     std::vector<int> InsertionSort(std::vector<int>& seq);
-} // namespace sort
+}
 
 #endif

@@ -1,6 +1,6 @@
 #include "b_tree.h"
 
-auto Tree::BTree::SplitChild(BTreeNode* node, const int index) -> void
+void Tree::BTree::SplitChild(BTreeNode* node, const int index)
 {
     const auto leftChild = node->Children[index];
 
@@ -46,7 +46,7 @@ auto Tree::BTree::SplitChild(BTreeNode* node, const int index) -> void
     node->Children.insert(node->Children.begin() + index + 1, rightChild);
 }
 
-auto Tree::BTree::InsertNonFull(BTreeNode* node, const char key) -> void
+void Tree::BTree::InsertNonFull(BTreeNode* node, const char key)
 {
     auto keyCount = node->GetKeyCount();
 
@@ -81,17 +81,17 @@ auto Tree::BTree::InsertNonFull(BTreeNode* node, const char key) -> void
     }
 }
 
-auto Tree::BTree::Insert(const char key) -> void
+void Tree::BTree::Insert(const char key)
 {
     Insert(Root, key);
 }
 
-auto Tree::BTree::Search(const char key) -> std::pair<BTreeNode*, const int>
+std::pair<Tree::BTreeNode*, const int> Tree::BTree::Search(const char key)
 {
     return Search(Root, key);
 }
 
-auto Tree::BTree::Insert(BTreeNode* ref, const char key) -> void
+void Tree::BTree::Insert(BTreeNode* ref, const char key)
 {
     const auto rootNode = ref;
 
@@ -110,7 +110,7 @@ auto Tree::BTree::Insert(BTreeNode* ref, const char key) -> void
     }
 }
 
-auto Tree::BTree::Search(BTreeNode* ref, const char key) -> std::pair<BTreeNode*, const int>
+std::pair<Tree::BTreeNode*, const int> Tree::BTree::Search(BTreeNode* ref, const char key)
 {
     auto index = 0;
     const auto keyCount = ref->GetKeyCount();

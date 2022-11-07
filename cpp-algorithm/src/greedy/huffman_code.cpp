@@ -2,7 +2,7 @@
 
 #include <queue>
 
-auto Huffman::HuffmanCode(const std::map<int, char>& freqMap) -> HuffmanNode*
+Huffman::HuffmanNode* Huffman::HuffmanCode(const std::map<int, char>& freqMap)
 {
     std::priority_queue<HuffmanNode*, std::vector<HuffmanNode*>, MinComparator> minQueue;
     for (auto [freq, ch] : freqMap)
@@ -28,7 +28,7 @@ auto Huffman::HuffmanCode(const std::map<int, char>& freqMap) -> HuffmanNode*
     return minQueue.top();
 }
 
-auto Huffman::TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result) -> void
+void Huffman::TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result)
 {
     if (root == nullptr)
     {

@@ -49,14 +49,14 @@ namespace Graph
         /// <param name="v">vertex</param>
         /// <param name="weight">weight of edge</param>
         /// <returns>void</returns>
-        auto AddEdge(DijkstraVertex& u, DijkstraVertex& v, int weight) -> void;
+        void AddEdge(DijkstraVertex& u, DijkstraVertex& v, int weight);
 
         /// <summary>
         /// Add a vertex to the graph
         /// </summary>
         /// <param name="v">vertex to add</param>
         /// <returns>void</returns>
-        auto AddVertex(DijkstraVertex& v) -> void;
+        void AddVertex(DijkstraVertex& v);
 
         /// <summary>
         /// Investigate whether the shortest path can be improved, and update
@@ -64,27 +64,27 @@ namespace Graph
         /// <param name="u">vertex</param>
         /// <param name="v">vertex</param>
         /// <returns>void</returns>
-        auto Relax(DijkstraVertex& u, DijkstraVertex& v) -> void;
+        void Relax(DijkstraVertex& u, DijkstraVertex& v);
 
         /// <summary>
         /// Reordering elements of the queue
         /// </summary>
         /// <param name="minQueue">mininum priority queue</param>
         /// <returns>void</returns>
-        auto ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& minQueue) -> void;
+        void ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& minQueue);
 
         /// <summary>
         /// Perform Dijkstra's algorithm on the graph
         /// </summary>
         /// <param name="source">source vertex</param>
         /// <returns>void</returns>
-        auto Dijkstra(DijkstraVertex& source) -> void;
+        void Dijkstra(DijkstraVertex& source);
 
     private:
         std::vector<DijkstraVertex*> Vertices;
         std::vector<std::tuple<DijkstraVertex*, DijkstraVertex*>> AdjacencyList;
         std::map<std::pair<char, char>, int> WeightList;
     };
-} // namespace Graph
+}
 
 #endif

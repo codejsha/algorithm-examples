@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace permutation
+namespace Permutation
 {
     /// <summary>
     /// Permutation from a given string.
@@ -11,6 +11,6 @@ namespace permutation
     /// <param name="str">given string</param>
     /// <param name="prefix">prefix</param>
     void Permutation(const std::string& str, const std::string& prefix);
-} // namespace permutation
+}
 
 #endif

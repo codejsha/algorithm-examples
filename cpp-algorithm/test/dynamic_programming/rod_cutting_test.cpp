@@ -20,16 +20,16 @@ TEST(RodCuttingTest, Simple)
     const auto result9 = RodCutting::CutRod(price, 9);
     const auto result10 = RodCutting::CutRod(price, 10);
 
-    ASSERT_EQ(result1, expectedResult.at(1));
-    ASSERT_EQ(result2, expectedResult.at(2));
-    ASSERT_EQ(result3, expectedResult.at(3));
-    ASSERT_EQ(result4, expectedResult.at(4));
-    ASSERT_EQ(result5, expectedResult.at(5));
-    ASSERT_EQ(result6, expectedResult.at(6));
-    ASSERT_EQ(result7, expectedResult.at(7));
-    ASSERT_EQ(result8, expectedResult.at(8));
-    ASSERT_EQ(result9, expectedResult.at(9));
-    ASSERT_EQ(result10, expectedResult.at(10));
+    ASSERT_EQ(expectedResult.at(1), result1);
+    ASSERT_EQ(expectedResult.at(2), result2);
+    ASSERT_EQ(expectedResult.at(3), result3);
+    ASSERT_EQ(expectedResult.at(4), result4);
+    ASSERT_EQ(expectedResult.at(5), result5);
+    ASSERT_EQ(expectedResult.at(6), result6);
+    ASSERT_EQ(expectedResult.at(7), result7);
+    ASSERT_EQ(expectedResult.at(8), result8);
+    ASSERT_EQ(expectedResult.at(9), result9);
+    ASSERT_EQ(expectedResult.at(10), result10);
 }
 
 TEST(RodCuttingTest, DynamicProgrammingTopDown)
@@ -50,16 +50,16 @@ TEST(RodCuttingTest, DynamicProgrammingTopDown)
     const auto result9 = RodCutting::MemoizedCutRod(price, 9);
     const auto result10 = RodCutting::MemoizedCutRod(price, 10);
 
-    ASSERT_EQ(result1, expectedResult.at(1));
-    ASSERT_EQ(result2, expectedResult.at(2));
-    ASSERT_EQ(result3, expectedResult.at(3));
-    ASSERT_EQ(result4, expectedResult.at(4));
-    ASSERT_EQ(result5, expectedResult.at(5));
-    ASSERT_EQ(result6, expectedResult.at(6));
-    ASSERT_EQ(result7, expectedResult.at(7));
-    ASSERT_EQ(result8, expectedResult.at(8));
-    ASSERT_EQ(result9, expectedResult.at(9));
-    ASSERT_EQ(result10, expectedResult.at(10));
+    ASSERT_EQ(expectedResult.at(1), result1);
+    ASSERT_EQ(expectedResult.at(2), result2);
+    ASSERT_EQ(expectedResult.at(3), result3);
+    ASSERT_EQ(expectedResult.at(4), result4);
+    ASSERT_EQ(expectedResult.at(5), result5);
+    ASSERT_EQ(expectedResult.at(6), result6);
+    ASSERT_EQ(expectedResult.at(7), result7);
+    ASSERT_EQ(expectedResult.at(8), result8);
+    ASSERT_EQ(expectedResult.at(9), result9);
+    ASSERT_EQ(expectedResult.at(10), result10);
 }
 
 TEST(RodCuttingTest, DynamicProgrammingBottomUp)
@@ -80,16 +80,16 @@ TEST(RodCuttingTest, DynamicProgrammingBottomUp)
     const auto result9 = RodCutting::BottomUpCutRod(price, 9);
     const auto result10 = RodCutting::BottomUpCutRod(price, 10);
 
-    ASSERT_EQ(result1, expectedResult.at(1));
-    ASSERT_EQ(result2, expectedResult.at(2));
-    ASSERT_EQ(result3, expectedResult.at(3));
-    ASSERT_EQ(result4, expectedResult.at(4));
-    ASSERT_EQ(result5, expectedResult.at(5));
-    ASSERT_EQ(result6, expectedResult.at(6));
-    ASSERT_EQ(result7, expectedResult.at(7));
-    ASSERT_EQ(result8, expectedResult.at(8));
-    ASSERT_EQ(result9, expectedResult.at(9));
-    ASSERT_EQ(result10, expectedResult.at(10));
+    ASSERT_EQ(expectedResult.at(1), result1);
+    ASSERT_EQ(expectedResult.at(2), result2);
+    ASSERT_EQ(expectedResult.at(3), result3);
+    ASSERT_EQ(expectedResult.at(4), result4);
+    ASSERT_EQ(expectedResult.at(5), result5);
+    ASSERT_EQ(expectedResult.at(6), result6);
+    ASSERT_EQ(expectedResult.at(7), result7);
+    ASSERT_EQ(expectedResult.at(8), result8);
+    ASSERT_EQ(expectedResult.at(9), result9);
+    ASSERT_EQ(expectedResult.at(10), result10);
 }
 
 TEST(RodCuttingTest, DynamicProgrammingExtendedBottomUp)
@@ -111,14 +111,14 @@ TEST(RodCuttingTest, DynamicProgrammingExtendedBottomUp)
     const auto result9 = RodCutting::ExtendedBottomUpCutRod(price, 9);
     const auto result10 = RodCutting::ExtendedBottomUpCutRod(price, 10);
 
-    ASSERT_EQ(result1, expectedResult.at(1));
-    ASSERT_EQ(result2, expectedResult.at(2));
-    ASSERT_EQ(result3, expectedResult.at(3));
-    ASSERT_EQ(result4, expectedResult.at(4));
-    ASSERT_EQ(result5, expectedResult.at(5));
-    ASSERT_EQ(result6, expectedResult.at(6));
-    ASSERT_EQ(result7, expectedResult.at(7));
-    ASSERT_EQ(result8, expectedResult.at(8));
-    ASSERT_EQ(result9, expectedResult.at(9));
-    ASSERT_EQ(result10, expectedResult.at(10));
+    ASSERT_EQ(expectedResult.at(1), result1);
+    ASSERT_EQ(expectedResult.at(2), result2);
+    ASSERT_EQ(expectedResult.at(3), result3);
+    ASSERT_EQ(expectedResult.at(4), result4);
+    ASSERT_EQ(expectedResult.at(5), result5);
+    ASSERT_EQ(expectedResult.at(6), result6);
+    ASSERT_EQ(expectedResult.at(7), result7);
+    ASSERT_EQ(expectedResult.at(8), result8);
+    ASSERT_EQ(expectedResult.at(9), result9);
+    ASSERT_EQ(expectedResult.at(10), result10);
 }

@@ -2,19 +2,19 @@
 
 #include <iostream>
 
-std::vector<int> sort::SelectionSort(std::vector<int>& seq)
+std::vector<int> Sort::SelectionSort(std::vector<int>& seq)
 {
     for (int prev = 0; prev < static_cast<int>(seq.size()); ++prev)
     {
-        auto min_index = prev;
+        auto minIndex = prev;
         for (int next = prev + 1; next < static_cast<int>(seq.size()); ++next)
         {
-            if (seq[min_index] > seq[next])
+            if (seq[minIndex] > seq[next])
             {
-                min_index = next;
+                minIndex = next;
             }
         }
-        std::swap(seq[prev], seq[min_index]);
+        std::swap(seq[prev], seq[minIndex]);
     }
     return seq;
 }

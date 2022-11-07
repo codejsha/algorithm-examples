@@ -37,14 +37,14 @@ namespace Graph
         /// <param name="v">vertex</param>
         /// <param name="weight">weight of edge</param>
         /// <returns>void</returns>
-        auto AddEdge(BellmanFordVertex& u, BellmanFordVertex& v, int weight) -> void;
+        void AddEdge(BellmanFordVertex& u, BellmanFordVertex& v, int weight);
 
         /// <summary>
         /// Add a vertex to the graph
         /// </summary>
         /// <param name="v">vertex to add</param>
         /// <returns>void</returns>
-        auto AddVertex(BellmanFordVertex& v) -> void;
+        void AddVertex(BellmanFordVertex& v);
 
         /// <summary>
         /// Investigate whether the shortest path can be improved, and update
@@ -52,20 +52,20 @@ namespace Graph
         /// <param name="u">vertex</param>
         /// <param name="v">vertex</param>
         /// <returns>void</returns>
-        auto Relax(BellmanFordVertex& u, BellmanFordVertex& v) -> void;
+        void Relax(BellmanFordVertex& u, BellmanFordVertex& v);
 
         /// <summary>
         /// Find the shortest path from a source vertex to all other vertices
         /// </summary>
         /// <param name="source">source vertex</param>
         /// <returns>void</returns>
-        auto BellmanFord(BellmanFordVertex& source) -> void;
+        void BellmanFord(BellmanFordVertex& source);
 
     private:
         std::vector<BellmanFordVertex*> Vertices;
         std::vector<std::tuple<BellmanFordVertex*, BellmanFordVertex*>> AdjacencyList;
         std::map<std::pair<char, char>, int> WeightList;
     };
-} // namespace Graph
+}
 
 #endif

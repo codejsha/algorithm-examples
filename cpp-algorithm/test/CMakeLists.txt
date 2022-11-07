@@ -4,7 +4,7 @@ add_subdirectory(dynamic_programming)
 add_subdirectory(graph)
 add_subdirectory(greedy)
 add_subdirectory(math)
-add_subdirectory(problem)
+add_subdirectory(problem_solving)
 add_subdirectory(sort)
 add_subdirectory(tree)
 

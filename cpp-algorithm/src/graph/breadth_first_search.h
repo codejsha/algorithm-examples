@@ -36,7 +36,7 @@ namespace Graph
         /// <param name="u">vertex</param>
         /// <param name="v">vertex</param>
         /// <returns>void</returns>
-        auto AddEdge(BfsVertex& u, BfsVertex& v) -> void
+        void AddEdge(BfsVertex& u, BfsVertex& v)
         {
             AdjacencyList.emplace_back(&u, &v);
             u.Neighbors.insert(&v);
@@ -48,7 +48,7 @@ namespace Graph
         /// </summary>
         /// <param name="v">vertex to add</param>
         /// <returns>void</returns>
-        auto AddVertex(BfsVertex& v) -> void
+        void AddVertex(BfsVertex& v)
         {
             Vertices.push_back(&v);
         }
@@ -75,11 +75,11 @@ namespace Graph
         /// <param name="start">starting vertex</param>
         /// <param name="goal">goal vertex</param>
         /// <returns>goal vertex</returns>
-        auto Search(BfsVertex& start, BfsVertex& goal) -> BfsVertex*;
+        BfsVertex* Search(BfsVertex& start, BfsVertex& goal);
 
     private:
         BfsGraph& Graph;
     };
-} // namespace Graph
+}
 
 #endif

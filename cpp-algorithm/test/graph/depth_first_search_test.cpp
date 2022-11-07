@@ -55,5 +55,5 @@ TEST(DepthFirstSearchTest, SimpleSearch1)
 
     std::ranges::reverse(resultPath);
 
-    ASSERT_EQ(resultPath, expectedResult);
+    ASSERT_EQ(expectedResult, resultPath);
 }

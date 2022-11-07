@@ -3,7 +3,7 @@
 
 #include <vector>
 
-namespace activity_selection
+namespace ActivitySelection
 {
     /// <summary>
     /// Activity selection problem using recursive approach
@@ -13,7 +13,7 @@ namespace activity_selection
     /// <param name="index">index of activity</param>
     /// <param name="size">size of activities</param>
     /// <returns>the resulting set of selected activities</returns>
-    std::vector<int> recursive_activity_selector(const std::vector<int>& start, const std::vector<int>& finish,
+    std::vector<int> RecursiveActivitySelector(const std::vector<int>& start, const std::vector<int>& finish,
         const int index, const int size);
 
     /// <summary>
@@ -22,7 +22,7 @@ namespace activity_selection
     /// <param name="start">start times of activities</param>
     /// <param name="finish">finish times of activities</param>
     /// <returns>the resulting set of selected activities</returns>
-    std::vector<int> greedy_activity_selector(const std::vector<int>& start, const std::vector<int>& finish);
-} // namespace activity_selection
+    std::vector<int> GreedyActivitySelector(const std::vector<int>& start, const std::vector<int>& finish);
+}
 
 #endif
