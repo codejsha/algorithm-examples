@@ -12,6 +12,7 @@
   - [그래프 (Graph)](#그래프-graph)
   - [그리디 (Greedy)](#그리디-greedy)
   - [수학 (Mathematics)](#수학-mathematics)
+  - [기본 자료형 (Primitive type)](#기본-자료형-primitive-type)
   - [검색 (Search)](#검색-search)
   - [정렬 (Sort)](#정렬-sort)
   - [문자열 (String)](#문자열-string)
@@ -66,6 +67,18 @@
 - 최소 공배수 (Least common multiple (LCM)): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - 행렬 곱셈 (Matrix multiplication): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - 순열 (Permutation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
+
+### 기본 자료형 (Primitive type)
+
+- 패리티 계산하기 (Computing parity of word): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 산술 연산자 없이 나눗셈 계산하기 (Divide operation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 임의의 숫자를 균등한 확룰로 생성하기 (Generate random number): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
+- 회문 확인하기 (Integer palindrome): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
+- 곱셈과 덧셈 없이 $x \times y$ 계산하기 (Multiply operation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- pow(x,y) 계산하기 (Power operation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 사각형이 겹치는지 확인하기 (Rectangle intersection): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 숫자 뒤집기 (Reverse digit): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
+- 비트 스왑 (Swap bit): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 
 ### 검색 (Search)
 
