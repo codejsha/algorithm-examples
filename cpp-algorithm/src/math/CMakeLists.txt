@@ -1,9 +1,10 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 
-add_library(combination "combination.cpp")
-target_link_libraries(combination PRIVATE common_util)
-set_property(TARGET combination PROPERTY CXX_STANDARD 20)
+macro(add_library_target target)
+	add_library(${target} SHARED "${target}.cpp")
+	target_link_libraries(${target} PRIVATE common_util ${ARGN})
+	set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
+endmacro()
 
-add_library(permutation "permutation.cpp")
-target_link_libraries(permutation PRIVATE common_util)
-set_property(TARGET permutation PROPERTY CXX_STANDARD 20)
+add_library_target(combination)
+add_library_target(permutation)

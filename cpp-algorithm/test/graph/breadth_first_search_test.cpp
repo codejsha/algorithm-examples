@@ -60,7 +60,7 @@ TEST(BreadthFirstSearchTest, SimpleSearch1)
 
     // test U
     auto& goal = vertexU;
-    auto expectedResult = std::vector<char>{'S', 'W', 'T', 'U'};
+    auto expected = std::vector<char>{'S', 'W', 'T', 'U'};
     auto result = bfs->Search(start, goal);
 
     auto resultPath = std::vector<char>{};
@@ -73,7 +73,7 @@ TEST(BreadthFirstSearchTest, SimpleSearch1)
 
     std::ranges::reverse(resultPath);
 
-    ASSERT_EQ(expectedResult, resultPath);
+    ASSERT_EQ(expected, resultPath);
 }
 
 TEST(BreadthFirstSearchTest, SimpleSearch2)
@@ -133,7 +133,7 @@ TEST(BreadthFirstSearchTest, SimpleSearch2)
 
     // test Y
     auto& goal = vertexY;
-    auto expectedResult = std::vector<char>{'S', 'W', 'X', 'Y'};
+    auto expected = std::vector<char>{'S', 'W', 'X', 'Y'};
     auto result = bfs->Search(start, goal);
 
     auto resultPath = std::vector<char>{};
@@ -146,5 +146,5 @@ TEST(BreadthFirstSearchTest, SimpleSearch2)
 
     std::ranges::reverse(resultPath);
 
-    ASSERT_EQ(expectedResult, resultPath);
+    ASSERT_EQ(expected, resultPath);
 }

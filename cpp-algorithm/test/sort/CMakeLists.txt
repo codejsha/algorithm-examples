@@ -2,15 +2,14 @@ include_directories(${CMAKE_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/sort)
 
 enable_testing()
-
-add_executable(insertion_sort_test "insertion_sort_test.cpp" "${CMAKE_SOURCE_DIR}/src/sort/insertion_sort.cpp")
-target_link_libraries(insertion_sort_test PRIVATE common_util gtest gtest_main)
-
-add_executable(selection_sort_test "selection_sort_test.cpp" "${CMAKE_SOURCE_DIR}/src/sort/selection_sort.cpp")
-target_link_libraries(selection_sort_test PRIVATE common_util gtest gtest_main)
-
 include(GoogleTest)
-gtest_discover_tests(
-	insertion_sort_test
-	selection_sort_test
-)
+
+macro(add_target_test name)
+    string(REPLACE "_test" "" target_name ${name})
+	add_executable(${name} "${name}.cpp" "${CMAKE_SOURCE_DIR}/src/sort/${target_name}.cpp")
+	target_link_libraries(${name} PRIVATE common_util gtest_main ${ARGN})
+	gtest_discover_tests(${name})
+endmacro()
+
+add_target_test(insertion_sort_test)
+add_target_test(selection_sort_test)

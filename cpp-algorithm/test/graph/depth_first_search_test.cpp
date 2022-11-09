@@ -39,7 +39,7 @@ TEST(DepthFirstSearchTest, SimpleSearch1)
 
     // test U -> Y
     auto& goal = vertexY;
-    auto expectedResult = std::vector<char>{'U', 'V', 'Y'};
+    auto expected = std::vector<char>{'U', 'V', 'Y'};
     dfs->Search(*graph);
 
     auto resultPath = std::vector<char>{};
@@ -55,5 +55,5 @@ TEST(DepthFirstSearchTest, SimpleSearch1)
 
     std::ranges::reverse(resultPath);
 
-    ASSERT_EQ(expectedResult, resultPath);
+    ASSERT_EQ(expected, resultPath);
 }

@@ -6,7 +6,7 @@ TEST(RodCuttingTest, Simple)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
-    const auto expectedResult = std::map<int, int>{
+    const auto expected = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
     const auto result1 = RodCutting::CutRod(price, 1);
@@ -20,23 +20,23 @@ TEST(RodCuttingTest, Simple)
     const auto result9 = RodCutting::CutRod(price, 9);
     const auto result10 = RodCutting::CutRod(price, 10);
 
-    ASSERT_EQ(expectedResult.at(1), result1);
-    ASSERT_EQ(expectedResult.at(2), result2);
-    ASSERT_EQ(expectedResult.at(3), result3);
-    ASSERT_EQ(expectedResult.at(4), result4);
-    ASSERT_EQ(expectedResult.at(5), result5);
-    ASSERT_EQ(expectedResult.at(6), result6);
-    ASSERT_EQ(expectedResult.at(7), result7);
-    ASSERT_EQ(expectedResult.at(8), result8);
-    ASSERT_EQ(expectedResult.at(9), result9);
-    ASSERT_EQ(expectedResult.at(10), result10);
+    ASSERT_EQ(expected.at(1), result1);
+    ASSERT_EQ(expected.at(2), result2);
+    ASSERT_EQ(expected.at(3), result3);
+    ASSERT_EQ(expected.at(4), result4);
+    ASSERT_EQ(expected.at(5), result5);
+    ASSERT_EQ(expected.at(6), result6);
+    ASSERT_EQ(expected.at(7), result7);
+    ASSERT_EQ(expected.at(8), result8);
+    ASSERT_EQ(expected.at(9), result9);
+    ASSERT_EQ(expected.at(10), result10);
 }
 
 TEST(RodCuttingTest, DynamicProgrammingTopDown)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
-    const auto expectedResult = std::map<int, int>{
+    const auto expected = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
     const auto result1 = RodCutting::MemoizedCutRod(price, 1);
@@ -50,23 +50,23 @@ TEST(RodCuttingTest, DynamicProgrammingTopDown)
     const auto result9 = RodCutting::MemoizedCutRod(price, 9);
     const auto result10 = RodCutting::MemoizedCutRod(price, 10);
 
-    ASSERT_EQ(expectedResult.at(1), result1);
-    ASSERT_EQ(expectedResult.at(2), result2);
-    ASSERT_EQ(expectedResult.at(3), result3);
-    ASSERT_EQ(expectedResult.at(4), result4);
-    ASSERT_EQ(expectedResult.at(5), result5);
-    ASSERT_EQ(expectedResult.at(6), result6);
-    ASSERT_EQ(expectedResult.at(7), result7);
-    ASSERT_EQ(expectedResult.at(8), result8);
-    ASSERT_EQ(expectedResult.at(9), result9);
-    ASSERT_EQ(expectedResult.at(10), result10);
+    ASSERT_EQ(expected.at(1), result1);
+    ASSERT_EQ(expected.at(2), result2);
+    ASSERT_EQ(expected.at(3), result3);
+    ASSERT_EQ(expected.at(4), result4);
+    ASSERT_EQ(expected.at(5), result5);
+    ASSERT_EQ(expected.at(6), result6);
+    ASSERT_EQ(expected.at(7), result7);
+    ASSERT_EQ(expected.at(8), result8);
+    ASSERT_EQ(expected.at(9), result9);
+    ASSERT_EQ(expected.at(10), result10);
 }
 
 TEST(RodCuttingTest, DynamicProgrammingBottomUp)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
-    const auto expectedResult = std::map<int, int>{
+    const auto expected = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
     const auto result1 = RodCutting::BottomUpCutRod(price, 1);
@@ -80,23 +80,23 @@ TEST(RodCuttingTest, DynamicProgrammingBottomUp)
     const auto result9 = RodCutting::BottomUpCutRod(price, 9);
     const auto result10 = RodCutting::BottomUpCutRod(price, 10);
 
-    ASSERT_EQ(expectedResult.at(1), result1);
-    ASSERT_EQ(expectedResult.at(2), result2);
-    ASSERT_EQ(expectedResult.at(3), result3);
-    ASSERT_EQ(expectedResult.at(4), result4);
-    ASSERT_EQ(expectedResult.at(5), result5);
-    ASSERT_EQ(expectedResult.at(6), result6);
-    ASSERT_EQ(expectedResult.at(7), result7);
-    ASSERT_EQ(expectedResult.at(8), result8);
-    ASSERT_EQ(expectedResult.at(9), result9);
-    ASSERT_EQ(expectedResult.at(10), result10);
+    ASSERT_EQ(expected.at(1), result1);
+    ASSERT_EQ(expected.at(2), result2);
+    ASSERT_EQ(expected.at(3), result3);
+    ASSERT_EQ(expected.at(4), result4);
+    ASSERT_EQ(expected.at(5), result5);
+    ASSERT_EQ(expected.at(6), result6);
+    ASSERT_EQ(expected.at(7), result7);
+    ASSERT_EQ(expected.at(8), result8);
+    ASSERT_EQ(expected.at(9), result9);
+    ASSERT_EQ(expected.at(10), result10);
 }
 
 TEST(RodCuttingTest, DynamicProgrammingExtendedBottomUp)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
-    const auto expectedResult = std::map<int, std::tuple<int, int>>{
+    const auto expected = std::map<int, std::tuple<int, int>>{
         {1, {1, 1}}, {2, {5, 2}}, {3, {8, 3}}, {4, {10, 2}}, {5, {13, 2}},
         {6, {17, 6}}, {7, {18, 1}}, {8, {22, 2}}, {9, {25, 3}}, {10, {30, 10}}};
 
@@ -111,14 +111,14 @@ TEST(RodCuttingTest, DynamicProgrammingExtendedBottomUp)
     const auto result9 = RodCutting::ExtendedBottomUpCutRod(price, 9);
     const auto result10 = RodCutting::ExtendedBottomUpCutRod(price, 10);
 
-    ASSERT_EQ(expectedResult.at(1), result1);
-    ASSERT_EQ(expectedResult.at(2), result2);
-    ASSERT_EQ(expectedResult.at(3), result3);
-    ASSERT_EQ(expectedResult.at(4), result4);
-    ASSERT_EQ(expectedResult.at(5), result5);
-    ASSERT_EQ(expectedResult.at(6), result6);
-    ASSERT_EQ(expectedResult.at(7), result7);
-    ASSERT_EQ(expectedResult.at(8), result8);
-    ASSERT_EQ(expectedResult.at(9), result9);
-    ASSERT_EQ(expectedResult.at(10), result10);
+    ASSERT_EQ(expected.at(1), result1);
+    ASSERT_EQ(expected.at(2), result2);
+    ASSERT_EQ(expected.at(3), result3);
+    ASSERT_EQ(expected.at(4), result4);
+    ASSERT_EQ(expected.at(5), result5);
+    ASSERT_EQ(expected.at(6), result6);
+    ASSERT_EQ(expected.at(7), result7);
+    ASSERT_EQ(expected.at(8), result8);
+    ASSERT_EQ(expected.at(9), result9);
+    ASSERT_EQ(expected.at(10), result10);
 }

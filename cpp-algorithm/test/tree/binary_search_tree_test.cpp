@@ -65,7 +65,7 @@ TEST(BinarySearchTreeTest, PostorderTreeWalk)
 TEST(BinarySearchTreeTest, GetMinimum)
 {
     const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    const auto expectedValue = *std::ranges::min_element(seq);
+    const auto expected = *std::ranges::min_element(seq);
 
     auto tree = Tree::BinarySearchTree{};
     for (const auto& element : seq)
@@ -74,13 +74,13 @@ TEST(BinarySearchTreeTest, GetMinimum)
     }
 
     const auto result = tree.TreeMinimum();
-    ASSERT_EQ(expectedValue, result->Key);
+    ASSERT_EQ(expected, result->Key);
 }
 
 TEST(BinarySearchTreeTest, GetMaximum)
 {
     const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    const auto expectedValue = *std::ranges::max_element(seq);
+    const auto expected = *std::ranges::max_element(seq);
 
     auto tree = Tree::BinarySearchTree{};
     for (const auto& element : seq)
@@ -89,13 +89,13 @@ TEST(BinarySearchTreeTest, GetMaximum)
     }
 
     const auto result = tree.TreeMaximum();
-    ASSERT_EQ(expectedValue, result->Key);
+    ASSERT_EQ(expected, result->Key);
 }
 
 TEST(BinarySearchTreeTest, GetPredecessor)
 {
     const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    constexpr auto expectedValue = 13;
+    constexpr auto expected = 13;
 
     auto tree = Tree::BinarySearchTree{};
     for (const auto& element : seq)
@@ -104,13 +104,13 @@ TEST(BinarySearchTreeTest, GetPredecessor)
     }
 
     const auto result = tree.TreePredecessor(15);
-    ASSERT_EQ(expectedValue, result->Key);
+    ASSERT_EQ(expected, result->Key);
 }
 
 TEST(BinarySearchTreeTest, GetSuccessor)
 {
     const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    constexpr auto expectedValue = 17;
+    constexpr auto expected = 17;
 
     auto tree = Tree::BinarySearchTree{};
     for (const auto& element : seq)
@@ -119,7 +119,7 @@ TEST(BinarySearchTreeTest, GetSuccessor)
     }
 
     const auto result = tree.TreeSuccessor(15);
-    ASSERT_EQ(expectedValue, result->Key);
+    ASSERT_EQ(expected, result->Key);
 }
 
 TEST(BinarySearchTreeTest, RecursiveTreeSearch)

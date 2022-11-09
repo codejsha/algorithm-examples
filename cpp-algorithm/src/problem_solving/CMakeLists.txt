@@ -1,5 +1,9 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 
-add_library(interval_subset_sum_problem "interval_subset_sum_problem.cpp")
-target_link_libraries(interval_subset_sum_problem PRIVATE common_util)
-set_property(TARGET interval_subset_sum_problem PROPERTY CXX_STANDARD 20)
+macro(add_library_target target)
+	add_library(${target} SHARED "${target}.cpp")
+	target_link_libraries(${target} PRIVATE common_util ${ARGN})
+	set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
+endmacro()
+
+add_library_target(interval_subset_sum_problem)

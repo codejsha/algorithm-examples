@@ -7,7 +7,7 @@ TEST(LongestCommonSebsequenceTest, DynamicProgramming)
 {
     const auto seq1 = std::string("ABCBDAB");
     const auto seq2 = std::string("BDCABA");
-    const auto expectedResult = std::string("BCBA");
+    const auto expected = std::string("BCBA");
 
     const auto seqLength1 = static_cast<int>(seq1.length());
     const auto seqLength2 = static_cast<int>(seq2.length());
@@ -18,5 +18,5 @@ TEST(LongestCommonSebsequenceTest, DynamicProgramming)
     CommonSubsequence::LongestCommonSubsequence(seq1, std::get<1>(matrix),
         seqLength1, seqLength2, result);
 
-    ASSERT_EQ(expectedResult, result);
+    ASSERT_EQ(expected, result);
 }
