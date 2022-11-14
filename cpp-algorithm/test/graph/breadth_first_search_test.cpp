@@ -3,148 +3,148 @@
 #include <algorithm>
 #include <gtest/gtest.h>
 
-TEST(BreadthFirstSearchTest, SimpleSearch1)
+GTEST_TEST(BreadthFirstSearchTest, SimpleSearch1)
 {
-    auto vertexR = Graph::BfsVertex('R');
-    auto vertexS = Graph::BfsVertex('S');
-    auto vertexT = Graph::BfsVertex('T');
-    auto vertexU = Graph::BfsVertex('U');
-    auto vertexV = Graph::BfsVertex('V');
-    auto vertexW = Graph::BfsVertex('W');
-    auto vertexX = Graph::BfsVertex('X');
-    auto vertexY = Graph::BfsVertex('Y');
+    auto vertex_r = Graph::BfsVertex('R');
+    auto vertex_s = Graph::BfsVertex('S');
+    auto vertex_t = Graph::BfsVertex('T');
+    auto vertex_u = Graph::BfsVertex('U');
+    auto vertex_v = Graph::BfsVertex('V');
+    auto vertex_w = Graph::BfsVertex('W');
+    auto vertex_x = Graph::BfsVertex('X');
+    auto vertex_y = Graph::BfsVertex('Y');
 
     const auto graph = new Graph::BfsGraph();
 
-    graph->AddVertex(vertexR);
-    graph->AddVertex(vertexS);
-    graph->AddVertex(vertexT);
-    graph->AddVertex(vertexU);
-    graph->AddVertex(vertexV);
-    graph->AddVertex(vertexW);
-    graph->AddVertex(vertexX);
-    graph->AddVertex(vertexY);
+    graph->AddVertex(vertex_r);
+    graph->AddVertex(vertex_s);
+    graph->AddVertex(vertex_t);
+    graph->AddVertex(vertex_u);
+    graph->AddVertex(vertex_v);
+    graph->AddVertex(vertex_w);
+    graph->AddVertex(vertex_x);
+    graph->AddVertex(vertex_y);
 
     // R
-    graph->AddEdge(vertexR, vertexS);
-    graph->AddEdge(vertexR, vertexV);
+    graph->AddEdge(vertex_r, vertex_s);
+    graph->AddEdge(vertex_r, vertex_v);
     // S
-    graph->AddEdge(vertexS, vertexR);
-    graph->AddEdge(vertexS, vertexW);
+    graph->AddEdge(vertex_s, vertex_r);
+    graph->AddEdge(vertex_s, vertex_w);
     // T
-    graph->AddEdge(vertexT, vertexU);
-    graph->AddEdge(vertexT, vertexW);
-    graph->AddEdge(vertexT, vertexX);
+    graph->AddEdge(vertex_t, vertex_u);
+    graph->AddEdge(vertex_t, vertex_w);
+    graph->AddEdge(vertex_t, vertex_x);
     // U
-    graph->AddEdge(vertexU, vertexT);
-    graph->AddEdge(vertexU, vertexX);
-    graph->AddEdge(vertexU, vertexY);
+    graph->AddEdge(vertex_u, vertex_t);
+    graph->AddEdge(vertex_u, vertex_x);
+    graph->AddEdge(vertex_u, vertex_y);
     // V
-    graph->AddEdge(vertexV, vertexR);
+    graph->AddEdge(vertex_v, vertex_r);
     // W
-    graph->AddEdge(vertexW, vertexS);
-    graph->AddEdge(vertexW, vertexT);
-    graph->AddEdge(vertexW, vertexX);
+    graph->AddEdge(vertex_w, vertex_s);
+    graph->AddEdge(vertex_w, vertex_t);
+    graph->AddEdge(vertex_w, vertex_x);
     // X
-    graph->AddEdge(vertexX, vertexT);
-    graph->AddEdge(vertexX, vertexU);
-    graph->AddEdge(vertexX, vertexW);
-    graph->AddEdge(vertexX, vertexY);
+    graph->AddEdge(vertex_x, vertex_t);
+    graph->AddEdge(vertex_x, vertex_u);
+    graph->AddEdge(vertex_x, vertex_w);
+    graph->AddEdge(vertex_x, vertex_y);
     // Y
-    graph->AddEdge(vertexY, vertexU);
-    graph->AddEdge(vertexY, vertexX);
+    graph->AddEdge(vertex_y, vertex_u);
+    graph->AddEdge(vertex_y, vertex_x);
 
     const auto bfs = new Graph::BreadthFirstSearch(*graph);
 
-    auto& start = vertexS;
+    auto& start = vertex_s;
 
     // test U
-    auto& goal = vertexU;
+    auto& goal = vertex_u;
     auto expected = std::vector<char>{'S', 'W', 'T', 'U'};
     auto result = bfs->Search(start, goal);
 
-    auto resultPath = std::vector<char>{};
+    auto result_path = std::vector<char>{};
     auto distance = result->Distance;
     for (int i = 0; i <= distance; ++i)
     {
-        resultPath.push_back(result->Id);
+        result_path.push_back(result->Id);
         result = result->Predecessor;
     }
 
-    std::ranges::reverse(resultPath);
+    std::ranges::reverse(result_path);
 
-    ASSERT_EQ(expected, resultPath);
+    ASSERT_EQ(expected, result_path);
 }
 
-TEST(BreadthFirstSearchTest, SimpleSearch2)
+GTEST_TEST(BreadthFirstSearchTest, SimpleSearch2)
 {
-    auto vertexR = Graph::BfsVertex('R');
-    auto vertexS = Graph::BfsVertex('S');
-    auto vertexT = Graph::BfsVertex('T');
-    auto vertexU = Graph::BfsVertex('U');
-    auto vertexV = Graph::BfsVertex('V');
-    auto vertexW = Graph::BfsVertex('W');
-    auto vertexX = Graph::BfsVertex('X');
-    auto vertexY = Graph::BfsVertex('Y');
+    auto vertex_r = Graph::BfsVertex('R');
+    auto vertex_s = Graph::BfsVertex('S');
+    auto vertex_t = Graph::BfsVertex('T');
+    auto vertex_u = Graph::BfsVertex('U');
+    auto vertex_v = Graph::BfsVertex('V');
+    auto vertex_w = Graph::BfsVertex('W');
+    auto vertex_x = Graph::BfsVertex('X');
+    auto vertex_y = Graph::BfsVertex('Y');
 
     const auto graph = new Graph::BfsGraph();
 
-    graph->AddVertex(vertexR);
-    graph->AddVertex(vertexS);
-    graph->AddVertex(vertexT);
-    graph->AddVertex(vertexU);
-    graph->AddVertex(vertexV);
-    graph->AddVertex(vertexW);
-    graph->AddVertex(vertexX);
-    graph->AddVertex(vertexY);
+    graph->AddVertex(vertex_r);
+    graph->AddVertex(vertex_s);
+    graph->AddVertex(vertex_t);
+    graph->AddVertex(vertex_u);
+    graph->AddVertex(vertex_v);
+    graph->AddVertex(vertex_w);
+    graph->AddVertex(vertex_x);
+    graph->AddVertex(vertex_y);
 
     // R
-    graph->AddEdge(vertexR, vertexS);
-    graph->AddEdge(vertexR, vertexV);
+    graph->AddEdge(vertex_r, vertex_s);
+    graph->AddEdge(vertex_r, vertex_v);
     // S
-    graph->AddEdge(vertexS, vertexR);
-    graph->AddEdge(vertexS, vertexW);
+    graph->AddEdge(vertex_s, vertex_r);
+    graph->AddEdge(vertex_s, vertex_w);
     // T
-    graph->AddEdge(vertexT, vertexU);
-    graph->AddEdge(vertexT, vertexW);
-    graph->AddEdge(vertexT, vertexX);
+    graph->AddEdge(vertex_t, vertex_u);
+    graph->AddEdge(vertex_t, vertex_w);
+    graph->AddEdge(vertex_t, vertex_x);
     // U
-    graph->AddEdge(vertexU, vertexT);
-    graph->AddEdge(vertexU, vertexX);
-    graph->AddEdge(vertexU, vertexY);
+    graph->AddEdge(vertex_u, vertex_t);
+    graph->AddEdge(vertex_u, vertex_x);
+    graph->AddEdge(vertex_u, vertex_y);
     // V
-    graph->AddEdge(vertexV, vertexR);
+    graph->AddEdge(vertex_v, vertex_r);
     // W
-    graph->AddEdge(vertexW, vertexS);
-    graph->AddEdge(vertexW, vertexT);
-    graph->AddEdge(vertexW, vertexX);
+    graph->AddEdge(vertex_w, vertex_s);
+    graph->AddEdge(vertex_w, vertex_t);
+    graph->AddEdge(vertex_w, vertex_x);
     // X
-    graph->AddEdge(vertexX, vertexT);
-    graph->AddEdge(vertexX, vertexU);
-    graph->AddEdge(vertexX, vertexW);
-    graph->AddEdge(vertexX, vertexY);
+    graph->AddEdge(vertex_x, vertex_t);
+    graph->AddEdge(vertex_x, vertex_u);
+    graph->AddEdge(vertex_x, vertex_w);
+    graph->AddEdge(vertex_x, vertex_y);
     // Y
-    graph->AddEdge(vertexY, vertexU);
-    graph->AddEdge(vertexY, vertexX);
+    graph->AddEdge(vertex_y, vertex_u);
+    graph->AddEdge(vertex_y, vertex_x);
 
     const auto bfs = new Graph::BreadthFirstSearch(*graph);
 
-    auto& start = vertexS;
+    auto& start = vertex_s;
 
     // test Y
-    auto& goal = vertexY;
+    auto& goal = vertex_y;
     auto expected = std::vector<char>{'S', 'W', 'X', 'Y'};
     auto result = bfs->Search(start, goal);
 
-    auto resultPath = std::vector<char>{};
+    auto result_path = std::vector<char>{};
     auto distance = result->Distance;
     for (int i = 0; i <= distance; ++i)
     {
-        resultPath.push_back(result->Id);
+        result_path.push_back(result->Id);
         result = result->Predecessor;
     }
 
-    std::ranges::reverse(resultPath);
+    std::ranges::reverse(result_path);
 
-    ASSERT_EQ(expected, resultPath);
+    ASSERT_EQ(expected, result_path);
 }

@@ -21,36 +21,36 @@ void Graph::DijkstraGraph::Relax(DijkstraVertex& u, DijkstraVertex& v)
     }
 }
 
-void Graph::DijkstraGraph::ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& minQueue)
+void Graph::DijkstraGraph::ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& min_queue)
 {
     auto queue = std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>{};
-    const auto minQueueSize = static_cast<int>(minQueue.size());
+    const auto min_queue_size = static_cast<int>(min_queue.size());
 
-    for (int i = 0; i < minQueueSize; ++i)
+    for (int i = 0; i < min_queue_size; ++i)
     {
-        queue.push(minQueue.top());
-        minQueue.pop();
+        queue.push(min_queue.top());
+        min_queue.pop();
     }
 
-    minQueue = std::move(queue);
+    min_queue = std::move(queue);
 }
 
 void Graph::DijkstraGraph::Dijkstra(DijkstraVertex& source)
 {
-    std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator> minQueue;
+    std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator> min_queue;
     for (auto v : Vertices)
     {
-        minQueue.push(v);
+        min_queue.push(v);
     }
 
-    while (!minQueue.empty())
+    while (!min_queue.empty())
     {
-        auto u = minQueue.top();
-        minQueue.pop();
+        auto u = min_queue.top();
+        min_queue.pop();
         for (auto v : u->Neighbors)
         {
             Relax(*u, *v);
-            ReorderQueue(minQueue);
+            ReorderQueue(min_queue);
         }
     }
 }

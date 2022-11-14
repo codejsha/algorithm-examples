@@ -2,52 +2,52 @@
 
 #include <gtest/gtest.h>
 
-TEST(BellmanFordTest, Simple1)
+GTEST_TEST(BellmanFordTest, Simple1)
 {
-    auto vertexS = Graph::BellmanFordVertex('S');
-    auto vertexT = Graph::BellmanFordVertex('T');
-    auto vertexX = Graph::BellmanFordVertex('X');
-    auto vertexY = Graph::BellmanFordVertex('Y');
-    auto vertexZ = Graph::BellmanFordVertex('Z');
+    auto vertex_s = Graph::BellmanFordVertex('S');
+    auto vertex_t = Graph::BellmanFordVertex('T');
+    auto vertex_x = Graph::BellmanFordVertex('X');
+    auto vertex_y = Graph::BellmanFordVertex('Y');
+    auto vertex_z = Graph::BellmanFordVertex('Z');
 
     const auto graph = new Graph::BellmanFordGraph();
 
-    graph->AddVertex(vertexS);
-    graph->AddVertex(vertexT);
-    graph->AddVertex(vertexX);
-    graph->AddVertex(vertexY);
-    graph->AddVertex(vertexZ);
+    graph->AddVertex(vertex_s);
+    graph->AddVertex(vertex_t);
+    graph->AddVertex(vertex_x);
+    graph->AddVertex(vertex_y);
+    graph->AddVertex(vertex_z);
 
     // S
-    graph->AddEdge(vertexS, vertexT, 6);
-    graph->AddEdge(vertexS, vertexY, 7);
+    graph->AddEdge(vertex_s, vertex_t, 6);
+    graph->AddEdge(vertex_s, vertex_y, 7);
     // T
-    graph->AddEdge(vertexT, vertexX, 5);
-    graph->AddEdge(vertexT, vertexY, 8);
-    graph->AddEdge(vertexT, vertexZ, -4);
+    graph->AddEdge(vertex_t, vertex_x, 5);
+    graph->AddEdge(vertex_t, vertex_y, 8);
+    graph->AddEdge(vertex_t, vertex_z, -4);
     // X
-    graph->AddEdge(vertexX, vertexT, -2);
+    graph->AddEdge(vertex_x, vertex_t, -2);
     // Y
-    graph->AddEdge(vertexY, vertexX, -3);
-    graph->AddEdge(vertexY, vertexZ, 9);
+    graph->AddEdge(vertex_y, vertex_x, -3);
+    graph->AddEdge(vertex_y, vertex_z, 9);
     // Z
-    graph->AddEdge(vertexZ, vertexS, 2);
-    graph->AddEdge(vertexZ, vertexX, 7);
+    graph->AddEdge(vertex_z, vertex_s, 2);
+    graph->AddEdge(vertex_z, vertex_x, 7);
 
-    auto& source = vertexS;
+    auto& source = vertex_s;
     source.Distance = 0;
     graph->BellmanFord(source);
 
     // weight
-    ASSERT_EQ(0, vertexS.Distance);
-    ASSERT_EQ(2, vertexT.Distance);
-    ASSERT_EQ(4, vertexX.Distance);
-    ASSERT_EQ(7, vertexY.Distance);
-    ASSERT_EQ(-2, vertexZ.Distance);
+    ASSERT_EQ(0, vertex_s.Distance);
+    ASSERT_EQ(2, vertex_t.Distance);
+    ASSERT_EQ(4, vertex_x.Distance);
+    ASSERT_EQ(7, vertex_y.Distance);
+    ASSERT_EQ(-2, vertex_z.Distance);
 
     // predecessor
-    ASSERT_EQ('X', vertexT.Predecessor->Id);
-    ASSERT_EQ('Y', vertexX.Predecessor->Id);
-    ASSERT_EQ('S', vertexY.Predecessor->Id);
-    ASSERT_EQ('T', vertexZ.Predecessor->Id);
+    ASSERT_EQ('X', vertex_t.Predecessor->Id);
+    ASSERT_EQ('Y', vertex_x.Predecessor->Id);
+    ASSERT_EQ('S', vertex_y.Predecessor->Id);
+    ASSERT_EQ('T', vertex_z.Predecessor->Id);
 }

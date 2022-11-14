@@ -8,9 +8,7 @@
 
 namespace Graph
 {
-    /// <summary>
-    /// Vertex of graph
-    /// </summary>
+    /// @brief Vertex of graph.
     struct DfsVertex : Vertex<char>
     {
         explicit DfsVertex(const char id)
@@ -25,9 +23,7 @@ namespace Graph
         int FinishingTime;
     };
 
-    /// <summary>
-    /// Depth-first search graph
-    /// </summary>
+    /// @brief Depth first search graph.
     class DfsGraph
     {
     public:
@@ -36,12 +32,9 @@ namespace Graph
         {
         }
 
-        /// <summary>
-        /// Add an edge to the graph
-        /// </summary>
-        /// <param name="u">vertex</param>
-        /// <param name="v">vertex</param>
-        /// <returns>void</returns>
+        /// @brief Add an edge to the graph.
+        /// @param u vertex
+        /// @param v vertex
         void AddEdge(DfsVertex& u, DfsVertex& v)
         {
             AdjacencyList.emplace_back(&u, &v);
@@ -50,11 +43,8 @@ namespace Graph
             u.Neighbors.insert(&v);
         }
 
-        /// <summary>
-        /// Add a vertex to the graph
-        /// </summary>
-        /// <param name="v">vertex to add</param>
-        /// <returns>void</returns>
+        /// @brief Add a vertex to the graph.
+        /// @param v vertex to be added
         void AddVertex(DfsVertex& v)
         {
             Vertices.push_back(&v);
@@ -86,9 +76,7 @@ namespace Graph
         int Time;
     };
 
-    /// <summary>
-    /// Depth-first search
-    /// </summary>
+    /// @brief Depth first search algorithm.
     class DepthFirstSearch
     {
     public:
@@ -97,19 +85,13 @@ namespace Graph
         {
         }
 
-        /// <summary>
-        /// Perform depth-first search
-        /// </summary>
-        /// <param name="graph">graph</param>
-        /// <returns>void</returns>
+        /// @brief Perform depth first search.
+        /// @param graph graph
         void Search(DfsGraph& graph);
 
-        /// <summary>
-        /// Create depth-first forest
-        /// </summary>
-        /// <param name="graph">graph</param>
-        /// <param name="vertex">vertex</param>
-        /// <returns>void</returns>
+        /// @brief Create depth-first forest.
+        /// @param graph graph 
+        /// @param vertex vertex
         void SearchVisit(DfsGraph& graph, DfsVertex& vertex);
 
     private:

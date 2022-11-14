@@ -10,9 +10,7 @@
 
 namespace Graph
 {
-    /// <summary>
-    /// Vertex of graph
-    /// </summary>
+    /// @brief Vertex of graph.
     struct DijkstraVertex : Vertex<char>
     {
         explicit DijkstraVertex(const char id)
@@ -25,9 +23,7 @@ namespace Graph
         int Distance;
     };
 
-    /// <summary>
-    /// Comparator
-    /// </summary>
+    /// @brief Comparator for priority queue.
     class MinComparator
     {
     public:
@@ -37,47 +33,31 @@ namespace Graph
         }
     };
 
-    /// <summary>
-    /// Dijkstra graph
-    /// </summary>
+    /// @brief Dijkstra algorithm.
     class DijkstraGraph
     {
     public:
-        /// Add an edge to the graph
-        /// </summary>
-        /// <param name="u">vertex</param>
-        /// <param name="v">vertex</param>
-        /// <param name="weight">weight of edge</param>
-        /// <returns>void</returns>
+        /// @brief Add an edge to the graph.
+        /// @param u vertex
+        /// @param v vertex
+        /// @param weight weight of the edge
         void AddEdge(DijkstraVertex& u, DijkstraVertex& v, int weight);
 
-        /// <summary>
-        /// Add a vertex to the graph
-        /// </summary>
-        /// <param name="v">vertex to add</param>
-        /// <returns>void</returns>
+        /// @brief Add a vertex to the graph.
+        /// @param v vertex to be added
         void AddVertex(DijkstraVertex& v);
-
-        /// <summary>
-        /// Investigate whether the shortest path can be improved, and update
-        /// </summary>
-        /// <param name="u">vertex</param>
-        /// <param name="v">vertex</param>
-        /// <returns>void</returns>
+        
+        /// @brief Investigate whether the shortest path can be improved, and update.
+        /// @param u vertex
+        /// @param v vertex
         void Relax(DijkstraVertex& u, DijkstraVertex& v);
 
-        /// <summary>
-        /// Reordering elements of the queue
-        /// </summary>
-        /// <param name="minQueue">mininum priority queue</param>
-        /// <returns>void</returns>
-        void ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& minQueue);
+        /// @brief Reordering elements of the queue.
+        /// @param min_queue minimum priority queue
+        void ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& min_queue);
 
-        /// <summary>
-        /// Perform Dijkstra's algorithm on the graph
-        /// </summary>
-        /// <param name="source">source vertex</param>
-        /// <returns>void</returns>
+        /// @brief Perform Dijkstra's algorithm on the graph.
+        /// @param source source vertex
         void Dijkstra(DijkstraVertex& source);
 
     private:

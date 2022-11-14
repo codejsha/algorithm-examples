@@ -3,10 +3,8 @@
 
 namespace Graph
 {
-    /// <summary>
-    /// Vertex of graph
-    /// </summary>
-    /// <typeparam name="T">type of key</typeparam>
+    /// @brief Vertex of graph.
+    /// @tparam T type of key
     template <typename T>
     struct Vertex
     {
@@ -19,12 +17,10 @@ namespace Graph
         bool operator==(const Vertex& v) const;
     };
 
-    /// <summary>
-    /// Equality operator ('equal to')
-    /// </summary>
-    /// <typeparam name="T">type of key</typeparam>
-    /// <param name="v">vertex</param>
-    /// <returns>equal or not equal</returns>
+    /// @brief Equality operator ('equal to').
+    /// @tparam T type of key
+    /// @param v vertex
+    /// @return whether equal or not
     template <typename T>
     bool Vertex<T>::operator==(const Vertex& v) const
     {
@@ -35,9 +31,7 @@ namespace Graph
         return false;
     }
 
-    /// <summary>
-    /// Visit status of the node
-    /// </summary>
+    /// @brief Visit status of the node.
     enum VisitStatus
     {
         Unvisited,

@@ -8,9 +8,7 @@
 
 namespace Graph
 {
-    /// <summary>
-    /// Vertex of graph
-    /// </summary>
+    /// @brief Vertex of graph.
     struct BfsVertex : Vertex<char>
     {
         explicit BfsVertex(const char id)
@@ -24,18 +22,13 @@ namespace Graph
         int Distance;
     };
 
-    /// <summary>
-    /// Breadth-first search graph
-    /// </summary>
+    /// @brief Breadth first search algorithm.
     class BfsGraph
     {
     public:
-        /// <summary>
-        /// Add an edge to the graph
-        /// </summary>
-        /// <param name="u">vertex</param>
-        /// <param name="v">vertex</param>
-        /// <returns>void</returns>
+        /// @brief Add an edge to the graph.
+        /// @param u vertex
+        /// @param v vertex
         void AddEdge(BfsVertex& u, BfsVertex& v)
         {
             AdjacencyList.emplace_back(&u, &v);
@@ -43,11 +36,8 @@ namespace Graph
             v.Neighbors.insert(&u);
         }
 
-        /// <summary>
-        /// Add a vertex to the graph
-        /// </summary>
-        /// <param name="v">vertex to add</param>
-        /// <returns>void</returns>
+        /// @brief Add a vertex to the graph.
+        /// @param v vertex to be added
         void AddVertex(BfsVertex& v)
         {
             Vertices.push_back(&v);
@@ -58,9 +48,7 @@ namespace Graph
         std::vector<std::tuple<BfsVertex*, BfsVertex*>> AdjacencyList;
     };
 
-    /// <summary>
-    /// Breadth-first search
-    /// </summary>
+    /// @brief Breadth first search.
     class BreadthFirstSearch
     {
     public:
@@ -69,12 +57,10 @@ namespace Graph
         {
         }
 
-        /// <summary>
-        /// Search the vertex by key
-        /// </summary>
-        /// <param name="start">starting vertex</param>
-        /// <param name="goal">goal vertex</param>
-        /// <returns>goal vertex</returns>
+        /// @brief Search the vertex by key.
+        /// @param start starting vertex
+        /// @param goal goal vertex
+        /// @return goal vertex
         BfsVertex* Search(BfsVertex& start, BfsVertex& goal);
 
     private:

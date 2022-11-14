@@ -9,9 +9,7 @@
 
 namespace Graph
 {
-    /// <summary>
-    /// Vertex of graph
-    /// </summary>
+    /// @brief Vertex of graph.
     struct BellmanFordVertex : Vertex<char>
     {
         explicit BellmanFordVertex(const char id)
@@ -24,41 +22,28 @@ namespace Graph
         int Distance;
     };
 
-    /// <summary>
-    /// Bellman ford graph
-    /// </summary>
+    /// @brief Bellman-Ford algorithm.
     class BellmanFordGraph
     {
     public:
-        /// <summary>
-        /// Add an edge to the graph
-        /// </summary>
-        /// <param name="u">vertex</param>
-        /// <param name="v">vertex</param>
-        /// <param name="weight">weight of edge</param>
-        /// <returns>void</returns>
+
+        /// @brief Add an edge to the graph.
+        /// @param u vertex
+        /// @param v vertex
+        /// @param weight weight of the edge
         void AddEdge(BellmanFordVertex& u, BellmanFordVertex& v, int weight);
 
-        /// <summary>
-        /// Add a vertex to the graph
-        /// </summary>
-        /// <param name="v">vertex to add</param>
-        /// <returns>void</returns>
+        /// @brief Add a vertex to the graph.
+        /// @param v vertex to be added
         void AddVertex(BellmanFordVertex& v);
 
-        /// <summary>
-        /// Investigate whether the shortest path can be improved, and update
-        /// </summary>
-        /// <param name="u">vertex</param>
-        /// <param name="v">vertex</param>
-        /// <returns>void</returns>
+        /// @brief Investigate whether the shortest path can be improved, and update.
+        /// @param u vertex
+        /// @param v vertex
         void Relax(BellmanFordVertex& u, BellmanFordVertex& v);
 
-        /// <summary>
-        /// Find the shortest path from a source vertex to all other vertices
-        /// </summary>
-        /// <param name="source">source vertex</param>
-        /// <returns>void</returns>
+        /// @brief Find the shortest path from a source vertex to all other vertices.
+        /// @param source source vertex
         void BellmanFord(BellmanFordVertex& source);
 
     private:
