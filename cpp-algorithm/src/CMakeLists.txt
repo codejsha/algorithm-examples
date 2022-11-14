@@ -1,3 +1,4 @@
+add_subdirectory(array)
 add_subdirectory(dynamic_programming)
 add_subdirectory(graph)
 add_subdirectory(greedy)

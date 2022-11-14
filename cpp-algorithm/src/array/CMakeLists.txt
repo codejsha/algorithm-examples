@@ -1,0 +1,17 @@
+include_directories(${CMAKE_SOURCE_DIR}/src/include)
+
+macro(add_library_target target)
+	add_library(${target} STATIC "${target}.cpp")
+	target_link_libraries(${target} PRIVATE ${ARGN})
+	set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
+endmacro()
+
+add_library_target(advancing_through)
+add_library_target(arbitrary_precision_integer)
+add_library_target(delete_element)
+add_library_target(dutch_national_flag)
+add_library_target(enumerate_prime_number)
+add_library_target(order_element)
+add_library_target(random_data_sampling)
+add_library_target(replace_element)
+add_library_target(trade_stock)
