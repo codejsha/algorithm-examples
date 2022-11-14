@@ -3,17 +3,17 @@
 std::vector<int> ActivitySelection::RecursiveActivitySelector(const std::vector<int>& start, const std::vector<int>& finish,
     const int index, const int size)
 {
-    auto subIndex = index + 1;
+    auto sub_index = index + 1;
 
-    while ((subIndex < size) && (start[subIndex] < finish[index]))
+    while ((sub_index < size) && (start[sub_index] < finish[index]))
     {
-        ++subIndex;
+        ++sub_index;
     }
 
-    if (subIndex < size)
+    if (sub_index < size)
     {
-        auto activities = RecursiveActivitySelector(start, finish, subIndex, size);
-        activities.push_back(subIndex);
+        auto activities = RecursiveActivitySelector(start, finish, sub_index, size);
+        activities.push_back(sub_index);
 
         return activities;
     }

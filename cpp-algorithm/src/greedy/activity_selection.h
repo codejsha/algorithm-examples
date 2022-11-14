@@ -5,23 +5,19 @@
 
 namespace ActivitySelection
 {
-    /// <summary>
-    /// Activity selection problem using recursive approach
-    /// </summary>
-    /// <param name="start">start times of activities</param>
-    /// <param name="finish">finish times of activities</param>
-    /// <param name="index">index of activity</param>
-    /// <param name="size">size of activities</param>
-    /// <returns>the resulting set of selected activities</returns>
+    /// @brief Activity selection problem using recursive approach.
+    /// @param start start times of activities
+    /// @param finish finish times of activities
+    /// @param index index of activity
+    /// @param size size of activities
+    /// @return the resulting set of selected activities
     std::vector<int> RecursiveActivitySelector(const std::vector<int>& start, const std::vector<int>& finish,
-        const int index, const int size);
+        int index, int size);
 
-    /// <summary>
-    /// Activity selection problem using greedy algorithm
-    /// </summary>
-    /// <param name="start">start times of activities</param>
-    /// <param name="finish">finish times of activities</param>
-    /// <returns>the resulting set of selected activities</returns>
+    /// @brief Activity selection problem using greedy algorithm.
+    /// @param start start times of activities
+    /// @param finish finish times of activities
+    /// @return the resulting set of selected activities
     std::vector<int> GreedyActivitySelector(const std::vector<int>& start, const std::vector<int>& finish);
 }
 

@@ -8,9 +8,7 @@
 
 namespace Huffman
 {
-    /// <summary>
-    /// Node in full binary tree for Huffman code
-    /// </summary>
+    /// @brief Node in full binary tree for Huffman code.
     struct HuffmanNode : Tree::BinaryNode<HuffmanNode>
     {
         char Ch;
@@ -22,9 +20,7 @@ namespace Huffman
         }
     };
 
-    /// <summary>
-    /// Comparator for minimal heap builds
-    /// </summary>
+    /// @brief Comparator for minimal heap builds
     class MinComparator
     {
     public:
@@ -34,20 +30,15 @@ namespace Huffman
         }
     };
 
-    /// <summary>
-    /// Huffman code algorithm
-    /// </summary>
-    /// <param name="freqMap">a map of char and frequency pairs</param>
-    /// <returns>root node</returns>
-    HuffmanNode* HuffmanCode(const std::map<int, char>& freqMap);
+    /// @brief Huffman code algorithm.
+    /// @param freq_map a map of char and frequency pairs
+    /// @return root node
+    HuffmanNode* HuffmanCode(const std::map<int, char>& freq_map);
 
-    /// <summary>
-    /// Tree traversal to get the Huffman code
-    /// </summary>
-    /// <param name="root">root node that starts the tree traversal</param>
-    /// <param name="code">prefix code</param>
-    /// <param name="result">result of tree traversal</param>
-    /// <returns>void</returns>
+    /// @brief Tree traversal to get the Huffman code
+    /// @param root root node that starts the tree traversal
+    /// @param code prefix code
+    /// @param result result of tree traversal
     void TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result);
 }
 

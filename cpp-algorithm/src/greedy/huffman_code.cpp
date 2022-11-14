@@ -2,30 +2,30 @@
 
 #include <queue>
 
-Huffman::HuffmanNode* Huffman::HuffmanCode(const std::map<int, char>& freqMap)
+Huffman::HuffmanNode* Huffman::HuffmanCode(const std::map<int, char>& freq_map)
 {
-    std::priority_queue<HuffmanNode*, std::vector<HuffmanNode*>, MinComparator> minQueue;
-    for (auto [freq, ch] : freqMap)
+    std::priority_queue<HuffmanNode*, std::vector<HuffmanNode*>, MinComparator> min_queue;
+    for (auto [freq, ch] : freq_map)
     {
-        minQueue.push(new HuffmanNode{freq, ch, freq});
+        min_queue.push(new HuffmanNode{freq, ch, freq});
     }
 
-    while (static_cast<int>(minQueue.size()) != 1)
+    while (static_cast<int>(min_queue.size()) != 1)
     {
-        const auto left = minQueue.top();
-        minQueue.pop();
-        const auto right = minQueue.top();
-        minQueue.pop();
+        const auto left = min_queue.top();
+        min_queue.pop();
+        const auto right = min_queue.top();
+        min_queue.pop();
 
         const auto key = left->Key + right->Key;
         auto node = new HuffmanNode{key, '-', left->Freq + right->Freq};
         node->Left = left;
         node->Right = right;
 
-        minQueue.push(node);
+        min_queue.push(node);
     }
 
-    return minQueue.top();
+    return min_queue.top();
 }
 
 void Huffman::TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result)
