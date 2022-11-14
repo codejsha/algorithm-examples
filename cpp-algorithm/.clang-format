@@ -1,13 +1,13 @@
 BasedOnStyle: Microsoft
+ColumnLimit: 0
+TabWidth: 4
+IndentWidth: 4
+UseTab: Never
 AccessModifierOffset: -4
 AlignAfterOpenBracket: DontAlign
 AlignOperands: true
 BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeBraces: Allman
-ColumnLimit: 0
-IndentWidth: 4
 FixNamespaceComments: False
 NamespaceIndentation: All
 PointerAlignment: Left
-TabWidth: 4
-UseTab: Never
