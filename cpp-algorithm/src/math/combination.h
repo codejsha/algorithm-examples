@@ -5,13 +5,11 @@
 
 namespace Combination
 {
-    /// <summary>
-    /// Selection of all possible combinations of elements in a sequence.
-    /// </summary>
-    /// <param name="seq">sequence of elements</param>
-    /// <param name="selectedItems">selected elements</param>
-    /// <param name="subsetSize">size of the subset</param>
-    void SelectItem(std::vector<int>& seq, std::vector<int>& selectedItems, int subsetSize);
+    /// @brief Selection of all possible combinations of elements in a sequence.
+    /// @param seq sequence of elements
+    /// @param selected_items selected elements
+    /// @param subset_size size of the subset
+    void SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, int subset_size);
 }
 
 #endif
