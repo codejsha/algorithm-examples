@@ -5,18 +5,14 @@
 
 namespace Sort
 {
-    /// <summary>
-    /// Selection sort algorithm.
-    /// </summary>
-    /// <param name="seq">sequence of elements</param>
-    /// <returns>sorted sequence</returns>
+    /// @brief Selection sort algorithm.
+    /// @param seq sequence of elements
+    /// @return sorted sequence
     std::vector<int> SelectionSort(std::vector<int>& seq);
 
-    /// <summary>
-    /// Insertion sort algorithm.
-    /// </summary>
-    /// <param name="seq">sequence of elements</param>
-    /// <returns>sorted sequence</returns>
+    /// @brief Insertion sort algorithm.
+    /// @param seq sequence of elements
+    /// @return sorted sequence
     std::vector<int> InsertionSort(std::vector<int>& seq);
 }
 
