@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-TEST(IntervalSubsetSumTest, Simple)
+GTEST_TEST(IntervalSubsetSumTest, Simple1)
 {
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
@@ -11,7 +11,7 @@ TEST(IntervalSubsetSumTest, Simple)
     ASSERT_EQ(expected, result);
 }
 
-TEST(IntervalSubsetSumTest, Simple2)
+GTEST_TEST(IntervalSubsetSumTest, Simple2)
 {
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
@@ -20,7 +20,7 @@ TEST(IntervalSubsetSumTest, Simple2)
     ASSERT_EQ(expected, result);
 }
 
-TEST(IntervalSubsetSumTest, DivideAndConquer)
+GTEST_TEST(IntervalSubsetSumTest, DivideAndConquer)
 {
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
@@ -29,7 +29,7 @@ TEST(IntervalSubsetSumTest, DivideAndConquer)
     ASSERT_EQ(expected, result);
 }
 
-TEST(IntervalSubsetSumTest, DynamicProgramming)
+GTEST_TEST(IntervalSubsetSumTest, DynamicProgramming)
 {
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
