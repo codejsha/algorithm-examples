@@ -3,6 +3,9 @@
 
 namespace IntegerPalindrome
 {
+    /// @brief Check if a number is a palindrome.
+    /// @param x input number
+    /// @return whether the number is a palindrome
     bool IsPalindromeNumber(int x);
 }
 

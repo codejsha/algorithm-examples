@@ -9,19 +9,19 @@ bool IntegerPalindrome::IsPalindromeNumber(int x)
         return x == 0;
     }
 
-    const int numDigits = static_cast<int>(std::floor(log10(x))) + 1;
-    int msdMask = static_cast<int>(std::pow(10, numDigits - 1));
+    const int num_digits = static_cast<int>(std::floor(log10(x))) + 1;
+    int msd_mask = static_cast<int>(std::pow(10, num_digits - 1));
 
-    for (int i = 0; i < (numDigits / 2); ++i)
+    for (int i = 0; i < (num_digits / 2); ++i)
     {
-        if (x / msdMask != x % 10)
+        if (x / msd_mask != x % 10)
         {
             return false;
         }
 
-        x %= msdMask;
+        x %= msd_mask;
         x /= 10;
-        msdMask /= 100;
+        msd_mask /= 100;
     }
     return true;
 }

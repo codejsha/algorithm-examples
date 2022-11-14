@@ -1,53 +1,59 @@
-#include "computing_parity_of_word.h"
+#include "compute_parity.h"
 
 #include <gtest/gtest.h>
 
-TEST(ComputingParityTest, CountBits1)
+GTEST_TEST(ComputeParityTest, CountBits1)
 {
     constexpr auto expected = 3;
     const auto result = ComputingParity::CountBits(0b1011);
     ASSERT_EQ(expected, result);
 }
 
-TEST(ComputingParityTest, CountBits2)
+GTEST_TEST(ComputeParityTest, CountBits2)
 {
     constexpr auto expected = 2;
     const auto result = ComputingParity::CountBits(0b10001000);
     ASSERT_EQ(expected, result);
 }
 
-TEST(ComputingParityTest, Parity1)
+GTEST_TEST(ComputeParityTest, Parity1)
 {
     constexpr auto expected = 1;
     const auto result = ComputingParity::Parity(0b1011);
     ASSERT_EQ(expected, result);
 }
 
-TEST(ComputingParityTest, Parity2)
+GTEST_TEST(ComputeParityTest, Parity2)
 {
     constexpr auto expected = 0;
     const auto result = ComputingParity::Parity(0b10001000);
     ASSERT_EQ(expected, result);
 }
 
-TEST(ComputingParityTest, ParityDropLowestBits1)
+GTEST_TEST(ComputeParityTest, ParityDropLowestBits1)
 {
     constexpr auto expected = 1;
     const auto result = ComputingParity::ParityDropLowestBits(0b1011);
     ASSERT_EQ(expected, result);
 }
 
-TEST(ComputingParityTest, ParityDropLowestBits2)
+GTEST_TEST(ComputeParityTest, ParityDropLowestBits2)
 {
     constexpr auto expected = 0;
     const auto result = ComputingParity::ParityDropLowestBits(0b10001000);
     ASSERT_EQ(expected, result);
 }
 
-TEST(ComputingParityTest, ParityMask1)
+GTEST_TEST(ComputeParityTest, ParityMask1)
 {
     constexpr auto expected = 1;
-    const auto result = ComputingParity::ParityMask(0b11101010);
+    const auto result = ComputingParity::ParityLookupTable(0b11101010);
     ASSERT_EQ(expected, result);
 }
 
+GTEST_TEST(ComputeParityTest, ParityXor1)
+{
+    //constexpr auto expected = 1;
+    //const auto result = ComputingParity::ParityXor(0b11010111);
+    //ASSERT_EQ(expected, result);
+}

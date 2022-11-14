@@ -9,19 +9,19 @@ int ZeroOneRandom()
     return distribution(generator);
 }
 
-int GenerateRandomNumber::GenerateUniformRandomNumber(const int lowerBound, const int upperBound)
+int GenerateRandomNumber::GenerateUniformRandomNumber(const int lower_bound, const int upper_bound)
 {
     int result = 0;
-    const int numberOfOutcomes = upperBound - lowerBound + 1;
+    const int number_of_outcomes = upper_bound - lower_bound + 1;
 
     do
     {
         result = 0;
-        for (int i = 0; (1 << i) < numberOfOutcomes; ++i)
+        for (int i = 0; (1 << i) < number_of_outcomes; ++i)
         {
             result = (result << 1) | ZeroOneRandom();
         }
-    } while (result >= numberOfOutcomes);
+    } while (result >= number_of_outcomes);
 
-    return result + lowerBound;
+    return result + lower_bound;
 }
