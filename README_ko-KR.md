@@ -1,11 +1,12 @@
 # Algorithm Examples
 
-[English](README.md)
+[Korean](README_ko-KR.md)
 
 목차:
 
 - [개요 (Introduction)](#개요-introduction)
 - [데이터 구조 (Data structures)](#데이터-구조-data-structures)
+  - [배열 (Array)](#배열-array)
   - [그래프 (Graph)](#그래프-graph)
   - [트리 (Tree)](#트리-tree)
 - [주제 (Topics)](#주제-topics)
@@ -30,6 +31,27 @@
 - Java project: [Spring Boot](https://spring.io/projects/spring-boot) 프로젝트 기반, [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) 사용
 
 ## 데이터 구조 (Data structures)
+
+### 배열 (Array)
+
+- 배열에서 이동하기 (Advancing through an array): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 임의의 정숫값 증가시키기 (Arbitrary precision operation - increment an arbitrary-precision integer (PlusOne)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 임의의 두 정숫값 더하기 (Arbitrary precision operation - add two arbitrary-precision integers (StringAddition)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 임의의 두 정숫값 곱하기 (Arbitrary precision operation - multiply two arbitrary-precision integers (Multiply)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 정렬된 배열에서 중복 제거하기 (Delete duplicates from a sorted array (DeleteDuplicates)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 정렬된 배열에서 중복 제거하기 (Delete duplicates from a sorted array (DeleteDuplicateElements)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 정렬된 배열에서 특정 원소 제거하기 (Delete specific elements from a sorted array (DeleteSpecificElements)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 네덜란드 국기 문제 (Dutch national flags problem): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)
+- 소수 나열하기 (Enumerate prime numbers): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 배열 정렬하기 (Order elements in an array by even and odd (EvenOdd)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)
+- 배열 정렬하기 (Order elements in an array by specified order (Rearrange)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)
+- 데이터 샘플 구하기 (Random data sampling - offline (OfflineRandomSampling)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 데이터 샘플 구하기 (Random data sampling - compute permutation (ComputeRandomPermutation)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 문자열 치환하기 (Replace elements - replace and remove (ReplaceAndRemoveString1)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 문자열 치환하기 (Replace elements - replace and remove (ReplaceAndRemoveString2)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 문자열 Telex 인코딩 치환하기 (Replace elements - telex encoding (TelexEncoding)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 주식 사고 팔기 (Stock trading - buy and sell a stock once (BuyAndSellStockOnceBruteForce, BuyAndSellStockOnce)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- 주식 사고 팔기 (Stock trading - buy and sell a stock twice (BuyAndSellStockTwice)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
 
 ### 그래프 (Graph)
 
@@ -66,19 +88,26 @@
 - 최대 공약수 (Greatest common divisor (GCD)): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - 최소 공배수 (Least common multiple (LCM)): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
 - 행렬 곱셈 (Matrix multiplication): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
-- 순열 (Permutation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
+- 밀러-라빈 소수 판별법 (Miller-Rabin primality test): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
+- 순열 (Permutation (Permutation)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
+- 순열 구하기 (Permutation (ApplyPermutationWithAdditionalSpace, ApplyPermutationBySwap)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
+- 순열 뒤집기 (Permutation (InversePermutation)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
+- 다음/이전 순열 구하기 (Permutation (NextPermutation/PreviousPermutation)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
+- K-번째 순열 구하기 (Permutation (KthPermutation)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
 
 ### 기본 자료형 (Primitive type)
 
-- 패리티 계산하기 (Computing parity of word): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
-- 산술 연산자 없이 나눗셈 계산하기 (Divide operation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 산술 연산자 없이 산술 연산 계산하기 (Arithmetic operation (Multiply/Divide)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))| Calculate the product/fraction of two numbers without using arithmetic operators.
+- 패리티 계산하기 (Computing parity of word (CountBits)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 패리티 계산하기 (Computing parity of word (Parity)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 패리티 계산하기 (Computing parity of word (ParityDropLowestBits)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 패리티 계산하기 (Computing parity of word (ParityLookupTable)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 - 임의의 숫자를 균등한 확룰로 생성하기 (Generate random number): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
 - 회문 확인하기 (Integer palindrome): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
-- 곱셈과 덧셈 없이 $x \times y$ 계산하기 (Multiply operation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 - pow(x,y) 계산하기 (Power operation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 - 사각형이 겹치는지 확인하기 (Rectangle intersection): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
-- 숫자 뒤집기 (Reverse digit): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
-- 비트 스왑 (Swap bit): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
+- 숫자 뒤집기 (Reverse digits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
+- 비트 스왑 (Swap bits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 
 ### 검색 (Search)
 
@@ -98,11 +127,18 @@
 
 ### 문자열 (String)
 
+- 문자열/숫자 변환하기 (Convert string (IntToString, StringToInt)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
+- 유효한 IP 주소 구하기 (IP address validation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
+- 개미 수열 문제 (Look and say problem): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - Naive string search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/string))
+- 회문 확인하기 (Palindrome): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
+- 로마 숫자 (Roman number (VerifyRomanString)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
+- 로마 숫자 (Roman number (RomanStringToInteger)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
+- 스프레드시트 컬럼 디코딩/인코딩 (Spreadsheet column decoding/encoding (DecodingSheetColumnId/EncodingSheetColumnId)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)
 
 ## 문제 해결 (Problem solving)
 
-- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem))
+- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving))
 
 ## 참조 (References)
 
