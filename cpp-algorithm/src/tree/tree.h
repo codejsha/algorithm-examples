@@ -5,11 +5,9 @@
 
 namespace Tree
 {
-    /// <summary>
-    /// Node of tree
-    /// </summary>
-    /// <typeparam name="T1">type of node</typeparam>
-    /// <typeparam name="T2">type of key</typeparam>
+    /// @brief Node of tree
+    /// @tparam T1 type of node
+    /// @tparam T2 type of key
     template <typename T1, typename T2>
     struct Node
     {
@@ -23,10 +21,8 @@ namespace Tree
         }
     };
 
-    /// <summary>
-    /// Binary node of tree
-    /// </summary>
-    /// <typeparam name="T">type of node</typeparam>
+    /// @brief Binary node of tree
+    /// @tparam T type of node
     template <typename T>
     struct BinaryNode : Node<T, int>
     {
@@ -39,11 +35,9 @@ namespace Tree
         }
     };
 
-    /// <summary>
-    /// Tree
-    /// </summary>
-    /// <typeparam name="T1">type of node</typeparam>
-    /// <typeparam name="T2">type of key</typeparam>
+    /// @brief Tree
+    /// @tparam T1 type of node
+    /// @tparam T2 type of key
     template <typename T1, typename T2>
     class Tree
     {
@@ -76,10 +70,8 @@ namespace Tree
         virtual void Delete(T1*& t, T2 k) = 0;
     };
 
-    /// <summary>
-    /// Binary tree
-    /// </summary>
-    /// <typeparam name="T">type of node</typeparam>
+    /// @brief Binary tree
+    /// @tparam T type of node
     template <typename T>
     class BinaryTree : Tree<T, int>
     {
@@ -95,10 +87,8 @@ namespace Tree
             return Nodes;
         }
 
-        /// <summary>
-        /// Preorder traversal of tree
-        /// </summary>
-        /// <returns>traversal result</returns>
+        /// @brief Preorder traversal of tree
+        /// @return traversal result
         std::vector<int> PreorderTreeWalk()
         {
             auto keys = std::vector<int>();
@@ -106,10 +96,8 @@ namespace Tree
             return keys;
         }
 
-        /// <summary>
-        /// Inorder traversal of tree
-        /// </summary>
-        /// <returns>traversal result</returns>
+        /// @brief Inorder traversal of tree
+        /// @return traversal result
         std::vector<int> InorderTreeWalk()
         {
             auto keys = std::vector<int>();
@@ -117,10 +105,8 @@ namespace Tree
             return keys;
         }
 
-        /// <summary>
-        /// Postorder traversal of tree
-        /// </summary>
-        /// <returns>traversal result</returns>
+        /// @brief Postorder traversal of tree
+        /// @return traversal result
         std::vector<int> PostorderTreeWalk()
         {
             auto keys = std::vector<int>();
@@ -128,10 +114,8 @@ namespace Tree
             return keys;
         }
 
-        /// <summary>
-        /// Check if tree is balanced
-        /// </summary>
-        /// <returns>whether full binary tree or not</returns>
+        /// @brief Check if tree is balanced
+        /// @return whether full binary tree or not
         bool IsFullBinaryTree()
         {
             return IsFullBinaryTree(Root);
@@ -141,11 +125,9 @@ namespace Tree
         T* Root{};
         std::vector<T*> Nodes{};
 
-        /// <summary>
-        /// Preorder traversal of tree
-        /// </summary>
-        /// <param name="node">reference node for tree traversal</param>
-        /// <param name="keys">keys of tree</param>
+        /// @brief Preorder traversal of tree
+        /// @param node reference node for tree traversal
+        /// @param keys keys of tree
         void PreorderTreeWalk(const T* node, std::vector<int>& keys)
         {
             if (node == nullptr)
@@ -157,11 +139,9 @@ namespace Tree
             PreorderTreeWalk(node->Right, keys);
         }
 
-        /// <summary>
-        /// Inorder traversal of tree
-        /// </summary>
-        /// <param name="node">reference node for tree traversal</param>
-        /// <param name="keys">keys of tree</param>
+        /// @brief Inorder traversal of tree
+        /// @param node reference node for tree traversal
+        /// @param keys keys of tree
         void InorderTreeWalk(const T* node, std::vector<int>& keys)
         {
             if (node == nullptr)
@@ -173,11 +153,9 @@ namespace Tree
             InorderTreeWalk(node->Right, keys);
         }
 
-        /// <summary>
-        /// Postorder traversal of tree
-        /// </summary>
-        /// <param name="node">reference node for tree traversal</param>
-        /// <param name="keys">keys of tree</param>
+        /// @brief Postorder traversal of tree
+        /// @param node reference node for tree traversal
+        /// @param keys keys of tree
         void PostorderTreeWalk(const T* node, std::vector<int>& keys)
         {
             if (node == nullptr)
@@ -189,11 +167,9 @@ namespace Tree
             keys.push_back(node->Key);
         }
 
-        /// <summary>
-        /// Check if tree is balanced
-        /// </summary>
-        /// <param name="node">reference node for tree traversal</param>
-        /// <returns>whether full binary tree or not</returns>
+        /// @brief Check if tree is balanced
+        /// @param node reference node for tree traversal
+        /// @return whether full binary tree or not
         bool IsFullBinaryTree(const T* node)
         {
             if (Root == nullptr)

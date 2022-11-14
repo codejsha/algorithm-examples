@@ -2,82 +2,82 @@
 
 void Tree::BTree::SplitChild(BTreeNode* node, const int index)
 {
-    const auto leftChild = node->Children[index];
+    const auto left_child = node->Children[index];
 
     //// create a right child node,
     //// and split keys, children of the left child node
 
     // create right child
-    const auto rightChild = new BTreeNode{};
-    rightChild->IsLeaf = leftChild->IsLeaf;
+    const auto right_child = new BTreeNode{};
+    right_child->IsLeaf = left_child->IsLeaf;
 
     // split keys of the left child
     // copy keys from median+1 to the end
-    auto rightKeys = std::vector<char>(
-        leftChild->Keys.begin() + Degree,
-        leftChild->Keys.end());
-    rightChild->Keys = std::move(rightKeys);
+    auto right_keys = std::vector<char>(
+        left_child->Keys.begin() + Degree,
+        left_child->Keys.end());
+    right_child->Keys = std::move(right_keys);
     // get median key
-    const auto medianKey = leftChild->Keys[Degree - 1];
+    const auto median_key = left_child->Keys[Degree - 1];
     // erase keys from median to the end
-    leftChild->Keys.erase(
-        leftChild->Keys.begin() + Degree - 1,
-        leftChild->Keys.end());
+    left_child->Keys.erase(
+        left_child->Keys.begin() + Degree - 1,
+        left_child->Keys.end());
 
     // split children of the left child
-    if (leftChild->IsLeaf == false)
+    if (left_child->IsLeaf == false)
     {
-        auto rightChildren = std::vector<BTreeNode*>(
-            leftChild->Children.begin() + Degree,
-            leftChild->Children.end());
-        rightChild->Children = std::move(rightChildren);
-        leftChild->Children.erase(
-            leftChild->Children.begin() + Degree,
-            leftChild->Children.end());
+        auto right_children = std::vector<BTreeNode*>(
+            left_child->Children.begin() + Degree,
+            left_child->Children.end());
+        right_child->Children = std::move(right_children);
+        left_child->Children.erase(
+            left_child->Children.begin() + Degree,
+            left_child->Children.end());
     }
 
     //// insert a new right node,
     //// and move the median key to the parent node
 
     // move the median key to parent node
-    node->Keys.insert(node->Keys.begin() + index, medianKey);
+    node->Keys.insert(node->Keys.begin() + index, median_key);
 
     // insert right node as a new child of node
-    node->Children.insert(node->Children.begin() + index + 1, rightChild);
+    node->Children.insert(node->Children.begin() + index + 1, right_child);
 }
 
 void Tree::BTree::InsertNonFull(BTreeNode* node, const char key)
 {
-    auto keyCount = node->GetKeyCount();
+    auto key_count = node->GetKeyCount();
 
     // insert key to leaf node
     if (node->IsLeaf == true)
     {
-        while ((keyCount >= 1) && (node->Keys[keyCount - 1] > key))
+        while ((key_count >= 1) && (node->Keys[key_count - 1] > key))
         {
-            --keyCount;
+            --key_count;
         }
 
-        node->Keys.insert(node->Keys.begin() + keyCount, key);
+        node->Keys.insert(node->Keys.begin() + key_count, key);
     }
     else
     {
-        while ((keyCount >= 1) && (node->Keys[keyCount - 1] > key))
+        while ((key_count >= 1) && (node->Keys[key_count - 1] > key))
         {
-            --keyCount;
+            --key_count;
         }
-        ++keyCount;
+        ++key_count;
 
-        if (node->Children[keyCount - 1]->GetKeyCount() == 2 * Degree - 1)
+        if (node->Children[key_count - 1]->GetKeyCount() == 2 * Degree - 1)
         {
-            SplitChild(node, keyCount - 1);
-            if (key > node->Keys[keyCount - 1])
+            SplitChild(node, key_count - 1);
+            if (key > node->Keys[key_count - 1])
             {
-                ++keyCount;
+                ++key_count;
             }
         }
 
-        InsertNonFull(node->Children[keyCount - 1], key);
+        InsertNonFull(node->Children[key_count - 1], key);
     }
 }
 
@@ -93,36 +93,36 @@ std::pair<Tree::BTreeNode*, const int> Tree::BTree::Search(const char key)
 
 void Tree::BTree::Insert(BTreeNode* ref, const char key)
 {
-    const auto rootNode = ref;
+    const auto root_node = ref;
 
     if (ref->GetKeyCount() == 2 * Degree - 1)
     {
-        const auto newNode = new BTreeNode{};
-        Root = newNode;
-        newNode->IsLeaf = false;
-        newNode->Children.push_back(rootNode);
-        SplitChild(newNode, 0);
-        InsertNonFull(newNode, key);
+        const auto new_node = new BTreeNode{};
+        Root = new_node;
+        new_node->IsLeaf = false;
+        new_node->Children.push_back(root_node);
+        SplitChild(new_node, 0);
+        InsertNonFull(new_node, key);
     }
     else
     {
-        InsertNonFull(rootNode, key);
+        InsertNonFull(root_node, key);
     }
 }
 
 std::pair<Tree::BTreeNode*, const int> Tree::BTree::Search(BTreeNode* ref, const char key)
 {
     auto index = 0;
-    const auto keyCount = ref->GetKeyCount();
+    const auto key_count = ref->GetKeyCount();
 
-    // find smallest index that key <= ref->Keys[index]
-    while ((keyCount > index) && (key > ref->Keys[index]))
+    // find the smallest index that key <= ref->Keys[index]
+    while ((key_count > index) && (key > ref->Keys[index]))
     {
         ++index;
     }
 
     // check to see whether key is found
-    if ((keyCount > index) && (key == ref->Keys[index]))
+    if ((key_count > index) && (key == ref->Keys[index]))
     {
         return std::make_pair(ref, index);
     }
