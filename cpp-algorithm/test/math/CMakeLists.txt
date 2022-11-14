@@ -17,4 +17,5 @@ macro(add_target_test name)
 endmacro()
 
 add_target_test(combination_test sequence_util)
+add_target_test(miller_rabin_test)
 add_target_test(permutation_test)

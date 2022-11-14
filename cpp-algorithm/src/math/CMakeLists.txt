@@ -7,4 +7,5 @@ macro(add_library_target target)
 endmacro()
 
 add_library_target(combination sequence_util)
+add_library_target(miller_rabin)
 add_library_target(permutation)
