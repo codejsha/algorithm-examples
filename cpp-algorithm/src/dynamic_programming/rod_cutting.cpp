@@ -1,4 +1,5 @@
 #include "rod_cutting.h"
+
 #include <algorithm>
 
 int RodCutting::CutRod(const std::map<int, int>& price, const int length)
@@ -8,14 +9,14 @@ int RodCutting::CutRod(const std::map<int, int>& price, const int length)
         return 0;
     }
 
-    auto maxRevenue = std::numeric_limits<int>::min();
+    auto max_revenue = std::numeric_limits<int>::min();
 
     for (int i = 1; i <= length; ++i)
     {
-        maxRevenue = std::max(maxRevenue, price.at(i) + CutRod(price, length - i));
+        max_revenue = std::max(max_revenue, price.at(i) + CutRod(price, length - i));
     }
 
-    return maxRevenue;
+    return max_revenue;
 }
 
 int RodCutting::MemoizedCutRod(const std::map<int, int>& price, const int length)
@@ -26,7 +27,7 @@ int RodCutting::MemoizedCutRod(const std::map<int, int>& price, const int length
 
 int RodCutting::MemoizedCutRodAux(const std::map<int, int>& price, const int length, std::vector<int>& memo)
 {
-    auto maxRevenue = std::numeric_limits<int>::min();
+    auto max_revenue = std::numeric_limits<int>::min();
 
     if (memo[length] >= 0)
     {
@@ -35,19 +36,19 @@ int RodCutting::MemoizedCutRodAux(const std::map<int, int>& price, const int len
 
     if (length == 0)
     {
-        maxRevenue = 0;
+        max_revenue = 0;
     }
     else
     {
         for (int i = 1; i <= length; ++i)
         {
-            maxRevenue = std::max(maxRevenue, price.at(i) + MemoizedCutRodAux(price, length - i, memo));
+            max_revenue = std::max(max_revenue, price.at(i) + MemoizedCutRodAux(price, length - i, memo));
         }
     }
 
-    memo[length] = maxRevenue;
+    memo[length] = max_revenue;
 
-    return maxRevenue;
+    return max_revenue;
 }
 
 int RodCutting::BottomUpCutRod(const std::map<int, int>& price, const int length)
@@ -57,12 +58,12 @@ int RodCutting::BottomUpCutRod(const std::map<int, int>& price, const int length
 
     for (int i = 1; i <= length; ++i)
     {
-        auto maxRevenue = std::numeric_limits<int>::min();
+        auto max_revenue = std::numeric_limits<int>::min();
         for (int j = 1; j <= i; ++j)
         {
-            maxRevenue = std::max(maxRevenue, price.at(j) + memo[i - j]);
+            max_revenue = std::max(max_revenue, price.at(j) + memo[i - j]);
         }
-        memo[i] = maxRevenue;
+        memo[i] = max_revenue;
     }
 
     return memo[length];
@@ -75,21 +76,21 @@ std::tuple<int, int> RodCutting::ExtendedBottomUpCutRod(const std::map<int, int>
     memo[0] = 0;
 
     // the optimal size of the first piece to cut off
-    std::vector<int> optimalFirstPeice(static_cast<int>(price.size()) + 1, -1);
+    std::vector<int> optimal_first_piece(static_cast<int>(price.size()) + 1, -1);
 
     for (int i = 1; i <= length; ++i)
     {
-        auto maxRevenue = std::numeric_limits<int>::min();
+        auto max_revenue = std::numeric_limits<int>::min();
         for (int j = 1; j <= i; ++j)
         {
-            if (maxRevenue < price.at(j) + memo[i - j])
+            if (max_revenue < price.at(j) + memo[i - j])
             {
-                maxRevenue = price.at(j) + memo[i - j];
-                optimalFirstPeice[i] = j;
+                max_revenue = price.at(j) + memo[i - j];
+                optimal_first_piece[i] = j;
             }
         }
-        memo[i] = maxRevenue;
+        memo[i] = max_revenue;
     }
 
-    return std::make_tuple(memo[length], optimalFirstPeice[length]);
+    return std::make_tuple(memo[length], optimal_first_piece[length]);
 }

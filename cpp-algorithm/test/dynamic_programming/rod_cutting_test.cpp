@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-TEST(RodCuttingTest, Simple)
+GTEST_TEST(RodCuttingTest, Simple)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
@@ -32,7 +32,7 @@ TEST(RodCuttingTest, Simple)
     ASSERT_EQ(expected.at(10), result10);
 }
 
-TEST(RodCuttingTest, DynamicProgrammingTopDown)
+GTEST_TEST(RodCuttingTest, DynamicProgrammingTopDown)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
@@ -62,7 +62,7 @@ TEST(RodCuttingTest, DynamicProgrammingTopDown)
     ASSERT_EQ(expected.at(10), result10);
 }
 
-TEST(RodCuttingTest, DynamicProgrammingBottomUp)
+GTEST_TEST(RodCuttingTest, DynamicProgrammingBottomUp)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
@@ -92,7 +92,7 @@ TEST(RodCuttingTest, DynamicProgrammingBottomUp)
     ASSERT_EQ(expected.at(10), result10);
 }
 
-TEST(RodCuttingTest, DynamicProgrammingExtendedBottomUp)
+GTEST_TEST(RodCuttingTest, DynamicProgrammingExtendedBottomUp)
 {
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};

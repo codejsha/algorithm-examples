@@ -5,21 +5,16 @@
 
 namespace Fibonacci
 {
-    /// <summary>
-    /// Calculate the Fibonacci number using a top-down approach.
-    /// Use memoization to cache the results.
-    /// </summary>
-    /// <param name="number">number to calculate</param>
-    /// <param name="memo">memoization of previously calculated numbers</param>
-    /// <returns>nth Fibonacci number</returns>
+    /// @brief Calculate the Fibonacci number using a top-down approach.
+    /// @param number number to calculate
+    /// @param memo memoization of previously calculated numbers
+    /// @return nth Fibonacci number
     int FibonacciDynamicTopDown(int number, std::vector<int>& memo);
 
-    /// <summary>
-    /// Calculate the Fibonacci number using a bottom-up approach.
+    /// @brief Calculate the Fibonacci number using a bottom-up approach.
     /// Use memoization to cache the results.
-    /// </summary>
-    /// <param name="number">number to calculate</param>
-    /// <returns>nth Fibonacci number</returns>
+    /// @param number number to calculate
+    /// @return nth Fibonacci number
     int FibonacciDynamicBottomUp(int number);
 }
 

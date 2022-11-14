@@ -1,18 +1,23 @@
+find_package(GSL REQUIRED)
+find_package(GTest REQUIRED)
+
+if(WIN32)
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif(WIN32)
+
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/dynamic_programming)
 
-find_package(GSL REQUIRED)
-
 enable_testing()
-include(GoogleTest)
 
 macro(add_target_test name)
     string(REPLACE "_test" "" target_name ${name})
 	add_executable(${name} "${name}.cpp" "${CMAKE_SOURCE_DIR}/src/dynamic_programming/${target_name}.cpp")
-	target_link_libraries(${name} PRIVATE common_util gtest_main ${ARGN})
+	target_link_libraries(${name} PRIVATE GTest::gtest_main ${ARGN})
 	gtest_discover_tests(${name})
 endmacro()
 
 add_target_test(fibonacci_number_test)
 add_target_test(longest_common_subsequence_test GSL::gsl)
+# add_target_test(matrix_chain_test)
 add_target_test(rod_cutting_test)
