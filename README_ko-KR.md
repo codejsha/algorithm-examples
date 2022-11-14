@@ -55,7 +55,7 @@
 
 ### 그래프 (Graph)
 
-- 벨만 포드 알고리즘 (Bellman-Ford algorithm): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph))
+- 벨만-포드 알고리즘 (Bellman-Ford algorithm): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph))
 - 넓이 우선 탐색 (Breadth-first search (BFS)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph))
 - 깊이 우선 탐색 (Depth-first search (DFS)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph))
 - 다익스트라 알고리즘 (Dijkstra's algorithm): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph))
@@ -97,7 +97,7 @@
 
 ### 기본 자료형 (Primitive type)
 
-- 산술 연산자 없이 산술 연산 계산하기 (Arithmetic operation (Multiply/Divide)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))| Calculate the product/fraction of two numbers without using arithmetic operators.
+- 산술 연산자 없이 산술 연산 계산하기 (Arithmetic operation (Multiply/Divide)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 - 패리티 계산하기 (Computing parity of word (CountBits)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 - 패리티 계산하기 (Computing parity of word (Parity)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 - 패리티 계산하기 (Computing parity of word (ParityDropLowestBits)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))

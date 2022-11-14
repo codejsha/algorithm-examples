@@ -118,7 +118,7 @@ Additionally, each project is configured in the following environments:
 
 ### Primitive type
 
-- Arithmetic operation (Multiply/Divide): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))| Calculate the product/fraction of two numbers without using arithmetic operators.
+- Arithmetic operation (Multiply/Divide): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Calculate the product/fraction of two numbers without using arithmetic operators.
 - Computing parity of word (CountBits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Count the number of bits that are set to 1.
 - Computing parity of word (Parity): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute parity of word.
 - Computing parity of word (ParityDropLowestBits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute parity by dropping the lowest set bit.
