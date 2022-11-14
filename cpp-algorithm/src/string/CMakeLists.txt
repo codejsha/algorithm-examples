@@ -1,0 +1,15 @@
+include_directories(${CMAKE_SOURCE_DIR}/src/include)
+
+macro(add_library_target target)
+	add_library(${target} STATIC "${target}.cpp")
+	target_link_libraries(${target} PRIVATE ${ARGN})
+	set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
+endmacro()
+
+add_library_target(convert_string)
+add_library_target(ip_address)
+add_library_target(look_and_say)
+add_library_target(palindrome)
+add_library_target(print_snake_string)
+add_library_target(roman_number)
+add_library_target(sheet_encoding)

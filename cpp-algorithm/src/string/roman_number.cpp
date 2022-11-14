@@ -1,0 +1,45 @@
+#include "roman_number.h"
+
+#include <unordered_map>
+
+auto roman_set = std::unordered_map<char, int>{
+    {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50},
+    {'C', 100}, {'D', 500}, {'M', 1000}};
+
+bool RomanNumber::VerifyRomanString(const std::string& str)
+{
+    auto is_except = false;
+
+    for (auto i = 0; i < static_cast<int>(str.size() - 1); ++i)
+    {
+        if (roman_set[str[i]] < roman_set[str[i + 1]])
+        {
+            if (is_except)
+            {
+                return false;
+            }
+            is_except = true;
+        }
+    }
+
+    return true;
+}
+
+int RomanNumber::RomanStringToInteger(const std::string& str)
+{
+    auto sum = 0;
+    for (auto i = static_cast<int>(str.size() - 1); i >= 0; --i)
+    {
+        const auto value = roman_set[str[i]];
+        if (i > 0 && roman_set[str[i - 1]] < value)
+        {
+            sum += value - roman_set[str[i - 1]];
+            --i;
+        }
+        else
+        {
+            sum += value;
+        }
+    }
+    return sum;
+}
