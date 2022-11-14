@@ -1,6 +1,6 @@
 # Algorithm Examples
 
-[Korean](README_ko-KR.md)
+[English](README.md)
 
 목차:
 
