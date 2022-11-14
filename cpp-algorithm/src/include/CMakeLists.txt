@@ -1,2 +1,2 @@
-add_library(common_util STATIC "util.cpp")
-target_include_directories(common_util PUBLIC .)
+add_library(sequence_util STATIC "sequence_util.cpp")
+target_include_directories(sequence_util PUBLIC .)
