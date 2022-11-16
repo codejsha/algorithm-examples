@@ -9,11 +9,16 @@ include_directories(${CMAKE_SOURCE_DIR}/src/math)
 
 enable_testing()
 
-macro(add_target_test name)
-    string(REPLACE "_test" "" target_name ${name})
-	add_executable(${name} "${name}.cpp" "${CMAKE_SOURCE_DIR}/src/math/${target_name}.cpp")
-	target_link_libraries(${name} PRIVATE GTest::gtest_main ${ARGN})
-	gtest_discover_tests(${name})
+macro(add_target_test target)
+    string(REPLACE "_test" "" target_name ${target})
+	add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/math/${target_name}.cpp")
+	target_link_libraries(${target} PRIVATE GTest::gtest_main ${ARGN})
+	if(MSVC)
+		### Edit and Continue for CMake projects
+		target_compile_options(${target} PUBLIC "/Zi")
+		target_link_options(${target} PUBLIC "/INCREMENTAL")
+	endif()
+	gtest_discover_tests(${target})
 endmacro()
 
 add_target_test(combination_test sequence_util)
