@@ -16,7 +16,7 @@ GTEST_TEST(RandomDataSamplingTest, OfflineRandomSampling)
     }
     std::cout << stream.str() << std::endl;
 
-    ASSERT_EQ(k, static_cast<int>(result.size()));
+    EXPECT_EQ(k, static_cast<int>(result.size()));
 }
 
 GTEST_TEST(RandomDataSamplingTest, ComputeRandomPermutation)
@@ -32,5 +32,5 @@ GTEST_TEST(RandomDataSamplingTest, ComputeRandomPermutation)
     }
     std::cout << stream.str() << std::endl;
 
-    ASSERT_EQ(k, static_cast<int>(result.size()));
+    EXPECT_EQ(k, static_cast<int>(result.size()));
 }

@@ -9,7 +9,7 @@ GTEST_TEST(FibonacciNumberTest, FibonacciDynamicTopDown)
     auto memo = std::vector<int>(number + 1, -1);
 
     const auto result = Fibonacci::FibonacciDynamicTopDown(number, memo);
-    ASSERT_EQ(expected, result);
+    EXPECT_EQ(expected, result);
 }
 
 GTEST_TEST(FibonacciNumberTest, FibonacciDynamicBottomUp)
@@ -18,5 +18,5 @@ GTEST_TEST(FibonacciNumberTest, FibonacciDynamicBottomUp)
     constexpr auto expected = 21;
 
     const auto result = Fibonacci::FibonacciDynamicBottomUp(number);
-    ASSERT_EQ(expected, result);
+    EXPECT_EQ(expected, result);
 }

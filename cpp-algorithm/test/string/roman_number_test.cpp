@@ -10,5 +10,5 @@ GTEST_TEST(RomanNumberTest, VerifyRomanString)
 
 GTEST_TEST(RomanNumberTest, RomanStringToInteger)
 {
-    ASSERT_EQ(59, RomanNumber::RomanStringToInteger("LIX"));
+    EXPECT_EQ(59, RomanNumber::RomanStringToInteger("LIX"));
 }

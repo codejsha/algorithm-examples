@@ -18,5 +18,5 @@ GTEST_TEST(LongestCommonSebsequenceTest, LongestCommonSubsequenceLength)
     CommonSubsequence::LongestCommonSubsequence(seq1, std::get<1>(matrix),
         seq_length1, seq_length2, result);
 
-    ASSERT_EQ(expected, result);
+    EXPECT_EQ(expected, result);
 }

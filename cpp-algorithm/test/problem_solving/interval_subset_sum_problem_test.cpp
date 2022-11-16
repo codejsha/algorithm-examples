@@ -8,7 +8,7 @@ GTEST_TEST(IntervalSubsetSumTest, Simple1)
     constexpr auto expected = 8;
 
     const auto result = IntervalSubset::SimpleSubsetSum(seq);
-    ASSERT_EQ(expected, result);
+    EXPECT_EQ(expected, result);
 }
 
 GTEST_TEST(IntervalSubsetSumTest, Simple2)
@@ -17,7 +17,7 @@ GTEST_TEST(IntervalSubsetSumTest, Simple2)
     constexpr auto expected = 8;
 
     const auto result = IntervalSubset::SimpleSubsetSum2(seq);
-    ASSERT_EQ(expected, result);
+    EXPECT_EQ(expected, result);
 }
 
 GTEST_TEST(IntervalSubsetSumTest, DivideAndConquer)
@@ -26,7 +26,7 @@ GTEST_TEST(IntervalSubsetSumTest, DivideAndConquer)
     constexpr auto expected = 8;
 
     const auto result = IntervalSubset::DivideAndConquerSubsetSum(seq, 0, static_cast<int>(seq.size() - 1));
-    ASSERT_EQ(expected, result);
+    EXPECT_EQ(expected, result);
 }
 
 GTEST_TEST(IntervalSubsetSumTest, DynamicProgramming)
@@ -35,5 +35,5 @@ GTEST_TEST(IntervalSubsetSumTest, DynamicProgramming)
     constexpr auto expected = 8;
 
     const auto result = IntervalSubset::DynamicProgrammingSubsetSum(seq);
-    ASSERT_EQ(expected, result);
+    EXPECT_EQ(expected, result);
 }
