@@ -132,6 +132,7 @@
 - 개미 수열 문제 (Look and say problem): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - Naive string search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/string))
 - 회문 확인하기 (Palindrome): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
+- 사인파 곡선 패턴으로 문자열 프린트하기 (SineWaveString and PrintSineWaveString): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - 로마 숫자 (Roman number (VerifyRomanString)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - 로마 숫자 (Roman number (RomanStringToInteger)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - 스프레드시트 컬럼 디코딩/인코딩 (Spreadsheet column decoding/encoding (DecodingSheetColumnId/EncodingSheetColumnId)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)
