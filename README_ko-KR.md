@@ -2,9 +2,16 @@
 
 [English](README.md)
 
+이 리포지토리는 알고리즘, 데이터 구조, 문제 해결에 대한 구현 예제입니다. 예제들은 C++, Python, Java로 작성되었으며, 각 언어는 다음과 같은 테스트 프레임워크를 사용합니다: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). 테스트를 실행하여 알고리즘 로직에 대한 메서드/함수를 수행합니다.
+
+추가로, 각 프로젝트는 다음과 같은 환경에서 구성되었습니다:
+
+- C++ project: [CMake](https://cmake.org/) 프로젝트 기반, [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/) 패키지 사용 (패키지 매니저 [vcpkg](https://github.com/microsoft/vcpkg))
+- Python project: [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) 패키지 사용
+- Java project: [Spring Boot](https://spring.io/projects/spring-boot) 프로젝트 기반, [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh), [JUnit](https://junit.org/) 라이브러리 사용
+
 목차:
 
-- [개요 (Introduction)](#개요-introduction)
 - [데이터 구조 (Data structures)](#데이터-구조-data-structures)
   - [배열 (Array)](#배열-array)
   - [그래프 (Graph)](#그래프-graph)
@@ -19,16 +26,6 @@
   - [문자열 (String)](#문자열-string)
 - [문제 해결 (Problem solving)](#문제-해결-problem-solving)
 - [참조 (References)](#참조-references)
-
-## 개요 (Introduction)
-
-이 리포지토리는 알고리즘, 데이터 구조, 문제 해결에 대한 구현 예제입니다. 예제들은 C++, Python, Java로 작성되었으며, 각 언어는 다음과 같은 테스트 프레임워크를 사용합니다: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). 테스트를 실행하여 알고리즘 로직에 대한 메서드/함수를 수행합니다.
-
-추가로, 각 프로젝트는 다음과 같은 환경에서 구성되었습니다:
-
-- C++ project: [CMake](https://cmake.org/) 프로젝트 기반, [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/) 패키지 사용 (패키지 매니저 [vcpkg](https://github.com/microsoft/vcpkg))
-- Python project: [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) 패키지 사용
-- Java project: [Spring Boot](https://spring.io/projects/spring-boot) 프로젝트 기반, [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh), [JUnit](https://junit.org/) 라이브러리 사용
 
 ## 데이터 구조 (Data structures)
 
