@@ -22,13 +22,13 @@ Table of Contents:
 
 ## Introduction
 
-This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java).
+This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run a test to perform the method/function for algorithm logic.
 
 Additionally, each project is configured in the following environments:
 
-- C++ project: based on [CMake](https://cmake.org/) project and uses [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/)
-- Python project: uses [NumPy](https://numpy.org/) and [SciPy](https://www.scipy.org/)
-- Java project: based on [Spring Boot](https://spring.io/projects/spring-boot) project and uses [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh)
+- C++ project: based on [CMake](https://cmake.org/) project and uses [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/) packages (package manager [vcpkg](https://github.com/microsoft/vcpkg))
+- Python project: uses [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) packages
+- Java project: based on [Spring Boot](https://spring.io/projects/spring-boot) project and uses [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh), [JUnit](https://junit.org/) libraries
 
 ## Data structures
 
