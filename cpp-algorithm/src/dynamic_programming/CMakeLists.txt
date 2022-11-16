@@ -9,6 +9,7 @@ macro(add_library_target target)
 endmacro()
 
 add_library_target(fibonacci_number)
+add_library_target(interval_subset_sum_problem)
 add_library_target(longest_common_subsequence GSL::gsl)
 # add_library_target(matrix_chain)
 add_library_target(rod_cutting)

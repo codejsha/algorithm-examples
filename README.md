@@ -10,8 +10,9 @@ Additionally, each project is configured in the following environments:
 - Python project: uses [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) packages
 - Java project: based on [Spring Boot](https://spring.io/projects/spring-boot) project and uses [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh), [JUnit](https://junit.org/) libraries
 
-Table of Contents:
+## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Data structures](#data-structures)
   - [Array](#array)
   - [Graph](#graph)
@@ -24,7 +25,6 @@ Table of Contents:
   - [Search](#search)
   - [Sort](#sort)
   - [String](#string)
-- [Problem solving](#problem-solving)
 - [References](#references)
 
 ## Data structures
@@ -89,6 +89,7 @@ Table of Contents:
     - $F_0 = 0$
     - $F_1 = 1$
     - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
+- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving))
 - Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 - Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 
@@ -233,10 +234,6 @@ divide and conquer algorithm
 - Roman number (RomanStringToInteger): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Convert a roman number to integer.
 - Run-length encoding (RLE): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
 - Spreadsheet column decoding/encoding (DecodingSheetColumnId/EncodingSheetColumnId): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Convert a spreadsheet column id to integer and vice versa.
-
-## Problem solving
-
-- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving))
 
 ## References
 

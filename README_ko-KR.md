@@ -10,8 +10,9 @@
 - Python project: [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) 패키지 사용
 - Java project: [Spring Boot](https://spring.io/projects/spring-boot) 프로젝트 기반, [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh), [JUnit](https://junit.org/) 라이브러리 사용
 
-목차:
+## 목차 (Table of Contents)
 
+- [목차 (Table of Contents)](#목차-table-of-contents)
 - [데이터 구조 (Data structures)](#데이터-구조-data-structures)
   - [배열 (Array)](#배열-array)
   - [그래프 (Graph)](#그래프-graph)
@@ -24,7 +25,6 @@
   - [검색 (Search)](#검색-search)
   - [정렬 (Sort)](#정렬-sort)
   - [문자열 (String)](#문자열-string)
-- [문제 해결 (Problem solving)](#문제-해결-problem-solving)
 - [참조 (References)](#참조-references)
 
 ## 데이터 구조 (Data structures)
@@ -67,6 +67,7 @@
 ### 동적 프로그래밍 (Dynamic programming)
 
 - 피보나치 숫자 (Fibonacci number): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
+- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving))
 - 최장 공통 부분 수열 (Longest common subsequence): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 - Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 
@@ -134,10 +135,6 @@
 - 로마 숫자 (Roman number (RomanStringToInteger)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - 반복 길이 부호화로 문자열 압축하기 (Run-length encoding (RLE)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - 스프레드시트 컬럼 디코딩/인코딩 (Spreadsheet column decoding/encoding (DecodingSheetColumnId/EncodingSheetColumnId)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)
-
-## 문제 해결 (Problem solving)
-
-- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving))
 
 ## 참조 (References)
 

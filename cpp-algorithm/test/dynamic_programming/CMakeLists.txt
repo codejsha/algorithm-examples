@@ -23,6 +23,7 @@ macro(add_target_test target)
 endmacro()
 
 add_target_test(fibonacci_number_test)
+add_target_test(interval_subset_sum_problem_test)
 add_target_test(longest_common_subsequence_test GSL::gsl)
 # add_target_test(matrix_chain_test)
 add_target_test(rod_cutting_test)
