@@ -16,6 +16,7 @@ Additionally, each project is configured in the following environments:
 - [Data structures](#data-structures)
   - [Array](#array)
   - [Graph](#graph)
+  - [Linked list](#linked-list)
   - [Tree](#tree)
 - [Topics](#topics)
   - [Dynamic programming](#dynamic-programming)
