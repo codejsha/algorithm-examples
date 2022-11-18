@@ -8,3 +8,4 @@ macro(add_library_target target)
 endmacro()
 
 add_library_target(merge_list)
+add_library_target(reverse_list)

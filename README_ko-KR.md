@@ -61,6 +61,7 @@
 ### 링크드 리스트 (Linked list)
 
 - 두 개의 정렬된 링크드 리스트 합치기 (Merge two sorted linked lists): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
+- 부분 리스트 하나 뒤집기 (Reverse a single sublist): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 
 ### 트리 (Tree)
 

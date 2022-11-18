@@ -22,3 +22,4 @@ macro(add_target_test target)
 endmacro()
 
 add_target_test(merge_list_test)
+add_target_test(reverse_list_test)
