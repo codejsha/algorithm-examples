@@ -57,6 +57,9 @@ Additionally, each project is configured in the following environments:
 - Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | DFS is a search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
 - Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | Dijkstra's algorithm is a graph search algorithm that finds the shortest path between two vertices in a graph. This is limited to cases where the weight is not negative.
 
+### Linked list
+
+- Merge two sorted linked lists: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
 
 ### Tree
 
@@ -225,7 +228,7 @@ divide and conquer algorithm
 ### String
 
 - Convert string (IntToString, StringToInt): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Convert integer to string and vice versa.
-- IP address validation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Validate IPv4 address that is in the form of "x.x.x.x" where x is a number between 0 and 255.
+- IP address validation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Validate IPv4 address that is in the form of `x.x.x.x` where `x` is a number between 0 and 255.
 - Look and say problem: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - Naive string matching: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)), [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/string)) | Find all occurrences of a pattern in a string.
 - Palindrome: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Check if a string is palindromic.
