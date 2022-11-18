@@ -1,9 +1,9 @@
-#ifndef CPP_ALGORITHM_MERGE_LINKED_LIST_H
-#define CPP_ALGORITHM_MERGE_LINKED_LIST_H
+#ifndef CPP_ALGORITHM_MERGE_LIST_H
+#define CPP_ALGORITHM_MERGE_LIST_H
 
 #include "linked_list.h"
 
-namespace MergeLinkedList
+namespace MergeList
 {
     /// @brief Merge two sorted linked lists.
     /// @details The task is to merge two sorted linked lists L1 and L2 into one sorted linked list (in place)

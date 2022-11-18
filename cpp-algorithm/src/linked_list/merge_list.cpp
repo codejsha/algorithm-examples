@@ -1,6 +1,6 @@
-#include "merge_linked_list.h"
+#include "merge_list.h"
 
-std::shared_ptr<LinkedList::Node<int>> MergeLinkedList::MergeTwoSortedLinkedList(
+std::shared_ptr<LinkedList::Node<int>> MergeList::MergeTwoSortedLinkedList(
     const std::shared_ptr<LinkedList::Node<int>>& list1,
     const std::shared_ptr<LinkedList::Node<int>>& list2)
 {
