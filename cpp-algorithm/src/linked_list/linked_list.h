@@ -23,6 +23,20 @@ namespace LinkedList
         *tail = *node;
         *node = (*node)->next;
     }
+
+    /// @brief Return by calculating the length of the list.
+    /// @param list the head of the list
+    /// @return length of list
+    inline int Length(std::shared_ptr<LinkedList::Node<int>> list)
+    {
+        auto length = 0;
+        while (list)
+        {
+            ++length;
+            list = list->next;
+        }
+        return length;
+    }
 }
 
 #endif

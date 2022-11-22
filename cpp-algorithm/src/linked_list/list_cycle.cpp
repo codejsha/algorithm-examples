@@ -1,5 +1,16 @@
 #include "list_cycle.h"
 
+/// @brief Advance the node index by the difference of the length of two lists.
+/// @param difference difference of the length of two lists
+/// @param list list longer than the other list
+void AdvanceListByDifference(int difference, std::shared_ptr<LinkedList::Node<int>>& list)
+{
+    while (difference--)
+    {
+        list = list->next;
+    }
+}
+
 std::shared_ptr<LinkedList::Node<int>> ListCycle::HasCycle1(const std::shared_ptr<LinkedList::Node<int>>& list)
 {
     auto fast = list;
@@ -90,6 +101,24 @@ int ListCycle::HasCycle3(const std::shared_ptr<LinkedList::Node<int>>& list)
             return index;
         }
     }
-    
+
     return -1;
+}
+
+std::shared_ptr<LinkedList::Node<int>> ListCycle::OverlappingNoCycleList(
+    std::shared_ptr<LinkedList::Node<int>>& list1,
+    std::shared_ptr<LinkedList::Node<int>>& list2)
+{
+    const auto list1_length = LinkedList::Length(list1);
+    const auto list2_length = LinkedList::Length(list2);
+
+    AdvanceListByDifference(list1_length - list2_length, list1_length > list2_length ? list1 : list2);
+
+    while (list1 && list2 && list1 != list2)
+    {
+        list1 = list1->next;
+        list2 = list2->next;
+    }
+
+    return list1;
 }
