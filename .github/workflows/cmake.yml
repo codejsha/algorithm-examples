@@ -19,12 +19,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Configure vcpkg
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt install -y ninja-build
+
+      - name: Install vcpkg packages
         working-directory: /usr/local/bin/
-        run: ./vcpkg install vcpkg-tool-ninja:x64-linux gsl:x64-linux benchmark:x64-linux gtest:x64-linux fmt:x64-linux
+        run: ./vcpkg install gsl:x64-linux benchmark:x64-linux gtest:x64-linux fmt:x64-linux
 
       - name: Configure CMake
-        run: cmake -G Ninja -DCMAKE_C_COMPILER="gcc-10" -DCMAKE_CXX_COMPILER="g++-10" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_TOOLCHAIN_FILE="/usr/local/share/vcpkg/scripts/buildsystems/vcpkg.cmake" -DCMAKE_MAKE_PROGRAM="/usr/local/share/vcpkg/downloads/tools/ninja-1.10.2-linux/ninja" -S ${{github.workspace}}/cpp-algorithm -B ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-release
+        run: cmake -G Ninja -DCMAKE_C_COMPILER="gcc-10" -DCMAKE_CXX_COMPILER="g++-10" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_TOOLCHAIN_FILE="/usr/local/share/vcpkg/scripts/buildsystems/vcpkg.cmake" -DCMAKE_MAKE_PROGRAM="/usr/bin/ninja" -S ${{github.workspace}}/cpp-algorithm -B ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-release
 
       - name: Build
         working-directory: ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-release
