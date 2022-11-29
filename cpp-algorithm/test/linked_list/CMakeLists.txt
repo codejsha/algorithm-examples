@@ -19,6 +19,7 @@ macro(add_target_test target)
 	gtest_discover_tests(${target})
 endmacro()
 
+add_target_test(delete_list_node_test)
 add_target_test(list_cycle_test)
 add_target_test(merge_list_test)
 add_target_test(reverse_list_test)
