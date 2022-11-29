@@ -60,11 +60,11 @@
 
 ### 링크드 리스트 (Linked list)
 
-- 리스트에서 사이클이 존재하는지 확인하기 (Determine that linked list has a cycle (HasCycle1, HasCycle2, HasCycle3)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
-- 사이클이 없는 두 리스트가 겹치는지 확인 (Determine that two linked lists overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
-- 사이클이 있는 두 리스트가 겹치는지 확인 (Determine that two linked lists with cycles overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
+- 리스트에서 사이클이 존재하는지 확인하기 (Linked list has a cycle (HasCycle1, HasCycle2, HasCycle3)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 - 두 개의 정렬된 링크드 리스트 합치기 (Merge two sorted linked lists): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 - 부분 리스트 하나 뒤집기 (Reverse a single sublist): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
+- 사이클이 없는 두 리스트가 겹치는지 확인 (Two linked lists overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
+- 사이클이 있는 두 리스트가 겹치는지 확인 (Two linked lists with cycles overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 
 ### 트리 (Tree)
 
