@@ -1,5 +1,7 @@
 # Algorithm Examples
 
+![C++ CI with CMake](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg)
+
 [Korean](README_ko-KR.md)
 
 This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run a test to perform the method/function for algorithm logic.
