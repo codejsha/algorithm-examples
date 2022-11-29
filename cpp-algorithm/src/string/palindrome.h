@@ -9,13 +9,13 @@ namespace Palindrome
     /// Use one pointer to iterate half of the string.
     /// @param str input string
     /// @return true if the string is palindromic, false otherwise
-    bool IsPalindromic1(const std::string& str);
+    auto IsPalindromic1(const std::string& str) -> bool;
 
     /// @brief Check if a string is palindromic.
     /// Use two pointers to iterate the string. One pointer starts from the beginning, the other starts from the end.
     /// @param str input string
     /// @return true if the string is palindromic, false otherwise
-    bool IsPalindromic2(const std::string& str);
+    auto IsPalindromic2(const std::string& str) -> bool;
 }
 
 #endif

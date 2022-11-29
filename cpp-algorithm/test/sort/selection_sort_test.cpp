@@ -12,7 +12,7 @@ GTEST_TEST(SelectionSortTest, SelectionSort)
     ASSERT_EQ(static_cast<int>(sorted_seq.size()), static_cast<int>(result.size()))
         << "Vectors x and y are of unequal length";
 
-    for (int i = 0; i < static_cast<int>(result.size()); ++i)
+    for (auto i = 0; i < static_cast<int>(result.size()); ++i)
     {
         ASSERT_EQ(sorted_seq[i], result[i])
             << "Vectors x and y differ at index " << i;

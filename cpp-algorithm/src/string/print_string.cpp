@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-std::string PrintString::SineWaveString(const std::string& str)
+auto PrintString::SineWaveString(const std::string& str) -> std::string
 {
     auto result = std::string{};
     for (auto i = 1; i < static_cast<int>(str.size()); i += 4)

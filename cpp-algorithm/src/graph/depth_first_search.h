@@ -50,17 +50,17 @@ namespace Graph
             Vertices.push_back(&v);
         }
 
-        [[nodiscard]] std::vector<DfsVertex*> GetVertices() const
+        [[nodiscard]] auto GetVertices() const -> std::vector<DfsVertex*>
         {
             return Vertices;
         }
 
-        [[nodiscard]] std::vector<std::tuple<DfsVertex*, DfsVertex*>> GetAdjacencyList() const
+        [[nodiscard]] auto GetAdjacencyList() const -> std::vector<std::tuple<DfsVertex*, DfsVertex*>>
         {
             return AdjacencyList;
         }
 
-        [[nodiscard]] int GetTime() const
+        [[nodiscard]] auto GetTime() const -> int
         {
             return Time;
         }

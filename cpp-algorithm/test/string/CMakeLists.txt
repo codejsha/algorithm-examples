@@ -1,3 +1,4 @@
+find_package(fmt REQUIRED)
 find_package(GTest REQUIRED)
 
 if(WIN32)
@@ -6,8 +7,6 @@ endif(WIN32)
 
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/string)
-
-enable_testing()
 
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
@@ -22,7 +21,8 @@ macro(add_target_test target)
 endmacro()
 
 add_target_test(convert_string_test)
-add_target_test(ip_address_test)
+add_target_test(ip_address_test fmt::fmt)
+# add_target_test(knuth_morris_pratt_test)
 add_target_test(look_and_say_test)
 add_target_test(naive_string_match_test)
 add_target_test(palindrome_test)

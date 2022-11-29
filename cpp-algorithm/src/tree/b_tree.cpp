@@ -86,7 +86,7 @@ void Tree::BTree::Insert(const char key)
     Insert(Root, key);
 }
 
-std::pair<Tree::BTreeNode*, const int> Tree::BTree::Search(const char key)
+auto Tree::BTree::Search(const char key) -> std::pair<BTreeNode*, const int>
 {
     return Search(Root, key);
 }
@@ -110,7 +110,7 @@ void Tree::BTree::Insert(BTreeNode* ref, const char key)
     }
 }
 
-std::pair<Tree::BTreeNode*, const int> Tree::BTree::Search(BTreeNode* ref, const char key)
+auto Tree::BTree::Search(BTreeNode* ref, const char key) -> std::pair<BTreeNode*, const int>
 {
     auto index = 0;
     const auto key_count = ref->GetKeyCount();

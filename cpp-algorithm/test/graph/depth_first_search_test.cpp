@@ -44,7 +44,7 @@ GTEST_TEST(DepthFirstSearchTest, SimpleSearch1)
 
     auto result_path = std::vector<char>{};
     auto discovery_time = goal.DiscoveryTime;
-    for (int i = discovery_time; i >= 1; --i)
+    for (auto i = discovery_time; i >= 1; --i)
     {
         result_path.push_back(goal.Id);
         if (i != 1)

@@ -8,17 +8,17 @@ namespace TradeStock
     /// @brief Buy and sell stock once. This is brute force.
     /// @param prices prices of stock
     /// @return best profit
-    double BuyAndSellStockOnceBruteForce(const std::vector<int>& prices);
+    auto BuyAndSellStockOnceBruteForce(const std::vector<int>& prices) -> double;
 
     /// @brief Buy and sell stock once. 
     /// @param prices prices of stock
     /// @return best profit
-    double BuyAndSellStockOnce(const std::vector<int>& prices);
+    auto BuyAndSellStockOnce(const std::vector<int>& prices) -> double;
 
     /// @brief Buy and sell stock twice.
     /// @param prices prices of stock
     /// @return best profit
-    double BuyAndSellStockTwice(const std::vector<double>& prices);
+    auto BuyAndSellStockTwice(const std::vector<double>& prices) -> double;
 }
 
 #endif

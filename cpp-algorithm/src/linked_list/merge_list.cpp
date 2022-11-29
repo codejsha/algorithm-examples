@@ -1,8 +1,8 @@
 #include "merge_list.h"
 
-std::shared_ptr<LinkedList::Node<int>> MergeList::MergeTwoSortedLinkedList(
+auto MergeList::MergeTwoSortedLinkedList(
     const std::shared_ptr<LinkedList::Node<int>>& list1,
-    const std::shared_ptr<LinkedList::Node<int>>& list2)
+    const std::shared_ptr<LinkedList::Node<int>>& list2) -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
     auto tail = dummy_head;

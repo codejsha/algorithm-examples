@@ -17,19 +17,19 @@ namespace DutchFlag
     /// @param pivot_index pivot index
     /// @param arr input array
     /// @return result array
-    std::vector<Color> DutchFlagPartition1(int pivot_index, std::vector<Color>& arr);
+    auto DutchFlagPartition1(int pivot_index, std::vector<Color>& arr) -> std::vector<Color>;
 
     /// @brief Dutch national flag problem.
     /// @param pivot_index pivot index
     /// @param arr input array
     /// @return result array
-    std::vector<Color> DutchFlagPartition2(int pivot_index, std::vector<Color>& arr);
+    auto DutchFlagPartition2(int pivot_index, std::vector<Color>& arr) -> std::vector<Color>;
 
     /// @brief Dutch national flag problem.
     /// @param pivot_index pivot index
     /// @param arr input array
     /// @return result array
-    std::vector<Color> DutchFlagPartition3(int pivot_index, std::vector<Color>& arr);
+    auto DutchFlagPartition3(int pivot_index, std::vector<Color>& arr) -> std::vector<Color>;
 }
 
 #endif

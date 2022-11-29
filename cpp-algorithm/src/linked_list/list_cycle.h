@@ -9,7 +9,7 @@ namespace ListCycle
     /// @details Given a linked list, determine if it has a cycle in it.
     /// @param list the head of the linked list
     /// @return if the linked list has a cycle, return start node of the cycle, otherwise return nullptr
-    std::shared_ptr<LinkedList::Node<int>> HasCycle1(const std::shared_ptr<LinkedList::Node<int>>& list);
+    auto HasCycle1(const std::shared_ptr<LinkedList::Node<int>>& list) -> std::shared_ptr<LinkedList::Node<int>>;
 
     /// @brief Determine if a linked list has a cycle.
     /// @details Given a linked list, determine if it has a cycle in it.
@@ -17,21 +17,22 @@ namespace ListCycle
     /// c is length of nodes in cycle, n is total nodes in list).
     /// @param list the head of the linked list
     /// @return if the linked list has a cycle, return start node of the cycle, otherwise return nullptr
-    std::shared_ptr<LinkedList::Node<int>> HasCycle2(const std::shared_ptr<LinkedList::Node<int>>& list);
+    auto HasCycle2(const std::shared_ptr<LinkedList::Node<int>>& list) -> std::shared_ptr<LinkedList::Node<int>>;
 
     /// @brief Determine if a linked list has a cycle.
     /// @details Given a linked list, determine if it has a cycle in it.
     /// @param list the head of the linked list
     /// @return if the linked list has a cycle, return start index of the cycle, otherwise return -1
-    int HasCycle3(const std::shared_ptr<LinkedList::Node<int>>& list);
+    auto HasCycle3(const std::shared_ptr<LinkedList::Node<int>>& list) -> int;
 
     /// @brief Given two lists, determine if they overlap.
     /// @param list1 the head of the first list
     /// @param list2 the head of the second list
     /// @return if the two lists overlap, return the first overlapping node, otherwise return nullptr
-    std::shared_ptr<LinkedList::Node<int>> OverlappingNoCycleList(
+    auto OverlappingNoCycleList(
         std::shared_ptr<LinkedList::Node<int>>& list1,
-        std::shared_ptr<LinkedList::Node<int>>& list2);
+        std::shared_ptr<LinkedList::Node<int>>& list2)
+        -> std::shared_ptr<LinkedList::Node<int>>;
 
     /// @brief Given two lists with cycles, determine if they overlap.
     /// @param list1 the head of the first list

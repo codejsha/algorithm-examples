@@ -2,7 +2,7 @@
 
 #include <random>
 
-int MillerRabin::ModularExponentiation(int base, int exponent, const int mod)
+auto MillerRabin::ModularExponentiation(int base, int exponent, const int mod) -> int
 {
     auto result = 1;
     while (exponent > 0)
@@ -17,7 +17,7 @@ int MillerRabin::ModularExponentiation(int base, int exponent, const int mod)
     return result;
 }
 
-bool MillerRabin::Witness(int exponent, const int number)
+auto MillerRabin::Witness(int exponent, const int number) -> bool
 {
     std::random_device rd;
     std::mt19937 generator(rd());
@@ -48,7 +48,7 @@ bool MillerRabin::Witness(int exponent, const int number)
     return false;
 }
 
-bool MillerRabin::MillerRabinPrimalityTest(const int number, const int repeats)
+auto MillerRabin::MillerRabinPrimalityTest(const int number, const int repeats) -> bool
 {
     if (number < 2)
     {

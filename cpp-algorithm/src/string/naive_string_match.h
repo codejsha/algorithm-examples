@@ -10,7 +10,7 @@ namespace NaiveStringMatch
     /// @param text input text
     /// @param pattern find pattern
     /// @return position of pattern in text
-    std::vector<int> NaiveStringMatcher(const std::string& text, const std::string& pattern);
+    auto NaiveStringMatcher(const std::string& text, const std::string& pattern) -> std::vector<int>;
 }
 
 #endif

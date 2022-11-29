@@ -13,7 +13,7 @@ namespace OrderElement
     /// A[0] <= A[1] >= A[2] <= A[3] >= A[4] <= A[5] >= ...
     /// @param numbers input array
     /// @return ordered array
-    std::vector<int> Rearrange(std::vector<int>& numbers);
+    auto Rearrange(std::vector<int>& numbers) -> std::vector<int>;
 }
 
 #endif

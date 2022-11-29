@@ -7,7 +7,7 @@ namespace GenerateRandomNumber
     /// @param lower_bound lower bound
     /// @param upper_bound upper bound
     /// @return result number
-    int GenerateUniformRandomNumber(int lower_bound, int upper_bound);
+    auto GenerateUniformRandomNumber(int lower_bound, int upper_bound) -> int;
 }
 
 #endif

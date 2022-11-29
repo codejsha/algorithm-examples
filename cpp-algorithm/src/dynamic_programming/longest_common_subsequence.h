@@ -13,8 +13,8 @@ namespace CommonSubsequence
     /// <param name="seq1">string sequence 1</param>
     /// <param name="seq2">string sequence 2</param>
     /// <returns>length and direction matrices</returns>
-    std::tuple<gsl_matrix_int*, gsl_matrix_char*> LongestCommonSubsequenceLength(
-        const std::string& seq1, const std::string& seq2);
+    auto LongestCommonSubsequenceLength(const std::string& seq1, const std::string& seq2)
+        -> std::tuple<gsl_matrix_int*, gsl_matrix_char*>;
 
     /// <summary>
     /// Constructing an LCS from the length matrix

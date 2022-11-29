@@ -1,6 +1,6 @@
 #include "look_and_say.h"
 
-std::string LookAndSay::LookAndSayProblem(const std::string& input)
+auto LookAndSay::LookAndSayProblem(const std::string& input) -> std::string
 {
     auto result = std::string{};
     for (auto i = 0; i < static_cast<int>(input.size()); ++i)

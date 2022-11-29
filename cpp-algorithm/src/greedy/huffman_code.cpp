@@ -2,7 +2,7 @@
 
 #include <queue>
 
-Huffman::HuffmanNode* Huffman::HuffmanCode(const std::map<int, char>& freq_map)
+auto Huffman::HuffmanCode(const std::map<int, char>& freq_map) -> HuffmanNode*
 {
     std::priority_queue<HuffmanNode*, std::vector<HuffmanNode*>, MinComparator> min_queue;
     for (auto [freq, ch] : freq_map)

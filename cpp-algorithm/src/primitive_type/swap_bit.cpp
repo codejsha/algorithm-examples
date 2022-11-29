@@ -1,6 +1,6 @@
 #include "swap_bit.h"
 
-long SwapBit::SwapBits(long x, const int i, const int j)
+auto SwapBit::SwapBits(long x, const int i, const int j) -> long
 {
     if (((x >> i) & 1) != ((x >> j) & 1))
     {

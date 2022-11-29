@@ -1,6 +1,6 @@
 #include "palindrome.h"
 
-bool Palindrome::IsPalindromic1(const std::string& str)
+auto Palindrome::IsPalindromic1(const std::string& str) -> bool
 {
     for (auto i = 0; i < static_cast<int>(str.length()) / 2; ++i)
     {
@@ -12,7 +12,7 @@ bool Palindrome::IsPalindromic1(const std::string& str)
     return true;
 }
 
-bool Palindrome::IsPalindromic2(const std::string& str)
+auto Palindrome::IsPalindromic2(const std::string& str) -> bool
 {
     for (auto i = 0, j = static_cast<int>(str.length()) - 1; i < j; ++i, --j)
     {

@@ -1,8 +1,8 @@
 #include "power_operation.h"
 
-double PowerOperation::Power(double x, const int y)
+auto PowerOperation::Power(double x, const int y) -> double
 {
-    double result = 1.0;
+    auto result = 1.0;
     long long power = y;
 
     if (y < 0)

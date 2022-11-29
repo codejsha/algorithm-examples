@@ -1,6 +1,6 @@
 #include "run_length_encoding.h"
 
-std::string RunLengthEncoding::RunLengthEncoding(const std::string& str)
+auto RunLengthEncoding::RunLengthEncoding(const std::string& str) -> std::string
 {
     auto count = 0;
     auto result = std::string{};
@@ -19,7 +19,7 @@ std::string RunLengthEncoding::RunLengthEncoding(const std::string& str)
     return result;
 }
 
-std::string RunLengthEncoding::RunLengthDecoding(const std::string& str)
+auto RunLengthEncoding::RunLengthDecoding(const std::string& str) -> std::string
 {
     auto count = 0;
     auto result = std::string{};

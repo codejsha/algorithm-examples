@@ -7,7 +7,7 @@ namespace ReverseDigit
     /// if the input is x = 123, the output should be 321.
     /// @param x input number
     /// @return result number
-    long long Reverse(int x);
+    auto Reverse(int x) -> long long;
 }
 
 #endif

@@ -6,7 +6,7 @@ auto roman_set = std::unordered_map<char, int>{
     {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50},
     {'C', 100}, {'D', 500}, {'M', 1000}};
 
-bool RomanNumber::VerifyRomanString(const std::string& str)
+auto RomanNumber::VerifyRomanString(const std::string& str) -> bool
 {
     auto is_except = false;
 
@@ -25,7 +25,7 @@ bool RomanNumber::VerifyRomanString(const std::string& str)
     return true;
 }
 
-int RomanNumber::RomanStringToInteger(const std::string& str)
+auto RomanNumber::RomanStringToInteger(const std::string& str) -> int
 {
     auto sum = 0;
     for (auto i = static_cast<int>(str.size() - 1); i >= 0; --i)

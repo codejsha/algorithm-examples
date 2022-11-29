@@ -5,14 +5,14 @@
 
 void Util::PrintSequence(const std::vector<int>& seq)
 {
-    for (const int element : seq)
+    for (const auto element : seq)
     {
         std::printf("%d ", element);
     }
     std::cout << std::endl;
 }
 
-std::vector<int> Util::GenerateSequence(const int size, const int min, const int max)
+auto Util::GenerateSequence(const int size, const int min, const int max) -> std::vector<int>
 {
     std::vector<int> seq;
     std::random_device rd;
@@ -20,7 +20,7 @@ std::vector<int> Util::GenerateSequence(const int size, const int min, const int
     std::uniform_int_distribution<> distribution(min, max);
 
     seq.reserve(size);
-    for (int count = 0; count < size; ++count)
+    for (auto count = 0; count < size; ++count)
     {
         seq.push_back(distribution(generator));
     }

@@ -61,7 +61,7 @@ namespace Graph
         /// @param start starting vertex
         /// @param goal goal vertex
         /// @return goal vertex
-        BfsVertex* Search(BfsVertex& start, BfsVertex& goal);
+        auto Search(BfsVertex& start, BfsVertex& goal) -> BfsVertex*;
 
     private:
         BfsGraph& Graph;

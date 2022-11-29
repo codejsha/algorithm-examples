@@ -14,7 +14,7 @@ void Combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_i
         return;
     }
 
-    for (int i = 0; i < size; ++i)
+    for (auto i = 0; i < size; ++i)
     {
         selected_items.push_back(seq[i]);
         SelectItem(seq, selected_items, subset_size - 1);

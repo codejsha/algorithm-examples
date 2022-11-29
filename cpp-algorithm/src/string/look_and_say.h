@@ -8,7 +8,7 @@ namespace LookAndSay
     /// @brief Look and say problem.
     /// @param input input string
     /// @return result string
-    std::string LookAndSayProblem(const std::string& input);
+    auto LookAndSayProblem(const std::string& input) -> std::string;
 }
 
 #endif

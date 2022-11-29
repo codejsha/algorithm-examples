@@ -27,7 +27,7 @@ namespace LinkedList
     /// @brief Return by calculating the length of the list.
     /// @param list the head of the list
     /// @return length of list
-    inline int Length(std::shared_ptr<LinkedList::Node<int>> list)
+    inline auto Length(std::shared_ptr<Node<int>> list) -> int
     {
         auto length = 0;
         while (list)

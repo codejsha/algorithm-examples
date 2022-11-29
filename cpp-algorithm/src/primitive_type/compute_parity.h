@@ -8,25 +8,25 @@ namespace ComputingParity
     /// @brief Count the number of bits that are set to 1.
     /// @param x input number
     /// @return count of 1s
-    short CountBits(unsigned int x);
+    auto CountBits(unsigned int x) -> short;
 
     /// @brief Compute parity of word.
     /// @param x input number
     /// @return parity of word
-    short Parity(unsigned long long x);
+    auto Parity(unsigned long long x) -> short;
 
     /// @brief Compute parity by dropping the lowest set bit.
     /// @param x input number
     /// @return parity of word
-    short ParityDropLowestBits(unsigned long long x);
+    auto ParityDropLowestBits(unsigned long long x) -> short;
 
     /// @brief Compute parity by caching the results.
     /// @param x input number
     /// @return parity of word
-    short ParityLookupTable(unsigned long long x);
+    auto ParityLookupTable(unsigned long long x) -> short;
 
     // TODO: ParityXor
-    short ParityXor(unsigned long long x);
+    auto ParityXor(unsigned long long x) -> short;
 }
 
 #endif

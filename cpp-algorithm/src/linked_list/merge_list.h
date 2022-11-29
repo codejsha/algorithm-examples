@@ -12,9 +12,9 @@ namespace MergeList
     /// @param list1 the head of the first list
     /// @param list2 the head of the second list
     /// @return the head of merged sorted linked list
-    std::shared_ptr<LinkedList::Node<int>> MergeTwoSortedLinkedList(
+    auto MergeTwoSortedLinkedList(
         const std::shared_ptr<LinkedList::Node<int>>& list1,
-        const std::shared_ptr<LinkedList::Node<int>>& list2);
+        const std::shared_ptr<LinkedList::Node<int>>& list2) -> std::shared_ptr<LinkedList::Node<int>>;
 }
 
 #endif

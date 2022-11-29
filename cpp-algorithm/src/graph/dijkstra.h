@@ -27,7 +27,7 @@ namespace Graph
     class MinComparator
     {
     public:
-        bool operator()(const DijkstraVertex* l, const DijkstraVertex* r) const
+        auto operator()(const DijkstraVertex* l, const DijkstraVertex* r) const -> bool
         {
             return (l->Distance > r->Distance);
         }

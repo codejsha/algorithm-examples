@@ -7,8 +7,6 @@ endif(WIN32)
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/math)
 
-enable_testing()
-
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
 	add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/math/${target_name}.cpp")

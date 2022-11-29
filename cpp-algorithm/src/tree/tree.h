@@ -48,14 +48,14 @@ namespace Tree
 
         Tree(Tree&& other) noexcept = default;
 
-        Tree& operator=(const Tree& other)
+        auto operator=(const Tree& other) -> Tree&
         {
             if (this == &other)
                 return *this;
             return *this;
         }
 
-        Tree& operator=(Tree&& other) noexcept
+        auto operator=(Tree&& other) noexcept -> Tree&
         {
             if (this == &other)
                 return *this;
@@ -76,20 +76,20 @@ namespace Tree
     class BinaryTree : Tree<T, int>
     {
     public:
-        [[nodiscard]] T*
-        GetRoot() const
+        [[nodiscard]] auto
+        GetRoot() const -> T*
         {
             return Root;
         }
 
-        [[nodiscard]] std::vector<T*> GetNodes() const
+        [[nodiscard]] auto GetNodes() const -> std::vector<T*>
         {
             return Nodes;
         }
 
         /// @brief Preorder traversal of tree
         /// @return traversal result
-        std::vector<int> PreorderTreeWalk()
+        auto PreorderTreeWalk() -> std::vector<int>
         {
             auto keys = std::vector<int>();
             PreorderTreeWalk(Root, keys);
@@ -98,7 +98,7 @@ namespace Tree
 
         /// @brief Inorder traversal of tree
         /// @return traversal result
-        std::vector<int> InorderTreeWalk()
+        auto InorderTreeWalk() -> std::vector<int>
         {
             auto keys = std::vector<int>();
             InorderTreeWalk(Root, keys);
@@ -107,7 +107,7 @@ namespace Tree
 
         /// @brief Postorder traversal of tree
         /// @return traversal result
-        std::vector<int> PostorderTreeWalk()
+        auto PostorderTreeWalk() -> std::vector<int>
         {
             auto keys = std::vector<int>();
             PostorderTreeWalk(Root, keys);
@@ -116,7 +116,7 @@ namespace Tree
 
         /// @brief Check if tree is balanced
         /// @return whether full binary tree or not
-        bool IsFullBinaryTree()
+        auto IsFullBinaryTree() -> bool
         {
             return IsFullBinaryTree(Root);
         }
@@ -170,7 +170,7 @@ namespace Tree
         /// @brief Check if tree is balanced
         /// @param node reference node for tree traversal
         /// @return whether full binary tree or not
-        bool IsFullBinaryTree(const T* node)
+        auto IsFullBinaryTree(const T* node) -> bool
         {
             if (Root == nullptr)
             {

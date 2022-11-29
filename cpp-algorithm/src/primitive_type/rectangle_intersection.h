@@ -16,13 +16,13 @@ namespace RectangleIntersection
     /// @param r1 rectangle 1
     /// @param r2 rectangle 2
     /// @return result
-    Rectangle IntersectRectangle(const Rectangle& r1, const Rectangle& r2);
+    auto IntersectRectangle(const Rectangle& r1, const Rectangle& r2) -> Rectangle;
 
     /// @brief Check the intersection of two rectangles.
     /// @param r1 rectangle 1
     /// @param r2 rectangle 2
     /// @return Whether two rectangles intersect
-    bool IsIntersect(const Rectangle& r1, const Rectangle& r2);
+    auto IsIntersect(const Rectangle& r1, const Rectangle& r2) -> bool;
 }
 
 #endif

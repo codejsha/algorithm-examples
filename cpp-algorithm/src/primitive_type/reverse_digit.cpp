@@ -1,6 +1,6 @@
 #include "reverse_digit.h"
 
-long long ReverseDigit::Reverse(int x)
+auto ReverseDigit::Reverse(int x) -> long long
 {
     long long result = 0;
     while (x)

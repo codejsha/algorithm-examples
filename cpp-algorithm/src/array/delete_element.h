@@ -8,18 +8,18 @@ namespace DeleteElement
     /// @brief Delete duplicate elements in the array.
     /// @param numbers input array
     /// @return result array
-    std::vector<int> DeleteDuplicates(std::vector<int>& numbers);
+    auto DeleteDuplicates(std::vector<int>& numbers) -> std::vector<int>;
 
     /// @brief Delete duplicate elements in the array.
     /// @param numbers input array
     /// @return result array
-    std::vector<int> DeleteDuplicateElements(std::vector<int>& numbers);
+    auto DeleteDuplicateElements(std::vector<int>& numbers) -> std::vector<int>;
 
     /// @brief Delete specific elements in the array.
     /// @param numbers input array
     /// @param element specific element
     /// @return result array
-    std::vector<int> DeleteSpecificElements(std::vector<int>& numbers, int element);
+    auto DeleteSpecificElements(std::vector<int>& numbers, int element) -> std::vector<int>;
 }
 
 #endif

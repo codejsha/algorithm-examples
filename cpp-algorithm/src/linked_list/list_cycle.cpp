@@ -26,7 +26,7 @@ auto OverlappingDistance(std::shared_ptr<LinkedList::Node<int>>& list1, std::sha
     return distance;
 }
 
-std::shared_ptr<LinkedList::Node<int>> ListCycle::HasCycle1(const std::shared_ptr<LinkedList::Node<int>>& list)
+auto ListCycle::HasCycle1(const std::shared_ptr<LinkedList::Node<int>>& list) -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto fast = list;
     auto slow = list;
@@ -52,7 +52,7 @@ std::shared_ptr<LinkedList::Node<int>> ListCycle::HasCycle1(const std::shared_pt
     return nullptr;
 }
 
-std::shared_ptr<LinkedList::Node<int>> ListCycle::HasCycle2(const std::shared_ptr<LinkedList::Node<int>>& list)
+auto ListCycle::HasCycle2(const std::shared_ptr<LinkedList::Node<int>>& list) -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto fast = list;
     auto slow = list;
@@ -65,7 +65,7 @@ std::shared_ptr<LinkedList::Node<int>> ListCycle::HasCycle2(const std::shared_pt
         if (fast == slow)
         {
             // There is a cycle, so now let's calculate the cycle length
-            int cycle_length = 0;
+            auto cycle_length = 0;
             do
             {
                 ++cycle_length;
@@ -93,7 +93,7 @@ std::shared_ptr<LinkedList::Node<int>> ListCycle::HasCycle2(const std::shared_pt
     return nullptr;
 }
 
-int ListCycle::HasCycle3(const std::shared_ptr<LinkedList::Node<int>>& list)
+auto ListCycle::HasCycle3(const std::shared_ptr<LinkedList::Node<int>>& list) -> int
 {
     auto fast = list;
     auto slow = list;
@@ -120,9 +120,10 @@ int ListCycle::HasCycle3(const std::shared_ptr<LinkedList::Node<int>>& list)
     return -1;
 }
 
-std::shared_ptr<LinkedList::Node<int>> ListCycle::OverlappingNoCycleList(
+auto ListCycle::OverlappingNoCycleList(
     std::shared_ptr<LinkedList::Node<int>>& list1,
     std::shared_ptr<LinkedList::Node<int>>& list2)
+    -> std::shared_ptr<LinkedList::Node<int>>
 {
     const auto list1_length = LinkedList::Length(list1);
     const auto list2_length = LinkedList::Length(list2);

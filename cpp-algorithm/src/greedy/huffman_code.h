@@ -24,7 +24,7 @@ namespace Huffman
     class MinComparator
     {
     public:
-        bool operator()(const HuffmanNode* l, const HuffmanNode* r) const
+        auto operator()(const HuffmanNode* l, const HuffmanNode* r) const -> bool
         {
             return (l->Freq > r->Freq);
         }
@@ -33,7 +33,7 @@ namespace Huffman
     /// @brief Huffman code algorithm.
     /// @param freq_map a map of char and frequency pairs
     /// @return root node
-    HuffmanNode* HuffmanCode(const std::map<int, char>& freq_map);
+    auto HuffmanCode(const std::map<int, char>& freq_map) -> HuffmanNode*;
 
     /// @brief Tree traversal to get the Huffman code
     /// @param root root node that starts the tree traversal

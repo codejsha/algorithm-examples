@@ -1,6 +1,6 @@
 #include "naive_string_match.h"
 
-std::vector<int> NaiveStringMatch::NaiveStringMatcher(const std::string& text, const std::string& pattern)
+auto NaiveStringMatch::NaiveStringMatcher(const std::string& text, const std::string& pattern) -> std::vector<int>
 {
     auto position = std::vector<int>{};
     for (auto i = 0; i < static_cast<int>(text.size()) - static_cast<int>(pattern.size()) + 1; ++i)

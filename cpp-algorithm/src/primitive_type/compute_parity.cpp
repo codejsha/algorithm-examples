@@ -2,17 +2,17 @@
 
 #include <array>
 
-std::array<short, 1 << 16> BuildTable()
+auto BuildTable() -> std::array<short, 1 << 16>
 {
     std::array<short, 1 << 16> result{};
-    for (int i = 0; i < (1 << 16); ++i)
+    for (auto i = 0; i < (1 << 16); ++i)
     {
         result[i] = ComputingParity::Parity(i);
     }
     return result;
 }
 
-short ComputingParity::CountBits(unsigned int x)
+auto ComputingParity::CountBits(unsigned int x) -> short
 {
     short num_bits = 0;
     while (x)
@@ -23,7 +23,7 @@ short ComputingParity::CountBits(unsigned int x)
     return num_bits;
 }
 
-short ComputingParity::Parity(unsigned long long x)
+auto ComputingParity::Parity(unsigned long long x) -> short
 {
     short result = 0;
     while (x)
@@ -34,7 +34,7 @@ short ComputingParity::Parity(unsigned long long x)
     return result;
 }
 
-short ComputingParity::ParityDropLowestBits(unsigned long long x)
+auto ComputingParity::ParityDropLowestBits(unsigned long long x) -> short
 {
     short result = 0;
     while (x)
@@ -45,11 +45,11 @@ short ComputingParity::ParityDropLowestBits(unsigned long long x)
     return result;
 }
 
-short ComputingParity::ParityLookupTable(const unsigned long long x)
+auto ComputingParity::ParityLookupTable(const unsigned long long x) -> short
 {
-    constexpr int mask_size = 16;
-    constexpr int bit_mask = 0xFFFF;
-    static std::array<short, 1 << 16> precomputed_parity = BuildTable();
+    constexpr auto mask_size = 16;
+    constexpr auto bit_mask = 0xFFFF;
+    static auto precomputed_parity = BuildTable();
 
     return precomputed_parity[x >> (3 * mask_size)]
            ^ precomputed_parity[(x >> (2 * mask_size)) & bit_mask]

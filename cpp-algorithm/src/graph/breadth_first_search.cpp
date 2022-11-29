@@ -2,7 +2,7 @@
 
 #include <queue>
 
-Graph::BfsVertex* Graph::BreadthFirstSearch::Search(BfsVertex& start, BfsVertex& goal)
+auto Graph::BreadthFirstSearch::Search(BfsVertex& start, BfsVertex& goal) -> BfsVertex*
 {
     if (start == goal)
     {

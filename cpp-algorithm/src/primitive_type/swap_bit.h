@@ -8,7 +8,7 @@ namespace SwapBit
     /// @param i index i
     /// @param j index j
     /// @return result number
-    long SwapBits(long x, int i, int j);
+    auto SwapBits(long x, int i, int j) -> long;
 }
 
 #endif

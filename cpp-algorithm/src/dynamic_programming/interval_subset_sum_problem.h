@@ -5,10 +5,10 @@
 
 namespace IntervalSubset
 {
-    int SimpleSubsetSum(const std::vector<int>& seq);
-    int SimpleSubsetSum2(const std::vector<int>& seq);
-    int DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int high);
-    int DynamicProgrammingSubsetSum(const std::vector<int>& seq);
+    auto SimpleSubsetSum(const std::vector<int>& seq) -> int;
+    auto SimpleSubsetSum2(const std::vector<int>& seq) -> int;
+    auto DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int high) -> int;
+    auto DynamicProgrammingSubsetSum(const std::vector<int>& seq) -> int;
 }
 
 #endif

@@ -14,7 +14,7 @@ namespace Graph
         }
 
         T Id;
-        bool operator==(const Vertex& v) const;
+        auto operator==(const Vertex& v) const -> bool;
     };
 
     /// @brief Equality operator ('equal to').
@@ -22,7 +22,7 @@ namespace Graph
     /// @param v vertex
     /// @return whether equal or not
     template <typename T>
-    bool Vertex<T>::operator==(const Vertex& v) const
+    auto Vertex<T>::operator==(const Vertex& v) const -> bool
     {
         if (this->Id == v.Id)
         {

@@ -14,7 +14,7 @@ namespace Util
     /// @param min minimum value bound
     /// @param max maximum value bound
     /// @return result sequence
-    std::vector<int> GenerateSequence(int size, int min, int max);
+    auto GenerateSequence(int size, int min, int max) -> std::vector<int>;
 }
 
 #endif

@@ -65,7 +65,7 @@ GTEST_TEST(BreadthFirstSearchTest, SimpleSearch1)
 
     auto result_path = std::vector<char>{};
     auto distance = result->Distance;
-    for (int i = 0; i <= distance; ++i)
+    for (auto i = 0; i <= distance; ++i)
     {
         result_path.push_back(result->Id);
         result = result->Predecessor;
@@ -138,7 +138,7 @@ GTEST_TEST(BreadthFirstSearchTest, SimpleSearch2)
 
     auto result_path = std::vector<char>{};
     auto distance = result->Distance;
-    for (int i = 0; i <= distance; ++i)
+    for (auto i = 0; i <= distance; ++i)
     {
         result_path.push_back(result->Id);
         result = result->Predecessor;

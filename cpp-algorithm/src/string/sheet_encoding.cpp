@@ -1,6 +1,6 @@
 #include "sheet_encoding.h"
 
-int SheetEncoding::DecodingSheetColumnId(const std::string& column)
+auto SheetEncoding::DecodingSheetColumnId(const std::string& column) -> int
 {
     auto result = 0;
     for (const auto i : column)
@@ -10,7 +10,7 @@ int SheetEncoding::DecodingSheetColumnId(const std::string& column)
     return result;
 }
 
-std::string SheetEncoding::EncodingSheetColumnId(int column_id)
+auto SheetEncoding::EncodingSheetColumnId(int column_id) -> std::string
 {
     auto result = std::string{};
     while (column_id > 0)

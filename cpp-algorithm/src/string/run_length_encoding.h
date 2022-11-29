@@ -9,12 +9,12 @@ namespace RunLengthEncoding
     /// where runs are replaced by just one data value and count.
     /// @param str raw string
     /// @return compressed string
-    std::string RunLengthEncoding(const std::string& str);
+    auto RunLengthEncoding(const std::string& str) -> std::string;
 
     /// @brief Run-length decoding is the reverse of run-length encoding.
     /// @param str compressed string
     /// @return raw string
-    std::string RunLengthDecoding(const std::string& str);
+    auto RunLengthDecoding(const std::string& str) -> std::string;
 }
 
 #endif

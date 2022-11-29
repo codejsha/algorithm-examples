@@ -8,15 +8,15 @@ namespace ConvertString
     /// @brief Convert integer to string.
     /// @param number input number
     /// @return number string
-    std::string IntToString(int number);
+    auto IntToString(int number) -> std::string;
 
     /// @brief Convert string to integer.
     /// @param str input string
     /// @return number
-    int StringToInt(const std::string& str);
+    auto StringToInt(const std::string& str) -> int;
 
-    // TODO
-    std::string ConvertBase(const std::string& str, int b1, int b2);
+    // TODO: ConvertBase
+    auto ConvertBase(const std::string& str, int b1, int b2) -> std::string;
 }
 
 #endif

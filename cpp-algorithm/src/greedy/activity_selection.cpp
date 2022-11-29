@@ -1,7 +1,7 @@
 #include "activity_selection.h"
 
-std::vector<int> ActivitySelection::RecursiveActivitySelector(const std::vector<int>& start, const std::vector<int>& finish,
-    const int index, const int size)
+auto ActivitySelection::RecursiveActivitySelector(const std::vector<int>& start, const std::vector<int>& finish,
+    const int index, const int size) -> std::vector<int>
 {
     auto sub_index = index + 1;
 
@@ -23,7 +23,7 @@ std::vector<int> ActivitySelection::RecursiveActivitySelector(const std::vector<
     }
 }
 
-std::vector<int> ActivitySelection::GreedyActivitySelector(const std::vector<int>& start, const std::vector<int>& finish)
+auto ActivitySelection::GreedyActivitySelector(const std::vector<int>& start, const std::vector<int>& finish) -> std::vector<int>
 {
     const auto size = static_cast<int>(start.size());
     auto selected = std::vector<int>{};

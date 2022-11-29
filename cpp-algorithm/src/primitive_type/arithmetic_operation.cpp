@@ -1,17 +1,17 @@
 #include "arithmetic_operation.h"
 
-unsigned long long Add(unsigned long long a, unsigned long long b)
+auto Add(unsigned long long a, unsigned long long b) -> unsigned long long
 {
     while (b)
     {
-        const unsigned long long carry = a & b;
+        const auto carry = a & b;
         a = a ^ b;
         b = carry << 1;
     }
     return a;
 }
 
-unsigned long long ArithmeticOperation::Multiply(unsigned long long x, unsigned long long y)
+auto ArithmeticOperation::Multiply(unsigned long long x, unsigned long long y) -> unsigned long long
 {
     unsigned long long sum = 0;
     while (x)
@@ -26,11 +26,11 @@ unsigned long long ArithmeticOperation::Multiply(unsigned long long x, unsigned 
     return sum;
 }
 
-int ArithmeticOperation::Divide(int x, int y)
+auto ArithmeticOperation::Divide(int x, int y) -> int
 {
-    int result = 0;
-    int power = 32;
-    unsigned long long y_power = static_cast<unsigned long long>(y) << power;
+    auto result = 0;
+    auto power = 32;
+    auto y_power = static_cast<unsigned long long>(y) << power;
 
     while (x >= y)
     {

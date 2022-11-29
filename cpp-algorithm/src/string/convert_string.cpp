@@ -1,6 +1,6 @@
 #include "convert_string.h"
 
-std::string ConvertString::IntToString(int number)
+auto ConvertString::IntToString(int number) -> std::string
 {
     auto str = std::string{};
     auto is_negative = false;
@@ -25,7 +25,7 @@ std::string ConvertString::IntToString(int number)
     return str;
 }
 
-int ConvertString::StringToInt(const std::string& str)
+auto ConvertString::StringToInt(const std::string& str) -> int
 {
     auto number = 0;
     for (auto i : str)

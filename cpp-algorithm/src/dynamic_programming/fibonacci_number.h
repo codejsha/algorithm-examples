@@ -9,13 +9,13 @@ namespace Fibonacci
     /// @param number number to calculate
     /// @param memo memoization of previously calculated numbers
     /// @return nth Fibonacci number
-    int FibonacciDynamicTopDown(int number, std::vector<int>& memo);
+    auto FibonacciDynamicTopDown(int number, std::vector<int>& memo) -> int;
 
     /// @brief Calculate the Fibonacci number using a bottom-up approach.
     /// Use memoization to cache the results.
     /// @param number number to calculate
     /// @return nth Fibonacci number
-    int FibonacciDynamicBottomUp(int number);
+    auto FibonacciDynamicBottomUp(int number) -> int;
 }
 
 #endif

@@ -11,7 +11,7 @@ namespace Tree
         std::vector<BTreeNode*> Children{};
         bool IsLeaf{};
 
-        [[nodiscard]] int GetKeyCount() const
+        [[nodiscard]] auto GetKeyCount() const -> int
         {
             return static_cast<int>(Keys.size());
         }
@@ -22,8 +22,8 @@ namespace Tree
     class BTree
     {
     public:
-        [[nodiscard]] BTreeNode*
-        GetRoot() const
+        [[nodiscard]] auto
+        GetRoot() const -> BTreeNode*
         {
             return Root;
         }
@@ -33,12 +33,12 @@ namespace Tree
             Root = root;
         }
 
-        [[nodiscard]] std::vector<BTreeNode*> GetNodes() const
+        [[nodiscard]] auto GetNodes() const -> std::vector<BTreeNode*>
         {
             return Nodes;
         }
 
-        [[nodiscard]] int GetDegree() const
+        [[nodiscard]] auto GetDegree() const -> int
         {
             return Degree;
         }
@@ -76,7 +76,7 @@ namespace Tree
         /// </summary>
         /// <param name="key">key to search for</param>
         /// <returns>node and key index pair</returns>
-        std::pair<BTreeNode*, const int> Search(char key);
+        auto Search(char key) -> std::pair<BTreeNode*, const int>;
 
     protected:
         BTreeNode* Root{};
@@ -97,7 +97,7 @@ namespace Tree
         /// <param name="ref">reference node for tree search</param>
         /// <param name="key">key to search for</param>
         /// <returns>node and key index pair</returns>
-        std::pair<BTreeNode*, const int> Search(BTreeNode* ref, char key);
+        auto Search(BTreeNode* ref, char key) -> std::pair<BTreeNode*, const int>;
     };
 }
 

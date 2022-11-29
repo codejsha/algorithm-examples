@@ -15,35 +15,35 @@ namespace Permutation
     /// @param permutation permutation array
     /// @param arr array
     /// @return result array
-    std::vector<char> ApplyPermutationWithAdditionalSpace(const std::vector<int>& permutation, const std::vector<char>& arr);
+    auto ApplyPermutationWithAdditionalSpace(const std::vector<int>& permutation, const std::vector<char>& arr) -> std::vector<char>;
 
     /// @brief Permute the elements of an array. (in-place)
     /// @param permutation permutation array
     /// @param arr array
     /// @return result array
-    std::vector<char> ApplyPermutationBySwap(std::vector<int>& permutation, std::vector<char>& arr);
+    auto ApplyPermutationBySwap(std::vector<int>& permutation, std::vector<char>& arr) -> std::vector<char>;
 
     /// @brief Inverse permutation.
     /// @param permutation permutation array
     /// @param arr array
     /// @return inverse array
-    std::vector<int> InversePermutation(const std::vector<int>& permutation, const std::vector<char>& arr);
+    auto InversePermutation(const std::vector<int>& permutation, const std::vector<char>& arr) -> std::vector<int>;
 
     /// @brief Compute the next permutation.
     /// @param permutation array
     /// @return next permutation array
-    std::vector<int> NextPermutation(std::vector<int>& permutation);
+    auto NextPermutation(std::vector<int>& permutation) -> std::vector<int>;
 
     /// @brief Compute the previous permutation.
     /// @param permutation array
     /// @return previous permutation array
-    std::vector<int> PreviousPermutation(std::vector<int>& permutation);
+    auto PreviousPermutation(std::vector<int>& permutation) -> std::vector<int>;
 
     /// @brief Compute the k-th permutation.
     /// @param permutation array
     /// @param k k-th index
     /// @return k-th permutation array
-    std::vector<int> KthPermutation(std::vector<int>& permutation, int k);
+    auto KthPermutation(std::vector<int>& permutation, int k) -> std::vector<int>;
 }
 
 #endif

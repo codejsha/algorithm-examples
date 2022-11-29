@@ -9,7 +9,7 @@ namespace IpAddress
     /// @brief Validate IP address.
     /// @param str address string omitted with '.'
     /// @return valid ip addresses
-    std::vector<std::string> GetValidIpAddress(const std::string& str);
+    auto GetValidIpAddress(const std::string& str) -> std::vector<std::string>;
 }
 
 #endif

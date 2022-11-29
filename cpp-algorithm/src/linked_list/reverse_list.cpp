@@ -2,13 +2,12 @@
 
 #include <utility>
 
-std::shared_ptr<LinkedList::Node<int>> ReverseList::ReserveSubList(
-    std::shared_ptr<LinkedList::Node<int>> list, int start, const int finish)
+auto ReverseList::ReserveSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, const int finish) -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, std::move(list)});
     auto sublist_head = dummy_head;
 
-    int k = 1;
+    auto k = 1;
     while (k++ < start)
     {
         sublist_head = sublist_head->next;

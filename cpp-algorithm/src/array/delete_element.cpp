@@ -2,15 +2,15 @@
 
 #include <algorithm>
 
-std::vector<int> DeleteElement::DeleteDuplicates(std::vector<int>& numbers)
+auto DeleteElement::DeleteDuplicates(std::vector<int>& numbers) -> std::vector<int>
 {
     if (numbers.empty())
     {
         return {};
     }
 
-    int write_index = 1;
-    for (int i = 1; i < static_cast<int>(numbers.size()); ++i)
+    auto write_index = 1;
+    for (auto i = 1; i < static_cast<int>(numbers.size()); ++i)
     {
         if (numbers[write_index - 1] != numbers[i])
         {
@@ -22,7 +22,7 @@ std::vector<int> DeleteElement::DeleteDuplicates(std::vector<int>& numbers)
     return std::vector<int>{numbers.begin(), numbers.begin() + write_index};
 }
 
-std::vector<int> DeleteElement::DeleteDuplicateElements(std::vector<int>& numbers)
+auto DeleteElement::DeleteDuplicateElements(std::vector<int>& numbers) -> std::vector<int>
 {
     if (numbers.empty())
     {
@@ -35,7 +35,7 @@ std::vector<int> DeleteElement::DeleteDuplicateElements(std::vector<int>& number
     return numbers;
 }
 
-std::vector<int> DeleteElement::DeleteSpecificElements(std::vector<int>& numbers, const int element)
+auto DeleteElement::DeleteSpecificElements(std::vector<int>& numbers, const int element) -> std::vector<int>
 {
     if (numbers.empty())
     {

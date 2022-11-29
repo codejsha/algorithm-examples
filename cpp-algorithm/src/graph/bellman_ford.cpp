@@ -25,7 +25,7 @@ void Graph::BellmanFordGraph::Relax(BellmanFordVertex& u, BellmanFordVertex& v)
 
 void Graph::BellmanFordGraph::BellmanFord(BellmanFordVertex& source)
 {
-    for (int i = 0; i < static_cast<int>(Vertices.size()) - 1; ++i)
+    for (auto i = 0; i < static_cast<int>(Vertices.size()) - 1; ++i)
     {
         for (auto& [u, v] : AdjacencyList)
         {

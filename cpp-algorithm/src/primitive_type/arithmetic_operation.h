@@ -7,13 +7,13 @@ namespace ArithmeticOperation
     /// @param x multiplier
     /// @param y multiplicand
     /// @return product result
-    unsigned long long Multiply(unsigned long long x, unsigned long long y);
+    auto Multiply(unsigned long long x, unsigned long long y) -> unsigned long long;
 
     /// @brief Calculate the fraction of two numbers without using arithmetic operators.
     /// @param x dividend
     /// @param y divisor
     /// @return fraction result
-    int Divide(int x, int y);
+    auto Divide(int x, int y) -> int;
 }
 
 #endif

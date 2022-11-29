@@ -8,12 +8,12 @@ namespace Sort
     /// @brief Selection sort algorithm.
     /// @param seq sequence of elements
     /// @return sorted sequence
-    std::vector<int> SelectionSort(std::vector<int>& seq);
+    auto SelectionSort(std::vector<int>& seq) -> std::vector<int>;
 
     /// @brief Insertion sort algorithm.
     /// @param seq sequence of elements
     /// @return sorted sequence
-    std::vector<int> InsertionSort(std::vector<int>& seq);
+    auto InsertionSort(std::vector<int>& seq) -> std::vector<int>;
 }
 
 #endif

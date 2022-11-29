@@ -1,6 +1,6 @@
 #include "rabin_karp.h"
 
-std::vector<int> RabinKarp::RabinKarpMatcher1(const std::string& text, const std::string& pattern)
+auto RabinKarp::RabinKarpMatcher1(const std::string& text, const std::string& pattern) -> std::vector<int>
 {
     auto result = std::vector<int>{};
 
@@ -23,7 +23,7 @@ std::vector<int> RabinKarp::RabinKarpMatcher1(const std::string& text, const std
     return result;
 }
 
-std::vector<int> RabinKarp::RabinKarpMatcher2(const std::string& text, const std::string& pattern)
+auto RabinKarp::RabinKarpMatcher2(const std::string& text, const std::string& pattern) -> std::vector<int>
 {
     auto result = std::vector<int>{};
 
@@ -36,7 +36,7 @@ std::vector<int> RabinKarp::RabinKarpMatcher2(const std::string& text, const std
     constexpr auto prime = 101;
 
     auto pattern_hash = 0;
-    for (const char ch : pattern)
+    for (const auto ch : pattern)
     {
         pattern_hash = (base * pattern_hash + ch) % prime;
     }

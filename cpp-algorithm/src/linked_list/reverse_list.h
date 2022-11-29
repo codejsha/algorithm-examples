@@ -12,7 +12,7 @@ namespace ReverseList
     /// @param start start index of the sublist
     /// @param finish end index of the sublist
     /// @return the head of the list
-    std::shared_ptr<LinkedList::Node<int>> ReserveSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, int finish);
+    auto ReserveSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, int finish) -> std::shared_ptr<LinkedList::Node<int>>;
 }
 
 #endif

@@ -2,22 +2,22 @@
 
 #include <random>
 
-int ZeroOneRandom()
+auto ZeroOneRandom() -> int
 {
     std::default_random_engine generator((std::random_device())());
     std::uniform_int_distribution<int> distribution(0, 1);
     return distribution(generator);
 }
 
-int GenerateRandomNumber::GenerateUniformRandomNumber(const int lower_bound, const int upper_bound)
+auto GenerateRandomNumber::GenerateUniformRandomNumber(const int lower_bound, const int upper_bound) -> int
 {
-    int result = 0;
-    const int number_of_outcomes = upper_bound - lower_bound + 1;
+    auto result = 0;
+    const auto number_of_outcomes = upper_bound - lower_bound + 1;
 
     do
     {
         result = 0;
-        for (int i = 0; (1 << i) < number_of_outcomes; ++i)
+        for (auto i = 0; (1 << i) < number_of_outcomes; ++i)
         {
             result = (result << 1) | ZeroOneRandom();
         }

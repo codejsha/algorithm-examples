@@ -8,7 +8,7 @@ namespace PrintString
     /// @brief Manipulate a string to sine wave pattern like snake style.
     /// @param str the string to be manipulated.
     /// @return result string
-    std::string SineWaveString(const std::string& str);
+    auto SineWaveString(const std::string& str) -> std::string;
 
     /// @brief Print a string in sine wave pattern like snake style.
     /// @param str input string

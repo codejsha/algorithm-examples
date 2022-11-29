@@ -2,11 +2,11 @@
 
 #include <iostream>
 
-std::vector<int> Sort::InsertionSort(std::vector<int>& seq)
+auto Sort::InsertionSort(std::vector<int>& seq) -> std::vector<int>
 {
     const auto size = static_cast<int>(seq.size());
 
-    for (int index = 1; index < size; ++index)
+    for (auto index = 1; index < size; ++index)
     {
         auto key = index;
         while ((key > 0) && (seq[key] < seq[key - 1]))
