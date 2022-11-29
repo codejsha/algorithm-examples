@@ -32,6 +32,15 @@ namespace ListCycle
     std::shared_ptr<LinkedList::Node<int>> OverlappingNoCycleList(
         std::shared_ptr<LinkedList::Node<int>>& list1,
         std::shared_ptr<LinkedList::Node<int>>& list2);
+
+    /// @brief Given two lists with cycles, determine if they overlap.
+    /// @param list1 the head of the first list
+    /// @param list2 the head of the second list
+    /// @return if the two lists overlap, return the first overlapping node, otherwise return nullptr
+    auto OverlappingCycleList(
+        std::shared_ptr<LinkedList::Node<int>>& list1,
+        std::shared_ptr<LinkedList::Node<int>>& list2)
+        -> std::shared_ptr<LinkedList::Node<int>>;
 }
 
 #endif

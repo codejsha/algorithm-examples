@@ -94,7 +94,7 @@ GTEST_TEST(ListHasCycleTest, HasCycle3_3)
     EXPECT_EQ(-1, result);
 }
 
-GTEST_TEST(OverlappingCycleListTest, OverlappingNoCycleLists_1)
+GTEST_TEST(OverlappingNoCycleListTest, OverlappingNoCycleLists_1)
 {
     auto node_3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{4, nullptr});
     auto node_a2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, node_3});
@@ -107,7 +107,7 @@ GTEST_TEST(OverlappingCycleListTest, OverlappingNoCycleLists_1)
     EXPECT_EQ(4, result->data);
 }
 
-GTEST_TEST(OverlappingCycleListTest, OverlappingNoCycleLists_2)
+GTEST_TEST(OverlappingNoCycleListTest, OverlappingNoCycleLists_2)
 {
     auto node_a3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{7, nullptr});
     auto node_a2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{5, node_a3});
@@ -117,5 +117,33 @@ GTEST_TEST(OverlappingCycleListTest, OverlappingNoCycleLists_2)
     auto node_b1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node_b2});
 
     auto result = ListCycle::OverlappingNoCycleList(node_a1, node_b1);
+    EXPECT_EQ(nullptr, result);
+}
+
+GTEST_TEST(OverlappingCycleListTest, OverlappingCycleList_1)
+{
+    auto node_a4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{-4, nullptr});
+    auto node_a3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, node_a4});
+    auto node_a2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, node_a3});
+    auto node_a1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node_a2});
+    node_a4->next = node_a2;
+
+    auto node_b2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node_a3});
+    auto node_b1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{1, node_b2});
+
+    auto result = ListCycle::OverlappingCycleList(node_a1, node_b1);
+    EXPECT_EQ(0, result->data);
+}
+
+GTEST_TEST(OverlappingCycleListTest, OverlappingCycleList_2)
+{
+    auto node_a3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{7, nullptr});
+    auto node_a2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{5, node_a3});
+    auto node_a1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, node_a2});
+
+    auto node_b2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{11, nullptr});
+    auto node_b1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node_b2});
+
+    auto result = ListCycle::OverlappingCycleList(node_a1, node_b1);
     EXPECT_EQ(nullptr, result);
 }

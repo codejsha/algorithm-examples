@@ -11,6 +11,21 @@ void AdvanceListByDifference(int difference, std::shared_ptr<LinkedList::Node<in
     }
 }
 
+/// @brief The distance between list1 and list2.
+/// @param list1 the head of the first list
+/// @param list2 the head of the second list
+/// @return overlapping distance between list1 and list2
+auto OverlappingDistance(std::shared_ptr<LinkedList::Node<int>>& list1, std::shared_ptr<LinkedList::Node<int>>& list2) -> int
+{
+    auto distance = 0;
+    while (list1 != list2)
+    {
+        list1 = list1->next;
+        ++distance;
+    }
+    return distance;
+}
+
 std::shared_ptr<LinkedList::Node<int>> ListCycle::HasCycle1(const std::shared_ptr<LinkedList::Node<int>>& list)
 {
     auto fast = list;
@@ -121,4 +136,34 @@ std::shared_ptr<LinkedList::Node<int>> ListCycle::OverlappingNoCycleList(
     }
 
     return list1;
+}
+
+auto ListCycle::OverlappingCycleList(
+    std::shared_ptr<LinkedList::Node<int>>& list1,
+    std::shared_ptr<LinkedList::Node<int>>& list2)
+    -> std::shared_ptr<LinkedList::Node<int>>
+{
+    auto root1 = HasCycle1(list1);
+    auto root2 = HasCycle1(list2);
+
+    // both lists do not have cycles
+    if (!root1 && !root2)
+    {
+        return OverlappingNoCycleList(list1, list2);
+    }
+
+    // one list has cycle and the other does not
+    if ((root1 && !root2) || (!root1 && root2))
+    {
+        return nullptr;
+    }
+
+    // both lists have cycles
+    auto temp = root2;
+    do
+    {
+        temp = temp->next;
+    } while (temp != root1 && temp != root2);
+
+    return temp == root1 ? root2 : nullptr;
 }
