@@ -4,7 +4,7 @@
 
 [Korean](README_ko-KR.md)
 
-This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run a test to perform the method/function for algorithm logic.
+This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run a test to perform the method/function for algorithm logic. GitHub Actions workflows that build and test code run daily at 00:00 UTC.
 
 Additionally, each project is configured in the following environments:
 
@@ -67,7 +67,7 @@ Additionally, each project is configured in the following environments:
 - Merge two sorted linked lists: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
 - Reverse a single sublist: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Reverse a single sublist of a linked list.
 - Two linked lists overlap (OverlappingNoCycleList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists without cycle overlap.
-- Two lists with cycles overlap (OverlappingCycleList) [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists with cycle overlap.
+- Two linked lists with cycles overlap (OverlappingCycleList) [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists with cycle overlap.
 
 ### Tree
 
