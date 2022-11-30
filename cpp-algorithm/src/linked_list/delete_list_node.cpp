@@ -28,3 +28,19 @@ auto DeleteListNode::DeleteNodeKthLast(std::shared_ptr<LinkedList::Node<int>>& l
 
     return dummy_head->next;
 }
+
+auto DeleteListNode::DeleteDuplicateNode(std::shared_ptr<LinkedList::Node<int>>& list) -> std::shared_ptr<LinkedList::Node<int>>
+{
+    auto iter = list;
+    while (iter)
+    {
+        auto next_distinct = iter->next;
+        while (next_distinct && next_distinct->data == iter->data)
+        {
+            next_distinct = next_distinct->next;
+        }
+        iter->next = next_distinct;
+        iter = next_distinct;
+    }
+    return list;
+}
