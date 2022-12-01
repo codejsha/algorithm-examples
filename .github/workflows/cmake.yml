@@ -6,7 +6,7 @@ on:
   #   branches:
   #     - main
   #   paths:
-  #     - "cpp-algorithms/**"
+  #     - "cpp-algorithm/**"
   schedule:
     - cron: "0 0 * * *"
 
@@ -25,9 +25,9 @@ jobs:
           sudo apt-get update
           sudo apt install -y ninja-build
 
-      - name: Install vcpkg packages
+      - name: Install packages
         working-directory: /usr/local/bin/
-        run: ./vcpkg install gsl:x64-linux benchmark:x64-linux gtest:x64-linux fmt:x64-linux
+        run: ./vcpkg install gsl:x64-linux gtest:x64-linux benchmark:x64-linux fmt:x64-linux
 
       - name: Configure CMake
         run: cmake -G Ninja -DCMAKE_C_COMPILER="gcc-10" -DCMAKE_CXX_COMPILER="g++-10" -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_TOOLCHAIN_FILE="/usr/local/share/vcpkg/scripts/buildsystems/vcpkg.cmake" -DCMAKE_MAKE_PROGRAM="/usr/bin/ninja" -S ${{github.workspace}}/cpp-algorithm -B ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-release
