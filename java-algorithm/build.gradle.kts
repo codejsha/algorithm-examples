@@ -82,11 +82,8 @@ tasks.withType<Test> {
                 TestLogEvent.STANDARD_OUT,
                 TestLogEvent.STANDARD_ERROR
             )
+            showStackTraces = true
             exceptionFormat = TestExceptionFormat.FULL
         }
-
-        showStandardStreams = true
-        info.events = debug.events
-        info.exceptionFormat = debug.exceptionFormat
     }
 }
