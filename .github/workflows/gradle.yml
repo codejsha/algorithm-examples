@@ -1,0 +1,31 @@
+---
+name: Java CI with Gradle
+
+on:
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - "java-algorithm/**"
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Build
+        working-directory: ${{github.workspace}}/java-algorithm
+        run: gradle build
