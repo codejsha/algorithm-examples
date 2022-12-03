@@ -38,3 +38,19 @@ GTEST_TEST(MergeListTest, MergeTwoSortedLinkedList2)
         result = result->next;
     }
 }
+
+GTEST_TEST(MergeListTest, MergeEvenOddLinkedList)
+{
+    const auto node4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{-4, nullptr});
+    const auto node3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, node4});
+    const auto node2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, node3});
+    const auto node1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node2});
+
+    auto result = MergeList::MergeEvenOddLinkedList(node1);
+    const auto expected = std::vector<int>{3, 0, 2, -4};
+    for (const auto& i : expected)
+    {
+        ASSERT_EQ(i, result->data);
+        result = result->next;
+    }
+}
