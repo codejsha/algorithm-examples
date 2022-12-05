@@ -8,7 +8,7 @@
 
 추가로, 각 프로젝트는 다음과 같은 환경에서 구성되었습니다:
 
-- C++ project: [CMake](https://cmake.org/) 프로젝트 기반, [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/) 패키지 사용 (패키지 매니저 [vcpkg](https://github.com/microsoft/vcpkg))
+- C++ project: [CMake](https://cmake.org/) 프로젝트 기반, [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) 패키지 사용 (패키지 매니저 [vcpkg](https://github.com/microsoft/vcpkg))
 - Python project: [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) 패키지 사용
 - Java project: [Gradle](https://gradle.org/) 프로젝트 기반, [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) 라이브러리 사용
 
