@@ -26,6 +26,14 @@ jobs:
           sudo apt-get update
           sudo apt install -y ninja-build
 
+      - name: Setup vcpkg
+        working-directory: /usr/local/share
+        run: |
+          rm -rf vcpkg
+          git clone https://github.com/Microsoft/vcpkg.git
+          cd vcpkg
+          ./bootstrap-vcpkg.sh
+
       - name: Install packages
         working-directory: /usr/local/bin
         run: ./vcpkg install gsl:x64-linux gtest:x64-linux benchmark:x64-linux fmt:x64-linux
