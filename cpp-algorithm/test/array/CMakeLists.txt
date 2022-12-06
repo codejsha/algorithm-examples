@@ -9,14 +9,14 @@ include_directories(${CMAKE_SOURCE_DIR}/src/array)
 
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
-	add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/array/${target_name}.cpp")
-	target_link_libraries(${target} PRIVATE GTest::gtest_main ${ARGN})
-	if(MSVC)
-		### Edit and Continue for CMake projects
-		target_compile_options(${target} PUBLIC "/Zi")
-		target_link_options(${target} PUBLIC "/INCREMENTAL")
-	endif()
-	gtest_discover_tests(${target})
+    add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/array/${target_name}.cpp")
+    target_link_libraries(${target} PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main ${ARGN})
+    if(MSVC)
+        ### Edit and Continue for CMake projects
+        target_compile_options(${target} PUBLIC "/Zi")
+        target_link_options(${target} PUBLIC "/INCREMENTAL")
+    endif()
+    gtest_discover_tests(${target})
 endmacro()
 
 add_target_test(advancing_through_test)
