@@ -19,3 +19,4 @@ macro(add_target_benchmark target)
 endmacro()
 
 add_target_benchmark(list_arithmetic_operation_benchmark)
+add_target_benchmark(order_list_node_benchmark)
