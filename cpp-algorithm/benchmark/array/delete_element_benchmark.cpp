@@ -2,7 +2,7 @@
 
 #include <benchmark/benchmark.h>
 
-static void BM_DeleteDuplicate(benchmark::State& state)
+static void BM_DeleteDuplicates(benchmark::State& state)
 {
     auto numbers = std::vector<int>{2, 3, 5, 5, 7, 11, 11, 11, 13};
     for (auto _ : state)
@@ -10,7 +10,7 @@ static void BM_DeleteDuplicate(benchmark::State& state)
         DeleteElement::DeleteDuplicates(numbers);
     }
 }
-BENCHMARK(BM_DeleteDuplicate);
+BENCHMARK(BM_DeleteDuplicates);
 
 static void BM_DeleteDuplicateElements(benchmark::State& state)
 {
