@@ -6,9 +6,10 @@ static void BM_GeneratePrimes(benchmark::State& state)
 {
     for (auto _ : state)
     {
-        EnumeratePrime::GeneratePrimes(100);
+        benchmark::DoNotOptimize(EnumeratePrime::GeneratePrimes(state.range(0)));
     }
+    state.SetComplexityN(state.range(0));
 }
-BENCHMARK(BM_GeneratePrimes);
+BENCHMARK(BM_GeneratePrimes)->Arg(100)->Arg(1000)->Arg(10000)->Complexity(benchmark::oN);
 
 BENCHMARK_MAIN();
