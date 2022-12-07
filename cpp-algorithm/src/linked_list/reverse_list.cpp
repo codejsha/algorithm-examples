@@ -2,7 +2,7 @@
 
 #include <utility>
 
-auto ReverseList::ReserveSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, const int finish) -> std::shared_ptr<LinkedList::Node<int>>
+auto ReverseList::ReverseSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, const int finish) -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, std::move(list)});
     auto sublist_head = dummy_head;
