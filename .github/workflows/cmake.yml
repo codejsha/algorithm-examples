@@ -29,7 +29,8 @@ jobs:
       - name: Setup vcpkg
         working-directory: /usr/local/share/vcpkg
         run: |
-          git pull origin master
+          git fetch --all
+          git reset --hard origin/master
           ./bootstrap-vcpkg.sh
 
       - name: Install packages
