@@ -29,7 +29,7 @@ jobs:
       - name: Setup vcpkg
         working-directory: /usr/local/share
         run: |
-          rm -rf vcpkg
+          rm -rf vcpkg/{.*,*}
           git clone https://github.com/Microsoft/vcpkg.git
           cd vcpkg
           ./bootstrap-vcpkg.sh
