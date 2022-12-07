@@ -2,13 +2,13 @@
 
 #include <benchmark/benchmark.h>
 
-static void BmGeneratePrimes(benchmark::State& state)
+static void BM_GeneratePrimes(benchmark::State& state)
 {
     for (auto _ : state)
     {
         EnumeratePrime::GeneratePrimes(100);
     }
 }
-BENCHMARK(BmGeneratePrimes);
+BENCHMARK(BM_GeneratePrimes);
 
 BENCHMARK_MAIN();

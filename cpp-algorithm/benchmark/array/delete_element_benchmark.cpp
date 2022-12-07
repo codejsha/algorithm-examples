@@ -2,7 +2,7 @@
 
 #include <benchmark/benchmark.h>
 
-static void BmDeleteDuplicate(benchmark::State& state)
+static void BM_DeleteDuplicate(benchmark::State& state)
 {
     auto numbers = std::vector<int>{2, 3, 5, 5, 7, 11, 11, 11, 13};
     for (auto _ : state)
@@ -10,9 +10,9 @@ static void BmDeleteDuplicate(benchmark::State& state)
         DeleteElement::DeleteDuplicates(numbers);
     }
 }
-BENCHMARK(BmDeleteDuplicate);
+BENCHMARK(BM_DeleteDuplicate);
 
-static void BmDeleteDuplicateElements(benchmark::State& state)
+static void BM_DeleteDuplicateElements(benchmark::State& state)
 {
     auto numbers = std::vector<int>{2, 3, 5, 5, 7, 11, 11, 11, 13};
     for (auto _ : state)
@@ -20,9 +20,9 @@ static void BmDeleteDuplicateElements(benchmark::State& state)
         DeleteElement::DeleteDuplicateElements(numbers);
     }
 }
-BENCHMARK(BmDeleteDuplicateElements);
+BENCHMARK(BM_DeleteDuplicateElements);
 
-static void BmDeleteSpecificElements(benchmark::State& state)
+static void BM_DeleteSpecificElements(benchmark::State& state)
 {
     auto numbers = std::vector<int>{2, 3, 5, 5, 7, 11, 11, 11, 13};
     constexpr auto element = 11;
@@ -31,6 +31,6 @@ static void BmDeleteSpecificElements(benchmark::State& state)
         DeleteElement::DeleteSpecificElements(numbers, element);
     }
 }
-BENCHMARK(BmDeleteSpecificElements);
+BENCHMARK(BM_DeleteSpecificElements);
 
 BENCHMARK_MAIN();

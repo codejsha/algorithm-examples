@@ -2,7 +2,7 @@
 
 #include <benchmark/benchmark.h>
 
-static void BmOfflineRandomSampling(benchmark::State& state)
+static void BM_OfflineRandomSampling(benchmark::State& state)
 {
     constexpr auto k = 3;
     auto arr = std::vector<int>{3, 7, 5, 11};
@@ -11,9 +11,9 @@ static void BmOfflineRandomSampling(benchmark::State& state)
         RandomDataSampling::OfflineRandomSampling(k, arr);
     }
 }
-BENCHMARK(BmOfflineRandomSampling);
+BENCHMARK(BM_OfflineRandomSampling);
 
-static void BmComputeRandomPermutation(benchmark::State& state)
+static void BM_ComputeRandomPermutation(benchmark::State& state)
 {
     constexpr auto k = 3;
     auto arr = std::vector<int>{3, 7, 5, 11};
@@ -22,6 +22,6 @@ static void BmComputeRandomPermutation(benchmark::State& state)
         RandomDataSampling::ComputeRandomPermutation(k);
     }
 }
-BENCHMARK(BmComputeRandomPermutation);
+BENCHMARK(BM_ComputeRandomPermutation);
 
 BENCHMARK_MAIN();

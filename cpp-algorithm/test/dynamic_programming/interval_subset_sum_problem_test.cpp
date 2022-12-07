@@ -7,7 +7,7 @@ GTEST_TEST(IntervalSubsetSumTest, Simple1)
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
 
-    const auto result = IntervalSubset::SimpleSubsetSum(seq);
+    const auto result = IntervalSubset::SimpleSubsetSum1(seq);
     EXPECT_EQ(expected, result);
 }
 

@@ -5,7 +5,7 @@
 
 namespace IntervalSubset
 {
-    auto SimpleSubsetSum(const std::vector<int>& seq) -> int;
+    auto SimpleSubsetSum1(const std::vector<int>& seq) -> int;
     auto SimpleSubsetSum2(const std::vector<int>& seq) -> int;
     auto DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int high) -> int;
     auto DynamicProgrammingSubsetSum(const std::vector<int>& seq) -> int;

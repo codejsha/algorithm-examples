@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 
-auto IntervalSubset::SimpleSubsetSum(const std::vector<int>& seq) -> int
+auto IntervalSubset::SimpleSubsetSum1(const std::vector<int>& seq) -> int
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
