@@ -10,7 +10,7 @@ include_directories(${CMAKE_SOURCE_DIR}/src/tree)
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
     add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/tree/${target_name}.cpp")
-    target_link_libraries(${target} PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main ${ARGN})
+    target_link_libraries(${target} PRIVATE GTest::gtest GTest::gtest_main ${ARGN})
     gtest_discover_tests(${target})
     if(MSVC)
         ### Edit and Continue for CMake projects
