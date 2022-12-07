@@ -10,7 +10,7 @@ include_directories(${CMAKE_SOURCE_DIR}/src/sort)
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
     add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/sort/${target_name}.cpp")
-    target_link_libraries(${target} PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main ${ARGN})
+    target_link_libraries(${target} PRIVATE GTest::gtest GTest::gtest_main ${ARGN})
     if(MSVC)
         ### Edit and Continue for CMake projects
         target_compile_options(${target} PUBLIC "/Zi")
