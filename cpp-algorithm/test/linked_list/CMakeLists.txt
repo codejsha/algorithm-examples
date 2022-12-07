@@ -20,6 +20,7 @@ macro(add_target_test target)
 endmacro()
 
 add_target_test(delete_list_node_test)
+add_target_test(list_arithmetic_operation_test)
 add_target_test(list_cycle_test)
 add_target_test(merge_list_test)
 # add_target_test(replace_list_node_test)

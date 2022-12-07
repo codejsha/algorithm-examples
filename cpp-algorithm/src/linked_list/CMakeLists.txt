@@ -8,6 +8,7 @@ macro(add_library_target target)
 endmacro()
 
 add_library_target(delete_list_node)
+add_library_target(list_arithmetic_operation)
 add_library_target(list_cycle)
 add_library_target(merge_list)
 add_library_target(reverse_list)
