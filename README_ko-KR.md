@@ -79,6 +79,7 @@
 
 ### 스택 (Stack)
 
+- 괄호 문자열이 올바른 형태인지 확인하기 (Pair of bracket (CheckPairOfBracket)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack))
 - 링크드 리스트를 역순으로 출력 (Print linked list in reverse order (PrintLinkedListInReverseOrder)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack))
 - 최댓값을 찾는 스택 구현하기 (Max stack element): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack))
 

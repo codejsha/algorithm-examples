@@ -30,5 +30,6 @@ macro(add_target_header_test target)
     gtest_discover_tests(${target})
 endmacro()
 
+add_target_test(check_pair_of_bracket_test)
 add_target_header_test(max_stack_element_test)
 # add_target_test(print_stack_test)

@@ -26,5 +26,6 @@ macro(add_target_header_benchmark target)
     endif()
 endmacro()
 
+add_target_benchmark(check_pair_of_bracket_benchmark)
 add_target_header_benchmark(max_stack_element_benchmark)
 # add_target_benchmark(print_stack_benchmark)
