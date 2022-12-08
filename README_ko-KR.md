@@ -19,6 +19,7 @@
   - [배열 (Array)](#배열-array)
   - [그래프 (Graph)](#그래프-graph)
   - [링크드 리스트 (Linked list)](#링크드-리스트-linked-list)
+  - [스택 (Stack)](#스택-stack)
   - [트리 (Tree)](#트리-tree)
 - [주제 (Topics)](#주제-topics)
   - [동적 프로그래밍 (Dynamic programming)](#동적-프로그래밍-dynamic-programming)
@@ -75,6 +76,10 @@
 - 부분 리스트 하나 뒤집기 (Reverse a single sublist): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 - 사이클이 없는 두 리스트가 겹치는지 확인 (Two linked lists overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 - 사이클이 있는 두 리스트가 겹치는지 확인 (Two linked lists with cycles overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
+
+### 스택 (Stack)
+
+- 최댓값을 찾는 스택 구현하기 (Max stack element): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack))
 
 ### 트리 (Tree)
 
