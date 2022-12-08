@@ -79,6 +79,7 @@ Additionally, each project is configured in the following environments:
 
 ### Stack
 
+- Print linked list in reverse order (PrintLinkedListInReverseOrder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Print the linked list in reverse order using stack.
 - Max stack element: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Implement stack that caches max value.
 
 ### Tree

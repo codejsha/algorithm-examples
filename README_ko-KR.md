@@ -79,6 +79,7 @@
 
 ### 스택 (Stack)
 
+- 링크드 리스트를 역순으로 출력 (Print linked list in reverse order (PrintLinkedListInReverseOrder)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack))
 - 최댓값을 찾는 스택 구현하기 (Max stack element): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack))
 
 ### 트리 (Tree)
