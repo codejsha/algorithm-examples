@@ -3,7 +3,6 @@
 
 #include <stack>
 #include <stdexcept>
-#include <xutility>
 
 namespace MaxStackElement
 {
