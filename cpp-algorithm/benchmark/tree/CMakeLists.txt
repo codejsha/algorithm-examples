@@ -28,4 +28,5 @@ macro(add_target_header_benchmark target)
 endmacro()
 
 add_target_header_benchmark(b_tree_benchmark)
+# add_target_test(balanced_tree_status_test)
 add_target_header_benchmark(binary_search_tree_benchmark)

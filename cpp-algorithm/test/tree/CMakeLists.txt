@@ -31,5 +31,6 @@ macro(add_target_header_test target)
 endmacro()
 
 add_target_header_test(b_tree_test)
+add_target_test(balanced_tree_status_test)
 add_target_header_test(binary_search_tree_test)
 # add_target_test(red_black_tree_test)
