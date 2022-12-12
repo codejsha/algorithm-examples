@@ -6,6 +6,7 @@ UseTab: Never
 AccessModifierOffset: -4
 AlignAfterOpenBracket: DontAlign
 AlignOperands: true
+AlwaysBreakTemplateDeclarations: No
 BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeBraces: Allman
 FixNamespaceComments: False
