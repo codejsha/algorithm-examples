@@ -168,6 +168,7 @@ namespace BinarySearchTree
     template <typename T> auto Tree<T>::Predecessor(T key) -> Node<T>*
     {
         auto node = IterativeSearch(root_, key);
+
         if (node == nullptr)
         {
             return nullptr;

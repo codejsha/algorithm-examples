@@ -5,10 +5,10 @@
 
 GTEST_TEST(BinarySearchTreeTest, PreorderTraversal)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{15, 6, 3, 2, 4, 7, 13, 9, 18, 17, 20};
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -25,10 +25,10 @@ GTEST_TEST(BinarySearchTreeTest, PreorderTraversal)
 
 GTEST_TEST(BinarySearchTreeTest, InorderTraversal)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -45,10 +45,10 @@ GTEST_TEST(BinarySearchTreeTest, InorderTraversal)
 
 GTEST_TEST(BinarySearchTreeTest, PostorderTraversal)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 4, 3, 9, 13, 7, 6, 17, 20, 18, 15};
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -65,10 +65,10 @@ GTEST_TEST(BinarySearchTreeTest, PostorderTraversal)
 
 GTEST_TEST(BinarySearchTreeTest, Minimum)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = *std::ranges::min_element(keys);
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -80,10 +80,10 @@ GTEST_TEST(BinarySearchTreeTest, Minimum)
 
 GTEST_TEST(BinarySearchTreeTest, Maximum)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = *std::ranges::max_element(keys);
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -95,10 +95,10 @@ GTEST_TEST(BinarySearchTreeTest, Maximum)
 
 GTEST_TEST(BinarySearchTreeTest, Predecessor)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 13;
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -110,10 +110,10 @@ GTEST_TEST(BinarySearchTreeTest, Predecessor)
 
 GTEST_TEST(BinarySearchTreeTest, Successor)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 17;
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -125,10 +125,10 @@ GTEST_TEST(BinarySearchTreeTest, Successor)
 
 GTEST_TEST(BinarySearchTreeTest, IterativeSearch)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = keys.back();
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -140,10 +140,10 @@ GTEST_TEST(BinarySearchTreeTest, IterativeSearch)
 
 GTEST_TEST(BinarySearchTreeTest, RecursiveSearch)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = keys.back();
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -155,10 +155,10 @@ GTEST_TEST(BinarySearchTreeTest, RecursiveSearch)
 
 GTEST_TEST(BinarySearchTreeTest, Delete_1)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     auto seq_size = static_cast<int>(keys.size());
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
@@ -174,10 +174,10 @@ GTEST_TEST(BinarySearchTreeTest, Delete_1)
 
 GTEST_TEST(BinarySearchTreeTest, Delete_2)
 {
-    auto tree = BinarySearchTree::Tree<int>{};
     const auto keys = std::vector<int>{8, 3, 10, 1, 6, 14, 4, 7, 13};
     auto seq_size = static_cast<int>(keys.size());
 
+    auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
     {
         tree.Insert(key);
