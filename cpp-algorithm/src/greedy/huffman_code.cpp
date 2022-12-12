@@ -17,10 +17,10 @@ auto Huffman::HuffmanCode(const std::map<int, char>& freq_map) -> HuffmanNode*
         const auto right = min_queue.top();
         min_queue.pop();
 
-        const auto key = left->Key + right->Key;
-        auto node = new HuffmanNode{key, '-', left->Freq + right->Freq};
-        node->Left = left;
-        node->Right = right;
+        const auto key = left->key + right->key;
+        auto node = new HuffmanNode{key, '-', left->freq + right->freq};
+        node->left = left;
+        node->right = right;
 
         min_queue.push(node);
     }
@@ -35,11 +35,11 @@ void Huffman::TraversalHuffmanCode(const HuffmanNode* root, std::string code, st
         return;
     }
 
-    if (root->Ch != '-')
+    if (root->ch != '-')
     {
-        result.insert(std::pair(root->Ch, code));
+        result.insert(std::pair(root->ch, code));
     }
 
-    TraversalHuffmanCode(root->Left, code + "0", result);
-    TraversalHuffmanCode(root->Right, code + "1", result);
+    TraversalHuffmanCode(root->left, code + "0", result);
+    TraversalHuffmanCode(root->right, code + "1", result);
 }

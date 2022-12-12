@@ -1,4 +1,3 @@
-#include "tree.h"
 #include "huffman_code.h"
 
 #include <gtest/gtest.h>

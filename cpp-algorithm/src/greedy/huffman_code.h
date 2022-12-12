@@ -1,21 +1,26 @@
 #ifndef CPP_ALGORITHM_HUFFMAN_CODE_H
 #define CPP_ALGORITHM_HUFFMAN_CODE_H
 
-#include "tree.h"
-
 #include <map>
 #include <string>
 
 namespace Huffman
 {
     /// @brief Node in full binary tree for Huffman code.
-    struct HuffmanNode : Tree::BinaryNode<HuffmanNode>
+    struct HuffmanNode
     {
-        char Ch;
-        int Freq;
+        HuffmanNode* left;
+        HuffmanNode* right;
+        int key;
+        char ch;
+        int freq;
 
-        explicit HuffmanNode(const int key, const char ch, const int freq)
-            : BinaryNode<HuffmanNode>(key), Ch(ch), Freq(freq)
+        HuffmanNode(const int key, const char ch, const int freq)
+            : left(nullptr),
+              right(nullptr),
+              key(key),
+              ch(ch),
+              freq(freq)
         {
         }
     };
@@ -26,7 +31,7 @@ namespace Huffman
     public:
         auto operator()(const HuffmanNode* l, const HuffmanNode* r) const -> bool
         {
-            return (l->Freq > r->Freq);
+            return (l->freq > r->freq);
         }
     };
 

@@ -1,171 +1,192 @@
 #include "binary_search_tree.h"
-#include "tree.h"
 
 #include <algorithm>
 #include <gtest/gtest.h>
-#include <ranges>
 
-GTEST_TEST(BinarySearchTreeTest, PreorderTreeWalk)
+GTEST_TEST(BinarySearchTreeTest, PreorderTraversal)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{15, 6, 3, 2, 4, 7, 13, 9, 18, 17, 20};
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.PreorderTreeWalk();
+    auto result = std::vector<int>{};
+    tree.PreorderTraversal(tree.GetRoot(), result);
     ASSERT_EQ(static_cast<int>(expected.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
     const auto is_equal = std::ranges::equal(expected, result);
-    ASSERT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
+    EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(BinarySearchTreeTest, InorderTreeWalk)
+GTEST_TEST(BinarySearchTreeTest, InorderTraversal)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.InorderTreeWalk();
+    auto result = std::vector<int>{};
+    tree.InorderTraversal(tree.GetRoot(), result);
     ASSERT_EQ(static_cast<int>(expected.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
     const auto is_equal = std::ranges::equal(expected, result);
-    ASSERT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
+    EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(BinarySearchTreeTest, PostorderTreeWalk)
+GTEST_TEST(BinarySearchTreeTest, PostorderTraversal)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 4, 3, 9, 13, 7, 6, 17, 20, 18, 15};
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.PostorderTreeWalk();
+    auto result = std::vector<int>{};
+    tree.PostorderTraversal(tree.GetRoot(), result);
     ASSERT_EQ(static_cast<int>(expected.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
     const auto is_equal = std::ranges::equal(expected, result);
-    ASSERT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
+    EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(BinarySearchTreeTest, GetMinimum)
+GTEST_TEST(BinarySearchTreeTest, Minimum)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    const auto expected = *std::ranges::min_element(seq);
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    const auto expected = *std::ranges::min_element(keys);
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.TreeMinimum();
-    ASSERT_EQ(expected, result->Key);
+    const auto result = tree.Minimum(tree.GetRoot());
+    EXPECT_EQ(expected, result->key);
 }
 
-GTEST_TEST(BinarySearchTreeTest, GetMaximum)
+GTEST_TEST(BinarySearchTreeTest, Maximum)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    const auto expected = *std::ranges::max_element(seq);
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    const auto expected = *std::ranges::max_element(keys);
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.TreeMaximum();
-    ASSERT_EQ(expected, result->Key);
+    const auto result = tree.Maximum(tree.GetRoot());
+    EXPECT_EQ(expected, result->key);
 }
 
-GTEST_TEST(BinarySearchTreeTest, GetPredecessor)
+GTEST_TEST(BinarySearchTreeTest, Predecessor)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 13;
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.TreePredecessor(15);
-    ASSERT_EQ(expected, result->Key);
+    const auto result = tree.Predecessor(15)->key;
+    EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, GetSuccessor)
+GTEST_TEST(BinarySearchTreeTest, Successor)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 17;
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.TreeSuccessor(15);
-    ASSERT_EQ(expected, result->Key);
+    const auto result = tree.Successor(15)->key;
+    EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, RecursiveTreeSearch)
+GTEST_TEST(BinarySearchTreeTest, IterativeSearch)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    const auto expected = keys.back();
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.RecursiveTreeSearch(seq.back());
-    ASSERT_EQ(seq.back(), result->Key);
+    const auto result = tree.IterativeSearch(tree.GetRoot(), keys.back())->key;
+    EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, IterativeTreeSearch)
+GTEST_TEST(BinarySearchTreeTest, RecursiveSearch)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    const auto expected = keys.back();
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    const auto result = tree.IterativeTreeSearch(seq.back());
-    ASSERT_EQ(seq.back(), result->Key);
+    const auto result = tree.RecursiveSearch(tree.GetRoot(), keys.back())->key;
+    EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, Delete)
+GTEST_TEST(BinarySearchTreeTest, Delete_1)
 {
-    const auto seq = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    auto seq_size = static_cast<int>(seq.size());
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
+    auto seq_size = static_cast<int>(keys.size());
 
-    auto tree = Tree::BinarySearchTree{};
-    for (const auto& element : seq)
+    for (const auto key : keys)
     {
-        tree.Insert(element);
+        tree.Insert(key);
     }
 
-    for (auto& element : seq)
+    for (auto key : keys)
     {
-        tree.Delete(element);
-        const auto result = tree.InorderTreeWalk();
-        ASSERT_EQ(--seq_size, static_cast<int>(result.size()))
-            << "Vectors input and result are of unequal length";
+        tree.Delete(tree.GetRoot(), key);
+        auto result = std::vector<int>{};
+        tree.InorderTraversal(tree.GetRoot(), result);
+    }
+}
+
+GTEST_TEST(BinarySearchTreeTest, Delete_2)
+{
+    auto tree = BinarySearchTree::Tree<int>{};
+    const auto keys = std::vector<int>{8, 3, 10, 1, 6, 14, 4, 7, 13};
+    auto seq_size = static_cast<int>(keys.size());
+
+    for (const auto key : keys)
+    {
+        tree.Insert(key);
+    }
+
+    for (auto key : keys)
+    {
+        tree.Delete(tree.GetRoot(), key);
+        auto result = std::vector<int>{};
+        tree.InorderTraversal(tree.GetRoot(), result);
     }
 }

@@ -21,7 +21,7 @@ auto MillerRabin::Witness(int exponent, const int number) -> bool
 {
     std::random_device rd;
     std::mt19937 generator(rd());
-    std::uniform_int_distribution<> distribution(2, number - 1);
+    std::uniform_int_distribution distribution(2, number - 1);
     const auto random = distribution(generator);
     auto x = ModularExponentiation(random, exponent, number);
 
