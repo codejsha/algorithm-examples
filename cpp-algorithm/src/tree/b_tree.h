@@ -59,18 +59,18 @@ namespace BTree
         /// @brief Insert key
         /// @param node internal node
         /// @param key key
-        void InsertNonFull(Node<T>* node, char key);
+        void InsertNonFull(Node<T>* node, T key);
 
         /// @brief Insert the key to the tree
         /// @param node reference node for insert
         /// @param key key to insert
-        void Insert(Node<T>* node, char key);
+        void Insert(Node<T>* node, T key);
 
         /// @brief Search the key
         /// @param node reference node for tree search
         /// @param key key to search for
         /// @return node and key index pair
-        auto Search(Node<T>* node, char key) -> std::pair<Node<T>*, const int>;
+        auto Search(Node<T>* node, T key) -> std::pair<Node<T>*, const int>;
 
     private:
         Node<T>* root_{};
@@ -124,7 +124,7 @@ namespace BTree
         node->children.insert(node->children.begin() + index + 1, right_child);
     }
 
-    template <typename T> void Tree<T>::InsertNonFull(Node<T>* node, char key)
+    template <typename T> void Tree<T>::InsertNonFull(Node<T>* node, T key)
     {
         auto key_count = node->GetKeyCount();
 
@@ -159,7 +159,7 @@ namespace BTree
         }
     }
 
-    template <typename T> void Tree<T>::Insert(Node<T>* node, char key)
+    template <typename T> void Tree<T>::Insert(Node<T>* node, T key)
     {
         auto root_node = node;
 
@@ -178,7 +178,7 @@ namespace BTree
         }
     }
 
-    template <typename T> auto Tree<T>::Search(Node<T>* node, char key) -> std::pair<Node<T>*, const int>
+    template <typename T> auto Tree<T>::Search(Node<T>* node, T key) -> std::pair<Node<T>*, const int>
     {
         auto index = 0;
         auto key_count = node->GetKeyCount();
