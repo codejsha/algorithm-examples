@@ -9,7 +9,7 @@ This repository is an implementation of algorithms, data structures, and problem
 Additionally, each project is configured in the following environments:
 
 - C++ project: based on [CMake](https://cmake.org/) project and uses [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) packages (package manager [vcpkg](https://github.com/microsoft/vcpkg))
-- Python project: uses [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) packages
+- Python project: uses [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages
 - Java project: based on [Gradle](https://gradle.org/) project and uses [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) libraries
 
 ## Table of Contents
@@ -18,7 +18,10 @@ Additionally, each project is configured in the following environments:
 - [Data structures](#data-structures)
   - [Array](#array)
   - [Graph](#graph)
+  - [Hash table](#hash-table)
+  - [Heap](#heap)
   - [Linked list](#linked-list)
+  - [Queue](#queue)
   - [Stack](#stack)
   - [Tree](#tree)
 - [Topics](#topics)
@@ -35,6 +38,31 @@ Additionally, each project is configured in the following environments:
 
 ### Array
 
+```cpp
+//// c++
+auto v = std::vector{1, 2, 3, 4, 5};  auto sub_v = std::vector<int>{v.begin(), v.end() - 1};  // vector
+auto arr = std::array{1, 2, 3, 4, 5}; auto sub_arr = std::array{arr.begin(), arr.end() - 1}; // array
+
+// algorithm
+std::ranges::any_of(v, [](auto x) { return x % 2 == 0; })
+std::ranges::all_of(v, [](auto x) { return x % 2 == 0; })
+std::ranges::none_of(v, [](auto x) { return x % 2 == 0; })
+std::ranges::for_each(v, [](auto x) { std::cout << x << " "; }).fun
+std::ranges::count(v, 42)
+std::ranges::count_if(v, [](auto x) { return x % 2 == 0; })
+std::ranges::find(v, 42)
+std::ranges::find_if(v, [](auto x) { return x % 2 == 0; })
+std::ranges::find_end(v, sub_v).begin() // cf. result - v.begin()
+std::ranges::reverse(v)
+std::ranges::rotate(v, v.end() - k)
+std::ranges::sort(v)
+std::ranges::binary_search(v, 42)
+std::ranges::lower_bound(v, 42)
+std::ranges::upper_bound(v, 42)
+std::ranges::min_element(v)
+std::ranges::max_element(v)
+std::ranges::minmax_element(v)
+```
 - Advancing through an array: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Advance through the array to the last index.
 - Arbitrary precision operation - increment an arbitrary-precision integer (PlusOne): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Add one to the number represented by the vector.
 - Arbitrary precision operation - add two arbitrary-precision integers (StringAddition): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Add two numbers represented by strings.
@@ -61,7 +89,37 @@ Additionally, each project is configured in the following environments:
 - Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | DFS is a search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
 - Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | Dijkstra's algorithm is a graph search algorithm that finds the shortest path between two vertices in a graph. This is limited to cases where the weight is not negative.
 
+### Hash table
+
+```cpp
+//// c++
+auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
+insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty()
+
+auto set = std::unordered_set{1, 2, 3, 4, 5};
+insert(42), emplace(42), erase(42), find(42), size()
+```
+
+### Heap
+
+```cpp
+//// c++
+auto queue = std::priority_queue<int>{};
+push(1), emplace(2), pop(), top(), size(), empty()
+```
+
 ### Linked list
+
+```cpp
+//// c++
+auto list = std::list{1, 2, 3};
+push_front(4), emplace_front(5), push_back(6), emplace_back(7),
+pop_front(), pop_back(), reverse(), sort(), insert(list.begin(), 11),
+emplace(list.end(), 12), splice(list.end(), std::list{8, 9, 10})
+
+auto list = std::forward_list{1, 2, 3};
+push_front(4), emplace_front(5), pop_front(), reverse(), sort()
+```
 
 - Add list-based integers (AddTwoNumbers): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Add two numbers represented by linked list.
 - Delete a node from linked list (DeleteNodeFromList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Delete a node from a linked list.
@@ -77,7 +135,25 @@ Additionally, each project is configured in the following environments:
 - Two linked lists overlap (OverlappingNoCycleList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists without cycle overlap.
 - Two linked lists with cycles overlap (OverlappingCycleList) [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists with cycle overlap.
 
+### Queue
+
+```cpp
+//// c++
+auto container = std::queue<int>{};
+push(1), emplace(2), pop(), front(), back(), size(), empty()
+
+auto container = std::deque<int>{};
+push_back(1), emplace_back(2), push_front(3), emplace_front(4),
+pop_back(), pop_front(), front(), back(), size(), empty()
+```
+
 ### Stack
+
+```cpp
+//// c++
+auto stack = std::stack<int>{};
+push(1), emplace(2), pop(), top(), size(), empty()
+```
 
 - Pair of bracket (CheckPairOfBracket): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Checks if the input string contains bracket pairs and is well-formed.
 - Print linked list in reverse order (PrintLinkedListInReverseOrder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Print the linked list in reverse order using stack.
@@ -144,6 +220,25 @@ Additionally, each project is configured in the following environments:
 
 ### Primitive type
 
+```cpp
+//// c++
+std::to_string(42), std::swap(x, y)
+std::numeric_limits<int>::min(), std::numeric_limits<float>::max(), std::numeric_limits<double>::infinity() // constants
+std::abs(-34), std::fabs(-3.14), std::ceil(2.17), std::floor(3.14), std::min(x, -4), std::max(3.14, y), pow(2.17, 3.14), log(7.12), sqrt(225) // cmath
+std::stoi("42"), std::stod("3.14"), std::stoi("42", nullptr, 16), std::stoi("1000010", nullptr, 2) // string -> int/double/hex/binary
+std::bitset<8>(42), std::bitset<8>(3.14), std::bitset<8>(0x42), std::bitset<8>(0b1000010) // int/double/hex/binary -> bitset
+std::uniform_int_distribution<int> distribution(1, 6), std::uniform_real_distribution<double> distribution(0.0, 1.0) // random
+
+// random number
+std::random_device rd;
+std::mt19937 generator(rd());
+// integer in [1, 10]
+std::uniform_int_distribution distribution(1, 10);
+const auto i = distribution(generator);
+// floating point number in [0, 1)
+const auto d = std::generate_canonical<double, 10>(generator);
+```
+
 - Arithmetic operation (Multiply/Divide): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Calculate the product/fraction of two numbers without using arithmetic operators.
 - Computing parity of word (CountBits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Count the number of bits that are set to 1.
 - Computing parity of word (Parity): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute parity of word.
@@ -158,10 +253,25 @@ Additionally, each project is configured in the following environments:
 
 ### Search
 
+```cpp
+//// c++ binary search
+auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
+insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
+
+auto set = std::set{1, 2, 3, 4, 5};
+insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
+```
+
 - Binary search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
 - Linear search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
 
 ### Sort
+
+```cpp
+//// c++
+std::ranges::sort(v);         // introsort (quick sort + heap sort + insertion sort)
+std::ranges::stable_sort(v);  // merge sort
+```
 
 - Bubble sort
 
@@ -223,7 +333,7 @@ divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                              |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------- |
-| **Best**    |    $O(n log n)$     | * running time of sorting for input length $n$ is $T(n)$<br>* $T(n) = 2T(n/2) + O(n) \approx	O(n log n)$ |
+| **Best**    |    $O(n log n)$     | * running time of sorting for input length $n$ is $T(n)$<br>* $T(n) = 2T(n/2) + O(n) \approx O(n log n)$ |
 | **Worst**   |    $O(n log n)$     |                                                                                                          |
 | **Average** |    $O(n log n)$     |                                                                                                          |
 
@@ -250,6 +360,12 @@ divide and conquer algorithm
 | **Average** |      $O(n^2)$       |                                                                                        |
 
 ### String
+
+```cpp
+//// c++
+auto str = std::string{"hello"};
+append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
+```
 
 - Convert string (IntToString, StringToInt): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Convert integer to string and vice versa.
 - IP address validation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Validate IPv4 address that is in the form of `x.x.x.x` where `x` is a number between 0 and 255.

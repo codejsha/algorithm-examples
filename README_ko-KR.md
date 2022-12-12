@@ -9,7 +9,7 @@
 추가로, 각 프로젝트는 다음과 같은 환경에서 구성되었습니다:
 
 - C++ project: [CMake](https://cmake.org/) 프로젝트 기반, [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) 패키지 사용 (패키지 매니저 [vcpkg](https://github.com/microsoft/vcpkg))
-- Python project: [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/) 패키지 사용
+- Python project: [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) 패키지 사용
 - Java project: [Gradle](https://gradle.org/) 프로젝트 기반, [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) 라이브러리 사용
 
 ## 목차 (Table of Contents)
@@ -18,7 +18,10 @@
 - [데이터 구조 (Data structures)](#데이터-구조-data-structures)
   - [배열 (Array)](#배열-array)
   - [그래프 (Graph)](#그래프-graph)
+  - [해시 테이블 (Hash table)](#해시-테이블-hash-table)
+  - [힙 (Heap)](#힙-heap)
   - [링크드 리스트 (Linked list)](#링크드-리스트-linked-list)
+  - [큐 (Queue)](#큐-queue)
   - [스택 (Stack)](#스택-stack)
   - [트리 (Tree)](#트리-tree)
 - [주제 (Topics)](#주제-topics)
@@ -26,7 +29,7 @@
   - [그리디 (Greedy)](#그리디-greedy)
   - [수학 (Mathematics)](#수학-mathematics)
   - [기본 자료형 (Primitive type)](#기본-자료형-primitive-type)
-  - [검색 (Search)](#검색-search)
+  - [탐색 (Search)](#탐색-search)
   - [정렬 (Sort)](#정렬-sort)
   - [문자열 (String)](#문자열-string)
 - [참조 (References)](#참조-references)
@@ -61,6 +64,10 @@
 - 깊이 우선 탐색 (Depth-first search (DFS)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph))
 - 다익스트라 알고리즘 (Dijkstra's algorithm): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph))
 
+### 해시 테이블 (Hash table)
+
+### 힙 (Heap)
+
 ### 링크드 리스트 (Linked list)
 
 - 리스트로 표현된 정수의 덧셈 (Add list-based integers (AddTwoNumbers)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
@@ -77,6 +84,8 @@
 - 사이클이 없는 두 리스트가 겹치는지 확인 (Two linked lists overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 - 사이클이 있는 두 리스트가 겹치는지 확인 (Two linked lists with cycles overlap (OverlappingNoCycleList)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))
 
+### 큐 (Queue)
+
 ### 스택 (Stack)
 
 - 괄호 문자열이 올바른 형태인지 확인하기 (Pair of bracket (CheckPairOfBracket)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack))
@@ -86,7 +95,9 @@
 ### 트리 (Tree)
 
 - B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
-- 이진 검색 트리 (Binary search tree): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
+- 이진 트리의 높이가 균형 잡혀 있는지 확인하기 (Balanced tree status): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
+- 이진 탐색 트리 (Binary search tree): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
+- 이진 트리가 대칭인지 확인하기 (Tree symmetric): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 
 ## 주제 (Topics)
 
@@ -133,10 +144,10 @@
 - 숫자 뒤집기 (Reverse digits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)
 - 비트 스왑 (Swap bits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type))
 
-### 검색 (Search)
+### 탐색 (Search)
 
-- 이진 검색 (Binary search): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search))
-- 선형 검색 (Linear search): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search))
+- 이진 탐색 (Binary search): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search))
+- 선형 탐색 (Linear search): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search))
 
 ### 정렬 (Sort)
 
