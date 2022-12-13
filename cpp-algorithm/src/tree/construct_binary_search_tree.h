@@ -11,7 +11,7 @@ namespace BinarySearchTree
     /// @brief Construct the subtree from the given preorder and inorder traversal.
     /// This is a helper function for ConstructTreeFromPreorderInorder.
     /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T node type
+    /// @tparam T the type of the key
     /// @param preorder preorder traversal result
     /// @param inorder inorder traversal result
     /// @param preorder_start start index of preorder map
@@ -48,7 +48,7 @@ namespace BinarySearchTree
     /// The time complexity is O(n). It takes O(n) to create the hash table and O(1) for each node in recursion.
     /// When the height is h, the space complexity is O(n+h) = O(n).
     /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T node type
+    /// @tparam T the type of the key
     /// @param preorder preorder traversal result
     /// @param inorder inorder traversal result
     /// @return the root of the constructed tree
@@ -66,7 +66,7 @@ namespace BinarySearchTree
     /// @brief Construct the subtree from the given postorder traversal with marker.
     /// This is a helper function for ConstructTreeFromPreorderInorder.
     /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T node type 
+    /// @tparam T the type of the key
     /// @param preorder preorder traversal result
     /// @param subtree_idx_pointer subtree index pointer
     /// @return the root of the subtree
@@ -96,7 +96,7 @@ namespace BinarySearchTree
     /// @brief Construct a binary search tree from preorder traversal with marker.
     /// @details When the count of nodes is n, the time complexity is O(n).
     /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T node type
+    /// @tparam T the type of the key
     /// @param preorder preorder traversal result
     /// @return the root of the constructed tree
     template <typename T> auto ConstructTreeFromMarkerPreorder(std::vector<T>& preorder) -> Node<T>*

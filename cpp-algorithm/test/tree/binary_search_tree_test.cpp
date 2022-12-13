@@ -273,7 +273,7 @@ GTEST_TEST(BinarySearchTree, Delete_1)
         tree.Insert(key);
     }
 
-    for (auto key : keys)
+    for (const auto key : keys)
     {
         tree.Delete(tree.GetRoot(), key);
         auto result = std::vector<int>{};
@@ -302,7 +302,7 @@ GTEST_TEST(BinarySearchTree, Delete_2)
         tree.Insert(key);
     }
 
-    for (auto key : keys)
+    for (const auto key : keys)
     {
         tree.Delete(tree.GetRoot(), key);
         auto result = std::vector<int>{};

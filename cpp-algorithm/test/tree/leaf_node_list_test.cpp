@@ -37,8 +37,8 @@ GTEST_TEST(LeafNodeList, CreateLeafNodeList)
     node5.right = &node10;
     node10.left = &node11;
 
-    auto expected = std::vector<int>{2, 4, 9, 17, 20};
-    auto result = LeafNodeList::CreateLeafNodeList(&node1);
+    const auto expected = std::vector{2, 4, 9, 17, 20};
+    const auto result = LeafNodeList::CreateLeafNodeList(&node1);
     auto result_values = std::vector<int>{};
     for (const auto& node : result)
     {
