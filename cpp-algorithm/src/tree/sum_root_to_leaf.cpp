@@ -37,3 +37,17 @@ auto TreeSumRootToLeaf::SumRootToLeafHelperBinary(const BinaryTree::Node<int>* t
 {
     return SumRootToLeaf(tree, partial_path_sum, 2);
 }
+
+auto TreeSumRootToLeaf::HasKeySum(const BinaryTree::Node<int>* tree, const int partial_sum) -> bool
+{
+    if (tree == nullptr)
+    {
+        return false;
+    }
+    if (tree->left == nullptr && tree->right == nullptr)
+    {
+        return partial_sum == tree->key;
+    }
+    return HasKeySum(tree->left, partial_sum - tree->key)
+           || HasKeySum(tree->right, partial_sum - tree->key);
+}

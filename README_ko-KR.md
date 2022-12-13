@@ -99,6 +99,7 @@
 - 이진 탐색 트리 (Binary search tree): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 - 이진 트리의 최소 공통 조상 구하기 (Lowest common ancestor (FindLowestCommonAncestor)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 - 노드에 부모를 가리키는 정보가 있을 때 최소 공통 조상 구하기 (Lowest common ancestor with parent pointer (FindLowestCommonAncestor2)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
+- 주어진 합에 해당하는 루트-리프 노드 경로의 존재 확인 (Root to leaf path corresponding to the given sum (HasKeySum)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 - 루트-리프 노드 경로의 합 구하기 (십진 및 이진 표현) (Sum of root to leaf (SumRootToLeafDecimal, SumRootToLeafBinary)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 - 이진 트리가 대칭인지 확인하기 (Tree symmetric): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 
