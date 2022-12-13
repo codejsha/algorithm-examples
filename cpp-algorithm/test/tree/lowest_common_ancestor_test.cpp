@@ -1,4 +1,3 @@
-#include "binary_tree.h"
 #include "lowest_common_ancestor.h"
 
 #include <gtest/gtest.h>

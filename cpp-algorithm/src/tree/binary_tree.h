@@ -9,6 +9,18 @@ namespace BinaryTree
         T key;
         Node* left;
         Node* right;
+        Node()
+            : key{}, left{nullptr}, right{nullptr}
+        {
+        }
+        explicit Node(T key)
+            : key{key}, left{nullptr}, right{nullptr}
+        {
+        }
+        Node(T key, Node* left, Node* right)
+            : key{key}, left{left}, right{right}
+        {
+        }
     };
 }
 

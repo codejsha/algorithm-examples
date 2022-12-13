@@ -12,6 +12,18 @@ namespace BinarySearchTree
         Node* parent;
         Node* left;
         Node* right;
+        Node()
+            : key{}, parent{nullptr}, left{nullptr}, right{nullptr}
+        {
+        }
+        explicit Node(T key)
+            : key{key}, parent{nullptr}, left{nullptr}, right{nullptr}
+        {
+        }
+        Node(T key, Node* parent, Node* left, Node* right)
+            : key{key}, parent{parent}, left{left}, right{right}
+        {
+        }
     };
 
     template <typename T>

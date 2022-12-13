@@ -118,7 +118,7 @@ GTEST_TEST(BinarySearchTree, Minimum)
         tree.Insert(key);
     }
 
-    const auto result = tree.Minimum(tree.GetRoot());
+    const auto result = BinarySearchTree::Tree<int>::Minimum(tree.GetRoot());
     EXPECT_EQ(expected, result->key);
 }
 
@@ -144,7 +144,7 @@ GTEST_TEST(BinarySearchTree, Maximum)
         tree.Insert(key);
     }
 
-    const auto result = tree.Maximum(tree.GetRoot());
+    const auto result = BinarySearchTree::Tree<int>::Maximum(tree.GetRoot());
     EXPECT_EQ(expected, result->key);
 }
 
@@ -266,7 +266,6 @@ GTEST_TEST(BinarySearchTree, Delete_1)
     //          9
 
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    auto seq_size = static_cast<int>(keys.size());
 
     auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)
@@ -296,7 +295,6 @@ GTEST_TEST(BinarySearchTree, Delete_2)
     //          9
 
     const auto keys = std::vector<int>{8, 3, 10, 1, 6, 14, 4, 7, 13};
-    auto seq_size = static_cast<int>(keys.size());
 
     auto tree = BinarySearchTree::Tree<int>{};
     for (const auto key : keys)

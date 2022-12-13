@@ -1,4 +1,3 @@
-#include "binary_tree.h"
 #include "tree_symmetric.h"
 
 #include <gtest/gtest.h>
