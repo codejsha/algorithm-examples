@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <gtest/gtest.h>
 
-GTEST_TEST(ConstructBinarySearchTree, PreorderTraversal)
+GTEST_TEST(ConstructTreeFromPreorderInorder, PreorderTraversal)
 {
     // example tree:
     //             15
@@ -33,7 +33,7 @@ GTEST_TEST(ConstructBinarySearchTree, PreorderTraversal)
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(ConstructBinarySearchTree, InorderTraversal)
+GTEST_TEST(ConstructTreeFromPreorderInorder, InorderTraversal)
 {
     // example tree:
     //             15
@@ -62,7 +62,7 @@ GTEST_TEST(ConstructBinarySearchTree, InorderTraversal)
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(ConstructBinarySearchTree, PostorderTraversal)
+GTEST_TEST(ConstructTreeFromPreorderInorder, PostorderTraversal)
 {
     // example tree:
     //             15
@@ -89,5 +89,37 @@ GTEST_TEST(ConstructBinarySearchTree, PostorderTraversal)
         << "Vectors input and result are of unequal length";
 
     const auto is_equal = std::ranges::equal(expected, result);
+    EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
+}
+
+GTEST_TEST(ConstructTreeFromMarkerPreorder, PreorderTraversal)
+{
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
+    auto preorder = std::vector<char>{'H', 'B', 'F', NULL, NULL, 'E', 'A', NULL, NULL, NULL,
+        'C', NULL, 'D', NULL, 'G', 'I', NULL, NULL, NULL};
+    // auto preorder = std::vector<std::string>{"H", "B", "F", nullptr, nullptr, "E", "A", nullptr, nullptr, nullptr,
+    //     "C", nullptr, "D", nullptr, "G", "I", nullptr, nullptr, nullptr};
+
+    auto root = BinarySearchTree::ConstructTreeFromMarkerPreorder(preorder);
+
+    auto tree = BinarySearchTree::Tree<char>{};
+    auto result = std::vector<char>{};
+    tree.PreorderTraversal(root, result);
+    preorder.erase(std::remove(preorder.begin(), preorder.end(), NULL), preorder.end());
+
+    ASSERT_EQ(static_cast<int>(preorder.size()), static_cast<int>(result.size()))
+        << "Vectors input and result are of unequal length";
+
+    const auto is_equal = std::ranges::equal(preorder, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }

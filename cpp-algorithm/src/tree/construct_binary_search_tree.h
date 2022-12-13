@@ -63,6 +63,47 @@ namespace BinarySearchTree
             0, preorder.size() - 1, 0, inorder.size() - 1, inorder_map);
     }
 
+    /// @brief Construct the subtree from the given postorder traversal with marker.
+    /// This is a helper function for ConstructTreeFromPreorderInorder.
+    /// @note In this operation, the parent pointer of struct Node is ignored.
+    /// @tparam T node type 
+    /// @param preorder preorder traversal result
+    /// @param subtree_idx_pointer subtree index pointer
+    /// @return the root of the subtree
+    template <typename T> auto ConstructTreeFromMarkerPreorderHelper(std::vector<T>& preorder, int& subtree_idx_pointer) -> Node<T>*
+    {
+        if (subtree_idx_pointer >= preorder.size())
+        {
+            return nullptr;
+        }
+
+        auto subtree_root = preorder[subtree_idx_pointer];
+        if (subtree_root == NULL)
+        {
+            return nullptr;
+        }
+
+        auto root = new Node<T>{};
+        root->key = subtree_root;
+        ++subtree_idx_pointer;
+        root->left = ConstructTreeFromMarkerPreorderHelper(preorder, subtree_idx_pointer);
+        ++subtree_idx_pointer;
+        root->right = ConstructTreeFromMarkerPreorderHelper(preorder, subtree_idx_pointer);
+
+        return root;
+    }
+
+    /// @brief Construct a binary search tree from preorder traversal with marker.
+    /// @details When the count of nodes is n, the time complexity is O(n).
+    /// @note In this operation, the parent pointer of struct Node is ignored.
+    /// @tparam T node type
+    /// @param preorder preorder traversal result
+    /// @return the root of the constructed tree
+    template <typename T> auto ConstructTreeFromMarkerPreorder(std::vector<T>& preorder) -> Node<T>*
+    {
+        auto subtree_idx_pointer = 0;
+        return ConstructTreeFromMarkerPreorderHelper(preorder, subtree_idx_pointer);
+    }
 }
 
 #endif
