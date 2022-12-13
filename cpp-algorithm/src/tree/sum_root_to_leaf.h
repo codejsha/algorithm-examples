@@ -16,12 +16,12 @@ namespace TreeSumRootToLeaf
     /// @return the partial sum of all root-to-leaf paths
     auto SumRootToLeafHelperDecimal(const BinaryTree::Node<int>* tree, int partial_path_sum) -> int;
 
-    /// @brief Sum of binary numbers represented by root-to-leaf paths.
+    /// @brief Sum of all binary numbers represented by root-to-leaf paths.
     /// @param tree the root of the tree
     /// @return the sum of binary numbers represented by root-to-leaf paths
     auto SumRootToLeafBinary(const BinaryTree::Node<int>* tree) -> int;
 
-    /// @brief Partial sum of binary numbers represented by root-to-leaf paths
+    /// @brief Partial sum of all binary numbers represented by root-to-leaf paths
     /// @param tree the root of the tree
     /// @param partial_path_sum the partial path sum
     /// @return the partial sum of binary numbers represented by root-to-leaf paths

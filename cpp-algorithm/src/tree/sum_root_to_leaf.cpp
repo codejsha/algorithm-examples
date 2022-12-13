@@ -1,6 +1,6 @@
 #include "sum_root_to_leaf.h"
 
-auto SumRootToLeaf(const BinaryTree::Node<int>* tree, int partial_path_sum, int base) -> int
+auto SumRootToLeaf(const BinaryTree::Node<int>* tree, int partial_path_sum, const int base) -> int
 {
     if (tree == nullptr)
     {
@@ -23,7 +23,7 @@ auto TreeSumRootToLeaf::SumRootToLeafDecimal(const BinaryTree::Node<int>* tree) 
     return SumRootToLeafHelperDecimal(tree, 0);
 }
 
-auto TreeSumRootToLeaf::SumRootToLeafHelperDecimal(const BinaryTree::Node<int>* tree, int partial_path_sum) -> int
+auto TreeSumRootToLeaf::SumRootToLeafHelperDecimal(const BinaryTree::Node<int>* tree, const int partial_path_sum) -> int
 {
     return SumRootToLeaf(tree, partial_path_sum, 10);
 }
@@ -33,7 +33,7 @@ auto TreeSumRootToLeaf::SumRootToLeafBinary(const BinaryTree::Node<int>* tree) -
     return SumRootToLeafHelperBinary(tree, 0);
 }
 
-auto TreeSumRootToLeaf::SumRootToLeafHelperBinary(const BinaryTree::Node<int>* tree, int partial_path_sum) -> int
+auto TreeSumRootToLeaf::SumRootToLeafHelperBinary(const BinaryTree::Node<int>* tree, const int partial_path_sum) -> int
 {
     return SumRootToLeaf(tree, partial_path_sum, 2);
 }

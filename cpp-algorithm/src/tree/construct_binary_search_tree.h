@@ -59,7 +59,7 @@ namespace BinarySearchTree
         {
             inorder_map.emplace(inorder[i], i);
         }
-        return ConstructTreeFromPreorderInorderHelper(preorder, inorder, 
+        return ConstructTreeFromPreorderInorderHelper(preorder, inorder,
             0, preorder.size() - 1, 0, inorder.size() - 1, inorder_map);
     }
 
