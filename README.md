@@ -4,7 +4,7 @@
 
 [Korean](README_ko-KR.md)
 
-This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run a test to perform the method/function for algorithm logic. GitHub Actions workflows that build and test code run manually.
+This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run tests to perform methods/functions on the algorithmic logic. GitHub Actions workflows that build and test code run manually.
 
 Additionally, each project is configured in the following environments:
 
@@ -39,9 +39,11 @@ Additionally, each project is configured in the following environments:
 ### Array
 
 ```cpp
-//// c++
-auto v = std::vector{1, 2, 3, 4, 5};  auto sub_v = std::vector<int>{v.begin(), v.end() - 1};  // vector
-auto arr = std::array{1, 2, 3, 4, 5}; auto sub_arr = std::array{arr.begin(), arr.end() - 1}; // array
+//// c++ definition/methods
+auto v = std::vector{1, 2, 3, 4, 5};
+auto sub_v = std::vector<int>{v.begin(), v.end() - 1};
+auto arr = std::array{1, 2, 3, 4, 5};
+auto sub_arr = std::array{arr.begin(), arr.end() - 1};
 
 // algorithm
 std::ranges::any_of(v, [](auto x) { return x % 2 == 0; })
@@ -92,7 +94,7 @@ std::ranges::minmax_element(v)
 ### Hash table
 
 ```cpp
-//// c++
+//// c++ definition/methods
 auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty()
 
@@ -103,7 +105,7 @@ insert(42), emplace(42), erase(42), find(42), size()
 ### Heap
 
 ```cpp
-//// c++
+//// c++ definition/methods
 auto queue = std::priority_queue<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
@@ -111,7 +113,7 @@ push(1), emplace(2), pop(), top(), size(), empty()
 ### Linked list
 
 ```cpp
-//// c++
+//// c++ definition/methods
 auto list = std::list{1, 2, 3};
 push_front(4), emplace_front(5), push_back(6), emplace_back(7),
 pop_front(), pop_back(), reverse(), sort(), insert(list.begin(), 11),
@@ -138,7 +140,7 @@ push_front(4), emplace_front(5), pop_front(), reverse(), sort()
 ### Queue
 
 ```cpp
-//// c++
+//// c++ definition/methods
 auto container = std::queue<int>{};
 push(1), emplace(2), pop(), front(), back(), size(), empty()
 
@@ -150,7 +152,7 @@ pop_back(), pop_front(), front(), back(), size(), empty()
 ### Stack
 
 ```cpp
-//// c++
+//// c++ definition/methods
 auto stack = std::stack<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
@@ -224,7 +226,7 @@ push(1), emplace(2), pop(), top(), size(), empty()
 ### Primitive type
 
 ```cpp
-//// c++
+//// c++ definition/methods
 std::to_string(42), std::swap(x, y)
 std::numeric_limits<int>::min(), std::numeric_limits<float>::max(), std::numeric_limits<double>::infinity() // constants
 std::abs(-34), std::fabs(-3.14), std::ceil(2.17), std::floor(3.14), std::min(x, -4), std::max(3.14, y), pow(2.17, 3.14), log(7.12), sqrt(225) // cmath
@@ -257,7 +259,7 @@ const auto d = std::generate_canonical<double, 10>(generator);
 ### Search
 
 ```cpp
-//// c++ binary search
+//// c++ definition/methods
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
 
@@ -271,7 +273,7 @@ insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 ### Sort
 
 ```cpp
-//// c++
+//// c++ definition/methods
 std::ranges::sort(v);         // introsort (quick sort + heap sort + insertion sort)
 std::ranges::stable_sort(v);  // merge sort
 ```
@@ -365,7 +367,7 @@ divide and conquer algorithm
 ### String
 
 ```cpp
-//// c++
+//// c++ definition/methods
 auto str = std::string{"hello"};
 append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
 ```
