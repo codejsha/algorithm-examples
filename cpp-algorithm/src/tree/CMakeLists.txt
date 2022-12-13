@@ -9,4 +9,5 @@ endmacro()
 
 add_library_target(balanced_tree_status)
 add_library_target(lowest_common_ancestor)
+add_library_target(sum_root_to_leaf)
 add_library_target(tree_symmetric)
