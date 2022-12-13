@@ -5,6 +5,15 @@
 
 GTEST_TEST(TreeSymmetric, IsSymmetric_1)
 {
+    // example tree:
+    //        a/314
+    //    /           \
+    // b6               e6
+    //   \             /
+    //    c2         f2
+    //      \       /
+    //       d3   g3
+
     auto node_a = BinaryTree::Node{314};
     auto node_b = BinaryTree::Node{6};
     auto node_c = BinaryTree::Node{2};
@@ -24,6 +33,15 @@ GTEST_TEST(TreeSymmetric, IsSymmetric_1)
 
 GTEST_TEST(TreeSymmetric, IsSymmetric_2)
 {
+    // example tree:
+    //        a/314
+    //    /           \
+    // b6               e6
+    //   \             /
+    //   c561         f2
+    //      \       /
+    //       d3   g1
+
     auto node_a = BinaryTree::Node{314};
     auto node_b = BinaryTree::Node{6};
     auto node_c = BinaryTree::Node{561};
@@ -43,6 +61,15 @@ GTEST_TEST(TreeSymmetric, IsSymmetric_2)
 
 GTEST_TEST(TreeSymmetric, IsSymmetric_3)
 {
+    // example tree:
+    //        a/314
+    //    /           \
+    // b6               e6
+    //   \             /
+    //   c561        f561
+    //      \
+    //       d3
+
     auto node_a = BinaryTree::Node{314};
     auto node_b = BinaryTree::Node{6};
     auto node_c = BinaryTree::Node{561};

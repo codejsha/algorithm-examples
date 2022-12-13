@@ -4,6 +4,12 @@
 
 GTEST_TEST(BTree, Insert)
 {
+    // example tree:
+    //             (G      M      P      X)
+    //           /      /      |     \        \
+    //          /      /       |      \        \
+    // (A C D E)   (J K)    (N O)  (R S T U V)  (Y Z)
+
     auto root_node = new BTree::Node<char>();
     root_node->keys = {'G', 'M', 'P', 'X'};
     root_node->is_leaf = false;
@@ -33,7 +39,12 @@ GTEST_TEST(BTree, Insert)
     tree.SetRoot(root_node);
     tree.SetDegree(3);
 
-    // insert B
+    // insert B:
+    //            (G      M      P      X)
+    //          /      /      |     \        \
+    //         /      /       |      \        \
+    // (a b c d e)  (J K)   (N O)  (R S T U V)  (Y Z)
+
     tree.Insert(tree.GetRoot(),'B');
     auto expected_b = std::vector<char>{'G', 'M', 'P', 'X'};
     auto expected_b0 = std::vector<char>{'A', 'B', 'C', 'D', 'E'};
@@ -48,7 +59,12 @@ GTEST_TEST(BTree, Insert)
     ASSERT_EQ(expected_b3, tree.GetRoot()->children[3]->keys);
     ASSERT_EQ(expected_b4, tree.GetRoot()->children[4]->keys);
 
-    // insert Q
+    // insert Q:
+    //           (g      m      p      t     x)
+    //        /       /      |      \      \      \
+    //       /       /       |       \      \      \
+    // (A B C D E)  (J K)   (N O)  (q r s)  (u v)  (Y Z)
+
     tree.Insert(tree.GetRoot(), 'Q');
     auto expected_q = std::vector<char>{'G', 'M', 'P', 'T', 'X'};
     auto expected_q0 = std::vector<char>{'A', 'B', 'C', 'D', 'E'};
@@ -65,7 +81,16 @@ GTEST_TEST(BTree, Insert)
     ASSERT_EQ(expected_q4, tree.GetRoot()->children[4]->keys);
     ASSERT_EQ(expected_q5, tree.GetRoot()->children[5]->keys);
 
-    // insert L
+    // insert L:
+    //                         (p)
+    //                /                   \
+    //               /                     \
+    //            (g   m)                (t   x)
+    //          /    |    \             /   |   \
+    //         /     |     \           /    |    \
+    // (A B C D E) (j k l) (N O)   (Q R S) (U V) (Y Z)
+
+
     tree.Insert(tree.GetRoot(), 'L');
     auto expected_l = std::vector<char>{'P'};
     auto expected_l0 = std::vector<char>{'G', 'M'};
@@ -86,7 +111,16 @@ GTEST_TEST(BTree, Insert)
     ASSERT_EQ(expected_l11, tree.GetRoot()->children[1]->children[1]->keys);
     ASSERT_EQ(expected_l12, tree.GetRoot()->children[1]->children[2]->keys);
 
-    // insert F
+    // insert F:
+    //                            (P)
+    //                  /                     \
+    //                 /                       \
+    //          (c    g    m)                 (T   X)
+    //        /    /     \     \             /   |   \
+    //       /    /       \     \           /    |    \
+    // (a b c) (d e f) (J K L) (N O)   (Q R S) (U V) (Y Z)
+
+
     tree.Insert(tree.GetRoot(), 'F');
     auto expected_f = std::vector<char>{'P'};
     auto expected_f0 = std::vector<char>{'C', 'G', 'M'};
@@ -112,6 +146,15 @@ GTEST_TEST(BTree, Insert)
 
 GTEST_TEST(BTree, Search)
 {
+    // example tree:
+    //                            (P)
+    //                  /                     \
+    //                 /                       \
+    //          (C    G    M)                 (T   X)
+    //        /    /     \     \             /   |   \
+    //       /    /       \     \           /    |    \
+    // (A B C) (D E F) (J K L) (N O)   (Q R S) (U V) (Y Z)
+
     auto root_node = new BTree::Node<char>();
     root_node->keys = {'G', 'M', 'P', 'X'};
     root_node->is_leaf = false;

@@ -6,7 +6,7 @@
 GTEST_TEST(LowestCommonAncestor, FindLowestCommonAncestor)
 {
     // example tree:
-    //             15   
+    //             15
     //        /          \
     //      6              18
     //    /    \         /    \
@@ -47,7 +47,7 @@ GTEST_TEST(LowestCommonAncestor, FindLowestCommonAncestor)
 GTEST_TEST(LowestCommonAncestor, FindLowestCommonAncestor2)
 {
     // example tree:
-    //             15   
+    //             15
     //        /          \
     //      6              18
     //    /    \         /    \

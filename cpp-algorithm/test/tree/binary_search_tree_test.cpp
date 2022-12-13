@@ -5,6 +5,17 @@
 
 GTEST_TEST(BinarySearchTree, PreorderTraversal)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{15, 6, 3, 2, 4, 7, 13, 9, 18, 17, 20};
 
@@ -25,6 +36,17 @@ GTEST_TEST(BinarySearchTree, PreorderTraversal)
 
 GTEST_TEST(BinarySearchTree, InorderTraversal)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
 
@@ -45,6 +67,17 @@ GTEST_TEST(BinarySearchTree, InorderTraversal)
 
 GTEST_TEST(BinarySearchTree, PostorderTraversal)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 4, 3, 9, 13, 7, 6, 17, 20, 18, 15};
 
@@ -65,6 +98,17 @@ GTEST_TEST(BinarySearchTree, PostorderTraversal)
 
 GTEST_TEST(BinarySearchTree, Minimum)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = *std::ranges::min_element(keys);
 
@@ -80,6 +124,17 @@ GTEST_TEST(BinarySearchTree, Minimum)
 
 GTEST_TEST(BinarySearchTree, Maximum)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = *std::ranges::max_element(keys);
 
@@ -95,6 +150,17 @@ GTEST_TEST(BinarySearchTree, Maximum)
 
 GTEST_TEST(BinarySearchTree, Predecessor)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 13;
 
@@ -110,6 +176,17 @@ GTEST_TEST(BinarySearchTree, Predecessor)
 
 GTEST_TEST(BinarySearchTree, Successor)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 17;
 
@@ -125,6 +202,17 @@ GTEST_TEST(BinarySearchTree, Successor)
 
 GTEST_TEST(BinarySearchTree, IterativeSearch)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = keys.back();
 
@@ -140,6 +228,17 @@ GTEST_TEST(BinarySearchTree, IterativeSearch)
 
 GTEST_TEST(BinarySearchTree, RecursiveSearch)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = keys.back();
 
@@ -155,6 +254,17 @@ GTEST_TEST(BinarySearchTree, RecursiveSearch)
 
 GTEST_TEST(BinarySearchTree, Delete_1)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     auto seq_size = static_cast<int>(keys.size());
 
@@ -174,6 +284,17 @@ GTEST_TEST(BinarySearchTree, Delete_1)
 
 GTEST_TEST(BinarySearchTree, Delete_2)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{8, 3, 10, 1, 6, 14, 4, 7, 13};
     auto seq_size = static_cast<int>(keys.size());
 

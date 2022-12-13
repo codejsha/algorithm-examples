@@ -5,6 +5,17 @@
 
 GTEST_TEST(BalancedTree, IsBalanced_1)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+    //           /
+    //          9
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
 
     auto tree = BinarySearchTree::Tree<int>{};
@@ -18,6 +29,15 @@ GTEST_TEST(BalancedTree, IsBalanced_1)
 
 GTEST_TEST(BalancedTree, IsBalanced_2)
 {
+    // example tree:
+    //             15
+    //        /          \
+    //      6              18
+    //    /    \         /    \
+    //   3      7       17     20
+    //  /  \     \
+    // 2    4     13
+
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13};
 
     auto tree = BinarySearchTree::Tree<int>{};
