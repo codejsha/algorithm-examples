@@ -56,7 +56,7 @@ auto LowestCommonAncestor::FindLowestCommonAncestor2(
     const auto depth1 = GetDepth(iter1);
     const auto depth2 = GetDepth(iter2);
 
-    if (depth1 > depth2)
+    if (depth2 > depth1)
     {
         std::swap(iter1, iter2);
     }
