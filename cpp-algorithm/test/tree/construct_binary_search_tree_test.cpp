@@ -95,23 +95,21 @@ GTEST_TEST(ConstructTreeFromPreorderInorder, PostorderTraversal)
 GTEST_TEST(ConstructTreeFromMarkerPreorder, PreorderTraversal)
 {
     // example tree:
-    //             15
+    //              H
     //        /          \
-    //      6              18
-    //    /    \         /    \
-    //   3      7       17     20
-    //  /  \     \
-    // 2    4     13
-    //           /
-    //          9
+    //       B             C
+    //    /      \       /   \
+    //   F        E           D
+    //  /  \     /  \       /   \
+    //          A                G
+    //         /  \            /   \
+    //                        I
+    //                       /  \
 
     auto preorder = std::vector<char>{'H', 'B', 'F', NULL, NULL, 'E', 'A', NULL, NULL, NULL,
         'C', NULL, 'D', NULL, 'G', 'I', NULL, NULL, NULL};
-    // auto preorder = std::vector<std::string>{"H", "B", "F", nullptr, nullptr, "E", "A", nullptr, nullptr, nullptr,
-    //     "C", nullptr, "D", nullptr, "G", "I", nullptr, nullptr, nullptr};
 
     auto root = BinarySearchTree::ConstructTreeFromMarkerPreorder(preorder);
-
     auto tree = BinarySearchTree::Tree<char>{};
     auto result = std::vector<char>{};
     tree.PreorderTraversal(root, result);
