@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(PermutationTest, Permutation)
+GTEST_TEST(Permutation, Permutation)
 {
     const auto str = "abc";
 
@@ -16,7 +16,7 @@ GTEST_TEST(PermutationTest, Permutation)
     // cba
 }
 
-GTEST_TEST(PermutationTest, ApplyPermutationWithAdditionalSpace)
+GTEST_TEST(Permutation, ApplyPermutationWithAdditionalSpace)
 {
     const auto arr = std::vector<char>{'a', 'b', 'c', 'd'};
     const auto permutation = std::vector<int>{2, 0, 1, 3};
@@ -25,7 +25,7 @@ GTEST_TEST(PermutationTest, ApplyPermutationWithAdditionalSpace)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(PermutationTest, ApplyPermutationBySwap)
+GTEST_TEST(Permutation, ApplyPermutationBySwap)
 {
     auto arr = std::vector<char>{'a', 'b', 'c', 'd'};
     auto permutation = std::vector<int>{2, 0, 1, 3};
@@ -34,7 +34,7 @@ GTEST_TEST(PermutationTest, ApplyPermutationBySwap)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(PermutationTest, InversePermutation)
+GTEST_TEST(Permutation, InversePermutation)
 {
     const auto arr = std::vector<char>{'a', 'b', 'c', 'd', 'e'};
     const auto permutation = std::vector<int>{1, 0, 3, 4, 2};
@@ -43,7 +43,7 @@ GTEST_TEST(PermutationTest, InversePermutation)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(PermutationTest, NextPermutation)
+GTEST_TEST(Permutation, NextPermutation)
 {
     auto permutation = std::vector<int>{6, 2, 1, 5, 4, 3, 0};
     const auto expected = std::vector<int>{6, 2, 3, 0, 1, 4, 5};
@@ -51,7 +51,7 @@ GTEST_TEST(PermutationTest, NextPermutation)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(PermutationTest, PreviousPermutation)
+GTEST_TEST(Permutation, PreviousPermutation)
 {
     auto permutation = std::vector<int>{4, 3, 2, 1};
     const auto expected = std::vector<int>{4, 3, 1, 2};
@@ -59,7 +59,7 @@ GTEST_TEST(PermutationTest, PreviousPermutation)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(PermutationTest, KthPermutation)
+GTEST_TEST(Permutation, KthPermutation)
 {
     auto permutation = std::vector<int>{1, 2, 3};
     constexpr auto kth = 4;

@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <gtest/gtest.h>
 
-GTEST_TEST(DepthFirstSearchTest, SimpleSearch1)
+GTEST_TEST(DepthFirstSearch, SimpleSearch1)
 {
     auto vertex_u = Graph::DfsVertex('U');
     auto vertex_v = Graph::DfsVertex('V');

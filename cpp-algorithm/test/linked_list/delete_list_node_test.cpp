@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(DeleteListNodeTest, DeleteNodeFromList)
+GTEST_TEST(DeleteListNode, DeleteNodeFromList)
 {
     auto node4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{-4, nullptr});
     auto node3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, node4});
@@ -14,7 +14,7 @@ GTEST_TEST(DeleteListNodeTest, DeleteNodeFromList)
     EXPECT_EQ(3, length);
 }
 
-GTEST_TEST(DeleteListNodeTest, DeleteNodeKthLast)
+GTEST_TEST(DeleteListNode, DeleteNodeKthLast)
 {
     auto node4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{-4, nullptr});
     auto node3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, node4});
@@ -33,7 +33,7 @@ GTEST_TEST(DeleteListNodeTest, DeleteNodeKthLast)
     }
 }
 
-GTEST_TEST(DeleteListNodeTest, DeleteDuplicateNode)
+GTEST_TEST(DeleteListNode, DeleteDuplicateNode)
 {
     auto node7 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{11, nullptr});
     auto node6 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{11, node7});

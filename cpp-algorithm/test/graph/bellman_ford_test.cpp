@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(BellmanFordTest, Simple1)
+GTEST_TEST(BellmanFord, Simple1)
 {
     auto vertex_s = Graph::BellmanFordVertex('S');
     auto vertex_t = Graph::BellmanFordVertex('T');

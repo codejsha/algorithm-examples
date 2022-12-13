@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 #include <ranges>
 
-GTEST_TEST(HuffmanCodeTest, Simple)
+GTEST_TEST(HuffmanCode, HuffmanCode)
 {
     const auto freq_map = std::map<int, char>{
         {5, 'f'}, {9, 'e'}, {12, 'c'}, {13, 'b'}, {16, 'd'}, {45, 'a'}};

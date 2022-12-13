@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(ListArithmeticOperationTest, AddTwoNumbers)
+GTEST_TEST(ListArithmetic, AddTwoNumbers)
 {
     auto node_a3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{4, nullptr});
     auto node_a2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{1, node_a3});

@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(RabinKarpTest, RabinKarpMatcher1)
+GTEST_TEST(RabinKarp, RabinKarpMatcher1)
 {
     EXPECT_EQ(std::vector{0}, RabinKarp::RabinKarpMatcher1("HelloWorld", "Hello"));
     EXPECT_EQ(std::vector<int>{}, RabinKarp::RabinKarpMatcher1("HelloWorld", "hello"));
@@ -14,7 +14,7 @@ GTEST_TEST(RabinKarpTest, RabinKarpMatcher1)
     EXPECT_EQ(expected, RabinKarp::RabinKarpMatcher1("abcabaabcabac", "abc"));
 }
 
-GTEST_TEST(RabinKarpTest, RabinKarpMatcher2)
+GTEST_TEST(RabinKarp, RabinKarpMatcher2)
 {
     EXPECT_EQ(std::vector{0}, RabinKarp::RabinKarpMatcher2("HelloWorld", "Hello"));
     EXPECT_EQ(std::vector<int>{}, RabinKarp::RabinKarpMatcher2("HelloWorld", "hello"));

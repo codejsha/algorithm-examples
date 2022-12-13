@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(LookAndSayTest, LookAndSayProblem1)
+GTEST_TEST(LookAndSay, LookAndSayProblem1)
 {
     EXPECT_EQ("11", LookAndSay::LookAndSayProblem("1"));
     EXPECT_EQ("21", LookAndSay::LookAndSayProblem("11"));

@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(MergeListTest, MergeTwoSortedLinkedList1)
+GTEST_TEST(MergeList, MergeTwoSortedLinkedList1)
 {
     const auto node_a3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{4, nullptr});
     const auto node_a2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, node_a3});
@@ -21,7 +21,7 @@ GTEST_TEST(MergeListTest, MergeTwoSortedLinkedList1)
     }
 }
 
-GTEST_TEST(MergeListTest, MergeTwoSortedLinkedList2)
+GTEST_TEST(MergeList, MergeTwoSortedLinkedList2)
 {
     const auto node_a3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{7, nullptr});
     const auto node_a2 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{5, node_a3});
@@ -39,7 +39,7 @@ GTEST_TEST(MergeListTest, MergeTwoSortedLinkedList2)
     }
 }
 
-GTEST_TEST(MergeListTest, MergeEvenOddLinkedList)
+GTEST_TEST(MergeList, MergeEvenOddLinkedList)
 {
     const auto node4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{-4, nullptr});
     const auto node3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, node4});

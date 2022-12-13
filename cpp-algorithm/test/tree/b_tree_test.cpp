@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(BTreeTest, Insert)
+GTEST_TEST(BTree, Insert)
 {
     auto root_node = new BTree::Node<char>();
     root_node->keys = {'G', 'M', 'P', 'X'};
@@ -110,7 +110,7 @@ GTEST_TEST(BTreeTest, Insert)
     ASSERT_EQ(expected_f12, tree.GetRoot()->children[1]->children[2]->keys);
 }
 
-GTEST_TEST(BTreeTest, Search)
+GTEST_TEST(BTree, Search)
 {
     auto root_node = new BTree::Node<char>();
     root_node->keys = {'G', 'M', 'P', 'X'};

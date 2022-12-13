@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(PrintStringTest, SineWaveString)
+GTEST_TEST(PrintString, SineWaveString)
 {
     const auto str = "Hello_World!";
     const auto result = PrintString::SineWaveString(str);

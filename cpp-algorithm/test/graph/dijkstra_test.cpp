@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(DijkstraTest, Simple1)
+GTEST_TEST(Dijkstra, Simple1)
 {
     auto vertex_s = Graph::DijkstraVertex('S');
     auto vertex_t = Graph::DijkstraVertex('T');

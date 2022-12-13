@@ -4,7 +4,7 @@
 #include <gtest/gtest.h>
 #include <ranges>
 
-GTEST_TEST(ArbitraryPrecisionTest, PlusOne)
+GTEST_TEST(ArbitraryPrecision, PlusOne)
 {
     const auto number = std::vector<int>{1, 2, 9};
     const auto expected = std::vector<int>{1, 3, 0};
@@ -12,7 +12,7 @@ GTEST_TEST(ArbitraryPrecisionTest, PlusOne)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ArbitraryPrecisionTest, StringAddition)
+GTEST_TEST(ArbitraryPrecision, StringAddition)
 {
     const auto number1 = std::string{"101"};
     const auto number2 = std::string{"101"};
@@ -22,7 +22,7 @@ GTEST_TEST(ArbitraryPrecisionTest, StringAddition)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ArbitraryPrecisionTest, Multiply)
+GTEST_TEST(ArbitraryPrecision, Multiply)
 {
     auto number1 = std::vector<int>{1, 9, 3, 7, 0, 7, 7, 2, 1};
     auto number2 = std::vector<int>{-7, 6, 1, 8, 3, 8, 2, 5, 7, 2, 8, 7};

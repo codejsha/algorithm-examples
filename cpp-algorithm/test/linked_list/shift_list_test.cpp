@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(ShiftListTest, CyclicallyRightShiftList)
+GTEST_TEST(ShiftList, CyclicallyRightShiftList)
 {
     auto node4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{-4, nullptr});
     auto node3 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, node4});

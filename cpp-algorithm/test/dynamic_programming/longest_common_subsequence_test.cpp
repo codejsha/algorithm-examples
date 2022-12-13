@@ -3,7 +3,7 @@
 #include <gsl/gsl_matrix.h>
 #include <gtest/gtest.h>
 
-GTEST_TEST(LongestCommonSebsequenceTest, LongestCommonSubsequenceLength)
+GTEST_TEST(CommonSubsequence, LongestCommonSubsequenceLength)
 {
     const auto seq1 = std::string("ABCBDAB");
     const auto seq2 = std::string("BDCABA");

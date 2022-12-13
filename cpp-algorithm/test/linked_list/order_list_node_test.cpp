@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(OrderListNodeTest, ListPivoting)
+GTEST_TEST(OrderListNode, ListPivoting)
 {
     auto node7 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{11, nullptr});
     auto node6 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{5, node7});

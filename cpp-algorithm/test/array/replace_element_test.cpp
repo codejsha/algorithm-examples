@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(ReplaceStringTest, ReplaceAndRemoveString1)
+GTEST_TEST(ReplaceElement, ReplaceAndRemoveString1)
 {
     auto arr = std::vector<std::string>{"a", "c", "d", "b", "b", "c", "a"};
     const auto expected = std::vector<std::string>{"d", "d", "c", "d", "c", "d", "d"};
@@ -10,7 +10,7 @@ GTEST_TEST(ReplaceStringTest, ReplaceAndRemoveString1)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ReplaceStringTest, ReplaceAndRemoveString2)
+GTEST_TEST(ReplaceElement, ReplaceAndRemoveString2)
 {
     auto arr = std::vector<std::string>{"a", "c", "d", "b", "b", "c", "a"};
     const auto expected = std::vector<std::string>{"d", "d", "c", "d", "c", "d", "d"};
@@ -18,7 +18,7 @@ GTEST_TEST(ReplaceStringTest, ReplaceAndRemoveString2)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ReplaceStringTest, TelexEncoding)
+GTEST_TEST(ReplaceElement, TelexEncoding)
 {
     auto arr_dot = std::vector<std::string>{"."};
     auto expected_dot = std::vector<std::string>{"D", "O", "T"};

@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(ReverseListTest, ReverseSubList)
+GTEST_TEST(ReverseList, ReverseSubList)
 {
     const auto node5 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, nullptr});
     const auto node4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node5});

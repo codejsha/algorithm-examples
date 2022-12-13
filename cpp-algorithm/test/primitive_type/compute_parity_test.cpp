@@ -2,49 +2,49 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(ComputeParityTest, CountBits1)
+GTEST_TEST(ComputingParity, CountBits1)
 {
     constexpr auto expected = 3;
     const auto result = ComputingParity::CountBits(0b1011);
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ComputeParityTest, CountBits2)
+GTEST_TEST(ComputingParity, CountBits2)
 {
     constexpr auto expected = 2;
     const auto result = ComputingParity::CountBits(0b10001000);
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ComputeParityTest, Parity1)
+GTEST_TEST(ComputingParity, Parity1)
 {
     constexpr auto expected = 1;
     const auto result = ComputingParity::Parity(0b1011);
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ComputeParityTest, Parity2)
+GTEST_TEST(ComputingParity, Parity2)
 {
     constexpr auto expected = 0;
     const auto result = ComputingParity::Parity(0b10001000);
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ComputeParityTest, ParityDropLowestBits1)
+GTEST_TEST(ComputingParity, ParityDropLowestBits1)
 {
     constexpr auto expected = 1;
     const auto result = ComputingParity::ParityDropLowestBits(0b1011);
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ComputeParityTest, ParityDropLowestBits2)
+GTEST_TEST(ComputingParity, ParityDropLowestBits2)
 {
     constexpr auto expected = 0;
     const auto result = ComputingParity::ParityDropLowestBits(0b10001000);
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(ComputeParityTest, ParityMask1)
+GTEST_TEST(ComputingParity, ParityMask1)
 {
     constexpr auto expected = 1;
     const auto result = ComputingParity::ParityLookupTable(0b11101010);

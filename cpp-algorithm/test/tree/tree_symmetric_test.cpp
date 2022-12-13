@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(TreeSymmetricTest, IsSymmetric_1)
+GTEST_TEST(TreeSymmetric, IsSymmetric_1)
 {
     auto node_a = BinaryTree::Node{314};
     auto node_b = BinaryTree::Node{6};
@@ -22,7 +22,7 @@ GTEST_TEST(TreeSymmetricTest, IsSymmetric_1)
     EXPECT_TRUE(TreeSymmetric::IsSymmetric(&node_a));
 }
 
-GTEST_TEST(TreeSymmetricTest, IsSymmetric_2)
+GTEST_TEST(TreeSymmetric, IsSymmetric_2)
 {
     auto node_a = BinaryTree::Node{314};
     auto node_b = BinaryTree::Node{6};
@@ -41,7 +41,7 @@ GTEST_TEST(TreeSymmetricTest, IsSymmetric_2)
     EXPECT_FALSE(TreeSymmetric::IsSymmetric(&node_a));
 }
 
-GTEST_TEST(TreeSymmetricTest, IsSymmetric_3)
+GTEST_TEST(TreeSymmetric, IsSymmetric_3)
 {
     auto node_a = BinaryTree::Node{314};
     auto node_b = BinaryTree::Node{6};

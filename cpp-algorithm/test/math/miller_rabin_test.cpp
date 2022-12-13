@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(MillerRabinTest, MillerRabinPrimalityTest)
+GTEST_TEST(MillerRabin, MillerRabinPrimalityTest)
 {
     EXPECT_TRUE(MillerRabin::MillerRabinPrimalityTest(2, 4));
     EXPECT_TRUE(MillerRabin::MillerRabinPrimalityTest(3, 4));

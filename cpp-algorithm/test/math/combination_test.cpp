@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(CombinationTest, Simple1)
+GTEST_TEST(Combination, Simple1)
 {
     auto seq = std::vector<int>{2, 4, 6, 8};
     constexpr auto subset_size = 2;
@@ -18,7 +18,7 @@ GTEST_TEST(CombinationTest, Simple1)
     // 6 8
 }
 
-GTEST_TEST(CombinationTest, Simple2)
+GTEST_TEST(Combination, Simple2)
 {
     auto seq = std::vector<int>{0, 1, 2, 3, 4, 5};
     std::vector<int> selected_items;

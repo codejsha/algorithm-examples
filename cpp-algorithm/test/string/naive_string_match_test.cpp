@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(NaiveStringMatchTest, NaiveStringMatcher)
+GTEST_TEST(NaiveStringMatch, NaiveStringMatcher)
 {
     const auto expected = std::vector<int>{2, 4};
     const auto result = NaiveStringMatch::NaiveStringMatcher("eceyeye", "eye");

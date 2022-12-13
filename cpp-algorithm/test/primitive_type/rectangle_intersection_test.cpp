@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(RectangleIntersectionTest, Simple1)
+GTEST_TEST(RectangleIntersection, Simple1)
 {
     constexpr auto expected = RectangleIntersection::Rectangle{0, 0, -1, -1};
     constexpr auto rect1 = RectangleIntersection::Rectangle{1, 2, 3, 4};

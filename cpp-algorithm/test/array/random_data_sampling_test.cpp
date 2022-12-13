@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 #include <iostream>
 
-GTEST_TEST(RandomDataSamplingTest, OfflineRandomSampling)
+GTEST_TEST(RandomDataSampling, OfflineRandomSampling)
 {
     constexpr auto k = 3;
     auto arr = std::vector<int>{3, 7, 5, 11};
@@ -19,7 +19,7 @@ GTEST_TEST(RandomDataSamplingTest, OfflineRandomSampling)
     EXPECT_EQ(k, static_cast<int>(result.size()));
 }
 
-GTEST_TEST(RandomDataSamplingTest, ComputeRandomPermutation)
+GTEST_TEST(RandomDataSampling, ComputeRandomPermutation)
 {
     constexpr auto k = 3;
     auto arr = std::vector<int>{3, 7, 5, 11};

@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <gtest/gtest.h>
 
-GTEST_TEST(BinarySearchTreeTest, PreorderTraversal)
+GTEST_TEST(BinarySearchTree, PreorderTraversal)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{15, 6, 3, 2, 4, 7, 13, 9, 18, 17, 20};
@@ -23,7 +23,7 @@ GTEST_TEST(BinarySearchTreeTest, PreorderTraversal)
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(BinarySearchTreeTest, InorderTraversal)
+GTEST_TEST(BinarySearchTree, InorderTraversal)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
@@ -43,7 +43,7 @@ GTEST_TEST(BinarySearchTreeTest, InorderTraversal)
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(BinarySearchTreeTest, PostorderTraversal)
+GTEST_TEST(BinarySearchTree, PostorderTraversal)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = std::vector<int>{2, 4, 3, 9, 13, 7, 6, 17, 20, 18, 15};
@@ -63,7 +63,7 @@ GTEST_TEST(BinarySearchTreeTest, PostorderTraversal)
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
-GTEST_TEST(BinarySearchTreeTest, Minimum)
+GTEST_TEST(BinarySearchTree, Minimum)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = *std::ranges::min_element(keys);
@@ -78,7 +78,7 @@ GTEST_TEST(BinarySearchTreeTest, Minimum)
     EXPECT_EQ(expected, result->key);
 }
 
-GTEST_TEST(BinarySearchTreeTest, Maximum)
+GTEST_TEST(BinarySearchTree, Maximum)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = *std::ranges::max_element(keys);
@@ -93,7 +93,7 @@ GTEST_TEST(BinarySearchTreeTest, Maximum)
     EXPECT_EQ(expected, result->key);
 }
 
-GTEST_TEST(BinarySearchTreeTest, Predecessor)
+GTEST_TEST(BinarySearchTree, Predecessor)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 13;
@@ -108,7 +108,7 @@ GTEST_TEST(BinarySearchTreeTest, Predecessor)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, Successor)
+GTEST_TEST(BinarySearchTree, Successor)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     constexpr auto expected = 17;
@@ -123,7 +123,7 @@ GTEST_TEST(BinarySearchTreeTest, Successor)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, IterativeSearch)
+GTEST_TEST(BinarySearchTree, IterativeSearch)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = keys.back();
@@ -138,7 +138,7 @@ GTEST_TEST(BinarySearchTreeTest, IterativeSearch)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, RecursiveSearch)
+GTEST_TEST(BinarySearchTree, RecursiveSearch)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     const auto expected = keys.back();
@@ -153,7 +153,7 @@ GTEST_TEST(BinarySearchTreeTest, RecursiveSearch)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(BinarySearchTreeTest, Delete_1)
+GTEST_TEST(BinarySearchTree, Delete_1)
 {
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
     auto seq_size = static_cast<int>(keys.size());
@@ -172,7 +172,7 @@ GTEST_TEST(BinarySearchTreeTest, Delete_1)
     }
 }
 
-GTEST_TEST(BinarySearchTreeTest, Delete_2)
+GTEST_TEST(BinarySearchTree, Delete_2)
 {
     const auto keys = std::vector<int>{8, 3, 10, 1, 6, 14, 4, 7, 13};
     auto seq_size = static_cast<int>(keys.size());

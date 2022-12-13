@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(MaxStackElementTest, EmptyStack)
+GTEST_TEST(MaxStackElement, EmptyStack)
 {
     auto stack = MaxStackElement::Stack{};
     ASSERT_TRUE(stack.Empty());
@@ -10,7 +10,7 @@ GTEST_TEST(MaxStackElementTest, EmptyStack)
     ASSERT_THROW(stack.Pop(), std::length_error);
 }
 
-GTEST_TEST(MaxStackElementTest, PushAndPop)
+GTEST_TEST(MaxStackElement, PushAndPop)
 {
     auto stack = MaxStackElement::Stack{};
     stack.Push(1);
@@ -22,7 +22,7 @@ GTEST_TEST(MaxStackElementTest, PushAndPop)
     ASSERT_THROW(stack.Pop(), std::length_error);
 }
 
-GTEST_TEST(MaxStackElementTest, Max)
+GTEST_TEST(MaxStackElement, Max)
 {
     auto stack = MaxStackElement::Stack{};
     stack.Push(3);

@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(ListPalindromeTest, IsListPalindrome_1)
+GTEST_TEST(ListPalindrome, IsListPalindrome_1)
 {
     const auto node5 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{1, nullptr});
     const auto node4 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, node5});

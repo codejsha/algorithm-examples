@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(FibonacciNumberTest, FibonacciDynamicTopDown)
+GTEST_TEST(FibonacciNumber, FibonacciDynamicTopDown)
 {
     constexpr auto number = 8;
     constexpr auto expected = 21;
@@ -12,7 +12,7 @@ GTEST_TEST(FibonacciNumberTest, FibonacciDynamicTopDown)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(FibonacciNumberTest, FibonacciDynamicBottomUp)
+GTEST_TEST(FibonacciNumber, FibonacciDynamicBottomUp)
 {
     constexpr auto number = 8;
     constexpr auto expected = 21;

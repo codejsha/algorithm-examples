@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <gtest/gtest.h>
 
-GTEST_TEST(BreadthFirstSearchTest, SimpleSearch1)
+GTEST_TEST(BreadthFirstSearch, SimpleSearch1)
 {
     auto vertex_r = Graph::BfsVertex('R');
     auto vertex_s = Graph::BfsVertex('S');
@@ -76,7 +76,7 @@ GTEST_TEST(BreadthFirstSearchTest, SimpleSearch1)
     ASSERT_EQ(expected, result_path);
 }
 
-GTEST_TEST(BreadthFirstSearchTest, SimpleSearch2)
+GTEST_TEST(BreadthFirstSearch, SimpleSearch2)
 {
     auto vertex_r = Graph::BfsVertex('R');
     auto vertex_s = Graph::BfsVertex('S');

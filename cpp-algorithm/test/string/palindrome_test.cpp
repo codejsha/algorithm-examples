@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(PalindromeTest, IsPalindromic1)
+GTEST_TEST(Palindrome, IsPalindromic1)
 {
     EXPECT_TRUE(Palindrome::IsPalindromic1("kayak"));
     EXPECT_TRUE(Palindrome::IsPalindromic1("deed"));
@@ -10,7 +10,7 @@ GTEST_TEST(PalindromeTest, IsPalindromic1)
     EXPECT_TRUE(Palindrome::IsPalindromic1("noon"));
 }
 
-GTEST_TEST(PalindromeTest, IsPalindromic2)
+GTEST_TEST(Palindrome, IsPalindromic2)
 {
     EXPECT_TRUE(Palindrome::IsPalindromic2("kayak"));
     EXPECT_TRUE(Palindrome::IsPalindromic2("deed"));

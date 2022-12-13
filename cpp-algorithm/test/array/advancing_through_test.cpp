@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(AdvancingThroughTest, CanReachEnd)
+GTEST_TEST(AdvancingThrough, CanReachEnd)
 {
     EXPECT_TRUE(AdvancingThrough::CanReachEnd(std::vector<int>{3, 3, 1, 0, 2, 0, 1}));
 
