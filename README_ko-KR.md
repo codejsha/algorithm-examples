@@ -97,6 +97,8 @@
 - B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 - 이진 트리의 높이가 균형 잡혀 있는지 확인하기 (Balanced tree status): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 - 이진 탐색 트리 (Binary search tree): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
+- 이진 트리의 최소 공통 조상 구하기 (Lowest common ancestor (FindLowestCommonAncestor)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
+- 노드에 부모를 가리키는 정보가 있을 때 최소 공통 조상 구하기 (Lowest common ancestor with parent pointer (FindLowestCommonAncestor2)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 - 이진 트리가 대칭인지 확인하기 (Tree symmetric): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree))
 
 ## 주제 (Topics)

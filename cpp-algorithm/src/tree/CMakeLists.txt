@@ -8,4 +8,5 @@ macro(add_library_target target)
 endmacro()
 
 add_library_target(balanced_tree_status)
+add_library_target(lowest_common_ancestor)
 add_library_target(tree_symmetric)
