@@ -10,22 +10,10 @@ namespace TreeSumRootToLeaf
     /// @return the sum of all root-to-leaf paths
     auto SumRootToLeafDecimal(const BinaryTree::Node<int>* tree) -> int;
 
-    /// @brief Partial sum of the root-to-leaf paths.
-    /// @param tree the root of the tree
-    /// @param partial_path_sum the partial path sum
-    /// @return the partial sum of all root-to-leaf paths
-    auto SumRootToLeafHelperDecimal(const BinaryTree::Node<int>* tree, int partial_path_sum) -> int;
-
     /// @brief Sum of all binary numbers represented by root-to-leaf paths.
     /// @param tree the root of the tree
     /// @return the sum of binary numbers represented by root-to-leaf paths
     auto SumRootToLeafBinary(const BinaryTree::Node<int>* tree) -> int;
-
-    /// @brief Partial sum of all binary numbers represented by root-to-leaf paths
-    /// @param tree the root of the tree
-    /// @param partial_path_sum the partial path sum
-    /// @return the partial sum of binary numbers represented by root-to-leaf paths
-    auto SumRootToLeafHelperBinary(const BinaryTree::Node<int>* tree, int partial_path_sum) -> int;
 
     /// @brief Whether the tree has a root-leaf path equal to the given sum.
     /// @details Determine if the given sum equals the sum of the keys in the path.

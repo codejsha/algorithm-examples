@@ -20,22 +20,12 @@ auto SumRootToLeaf(const BinaryTree::Node<int>* tree, int partial_path_sum, cons
 }
 auto TreeSumRootToLeaf::SumRootToLeafDecimal(const BinaryTree::Node<int>* tree) -> int
 {
-    return SumRootToLeafHelperDecimal(tree, 0);
-}
-
-auto TreeSumRootToLeaf::SumRootToLeafHelperDecimal(const BinaryTree::Node<int>* tree, const int partial_path_sum) -> int
-{
-    return SumRootToLeaf(tree, partial_path_sum, 10);
+    return SumRootToLeaf(tree, 0, 10);
 }
 
 auto TreeSumRootToLeaf::SumRootToLeafBinary(const BinaryTree::Node<int>* tree) -> int
 {
-    return SumRootToLeafHelperBinary(tree, 0);
-}
-
-auto TreeSumRootToLeaf::SumRootToLeafHelperBinary(const BinaryTree::Node<int>* tree, const int partial_path_sum) -> int
-{
-    return SumRootToLeaf(tree, partial_path_sum, 2);
+    return SumRootToLeaf(tree, 0, 2);
 }
 
 auto TreeSumRootToLeaf::HasKeySum(const BinaryTree::Node<int>* tree, const int partial_sum) -> bool
