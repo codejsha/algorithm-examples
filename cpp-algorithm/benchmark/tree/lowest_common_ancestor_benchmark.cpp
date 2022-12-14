@@ -1,5 +1,3 @@
-#include "binary_search_tree.h"
-#include "binary_tree.h"
 #include "lowest_common_ancestor.h"
 
 #include <benchmark/benchmark.h>
@@ -37,17 +35,17 @@ BENCHMARK(BM_FindLowestCommonAncestor);
 
 static void BM_FindLowestCommonAncestor2(benchmark::State& state)
 {
-    auto node1 = BinarySearchTree::Node{15};
-    auto node2 = BinarySearchTree::Node{6};
-    auto node3 = BinarySearchTree::Node{18};
-    auto node4 = BinarySearchTree::Node{3};
-    auto node5 = BinarySearchTree::Node{7};
-    auto node6 = BinarySearchTree::Node{17};
-    auto node7 = BinarySearchTree::Node{20};
-    auto node8 = BinarySearchTree::Node{2};
-    auto node9 = BinarySearchTree::Node{4};
-    auto node10 = BinarySearchTree::Node{13};
-    auto node11 = BinarySearchTree::Node{9};
+    auto node1 = BinaryTree::ExtendedNode{15};
+    auto node2 = BinaryTree::ExtendedNode{6};
+    auto node3 = BinaryTree::ExtendedNode{18};
+    auto node4 = BinaryTree::ExtendedNode{3};
+    auto node5 = BinaryTree::ExtendedNode{7};
+    auto node6 = BinaryTree::ExtendedNode{17};
+    auto node7 = BinaryTree::ExtendedNode{20};
+    auto node8 = BinaryTree::ExtendedNode{2};
+    auto node9 = BinaryTree::ExtendedNode{4};
+    auto node10 = BinaryTree::ExtendedNode{13};
+    auto node11 = BinaryTree::ExtendedNode{9};
     node1.left = &node2;
     node1.right = &node3;
     node2.left = &node4;

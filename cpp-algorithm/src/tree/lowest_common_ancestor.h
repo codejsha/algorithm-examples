@@ -1,7 +1,6 @@
 #ifndef CPP_ALGORITHM_LOWEST_COMMON_ANCESTOR_H
 #define CPP_ALGORITHM_LOWEST_COMMON_ANCESTOR_H
 
-#include "binary_search_tree.h"
 #include "binary_tree.h"
 
 namespace LowestCommonAncestor
@@ -41,10 +40,10 @@ namespace LowestCommonAncestor
     /// @param node2 the second node
     /// @return the lowest common ancestor of the two nodes
     auto FindLowestCommonAncestor2(
-        const BinarySearchTree::Node<int>* tree,
-        const BinarySearchTree::Node<int>* node1,
-        const BinarySearchTree::Node<int>* node2)
-        -> const BinarySearchTree::Node<int>*;
+        const BinaryTree::ExtendedNode<int>* tree,
+        const BinaryTree::ExtendedNode<int>* node1,
+        const BinaryTree::ExtendedNode<int>* node2)
+        -> const BinaryTree::ExtendedNode<int>*;
 }
 
 #endif

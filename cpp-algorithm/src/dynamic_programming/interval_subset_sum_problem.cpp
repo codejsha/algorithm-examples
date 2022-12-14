@@ -1,7 +1,6 @@
 #include "interval_subset_sum_problem.h"
 
 #include <cmath>
-#include <iostream>
 
 auto IntervalSubset::SimpleSubsetSum1(const std::vector<int>& seq) -> int
 {

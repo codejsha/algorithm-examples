@@ -5,27 +5,27 @@
 template <class... Args>
 static void BM_BTree_Insert(benchmark::State& state, Args&&... args)
 {
-    auto root_node = new BTree::Node<char>();
+    auto root_node = new BTree::Node<char>{};
     root_node->keys = {'G', 'M', 'P', 'X'};
     root_node->is_leaf = false;
 
-    auto child_node1 = new BTree::Node<char>();
+    auto child_node1 = new BTree::Node<char>{};
     child_node1->keys = {'A', 'C', 'D', 'E'};
     child_node1->is_leaf = true;
 
-    auto child_node2 = new BTree::Node<char>();
+    auto child_node2 = new BTree::Node<char>{};
     child_node2->keys = {'J', 'K'};
     child_node2->is_leaf = true;
 
-    auto child_node3 = new BTree::Node<char>();
+    auto child_node3 = new BTree::Node<char>{};
     child_node3->keys = {'N', 'O'};
     child_node3->is_leaf = true;
 
-    auto child_node4 = new BTree::Node<char>();
+    auto child_node4 = new BTree::Node<char>{};
     child_node4->keys = {'R', 'S', 'T', 'U', 'V'};
     child_node4->is_leaf = true;
 
-    auto child_node5 = new BTree::Node<char>();
+    auto child_node5 = new BTree::Node<char>{};
     child_node5->keys = {'Y', 'Z'};
     child_node5->is_leaf = true;
 
@@ -48,27 +48,27 @@ BENCHMARK_CAPTURE(BM_BTree_Insert, F, 'F');
 template <class... Args>
 static void BM_BTree_Search(benchmark::State& state, Args&&... args)
 {
-    auto root_node = new BTree::Node<char>();
+    auto root_node = new BTree::Node<char>{};
     root_node->keys = {'G', 'M', 'P', 'X'};
     root_node->is_leaf = false;
 
-    auto child_node1 = new BTree::Node<char>();
+    auto child_node1 = new BTree::Node<char>{};
     child_node1->keys = {'A', 'C', 'D', 'E'};
     child_node1->is_leaf = true;
 
-    auto child_node2 = new BTree::Node<char>();
+    auto child_node2 = new BTree::Node<char>{};
     child_node2->keys = {'J', 'K'};
     child_node2->is_leaf = true;
 
-    auto child_node3 = new BTree::Node<char>();
+    auto child_node3 = new BTree::Node<char>{};
     child_node3->keys = {'N', 'O'};
     child_node3->is_leaf = true;
 
-    auto child_node4 = new BTree::Node<char>();
+    auto child_node4 = new BTree::Node<char>{};
     child_node4->keys = {'R', 'S', 'T', 'U', 'V'};
     child_node4->is_leaf = true;
 
-    auto child_node5 = new BTree::Node<char>();
+    auto child_node5 = new BTree::Node<char>{};
     child_node5->keys = {'Y', 'Z'};
     child_node5->is_leaf = true;
 

@@ -1,15 +1,6 @@
 #include "lowest_common_ancestor.h"
 
-int GetDepth(const BinarySearchTree::Node<int>* node)
-{
-    auto depth = 0;
-    while (node->parent)
-    {
-        ++depth;
-        node = node->parent;
-    }
-    return depth;
-}
+#include <algorithm>
 
 auto LowestCommonAncestor::FindLowestCommonAncestor(
     const BinaryTree::Node<int>* tree,
@@ -46,15 +37,15 @@ auto LowestCommonAncestor::LcaHelper(
 }
 
 auto LowestCommonAncestor::FindLowestCommonAncestor2(
-    const BinarySearchTree::Node<int>* tree,
-    const BinarySearchTree::Node<int>* node1,
-    const BinarySearchTree::Node<int>* node2)
-    -> const BinarySearchTree::Node<int>*
+    const BinaryTree::ExtendedNode<int>* tree,
+    const BinaryTree::ExtendedNode<int>* node1,
+    const BinaryTree::ExtendedNode<int>* node2)
+    -> const BinaryTree::ExtendedNode<int>*
 {
     auto iter1 = node1;
     auto iter2 = node2;
-    const auto depth1 = GetDepth(iter1);
-    const auto depth2 = GetDepth(iter2);
+    const auto depth1 = ExtendedNodeTreeDepth(iter1);
+    const auto depth2 = ExtendedNodeTreeDepth(iter2);
 
     if (depth2 > depth1)
     {

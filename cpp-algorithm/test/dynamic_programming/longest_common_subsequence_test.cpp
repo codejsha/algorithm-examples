@@ -1,6 +1,5 @@
 #include "longest_common_subsequence.h"
 
-#include <gsl/gsl_matrix.h>
 #include <gtest/gtest.h>
 
 GTEST_TEST(CommonSubsequence, LongestCommonSubsequenceLength)

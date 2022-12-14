@@ -1,7 +1,7 @@
 #ifndef CPP_ALGORITHM_BALANCED_TREE_STATUS_H
 #define CPP_ALGORITHM_BALANCED_TREE_STATUS_H
 
-#include "binary_search_tree.h"
+#include "binary_tree.h"
 
 namespace BalancedTree
 {
@@ -15,13 +15,13 @@ namespace BalancedTree
     /// @brief Whether the binary tree is balanced or not.
     /// @param tree the root of the tree
     /// @return whether the tree is balanced
-    auto IsBalanced(const BinarySearchTree::Node<int>* tree) -> bool;
+    auto IsBalanced(const BinaryTree::ExtendedNode<int>* tree) -> bool;
 
     /// @brief Check whether a binary tree is balanced.
     /// @details A binary tree is balanced if the heights of the two subtrees of any node never differ by more than one.
     /// @param tree the root of the tree
     /// @return whether the tree is balanced and the height of the tree
-    auto CheckBalanced(const BinarySearchTree::Node<int>* tree) -> BalancedStatus;
+    auto CheckBalanced(const BinaryTree::ExtendedNode<int>* tree) -> BalancedStatus;
 }
 
 #endif

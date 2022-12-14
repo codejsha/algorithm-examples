@@ -1,7 +1,5 @@
 #include "sort.h"
 
-#include <iostream>
-
 auto Sort::InsertionSort(std::vector<int>& seq) -> std::vector<int>
 {
     const auto size = static_cast<int>(seq.size());

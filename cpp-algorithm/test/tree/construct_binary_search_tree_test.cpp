@@ -20,7 +20,7 @@ GTEST_TEST(ConstructTreeFromPreorderInorder, PreorderTraversal)
     auto preorder = std::vector{15, 6, 3, 2, 4, 7, 13, 9, 18, 17, 20};
     auto inorder = std::vector{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
 
-    auto root = BinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
+    auto root = ConstructBinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
 
     auto tree = BinarySearchTree::Tree<int>{};
     auto result = std::vector<int>{};
@@ -49,7 +49,7 @@ GTEST_TEST(ConstructTreeFromPreorderInorder, InorderTraversal)
     auto preorder = std::vector{15, 6, 3, 2, 4, 7, 13, 9, 18, 17, 20};
     auto inorder = std::vector{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
 
-    auto root = BinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
+    auto root = ConstructBinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
 
     auto tree = BinarySearchTree::Tree<int>{};
     auto result = std::vector<int>{};
@@ -79,7 +79,7 @@ GTEST_TEST(ConstructTreeFromPreorderInorder, PostorderTraversal)
     auto inorder = std::vector{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
     const auto expected = std::vector<int>{2, 4, 3, 9, 13, 7, 6, 17, 20, 18, 15};
 
-    auto root = BinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
+    auto root = ConstructBinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
 
     auto tree = BinarySearchTree::Tree<int>{};
     auto result = std::vector<int>{};
@@ -109,7 +109,7 @@ GTEST_TEST(ConstructTreeFromMarkerPreorder, PreorderTraversal)
     auto preorder = std::vector<char>{'H', 'B', 'F', NULL, NULL, 'E', 'A', NULL, NULL, NULL,
         'C', NULL, 'D', NULL, 'G', 'I', NULL, NULL, NULL};
 
-    auto root = BinarySearchTree::ConstructTreeFromMarkerPreorder(preorder);
+    auto root = ConstructBinarySearchTree::ConstructTreeFromMarkerPreorder(preorder);
     auto tree = BinarySearchTree::Tree<char>{};
     auto result = std::vector<char>{};
     tree.PreorderTraversal(root, result);

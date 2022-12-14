@@ -1,7 +1,5 @@
 #include "sort.h"
 
-#include <iostream>
-
 auto Sort::SelectionSort(std::vector<int>& seq) -> std::vector<int>
 {
     for (auto prev = 0; prev < static_cast<int>(seq.size()); ++prev)
