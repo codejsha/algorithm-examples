@@ -31,20 +31,44 @@ namespace BinaryTree
     struct ExtendedNode
     {
         T key;
+        ExtendedNode* parent;
         ExtendedNode* left;
         ExtendedNode* right;
-        ExtendedNode* parent;
 
         ExtendedNode()
-            : key{}, left{nullptr}, right{nullptr}, parent{nullptr}
+            : key{}, parent{nullptr}, left{nullptr}, right{nullptr}
         {
         }
         explicit ExtendedNode(T key)
-            : key{key}, left{nullptr}, right{nullptr}, parent{nullptr}
+            : key{key}, parent{nullptr}, left{nullptr}, right{nullptr}
         {
         }
-        ExtendedNode(T key, ExtendedNode* left, ExtendedNode* right, ExtendedNode* parent)
-            : key{key}, left{left}, right{right}, parent{parent}
+        ExtendedNode(T key, ExtendedNode* parent, ExtendedNode* left, ExtendedNode* right)
+            : key{key}, parent{parent}, left{left}, right{right}
+        {
+        }
+    };
+
+    /// @brief Extended binary tree node with next pointer.
+    /// @tparam T the type of the key
+    template <typename T>
+    struct NextExtendedNode
+    {
+        T key;
+        NextExtendedNode* left;
+        NextExtendedNode* right;
+        NextExtendedNode* next;
+
+        NextExtendedNode()
+            : key{}, left{nullptr}, right{nullptr}, next{nullptr}
+        {
+        }
+        explicit NextExtendedNode(T key)
+            : key{key}, left{nullptr}, right{nullptr}, next{nullptr}
+        {
+        }
+        NextExtendedNode(T key, NextExtendedNode* left, NextExtendedNode* right, NextExtendedNode* next)
+            : key{key}, left{left}, right{right}, next{nullptr}
         {
         }
     };
