@@ -68,6 +68,8 @@
 
 ### 힙 (Heap)
 
+- 정렬된 배열 합치기 (Merge sorted arrays (MergeSortedArray)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap))
+
 ### 링크드 리스트 (Linked list)
 
 - 리스트로 표현된 정수의 덧셈 (Add list-based integers (AddTwoNumbers)): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list))

@@ -65,6 +65,9 @@ std::ranges::min_element(v)
 std::ranges::max_element(v)
 std::ranges::minmax_element(v)
 ```
+
+**Examples**
+
 - Advancing through an array: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Advance through the array to the last index.
 - Arbitrary precision operation - increment an arbitrary-precision integer (PlusOne): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Add one to the number represented by the vector.
 - Arbitrary precision operation - add two arbitrary-precision integers (StringAddition): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Add two numbers represented by strings.
@@ -86,10 +89,14 @@ std::ranges::minmax_element(v)
 
 ### Graph
 
-- Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | Bellman-Ford algorithm is a shortest path algorithm for a single source. It finds the shortest path from a source vertex to all other vertices in a weighted graph. This includes cases where the weight is negative.
-- Breadth-first search (BFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | BFS is a search algorithm that traverses a graph layer by layer.
-- Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | DFS is a search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
-- Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | Dijkstra's algorithm is a graph search algorithm that finds the shortest path between two vertices in a graph. This is limited to cases where the weight is not negative.
+Shortest path algorithm: A* search algorithm:, Bellman-Ford algorithm, Dijkstra's algorithm, Floyd-Warshall algorithm, Johnson's algorithm, Kruskal's algorithm, Viterbi algorithm
+
+**Examples**
+
+- Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+- Breadth-first search (BFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A search algorithm that traverses a graph layer by layer.
+- Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
+- Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A single source shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
 
 ### Hash table
 
@@ -110,6 +117,10 @@ auto queue = std::priority_queue<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
 
+**Examples**
+
+- Merge sorted arrays (MergeSortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Merge k sorted arrays into one heap.
+
 ### Linked list
 
 ```cpp
@@ -122,6 +133,8 @@ emplace(list.end(), 12), splice(list.end(), std::list{8, 9, 10})
 auto list = std::forward_list{1, 2, 3};
 push_front(4), emplace_front(5), pop_front(), reverse(), sort()
 ```
+
+**Examples**
 
 - Add list-based integers (AddTwoNumbers): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Add two numbers represented by linked list.
 - Delete a node from linked list (DeleteNodeFromList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Delete a node from a linked list.
@@ -157,25 +170,15 @@ auto stack = std::stack<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
 
+**Examples**
+
 - Pair of bracket (CheckPairOfBracket): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Checks if the input string contains bracket pairs and is well-formed.
 - Print linked list in reverse order (PrintLinkedListInReverseOrder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Print the linked list in reverse order using stack.
 - Max stack element: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Implement stack that caches max value.
 
 ### Tree
 
-- B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
-- Balanced tree status: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is balanced or not.
-- Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | In binary search tree, all internal nodes are stored in ordered state. If y is a child of x and y is a node in the left subtree, then $y.key \leq x.key$, and if y is a node in the right subtree, then $y.key \geq x.key$.
-- Binary tree exterior (CreateExteriorNodeList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Create a vector of exterior nodes in a binary tree.
-- Construct binary tree from preorder and inorder traversal (ConstructTreeFromPreorderInorder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Construct a binary search tree from preorder and inorder traversal. This task has $O(n)$ time complexity.
-- Construct binary tree from preorder with marker (ConstructTreeFromMarkerPreorder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Construct a binary search tree from preorder traversal with marker. This task has $O(n)$ time complexity.
-- Leaf node list (CreateLeafNodeList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Create a vector of leaf nodes in a binary tree.
-- Lowest common ancestor (FindLowestCommonAncestor): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree.
-- Lowest common ancestor with parent pointer (FindLowestCommonAncestor2): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
-- Populate right sibling (PopulateRightSibling): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Populate the right sibling of a binary tree.
-- Root to leaf path corresponding to the given sum (HasKeySum): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the tree has a root-leaf path equal to the given sum.
-- Sum of root to leaf (SumRootToLeafDecimal, SumRootToLeafBinary): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
-- Tree symmetric: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is symmetric or not.
+The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is a connected graph without cycles.
 
 **Properties of Trees**
 
@@ -189,15 +192,38 @@ push(1), emplace(2), pop(), top(), size(), empty()
     - If an $m$-ary tree of height $h$ has $l$ leaves, then $h \geq \lceil \log_{m}{l} \rceil$.
     - If the $m$-ary tree is full and balanced, then $h = \lceil \log_{m}{l} \rceil$.
 
+**Balanced binary tree**
+
+- Depending on the balance: complete binary tree, full binary tree, perfect binary tree
+- Balanced binary tree: Red-black tree, AVL tree (from Adelson-Velsky and Landis)
+
 **Tree traversal in binary tree**
 
 - Preorder traversal (root, left, right): best choice for applications where internal vertices must be explored before leaves.
 - Inorder traversal (left, root, right): best choice for applications where internal vertices must be explored in-order.
 - Postorder traversal (left, right, root): best choice for applications where leaves need to be explored before internal vertices.
 
+**Examples**
+
+- B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
+- Balanced tree status: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is balanced or not.
+- Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
+- Binary tree exterior (CreateExteriorNodeList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Create a vector of exterior nodes in a binary tree.
+- Construct binary tree from preorder and inorder traversal (ConstructTreeFromPreorderInorder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Construct a binary search tree from preorder and inorder traversal. This task has $O(n)$ time complexity.
+- Construct binary tree from preorder with marker (ConstructTreeFromMarkerPreorder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Construct a binary search tree from preorder traversal with marker. This task has $O(n)$ time complexity.
+- Leaf node list (CreateLeafNodeList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Create a vector of leaf nodes in a binary tree.
+- Lowest common ancestor (FindLowestCommonAncestor): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree.
+- Lowest common ancestor with parent pointer (FindLowestCommonAncestor2): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
+- Populate right sibling (PopulateRightSibling): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Populate the right sibling of a binary tree.
+- Root to leaf path corresponding to the given sum (HasKeySum): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the tree has a root-leaf path equal to the given sum.
+- Sum of root to leaf (SumRootToLeafDecimal, SumRootToLeafBinary): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
+- Tree symmetric: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is symmetric or not.
+
 ## Topics
 
 ### Dynamic programming
+
+**Examples**
 
 - Fibonacci number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
     - $F_0 = 0$
@@ -209,12 +235,16 @@ push(1), emplace(2), pop(), top(), size(), empty()
 
 ### Greedy
 
+**Examples**
+
 - Activity selection: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/greedy)) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
 - Cashier's change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy)) | Cashier's change problem is that finds the minimum number of coins required to make change for a given amount of money.
 - Huffman code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/greedy)) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
 - Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy)) | Interval scheduling problem is that finds the minimum number of intervals required to schedule a set of activities(lectures).
 
 ### Mathematics
+
+**Examples**
 
 - Base expansion (base $b$ expansion of $n$): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math)) | Constructing the base $b$ expansion of an integer $n$. Such as binary, octal, decimal, hexadecimal expansion, etc.
 - Binary operation (addition): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
@@ -250,6 +280,8 @@ const auto i = distribution(generator);
 const auto d = std::generate_canonical<double, 10>(generator);
 ```
 
+**Examples**
+
 - Arithmetic operation (Multiply/Divide): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Calculate the product/fraction of two numbers without using arithmetic operators.
 - Computing parity of word (CountBits): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Count the number of bits that are set to 1.
 - Computing parity of word (Parity): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute parity of word.
@@ -265,13 +297,15 @@ const auto d = std::generate_canonical<double, 10>(generator);
 ### Search
 
 ```cpp
-//// c++ definition/methods
+//// c++ definition/methods (bianry search tree)
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
 
 auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 ```
+
+**Examples**
 
 - Binary search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
 - Linear search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
@@ -283,6 +317,8 @@ insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 std::ranges::sort(v);         // introsort (quick sort + heap sort + insertion sort)
 std::ranges::stable_sort(v);  // merge sort
 ```
+
+**Examples**
 
 - Bubble sort
 
@@ -377,6 +413,8 @@ divide and conquer algorithm
 auto str = std::string{"hello"};
 append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
 ```
+
+**Examples**
 
 - Convert string (IntToString, StringToInt): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Convert integer to string and vice versa.
 - IP address validation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Validate IPv4 address that is in the form of `x.x.x.x` where `x` is a number between 0 and 255.
