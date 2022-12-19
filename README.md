@@ -52,18 +52,35 @@ std::ranges::none_of(v, [](auto x) { return x % 2 == 0; })
 std::ranges::for_each(v, [](auto x) { std::cout << x << " "; }).fun
 std::ranges::count(v, 42)
 std::ranges::count_if(v, [](auto x) { return x % 2 == 0; })
-std::ranges::find(v, 42)
-std::ranges::find_if(v, [](auto x) { return x % 2 == 0; })
-std::ranges::find_end(v, sub_v).begin() // cf. result - v.begin()
 std::ranges::reverse(v)
 std::ranges::rotate(v, v.end() - k)
 std::ranges::sort(v)
-std::ranges::binary_search(v, 42)
-std::ranges::lower_bound(v, 42)
-std::ranges::upper_bound(v, 42)
 std::ranges::min_element(v)
 std::ranges::max_element(v)
 std::ranges::minmax_element(v)
+```
+
+```java
+//// java definition/methods
+var array = new int[]{1, 2, 3, 4, 5};
+// Arrays
+binarySearch(array, 3), equals(array, another_arr), copyOf(array, array.length), copyOfRange(array, 0, array.length),
+sort(array), sort(array, 0, array.length), fill(array, 42), fill(array, 0, array.length, 42),
+// Arrays.stream()
+anyMatch(x -> x % 2 == 0), allMatch(x -> x % 2 == 0), noneMatch(x -> x % 2 == 0),
+count(), sum(), min(), max(), average(), map(x -> x * 2).toArray(), filter(x -> x % 2 == 0).count()
+// Collections
+sort(list), binarySearch(list, 3), min(list), max(list), swap(list, 0, 1), replaceAll(list, 1, 2),
+frequency(list, 1), reverse(list), rotate(list, 1), shuffle(list), unmodifiableList(list)
+// list
+var list = Arrays.asList(boxedArray);
+sort(Comparator.naturalOrder()), sort(Comparator.reverseOrder())
+
+Arrays.stream(array).boxed().toArray(Integer[]::new)    // int[] to Integer[]
+Arrays.stream(array).mapToObj(String::valueOf).toArray(String[]::new)   // int[] to String[]
+String.join(", ", strArray) // array to string
+str.split(", ")             // string to array
+List.of(array), Arrays.asList(array)  // array to list
 ```
 
 **Examples**
@@ -89,24 +106,192 @@ std::ranges::minmax_element(v)
 
 ### Graph
 
-Shortest path algorithm: A* search algorithm:, Bellman-Ford algorithm, Dijkstra's algorithm, Floyd-Warshall algorithm, Johnson's algorithm, Kruskal's algorithm, Viterbi algorithm
+- Shortest path algorithm: A* search algorithm, Bellman-Ford algorithm, Dijkstra's algorithm, Floyd-Warshall algorithm, Johnson's algorithm, Viterbi algorithm
+- Minimum spanning tree algorithm: Kruskal's algorithm, Prim's algorithm
+- Maximum flow algorithm: Edmonds-Karp algorithm, Ford-Fulkerson algorithm, Push-relabel algorithm, Maximum bipartite matching
 
 **Examples**
 
+- A* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
 - Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+
+```txt
+algorithm BellmanFord(G, source):
+    // Initialize single source
+    for each u in G.V:
+        u.distance = ∞
+        u.parent = NIL
+    source.distance = 0
+
+    for i = 0 to |G.V| - 2:
+        for each edge (u, v) in G.E:
+            // Relaxation
+            if v.distance > u.distance + w(u, v):
+                v.distance = u.distance + w(u, v)
+                v.parent = u
+
+    for each edge (u, v) in G.E:
+        if v.distance > u.distance + w(u, v):
+            return false
+    return true
+```
+
 - Breadth-first search (BFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A search algorithm that traverses a graph layer by layer.
+
+```txt
+algorithm BFS(G, source):
+    for each u in G.V:
+        u.color = WHITE
+        u.distance = ∞
+        u.parent = NIL
+    source.color = GRAY
+    source.distance = 0
+    source.parent = NIL
+    Queue = ∅
+    Queue.enqueue(source)
+
+    while Queue != ∅:
+        u = Queue.dequeue()
+        for each v in G.Adj[u]:
+            if v.color == WHITE:
+                v.color = GRAY
+                v.distance = u.distance + 1
+                v.parent = u
+                Queue.enqueue(v)
+        u.color = BLACK
+```
+
 - Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
+
+```txt
+algorithm DFS(G):
+    for each u in G.V:
+        u.color = WHITE
+        u.parent = NIL
+    time = 0
+    for each u in G.V:
+        if u.color == WHITE:
+            DFS-VISIT(G, u)
+
+algorithm DFS-VISIT(G, u):
+    time = time + 1               // discovered
+    u.discovered = time
+    u.color = GRAY
+    for each v in G.Adj[u]:
+        if v.color == WHITE:
+            v.parent = u
+            DFS-VISIT(G, v)
+    u.color = BLACK
+    time = time + 1               // finished
+    u.finished = time
+```
+
 - Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A single source shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
+
+```txt
+algorithm Dijkstra(G, source):
+    // Initialize single source
+    for each u in G.V:
+        u.distance = ∞
+        u.parent = NIL
+    source.distance = 0
+
+    Set = ∅
+    Queue = G.V
+    while Queue != ∅:
+        u = EXTRACT-MIN(Queue)
+        Set = Set ∪ {u}
+        for each v in G.Adj[u]:
+            // Relaxation
+            if v.distance > u.distance + w(u, v):
+                v.distance = u.distance + w(u, v)
+                v.parent = u
+```
+
+- Edmonds-Karp algorithm
+- Floyd-Warshall algorithm: A all pairs shortest paths algorithm.
+
+```txt
+algorithm InitializeAdjacencyMatrix(G):
+    d = matrix of size |G.V| × |G.V|
+    for each u in G.V:
+        for each v in G.V:
+            if u == v:
+                d[u][v] = 0
+            else if (u, v) in G.E:
+                d[u][v] = w(u, v)
+            else:
+                d[u][v] = ∞
+    return d
+
+algorithm FloydWarshall(G):
+    d = InitializeAdjacencyMatrix(G)
+    for k = 0 to |G.V| - 1:
+        for i = 0 to |G.V| - 1:
+            for j = 0 to |G.V| - 1:
+                dᵏ[i, j] = MIN(dᵏ⁻¹[i, j], dᵏ⁻¹[i, k] + dᵏ⁻¹[k, j])
+    return d
+```
+
+- Ford-Fulkerson algorithm
+- Johnson's algorithm: A all pairs shortest paths algorithm. This is a combination of Dijkstra's algorithm and the Bellman-Ford algorithm. It may be faster than Floyd–Warshall on sparse graphs.
+- Kruskal's algorithm: A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph.
+
+```txt
+algorithm Kruskal(G, w):
+    Set = ∅
+    for each v in G.V:
+        MAKE-SET(v)
+    for each edge (u, v) in G.E ordered by w(u, v), increasing:
+        if FIND-SET(u) != FIND-SET(v):
+            Set = Set ∪ {(u, v)}
+            UNION(u, v)                             // combine trees
+    return Set
+```
+
+- Maximum bipartite matching
+- Prim's algorithm: A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
+
+```txt
+algorithm Prim(G, root):
+    for each u in G.V:
+        u.key = ∞
+        u.parent = NIL
+    root.key = 0
+    queue = G.V                                       // queue is a min priority queue
+    while queue != ∅:
+        u = EXTRACT-MIN(queue)
+        for each v in G.Adj[u]:
+            if v in queue and w(u, v) < v.key:
+                v.parent = u
+                v.key = w(u, v)
+```
+
+- Push-relabel algorithm
+- Viterbi algorithm: A shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
 
 ### Hash table
 
 ```cpp
 //// c++ definition/methods
 auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
-insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty()
-
+insert({"c", 3}), emplace("d", 4), find("b"), erase("a"), size(), empty()
 auto set = std::unordered_set{1, 2, 3, 4, 5};
-insert(42), emplace(42), erase(42), find(42), size()
+insert(42), emplace(42), find(42), erase(42), size(), empty()
+```
+
+```java
+//// java definition/methods
+var map = new HashMap<String, Integer>();
+put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
+keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
+var set = new HashSet<Integer>();
+add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator()
+
+Collections.unmodifiableMap(map);
+Collections.unmodifiableSet(set);
+Collections.unmodifiableSortedMap(map);
+Collections.unmodifiableSortedSet(set);
 ```
 
 ### Heap
@@ -117,6 +302,13 @@ auto queue = std::priority_queue<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
 
+```java
+//// java definition/methods
+var queue = new PriorityQueue<Integer>();
+add(1), peek(), poll(), remove(), size(), isEmpty(),
+contains(1), clear(), iterator()
+```
+
 **Examples**
 
 - Merge sorted arrays (MergeSortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Merge k sorted arrays into one heap.
@@ -125,13 +317,28 @@ push(1), emplace(2), pop(), top(), size(), empty()
 
 ```cpp
 //// c++ definition/methods
-auto list = std::list{1, 2, 3};
+auto list = std::list{1, 2, 3};   // doubly linked list
 push_front(4), emplace_front(5), push_back(6), emplace_back(7),
 pop_front(), pop_back(), reverse(), sort(), insert(list.begin(), 11),
 emplace(list.end(), 12), splice(list.end(), std::list{8, 9, 10})
 
-auto list = std::forward_list{1, 2, 3};
+auto list = std::forward_list{1, 2, 3};   // singly linked list
 push_front(4), emplace_front(5), pop_front(), reverse(), sort()
+```
+
+
+```java
+//// java definition/methods
+var list = new LinkedList<Integer>();   // doubly linked list
+add(1), addAll(List.of(2, 3, 4, 5)),
+remove(0), removeFirst(), removeLast(), removeIf(x -> x % 2 == 0), subList(1, 3),
+get(0), getFirst(), getLast(), size(), isEmpty(), contains(1), containsAll(List.of(1, 2, 3)),
+iterator(), listIterator()
+
+var list = new ArrayList<Integer>();    // dynamically resized array
+add(1), addAll(List.of(2, 3, 4, 5)), remove(0), subList(1, 3),
+get(0), size(), isEmpty(), contains(3), containsAll(List.of(3, 4)),
+iterator(), listIterator()
 ```
 
 **Examples**
@@ -162,12 +369,36 @@ push_back(1), emplace_back(2), push_front(3), emplace_front(4),
 pop_back(), pop_front(), front(), back(), size(), empty()
 ```
 
+```java
+//// java definition/methods
+var deque = new ArrayDeque<Integer>();
+add(1), remove(), pop(), size(), isEmpty(), contains(1), clear(),
+offerFirst(6), offerLast(7), pollFirst(), pollLast(), peekFirst(), peekLast(),
+addFirst(8), addLast(9), removeFirst(), removeLast(), getFirst(), getLast(),
+iterator(), descendingIterator()
+
+var array = deque.toArray(Integer[]::new);  // deque to array
+var list = new ArrayList<>(deque);          // deque to list
+```
+
 ### Stack
 
 ```cpp
 //// c++ definition/methods
 auto stack = std::stack<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
+```
+
+```java
+//// java definition/methods
+var stack = new Stack<Integer>();
+push(1), add(1, 2), addAll(anotherList), pop(), peek(), size(), isEmpty()
+contains(1), search(1), size(),
+remove(1), removeIf(x -> x == 1), clear()
+iterator(), listIterator()
+
+var array = stack.toArray(Integer[]::new);  // stack to array
+var list = new ArrayList<>(stack);          // stack to list
 ```
 
 **Examples**
@@ -178,7 +409,27 @@ push(1), emplace(2), pop(), top(), size(), empty()
 
 ### Tree
 
-The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is a connected graph without cycles.
+The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
+
+```cpp
+//// c++ definition/methods (binary search tree based)
+auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
+insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
+auto set = std::set{1, 2, 3, 4, 5};
+insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
+```
+```java
+//// java definition/methods (binary search tree based)
+var treeMap = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
+put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
+keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
+firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey("b"), pollFirstEntry(), pollLastEntry(),
+headMap("c"), tailMap("c"), subMap("a", "c"), descendingMap(), descendingKeySet()
+var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
+add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator(), descendingIterator(),
+first(), last(), lower(3), higher(3), floor(3), ceiling(3), pollFirst(), pollLast(),
+headSet(3), tailSet(3), subSet(2, 4), descendingSet()
+```
 
 **Properties of Trees**
 
@@ -270,14 +521,31 @@ std::stoi("42"), std::stod("3.14"), std::stoi("42", nullptr, 16), std::stoi("100
 std::bitset<8>(42), std::bitset<8>(3.14), std::bitset<8>(0x42), std::bitset<8>(0b1000010) // int/double/hex/binary -> bitset
 std::uniform_int_distribution<int> distribution(1, 6), std::uniform_real_distribution<double> distribution(0.0, 1.0) // random
 
-// random number
+// random values
 std::random_device rd;
 std::mt19937 generator(rd());
-// integer in [1, 10]
-std::uniform_int_distribution distribution(1, 10);
+std::uniform_int_distribution distribution(1, 10);  // integer in [1, 10]
 const auto i = distribution(generator);
-// floating point number in [0, 1)
-const auto d = std::generate_canonical<double, 10>(generator);
+const auto d = std::generate_canonical<double, 10>(generator);  // floating point number in [0, 1)
+```
+
+```java
+//// java definition/methods
+Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, Boolean.TRUE  // constants
+Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x, 3.14), Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225) // math
+Integer.valueOf("1"), Double.valueOf("3.14"), Boolean.valueOf("true"), Float.toString(3.14f)  // reference type
+Integer.parseInt("42"), Double.parseDouble("3.14")  // primitive type
+Integer.parseInt("1000010", 2), Integer.parseInt("52", 8), Integer.parseInt("2a", 16) // string -> binary/octal/hex
+Integer.toBinaryString(42), Integer.toHexString(42), Integer.toOctalString(42)  // int -> binary/hex/octal string
+new BitSet(16), set(0), set(0, 8), set(0, 8, true)  // bitset
+Double.compare(x, 1.23) == 0, Integer.compare(x, 2) == 0  // comparing values
+
+// random values
+var random = new Random();  // java.util.Random
+var randomInt = random.nextInt(100);      // [0, 100)
+var randomLong = random.nextLong();       // [0, 2^48)
+var randomDouble = random.nextDouble();   // [0.0, 1.0)
+var randomBoolean = random.nextBoolean(); // true/false
 ```
 
 **Examples**
@@ -297,12 +565,32 @@ const auto d = std::generate_canonical<double, 10>(generator);
 ### Search
 
 ```cpp
-//// c++ definition/methods (bianry search tree)
+//// c++ definition/methods (binary search tree based)
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
-
 auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
+
+// algorithm
+std::ranges::find(v, 42)
+std::ranges::find(v, 42)
+std::ranges::find_if(v, [](auto x) { return x % 2 == 0; })
+std::ranges::find_end(v, sub_v).begin() // cf. result - v.begin()
+std::ranges::binary_search(v, 42)
+std::ranges::lower_bound(v, 42)
+std::ranges::upper_bound(v, 42)
+```
+```java
+//// java definition/methods
+var array = new int[]{1, 2, 3, 4, 5};
+var arrayList = new ArrayList<Integer>(List.of(1, 2, 3, 4, 5));
+var linkedList = new LinkedList<Integer>(List.of(1, 2, 3, 4, 5));
+var hashSet = new HashSet<Integer>(List.of(1, 2, 3, 4, 5));
+var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
+
+// binary search
+Arrays.binarySearch(array, 3)             // for array
+Collections.binarySearch(arrayList, 3);   // for list
 ```
 
 **Examples**
@@ -316,6 +604,12 @@ insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 //// c++ definition/methods
 std::ranges::sort(v);         // introsort (quick sort + heap sort + insertion sort)
 std::ranges::stable_sort(v);  // merge sort
+```
+
+```java
+//// java definition/methods
+Arrays.sort(array);     // dual pivot quick sort (primitive types), timsort (insertion sort + merge sort, reference types)
+Collections.sort(list); // timsort (insertion sort + merge sort)
 ```
 
 **Examples**
@@ -412,6 +706,33 @@ divide and conquer algorithm
 //// c++ definition/methods
 auto str = std::string{"hello"};
 append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
+```
+
+```java
+//// java definition/methods
+var str = "Hello World";
+length(), charAt(0), substring(0, 5), indexOf("Java"), lastIndexOf("Java"),
+contains("Java"), startsWith("Hello"), endsWith("World"),
+compareTo("Hello Java"), compareToIgnoreCase("hello world"),
+concat("!"), replace("World", "Java"), toUpperCase(), toLowerCase(), trim(),
+toCharArray(), chars()
+
+// static methods
+String.format("%s %s", "Hello", "World")
+String.join(" ", "Hello", "World")
+String.valueOf(123)
+
+// string builder
+var sb = new StringBuilder();
+append("!"), insert(0, "Hello"), delete(0, 5), deleteCharAt(0),
+length(), charAt(0), indexOf("Java"), lastIndexOf("Java"),
+reverse(), replace(0, 5, "World"), substring(0, 5), toString()
+subSequence(0, 5), chars()
+
+// list/stack/deque to string
+var str = collection.stream()
+    .map(String::valueOf)
+    .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
 ```
 
 **Examples**
