@@ -113,7 +113,7 @@ List.of(array), Arrays.asList(array)  // array to list
 **Examples**
 
 - A* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
-- Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+- Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
 ```txt
 algorithm BellmanFord(G, source):
@@ -136,7 +136,7 @@ algorithm BellmanFord(G, source):
     return true
 ```
 
-- Breadth-first search (BFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A search algorithm that traverses a graph layer by layer.
+- Breadth-first search (BFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A search algorithm that traverses a graph layer by layer.
 
 ```txt
 algorithm BFS(G, source):
@@ -161,7 +161,7 @@ algorithm BFS(G, source):
         u.color = BLACK
 ```
 
-- Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
+- Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
 
 ```txt
 algorithm DFS(G):
@@ -186,7 +186,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)) | A single source shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
+- Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A single source shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -209,7 +209,7 @@ algorithm Dijkstra(G, source):
 ```
 
 - Edmonds-Karp algorithm
-- Floyd-Warshall algorithm: A all pairs shortest paths algorithm.
+- Floyd-Warshall algorithm: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A all pairs shortest paths algorithm.
 
 ```txt
 algorithm InitializeAdjacencyMatrix(G):
