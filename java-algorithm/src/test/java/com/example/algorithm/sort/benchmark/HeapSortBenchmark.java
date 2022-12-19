@@ -1,7 +1,9 @@
 package com.example.algorithm.sort.benchmark;
 
-import com.example.algorithm.sort.MergeSort;
+
+import com.example.algorithm.sort.HeapSort;
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
@@ -13,19 +15,19 @@ import java.util.concurrent.TimeUnit;
 @Fork(1)
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
-public class MergeSortBenchmarkTest {
-    public MergeSort mergeSort;
+public class HeapSortBenchmark {
+    public HeapSort heapSort;
 
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
-                .include(MergeSortBenchmarkTest.class.getSimpleName())
+                .include(HeapSortBenchmark.class.getSimpleName())
                 .build();
         new Runner(options).run();
     }
 
     @Setup
     public void setUp() {
-        mergeSort = new MergeSort();
+        heapSort = new HeapSort();
     }
 
     @TearDown(Level.Invocation)
@@ -34,8 +36,8 @@ public class MergeSortBenchmarkTest {
     }
 
     @Benchmark
-    public void testMergeSort1() {
-        var array = new int[]{64, 32, 16, 8, 4};
-        mergeSort.mergeSort(array, 0, array.length - 1);
+    public void testHeapSort1(Blackhole blackhole) {
+        var array = new int[]{4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
+        blackhole.consume(heapSort.heapSort(array));
     }
 }
