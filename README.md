@@ -78,8 +78,8 @@ sort(Comparator.naturalOrder()), sort(Comparator.reverseOrder())
 
 Arrays.stream(array).boxed().toArray(Integer[]::new)    // int[] to Integer[]
 Arrays.stream(array).mapToObj(String::valueOf).toArray(String[]::new)   // int[] to String[]
-String.join(", ", strArray) // array to string
-str.split(", ")             // string to array
+String.join(", ", strArray)     // array to string
+str.split(", ")                 // string to array
 List.of(array), Arrays.asList(array)  // array to list
 ```
 
@@ -106,7 +106,10 @@ List.of(array), Arrays.asList(array)  // array to list
 
 ### Graph
 
-- Shortest path algorithm: A* search algorithm, Bellman-Ford algorithm, Dijkstra's algorithm, Floyd-Warshall algorithm, Johnson's algorithm, Viterbi algorithm
+- Shortest path algorithm
+  - Single-source: Bellman-Ford algorithm, Dijkstra's algorithm
+  - Single-pair: A* search algorithm
+  - All-pair: Floyd-Warshall algorithm, Johnson's algorithm
 - Minimum spanning tree algorithm: Kruskal's algorithm, Prim's algorithm
 - Maximum flow algorithm: Edmonds-Karp algorithm, Ford-Fulkerson algorithm, Push-relabel algorithm, Maximum bipartite matching
 
