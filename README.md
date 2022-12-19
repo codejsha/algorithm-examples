@@ -235,7 +235,7 @@ algorithm FloydWarshall(G):
 
 - Ford-Fulkerson algorithm
 - Johnson's algorithm: A all pairs shortest paths algorithm. This is a combination of Dijkstra's algorithm and the Bellman-Ford algorithm. It may be faster than Floyd–Warshall on sparse graphs.
-- Kruskal's algorithm: A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph.
+- Kruskal's algorithm: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph. The algorithm uses  path compression (FIND-SET) and union by rank (UNION) to improve the performance.
 
 ```txt
 algorithm Kruskal(G, w):
@@ -250,7 +250,7 @@ algorithm Kruskal(G, w):
 ```
 
 - Maximum bipartite matching
-- Prim's algorithm: A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
+- Prim's algorithm: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
 
 ```txt
 algorithm Prim(G, root):
