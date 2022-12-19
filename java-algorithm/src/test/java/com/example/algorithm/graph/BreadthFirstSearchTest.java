@@ -1,22 +1,24 @@
 package com.example.algorithm.graph;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 @Slf4j
 class BreadthFirstSearchTest {
-    private BreadthFirstSearch bfs;
-    private BreadthFirstSearch.Vertex vertexU;
-    private BreadthFirstSearch.Vertex vertexV;
-    private BreadthFirstSearch.Vertex vertexW;
-    private BreadthFirstSearch.Vertex vertexX;
-    private BreadthFirstSearch.Vertex vertexY;
-    private BreadthFirstSearch.Vertex vertexZ;
+    BreadthFirstSearch bfs;
+    BreadthFirstSearch.Vertex vertexU;
+    BreadthFirstSearch.Vertex vertexV;
+    BreadthFirstSearch.Vertex vertexW;
+    BreadthFirstSearch.Vertex vertexX;
+    BreadthFirstSearch.Vertex vertexY;
+    BreadthFirstSearch.Vertex vertexZ;
 
     @BeforeEach
     void setUp() {

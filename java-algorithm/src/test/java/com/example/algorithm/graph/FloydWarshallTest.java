@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @ExtendWith(MockitoExtension.class)
 @Slf4j
 class FloydWarshallTest {
-    public static final int INF = 99999;
+    static final int INF = 99999;
 
     @BeforeEach
     void setUp() {

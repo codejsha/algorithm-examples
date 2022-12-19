@@ -12,13 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
 @Slf4j
 class DepthFirstSearchTest {
-    private DepthFirstSearch dfs;
-    private DepthFirstSearch.Vertex vertexU;
-    private DepthFirstSearch.Vertex vertexV;
-    private DepthFirstSearch.Vertex vertexW;
-    private DepthFirstSearch.Vertex vertexX;
-    private DepthFirstSearch.Vertex vertexY;
-    private DepthFirstSearch.Vertex vertexZ;
+    DepthFirstSearch dfs;
+    DepthFirstSearch.Vertex vertexU;
+    DepthFirstSearch.Vertex vertexV;
+    DepthFirstSearch.Vertex vertexW;
+    DepthFirstSearch.Vertex vertexX;
+    DepthFirstSearch.Vertex vertexY;
+    DepthFirstSearch.Vertex vertexZ;
 
     @BeforeEach
     void setUp() {
