@@ -244,7 +244,7 @@ algorithm FloydWarshall(G):
 algorithm Kruskal(G, w):
     Set = ∅
     for each v in G.V:
-        MAKE-SET(v)
+        MAKE-SET(v)                                 // initialize vertice
     for each edge (u, v) in G.E ordered by w(u, v), increasing:
         if FIND-SET(u) != FIND-SET(v):
             Set = Set ∪ {(u, v)}
@@ -261,11 +261,11 @@ algorithm Prim(G, root):
         u.key = ∞
         u.parent = NIL
     root.key = 0
-    queue = G.V                                       // queue is a min priority queue
-    while queue != ∅:
-        u = EXTRACT-MIN(queue)
+    Queue = G.V                                       // queue is a min priority queue
+    while Queue != ∅:
+        u = EXTRACT-MIN(Queue)
         for each v in G.Adj[u]:
-            if v in queue and w(u, v) < v.key:
+            if v in Queue and w(u, v) < v.key:
                 v.parent = u
                 v.key = w(u, v)
 ```
