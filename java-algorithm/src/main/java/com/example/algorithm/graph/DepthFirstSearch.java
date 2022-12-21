@@ -11,7 +11,7 @@ public class DepthFirstSearch {
         return depthFirstSearch(source, dest);
     }
 
-    public Vertex depthFirstSearch(Vertex source, Vertex dest) {
+    private Vertex depthFirstSearch(Vertex source, Vertex dest) {
         source.visited = true;
         if (source == dest) {
             return source;
@@ -51,10 +51,10 @@ public class DepthFirstSearch {
     }
 
     public static class Vertex implements Comparable<Vertex> {
-        public String key;
-        public int distance;
-        public boolean visited;
-        public Vertex previous;
+        String key;
+        int distance;
+        boolean visited;
+        Vertex previous;
         NavigableSet<Vertex> neighbors = new TreeSet<>();
 
         public Vertex(String key) {

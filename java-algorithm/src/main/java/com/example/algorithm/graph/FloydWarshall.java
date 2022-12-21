@@ -3,7 +3,7 @@ package com.example.algorithm.graph;
 public class FloydWarshall {
 
     // the maximum value of an integer
-    public static final int INF = 99999;
+    private static final int INF = 99999;
 
     /**
      * Floyd-Warshall algorithm for all-pairs the shortest path problem.

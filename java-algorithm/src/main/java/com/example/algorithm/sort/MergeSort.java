@@ -24,7 +24,7 @@ public class MergeSort {
         var outOfLeft = false;
         var outOfRight = false;
 
-        for (int k = start; k < end + 1; k++) {
+        for (var k = start; k < end + 1; k++) {
             if (leftSize <= i) {
                 outOfLeft = true;
             }

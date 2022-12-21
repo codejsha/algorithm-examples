@@ -106,8 +106,8 @@ public class Prim {
     }
 
     public static class Graph {
-        public Set<Vertex> vertices = new HashSet<>();
-        public Set<Edge> edges = new HashSet<>();
+        Set<Vertex> vertices = new HashSet<>();
+        Set<Edge> edges = new HashSet<>();
 
         public void addVertex(Vertex vertex) {
             vertices.add(vertex);
@@ -121,8 +121,8 @@ public class Prim {
     }
 
     public static class Vertex {
-        public char key;
-        public Set<Edge> edges = new HashSet<>();
+        char key;
+        Set<Edge> edges = new HashSet<>();
 
         public Vertex(char key) {
             this.key = key;
@@ -130,9 +130,9 @@ public class Prim {
     }
 
     public static class Edge implements Comparable<Edge> {
-        public Vertex source;
-        public Vertex sink;
-        public int weight;
+        Vertex source;
+        Vertex sink;
+        int weight;
 
         public Edge(Vertex source, Vertex sink, int weight) {
             this.source = source;

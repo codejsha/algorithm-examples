@@ -64,9 +64,9 @@ public class Dijkstra {
     }
 
     public static class Vertex implements Comparable<Vertex> {
-        public String key;
-        public int distance;
-        public Vertex previous;
+        String key;
+        int distance;
+        Vertex previous;
         NavigableSet<Vertex> neighbors = new TreeSet<>();
 
         public Vertex(String key) {
@@ -75,7 +75,7 @@ public class Dijkstra {
             this.previous = null;
         }
 
-        public void addNeighbour(Vertex vertex) {
+        void addNeighbour(Vertex vertex) {
             neighbors.add(vertex);
         }
 

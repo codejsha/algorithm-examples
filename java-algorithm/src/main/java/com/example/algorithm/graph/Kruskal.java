@@ -106,8 +106,8 @@ public class Kruskal {
     }
 
     public static class Graph {
-        public Set<Vertex> vertices = new HashSet<>();
-        public Set<Edge> edges = new LinkedHashSet<>();
+        Set<Vertex> vertices = new HashSet<>();
+        Set<Edge> edges = new LinkedHashSet<>();
 
         public void addVertex(Vertex vertex) {
             vertices.add(vertex);
@@ -119,9 +119,9 @@ public class Kruskal {
     }
 
     public static class Vertex implements Comparable<Vertex> {
-        public char key;
-        public Vertex parent;
-        public int rank;
+        char key;
+        Vertex parent;
+        int rank;
 
         public Vertex(char key) {
             this.key = key;
@@ -136,9 +136,9 @@ public class Kruskal {
     }
 
     public static class Edge implements Comparable<Edge> {
-        public Vertex source;
-        public Vertex sink;
-        public int weight;
+        Vertex source;
+        Vertex sink;
+        int weight;
 
         public Edge(Vertex source, Vertex sink, int weight) {
             this.source = source;
@@ -146,15 +146,15 @@ public class Kruskal {
             this.weight = weight;
         }
 
-        public Vertex getSource() {
+        Vertex getSource() {
             return source;
         }
 
-        public Vertex getSink() {
+        Vertex getSink() {
             return sink;
         }
 
-        public int getWeight() {
+        int getWeight() {
             return weight;
         }
 

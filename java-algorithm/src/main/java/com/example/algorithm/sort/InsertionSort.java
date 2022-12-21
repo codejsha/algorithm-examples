@@ -2,7 +2,7 @@ package com.example.algorithm.sort;
 
 public class InsertionSort {
     public int[] insertionSort(int[] array) {
-        for (int i = 1; i < array.length; i++) {
+        for (var i = 1; i < array.length; i++) {
             var key = array[i];
             var j = i - 1;
             while ((j > -1) && (array[j] > key)) {
@@ -15,7 +15,7 @@ public class InsertionSort {
     }
 
     public Double[] insertionSort(Double[] array) {
-        for (int i = 1; i < array.length; i++) {
+        for (var i = 1; i < array.length; i++) {
             var key = array[i];
             var j = i - 1;
             while ((j > -1) && (array[j] > key)) {

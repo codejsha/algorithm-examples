@@ -6,7 +6,7 @@ public class HeapSort {
     public int[] heapSort(int[] array) {
         var heapSize = array.length;
         buildMaxHeap(array);
-        for (int i = heapSize - 1; i > 0; i--) {
+        for (var i = heapSize - 1; i > 0; i--) {
             swap(array, 0, i);
             heapSize--;
             maxHeapify(array, heapSize, 0);
@@ -18,7 +18,7 @@ public class HeapSort {
         var heapSize = array.length;
         var loopIndex = Math.subtractExact(Math.floorDiv(heapSize, 2), 1);
 
-        for (int i = loopIndex; i > -1; i--) {
+        for (var i = loopIndex; i > -1; i--) {
             maxHeapify(array, heapSize, i);
         }
     }
