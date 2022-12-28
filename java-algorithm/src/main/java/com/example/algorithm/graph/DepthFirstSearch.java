@@ -6,7 +6,7 @@ import java.util.NavigableSet;
 import java.util.TreeSet;
 
 public class DepthFirstSearch {
-    public Vertex depthFirstSearchWrapper(Vertex source, Vertex dest) {
+    public Vertex performDepthFirstSearch(Vertex source, Vertex dest) {
         source.distance = 0;
         return depthFirstSearch(source, dest);
     }

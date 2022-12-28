@@ -43,8 +43,8 @@ class DepthFirstSearchTest {
     }
 
     @Test
-    void testDepthFirstSearchRecursiveWrapper() {
-        assertEquals(vertexY, dfs.depthFirstSearchWrapper(vertexU, vertexY));
+    void testDepthFirstSearchCase1() {
+        assertEquals(vertexY, dfs.performDepthFirstSearch(vertexU, vertexY));
         assertEquals(2, dfs.getShortestDistance(vertexY));
     }
 }
