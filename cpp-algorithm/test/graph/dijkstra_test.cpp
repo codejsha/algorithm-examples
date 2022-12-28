@@ -4,13 +4,13 @@
 
 GTEST_TEST(Dijkstra, Simple1)
 {
-    auto vertex_s = Graph::DijkstraVertex('S');
-    auto vertex_t = Graph::DijkstraVertex('T');
-    auto vertex_x = Graph::DijkstraVertex('X');
-    auto vertex_y = Graph::DijkstraVertex('Y');
-    auto vertex_z = Graph::DijkstraVertex('Z');
+    auto vertex_s = Dijkstra::Vertex('S');
+    auto vertex_t = Dijkstra::Vertex('T');
+    auto vertex_x = Dijkstra::Vertex('X');
+    auto vertex_y = Dijkstra::Vertex('Y');
+    auto vertex_z = Dijkstra::Vertex('Z');
 
-    const auto graph = new Graph::DijkstraGraph();
+    const auto graph = new Dijkstra::Graph();
 
     graph->AddVertex(vertex_s);
     graph->AddVertex(vertex_t);
@@ -35,19 +35,19 @@ GTEST_TEST(Dijkstra, Simple1)
     graph->AddEdge(vertex_z, vertex_x, 6);
 
     auto& source = vertex_s;
-    source.Distance = 0;
-    graph->Dijkstra(source);
+    source.distance = 0;
+    graph->DijkstraAlgorithm(source);
 
     // weight
-    ASSERT_EQ(0, vertex_s.Distance);
-    ASSERT_EQ(8, vertex_t.Distance);
-    ASSERT_EQ(9, vertex_x.Distance);
-    ASSERT_EQ(5, vertex_y.Distance);
-    ASSERT_EQ(7, vertex_z.Distance);
+    ASSERT_EQ(0, vertex_s.distance);
+    ASSERT_EQ(8, vertex_t.distance);
+    ASSERT_EQ(9, vertex_x.distance);
+    ASSERT_EQ(5, vertex_y.distance);
+    ASSERT_EQ(7, vertex_z.distance);
 
     // predecessor
-    ASSERT_EQ('Y', vertex_t.Predecessor->Id);
-    ASSERT_EQ('T', vertex_x.Predecessor->Id);
-    ASSERT_EQ('S', vertex_y.Predecessor->Id);
-    ASSERT_EQ('Y', vertex_z.Predecessor->Id);
+    ASSERT_EQ('Y', vertex_t.predecessor->id);
+    ASSERT_EQ('T', vertex_x.predecessor->id);
+    ASSERT_EQ('S', vertex_y.predecessor->id);
+    ASSERT_EQ('Y', vertex_z.predecessor->id);
 }

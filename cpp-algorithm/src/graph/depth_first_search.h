@@ -1,101 +1,55 @@
 #ifndef CPP_ALGORITHM_DEPTH_FIRST_SEARCH_H
 #define CPP_ALGORITHM_DEPTH_FIRST_SEARCH_H
 
-#include "graph.h"
-
 #include <set>
 #include <vector>
 
-namespace Graph
+namespace Dfs
 {
-    /// @brief Vertex of graph.
-    struct DfsVertex : Vertex<char>
+    enum VisitStatus
     {
-        explicit DfsVertex(const char id)
-            : Vertex<char>(id), Predecessor(nullptr), Visit(Unvisited), DiscoveryTime(0), FinishingTime(0)
-        {
-        }
-
-        std::set<DfsVertex*> Neighbors;
-        DfsVertex* Predecessor;
-        VisitStatus Visit;
-        int DiscoveryTime;
-        int FinishingTime;
+        Unvisited,
+        Visited,
+        Finished
     };
 
-    /// @brief Depth first search graph.
-    class DfsGraph
+    struct Vertex
     {
-    public:
-        explicit DfsGraph()
-            : Time(0)
+        explicit Vertex(const char id)
+            : id(id), predecessor(nullptr), visit(Unvisited), discovery_time(0), finishing_time(0)
         {
         }
 
-        /// @brief Add an edge to the graph.
-        /// @param u vertex
-        /// @param v vertex
-        void AddEdge(DfsVertex& u, DfsVertex& v)
-        {
-            AdjacencyList.emplace_back(&u, &v);
-
-            // directed
-            u.Neighbors.insert(&v);
-        }
-
-        /// @brief Add a vertex to the graph.
-        /// @param v vertex to be added
-        void AddVertex(DfsVertex& v)
-        {
-            Vertices.push_back(&v);
-        }
-
-        [[nodiscard]] auto GetVertices() const -> std::vector<DfsVertex*>
-        {
-            return Vertices;
-        }
-
-        [[nodiscard]] auto GetAdjacencyList() const -> std::vector<std::tuple<DfsVertex*, DfsVertex*>>
-        {
-            return AdjacencyList;
-        }
-
-        [[nodiscard]] auto GetTime() const -> int
-        {
-            return Time;
-        }
-
-        void SetTime(const int time)
-        {
-            Time = time;
-        }
-
-    private:
-        std::vector<DfsVertex*> Vertices;
-        std::vector<std::tuple<DfsVertex*, DfsVertex*>> AdjacencyList;
-        int Time;
+        char id;
+        std::set<Vertex*> neighbors;
+        Vertex* predecessor;
+        VisitStatus visit;
+        int discovery_time;
+        int finishing_time;
     };
 
-    /// @brief Depth first search algorithm.
-    class DepthFirstSearch
+    class Graph
     {
     public:
-        explicit DepthFirstSearch(DfsGraph& graph)
-            : Graph(graph)
-        {
-        }
+        /// @brief Depth first search algorithm.
+        /// @details A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
+        /// @param source source node
+        /// @param dest destination node
+        /// @return destination node
+        static auto DepthFirstSearch(Vertex& source, const Vertex& dest) -> Vertex*;
 
-        /// @brief Perform depth first search.
-        /// @param graph graph
-        void Search(DfsGraph& graph);
+        /// @brief Depth first search algorithm.
+        /// @details A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking.
+        /// Each vertex is initially white, is grayed when it is discovered and is black when it is finished.
+        /// This guarantees that each vertex ends up it exactly one depth-first tree, so that trees ar disjoint.
+        void DepthFirstSearch2(Vertex& source);
 
-        /// @brief Create depth-first forest.
-        /// @param graph graph 
-        /// @param vertex vertex
-        void SearchVisit(DfsGraph& graph, DfsVertex& vertex);
+        void AddVertex(Vertex& v);
+        void AddEdge(Vertex& u, Vertex& v);
 
-    private:
-        DfsGraph& Graph;
+        std::vector<Vertex*> vertices;
+        std::vector<std::tuple<Vertex*, Vertex*>> adjacency_list;
+        int time;
     };
 }
 

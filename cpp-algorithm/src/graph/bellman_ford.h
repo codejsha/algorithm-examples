@@ -1,55 +1,40 @@
 #ifndef CPP_ALGORITHM_BELLMAN_FORD_H
 #define CPP_ALGORITHM_BELLMAN_FORD_H
 
-#include "graph.h"
-
 #include <map>
 #include <set>
 #include <vector>
 
-namespace Graph
+namespace BellmanFord
 {
-    /// @brief Vertex of graph.
-    struct BellmanFordVertex : Vertex<char>
+    struct Vertex
     {
-        explicit BellmanFordVertex(const char id)
-            : Vertex<char>(id), Predecessor(nullptr), Distance(std::numeric_limits<int>::max())
+        explicit Vertex(const char id)
+            : id(id), neighbors(std::set<Vertex*>()), predecessor(nullptr), distance(std::numeric_limits<int>::max())
         {
         }
 
-        std::set<BellmanFordVertex*> Neighbors;
-        BellmanFordVertex* Predecessor;
-        int Distance;
+        char id;
+        std::set<Vertex*> neighbors;
+        Vertex* predecessor;
+        int distance;
     };
 
-    /// @brief Bellman-Ford algorithm.
-    class BellmanFordGraph
+    class Graph
     {
     public:
+        void AddVertex(Vertex& v);
+        void AddEdge(Vertex& u, Vertex& v, int weight);
 
-        /// @brief Add an edge to the graph.
-        /// @param u vertex
-        /// @param v vertex
-        /// @param weight weight of the edge
-        void AddEdge(BellmanFordVertex& u, BellmanFordVertex& v, int weight);
-
-        /// @brief Add a vertex to the graph.
-        /// @param v vertex to be added
-        void AddVertex(BellmanFordVertex& v);
-
-        /// @brief Investigate whether the shortest path can be improved, and update.
-        /// @param u vertex
-        /// @param v vertex
-        void Relax(BellmanFordVertex& u, BellmanFordVertex& v);
-
-        /// @brief Find the shortest path from a source vertex to all other vertices.
+        /// @brief Bellman-Ford algorithm. Find the shortest path from a source vertex to all other vertices.
+        /// @details A single source shortest path algorithm that can handle negative edge weights.
+        /// It finds the shortest path from a source vertex to all other vertices in a weighted graph.
         /// @param source source vertex
-        void BellmanFord(BellmanFordVertex& source);
+        void BellmanFordAlgorithm(Vertex& source);
 
-    private:
-        std::vector<BellmanFordVertex*> Vertices;
-        std::vector<std::tuple<BellmanFordVertex*, BellmanFordVertex*>> AdjacencyList;
-        std::map<std::pair<char, char>, int> WeightList;
+        std::vector<Vertex*> vertices;
+        std::vector<std::tuple<Vertex*, Vertex*>> adjacency_list;
+        std::map<std::pair<char, char>, int> weight_list;
     };
 }
 

@@ -2,16 +2,16 @@
 
 #include <queue>
 
-auto Graph::BreadthFirstSearch::Search(BfsVertex& start, BfsVertex& goal) -> BfsVertex*
+auto Bfs::Graph::BreadthFirstSearch(Vertex& start, const Vertex& goal) -> Vertex*
 {
-    if (start == goal)
+    if (start.id == goal.id)
     {
-        start.Visit = Finished;
+        start.visit = Finished;
         return &start;
     }
 
-    start.Visit = Visited;
-    auto queue = std::queue<BfsVertex*>{};
+    start.visit = Visited;
+    auto queue = std::queue<Vertex*>{};
     queue.push(&start);
 
     while (queue.empty() == false)
@@ -19,22 +19,34 @@ auto Graph::BreadthFirstSearch::Search(BfsVertex& start, BfsVertex& goal) -> Bfs
         const auto vertex = queue.front();
         queue.pop();
 
-        for (auto neighbor : vertex->Neighbors)
+        for (auto v : vertex->neighbors)
         {
-            if (neighbor->Visit == Unvisited)
+            if (v->visit == Unvisited)
             {
-                neighbor->Visit = Visited;
-                neighbor->Distance = vertex->Distance + 1;
-                neighbor->Predecessor = vertex;
-                queue.push(neighbor);
+                v->visit = Visited;
+                v->distance = vertex->distance + 1;
+                v->predecessor = vertex;
+                queue.push(v);
 
-                if (neighbor->Id == goal.Id)
+                if (v->id == goal.id)
                 {
-                    return neighbor;
+                    return v;
                 }
             }
         }
-        vertex->Visit = Finished;
+        vertex->visit = Finished;
     }
     return {};
+}
+
+void Bfs::Graph::AddVertex(Vertex& v)
+{
+    vertices.push_back(&v);
+}
+
+void Bfs::Graph::AddEdge(Vertex& u, Vertex& v)
+{
+    adjacency_list.emplace_back(&u, &v);
+    u.neighbors.insert(&v);
+    //v.neighbors.insert(&u);
 }

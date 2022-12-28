@@ -2,41 +2,38 @@
 
 #include <stdexcept>
 
-void Graph::BellmanFordGraph::AddEdge(BellmanFordVertex& u, BellmanFordVertex& v, int weight)
+void BellmanFord::Graph::BellmanFordAlgorithm(Vertex& source)
 {
-    AdjacencyList.emplace_back(&u, &v);
-    u.Neighbors.insert(&v);
-    WeightList.insert(std::make_pair(std::make_pair(u.Id, v.Id), weight));
-}
-
-void Graph::BellmanFordGraph::AddVertex(BellmanFordVertex& v)
-{
-    Vertices.push_back(&v);
-}
-
-void Graph::BellmanFordGraph::Relax(BellmanFordVertex& u, BellmanFordVertex& v)
-{
-    if (v.Distance > (u.Distance + WeightList[std::make_pair(u.Id, v.Id)]))
+    for (auto i = 0; i < static_cast<int>(vertices.size()) - 1; ++i)
     {
-        v.Distance = u.Distance + WeightList[std::make_pair(u.Id, v.Id)];
-        v.Predecessor = &u;
-    }
-}
-
-void Graph::BellmanFordGraph::BellmanFord(BellmanFordVertex& source)
-{
-    for (auto i = 0; i < static_cast<int>(Vertices.size()) - 1; ++i)
-    {
-        for (auto& [u, v] : AdjacencyList)
+        for (auto& [u, v] : adjacency_list)
         {
-            Relax(*u, *v);
+            // Relaxation
+            const auto weight_uv = weight_list.at(std::make_pair(u->id, v->id));
+            if (v->distance > (u->distance + weight_uv))
+            {
+                v->distance = u->distance + weight_uv;
+                v->predecessor = u;
+            }
         }
     }
-    for (auto& [u, v] : AdjacencyList)
+    for (auto& [u, v] : adjacency_list)
     {
-        if (v->Distance > (u->Distance + WeightList[std::make_pair(u->Id, v->Id)]))
+        if (v->distance > (u->distance + weight_list.at(std::make_pair(u->id, v->id))))
         {
             throw std::runtime_error("Graph has a negative cycle");
         }
     }
+}
+
+void BellmanFord::Graph::AddVertex(Vertex& v)
+{
+    vertices.push_back(&v);
+}
+
+void BellmanFord::Graph::AddEdge(Vertex& u, Vertex& v, int weight)
+{
+    adjacency_list.emplace_back(&u, &v);
+    u.neighbors.insert(&v);
+    weight_list.insert(std::make_pair(std::make_pair(u.id, v.id), weight));
 }

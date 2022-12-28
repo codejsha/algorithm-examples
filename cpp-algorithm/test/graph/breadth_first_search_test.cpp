@@ -3,18 +3,18 @@
 #include <algorithm>
 #include <gtest/gtest.h>
 
-GTEST_TEST(BreadthFirstSearch, SimpleSearch1)
+GTEST_TEST(BreadthFirstSearch, BreadthFirstSearch_Case1)
 {
-    auto vertex_r = Graph::BfsVertex('R');
-    auto vertex_s = Graph::BfsVertex('S');
-    auto vertex_t = Graph::BfsVertex('T');
-    auto vertex_u = Graph::BfsVertex('U');
-    auto vertex_v = Graph::BfsVertex('V');
-    auto vertex_w = Graph::BfsVertex('W');
-    auto vertex_x = Graph::BfsVertex('X');
-    auto vertex_y = Graph::BfsVertex('Y');
+    auto vertex_r = Bfs::Vertex('R');
+    auto vertex_s = Bfs::Vertex('S');
+    auto vertex_t = Bfs::Vertex('T');
+    auto vertex_u = Bfs::Vertex('U');
+    auto vertex_v = Bfs::Vertex('V');
+    auto vertex_w = Bfs::Vertex('W');
+    auto vertex_x = Bfs::Vertex('X');
+    auto vertex_y = Bfs::Vertex('Y');
 
-    const auto graph = new Graph::BfsGraph();
+    const auto graph = new Bfs::Graph();
 
     graph->AddVertex(vertex_r);
     graph->AddVertex(vertex_s);
@@ -54,40 +54,35 @@ GTEST_TEST(BreadthFirstSearch, SimpleSearch1)
     graph->AddEdge(vertex_y, vertex_u);
     graph->AddEdge(vertex_y, vertex_x);
 
-    const auto bfs = new Graph::BreadthFirstSearch(*graph);
-
-    auto& start = vertex_s;
-
     // test U
+    auto& start = vertex_s;
     auto& goal = vertex_u;
-    auto expected = std::vector<char>{'S', 'W', 'T', 'U'};
-    auto result = bfs->Search(start, goal);
-
+    auto expected = std::vector{'S', 'W', 'T', 'U'};
+    auto result = graph->BreadthFirstSearch(start, goal);
     auto result_path = std::vector<char>{};
-    auto distance = result->Distance;
+    auto distance = result->distance;
     for (auto i = 0; i <= distance; ++i)
     {
-        result_path.push_back(result->Id);
-        result = result->Predecessor;
+        result_path.push_back(result->id);
+        result = result->predecessor;
     }
-
     std::ranges::reverse(result_path);
 
     ASSERT_EQ(expected, result_path);
 }
 
-GTEST_TEST(BreadthFirstSearch, SimpleSearch2)
+GTEST_TEST(BreadthFirstSearch, BreadthFirstSearch_Case2)
 {
-    auto vertex_r = Graph::BfsVertex('R');
-    auto vertex_s = Graph::BfsVertex('S');
-    auto vertex_t = Graph::BfsVertex('T');
-    auto vertex_u = Graph::BfsVertex('U');
-    auto vertex_v = Graph::BfsVertex('V');
-    auto vertex_w = Graph::BfsVertex('W');
-    auto vertex_x = Graph::BfsVertex('X');
-    auto vertex_y = Graph::BfsVertex('Y');
+    auto vertex_r = Bfs::Vertex('R');
+    auto vertex_s = Bfs::Vertex('S');
+    auto vertex_t = Bfs::Vertex('T');
+    auto vertex_u = Bfs::Vertex('U');
+    auto vertex_v = Bfs::Vertex('V');
+    auto vertex_w = Bfs::Vertex('W');
+    auto vertex_x = Bfs::Vertex('X');
+    auto vertex_y = Bfs::Vertex('Y');
 
-    const auto graph = new Graph::BfsGraph();
+    const auto graph = new Bfs::Graph();
 
     graph->AddVertex(vertex_r);
     graph->AddVertex(vertex_s);
@@ -127,23 +122,18 @@ GTEST_TEST(BreadthFirstSearch, SimpleSearch2)
     graph->AddEdge(vertex_y, vertex_u);
     graph->AddEdge(vertex_y, vertex_x);
 
-    const auto bfs = new Graph::BreadthFirstSearch(*graph);
-
-    auto& start = vertex_s;
-
     // test Y
+    auto& start = vertex_s;
     auto& goal = vertex_y;
-    auto expected = std::vector<char>{'S', 'W', 'X', 'Y'};
-    auto result = bfs->Search(start, goal);
-
+    auto expected = std::vector{'S', 'W', 'X', 'Y'};
+    auto result = Bfs::Graph::BreadthFirstSearch(start, goal);
     auto result_path = std::vector<char>{};
-    auto distance = result->Distance;
+    auto distance = result->distance;
     for (auto i = 0; i <= distance; ++i)
     {
-        result_path.push_back(result->Id);
-        result = result->Predecessor;
+        result_path.push_back(result->id);
+        result = result->predecessor;
     }
-
     std::ranges::reverse(result_path);
 
     ASSERT_EQ(expected, result_path);

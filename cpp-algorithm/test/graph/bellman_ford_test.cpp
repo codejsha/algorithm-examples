@@ -2,15 +2,15 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(BellmanFord, Simple1)
+GTEST_TEST(BellmanFord, BellmanFord_Case1)
 {
-    auto vertex_s = Graph::BellmanFordVertex('S');
-    auto vertex_t = Graph::BellmanFordVertex('T');
-    auto vertex_x = Graph::BellmanFordVertex('X');
-    auto vertex_y = Graph::BellmanFordVertex('Y');
-    auto vertex_z = Graph::BellmanFordVertex('Z');
+    auto vertex_s = BellmanFord::Vertex('S');
+    auto vertex_t = BellmanFord::Vertex('T');
+    auto vertex_x = BellmanFord::Vertex('X');
+    auto vertex_y = BellmanFord::Vertex('Y');
+    auto vertex_z = BellmanFord::Vertex('Z');
 
-    const auto graph = new Graph::BellmanFordGraph();
+    const auto graph = new BellmanFord::Graph();
 
     graph->AddVertex(vertex_s);
     graph->AddVertex(vertex_t);
@@ -35,19 +35,19 @@ GTEST_TEST(BellmanFord, Simple1)
     graph->AddEdge(vertex_z, vertex_x, 7);
 
     auto& source = vertex_s;
-    source.Distance = 0;
-    graph->BellmanFord(source);
+    source.distance = 0;
+    graph->BellmanFordAlgorithm(source);
 
     // weight
-    ASSERT_EQ(0, vertex_s.Distance);
-    ASSERT_EQ(2, vertex_t.Distance);
-    ASSERT_EQ(4, vertex_x.Distance);
-    ASSERT_EQ(7, vertex_y.Distance);
-    ASSERT_EQ(-2, vertex_z.Distance);
+    ASSERT_EQ(0, vertex_s.distance);
+    ASSERT_EQ(2, vertex_t.distance);
+    ASSERT_EQ(4, vertex_x.distance);
+    ASSERT_EQ(7, vertex_y.distance);
+    ASSERT_EQ(-2, vertex_z.distance);
 
     // predecessor
-    ASSERT_EQ('X', vertex_t.Predecessor->Id);
-    ASSERT_EQ('Y', vertex_x.Predecessor->Id);
-    ASSERT_EQ('S', vertex_y.Predecessor->Id);
-    ASSERT_EQ('T', vertex_z.Predecessor->Id);
+    ASSERT_EQ('X', vertex_t.predecessor->id);
+    ASSERT_EQ('Y', vertex_x.predecessor->id);
+    ASSERT_EQ('S', vertex_y.predecessor->id);
+    ASSERT_EQ('T', vertex_z.predecessor->id);
 }

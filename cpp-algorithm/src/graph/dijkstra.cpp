@@ -1,29 +1,34 @@
 #include "dijkstra.h"
 
-void Graph::DijkstraGraph::AddEdge(DijkstraVertex& u, DijkstraVertex& v, int weight)
+void Dijkstra::Graph::DijkstraAlgorithm(Vertex& source)
 {
-    AdjacencyList.emplace_back(&u, &v);
-    u.Neighbors.insert(&v);
-    WeightList.insert(std::make_pair(std::make_pair(u.Id, v.Id), weight));
-}
-
-void Graph::DijkstraGraph::AddVertex(DijkstraVertex& v)
-{
-    Vertices.push_back(&v);
-}
-
-void Graph::DijkstraGraph::Relax(DijkstraVertex& u, DijkstraVertex& v)
-{
-    if (v.Distance > (u.Distance + WeightList[std::make_pair(u.Id, v.Id)]))
+    std::priority_queue<Vertex*, std::vector<Vertex*>, MinComparator> min_queue;
+    for (auto v : vertices)
     {
-        v.Distance = u.Distance + WeightList[std::make_pair(u.Id, v.Id)];
-        v.Predecessor = &u;
+        min_queue.push(v);
+    }
+
+    while (!min_queue.empty())
+    {
+        const auto u = min_queue.top();
+        min_queue.pop();
+        for (const auto v : u->neighbors)
+        {
+            // Relaxation
+            const auto weight_uv = weight_list.at(std::make_pair(u->id, v->id));
+            if (v->distance > (u->distance + weight_uv))
+            {
+                v->distance = u->distance + weight_uv;
+                v->predecessor = u;
+            }
+            ReorderQueue(min_queue);
+        }
     }
 }
 
-void Graph::DijkstraGraph::ReorderQueue(std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>& min_queue)
+void Dijkstra::Graph::ReorderQueue(std::priority_queue<Vertex*, std::vector<Vertex*>, MinComparator>& min_queue)
 {
-    auto queue = std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator>{};
+    auto queue = std::priority_queue<Vertex*, std::vector<Vertex*>, MinComparator>{};
     const auto min_queue_size = static_cast<int>(min_queue.size());
 
     for (auto i = 0; i < min_queue_size; ++i)
@@ -35,22 +40,14 @@ void Graph::DijkstraGraph::ReorderQueue(std::priority_queue<DijkstraVertex*, std
     min_queue = std::move(queue);
 }
 
-void Graph::DijkstraGraph::Dijkstra(DijkstraVertex& source)
+void Dijkstra::Graph::AddVertex(Vertex& v)
 {
-    std::priority_queue<DijkstraVertex*, std::vector<DijkstraVertex*>, MinComparator> min_queue;
-    for (auto v : Vertices)
-    {
-        min_queue.push(v);
-    }
+    vertices.push_back(&v);
+}
 
-    while (!min_queue.empty())
-    {
-        auto u = min_queue.top();
-        min_queue.pop();
-        for (auto v : u->Neighbors)
-        {
-            Relax(*u, *v);
-            ReorderQueue(min_queue);
-        }
-    }
+void Dijkstra::Graph::AddEdge(Vertex& u, Vertex& v, int weight)
+{
+    adjacency_list.emplace_back(&u, &v);
+    weight_list.insert(std::make_pair(std::make_pair(u.id, v.id), weight));
+    u.neighbors.insert(&v);
 }
