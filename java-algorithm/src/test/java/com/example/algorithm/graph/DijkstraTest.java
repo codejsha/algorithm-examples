@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
 @Slf4j
 class DijkstraTest {
-    Dijkstra graph = new Dijkstra();
+    Dijkstra.Graph graph = new Dijkstra.Graph();
     Dijkstra.Vertex vertexS;
     Dijkstra.Vertex vertexT;
     Dijkstra.Vertex vertexX;
@@ -49,12 +49,12 @@ class DijkstraTest {
     }
 
     @Test
-    void testGetShortestPath() {
-        graph.dijkstraAlgorithm(vertexS);
-        var pathT = graph.getShortestPath(vertexT);
-        var pathX = graph.getShortestPath(vertexX);
-        var pathY = graph.getShortestPath(vertexY);
-        var pathZ = graph.getShortestPath(vertexZ);
+    void testDijkstraAlgorithm() {
+        Dijkstra.dijkstraAlgorithm(graph, vertexS);
+        var pathT = Dijkstra.getShortestPath(vertexT);
+        var pathX = Dijkstra.getShortestPath(vertexX);
+        var pathY = Dijkstra.getShortestPath(vertexY);
+        var pathZ = Dijkstra.getShortestPath(vertexZ);
         assertEquals(3, pathT.length);
         assertEquals(4, pathX.length);
         assertEquals(2, pathY.length);
@@ -63,14 +63,9 @@ class DijkstraTest {
         assertArrayEquals(new Dijkstra.Vertex[]{vertexS, vertexY, vertexT, vertexX}, pathX);
         assertArrayEquals(new Dijkstra.Vertex[]{vertexS, vertexY}, pathY);
         assertArrayEquals(new Dijkstra.Vertex[]{vertexS, vertexY, vertexZ}, pathZ);
-    }
-
-    @Test
-    void testGetShortestDistance() {
-        graph.dijkstraAlgorithm(vertexS);
-        assertEquals(8, graph.getShortestDistance(vertexT));
-        assertEquals(9, graph.getShortestDistance(vertexX));
-        assertEquals(5, graph.getShortestDistance(vertexY));
-        assertEquals(7, graph.getShortestDistance(vertexZ));
+        assertEquals(8, Dijkstra.getShortestDistance(vertexT));
+        assertEquals(9, Dijkstra.getShortestDistance(vertexX));
+        assertEquals(5, Dijkstra.getShortestDistance(vertexY));
+        assertEquals(7, Dijkstra.getShortestDistance(vertexZ));
     }
 }

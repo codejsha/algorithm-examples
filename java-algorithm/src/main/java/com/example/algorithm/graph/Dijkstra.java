@@ -2,20 +2,19 @@ package com.example.algorithm.graph;
 
 import java.util.*;
 
+/**
+ * Dijkstra's algorithm (class representation)
+ */
 public class Dijkstra {
-    private final Set<Vertex> vertices = new HashSet<>();
-    private final Map<Map<Vertex, Vertex>, Integer> edges = new HashMap<>();
-
-    public void dijkstraAlgorithm(Vertex source) {
+    public static void dijkstraAlgorithm(Graph graph, Vertex source) {
         source.distance = 0;
         NavigableSet<Vertex> queue = new TreeSet<>();
         queue.add(source);
-
         while (!queue.isEmpty()) {
             var u = queue.pollFirst();
             assert u != null;
             for (var v : u.neighbors) {
-                var newDistance = u.distance + edges.get(Map.of(u, v));
+                var newDistance = u.distance + graph.edges.get(Map.of(u, v));
                 if (newDistance < v.distance) {
                     queue.remove(v);
                     v.distance = newDistance;
@@ -26,7 +25,7 @@ public class Dijkstra {
         }
     }
 
-    public Vertex[] getShortestPath(Vertex dest) {
+    public static Vertex[] getShortestPath(Vertex dest) {
         var path = new ArrayList<Vertex>();
         for (var vertex = dest; vertex != null; vertex = vertex.previous) {
             path.add(vertex);
@@ -35,11 +34,11 @@ public class Dijkstra {
         return path.toArray(Vertex[]::new);
     }
 
-    public int getShortestDistance(Vertex dest) {
+    public static int getShortestDistance(Vertex dest) {
         return dest.distance;
     }
 
-    public void printPath(Vertex dest) {
+    public static void printPath(Vertex dest) {
         if (dest.previous != null) {
             printPath(dest.previous);
             System.out.print(" -> ");
@@ -47,20 +46,25 @@ public class Dijkstra {
         System.out.print(dest.key);
     }
 
-    public void printAllPaths() {
-        for (var v : vertices) {
+    public static void printAllPaths(Graph graph) {
+        for (var v : graph.vertices) {
             printPath(v);
             System.out.println();
         }
     }
 
-    public void addVertex(Vertex vertex) {
-        vertices.add(vertex);
-    }
+    public static class Graph {
+        Set<Vertex> vertices = new HashSet<>();
+        Map<Map<Vertex, Vertex>, Integer> edges = new HashMap<>();
 
-    public void addEdge(Vertex source, Vertex sink, int weight) {
-        source.addNeighbour(sink);
-        edges.put(Map.of(source, sink), weight);
+        public void addVertex(Vertex vertex) {
+            vertices.add(vertex);
+        }
+
+        public void addEdge(Vertex source, Vertex sink, int weight) {
+            source.addNeighbour(sink);
+            edges.put(Map.of(source, sink), weight);
+        }
     }
 
     public static class Vertex implements Comparable<Vertex> {
