@@ -1,7 +1,6 @@
 package com.example.algorithm.graph;
 
 public class FloydWarshall {
-
     // the maximum value of an integer
     private static final int INF = 99999;
 

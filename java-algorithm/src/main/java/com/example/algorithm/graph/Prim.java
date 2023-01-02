@@ -5,6 +5,9 @@ import java.util.LinkedHashSet;
 import java.util.PriorityQueue;
 import java.util.Set;
 
+/**
+ * Prim's algorithm (class representation)
+ */
 public class Prim {
     /**
      * Prim's algorithm for finding the minimum spanning tree of a graph.

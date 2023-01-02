@@ -2,6 +2,9 @@ package com.example.algorithm.graph;
 
 import java.util.*;
 
+/**
+ * Kruskal's algorithm (class representation)
+ */
 public class Kruskal {
     /**
      * Kruskal's algorithm for finding the minimum spanning tree of a graph.
