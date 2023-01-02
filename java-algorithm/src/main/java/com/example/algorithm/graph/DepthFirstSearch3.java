@@ -5,13 +5,16 @@ import java.util.Collections;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 
-public class DepthFirstSearch {
-    public Vertex performDepthFirstSearch(Vertex source, Vertex dest) {
+/**
+ * Depth First Search (class representation)
+ */
+public class DepthFirstSearch3 {
+    public static Vertex performDepthFirstSearch(Vertex source, Vertex dest) {
         source.distance = 0;
         return depthFirstSearch(source, dest);
     }
 
-    private Vertex depthFirstSearch(Vertex source, Vertex dest) {
+    private static Vertex depthFirstSearch(Vertex source, Vertex dest) {
         source.visited = true;
         if (source == dest) {
             return source;
@@ -29,7 +32,7 @@ public class DepthFirstSearch {
         return null;
     }
 
-    public Vertex[] getShortestPath(Vertex dest) {
+    public static Vertex[] getShortestPath(Vertex dest) {
         var path = new ArrayList<Vertex>();
         for (var vertex = dest; vertex != null; vertex = vertex.previous) {
             path.add(vertex);
@@ -38,11 +41,11 @@ public class DepthFirstSearch {
         return path.toArray(Vertex[]::new);
     }
 
-    public int getShortestDistance(Vertex dest) {
+    public static int getShortestDistance(Vertex dest) {
         return dest.distance;
     }
 
-    public void printPath(Vertex dest) {
+    public static void printPath(Vertex dest) {
         if (dest.previous != null) {
             printPath(dest.previous);
             System.out.print(" -> ");
