@@ -11,24 +11,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 @Slf4j
-class BreadthFirstSearchTest {
-    BreadthFirstSearch bfs;
-    BreadthFirstSearch.Vertex vertexU;
-    BreadthFirstSearch.Vertex vertexV;
-    BreadthFirstSearch.Vertex vertexW;
-    BreadthFirstSearch.Vertex vertexX;
-    BreadthFirstSearch.Vertex vertexY;
-    BreadthFirstSearch.Vertex vertexZ;
+class BreadthFirstSearch2Test {
+    BreadthFirstSearch2.Vertex vertexU;
+    BreadthFirstSearch2.Vertex vertexV;
+    BreadthFirstSearch2.Vertex vertexW;
+    BreadthFirstSearch2.Vertex vertexX;
+    BreadthFirstSearch2.Vertex vertexY;
+    BreadthFirstSearch2.Vertex vertexZ;
 
     @BeforeEach
     void setUp() {
-        bfs = new BreadthFirstSearch();
-        vertexU = new BreadthFirstSearch.Vertex("u");
-        vertexV = new BreadthFirstSearch.Vertex("v");
-        vertexW = new BreadthFirstSearch.Vertex("w");
-        vertexX = new BreadthFirstSearch.Vertex("x");
-        vertexY = new BreadthFirstSearch.Vertex("y");
-        vertexZ = new BreadthFirstSearch.Vertex("z");
+        vertexU = new BreadthFirstSearch2.Vertex("u");
+        vertexV = new BreadthFirstSearch2.Vertex("v");
+        vertexW = new BreadthFirstSearch2.Vertex("w");
+        vertexX = new BreadthFirstSearch2.Vertex("x");
+        vertexY = new BreadthFirstSearch2.Vertex("y");
+        vertexZ = new BreadthFirstSearch2.Vertex("z");
         vertexU.addNeighbour(vertexV);
         vertexU.addNeighbour(vertexX);
         vertexV.addNeighbour(vertexY);
@@ -44,7 +42,7 @@ class BreadthFirstSearchTest {
 
     @Test
     void testBreadthFirstSearch() {
-        assertEquals(vertexY, bfs.breadthFirstSearch(vertexU, vertexY));
-        assertEquals(2, bfs.getShortestDistance(vertexY));
+        assertEquals(vertexY, BreadthFirstSearch2.breadthFirstSearch(vertexU, vertexY));
+        assertEquals(2, BreadthFirstSearch2.getShortestDistance(vertexY));
     }
 }

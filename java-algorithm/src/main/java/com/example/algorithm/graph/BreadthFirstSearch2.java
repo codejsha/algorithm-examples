@@ -2,8 +2,11 @@ package com.example.algorithm.graph;
 
 import java.util.*;
 
-public class BreadthFirstSearch {
-    public Vertex breadthFirstSearch(Vertex source, Vertex dest) {
+/**
+ * Breadth First Search (class representation)
+ */
+public class BreadthFirstSearch2 {
+    public static Vertex breadthFirstSearch(Vertex source, Vertex dest) {
         source.visited = true;
         source.distance = 0;
         var queue = new ArrayDeque<Vertex>();
@@ -25,7 +28,7 @@ public class BreadthFirstSearch {
         return null;
     }
 
-    public Vertex[] getShortestPath(Vertex dest) {
+    public static Vertex[] getShortestPath(Vertex dest) {
         var path = new ArrayList<Vertex>();
         for (var vertex = dest; vertex != null; vertex = vertex.previous) {
             path.add(vertex);
@@ -34,11 +37,11 @@ public class BreadthFirstSearch {
         return path.toArray(Vertex[]::new);
     }
 
-    public int getShortestDistance(Vertex dest) {
+    public static int getShortestDistance(Vertex dest) {
         return dest.distance;
     }
 
-    public void printPath(Vertex dest) {
+    public static void printPath(Vertex dest) {
         if (dest.previous != null) {
             printPath(dest.previous);
             System.out.print(" -> ");
