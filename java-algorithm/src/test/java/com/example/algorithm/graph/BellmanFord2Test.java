@@ -11,21 +11,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 @Slf4j
-class BellmanFordTest {
-    BellmanFord graph = new BellmanFord();
-    BellmanFord.Vertex vertexS;
-    BellmanFord.Vertex vertexT;
-    BellmanFord.Vertex vertexX;
-    BellmanFord.Vertex vertexY;
-    BellmanFord.Vertex vertexZ;
+class BellmanFord2Test {
+    BellmanFord2.Graph graph = new BellmanFord2.Graph();
+    BellmanFord2.Vertex vertexS;
+    BellmanFord2.Vertex vertexT;
+    BellmanFord2.Vertex vertexX;
+    BellmanFord2.Vertex vertexY;
+    BellmanFord2.Vertex vertexZ;
 
     @BeforeEach
     void setUp() {
-        vertexS = new BellmanFord.Vertex("S");
-        vertexT = new BellmanFord.Vertex("T");
-        vertexX = new BellmanFord.Vertex("X");
-        vertexY = new BellmanFord.Vertex("Y");
-        vertexZ = new BellmanFord.Vertex("Z");
+        vertexS = new BellmanFord2.Vertex("S");
+        vertexT = new BellmanFord2.Vertex("T");
+        vertexX = new BellmanFord2.Vertex("X");
+        vertexY = new BellmanFord2.Vertex("Y");
+        vertexZ = new BellmanFord2.Vertex("Z");
         graph.addVertex(vertexS);
         graph.addVertex(vertexT);
         graph.addVertex(vertexX);
@@ -48,25 +48,22 @@ class BellmanFordTest {
     }
 
     @Test
-    void testGetShortestPath() {
-        graph.bellmanFordAlgorithm(vertexS);
-        graph.printAllPaths();
-        var pathT = graph.getShortestPath(vertexT);
-        var pathX = graph.getShortestPath(vertexX);
-        var pathY = graph.getShortestPath(vertexY);
-        var pathZ = graph.getShortestPath(vertexZ);
+    void testBellmanFordAlgorithm() {
+        BellmanFord2.bellmanFordAlgorithm(graph, vertexS);
+        BellmanFord2.printAllPaths(graph);
+        var pathT = BellmanFord2.shortestPath(vertexT);
+        var pathX = BellmanFord2.shortestPath(vertexX);
+        var pathY = BellmanFord2.shortestPath(vertexY);
+        var pathZ = BellmanFord2.shortestPath(vertexZ);
+
         assertEquals(4, pathT.length);
         assertEquals(3, pathX.length);
         assertEquals(2, pathY.length);
         assertEquals(5, pathZ.length);
-    }
 
-    @Test
-    void testGetShortestDistance() {
-        graph.bellmanFordAlgorithm(vertexS);
-        assertEquals(2, graph.getShortestDistance(vertexT));
-        assertEquals(4, graph.getShortestDistance(vertexX));
-        assertEquals(7, graph.getShortestDistance(vertexY));
-        assertEquals(-2, graph.getShortestDistance(vertexZ));
+        assertEquals(2, BellmanFord2.shortestDistance(vertexT));
+        assertEquals(4, BellmanFord2.shortestDistance(vertexX));
+        assertEquals(7, BellmanFord2.shortestDistance(vertexY));
+        assertEquals(-2, BellmanFord2.shortestDistance(vertexZ));
     }
 }
