@@ -46,7 +46,7 @@ class MazeProblemTest {
     }
 
     @Test
-    void testSearchMazePathExtraCase1() {
+    void testSearchMazePathCase3() {
         var maze = new int [][] {
                 {1, 0, 0, 0},
                 {1, 1, 0, 1},
@@ -57,7 +57,7 @@ class MazeProblemTest {
     }
 
     @Test
-    void testSearchMazePathExtraCase2() {
+    void testSearchMazePathCase4() {
         var maze = new int [][] {
                 {1, 0, 0, 0, 0},
                 {1, 1, 0, 1, 0},
