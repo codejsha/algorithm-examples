@@ -30,7 +30,7 @@ macro(add_target_header_test target)
     gtest_discover_tests(${target})
 endmacro()
 
-add_target_header_test(b_tree_test)
+add_target_test(b_tree_test)
 add_target_test(balanced_tree_status_test)
 add_target_header_test(binary_search_tree_test)
 add_target_test(binary_tree_exterior_test)

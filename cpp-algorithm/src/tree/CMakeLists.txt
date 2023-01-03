@@ -7,6 +7,7 @@ macro(add_library_target target)
     set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
 endmacro()
 
+add_library_target(b_tree)
 add_library_target(balanced_tree_status)
 add_library_target(binary_tree_exterior)
 add_library_target(leaf_node_list)
