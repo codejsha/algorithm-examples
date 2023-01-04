@@ -6,3 +6,5 @@ macro(add_library_target target)
     target_link_libraries(${target} PRIVATE ${ARGN})
     set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
 endmacro()
+
+add_library_target(merge_sorted_two_array)

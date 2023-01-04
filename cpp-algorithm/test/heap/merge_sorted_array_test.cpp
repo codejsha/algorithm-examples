@@ -22,9 +22,7 @@ GTEST_TEST(MergeSortedArray, MergeSortedArray)
     expected.push(10);
     expected.push(10);
 
-    auto queue = std::priority_queue<int>{};
-    auto result = MergeSortedArray::MergeSortedArray(
-        queue, arr1, arr2, arr3);
+    auto result = MergeSortedArray::MergeSortedArray(arr1, arr2, arr3);
 
     for (auto i = 0; i < static_cast<int>(expected.size()); ++i)
     {
