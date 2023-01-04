@@ -4,9 +4,9 @@
 
 GTEST_TEST(MergeSortedArray, MergeSortedArray)
 {
-    const auto arr1 = std::vector{1, 3, 5, 7, 9};
-    const auto arr2 = std::vector{2, 4, 6, 8, 10};
-    const auto arr3 = std::vector{5, 10};
+    auto arr1 = std::vector{1, 3, 5, 7, 9};
+    auto arr2 = std::vector{2, 4, 6, 8, 10};
+    auto arr3 = std::vector{5, 10};
 
     auto expected = std::priority_queue<int>{};
     expected.push(1);

@@ -11,7 +11,7 @@ namespace ListArithmetic
     /// @return the head of the sum list
     auto AddTwoNumbers(std::shared_ptr<LinkedList::Node<int>>& list1,
         std::shared_ptr<LinkedList::Node<int>>& list2)
-    -> std::shared_ptr<LinkedList::Node<int>>;
+        -> std::shared_ptr<LinkedList::Node<int>>;
 }
 
 #endif
