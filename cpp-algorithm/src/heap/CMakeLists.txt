@@ -7,3 +7,4 @@ macro(add_library_target target)
     set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
 endmacro()
 
+add_library_target(closest_star)

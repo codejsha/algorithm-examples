@@ -30,4 +30,5 @@ macro(add_target_header_test target)
     gtest_discover_tests(${target})
 endmacro()
 
+add_target_test(closest_star_test)
 add_target_header_test(merge_sorted_array_test)
