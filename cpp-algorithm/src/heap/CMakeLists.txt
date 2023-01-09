@@ -9,3 +9,4 @@ endmacro()
 
 add_library_target(closest_star)
 add_library_target(online_data_median)
+add_library_target(sort_increasing_decreasing_array)
