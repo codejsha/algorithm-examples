@@ -19,6 +19,17 @@ macro(add_target_test target)
     gtest_discover_tests(${target})
 endmacro()
 
+macro(add_target_header_test target)
+    add_executable(${target} "${target}.cpp")
+    target_link_libraries(${target} PRIVATE GTest::gtest GTest::gtest_main ${ARGN})
+    if(MSVC)
+        ### Edit and Continue for CMake projects
+        target_compile_options(${target} PUBLIC "/Zi")
+        target_link_options(${target} PUBLIC "/INCREMENTAL")
+    endif()
+    gtest_discover_tests(${target})
+endmacro()
+
 add_target_test(advancing_through_test)
 add_target_test(arbitrary_precision_integer_test)
 add_target_test(delete_element_test)

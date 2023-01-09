@@ -20,6 +20,17 @@ macro(add_target_test target)
     gtest_discover_tests(${target})
 endmacro()
 
+macro(add_target_header_test target)
+    add_executable(${target} "${target}.cpp")
+    target_link_libraries(${target} PRIVATE GTest::gtest GTest::gtest_main ${ARGN})
+    if(MSVC)
+        ### Edit and Continue for CMake projects
+        target_compile_options(${target} PUBLIC "/Zi")
+        target_link_options(${target} PUBLIC "/INCREMENTAL")
+    endif()
+    gtest_discover_tests(${target})
+endmacro()
+
 add_target_test(convert_string_test)
 add_target_test(ip_address_test fmt::fmt)
 # add_target_test(knuth_morris_pratt_test)
