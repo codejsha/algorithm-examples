@@ -316,6 +316,7 @@ contains(1), clear(), iterator()
 **Examples**
 
 - Compute the k closest stars (FindClosestStar): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Find the `k` closest stars to the earth. The stars are represented by a sequence of points(coordinates).
+- Compute the median of a sequence of numbers (FindMedian): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Find the median of a sequence of numbers. The median is the number separating the higher half of a data sample from the lower half.
 - Merge sorted arrays (MergeSortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Merge k sorted arrays into one heap.
 
 ### Linked list

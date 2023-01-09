@@ -8,3 +8,4 @@ macro(add_library_target target)
 endmacro()
 
 add_library_target(closest_star)
+add_library_target(online_data_median)

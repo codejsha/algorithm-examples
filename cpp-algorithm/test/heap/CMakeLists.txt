@@ -32,3 +32,4 @@ endmacro()
 
 add_target_test(closest_star_test)
 add_target_header_test(merge_sorted_array_test)
+add_target_test(online_data_median_test)
