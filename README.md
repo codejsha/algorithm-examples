@@ -60,6 +60,39 @@ std::ranges::max_element(v)
 std::ranges::minmax_element(v)
 ```
 
+```python
+### python definition/functions
+# list
+sample_list: list[int] = [1, 2, 3, 4, 5]
+append(6), insert(3, 3), remove(4), pop(), pop(0), index(3), count(3), clear(), extend([6, 7, 8])
+sample_list.reverse()   # in-place
+reversed(sample_list)   # return an iterator
+sample_list.sort()      # in-place
+sorted(sample_list)     # return a new list(copy)
+del(sample_list[0])     # delete the first element
+del(sample_list[0:2])   # removes the slice
+bisect_left(sample_list, 3), bisect_right(sample_list, 3), bisect(sample_list, 3)
+insort_left(sample_list, 3), insort_right(sample_list, 3), insort(sample_list, 3)
+
+# tuple
+sample_tuple: tuple[int] = (1, 2, 3, 4, 5)
+index(3), count(3)
+
+# list comprehension
+even_list = [x for x in sample_list if x % 2 == 0]
+list_a: list[int] = [1, 3, 5]
+list_b: list[str] = ['a', 'b']
+set_ab: set[tuple[int, str]] = {(a, b) for a in list_a for b in list_b}
+list_2d = [['a', 'b', 'c'], ['d', 'e', 'f']]
+list_1d: list[str] = [ch for row in list_2d for ch in row]
+number_list = [[1, 2, 3], [4, 5, 6]]
+square_list = [[n ** 2 for n in row] for row in number_list]
+
+# built-in
+any(x % 2 == 0 for x in sample_list)
+all(x % 2 == 0 for x in sample_list)
+```
+
 ```java
 //// java definition/methods
 var array = new int[]{1, 2, 3, 4, 5};
@@ -379,6 +412,13 @@ push_back(1), emplace_back(2), push_front(3), emplace_front(4),
 pop_back(), pop_front(), front(), back(), size(), empty()
 ```
 
+```python
+### python definition/functions
+deque: collections.deque = collections.deque([1, 2, 3, 4, 5])
+deque[0], deque[-1]
+append(6), appendleft(7), pop(), popleft()
+```
+
 ```java
 //// java definition/methods
 var deque = new ArrayDeque<Integer>();
@@ -397,6 +437,14 @@ var list = new ArrayList<>(deque);          // deque to list
 //// c++ definition/methods
 auto stack = std::stack<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
+```
+
+```python
+### python definition/functions
+# use list type
+stack: list[int] = [1, 2, 3]
+stack[-1], len(stack)
+append(4), pop()
 ```
 
 ```java
@@ -543,6 +591,31 @@ const auto i = distribution(generator);
 const auto d = std::generate_canonical<double, 10>(generator);  // floating point number in [0, 1)
 ```
 
+```python
+### python definition/functions
+float('inf'), float('-inf')     # constants
+math.fabs(-34.5), math.ceil(2.17), math.floor(3.14), math.max(x, -3), math.min(x, 3.14), math.pow(2.71, 3.15), math.round(3.14), math.sqrt(225) # math
+abs(-34), min(sample_list), max(sample_list), sum(sample_list), sorted(sample_list)
+len(sample_string), len(sample_list), len(sample_dict)  # length
+str(42), str(3.14), str(True)           # int/float/bool -> string
+int("42"), float("3.14"), bool("true")  # string -> int/float/bool
+int("1000010", 2), int("52", 8), int("2a", 16)  # string -> binary/octal/hex
+bin(42), oct(42), hex(42)       # int -> binary/octal/hex
+ascii('a'), chr(97), ord('a')   # unicode <-> ascii code
+
+# copy
+copy.deepcopy(sample_list) # deep copy
+copy.copy(sample_list)     # shallow copy
+
+# random
+random.randrange(28)       # [0, 28)
+random.randrange(1, 100)   # [1, 100)
+random.randrange(8, 16)    # [8, 16)
+random.randrange(8, 16, 2) # [8, 16) with step 2
+random.shuffle(sample_list)
+random.choice(sample_list)
+```
+
 ```java
 //// java definition/methods
 Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, Boolean.TRUE  // constants
@@ -600,6 +673,7 @@ var array = new int[]{1, 2, 3, 4, 5};
 var arrayList = new ArrayList<Integer>(List.of(1, 2, 3, 4, 5));
 var linkedList = new LinkedList<Integer>(List.of(1, 2, 3, 4, 5));
 var hashSet = new HashSet<Integer>(List.of(1, 2, 3, 4, 5));
+var linkedHashSet = new LinkedHashSet<Integer>(List.of(1, 2, 3, 4, 5));
 var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
 
 // binary search
@@ -721,6 +795,18 @@ divide and conquer algorithm
 //// c++ definition/methods
 auto str = std::string{"hello"};
 append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
+```
+
+```python
+### python definition/functions
+hello_world: str = 'hello world'
+len(hello_world), count('l'), find('world'), rfind('world'), index('world'), rindex('world'),
+strip(), split(' '), replace(' ', ''), startswith('hello'), endswith('world'),
+lower(), upper(), capitalize(), title(), swapcase()
+
+# string concatenation
+s = s[6:]
+s += 'abc'
 ```
 
 ```java
