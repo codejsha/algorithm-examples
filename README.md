@@ -38,7 +38,7 @@ Additionally, each project is configured in the following environments:
 
 ### Array
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto v = std::vector{1, 2, 3, 4, 5};
@@ -61,7 +61,7 @@ std::ranges::max_element(v)
 std::ranges::minmax_element(v)
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 # list
@@ -98,7 +98,7 @@ any(x % 2 == 0 for x in number_list)
 all(x % 2 == 0 for x in number_list)
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 var array = new int[]{1, 2, 3, 4, 5};
@@ -315,7 +315,7 @@ algorithm Prim(G, root):
 
 ### Hash table
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
@@ -324,7 +324,7 @@ auto set = std::unordered_set{1, 2, 3, 4, 5};
 insert(42), emplace(42), find(42), erase(42), size(), empty()
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 # set
@@ -341,7 +341,7 @@ sample_counter: collections.Counter = collections.Counter()
 sample_counter.update([1, 1, 2, 2, 3])
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 var map = new HashMap<String, Integer>();
@@ -360,7 +360,7 @@ Collections.unmodifiableSortedSet(set);
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto queue = std::priority_queue<int>{};    // max heap
@@ -368,7 +368,7 @@ auto queue = std::priority_queue<int, std::vector<int>, std::greater<int>>{};   
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 number_list: list[int] = [5, 4, 3, 2, 1]
@@ -377,7 +377,7 @@ heapq.nlargest(3, number_list), heapq.nsmallest(3, number_list)
 heapq.heappush(number_list, 6), heapq.heappop(number_list), heapq.heapreplace(number_list, 0)
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 var queue = new PriorityQueue<Integer>();
@@ -394,7 +394,7 @@ contains(1), clear(), iterator()
 
 ### Linked list
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto list = std::list{1, 2, 3};   // doubly linked list
@@ -406,7 +406,7 @@ auto list = std::forward_list{1, 2, 3};   // singly linked list
 push_front(4), emplace_front(5), pop_front(), reverse(), sort()
 ```
 
-**Java definition/methods**
+**Python declaration/functions**
 
 ```java
 var list = new LinkedList<Integer>();   // doubly linked list
@@ -439,7 +439,7 @@ iterator(), listIterator()
 
 ### Queue
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto container = std::queue<int>{};
@@ -450,7 +450,7 @@ push_back(1), emplace_back(2), push_front(3), emplace_front(4),
 pop_back(), pop_front(), front(), back(), size(), empty()
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 deque: collections.deque = collections.deque([1, 2, 3, 4, 5])
@@ -458,7 +458,7 @@ deque[0], deque[-1]
 append(6), appendleft(7), pop(), popleft()
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 var deque = new ArrayDeque<Integer>();
@@ -473,14 +473,14 @@ var list = new ArrayList<>(deque);          // deque to list
 
 ### Stack
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto stack = std::stack<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 # use list type
@@ -489,7 +489,7 @@ stack[-1], len(stack)
 append(4), pop()
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 var stack = new Stack<Integer>();
@@ -512,7 +512,7 @@ var list = new ArrayList<>(stack);          // stack to list
 
 The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
 
-**C++ definition/methods (binary search tree based)**
+**C++ declaration/methods (binary search tree based)**
 
 ```cpp
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
@@ -521,7 +521,7 @@ auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 ```
 
-**Python definition/functions (binary search tree based)**
+**Python declaration/functions (binary search tree based)**
 
 ```python
 # sortedcontainers
@@ -530,7 +530,7 @@ sort_set = SortedSet([1, 2, 3, 4, 5])
 sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
 ```
 
-**Java definition/methods (binary search tree based)**
+**Java declaration/methods (binary search tree based)**
 
 ```java
 var treeMap = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
@@ -629,7 +629,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 ### Primitive type
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 std::to_string(42), std::swap(x, y)
@@ -647,7 +647,7 @@ const auto i = distribution(generator);
 const auto d = std::generate_canonical<double, 10>(generator);  // floating point number in [0, 1)
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 float('inf'), float('-inf')     # constants
@@ -673,7 +673,7 @@ random.shuffle(number_list)
 random.choice(number_list)
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, Boolean.TRUE  // constants
@@ -709,7 +709,7 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 ### Search
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
@@ -727,13 +727,13 @@ std::ranges::lower_bound(v, 42)
 std::ranges::upper_bound(v, 42)
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 bisect.bisect_left(number_list, 3), bisect.bisect_right(number_list, 3), bisect.bisect(number_list, 3)
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 var array = new int[]{1, 2, 3, 4, 5};
@@ -755,14 +755,14 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 ### Sort
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 std::ranges::sort(v);         // introsort (quick sort + heap sort + insertion sort)
 std::ranges::stable_sort(v);  // merge sort
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 number_list: list[int] = [1, 2, 3, 4, 5]
@@ -770,7 +770,7 @@ number_list.sort()      # in-place
 sorted(number_list)     # return a new list(copy)
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 Arrays.sort(array);     // dual pivot quick sort (primitive types)
@@ -868,14 +868,14 @@ divide and conquer algorithm
 
 ### String
 
-**C++ definition/methods**
+**C++ declaration/methods**
 
 ```cpp
 auto str = std::string{"hello"};
 append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
 ```
 
-**Python definition/functions**
+**Python declaration/functions**
 
 ```python
 hello_world: str = 'hello world'
@@ -888,7 +888,7 @@ s = s[6:]
 s += 'abc'
 ```
 
-**Java definition/methods**
+**Java declaration/methods**
 
 ```java
 var str = "Hello World";
