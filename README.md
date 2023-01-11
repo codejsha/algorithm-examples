@@ -38,8 +38,9 @@ Additionally, each project is configured in the following environments:
 
 ### Array
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 auto v = std::vector{1, 2, 3, 4, 5};
 auto sub_v = std::vector<int>{v.begin(), v.end() - 1};
 auto arr = std::array{1, 2, 3, 4, 5};
@@ -60,41 +61,46 @@ std::ranges::max_element(v)
 std::ranges::minmax_element(v)
 ```
 
+**Python definition/functions**
+
 ```python
-### python definition/functions
 # list
-sample_list: list[int] = [1, 2, 3, 4, 5]
+number_list: list[int] = [1, 2, 3, 4, 5]
 append(6), insert(3, 3), remove(4), pop(), pop(0), index(3), count(3), clear(), extend([6, 7, 8])
-sample_list.reverse()   # in-place
-reversed(sample_list)   # return an iterator
-sample_list.sort()      # in-place
-sorted(sample_list)     # return a new list(copy)
-del(sample_list[0])     # delete the first element
-del(sample_list[0:2])   # removes the slice
-bisect_left(sample_list, 3), bisect_right(sample_list, 3), bisect(sample_list, 3)
-insort_left(sample_list, 3), insort_right(sample_list, 3), insort(sample_list, 3)
+number_list.reverse()   # in-place
+reversed(number_list)   # return an iterator
+number_list.sort()      # in-place
+sorted(number_list)     # return a new list(copy)
+del(number_list[0])     # delete the first element
+del(number_list[0:2])   # removes the slice
+bisect.bisect_left(number_list, 3), bisect.bisect_right(number_list, 3), bisect.bisect(number_list, 3)
+bisect.insort_left(number_list, 3), bisect.insort_right(number_list, 3), bisect.insort(number_list, 3)
 
 # tuple
 sample_tuple: tuple[int] = (1, 2, 3, 4, 5)
 index(3), count(3)
 
-# list comprehension
-even_list = [x for x in sample_list if x % 2 == 0]
+### list comprehension
+# single level of loop
+even_list = [x for x in number_list if x % 2 == 0]
+# two levels of loop
+sample_list = [[1, 2, 3], [4, 5, 6]]
+square_list = [[n ** 2 for n in row] for row in sample_list]
+# multi levels of loop
 list_a: list[int] = [1, 3, 5]
 list_b: list[str] = ['a', 'b']
 set_ab: set[tuple[int, str]] = {(a, b) for a in list_a for b in list_b}
+# 2d array to 1d array
 list_2d = [['a', 'b', 'c'], ['d', 'e', 'f']]
 list_1d: list[str] = [ch for row in list_2d for ch in row]
-number_list = [[1, 2, 3], [4, 5, 6]]
-square_list = [[n ** 2 for n in row] for row in number_list]
-
-# built-in
-any(x % 2 == 0 for x in sample_list)
-all(x % 2 == 0 for x in sample_list)
+# any/all
+any(x % 2 == 0 for x in number_list)
+all(x % 2 == 0 for x in number_list)
 ```
 
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 var array = new int[]{1, 2, 3, 4, 5};
 // Arrays
 binarySearch(array, 3), equals(array, another_arr), copyOf(array, array.length), copyOfRange(array, 0, array.length),
@@ -309,16 +315,35 @@ algorithm Prim(G, root):
 
 ### Hash table
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), find("b"), erase("a"), size(), empty()
 auto set = std::unordered_set{1, 2, 3, 4, 5};
 insert(42), emplace(42), find(42), erase(42), size(), empty()
 ```
 
+**Python definition/functions**
+
+```python
+# set
+number_set: set[int] = set()
+add(1), update([2, 3, 4])
+# dictionary
+sample_dict: dict[str, int] = {'a': 1, 'b': 2, 'c': 3}
+# defaultdict
+sample_dict: collections.defaultdict[str, int] = collections.defaultdict(int)
+sample_dict['a'] = 1
+sample_dict.update({'b': 2, 'c': 3})
+# counter
+sample_counter: collections.Counter = collections.Counter()
+sample_counter.update([1, 1, 2, 2, 3])
+```
+
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 var map = new HashMap<String, Integer>();
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
@@ -335,15 +360,26 @@ Collections.unmodifiableSortedSet(set);
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 auto queue = std::priority_queue<int>{};    // max heap
 auto queue = std::priority_queue<int, std::vector<int>, std::greater<int>>{};   // min heap
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
 
+**Python definition/functions**
+
+```python
+number_list: list[int] = [5, 4, 3, 2, 1]
+heapq.heapify(number_list)
+heapq.nlargest(3, number_list), heapq.nsmallest(3, number_list)
+heapq.heappush(number_list, 6), heapq.heappop(number_list), heapq.heapreplace(number_list, 0)
+```
+
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 var queue = new PriorityQueue<Integer>();
 add(1), peek(), poll(), remove(), size(), isEmpty(),
 contains(1), clear(), iterator()
@@ -358,8 +394,9 @@ contains(1), clear(), iterator()
 
 ### Linked list
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 auto list = std::list{1, 2, 3};   // doubly linked list
 push_front(4), emplace_front(5), push_back(6), emplace_back(7),
 pop_front(), pop_back(), reverse(), sort(), insert(list.begin(), 11),
@@ -369,9 +406,9 @@ auto list = std::forward_list{1, 2, 3};   // singly linked list
 push_front(4), emplace_front(5), pop_front(), reverse(), sort()
 ```
 
+**Java definition/methods**
 
 ```java
-//// java definition/methods
 var list = new LinkedList<Integer>();   // doubly linked list
 add(1), addAll(List.of(2, 3, 4, 5)),
 remove(0), removeFirst(), removeLast(), removeIf(x -> x % 2 == 0), subList(1, 3),
@@ -402,8 +439,9 @@ iterator(), listIterator()
 
 ### Queue
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 auto container = std::queue<int>{};
 push(1), emplace(2), pop(), front(), back(), size(), empty()
 
@@ -412,15 +450,17 @@ push_back(1), emplace_back(2), push_front(3), emplace_front(4),
 pop_back(), pop_front(), front(), back(), size(), empty()
 ```
 
+**Python definition/functions**
+
 ```python
-### python definition/functions
 deque: collections.deque = collections.deque([1, 2, 3, 4, 5])
 deque[0], deque[-1]
 append(6), appendleft(7), pop(), popleft()
 ```
 
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 var deque = new ArrayDeque<Integer>();
 add(1), remove(), pop(), size(), isEmpty(), contains(1), clear(),
 offerFirst(6), offerLast(7), pollFirst(), pollLast(), peekFirst(), peekLast(),
@@ -433,22 +473,25 @@ var list = new ArrayList<>(deque);          // deque to list
 
 ### Stack
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 auto stack = std::stack<int>{};
 push(1), emplace(2), pop(), top(), size(), empty()
 ```
 
+**Python definition/functions**
+
 ```python
-### python definition/functions
 # use list type
 stack: list[int] = [1, 2, 3]
 stack[-1], len(stack)
 append(4), pop()
 ```
 
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 var stack = new Stack<Integer>();
 push(1), add(1, 2), addAll(anotherList), pop(), peek(), size(), isEmpty()
 contains(1), search(1), size(),
@@ -469,15 +512,27 @@ var list = new ArrayList<>(stack);          // stack to list
 
 The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
 
+**C++ definition/methods (binary search tree based)**
+
 ```cpp
-//// c++ definition/methods (binary search tree based)
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
 auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 ```
+
+**Python definition/functions (binary search tree based)**
+
+```python
+# sortedcontainers
+sort_list = SortedList([1, 2, 3, 4, 5])
+sort_set = SortedSet([1, 2, 3, 4, 5])
+sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
+```
+
+**Java definition/methods (binary search tree based)**
+
 ```java
-//// java definition/methods (binary search tree based)
 var treeMap = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
@@ -574,8 +629,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 ### Primitive type
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 std::to_string(42), std::swap(x, y)
 std::numeric_limits<int>::min(), std::numeric_limits<float>::max(), std::numeric_limits<double>::infinity() // constants
 std::abs(-34), std::fabs(-3.14), std::ceil(2.17), std::floor(3.14), std::min(x, -4), std::max(3.14, y), pow(2.17, 3.14), log(7.12), sqrt(225) // cmath
@@ -591,33 +647,35 @@ const auto i = distribution(generator);
 const auto d = std::generate_canonical<double, 10>(generator);  // floating point number in [0, 1)
 ```
 
+**Python definition/functions**
+
 ```python
-### python definition/functions
 float('inf'), float('-inf')     # constants
 math.fabs(-34.5), math.ceil(2.17), math.floor(3.14), math.max(x, -3), math.min(x, 3.14), math.pow(2.71, 3.15), math.round(3.14), math.sqrt(225) # math
-abs(-34), min(sample_list), max(sample_list), sum(sample_list), sorted(sample_list)
-len(sample_string), len(sample_list), len(sample_dict)  # length
+abs(-34), min(number_list), max(number_list), sum(number_list), sorted(number_list)
+len(sample_string), len(number_list), len(sample_dict)  # length
 str(42), str(3.14), str(True)           # int/float/bool -> string
 int("42"), float("3.14"), bool("true")  # string -> int/float/bool
 int("1000010", 2), int("52", 8), int("2a", 16)  # string -> binary/octal/hex
 bin(42), oct(42), hex(42)       # int -> binary/octal/hex
 ascii('a'), chr(97), ord('a')   # unicode <-> ascii code
 
-# copy
-copy.deepcopy(sample_list) # deep copy
-copy.copy(sample_list)     # shallow copy
+### copy
+copy.deepcopy(number_list) # deep copy
+copy.copy(number_list)     # shallow copy
 
-# random
+### random
 random.randrange(28)       # [0, 28)
 random.randrange(1, 100)   # [1, 100)
 random.randrange(8, 16)    # [8, 16)
 random.randrange(8, 16, 2) # [8, 16) with step 2
-random.shuffle(sample_list)
-random.choice(sample_list)
+random.shuffle(number_list)
+random.choice(number_list)
 ```
 
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, Boolean.TRUE  // constants
 Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x, 3.14), Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225) // math
 Integer.valueOf("1"), Double.valueOf("3.14"), Boolean.valueOf("true"), Float.toString(3.14f)  // reference type
@@ -651,8 +709,9 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 ### Search
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods (binary search tree based)
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
 auto set = std::set{1, 2, 3, 4, 5};
@@ -667,8 +726,16 @@ std::ranges::binary_search(v, 42)
 std::ranges::lower_bound(v, 42)
 std::ranges::upper_bound(v, 42)
 ```
+
+**Python definition/functions**
+
+```python
+bisect.bisect_left(number_list, 3), bisect.bisect_right(number_list, 3), bisect.bisect(number_list, 3)
+```
+
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 var array = new int[]{1, 2, 3, 4, 5};
 var arrayList = new ArrayList<Integer>(List.of(1, 2, 3, 4, 5));
 var linkedList = new LinkedList<Integer>(List.of(1, 2, 3, 4, 5));
@@ -688,14 +755,24 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 ### Sort
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 std::ranges::sort(v);         // introsort (quick sort + heap sort + insertion sort)
 std::ranges::stable_sort(v);  // merge sort
 ```
 
+**Python definition/functions**
+
+```python
+number_list: list[int] = [1, 2, 3, 4, 5]
+number_list.sort()      # in-place
+sorted(number_list)     # return a new list(copy)
+```
+
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 Arrays.sort(array);     // dual pivot quick sort (primitive types)
                         // timsort (insertion sort + merge sort) (reference types)
 Collections.sort(list); // timsort (insertion sort + merge sort)
@@ -791,14 +868,16 @@ divide and conquer algorithm
 
 ### String
 
+**C++ definition/methods**
+
 ```cpp
-//// c++ definition/methods
 auto str = std::string{"hello"};
 append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
 ```
 
+**Python definition/functions**
+
 ```python
-### python definition/functions
 hello_world: str = 'hello world'
 len(hello_world), count('l'), find('world'), rfind('world'), index('world'), rindex('world'),
 strip(), split(' '), replace(' ', ''), startswith('hello'), endswith('world'),
@@ -809,8 +888,9 @@ s = s[6:]
 s += 'abc'
 ```
 
+**Java definition/methods**
+
 ```java
-//// java definition/methods
 var str = "Hello World";
 length(), charAt(0), substring(0, 5), indexOf("Java"), lastIndexOf("Java"),
 contains("Java"), startsWith("Hello"), endsWith("World"),
