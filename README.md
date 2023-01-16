@@ -389,6 +389,7 @@ contains(1), clear(), iterator()
 
 - Compute the k closest stars (FindClosestStar): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Find the $k$ closest stars to the earth. The stars are represented by a sequence of points(coordinates).
 - Compute the median of a sequence of numbers (FindMedian): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Find the median of a sequence of numbers. The median is the number separating the higher half of a data sample from the lower half.
+- Fibonacci heap
 - Merge sorted arrays (MergeSortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Merge k sorted arrays into one heap.
 - Sort an increasing-decreasing array (SortIncreasingDecreasingArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Sort an array that is repeatedly increasing then decreasing.
 
@@ -406,7 +407,7 @@ auto list = std::forward_list{1, 2, 3};   // singly linked list
 push_front(4), emplace_front(5), pop_front(), reverse(), sort()
 ```
 
-**Python declaration/functions**
+**Java declaration/methods**
 
 ```java
 var list = new LinkedList<Integer>();   // doubly linked list
@@ -569,6 +570,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 **Examples**
 
+- AVL tree
 - B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
 - Balanced tree status: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is balanced or not.
 - Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
@@ -579,9 +581,12 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Lowest common ancestor (FindLowestCommonAncestor): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree.
 - Lowest common ancestor with parent pointer (FindLowestCommonAncestor2): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
 - Populate right sibling (PopulateRightSibling): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Populate the right sibling of a binary tree.
+- Red-black search tree
 - Root to leaf path corresponding to the given sum (HasKeySum): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the tree has a root-leaf path equal to the given sum.
 - Sum of root to leaf (SumRootToLeafDecimal, SumRootToLeafBinary): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
 - Tree symmetric: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is symmetric or not.
+- Trie
+- van Emde Boas tree (vEB tree)
 
 ## Topics
 
