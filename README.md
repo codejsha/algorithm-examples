@@ -785,9 +785,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 **Examples**
 
-- Bubble sort
-
-[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks**                   |
 | :---------- | :-----------------: | :---------------------------- |
@@ -795,9 +793,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       |                               |
 | **Average** |      $O(n^2)$       |                               |
 
-- Bucket sort
-
-[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -805,9 +801,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |       $O(n)$        |             |
 
-- Counting sort
-
-[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -815,9 +809,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |     $O(n + k)$      |             |
 | **Average** |     $O(n + k)$      |             |
 
-- Heap sort
-
-[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Heap sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -825,11 +817,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Insertion sort
-
-[c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
-
-one of the fastest algorithms for sorting very small arrays (around 10 elements)
+- Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | One of the fastest algorithms for sorting very small arrays (around 10 elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                        |
 | ----------- | :-----------------: | ---------------------------------------------------------------------------------- |
@@ -837,11 +825,7 @@ one of the fastest algorithms for sorting very small arrays (around 10 elements)
 | **Worst**   |      $O(n^2)$       | * if the list is sorted in reverse order<br>* this case has quadratic running time |
 | **Average** |      $O(n^2)$       | * this case has quadratic running time                                             |
 
-- Merge sort
-
-[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
-
-divide and conquer algorithm
+- Merge sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                              |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------- |
@@ -849,11 +833,7 @@ divide and conquer algorithm
 | **Worst**   |    $O(n log n)$     |                                                                                                          |
 | **Average** |    $O(n log n)$     |                                                                                                          |
 
-- Quick sort
-
-[java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
-
-divide and conquer algorithm
+- Quick sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -861,9 +841,7 @@ divide and conquer algorithm
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Selection sort
-
-[c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Selection sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks**                                                                            |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------- |
@@ -924,7 +902,9 @@ var str = collection.stream()
 **Examples**
 
 - Convert string (IntToString, StringToInt): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Convert integer to string and vice versa.
+- Finite automata
 - IP address validation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Validate IPv4 address that is in the form of `x.x.x.x` where `x` is a number between 0 and 255.
+- Knuth-Morris-Pratt algorithm (KMP)
 - Look and say problem: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
 - Naive string matching: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)), [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/string)) | Find all occurrences of a pattern in a string.
 - Palindrome: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Check if a string is palindromic.
