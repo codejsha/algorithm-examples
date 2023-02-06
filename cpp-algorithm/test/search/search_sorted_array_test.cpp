@@ -37,3 +37,21 @@ GTEST_TEST(SearchSortedArray, SearchFirstGreaterThanKeyCase3)
     const auto result = SearchSortedArray::SearchFirstGreaterThanKey(array, key);
     EXPECT_EQ(expected, result);
 }
+
+GTEST_TEST(SearchSortedArray, SearchEntryEqualToItsIndex)
+{
+    const auto array = std::vector{-2, 0, 2, 3, 6, 7, 9};
+    const auto expected = std::vector{2, 3};
+    const auto result = SearchSortedArray::SearchEntryEqualToItsIndex(array);
+    const auto is_entry = std::ranges::find_if(array, [](auto x)
+        { return (x == 2) || (x == 3); });
+    EXPECT_TRUE(*is_entry);
+}
+
+GTEST_TEST(SearchSortedArray, SearchSmallestElementInCyclicallySortedArray)
+{
+    const auto array = std::vector{378, 478, 550, 631, 103, 203, 220, 234, 279, 368};
+    constexpr auto expected = 4;
+    const auto result = SearchSortedArray::SearchSmallestElementInCyclicallySortedArray(array);
+    EXPECT_EQ(expected, result);
+}
