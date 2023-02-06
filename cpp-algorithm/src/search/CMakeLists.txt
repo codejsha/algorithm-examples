@@ -8,5 +8,6 @@ macro(add_library_target target)
 endmacro()
 
 add_library_target(compute_square_root)
+add_library_target(find_min_max)
 add_library_target(search_sorted_array)
 add_library_target(search_sorted_matrix)

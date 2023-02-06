@@ -31,5 +31,6 @@ macro(add_target_header_test target)
 endmacro()
 
 add_target_test(compute_square_root_test)
+add_target_test(find_min_max_test)
 add_target_test(search_sorted_array_test)
 add_target_test(search_sorted_matrix_test)
