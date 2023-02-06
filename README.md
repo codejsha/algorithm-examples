@@ -761,6 +761,7 @@ Collections.binarySearch(arrayList, 3);   // for list
 - Search a sorted array for the first greater than a key (SearchFirstGreaterThanKey): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 - Search a sorted array for the first occurrence of a key (SearchFirstOfKey): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 - Search a cyclically sorted array for the smallest element (SearchSmallestElementInCyclicallySortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
+- Search in a 2D sorted array(matrix) (SearchSortedMatrix): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Search in a 2D sorted array(matrix) for a given element.
 
 ### Sort
 
