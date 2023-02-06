@@ -762,6 +762,7 @@ Collections.binarySearch(arrayList, 3);   // for list
 - Search a sorted array for the first occurrence of a key (SearchFirstOfKey): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 - Search a cyclically sorted array for the smallest element (SearchSmallestElementInCyclicallySortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 - Search in a 2D sorted array(matrix) (SearchSortedMatrix): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Search in a 2D sorted array(matrix) for a given element.
+- Integer square root (ComputeIntegerSquareRoot): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
 
 ### Sort
 
