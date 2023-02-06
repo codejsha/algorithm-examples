@@ -3,7 +3,6 @@ package com.example.algorithm.graph;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -73,18 +72,13 @@ class PrimTest {
     }
 
     @Test
-    @Order(1)
-    void testPrimAlgorithmVertex() {
+    void testPrimAlgorithm() {
         var expected = new Prim.Vertex[]{vertexA, vertexB, vertexC, vertexI, vertexF, vertexG, vertexH, vertexD, vertexE};
         var actual = Prim.primAlgorithmVertex(graph, vertexA);
         assertArrayEquals(expected, actual);
-    }
 
-    @Test
-    @Order(2)
-    void testPrimAlgorithmEdge() {
-        var expected = new Prim.Edge[]{edgeAB, edgeBC, edgeCI, edgeCF, edgeFG, edgeGH, edgeCD, edgeDE};
-        var actual = Prim.primAlgorithmEdge(graph, vertexA);
-        assertArrayEquals(expected, actual);
+        var expected2 = new Prim.Edge[]{edgeAB, edgeBC, edgeCI, edgeCF, edgeFG, edgeGH, edgeCD, edgeDE};
+        var actual2 = Prim.primAlgorithmEdge(graph, vertexA);
+        assertArrayEquals(expected2, actual2);
     }
 }
