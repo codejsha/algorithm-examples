@@ -1,5 +1,6 @@
 #include "search_sorted_array.h"
 
+#include <algorithm>
 #include <gtest/gtest.h>
 
 GTEST_TEST(SearchSortedArray, SearchFirstOfKey)
