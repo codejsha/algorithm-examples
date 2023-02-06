@@ -757,8 +757,8 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 - Binary search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
 - Linear search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
-- Search a sorted array for the first occurrence of a key (SearchFirstOfKey): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 - Search a sorted array for the first greater than a key (SearchFirstGreaterThanKey): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
+- Search a sorted array for the first occurrence of a key (SearchFirstOfKey): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 
 ### Sort
 
