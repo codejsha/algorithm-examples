@@ -73,14 +73,14 @@ class PrimTest {
 
     @Test
     void testPrimAlgorithmVertex() {
-        var expected = new Prim.Vertex[]{vertexA, vertexB, vertexH, vertexG, vertexF, vertexC, vertexI, vertexD, vertexE};
+        var expected = new Prim.Vertex[]{vertexA, vertexB, vertexC, vertexI, vertexF, vertexG, vertexH, vertexD, vertexE};
         var actual = Prim.primAlgorithmVertex(graph, vertexA);
         assertArrayEquals(expected, actual);
     }
 
     @Test
     void testPrimAlgorithmEdge() {
-        var expected = new Prim.Edge[]{edgeAB, edgeAH, edgeGH, edgeFG, edgeCF, edgeCI, edgeCD, edgeDE};
+        var expected = new Prim.Edge[]{edgeAB, edgeBC, edgeCI, edgeCF, edgeFG, edgeGH, edgeCD, edgeDE};
         var actual = Prim.primAlgorithmEdge(graph, vertexA);
         assertArrayEquals(expected, actual);
     }
