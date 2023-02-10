@@ -356,6 +356,10 @@ Collections.unmodifiableSortedMap(map);
 Collections.unmodifiableSortedSet(set);
 ```
 
+**Examples**
+
+- Find anagrams: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given an array of strings, group anagrams together.
+
 ### Heap
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
