@@ -30,5 +30,6 @@ macro(add_target_header_test target)
     gtest_discover_tests(${target})
 endmacro()
 
+add_target_test(anonymous_letter_test)
 add_target_test(check_palindromic_permutation_test)
 add_target_test(find_anagram_test)
