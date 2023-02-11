@@ -359,6 +359,7 @@ Collections.unmodifiableSortedSet(set);
 **Examples**
 
 - Find anagrams: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given an array of strings, group anagrams together.
+- Palindromic permutation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
 
 ### Heap
 
