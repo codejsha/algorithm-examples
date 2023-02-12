@@ -558,12 +558,12 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - A tree with $n$ vertices has $n-1$ edges.
 - A full $m$-ary tree with $i$ internal vertices contains $n = mi + 1$ vertices. (cf. vertices $n$ = internal vertices $i$ + leaves $l$)
 - A full $m$-ary tree with
-    - $(i)$ $n$ vertices has $i = (n - 1)∕m$ internal vertices and $l = [(m - 1)n + 1]∕m$ leaves,
-    - $(ii)$ $i$ internal vertices has $n = mi + 1$ vertices and $l = (m - 1)i + 1$ leaves,
-    - $(iii)$ $l$ leaves has $n = (ml - 1)∕(m - 1)$ vertices and $i = (l - 1)∕(m - 1)$ internal vertices.
+  - $(i)$ $n$ vertices has $i = (n - 1)∕m$ internal vertices and $l = [(m - 1)n + 1]∕m$ leaves,
+  - $(ii)$ $i$ internal vertices has $n = mi + 1$ vertices and $l = (m - 1)i + 1$ leaves,
+  - $(iii)$ $l$ leaves has $n = (ml - 1)∕(m - 1)$ vertices and $i = (l - 1)∕(m - 1)$ internal vertices.
 - There are at most $m^h$ leaves in an $m$-ary tree of height $h$. $(l = m^h)$
-    - If an $m$-ary tree of height $h$ has $l$ leaves, then $h \geq \lceil \log_{m}{l} \rceil$.
-    - If the $m$-ary tree is full and balanced, then $h = \lceil \log_{m}{l} \rceil$.
+  - If an $m$-ary tree of height $h$ has $l$ leaves, then $h \geq \lceil \log_{m}{l} \rceil$.
+  - If the $m$-ary tree is full and balanced, then $h = \lceil \log_{m}{l} \rceil$.
 
 **Balanced binary tree**
 
@@ -603,9 +603,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 **Examples**
 
 - Fibonacci number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
-    - $F_0 = 0$
-    - $F_1 = 1$
-    - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
+  - $F_0 = 0$
+  - $F_1 = 1$
+  - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
 - Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving))
 - Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 - Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
@@ -804,66 +804,66 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 - Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks**                   |
-| :---------- | :-----------------: | :---------------------------- |
-| **Best**    |       $O(n)$        | if the list is already sorted |
-| **Worst**   |      $O(n^2)$       |                               |
-| **Average** |      $O(n^2)$       |                               |
+|:----------- |:-------------------:|:----------------------------- |
+| **Best**    | $O(n)$              | if the list is already sorted |
+| **Worst**   | $O(n^2)$            |                               |
+| **Average** | $O(n^2)$            |                               |
 
 - Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks** |
-| ----------- | :-----------------: | ----------- |
-| **Best**    |     $O(n + k)$      |             |
-| **Worst**   |      $O(n^2)$       |             |
-| **Average** |       $O(n)$        |             |
+| ----------- |:-------------------:| ----------- |
+| **Best**    | $O(n + k)$          |             |
+| **Worst**   | $O(n^2)$            |             |
+| **Average** | $O(n)$              |             |
 
 - Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks** |
-| ----------- | :-----------------: | ----------- |
-| **Best**    |     $O(n + k)$      |             |
-| **Worst**   |     $O(n + k)$      |             |
-| **Average** |     $O(n + k)$      |             |
+| ----------- |:-------------------:| ----------- |
+| **Best**    | $O(n + k)$          |             |
+| **Worst**   | $O(n + k)$          |             |
+| **Average** | $O(n + k)$          |             |
 
 - Heap sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks** |
-| ----------- | :-----------------: | ----------- |
-| **Best**    |    $O(n log n)$     |             |
-| **Worst**   |    $O(n log n)$     |             |
-| **Average** |    $O(n log n)$     |             |
+| ----------- |:-------------------:| ----------- |
+| **Best**    | $O(n log n)$        |             |
+| **Worst**   | $O(n log n)$        |             |
+| **Average** | $O(n log n)$        |             |
 
 - Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | One of the fastest algorithms for sorting very small arrays (around 10 elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                        |
-| ----------- | :-----------------: | ---------------------------------------------------------------------------------- |
-| **Best**    |       $O(n)$        | * if the list is already sorted<br>* this case has linear running time             |
-| **Worst**   |      $O(n^2)$       | * if the list is sorted in reverse order<br>* this case has quadratic running time |
-| **Average** |      $O(n^2)$       | * this case has quadratic running time                                             |
+| ----------- |:-------------------:| ---------------------------------------------------------------------------------- |
+| **Best**    | $O(n)$              | * if the list is already sorted<br>* this case has linear running time             |
+| **Worst**   | $O(n^2)$            | * if the list is sorted in reverse order<br>* this case has quadratic running time |
+| **Average** | $O(n^2)$            | * this case has quadratic running time                                             |
 
 - Merge sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                              |
-| ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------- |
-| **Best**    |    $O(n log n)$     | * running time of sorting for input length $n$ is $T(n)$<br>* $T(n) = 2T(n/2) + O(n) \approx O(n log n)$ |
-| **Worst**   |    $O(n log n)$     |                                                                                                          |
-| **Average** |    $O(n log n)$     |                                                                                                          |
+| ----------- |:-------------------:| -------------------------------------------------------------------------------------------------------- |
+| **Best**    | $O(n log n)$        | * running time of sorting for input length $n$ is $T(n)$<br>* $T(n) = 2T(n/2) + O(n) \approx O(n log n)$ |
+| **Worst**   | $O(n log n)$        |                                                                                                          |
+| **Average** | $O(n log n)$        |                                                                                                          |
 
 - Quick sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks** |
-| ----------- | :-----------------: | ----------- |
-| **Best**    |    $O(n log n)$     |             |
-| **Worst**   |      $O(n^2)$       |             |
-| **Average** |    $O(n log n)$     |             |
+| ----------- |:-------------------:| ----------- |
+| **Best**    | $O(n log n)$        |             |
+| **Worst**   | $O(n^2)$            |             |
+| **Average** | $O(n log n)$        |             |
 
 - Selection sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks**                                                                            |
-| ----------- | :-----------------: | -------------------------------------------------------------------------------------- |
-| **Best**    |      $O(n^2)$       | * if the list is already sorted                                                        |
-| **Worst**   |      $O(n^2)$       | * when sorted in ascending order, if you want to sort in descending order (vice versa) |
-| **Average** |      $O(n^2)$       |                                                                                        |
+| ----------- |:-------------------:| -------------------------------------------------------------------------------------- |
+| **Best**    | $O(n^2)$            | * if the list is already sorted                                                        |
+| **Worst**   | $O(n^2)$            | * when sorted in ascending order, if you want to sort in descending order (vice versa) |
+| **Average** | $O(n^2)$            |                                                                                        |
 
 ### String
 
