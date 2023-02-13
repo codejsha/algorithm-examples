@@ -6,6 +6,7 @@ endif(WIN32)
 
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_SOURCE_DIR}/src/hash_table)
+include_directories(${CMAKE_SOURCE_DIR}/src/tree)
 
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
