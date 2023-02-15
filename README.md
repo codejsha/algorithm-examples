@@ -319,9 +319,12 @@ algorithm Prim(G, root):
 
 ```cpp
 auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
-insert({"c", 3}), emplace("d", 4), find("b"), erase("a"), size(), empty()
+insert({"c", 3}), emplace("d", 4), find("b"), end(), erase("a"), size(), empty()
 auto set = std::unordered_set{1, 2, 3, 4, 5};
-insert(42), emplace(42), find(42), erase(42), size(), empty()
+insert(42), emplace(42), find(42), end(), erase(42), size(), empty()
+
+// tuple
+auto result = std::tuple{-1, -1};
 ```
 
 **Python declaration/functions**
@@ -358,13 +361,13 @@ Collections.unmodifiableSortedSet(set);
 
 **Examples**
 
-- Anonymous letter constructible: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the characters in a magazine.
-- Anonymous words constructible: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the words in a magazine.
-- Find anagrams: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given an array of strings, group anagrams together.
+- Anonymous letter constructible (IsLetterConstructibleFromMagazine): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the characters in a magazine.
+- Anonymous words constructible (IsWordConstructibleFromMagazine): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the words in a magazine.
+- Find anagrams (FindAnagramMappings): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given an array of strings, group anagrams together.
 - ISBN cache: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Implement a LRU cache for ISBN lookups.
-- Palindromic permutation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
 - Nearest repeated entry (FindNearestRepeatedEntry): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the nearest repeated entry in an array of strings.
 - Optimized lowest common ancestor (FindOptimizedLowestCommonAncestor): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
+- Palindromic permutation (IsPalindromePermutation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
 
 ### Heap
 
@@ -404,6 +407,8 @@ contains(1), clear(), iterator()
 - Sort an increasing-decreasing array (SortIncreasingDecreasingArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Sort an array that is repeatedly increasing then decreasing.
 
 ### Linked list
+
+In Python, there is no built-in type or library for LinkedList.
 
 **C++ declaration/methods**
 
