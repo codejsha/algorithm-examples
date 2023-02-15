@@ -57,5 +57,57 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(
             ++left_index;
         }
     }
+
+    return result;
+}
+auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(
+    const std::vector<std::string>& paragraph,
+    const std::vector<std::string>& keywords)
+    -> std::tuple<int, int>
+{
+    // map each keyword to its index in the keywords vector
+    std::unordered_map<std::string, int> keywords_to_index;
+    for (auto i = 0; i < static_cast<int>(keywords.size()); ++i)
+    {
+        keywords_to_index[keywords[i]] = i;
+    }
+
+    auto last_occurrence = std::vector(keywords.size(), -1);
+    auto shortest_subarray_length = std::vector(keywords.size(), std::numeric_limits<int>::max());
+
+    auto shortest_distance = std::numeric_limits<int>::max();
+    auto result = std::make_tuple(-1, -1);
+
+    for (auto i = 0; i < static_cast<int>(paragraph.size()); ++i)
+    {
+        if (const auto& word = paragraph[i];
+            keywords_to_index.contains(word))
+        {
+            const auto keyword_index = keywords_to_index.find(word)->second;
+
+            // if keyword is the first one in the keywords vector
+            if (keyword_index == 0)
+            {
+                shortest_subarray_length[keyword_index] = 1;
+            }
+            // if the shortest subarray length of the previous keyword is not infinite
+            else if (shortest_subarray_length[keyword_index - 1] != std::numeric_limits<int>::max())
+            {
+                const auto distance_to_previous_keyword = i - last_occurrence[keyword_index - 1];
+                shortest_subarray_length[keyword_index] = distance_to_previous_keyword + shortest_subarray_length[keyword_index - 1];
+            }
+            last_occurrence[keyword_index] = i;
+
+            // if the current keyword is the last one
+            // and its shortest subarray length is smaller than the current shortest distance
+            if (keyword_index == static_cast<int>(keywords.size()) - 1
+                && shortest_subarray_length.back() < shortest_distance)
+            {
+                shortest_distance = shortest_subarray_length.back();
+                result = std::tuple{i - shortest_distance + 1, i};
+            }
+        }
+    }
+
     return result;
 }
