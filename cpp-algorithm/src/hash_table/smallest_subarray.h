@@ -2,7 +2,6 @@
 #define CPP_ALGORITHM_SMALLEST_SUBARRAY_H
 
 #include <string>
-#include <unordered_set>
 #include <vector>
 
 namespace SmallestSubarray
@@ -11,9 +10,9 @@ namespace SmallestSubarray
     /// @param paragraph an array
     /// @param keywords a set
     /// @return a tuple of the start and end indices of the smallest subarray
-    auto FindSmallestSubarrayCoveringSet(
+    auto FindSmallestSubarrayCoveringSubset(
         const std::vector<std::string>& paragraph,
-        const std::unordered_set<std::string>& keywords)
+        const std::vector<std::string>& keywords)
         -> std::tuple<int, int>;
 }
 

@@ -2,9 +2,9 @@
 
 #include <unordered_map>
 
-auto SmallestSubarray::FindSmallestSubarrayCoveringSet(
+auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(
     const std::vector<std::string>& paragraph,
-    const std::unordered_set<std::string>& keywords)
+    const std::vector<std::string>& keywords)
     -> std::tuple<int, int>
 {
     // keep track of the number of keywords that have been covered
@@ -16,11 +16,11 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSet(
 
     auto result = std::make_tuple(-1, -1);
     auto remaining_to_cover = keywords.size();
-    
-    for (auto left = 0, right = 0; right < static_cast<int>(paragraph.size()); ++right)
+
+    for (auto left_index = 0, right_index = 0; right_index < static_cast<int>(paragraph.size()); ++right_index)
     {
         // decrement the number of keywords that need to be covered
-        const auto& right_word = paragraph[right];
+        const auto& right_word = paragraph[right_index];
         if (const auto it = keywords_to_cover.find(right_word);
             it != keywords_to_cover.end())
         {
@@ -37,13 +37,13 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSet(
             // if result is not set yet
             // or the current subarray is smaller than the current result
             if (std::get<0>(result) == -1
-                || right - left < std::get<1>(result) - std::get<0>(result))
+                || right_index - left_index < std::get<1>(result) - std::get<0>(result))
             {
-                result = {left, right};
+                result = std::tuple{left_index, right_index};
             }
 
             // increment the number of keywords that need to be covered
-            const auto& left_word = paragraph[left];
+            const auto& left_word = paragraph[left_index];
             if (const auto it = keywords_to_cover.find(left_word);
                 it != keywords_to_cover.end())
             {
@@ -54,7 +54,7 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSet(
                 }
             }
 
-            ++left;
+            ++left_index;
         }
     }
     return result;
