@@ -33,6 +33,7 @@ endmacro()
 
 add_target_test(anonymous_letter_test)
 add_target_test(check_palindromic_permutation_test)
+add_target_test(collatz_conjecture_test)
 add_target_test(find_anagram_test)
 add_target_header_test(isbn_cache_test)
 add_target_test(nearest_repeated_entry_test)

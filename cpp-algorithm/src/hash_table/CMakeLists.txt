@@ -10,6 +10,7 @@ endmacro()
 
 add_library_target(anonymous_letter)
 add_library_target(check_palindromic_permutation)
+add_library_target(collatz_conjecture)
 add_library_target(find_anagram)
 add_library_target(nearest_repeated_entry)
 add_library_target(optimized_lca)
