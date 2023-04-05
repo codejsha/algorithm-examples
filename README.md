@@ -811,69 +811,69 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 **Examples**
 
-- Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.
 
-| **Case**    | **Time complexity** | **Remarks**                   |
-|:----------- |:-------------------:|:----------------------------- |
-| **Best**    | $O(n)$              | if the list is already sorted |
-| **Worst**   | $O(n^2)$            |                               |
-| **Average** | $O(n^2)$            |                               |
+| **Case**    | **Time complexity** | **Remarks**                                                                             |
+| :---------- | :-----------------: | :-------------------------------------------------------------------------------------- |
+| **Best**    |       $O(n)$        | when the input list is already sorted in the desired order                              |
+| **Worst**   |      $O(n^2)$       | when the input list is already sorted in the reverse order of the desired sorting order |
+| **Average** |      $O(n^2)$       |                                                                                         |
 
-- Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort). (`n` is the number of elements and `k` is the number of buckets)
 
-| **Case**    | **Time complexity** | **Remarks** |
-| ----------- |:-------------------:| ----------- |
-| **Best**    | $O(n + k)$          |             |
-| **Worst**   | $O(n^2)$            |             |
-| **Average** | $O(n)$              |             |
+| **Case**    | **Time complexity** | **Remarks**                                                                                                    |
+| ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------------- |
+| **Best**    |     $O(n + k)$      | when input elements are uniformly distributed<br> and each bucket contains roughly the same number of elements |
+| **Worst**   |      $O(n^2)$       | when all elements are placed into a single bucket                                                              |
+| **Average** |       $O(n)$        |                                                                                                                |
 
-- Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort. (`n` is the number of elements and `k` is the range of input values)
 
-| **Case**    | **Time complexity** | **Remarks** |
-| ----------- |:-------------------:| ----------- |
-| **Best**    | $O(n + k)$          |             |
-| **Worst**   | $O(n + k)$          |             |
-| **Average** | $O(n + k)$          |             |
+| **Case**    | **Time complexity** | **Remarks**                                          |
+| ----------- | :-----------------: | ---------------------------------------------------- |
+| **Best**    |     $O(n + k)$      | when the input elements have a small range of values |
+| **Worst**   |     $O(n + k)$      | when the input elements have a large range of values |
+| **Average** |     $O(n + k)$      |                                                      |
 
 - Heap sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
 | **Case**    | **Time complexity** | **Remarks** |
-| ----------- |:-------------------:| ----------- |
-| **Best**    | $O(n log n)$        |             |
-| **Worst**   | $O(n log n)$        |             |
-| **Average** | $O(n log n)$        |             |
+| ----------- | :-----------------: | ----------- |
+| **Best**    |    $O(n log n)$     |             |
+| **Worst**   |    $O(n log n)$     |             |
+| **Average** |    $O(n log n)$     |             |
 
-- Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | One of the fastest algorithms for sorting very small arrays (around 10 elements)
+- Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | One of the fastest algorithms for sorting very small arrays (around 10 elements).
 
-| **Case**    | **Time complexity** | **Remarks**                                                                        |
-| ----------- |:-------------------:| ---------------------------------------------------------------------------------- |
-| **Best**    | $O(n)$              | * if the list is already sorted<br>* this case has linear running time             |
-| **Worst**   | $O(n^2)$            | * if the list is sorted in reverse order<br>* this case has quadratic running time |
-| **Average** | $O(n^2)$            | * this case has quadratic running time                                             |
+| **Case**    | **Time complexity** | **Remarks**                                                                     |
+| ----------- | :-----------------: | ------------------------------------------------------------------------------- |
+| **Best**    |       $O(n)$        | if the list is already sorted.<br>this case has linear running time             |
+| **Worst**   |      $O(n^2)$       | if the list is sorted in reverse order.<br>this case has quadratic running time |
+| **Average** |      $O(n^2)$       | this case has quadratic running time                                            |
 
 - Merge sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
 
-| **Case**    | **Time complexity** | **Remarks**                                                                                              |
-| ----------- |:-------------------:| -------------------------------------------------------------------------------------------------------- |
-| **Best**    | $O(n log n)$        | * running time of sorting for input length $n$ is $T(n)$<br>* $T(n) = 2T(n/2) + O(n) \approx O(n log n)$ |
-| **Worst**   | $O(n log n)$        |                                                                                                          |
-| **Average** | $O(n log n)$        |                                                                                                          |
+| **Case**    | **Time complexity** | **Remarks**                                                                                           |
+| ----------- | :-----------------: | ----------------------------------------------------------------------------------------------------- |
+| **Best**    |    $O(n log n)$     | running time of sorting for input length $n$ is $T(n)$.<br>$T(n) = 2T(n/2) + O(n) \approx O(n log n)$ |
+| **Worst**   |    $O(n log n)$     |                                                                                                       |
+| **Average** |    $O(n log n)$     |                                                                                                       |
 
 - Quick sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks** |
-| ----------- |:-------------------:| ----------- |
-| **Best**    | $O(n log n)$        |             |
-| **Worst**   | $O(n^2)$            |             |
-| **Average** | $O(n log n)$        |             |
+| ----------- | :-----------------: | ----------- |
+| **Best**    |    $O(n log n)$     |             |
+| **Worst**   |      $O(n^2)$       |             |
+| **Average** |    $O(n log n)$     |             |
 
 - Selection sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
 
-| **Case**    | **Time complexity** | **Remarks**                                                                            |
-| ----------- |:-------------------:| -------------------------------------------------------------------------------------- |
-| **Best**    | $O(n^2)$            | * if the list is already sorted                                                        |
-| **Worst**   | $O(n^2)$            | * when sorted in ascending order, if you want to sort in descending order (vice versa) |
-| **Average** | $O(n^2)$            |                                                                                        |
+| **Case**    | **Time complexity** | **Remarks**                                                                          |
+| ----------- | :-----------------: | ------------------------------------------------------------------------------------ |
+| **Best**    |      $O(n^2)$       | if the list is already sorted                                                        |
+| **Worst**   |      $O(n^2)$       | when sorted in ascending order, if you want to sort in descending order (vice versa) |
+| **Average** |      $O(n^2)$       |                                                                                      |
 
 ### String
 
