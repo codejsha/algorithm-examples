@@ -1,8 +1,8 @@
 # Algorithm Examples
 
-![C++ CI with CMake](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python CI](https://github.com/codejsha/algorithm-examples/actions/workflows/python.yml/badge.svg) ![Java CI with Gradle](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
+![C++ CMake Build](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Build](https://github.com/codejsha/algorithm-examples/actions/workflows/python.yml/badge.svg) ![Java Gradle Build](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
 
-[Korean](README_ko-KR.md)
+[English](README.md) | [Korean](README_ko-KR.md)
 
 This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run tests to perform methods/functions on the algorithmic logic. GitHub Actions workflows that build and test code run manually.
 
@@ -120,6 +120,7 @@ Arrays.stream(array).mapToObj(String::valueOf).toArray(String[]::new)   // int[]
 String.join(", ", strArray)     // array to string
 str.split(", ")                 // string to array
 List.of(array), Arrays.asList(array)  // array to list
+Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to string array
 ```
 
 **Examples**
@@ -143,18 +144,20 @@ List.of(array), Arrays.asList(array)  // array to list
 - Stock trading - buy and sell a stock once (BuyAndSellStockOnceBruteForce, BuyAndSellStockOnce): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
 - Stock trading - buy and sell a stock twice (BuyAndSellStockTwice): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
 
+[🔼 back to toc](#table-of-contents)
+
 ### Graph
 
 - Shortest path algorithm
   - Single-source: Bellman-Ford algorithm, Dijkstra's algorithm
-  - Single-pair: A* search algorithm
+  - Single-pair: A\* search algorithm
   - All-pair: Floyd-Warshall algorithm, Johnson's algorithm
 - Minimum spanning tree algorithm: Kruskal's algorithm, Prim's algorithm
 - Maximum flow algorithm: Edmonds-Karp algorithm, Ford-Fulkerson algorithm, Push-relabel algorithm, Maximum bipartite matching
 
 **Examples**
 
-- A* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
+- A\* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
 - Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
 ```txt
@@ -277,7 +280,8 @@ algorithm FloydWarshall(G):
 
 - Ford-Fulkerson algorithm
 - Johnson's algorithm: A all pairs shortest paths algorithm. This is a combination of Dijkstra's algorithm and the Bellman-Ford algorithm. It may be faster than Floyd–Warshall on sparse graphs.
-- Kruskal's algorithm: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph. The algorithm uses  path compression (FIND-SET) and union by rank (UNION) to improve the performance.
+
+- Kruskal's algorithm: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph. The algorithm uses path compression (FIND-SET) and union by rank (UNION) to improve the performance.
 
 ```txt
 algorithm Kruskal(G, w):
@@ -313,6 +317,8 @@ algorithm Prim(G, root):
 - Push-relabel algorithm
 - Viterbi algorithm: A shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
 
+[🔼 back to toc](#table-of-contents)
+
 ### Hash table
 
 **C++ declaration/methods**
@@ -325,6 +331,9 @@ insert(42), emplace(42), find(42), end(), erase(42), size(), empty()
 
 // tuple
 auto result = std::tuple{-1, -1};
+
+// transform
+std::ranges::transform(nums, std::inserter(map, map.end()), [i = 0](auto num) mutable { return std::pair{num, i++}; });
 ```
 
 **Python declaration/functions**
@@ -372,6 +381,8 @@ Collections.unmodifiableSortedSet(set);
 - Optimized lowest common ancestor (FindOptimizedLowestCommonAncestor): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
 - Palindromic permutation (IsPalindromePermutation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
 
+[🔼 back to toc](#table-of-contents)
+
 ### Heap
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
@@ -408,6 +419,8 @@ contains(1), clear(), iterator()
 - Fibonacci heap
 - Merge sorted arrays (MergeSortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Merge k sorted arrays into one heap.
 - Sort an increasing-decreasing array (SortIncreasingDecreasingArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Sort an array that is repeatedly increasing then decreasing.
+
+[🔼 back to toc](#table-of-contents)
 
 ### Linked list
 
@@ -456,6 +469,8 @@ iterator(), listIterator()
 - Two linked lists overlap (OverlappingNoCycleList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists without cycle overlap.
 - Two linked lists with cycles overlap (OverlappingCycleList) [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists with cycle overlap.
 
+[🔼 back to toc](#table-of-contents)
+
 ### Queue
 
 **C++ declaration/methods**
@@ -489,6 +504,10 @@ iterator(), descendingIterator()
 var array = deque.toArray(Integer[]::new);  // deque to array
 var list = new ArrayList<>(deque);          // deque to list
 ```
+
+**Examples**
+
+[🔼 back to toc](#table-of-contents)
 
 ### Stack
 
@@ -526,6 +545,8 @@ var list = new ArrayList<>(stack);          // stack to list
 - Pair of bracket (CheckPairOfBracket): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Checks if the input string contains bracket pairs and is well-formed.
 - Print linked list in reverse order (PrintLinkedListInReverseOrder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Print the linked list in reverse order using stack.
 - Max stack element: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Implement stack that caches max value.
+
+[🔼 back to toc](#table-of-contents)
 
 ### Tree
 
@@ -606,6 +627,8 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Trie
 - van Emde Boas tree (vEB tree)
 
+[🔼 back to toc](#table-of-contents)
+
 ## Topics
 
 ### Dynamic programming
@@ -620,6 +643,8 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 - Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 
+[🔼 back to toc](#table-of-contents)
+
 ### Greedy
 
 **Examples**
@@ -628,6 +653,8 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Cashier's change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy)) | Cashier's change problem is that finds the minimum number of coins required to make change for a given amount of money.
 - Huffman code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/greedy)) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
 - Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy)) | Interval scheduling problem is that finds the minimum number of intervals required to schedule a set of activities(lectures).
+
+[🔼 back to toc](#table-of-contents)
 
 ### Mathematics
 
@@ -649,6 +676,8 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Permutation (KthPermutation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math)) | Compute the $k$-th permutation.
 - Simplex algorithm: Simplex algorithm is a mathematical algorithm that finds the optimal solution to a linear programming problem.
 - System of linear equations: System of linear equations is a mathematical algorithm that finds the solution to a system of linear equations.
+
+[🔼 back to toc](#table-of-contents)
 
 ### Primitive type
 
@@ -730,6 +759,8 @@ var randomBoolean = random.nextBoolean(); // true/false
 - Reverse digits: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Reverse the digits of a given integer.
 - Swap bit: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Swap the bits at indices $i$ and $j$.
 
+[🔼 back to toc](#table-of-contents)
+
 ### Search
 
 **C++ declaration/methods**
@@ -784,6 +815,8 @@ Collections.binarySearch(arrayList, 3);   // for list
 - Search a cyclically sorted array for the smallest element (SearchSmallestElementInCyclicallySortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 - Search in a 2D sorted array(matrix) (SearchSortedMatrix): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Search in a 2D sorted array(matrix) for a given element.
 
+[🔼 back to toc](#table-of-contents)
+
 ### Sort
 
 **C++ declaration/methods**
@@ -811,7 +844,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 **Examples**
 
-- Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.
+- Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                             |
 | :---------- | :-----------------: | :-------------------------------------------------------------------------------------- |
@@ -819,7 +852,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       | when the input list is already sorted in the reverse order of the desired sorting order |
 | **Average** |      $O(n^2)$       |                                                                                         |
 
-- Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort). (`n` is the number of elements and `k` is the number of buckets)
+- Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>(`n` is the number of elements and `k` is the number of buckets)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                                    |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------------- |
@@ -827,7 +860,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       | when all elements are placed into a single bucket                                                              |
 | **Average** |       $O(n)$        |                                                                                                                |
 
-- Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort. (`n` is the number of elements and `k` is the range of input values)
+- Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort.<br>(`n` is the number of elements and `k` is the range of input values)
 
 | **Case**    | **Time complexity** | **Remarks**                                          |
 | ----------- | :-----------------: | ---------------------------------------------------- |
@@ -835,7 +868,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |     $O(n + k)$      | when the input elements have a large range of values |
 | **Average** |     $O(n + k)$      |                                                      |
 
-- Heap sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Heap sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -843,7 +876,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | One of the fastest algorithms for sorting very small arrays (around 10 elements).
+- Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                     |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------- |
@@ -874,6 +907,8 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Best**    |      $O(n^2)$       | if the list is already sorted                                                        |
 | **Worst**   |      $O(n^2)$       | when sorted in ascending order, if you want to sort in descending order (vice versa) |
 | **Average** |      $O(n^2)$       |                                                                                      |
+
+[🔼 back to toc](#table-of-contents)
 
 ### String
 
@@ -941,9 +976,13 @@ var str = collection.stream()
 - Run-length encoding (RLE): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
 - Spreadsheet column decoding/encoding (DecodingSheetColumnId/EncodingSheetColumnId): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Convert a spreadsheet column id to integer and vice versa.
 
+[🔼 back to toc](#table-of-contents)
+
 ## References
 
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
 - Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
 - Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash
+
+[🔼 back to toc](#table-of-contents)

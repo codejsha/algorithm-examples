@@ -1,8 +1,8 @@
 # Algorithm Examples
 
-![C++ CI with CMake](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python CI](https://github.com/codejsha/algorithm-examples/actions/workflows/python.yml/badge.svg) ![Java CI with Gradle](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
+![C++ CMake Build](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Build](https://github.com/codejsha/algorithm-examples/actions/workflows/python.yml/badge.svg) ![Java Gradle Build](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
 
-[English](README.md)
+[English](README.md) | [Korean](README_ko-KR.md)
 
 이 리포지토리는 알고리즘, 데이터 구조, 문제 해결에 대한 구현 예제입니다. 예제들은 C++, Python, Java로 작성되었으며, 각 언어는 다음과 같은 테스트 프레임워크를 사용합니다: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). 테스트를 실행하여 알고리즘 로직에 대한 메서드/함수를 수행합니다. 코드를 빌드하고 테스트하는 GitHub Actions 워크플로우는 수동으로 실행됩니다.
 
