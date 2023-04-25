@@ -2,7 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
-    id("java")
+    java
 }
 
 group = "org.example"
@@ -47,12 +47,12 @@ repositories {
 }
 
 dependencies {
+    implementation("com.google.guava:guava:31.1-jre")
+    implementation("org.javatuples:javatuples:1.2")
     implementation("org.slf4j:slf4j-api:2.0.5")
     implementation("org.apache.logging.log4j:log4j-api:2.19.0")
     implementation("org.apache.logging.log4j:log4j-core:2.19.0")
     implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0")
-    implementation("com.google.guava:guava:31.1-jre")
-    implementation("org.javatuples:javatuples:1.2")
     compileOnly("org.projectlombok:lombok:1.18.24")
     annotationProcessor("org.projectlombok:lombok:1.18.24")
     annotationProcessor("org.openjdk.jmh:jmh-generator-annprocess:1.35")
@@ -75,14 +75,12 @@ tasks.withType<JavaCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-
     testLogging {
         events(
             TestLogEvent.FAILED,
             TestLogEvent.PASSED,
             TestLogEvent.SKIPPED
         )
-
         debug {
             events(
                 TestLogEvent.FAILED,
