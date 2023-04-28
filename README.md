@@ -16,27 +16,27 @@ Additionally, each project is configured in the following environments:
 
 - [Table of Contents](#table-of-contents)
 - [Data structures](#data-structures)
-  - [Array :clipboard:](#array-clipboard)
-  - [Graph :chart\_with\_upwards\_trend:](#graph-chart_with_upwards_trend)
-  - [Hash table :key:](#hash-table-key)
-  - [Heap :rocket:](#heap-rocket)
-  - [Linked list :paperclips:](#linked-list-paperclips)
-  - [Queue :walking:](#queue-walking)
-  - [Stack :hamburger:](#stack-hamburger)
-  - [Tree :deciduous\_tree:](#tree-deciduous_tree)
+  - [:clipboard: Array](#clipboard-array)
+  - [:chart\_with\_upwards\_trend: Graph](#chart_with_upwards_trend-graph)
+  - [:key: Hash table](#key-hash-table)
+  - [:rocket: Heap](#rocket-heap)
+  - [:paperclips: Linked list](#paperclips-linked-list)
+  - [:walking: Queue](#walking-queue)
+  - [:hamburger: Stack](#hamburger-stack)
+  - [:deciduous\_tree: Tree](#deciduous_tree-tree)
 - [Topics](#topics)
-  - [Dynamic programming :jigsaw:](#dynamic-programming-jigsaw)
-  - [Greedy :clock9:](#greedy-clock9)
-  - [Mathematics :triangular\_ruler:](#mathematics-triangular_ruler)
-  - [Primitive type :1234:](#primitive-type-1234)
-  - [Search :mag:](#search-mag)
-  - [Sort :abc:](#sort-abc)
-  - [String :page\_facing\_up:](#string-page_facing_up)
+  - [:jigsaw: Dynamic programming](#jigsaw-dynamic-programming)
+  - [:clock9: Greedy](#clock9-greedy)
+  - [:triangular\_ruler: Mathematics](#triangular_ruler-mathematics)
+  - [:1234: Primitive type](#1234-primitive-type)
+  - [:mag: Search](#mag-search)
+  - [:abc: Sort](#abc-sort)
+  - [:page\_facing\_up: String](#page_facing_up-string)
 - [References](#references)
 
 ## Data structures
 
-### Array :clipboard:
+### :clipboard: Array
 
 **C++ declaration/methods**
 
@@ -146,7 +146,7 @@ Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to st
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Graph :chart_with_upwards_trend:
+### :chart_with_upwards_trend: Graph
 
 - Shortest path algorithm
   - Single-source: Bellman-Ford algorithm, Dijkstra's algorithm
@@ -319,7 +319,7 @@ algorithm Prim(G, root):
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Hash table :key:
+### :key: Hash table
 
 **C++ declaration/methods**
 
@@ -383,7 +383,7 @@ Collections.unmodifiableSortedSet(set);
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Heap :rocket:
+### :rocket: Heap
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
 
@@ -422,7 +422,7 @@ contains(1), clear(), iterator()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Linked list :paperclips:
+### :paperclips: Linked list
 
 In Python, there is no built-in type or library for LinkedList.
 
@@ -471,7 +471,7 @@ iterator(), listIterator()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Queue :walking:
+### :walking: Queue
 
 **C++ declaration/methods**
 
@@ -509,7 +509,7 @@ var list = new ArrayList<>(deque);          // deque to list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Stack :hamburger:
+### :hamburger: Stack
 
 **C++ declaration/methods**
 
@@ -548,7 +548,7 @@ var list = new ArrayList<>(stack);          // stack to list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Tree :deciduous_tree:
+### :deciduous_tree: Tree
 
 The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
 
@@ -631,7 +631,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 ## Topics
 
-### Dynamic programming :jigsaw:
+### :jigsaw: Dynamic programming
 
 **Examples**
 
@@ -645,7 +645,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Greedy :clock9:
+### :clock9: Greedy
 
 **Examples**
 
@@ -656,7 +656,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Mathematics :triangular_ruler:
+### :triangular_ruler: Mathematics
 
 **Examples**
 
@@ -679,7 +679,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Primitive type :1234:
+### :1234: Primitive type
 
 **C++ declaration/methods**
 
@@ -761,7 +761,7 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Search :mag:
+### :mag: Search
 
 **C++ declaration/methods**
 
@@ -817,7 +817,7 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### Sort :abc:
+### :abc: Sort
 
 **C++ declaration/methods**
 
@@ -910,7 +910,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### String :page_facing_up:
+### :page_facing_up: String
 
 **C++ declaration/methods**
 
