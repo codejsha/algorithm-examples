@@ -16,27 +16,27 @@ Additionally, each project is configured in the following environments:
 
 - [Table of Contents](#table-of-contents)
 - [Data structures](#data-structures)
-  - [Array](#array)
-  - [Graph](#graph)
-  - [Hash table](#hash-table)
-  - [Heap](#heap)
-  - [Linked list](#linked-list)
-  - [Queue](#queue)
-  - [Stack](#stack)
-  - [Tree](#tree)
+  - [Array :clipboard:](#array-clipboard)
+  - [Graph :chart\_with\_upwards\_trend:](#graph-chart_with_upwards_trend)
+  - [Hash table :key:](#hash-table-key)
+  - [Heap :rocket:](#heap-rocket)
+  - [Linked list :paperclips:](#linked-list-paperclips)
+  - [Queue :walking:](#queue-walking)
+  - [Stack :hamburger:](#stack-hamburger)
+  - [Tree :deciduous\_tree:](#tree-deciduous_tree)
 - [Topics](#topics)
-  - [Dynamic programming](#dynamic-programming)
-  - [Greedy](#greedy)
-  - [Mathematics](#mathematics)
-  - [Primitive type](#primitive-type)
-  - [Search](#search)
-  - [Sort](#sort)
-  - [String](#string)
+  - [Dynamic programming :jigsaw:](#dynamic-programming-jigsaw)
+  - [Greedy :clock9:](#greedy-clock9)
+  - [Mathematics :triangular\_ruler:](#mathematics-triangular_ruler)
+  - [Primitive type :1234:](#primitive-type-1234)
+  - [Search :mag:](#search-mag)
+  - [Sort :abc:](#sort-abc)
+  - [String :page\_facing\_up:](#string-page_facing_up)
 - [References](#references)
 
 ## Data structures
 
-### Array
+### Array :clipboard:
 
 **C++ declaration/methods**
 
@@ -144,9 +144,9 @@ Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to st
 - Stock trading - buy and sell a stock once (BuyAndSellStockOnceBruteForce, BuyAndSellStockOnce): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
 - Stock trading - buy and sell a stock twice (BuyAndSellStockTwice): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Graph
+### Graph :chart_with_upwards_trend:
 
 - Shortest path algorithm
   - Single-source: Bellman-Ford algorithm, Dijkstra's algorithm
@@ -317,9 +317,9 @@ algorithm Prim(G, root):
 - Push-relabel algorithm
 - Viterbi algorithm: A shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Hash table
+### Hash table :key:
 
 **C++ declaration/methods**
 
@@ -381,9 +381,9 @@ Collections.unmodifiableSortedSet(set);
 - Optimized lowest common ancestor (FindOptimizedLowestCommonAncestor): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
 - Palindromic permutation (IsPalindromePermutation): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Heap
+### Heap :rocket:
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
 
@@ -420,9 +420,9 @@ contains(1), clear(), iterator()
 - Merge sorted arrays (MergeSortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Merge k sorted arrays into one heap.
 - Sort an increasing-decreasing array (SortIncreasingDecreasingArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Sort an array that is repeatedly increasing then decreasing.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Linked list
+### Linked list :paperclips:
 
 In Python, there is no built-in type or library for LinkedList.
 
@@ -469,9 +469,9 @@ iterator(), listIterator()
 - Two linked lists overlap (OverlappingNoCycleList): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists without cycle overlap.
 - Two linked lists with cycles overlap (OverlappingCycleList) [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists with cycle overlap.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Queue
+### Queue :walking:
 
 **C++ declaration/methods**
 
@@ -507,9 +507,9 @@ var list = new ArrayList<>(deque);          // deque to list
 
 **Examples**
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Stack
+### Stack :hamburger:
 
 **C++ declaration/methods**
 
@@ -546,9 +546,9 @@ var list = new ArrayList<>(stack);          // stack to list
 - Print linked list in reverse order (PrintLinkedListInReverseOrder): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Print the linked list in reverse order using stack.
 - Max stack element: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Implement stack that caches max value.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Tree
+### Tree :deciduous_tree:
 
 The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
 
@@ -627,11 +627,11 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Trie
 - van Emde Boas tree (vEB tree)
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
 ## Topics
 
-### Dynamic programming
+### Dynamic programming :jigsaw:
 
 **Examples**
 
@@ -643,9 +643,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
 - Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Greedy
+### Greedy :clock9:
 
 **Examples**
 
@@ -654,9 +654,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Huffman code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/greedy)) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
 - Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy)) | Interval scheduling problem is that finds the minimum number of intervals required to schedule a set of activities(lectures).
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Mathematics
+### Mathematics :triangular_ruler:
 
 **Examples**
 
@@ -677,9 +677,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Simplex algorithm: Simplex algorithm is a mathematical algorithm that finds the optimal solution to a linear programming problem.
 - System of linear equations: System of linear equations is a mathematical algorithm that finds the solution to a system of linear equations.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Primitive type
+### Primitive type :1234:
 
 **C++ declaration/methods**
 
@@ -759,9 +759,9 @@ var randomBoolean = random.nextBoolean(); // true/false
 - Reverse digits: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Reverse the digits of a given integer.
 - Swap bit: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Swap the bits at indices $i$ and $j$.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Search
+### Search :mag:
 
 **C++ declaration/methods**
 
@@ -815,9 +815,9 @@ Collections.binarySearch(arrayList, 3);   // for list
 - Search a cyclically sorted array for the smallest element (SearchSmallestElementInCyclicallySortedArray): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
 - Search in a 2D sorted array(matrix) (SearchSortedMatrix): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Search in a 2D sorted array(matrix) for a given element.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### Sort
+### Sort :abc:
 
 **C++ declaration/methods**
 
@@ -908,9 +908,9 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       | when sorted in ascending order, if you want to sort in descending order (vice versa) |
 | **Average** |      $O(n^2)$       |                                                                                      |
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
-### String
+### String :page_facing_up:
 
 **C++ declaration/methods**
 
@@ -976,7 +976,7 @@ var str = collection.stream()
 - Run-length encoding (RLE): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
 - Spreadsheet column decoding/encoding (DecodingSheetColumnId/EncodingSheetColumnId): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Convert a spreadsheet column id to integer and vice versa.
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
 
 ## References
 
@@ -985,4 +985,4 @@ var str = collection.stream()
 - Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
 - Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash
 
-[🔼 back to toc](#table-of-contents)
+[:arrow_up_small: back to toc](#table-of-contents)
