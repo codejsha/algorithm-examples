@@ -16,7 +16,7 @@ Additionally, each project is configured in the following environments:
 
 - [Table of Contents](#table-of-contents)
 - [Data structures](#data-structures)
-  - [:clipboard: Array](#clipboard-array)
+  - [:train: Array](#train-array)
   - [:chart\_with\_upwards\_trend: Graph](#chart_with_upwards_trend-graph)
   - [:key: Hash table](#key-hash-table)
   - [:rocket: Heap](#rocket-heap)
@@ -36,7 +36,7 @@ Additionally, each project is configured in the following environments:
 
 ## Data structures
 
-### :clipboard: Array
+### :train: Array
 
 **C++ declaration/methods**
 
