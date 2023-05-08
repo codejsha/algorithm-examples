@@ -1,4 +1,4 @@
-﻿{
+{
     "version": 3,
     "configurePresets": [
         {
@@ -59,14 +59,16 @@
             }
         },
         {
-            "name": "linux-debug",
-            "displayName": "Linux Debug",
+            "name": "linux-base",
+            "hidden": true,
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "installDir": "${sourceDir}/out/install/${presetName}",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            },
+              "CMAKE_C_COMPILER": "gcc-10",
+              "CMAKE_CXX_COMPILER": "g++-10",
+              "CMAKE_MAKE_PROGRAM": "/usr/bin/ninja"
+          },
             "condition": {
                 "type": "equals",
                 "lhs": "${hostSystemName}",
@@ -76,6 +78,23 @@
                 "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
                     "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"
                 }
+            },
+            "toolchainFile": "/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        },
+        {
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "inherits": "linux-base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "linux-release",
+            "displayName": "Linux Release",
+            "inherits": "linux-base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
             }
         },
         {
