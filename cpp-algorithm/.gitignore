@@ -128,7 +128,9 @@ fabric.properties
 /.idea/
 /.vs/
 /.vscode/
-/cmake-build-debug/
-/cmake-build-release/
 /out/
+/cmake-build-debug/
+/cmake-build-debug-visual-studio/
+/cmake-build-release/
+/cmake-build-release-visual-studio/
 /Folder.DotSettings.user
