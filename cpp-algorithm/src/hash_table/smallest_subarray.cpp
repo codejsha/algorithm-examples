@@ -1,5 +1,6 @@
 #include "smallest_subarray.h"
 
+#include <limits>
 #include <unordered_map>
 
 auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(

@@ -1,6 +1,7 @@
 #include "rod_cutting.h"
 
 #include <algorithm>
+#include <limits>
 
 auto RodCutting::CutRod(const std::map<int, int>& price, const int length) -> int
 {

@@ -1,5 +1,6 @@
 #include "nearest_repeated_entry.h"
 
+#include <limits>
 #include <unordered_map>
 
 auto NearestRepeatedEntry::FindNearestRepeatedEntry(const std::vector<std::string>& paragraph) -> int

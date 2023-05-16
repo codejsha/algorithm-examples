@@ -1,5 +1,7 @@
 #include "trade_stock.h"
 
+#include <limits>
+
 auto TradeStock::BuyAndSellStockOnceBruteForce(const std::vector<int>& prices) -> double
 {
     auto max_profit = 0.0;
