@@ -127,24 +127,24 @@ Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to st
 
 **Examples**
 
-- Advancing through an array: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Advance through the array to the last index.
-- Arbitrary precision operation - increment an arbitrary-precision integer (`PlusOne`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Add one to the number represented by the vector.
-- Arbitrary precision operation - add two arbitrary-precision integers (`StringAddition`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Add two numbers represented by strings.
-- Arbitrary precision operation - multiply two arbitrary-precision integers (`Multiply`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Multiply two numbers represented by vectors.
-- Delete duplicates from a sorted array (`DeleteDuplicates`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Delete duplicate elements in the array.
-- Delete duplicates from a sorted array (`DeleteDuplicateElements`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Delete duplicate elements in the array.
-- Delete specific elements from a sorted array (`DeleteSpecificElements`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Delete specific elements in the array.
+- Advancing through an array: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Advance through the array to the last index.
+- Arbitrary precision operation - increment an arbitrary-precision integer (`PlusOne`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Add one to the number represented by the vector.
+- Arbitrary precision operation - add two arbitrary-precision integers (`StringAddition`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Add two numbers represented by strings.
+- Arbitrary precision operation - multiply two arbitrary-precision integers (`Multiply`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Multiply two numbers represented by vectors.
+- Delete duplicates from a sorted array (`DeleteDuplicates`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Delete duplicate elements in the array.
+- Delete duplicates from a sorted array (`DeleteDuplicateElements`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Delete duplicate elements in the array.
+- Delete specific elements from a sorted array (`DeleteSpecificElements`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Delete specific elements in the array.
 - Dutch national flags problem: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)
-- Enumerate prime numbers: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Enumerate prime numbers in the range.
+- Enumerate prime numbers: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Enumerate prime numbers in the range.
 - Order elements in an array by even and odd (`EvenOdd`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Order even and odd numbers in the array.
 - Order elements in an array by specified order (`Rearrange`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Rearrange arrays to have a specific order.
-- Random data sampling - offline (`OfflineRandomSampling`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Randomly select k elements from the array.
-- Random data sampling - compute permutation (`ComputeRandomPermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Compute permutation of the array generated by random sampling.
-- Replace elements - replace and remove (`ReplaceAndRemoveString1`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Replace element and remove element in the array. Keep the array size.
-- Replace elements - replace and remove (`ReplaceAndRemoveString2`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Replace element and remove element in the array
-- Replace elements - telex encoding (`TelexEncoding`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array)) | Telex encoding for punctuation marks.
-- Stock trading - buy and sell a stock once (`BuyAndSellStockOnceBruteForce`, `BuyAndSellStockOnce`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
-- Stock trading - buy and sell a stock twice (`BuyAndSellStockTwice`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/array))
+- Random data sampling - offline (`OfflineRandomSampling`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Randomly select k elements from the array.
+- Random data sampling - compute permutation (`ComputeRandomPermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Compute permutation of the array generated by random sampling.
+- Replace elements - replace and remove (`ReplaceAndRemoveString1`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Replace element and remove element in the array. Keep the array size.
+- Replace elements - replace and remove (`ReplaceAndRemoveString2`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Replace element and remove element in the array
+- Replace elements - telex encoding (`TelexEncoding`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array) | Telex encoding for punctuation marks.
+- Stock trading - buy and sell a stock once (`BuyAndSellStockOnceBruteForce`, `BuyAndSellStockOnce`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)
+- Stock trading - buy and sell a stock twice (`BuyAndSellStockTwice`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/array)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -160,7 +160,7 @@ Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to st
 **Examples**
 
 - A\* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
-- Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+- Bellman-Ford algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
 ```txt
 algorithm BellmanFord(G, source):
@@ -183,7 +183,7 @@ algorithm BellmanFord(G, source):
     return true
 ```
 
-- Breadth-first search (BFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
+- Breadth-first search (BFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
 
 ```txt
 algorithm BFS(G, source):
@@ -208,7 +208,7 @@ algorithm BFS(G, source):
         u.color = BLACK
 ```
 
-- Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
+- Depth-first search (DFS): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
 
 ```txt
 algorithm DFS(G):
@@ -233,7 +233,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/graph)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A single source shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
+- Dijkstra's algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/graph), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph) | A single source shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -297,9 +297,9 @@ algorithm Kruskal(G, w):
     return Set
 ```
 
-- Maze problem: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
+- Maze problem: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
 - Maximum bipartite matching
-- Prim's algorithm: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/graph)) | A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
+- Prim's algorithm: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/graph) | A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
 
 ```txt
 algorithm Prim(G, root):
@@ -372,16 +372,16 @@ Collections.unmodifiableSortedSet(set);
 
 **Examples**
 
-- Anonymous letter constructible (`IsLetterConstructibleFromMagazine`), EPI-12.2: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the characters in a magazine.
-- Anonymous words constructible (`IsWordConstructibleFromMagazine`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the words in a magazine.
-- Collatz conjecture (`FindNumbersSatisfyingCollatzConjecture`), EPI-12.11: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the numbers satisfying the Collatz conjecture.
-- Find anagrams (`FindAnagramMappings`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given an array of strings, group anagrams together.
-- Find smallest subarray covering all values (`FindSmallestSubarrayCoveringSubset`), EPI-12.6: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the smallest subarray that covers all the elements in a set.
-- Find smallest subarray sequentially covering all values (`FindSmallestSubarraySequentiallyCoveringSubset`), EPI-12.7: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the smallest subarray that sequentially covers all the elements in a set.
-- ISBN cache, EPI-12.3: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Implement a LRU cache for ISBN lookups.
-- Nearest repeated entry (`FindNearestRepeatedEntry`), EPI-12.5: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the nearest repeated entry in an array of strings.
-- Optimized lowest common ancestor (`FindOptimizedLowestCommonAncestor`), EPI-12.4: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
-- Palindromic permutation (`IsPalindromePermutation`), EPI-12.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
+- Anonymous letter constructible (`IsLetterConstructibleFromMagazine`), EPI#12.2: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Check if a letter can be written using the characters in a magazine.
+- Anonymous words constructible (`IsWordConstructibleFromMagazine`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Check if a letter can be written using the words in a magazine.
+- Collatz conjecture (`FindNumbersSatisfyingCollatzConjecture`), EPI#12.11: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Find the numbers satisfying the Collatz conjecture.
+- Find anagrams (`FindAnagramMappings`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Given an array of strings, group anagrams together.
+- Find smallest subarray covering all values (`FindSmallestSubarrayCoveringSubset`), EPI#12.6: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Find the smallest subarray that covers all the elements in a set.
+- Find smallest subarray sequentially covering all values (`FindSmallestSubarraySequentiallyCoveringSubset`), EPI#12.7: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Find the smallest subarray that sequentially covers all the elements in a set.
+- ISBN cache, EPI#12.3: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Implement a LRU cache for ISBN lookups.
+- Nearest repeated entry (`FindNearestRepeatedEntry`), EPI#12.5: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Find the nearest repeated entry in an array of strings.
+- Optimized lowest common ancestor (`FindOptimizedLowestCommonAncestor`), EPI#12.4: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
+- Palindromic permutation (`IsPalindromePermutation`), EPI#12.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table) | Given a string, determine if a permutation of the string could form a palindrome.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -416,11 +416,11 @@ contains(1), clear(), iterator()
 
 **Examples**
 
-- Compute the k closest stars (`FindClosestStar`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Find the $k$ closest stars to the earth. The stars are represented by a sequence of points(coordinates).
-- Compute the median of a sequence of numbers (`FindMedian`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Find the median of a sequence of numbers. The median is the number separating the higher half of a data sample from the lower half.
+- Compute the k closest stars (`FindClosestStar`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap) | Find the $k$ closest stars to the earth. The stars are represented by a sequence of points(coordinates).
+- Compute the median of a sequence of numbers (`FindMedian`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap) | Find the median of a sequence of numbers. The median is the number separating the higher half of a data sample from the lower half.
 - Fibonacci heap
-- Merge sorted arrays (`MergeSortedArray`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Merge k sorted arrays into one heap.
-- Sort an increasing-decreasing array (`SortIncreasingDecreasingArray`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/heap)) | Sort an array that is repeatedly increasing then decreasing.
+- Merge sorted arrays (`MergeSortedArray`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap) | Merge k sorted arrays into one heap.
+- Sort an increasing-decreasing array (`SortIncreasingDecreasingArray`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/heap) | Sort an array that is repeatedly increasing then decreasing.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -457,19 +457,19 @@ iterator(), listIterator()
 
 **Examples**
 
-- Add list-based integers (`AddTwoNumbers`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Add two numbers represented by linked list.
-- Delete a node from linked list (`DeleteNodeFromList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Delete a node from a linked list.
-- Delete duplicate nodes from sorted linked list (`DeleteDuplicateNode`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Delete duplicate nodes from a sorted linked list.
-- Delete the k-th last node from linked list (`DeleteNodeKthLast`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Delete the $k$-th last node from a linked list.
-- Implement cyclic right shift for a singly linked list (`CyclicallyRightShiftList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Implement cyclic right shift for a singly linked list.
-- Linked list has a cycle (`HasCycle1`, `HasCycle2`, `HasCycle3`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that a linked list has a cycle.
-- List pivoting (`ListPivoting`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Rearrange nodes smaller than pivot to the left and larger than pivot to the right.
-- Merge even and odd nodes in linked list (`MergeEvenOddLinkedList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Merge even and odd nodes in a singly linked list.
-- Merge two sorted linked lists: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
-- Palindrome list (`IsListPalindrome`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that a linked list is a palindrome.
-- Reverse a single sublist: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Reverse a single sublist of a linked list.
-- Two linked lists overlap (`OverlappingNoCycleList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists without cycle overlap.
-- Two linked lists with cycles overlap (`OverlappingCycleList`) [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/linked_list)) | Determine that two linked lists with cycle overlap.
+- Add list-based integers (`AddTwoNumbers`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Add two numbers represented by linked list.
+- Delete a node from linked list (`DeleteNodeFromList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Delete a node from a linked list.
+- Delete duplicate nodes from sorted linked list (`DeleteDuplicateNode`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Delete duplicate nodes from a sorted linked list.
+- Delete the k-th last node from linked list (`DeleteNodeKthLast`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Delete the $k$-th last node from a linked list.
+- Implement cyclic right shift for a singly linked list (`CyclicallyRightShiftList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Implement cyclic right shift for a singly linked list.
+- Linked list has a cycle (`HasCycle1`, `HasCycle2`, `HasCycle3`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Determine that a linked list has a cycle.
+- List pivoting (`ListPivoting`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Rearrange nodes smaller than pivot to the left and larger than pivot to the right.
+- Merge even and odd nodes in linked list (`MergeEvenOddLinkedList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Merge even and odd nodes in a singly linked list.
+- Merge two sorted linked lists: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
+- Palindrome list (`IsListPalindrome`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Determine that a linked list is a palindrome.
+- Reverse a single sublist: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Reverse a single sublist of a linked list.
+- Two linked lists overlap (`OverlappingNoCycleList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Determine that two linked lists without cycle overlap.
+- Two linked lists with cycles overlap (`OverlappingCycleList`) [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/linked_list) | Determine that two linked lists with cycle overlap.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -544,9 +544,9 @@ var list = new ArrayList<>(stack);          // stack to list
 
 **Examples**
 
-- Pair of bracket (`CheckPairOfBracket`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Checks if the input string contains bracket pairs and is well-formed.
-- Print linked list in reverse order (`PrintLinkedListInReverseOrder`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Print the linked list in reverse order using stack.
-- Max stack element: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/stack)) | Implement stack that caches max value.
+- Pair of bracket (`CheckPairOfBracket`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack) | Checks if the input string contains bracket pairs and is well-formed.
+- Print linked list in reverse order (`PrintLinkedListInReverseOrder`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack) | Print the linked list in reverse order using stack.
+- Max stack element: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/stack) | Implement stack that caches max value.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -615,20 +615,20 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 **Examples**
 
 - AVL tree
-- B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
-- Balanced tree status: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is balanced or not.
-- Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
-- Binary tree exterior (`CreateExteriorNodeList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Create a vector of exterior nodes in a binary tree.
-- Construct binary tree from preorder and inorder traversal (`ConstructTreeFromPreorderInorder`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Construct a binary search tree from preorder and inorder traversal. This task has $O(n)$ time complexity.
-- Construct binary tree from preorder with marker (`ConstructTreeFromMarkerPreorder`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Construct a binary search tree from preorder traversal with marker. This task has $O(n)$ time complexity.
-- Leaf node list (`CreateLeafNodeList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Create a vector of leaf nodes in a binary tree.
-- Lowest common ancestor (`FindLowestCommonAncestor`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree.
-- Lowest common ancestor with parent pointer (`FindLowestCommonAncestor2`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
-- Populate right sibling (`PopulateRightSibling`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Populate the right sibling of a binary tree.
+- B-tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
+- Balanced tree status: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Whether the binary tree is balanced or not.
+- Binary search tree: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
+- Binary tree exterior (`CreateExteriorNodeList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Create a vector of exterior nodes in a binary tree.
+- Construct binary tree from preorder and inorder traversal (`ConstructTreeFromPreorderInorder`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Construct a binary search tree from preorder and inorder traversal. This task has $O(n)$ time complexity.
+- Construct binary tree from preorder with marker (`ConstructTreeFromMarkerPreorder`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Construct a binary search tree from preorder traversal with marker. This task has $O(n)$ time complexity.
+- Leaf node list (`CreateLeafNodeList`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Create a vector of leaf nodes in a binary tree.
+- Lowest common ancestor (`FindLowestCommonAncestor`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Find the lowest common ancestor of two nodes in a binary tree.
+- Lowest common ancestor with parent pointer (`FindLowestCommonAncestor2`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
+- Populate right sibling (`PopulateRightSibling`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Populate the right sibling of a binary tree.
 - Red-black search tree
-- Root to leaf path corresponding to the given sum (`HasKeySum`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the tree has a root-leaf path equal to the given sum.
-- Sum of root to leaf (`SumRootToLeafDecimal`, `SumRootToLeafBinary`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
-- Tree symmetric: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/tree)) | Whether the binary tree is symmetric or not.
+- Root to leaf path corresponding to the given sum (`HasKeySum`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Whether the tree has a root-leaf path equal to the given sum.
+- Sum of root to leaf (`SumRootToLeafDecimal`, `SumRootToLeafBinary`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
+- Tree symmetric: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/tree) | Whether the binary tree is symmetric or not.
 - Trie
 - van Emde Boas tree (vEB tree)
 
@@ -640,13 +640,13 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 **Examples**
 
-- Fibonacci number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
+- Fibonacci number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
   - $F_0 = 0$
   - $F_1 = 1$
   - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
-- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/problem_solving)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/problem_solving))
-- Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming))
-- Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/dynamic_programming)) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
+- Interval subset sum: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)
+- Longest common subsequence: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming)
+- Rod cutting: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/dynamic_programming) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -654,10 +654,10 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 **Examples**
 
-- Activity selection: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/greedy)) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
-- Cashier's change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy)) | Cashier's change problem is that finds the minimum number of coins required to make change for a given amount of money.
-- Huffman code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/greedy)) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
-- Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/greedy)) | Interval scheduling problem is that finds the minimum number of intervals required to schedule a set of activities(lectures).
+- Activity selection: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
+- Cashier's change: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy) | Cashier's change problem is that finds the minimum number of coins required to make change for a given amount of money.
+- Huffman code: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/greedy) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
+- Interval scheduling: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/greedy) | Interval scheduling problem is that finds the minimum number of intervals required to schedule a set of activities(lectures).
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -665,20 +665,20 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 **Examples**
 
-- Base expansion (base $b$ expansion of $n$): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math)) | Constructing the base $b$ expansion of an integer $n$. Such as binary, octal, decimal, hexadecimal expansion, etc.
-- Binary operation (`addition`): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math))
-- Combination: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math)) | Find the number of ways to choose $k$ items from $n$ items.
+- Base expansion (base $b$ expansion of $n$): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math) | Constructing the base $b$ expansion of an integer $n$. Such as binary, octal, decimal, hexadecimal expansion, etc.
+- Binary operation (`addition`): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)
+- Combination: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math)) | Find the greatest common divisor of two numbers.
+- Greatest common divisor (GCD): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math) | Find the greatest common divisor of two numbers.
 - Inverse of matrix: Inverse of matrix is a mathematical algorithm that finds the inverse of a matrix.
-- Least common multiple (LCM): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math)) | Find the least common multiple of two numbers.
-- Matrix multiplication: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/math)) | This is the product of two matrices.
-- Miller-Rabin primality test: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math)) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
-- Permutation (`Permutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math)) | Find the permutation of a set of items.
-- Permutation (`ApplyPermutationWithAdditionalSpace`, `ApplyPermutationBySwap`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math)) | Permute the elements of an array
-- Permutation (`InversePermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math))
-- Permutation (`NextPermutation`/`PreviousPermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math)) | Compute the next/previous permutation.
-- Permutation (`KthPermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/math)) | Compute the $k$-th permutation.
+- Least common multiple (LCM): [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math) | Find the least common multiple of two numbers.
+- Matrix multiplication: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/math) | This is the product of two matrices.
+- Miller-Rabin primality test: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
+- Permutation (`Permutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math) | Find the permutation of a set of items.
+- Permutation (`ApplyPermutationWithAdditionalSpace`, `ApplyPermutationBySwap`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math) | Permute the elements of an array
+- Permutation (`InversePermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math)
+- Permutation (`NextPermutation`/`PreviousPermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math) | Compute the next/previous permutation.
+- Permutation (`KthPermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/math) | Compute the $k$-th permutation.
 - Simplex algorithm: Simplex algorithm is a mathematical algorithm that finds the optimal solution to a linear programming problem.
 - System of linear equations: System of linear equations is a mathematical algorithm that finds the solution to a system of linear equations.
 
@@ -752,17 +752,17 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 **Examples**
 
-- Arithmetic operation (`Multiply`/`Divide`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Calculate the product/fraction of two numbers without using arithmetic operators.
-- Computing parity of word (`CountBits`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Count the number of bits that are set to 1.
-- Computing parity of word (`Parity`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute parity of word.
-- Computing parity of word (`ParityDropLowestBits`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute parity by dropping the lowest set bit.
-- Computing parity of word (`ParityLookupTable`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute parity by caching the results.
+- Arithmetic operation (`Multiply`/`Divide`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Calculate the product/fraction of two numbers without using arithmetic operators.
+- Computing parity of word (`CountBits`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Count the number of bits that are set to 1.
+- Computing parity of word (`Parity`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Compute parity of word.
+- Computing parity of word (`ParityDropLowestBits`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Compute parity by dropping the lowest set bit.
+- Computing parity of word (`ParityLookupTable`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Compute parity by caching the results.
 - Generate random number: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Generate a random number in a range with equal probability.
 - Integer palindrome: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Check if a number is a palindrome.
-- Power operation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Compute repeated squaring $x^y$.
-- Rectangle intersection: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Check if two rectangles intersect.
+- Power operation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Compute repeated squaring $x^y$.
+- Rectangle intersection: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Check if two rectangles intersect.
 - Reverse digits: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Reverse the digits of a given integer.
-- Swap bit: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/primitive_type)) | Swap the bits at indices $i$ and $j$.
+- Swap bit: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/primitive_type) | Swap the bits at indices $i$ and $j$.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -809,16 +809,16 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 **Examples**
 
-- Binary search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
-- Find k-th smallest/largest element in an array (`FindKthSmallestElement`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Find the k-th smallest/largest element in an array using the quickselect algorithm.
-- Find the minimum and maximum elements in an array (`FindMinMax`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
-- Integer square root (`ComputeIntegerSquareRoot`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
-- Linear search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/search)) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
-- Search a sorted array for entry equal to its index (`SearchEntryEqualToItsIndex`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
-- Search a sorted array for the first greater than a key (`SearchFirstGreaterThanKey`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
-- Search a sorted array for the first occurrence of a key (`SearchFirstOfKey`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
-- Search a cyclically sorted array for the smallest element (`SearchSmallestElementInCyclicallySortedArray`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search))
-- Search in a 2D sorted array(matrix) (`SearchSortedMatrix`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/search)) | Search in a 2D sorted array(matrix) for a given element.
+- Binary search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
+- Find k-th smallest/largest element in an array (`FindKthSmallestElement`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Find the k-th smallest/largest element in an array using the quickselect algorithm.
+- Find the minimum and maximum elements in an array (`FindMinMax`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Integer square root (`ComputeIntegerSquareRoot`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
+- Linear search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
+- Search a sorted array for entry equal to its index (`SearchEntryEqualToItsIndex`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Search a sorted array for the first greater than a key (`SearchFirstGreaterThanKey`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Search a sorted array for the first occurrence of a key (`SearchFirstOfKey`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Search a cyclically sorted array for the smallest element (`SearchSmallestElementInCyclicallySortedArray`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Search in a 2D sorted array(matrix) (`SearchSortedMatrix`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Search in a 2D sorted array(matrix) for a given element.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -849,7 +849,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 **Sorting algorithms**
 
-- Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>(`n` is the number of elements)
+- Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                             |
 | :---------- | :-----------------: | :-------------------------------------------------------------------------------------- |
@@ -857,7 +857,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       | when the input list is already sorted in the reverse order of the desired sorting order |
 | **Average** |      $O(n^2)$       |                                                                                         |
 
-- Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>(`n` is the number of elements and `k` is the number of buckets)
+- Bucket sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>(`n` is the number of elements and `k` is the number of buckets)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                                    |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------------- |
@@ -865,7 +865,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       | when all elements are placed into a single bucket                                                              |
 | **Average** |       $O(n)$        |                                                                                                                |
 
-- Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort.<br>(`n` is the number of elements and `k` is the range of input values)
+- Counting sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort.<br>(`n` is the number of elements and `k` is the range of input values)
 
 | **Case**    | **Time complexity** | **Remarks**                                          |
 | ----------- | :-----------------: | ---------------------------------------------------- |
@@ -873,7 +873,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |     $O(n + k)$      | when the input elements have a large range of values |
 | **Average** |     $O(n + k)$      |                                                      |
 
-- Heap sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>(`n` is the number of elements)
+- Heap sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -881,7 +881,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>(`n` is the number of elements)
+- Insertion sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                     |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------- |
@@ -889,7 +889,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       | if the list is sorted in reverse order.<br>this case has quadratic running time |
 | **Average** |      $O(n^2)$       | this case has quadratic running time                                            |
 
-- Merge sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
+- Merge sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                           |
 | ----------- | :-----------------: | ----------------------------------------------------------------------------------------------------- |
@@ -897,7 +897,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |    $O(n log n)$     |                                                                                                       |
 | **Average** |    $O(n log n)$     |                                                                                                       |
 
-- Quick sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | divide and conquer algorithm
+- Quick sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -905,7 +905,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Selection sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort))
+- Selection sort: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort), [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                          |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------------ |
@@ -915,7 +915,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 **Examples**
 
-- Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI-13.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
+- Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI#13.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :page_facing_up: String
@@ -970,18 +970,18 @@ var str = collection.stream()
 
 **Examples**
 
-- Convert string (`IntToString`, `StringToInt`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Convert integer to string and vice versa.
+- Convert string (`IntToString`, `StringToInt`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Convert integer to string and vice versa.
 - Finite automata
-- IP address validation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Validate IPv4 address that is in the form of `x.x.x.x` where `x` is a number between 0 and 255.
+- IP address validation: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Validate IPv4 address that is in the form of `x.x.x.x` where `x` is a number between 0 and 255.
 - Knuth-Morris-Pratt algorithm (KMP)
-- Look and say problem: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string))
-- Naive string matching: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)), [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/test/string)) | Find all occurrences of a pattern in a string.
-- Palindrome: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Check if a string is palindromic.
-- Print sine wave pattern string (`SineWaveString` and `PrintSineWaveString`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Print a string in sine wave pattern.
-- Rabin-Karp algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
-- Roman number (`VerifyRomanString`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Verify if a string is a valid roman number.
-- Roman number (`RomanStringToInteger`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Convert a roman number to integer.
-- Run-length encoding (RLE): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/string)) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
+- Look and say problem: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string)
+- Naive string matching: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string), [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/string) | Find all occurrences of a pattern in a string.
+- Palindrome: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Check if a string is palindromic.
+- Print sine wave pattern string (`SineWaveString` and `PrintSineWaveString`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Print a string in sine wave pattern.
+- Rabin-Karp algorithm: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
+- Roman number (`VerifyRomanString`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Verify if a string is a valid roman number.
+- Roman number (`RomanStringToInteger`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Convert a roman number to integer.
+- Run-length encoding (RLE): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
 - Spreadsheet column decoding/encoding (`DecodingSheetColumnId`/`EncodingSheetColumnId`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/string) | Convert a spreadsheet column id to integer and vice versa.
 
 [:arrow_up_small: back to toc](#table-of-contents)

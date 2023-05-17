@@ -79,7 +79,7 @@
                     "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"
                 }
             },
-            "toolchainFile": "/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake"
+            "toolchainFile": "/usr/local/share/vcpkg/scripts/buildsystems/vcpkg.cmake"
         },
         {
             "name": "linux-debug",
