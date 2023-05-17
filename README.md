@@ -913,6 +913,9 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 | **Worst**   |      $O(n^2)$       | when sorted in ascending order, if you want to sort in descending order (vice versa) |
 | **Average** |      $O(n^2)$       |                                                                                      |
 
+**Examples**
+
+- Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI-13.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/sort)) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :page_facing_up: String

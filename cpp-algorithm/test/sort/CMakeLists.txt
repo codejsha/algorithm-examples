@@ -31,4 +31,5 @@ macro(add_target_header_test target)
 endmacro()
 
 add_target_test(insertion_sort_test)
+add_target_test(intersect_two_sorted_array_test)
 add_target_test(selection_sort_test)
