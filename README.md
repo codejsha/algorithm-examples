@@ -916,6 +916,8 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 **Examples**
 
 - Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI#13.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
+- Merge two sorted arrays (`MergeTwoSortedArray`), EPI#13.2, LeetCode#merge-sorted-array: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Merge two sorted array. Merge the second array into the first array.
+
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :page_facing_up: String

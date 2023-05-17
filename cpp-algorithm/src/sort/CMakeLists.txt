@@ -8,4 +8,5 @@ endmacro()
 
 add_library_target(insertion_sort)
 add_library_target(intersect_two_sorted_array)
+add_library_target(merge_two_sorted_array)
 add_library_target(selection_sort)
