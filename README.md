@@ -6,32 +6,36 @@
 
 This repository is an implementation of algorithms, data structures, and problem solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run tests to perform methods/functions on the algorithmic logic. GitHub Actions workflows that build and test code run manually.
 
-Additionally, each project is configured in the following environments:
+## Project Environments
 
-- C++ project: based on [CMake](https://cmake.org/) project and uses [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) packages (package manager [vcpkg](https://github.com/microsoft/vcpkg))
-- Python project: uses [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages
-- Java project: based on [Gradle](https://gradle.org/) project and uses [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) libraries
+Each project is configured in specific environments, as described below:
+
+| **Language** | **Build system**              | **External libraries**                                                                                                                                                                                                | **Package manager**                         |
+| ------------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| C++20        | [CMake](https://cmake.org/)   | [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) | [vcpkg](https://github.com/microsoft/vcpkg) |
+| Python 3.11  |                               | [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/)                                              | [pip](https://pip.pypa.io/en/stable/)       |
+| Java 17      | [Gradle](https://gradle.org/) | [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh)                                                                                                                      | -                                           |
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Data structures](#data-structures)
   - [:train: Array](#train-array)
-  - [:chart\_with\_upwards\_trend: Graph](#chart_with_upwards_trend-graph)
+  - [:chart_with_upwards_trend: Graph](#chart_with_upwards_trend-graph)
   - [:key: Hash table](#key-hash-table)
   - [:rocket: Heap](#rocket-heap)
   - [:paperclips: Linked list](#paperclips-linked-list)
   - [:walking: Queue](#walking-queue)
   - [:hamburger: Stack](#hamburger-stack)
-  - [:deciduous\_tree: Tree](#deciduous_tree-tree)
+  - [:deciduous_tree: Tree](#deciduous_tree-tree)
 - [Topics](#topics)
   - [:jigsaw: Dynamic programming](#jigsaw-dynamic-programming)
   - [:clock9: Greedy](#clock9-greedy)
-  - [:triangular\_ruler: Mathematics](#triangular_ruler-mathematics)
+  - [:triangular_ruler: Mathematics](#triangular_ruler-mathematics)
   - [:1234: Primitive type](#1234-primitive-type)
   - [:mag: Search](#mag-search)
   - [:abc: Sort](#abc-sort)
-  - [:page\_facing\_up: String](#page_facing_up-string)
+  - [:page_facing_up: String](#page_facing_up-string)
 - [References](#references)
 
 ## Data structures
@@ -370,16 +374,16 @@ Collections.unmodifiableSortedSet(set);
 
 **Examples**
 
-- Anonymous letter constructible (`IsLetterConstructibleFromMagazine`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the characters in a magazine.
+- Anonymous letter constructible (`IsLetterConstructibleFromMagazine`), EPI-12.2: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the characters in a magazine.
 - Anonymous words constructible (`IsWordConstructibleFromMagazine`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Check if a letter can be written using the words in a magazine.
-- Collatz conjecture (`FindNumbersSatisfyingCollatzConjecture`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the numbers satisfying the Collatz conjecture.
+- Collatz conjecture (`FindNumbersSatisfyingCollatzConjecture`), EPI-12.11: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the numbers satisfying the Collatz conjecture.
 - Find anagrams (`FindAnagramMappings`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given an array of strings, group anagrams together.
-- Find smallest subarray covering all values (`FindSmallestSubarrayCoveringSubset`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the smallest subarray that covers all the elements in a set.
-- Find smallest subarray sequentially covering all values (`FindSmallestSubarraySequentiallyCoveringSubset`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the smallest subarray that sequentially covers all the elements in a set.
-- ISBN cache: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Implement a LRU cache for ISBN lookups.
-- Nearest repeated entry (`FindNearestRepeatedEntry`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the nearest repeated entry in an array of strings.
-- Optimized lowest common ancestor (`FindOptimizedLowestCommonAncestor`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
-- Palindromic permutation (`IsPalindromePermutation`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
+- Find smallest subarray covering all values (`FindSmallestSubarrayCoveringSubset`), EPI-12.6: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the smallest subarray that covers all the elements in a set.
+- Find smallest subarray sequentially covering all values (`FindSmallestSubarraySequentiallyCoveringSubset`), EPI-12.7: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the smallest subarray that sequentially covers all the elements in a set.
+- ISBN cache, EPI-12.3: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Implement a LRU cache for ISBN lookups.
+- Nearest repeated entry (`FindNearestRepeatedEntry`), EPI-12.5: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the nearest repeated entry in an array of strings.
+- Optimized lowest common ancestor (`FindOptimizedLowestCommonAncestor`), EPI-12.4: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
+- Palindromic permutation (`IsPalindromePermutation`), EPI-12.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/hash_table)([test](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/test/hash_table)) | Given a string, determine if a permutation of the string could form a palindrome.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -573,11 +577,14 @@ sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
 **Java declaration/methods (binary search tree based)**
 
 ```java
+// TreeMap (based on red-black tree)
 var treeMap = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
 firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey("b"), pollFirstEntry(), pollLastEntry(),
 headMap("c"), tailMap("c"), subMap("a", "c"), descendingMap(), descendingKeySet()
+
+// treeSet (based on red-black tree)
 var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator(), descendingIterator(),
 first(), last(), lower(3), higher(3), floor(3), ceiling(3), pollFirst(), pollLast(),
@@ -842,7 +849,7 @@ Arrays.sort(array);     // dual pivot quick sort (primitive types)
 Collections.sort(list); // timsort (insertion sort + merge sort)
 ```
 
-**Examples**
+**Sorting algorithms**
 
 - Bubble sort: [java](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/main/java/com/example/algorithm/sort)([test](https://github.com/codejsha/algorithm-examples/tree/main/java-algorithm/src/test/java/com/example/algorithm/sort)) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>(`n` is the number of elements)
 
