@@ -918,6 +918,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 - H-Index: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Compute the researcher's h-index given a citation count array. The h-index is the largest number `h` such that `h` articles have at least `h` citations each.
 - Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI#13.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
 - Merge two sorted arrays (`MergeTwoSortedArray`), EPI#13.2, LeetCode#merge-sorted-array: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Merge two sorted array. Merge the second array into the first array.
+- Remove first-name duplicates (`EliminateFirstNameDuplicate`), EPI#13.4: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Given an array of names, remove the duplicates of the first name.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
