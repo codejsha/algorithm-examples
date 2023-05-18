@@ -24,9 +24,9 @@ BENCHMARK(BM_ReplaceAndRemoveString2);
 
 static void BM_TelexEncoding(benchmark::State& state)
 {
-    //auto v = std::vector<std::string>{"."};
-    //auto v = std::vector<std::string>{","};
-    //auto v = std::vector<std::string>{"?"};
+    // auto v = std::vector<std::string>{"."};
+    // auto v = std::vector<std::string>{","};
+    // auto v = std::vector<std::string>{"?"};
     auto v = std::vector<std::string>{"!"};
     for (auto _ : state)
     {

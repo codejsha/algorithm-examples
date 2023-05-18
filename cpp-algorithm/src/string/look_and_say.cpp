@@ -7,7 +7,7 @@ auto LookAndSay::LookAndSayProblem(const std::string& input) -> std::string
     {
         auto count = 1;
         while (i + 1 < static_cast<int>(input.size())
-                && input[i] == input[i + 1])
+               && input[i] == input[i + 1])
         {
             ++count;
             ++i;

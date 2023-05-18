@@ -8,7 +8,7 @@
  * Given two sorted arrays, compute their intersection and return the result as a vector.
  * The input arrays may have duplicate entries, but the output should be free of duplicates.
  * @details This function is a brute force solution using two for loops.
- * @param arr1 first number array 
+ * @param arr1 first number array
  * @param arr2 second number array
  * @return number array of intersection
  */

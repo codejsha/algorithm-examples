@@ -10,7 +10,7 @@ namespace TradeStock
     /// @return best profit
     auto BuyAndSellStockOnceBruteForce(const std::vector<int>& prices) -> double;
 
-    /// @brief Buy and sell stock once. 
+    /// @brief Buy and sell stock once.
     /// @param prices prices of stock
     /// @return best profit
     auto BuyAndSellStockOnce(const std::vector<int>& prices) -> double;

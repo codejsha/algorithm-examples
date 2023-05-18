@@ -9,7 +9,7 @@ namespace SheetEncoding
     /// @param column column title
     /// @return number
     auto DecodingSheetColumnId(const std::string& column) -> int;
-    
+
     /// @brief Convert a column number to a corresponding column title.
     /// @param column_id column number
     /// @return column title

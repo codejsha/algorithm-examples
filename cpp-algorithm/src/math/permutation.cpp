@@ -88,7 +88,6 @@ auto Permutation::PreviousPermutation(std::vector<int>& permutation) -> std::vec
     std::reverse(permutation.rbegin(), inversionPoint);
 
     return permutation;
-
 }
 
 auto Permutation::KthPermutation(std::vector<int>& permutation, int k) -> std::vector<int>

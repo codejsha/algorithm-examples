@@ -52,5 +52,5 @@ void Dfs::Graph::AddEdge(Vertex& u, Vertex& v)
 {
     adjacency_list.emplace_back(&u, &v);
     u.neighbors.insert(&v);
-    //v.neighbors.insert(&u);
+    // v.neighbors.insert(&u);
 }

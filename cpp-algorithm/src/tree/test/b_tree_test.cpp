@@ -45,7 +45,7 @@ GTEST_TEST(BTree, Insert)
     //         /      /       |      \        \
     // (a b c d e)  (J K)   (N O)  (R S T U V)  (Y Z)
 
-    tree.Insert(tree.root,'B');
+    tree.Insert(tree.root, 'B');
     auto expected_b = std::vector{'G', 'M', 'P', 'X'};
     auto expected_b0 = std::vector{'A', 'B', 'C', 'D', 'E'};
     auto expected_b1 = std::vector{'J', 'K'};
@@ -90,7 +90,6 @@ GTEST_TEST(BTree, Insert)
     //         /     |     \           /    |    \
     // (A B C D E) (j k l) (N O)   (Q R S) (U V) (Y Z)
 
-
     tree.Insert(tree.root, 'L');
     auto expected_l = std::vector{'P'};
     auto expected_l0 = std::vector{'G', 'M'};
@@ -119,7 +118,6 @@ GTEST_TEST(BTree, Insert)
     //        /    /     \     \             /   |   \
     //       /    /       \     \           /    |    \
     // (a b c) (d e f) (J K L) (N O)   (Q R S) (U V) (Y Z)
-
 
     tree.Insert(tree.root, 'F');
     auto expected_f = std::vector{'P'};
