@@ -399,7 +399,8 @@ insert(42), emplace(42), find(42), end(), erase(42), size(), empty()
 auto result = std::tuple{-1, -1};
 
 // transform
-std::ranges::transform(nums, std::inserter(map, map.end()), [i = 0](auto num) mutable { return std::pair{num, i++}; });
+std::ranges::transform(nums, std::inserter(map, map.end()),
+    [i = 0](auto num) mutable { return std::pair{num, i++}; });
 ```
 
 **Python declaration/functions**
