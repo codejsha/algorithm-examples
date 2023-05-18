@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(FindKthSmallestElement, KthSmallestElementCase1)
+GTEST_TEST(FindKthSmallestElement, Successful1)
 {
     auto array = std::vector{3, 2, 1, 5, 4};
     constexpr auto k = 3;
@@ -11,22 +11,12 @@ GTEST_TEST(FindKthSmallestElement, KthSmallestElementCase1)
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(FindKthSmallestElement, KthSmallestElementCase2)
+GTEST_TEST(FindKthSmallestElement, Successful2)
 {
     auto array = std::vector{7, 4, 6, 3, 9, 1};
     constexpr auto k = 4;
     constexpr auto expected = 6;
     const auto result = QuickSelect::FindKthSmallestElement(array, k);
-    EXPECT_EQ(expected, result);
-}
-
-GTEST_TEST(FindKthSmallestElement, KthLargestElement)
-{
-    auto array = std::vector{7, 4, 6, 3, 9, 1};
-    constexpr auto k = 2;
-    constexpr auto expected = 7;
-    const auto n = static_cast<int>(array.size());
-    const auto result = QuickSelect::FindKthSmallestElement(array, n - k + 1);
     EXPECT_EQ(expected, result);
 }
 
@@ -54,5 +44,24 @@ GTEST_TEST(FindKthSmallestElement, ArrayWithNegativeElements)
     constexpr auto k = 4;
     constexpr auto expected = -4;
     const auto result = QuickSelect::FindKthSmallestElement(array, k);
+    EXPECT_EQ(expected, result);
+}
+
+GTEST_TEST(FindKthSmallestElement, KthLargestElement)
+{
+    auto array = std::vector{7, 4, 6, 3, 9, 1};
+    constexpr auto k = 2;
+    constexpr auto expected = 7;
+    const auto n = static_cast<int>(array.size());
+    const auto result = QuickSelect::FindKthSmallestElement(array, n - k + 1);
+    EXPECT_EQ(expected, result);
+}
+
+GTEST_TEST(FindKthLargestElement, Successful1)
+{
+    auto array = std::vector{7, 4, 6, 3, 9, 1};
+    constexpr auto k = 2;
+    constexpr auto expected = 7;
+    const auto result = QuickSelect::FindKthLargestElement(array, k);
     EXPECT_EQ(expected, result);
 }

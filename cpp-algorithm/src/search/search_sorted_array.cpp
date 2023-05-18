@@ -3,12 +3,12 @@
 auto SearchSortedArray::SearchFirstOfKey(const std::vector<int>& array, const int key) -> int
 {
     auto left = 0;
-    auto right = array.size() - 1;
+    auto right = static_cast<int>(array.size()) - 1;
     auto result = -1;
 
     while (left <= right)
     {
-        auto mid = left + ((right - left) / 2);
+        const auto mid = left + ((right - left) / 2);
         if (array[mid] > key)
         {
             right = mid - 1;
@@ -30,12 +30,12 @@ auto SearchSortedArray::SearchFirstOfKey(const std::vector<int>& array, const in
 auto SearchSortedArray::SearchFirstGreaterThanKey(const std::vector<int>& array, const int key) -> int
 {
     auto left = 0;
-    auto right = array.size() - 1;
+    auto right = static_cast<int>(array.size()) - 1;
     auto result = -1;
 
     while (left <= right)
     {
-        auto mid = left + ((right - left) / 2);
+        const auto mid = left + ((right - left) / 2);
         if (array[mid] > key)
         {
             result = mid;
@@ -53,7 +53,7 @@ auto SearchSortedArray::SearchFirstGreaterThanKey(const std::vector<int>& array,
 auto SearchSortedArray::SearchEntryEqualToItsIndex(const std::vector<int>& array) -> std::vector<int>
 {
     auto left = 0;
-    auto right = array.size() - 1;
+    auto right = static_cast<int>(array.size()) - 1;
     auto result = std::vector<int>{};
 
     while (left <= right)
@@ -79,11 +79,11 @@ auto SearchSortedArray::SearchEntryEqualToItsIndex(const std::vector<int>& array
 auto SearchSortedArray::SearchSmallestElementInCyclicallySortedArray(const std::vector<int>& array) -> int
 {
     auto left = 0;
-    auto right = array.size() - 1;
+    auto right = static_cast<int>(array.size()) - 1;
 
     while (left < right)
     {
-        auto mid = left + ((right - left) / 2);
+        const auto mid = left + ((right - left) / 2);
         if (array[mid] > array[right])
         {
             left = mid + 1;

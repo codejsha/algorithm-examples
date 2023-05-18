@@ -56,3 +56,11 @@ auto QuickSelect::FindKthSmallestElement(std::vector<int>& array, const int k) -
     const auto right = static_cast<int>(array.size()) - 1;
     return QuickSelectAlgorithm(array, left, right, k - 1);
 }
+
+auto QuickSelect::FindKthLargestElement(std::vector<int>& array, int k) -> int
+{
+    constexpr auto left = 0;
+    const auto right = static_cast<int>(array.size()) - 1;
+    k = static_cast<int>(array.size()) - k;
+    return QuickSelectAlgorithm(array, left, right, k);
+}
