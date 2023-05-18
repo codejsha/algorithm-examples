@@ -1,8 +1,9 @@
 #include "intersect_two_sorted_array.h"
 
 #include <algorithm>
+#include <ranges>
 
-std::vector<int> IntersectTwoSortedArrayLoopJoin(const std::vector<int>& arr1, const std::vector<int>& arr2)
+std::vector<int> IntersectTwoSortedArray::IntersectTwoSortedArrayLoopJoin(const std::vector<int>& arr1, const std::vector<int>& arr2)
 {
     std::vector<int> intersection;
     for (auto i = 1; i < static_cast<int>(arr1.size()); ++i)
@@ -15,7 +16,7 @@ std::vector<int> IntersectTwoSortedArrayLoopJoin(const std::vector<int>& arr1, c
     return intersection;
 }
 
-std::vector<int> IntersectTwoSortedArrayLoopJoin2(const std::vector<int>& arr1, const std::vector<int>& arr2)
+std::vector<int> IntersectTwoSortedArray::IntersectTwoSortedArrayLoopJoin2(const std::vector<int>& arr1, const std::vector<int>& arr2)
 {
     std::vector<int> intersection;
     for (auto i = 1; i < static_cast<int>(arr1.size()); ++i)
@@ -28,7 +29,7 @@ std::vector<int> IntersectTwoSortedArrayLoopJoin2(const std::vector<int>& arr1, 
     return intersection;
 }
 
-std::vector<int> IntersectTwoSortedArray(const std::vector<int>& arr1, const std::vector<int>& arr2)
+std::vector<int> IntersectTwoSortedArray::IntersectTwoSortedArray(const std::vector<int>& arr1, const std::vector<int>& arr2)
 {
     std::vector<int> intersection;
     auto i = 0;

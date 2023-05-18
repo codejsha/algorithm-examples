@@ -10,7 +10,7 @@ GTEST_TEST(MergeTwoSortedArray, Successful1)
     const auto n = 4;
     const auto merged = std::vector<int>{3, 5, 7, 11, 13, 17, 19};
 
-    MergeTwoSortedArray(nums1, m, nums2, n);
+    MergeTwoSortedArray::MergeTwoSortedArray(nums1, m, nums2, n);
 
     ASSERT_EQ(static_cast<int>(merged.size()), static_cast<int>(nums1.size()))
         << "Vectors x and y are of unequal length";
@@ -30,7 +30,7 @@ GTEST_TEST(MergeTwoSortedArray, Successful2)
     const auto n = 3;
     const auto merged = std::vector<int>{1, 2, 2, 3, 5, 6};
 
-    MergeTwoSortedArray(nums1, m, nums2, n);
+    MergeTwoSortedArray::MergeTwoSortedArray(nums1, m, nums2, n);
 
     ASSERT_EQ(static_cast<int>(merged.size()), static_cast<int>(nums1.size()))
         << "Vectors x and y are of unequal length";
