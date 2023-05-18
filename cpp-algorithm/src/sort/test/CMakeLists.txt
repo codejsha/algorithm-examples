@@ -30,6 +30,7 @@ macro(add_target_header_test target)
     gtest_discover_tests(${target})
 endmacro()
 
+add_target_test(h_index_test)
 add_target_test(insertion_sort_test)
 add_target_test(intersect_two_sorted_array_test)
 add_target_test(merge_two_sorted_array_test)

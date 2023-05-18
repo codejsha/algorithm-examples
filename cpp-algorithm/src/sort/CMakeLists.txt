@@ -6,6 +6,7 @@ macro(add_library_target target)
     set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
 endmacro()
 
+add_library_target(h_index)
 add_library_target(insertion_sort)
 add_library_target(intersect_two_sorted_array)
 add_library_target(merge_two_sorted_array)
