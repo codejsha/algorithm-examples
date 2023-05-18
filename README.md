@@ -156,7 +156,7 @@ Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to st
 - Minimum spanning tree algorithm: Kruskal's algorithm, Prim's algorithm
 - Maximum flow algorithm: Edmonds-Karp algorithm, Ford-Fulkerson algorithm, Push-relabel algorithm, Maximum bipartite matching
 
-**Examples**
+**Graph algorithms**
 
 - A\* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
 - Bellman-Ford algorithm: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
@@ -341,7 +341,6 @@ algorithm Kruskal(G, w):
     return Set
 ```
 
-- Maze problem: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
 - Maximum bipartite matching
 - Prim's algorithm: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
 
@@ -379,6 +378,10 @@ algorithm PushRelabel(G):
 ```
 
 - Viterbi algorithm: A shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
+
+**Examples**
+
+- Maze problem: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -640,7 +643,7 @@ sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
 var treeMap = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
-firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey("b"), pollFirstEntry(), pollLastEntry(),
+firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey("b"),pollFirstEntry(), pollLastEntry(),
 headMap("c"), tailMap("c"), subMap("a", "c"), descendingMap(), descendingKeySet()
 
 // treeSet (based on red-black tree)
