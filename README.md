@@ -16,29 +16,28 @@ Each project is configured in specific environments, as described below:
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Data structures](#data-structures)
-  - [:train: Array](#train-array)
-  - [:chart_with_upwards_trend: Graph](#chart_with_upwards_trend-graph)
-  - [:key: Hash table](#key-hash-table)
-  - [:rocket: Heap](#rocket-heap)
-  - [:paperclips: Linked list](#paperclips-linked-list)
-  - [:walking: Queue](#walking-queue)
-  - [:hamburger: Stack](#hamburger-stack)
-  - [:deciduous_tree: Tree](#deciduous_tree-tree)
-- [Topics](#topics)
-  - [:jigsaw: Dynamic programming](#jigsaw-dynamic-programming)
-  - [:clock9: Greedy](#clock9-greedy)
-  - [:triangular_ruler: Mathematics](#triangular_ruler-mathematics)
-  - [:1234: Primitive type](#1234-primitive-type)
-  - [:mag: Search](#mag-search)
-  - [:abc: Sort](#abc-sort)
-  - [:page_facing_up: String](#page_facing_up-string)
-- [References](#references)
+- [DATA STRUCTURES](#data-structures)
+  - [:train: ARRAY](#train-array)
+  - [:chart\_with\_upwards\_trend: GRAPH](#chart_with_upwards_trend-graph)
+  - [:key: HASH TABLE](#key-hash-table)
+  - [:rocket: HEAP](#rocket-heap)
+  - [:paperclips: LINKED LIST](#paperclips-linked-list)
+  - [:walking: QUEUE](#walking-queue)
+  - [:hamburger: STACK](#hamburger-stack)
+  - [:deciduous\_tree: TREE](#deciduous_tree-tree)
+- [TOPICS](#topics)
+  - [:jigsaw: DYNAMIC PROGRAMMING](#jigsaw-dynamic-programming)
+  - [:clock9: GREEDY](#clock9-greedy)
+  - [:triangular\_ruler: MATHEMATICS](#triangular_ruler-mathematics)
+  - [:1234: PRIMITIVE TYPE](#1234-primitive-type)
+  - [:mag: SEARCH](#mag-search)
+  - [:abc: SORT](#abc-sort)
+  - [:page\_facing\_up: STRING](#page_facing_up-string)
+- [REFERENCES](#references)
 
-## Data structures
+## DATA STRUCTURES
 
-### :train: Array
+### :train: ARRAY
 
 **C++ declaration/methods**
 
@@ -148,7 +147,7 @@ Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to st
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :chart_with_upwards_trend: Graph
+### :chart_with_upwards_trend: GRAPH
 
 - Shortest path algorithm
   - Single-source: Bellman-Ford algorithm, Dijkstra's algorithm
@@ -321,7 +320,7 @@ algorithm Prim(G, root):
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :key: Hash table
+### :key: HASH TABLE
 
 **C++ declaration/methods**
 
@@ -385,7 +384,7 @@ Collections.unmodifiableSortedSet(set);
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :rocket: Heap
+### :rocket: HEAP
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
 
@@ -424,7 +423,7 @@ contains(1), clear(), iterator()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :paperclips: Linked list
+### :paperclips: LINKED LIST
 
 In Python, there is no built-in type or library for LinkedList.
 
@@ -473,7 +472,7 @@ iterator(), listIterator()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :walking: Queue
+### :walking: QUEUE
 
 **C++ declaration/methods**
 
@@ -511,7 +510,7 @@ var list = new ArrayList<>(deque);          // deque to list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :hamburger: Stack
+### :hamburger: STACK
 
 **C++ declaration/methods**
 
@@ -550,7 +549,7 @@ var list = new ArrayList<>(stack);          // stack to list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :deciduous_tree: Tree
+### :deciduous_tree: TREE
 
 The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
 
@@ -634,9 +633,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-## Topics
+## TOPICS
 
-### :jigsaw: Dynamic programming
+### :jigsaw: DYNAMIC PROGRAMMING
 
 **Examples**
 
@@ -650,7 +649,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :clock9: Greedy
+### :clock9: GREEDY
 
 **Examples**
 
@@ -661,7 +660,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :triangular_ruler: Mathematics
+### :triangular_ruler: MATHEMATICS
 
 **Examples**
 
@@ -684,7 +683,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :1234: Primitive type
+### :1234: PRIMITIVE TYPE
 
 **C++ declaration/methods**
 
@@ -766,7 +765,7 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :mag: Search
+### :mag: SEARCH
 
 **C++ declaration/methods**
 
@@ -809,20 +808,21 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 **Examples**
 
-- Binary search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
-- Find k-th smallest/largest element in an array (`FindKthSmallestElement`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Find the k-th smallest/largest element in an array using the quickselect algorithm.
-- Find the minimum and maximum elements in an array (`FindMinMax`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
-- Integer square root (`ComputeIntegerSquareRoot`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
+- Binary search: [python](python-algorithm/algorithm/search) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
+- Find k-th smallest/largest element in an array (`FindKthSmallestElement`/`FindKthLargestElement`), EPI#11.8: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
+- Find the minimum and maximum elements in an array (`FindMinMax`), EPI#11.7: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Integer square root (`ComputeIntegerSquareRoot`), EPI#11.4: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
 - Linear search: [python](https://github.com/codejsha/algorithm-examples/tree/main/python-algorithm/algorithm/search) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
-- Search a sorted array for entry equal to its index (`SearchEntryEqualToItsIndex`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Quick select algorithm (`QuickSelectAlgorithm`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | QuickSelect is an algorithm used to select the k-th smallest (or largest) element in an unordered list of elements.
+- Search a sorted array for entry equal to its index (`SearchEntryEqualToItsIndex`), EPI#11.2: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
 - Search a sorted array for the first greater than a key (`SearchFirstGreaterThanKey`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
-- Search a sorted array for the first occurrence of a key (`SearchFirstOfKey`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
-- Search a cyclically sorted array for the smallest element (`SearchSmallestElementInCyclicallySortedArray`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
-- Search in a 2D sorted array(matrix) (`SearchSortedMatrix`): [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Search in a 2D sorted array(matrix) for a given element.
+- Search a sorted array for the first occurrence of a key (`SearchFirstOfKey`), EPI#11.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Search a cyclically sorted array for the smallest element (`SearchSmallestElementInCyclicallySortedArray`), EPI11.3: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search)
+- Search in a 2D sorted array(matrix) (`SearchSortedMatrix`), EPI11.6: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/search) | Search in a 2D sorted array(matrix) for a given element.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :abc: Sort
+### :abc: SORT
 
 **C++ declaration/methods**
 
@@ -915,14 +915,14 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 **Examples**
 
-- H-Index: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Compute the researcher's h-index given a citation count array. The h-index is the largest number `h` such that `h` articles have at least `h` citations each.
+- H-Index (`HIndex`), EPI#13.3: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Compute the researcher's h-index given a citation count array. The h-index is the largest number `h` such that `h` articles have at least `h` citations each.
 - Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI#13.1: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
 - Merge two sorted arrays (`MergeTwoSortedArray`), EPI#13.2, LeetCode#merge-sorted-array: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Merge two sorted array. Merge the second array into the first array.
 - Remove first-name duplicates (`EliminateFirstNameDuplicate`), EPI#13.4: [c++](https://github.com/codejsha/algorithm-examples/tree/main/cpp-algorithm/src/sort) | Given an array of names, remove the duplicates of the first name.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :page_facing_up: String
+### :page_facing_up: STRING
 
 **C++ declaration/methods**
 
@@ -990,7 +990,7 @@ var str = collection.stream()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-## References
+## REFERENCES
 
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
