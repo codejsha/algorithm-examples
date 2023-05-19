@@ -11,6 +11,7 @@ static void BM_VerifyRomanString(benchmark::State& state, Args&&... args)
         RomanNumber::VerifyRomanString(std::get<0>(args_tuple));
     }
 }
+
 BENCHMARK_CAPTURE(BM_VerifyRomanString, IXC, "IXC");
 BENCHMARK_CAPTURE(BM_VerifyRomanString, CDM, "CDM");
 
@@ -23,6 +24,7 @@ static void BM_RomanStringToInteger(benchmark::State& state, Args&&... args)
         RomanNumber::RomanStringToInteger(std::get<0>(args_tuple));
     }
 }
+
 BENCHMARK_CAPTURE(BM_RomanStringToInteger, LIX, "LIX");
 
 BENCHMARK_MAIN();

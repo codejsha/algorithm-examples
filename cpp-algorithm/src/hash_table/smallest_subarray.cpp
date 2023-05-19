@@ -61,6 +61,7 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(
 
     return result;
 }
+
 auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(
     const std::vector<std::string>& paragraph,
     const std::vector<std::string>& keywords)

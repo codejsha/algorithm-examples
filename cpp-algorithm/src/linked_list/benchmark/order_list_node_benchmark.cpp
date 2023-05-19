@@ -17,6 +17,7 @@ static void BM_ListPivoting(benchmark::State& state)
         OrderListNode::ListPivoting(node1, 7);
     }
 }
+
 BENCHMARK(BM_ListPivoting);
 
 BENCHMARK_MAIN();

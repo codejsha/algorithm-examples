@@ -11,6 +11,7 @@ static void BM_OfflineRandomSampling(benchmark::State& state)
         RandomDataSampling::OfflineRandomSampling(k, arr);
     }
 }
+
 BENCHMARK(BM_OfflineRandomSampling);
 
 static void BM_ComputeRandomPermutation(benchmark::State& state)
@@ -21,6 +22,7 @@ static void BM_ComputeRandomPermutation(benchmark::State& state)
         RandomDataSampling::ComputeRandomPermutation(k);
     }
 }
+
 BENCHMARK(BM_ComputeRandomPermutation);
 
 BENCHMARK_MAIN();

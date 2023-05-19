@@ -10,6 +10,7 @@ static void BM_DeleteDuplicates(benchmark::State& state)
         DeleteElement::DeleteDuplicates(numbers);
     }
 }
+
 BENCHMARK(BM_DeleteDuplicates);
 
 static void BM_DeleteDuplicateElements(benchmark::State& state)
@@ -20,6 +21,7 @@ static void BM_DeleteDuplicateElements(benchmark::State& state)
         DeleteElement::DeleteDuplicateElements(numbers);
     }
 }
+
 BENCHMARK(BM_DeleteDuplicateElements);
 
 static void BM_DeleteSpecificElements(benchmark::State& state)
@@ -31,6 +33,7 @@ static void BM_DeleteSpecificElements(benchmark::State& state)
         DeleteElement::DeleteSpecificElements(numbers, element);
     }
 }
+
 BENCHMARK(BM_DeleteSpecificElements);
 
 BENCHMARK_MAIN();

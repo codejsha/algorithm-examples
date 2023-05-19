@@ -72,10 +72,7 @@ namespace BinarySearchTree
                         node->parent = current;
                         break;
                     }
-                    else
-                    {
-                        current = current->left;
-                    }
+                    current = current->left;
                 }
                 else
                 {
@@ -85,10 +82,7 @@ namespace BinarySearchTree
                         node->parent = current;
                         break;
                     }
-                    else
-                    {
-                        current = current->right;
-                    }
+                    current = current->right;
                 }
             }
         }
@@ -230,10 +224,7 @@ namespace BinarySearchTree
         {
             return RecursiveSearch(node->left, key);
         }
-        else
-        {
-            return RecursiveSearch(node->right, key);
-        }
+        return RecursiveSearch(node->right, key);
     }
 
     template <typename T> void Tree<T>::PreorderTraversal(BinaryTree::ExtendedNode<T>* node, std::vector<T>& result)

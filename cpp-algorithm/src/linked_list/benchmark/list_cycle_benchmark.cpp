@@ -15,6 +15,7 @@ static void BM_HasCycle1(benchmark::State& state)
         ListCycle::HasCycle1(node1);
     }
 }
+
 BENCHMARK(BM_HasCycle1);
 
 static void BM_HasCycle2(benchmark::State& state)
@@ -30,6 +31,7 @@ static void BM_HasCycle2(benchmark::State& state)
         ListCycle::HasCycle2(node1);
     }
 }
+
 BENCHMARK(BM_HasCycle2);
 
 static void BM_HasCycle3(benchmark::State& state)
@@ -45,6 +47,7 @@ static void BM_HasCycle3(benchmark::State& state)
         ListCycle::HasCycle2(node1);
     }
 }
+
 BENCHMARK(BM_HasCycle3);
 
 static void BM_OverlappingNoCycleList(benchmark::State& state)
@@ -61,6 +64,7 @@ static void BM_OverlappingNoCycleList(benchmark::State& state)
         ListCycle::OverlappingNoCycleList(node_a1, node_b1);
     }
 }
+
 BENCHMARK(BM_OverlappingNoCycleList);
 
 static void BM_OverlappingCycleList(benchmark::State& state)
@@ -79,6 +83,7 @@ static void BM_OverlappingCycleList(benchmark::State& state)
         ListCycle::OverlappingCycleList(node_a1, node_b1);
     }
 }
+
 BENCHMARK(BM_OverlappingCycleList);
 
 BENCHMARK_MAIN();

@@ -6,20 +6,17 @@ auto Fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memo
     {
         return 0;
     }
-    else if (number == 1)
+    if (number == 1)
     {
         return 1;
     }
-    else if (memo[number] > 0)
+    if (memo[number] > 0)
     {
         return memo[number];
     }
-    else
-    {
-        memo[number] = FibonacciDynamicTopDown(number - 1, memo)
-                       + FibonacciDynamicTopDown(number - 2, memo);
-        return memo[number];
-    }
+    memo[number] = FibonacciDynamicTopDown(number - 1, memo)
+                   + FibonacciDynamicTopDown(number - 2, memo);
+    return memo[number];
 }
 
 auto Fibonacci::FibonacciDynamicBottomUp(const int number) -> int
@@ -28,21 +25,18 @@ auto Fibonacci::FibonacciDynamicBottomUp(const int number) -> int
     {
         return 0;
     }
-    else if (number == 1)
+    if (number == 1)
     {
         return 1;
     }
-    else
+    std::vector<int> memo(number + 1, -1);
+    memo[0] = 0;
+    memo[1] = 1;
+
+    for (auto i = 2; i < number; ++i)
     {
-        std::vector<int> memo(number + 1, -1);
-        memo[0] = 0;
-        memo[1] = 1;
-
-        for (auto i = 2; i < number; ++i)
-        {
-            memo[i] = memo[i - 1] + memo[i - 2];
-        }
-
-        return memo[number - 1] + memo[number - 2];
+        memo[i] = memo[i - 1] + memo[i - 2];
     }
+
+    return memo[number - 1] + memo[number - 2];
 }

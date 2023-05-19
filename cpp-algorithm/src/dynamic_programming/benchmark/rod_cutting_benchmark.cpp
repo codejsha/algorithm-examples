@@ -11,6 +11,7 @@ static void BM_CutRod(benchmark::State& state)
         RodCutting::CutRod(price, state.range(0));
     }
 }
+
 BENCHMARK(BM_CutRod)->DenseRange(1, 10, 1);
 
 static void BM_MemoizedCutRod(benchmark::State& state)
@@ -22,6 +23,7 @@ static void BM_MemoizedCutRod(benchmark::State& state)
         RodCutting::MemoizedCutRod(price, state.range(0));
     }
 }
+
 BENCHMARK(BM_MemoizedCutRod)->DenseRange(1, 10, 1);
 
 static void BM_BottomUpCutRod(benchmark::State& state)
@@ -33,6 +35,7 @@ static void BM_BottomUpCutRod(benchmark::State& state)
         RodCutting::BottomUpCutRod(price, state.range(0));
     }
 }
+
 BENCHMARK(BM_BottomUpCutRod)->DenseRange(1, 10, 1);
 
 static void BM_ExtendedBottomUpCutRod(benchmark::State& state)
@@ -44,6 +47,7 @@ static void BM_ExtendedBottomUpCutRod(benchmark::State& state)
         RodCutting::ExtendedBottomUpCutRod(price, state.range(0));
     }
 }
+
 BENCHMARK(BM_ExtendedBottomUpCutRod)->DenseRange(1, 10, 1);
 
 BENCHMARK_MAIN();

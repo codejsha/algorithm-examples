@@ -12,7 +12,7 @@ namespace ReverseList
     /// @param start start index of the sublist
     /// @param finish end index of the sublist
     /// @return the head of the list
-    auto ReverseSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, const int finish) -> std::shared_ptr<LinkedList::Node<int>>;
+    auto ReverseSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, int finish) -> std::shared_ptr<LinkedList::Node<int>>;
 }
 
 #endif

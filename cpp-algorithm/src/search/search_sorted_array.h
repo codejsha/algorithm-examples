@@ -23,7 +23,7 @@ namespace SearchSortedArray
     /// @details Given a sorted array of distinct integers, find an entry equal to its index.
     /// @param array array a sorted array of integers
     /// @return the entry equal to its index
-    auto SearchEntryEqualToItsIndex(const std::vector<int>& array) -> std ::vector<int>;
+    auto SearchEntryEqualToItsIndex(const std::vector<int>& array) -> std::vector<int>;
 
     /// @brief Search a cyclically sorted array for the smallest element.
     /// @details Given a cyclically sorted array of unique integers, find the smallest element.

@@ -9,6 +9,7 @@ static void BM_GetValidIpAddress(benchmark::State& state)
         IpAddress::GetValidIpAddress("25525511135");
     }
 }
+
 BENCHMARK(BM_GetValidIpAddress);
 
 BENCHMARK_MAIN();

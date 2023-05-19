@@ -11,6 +11,7 @@ static void BM_IntersectRectangle(benchmark::State& state)
         IntersectRectangle(rect1, rect2);
     }
 }
+
 BENCHMARK(BM_IntersectRectangle);
 
 BENCHMARK_MAIN();

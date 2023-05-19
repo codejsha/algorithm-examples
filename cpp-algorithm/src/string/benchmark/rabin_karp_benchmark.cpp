@@ -9,6 +9,7 @@ static void BM_RabinKarpMatcher1(benchmark::State& state)
         RabinKarp::RabinKarpMatcher1("abcabaabcabac", "abaa");
     }
 }
+
 BENCHMARK(BM_RabinKarpMatcher1);
 
 static void BM_RabinKarpMatcher2(benchmark::State& state)
@@ -18,6 +19,7 @@ static void BM_RabinKarpMatcher2(benchmark::State& state)
         RabinKarp::RabinKarpMatcher2("abcabaabcabac", "abaa");
     }
 }
+
 BENCHMARK(BM_RabinKarpMatcher2);
 
 BENCHMARK_MAIN();

@@ -117,13 +117,10 @@ auto BTree::Tree::Search(Node* node, char key) -> std::pair<Node*, const int>
         return std::make_pair(node, index);
     }
     // key is not found and if node is a leaf
-    else if (node->is_leaf == true)
+    if (node->is_leaf == true)
     {
         return std::pair<Node*, const int>{};
     }
     // key is not found and recurse to search subtree of reference node
-    else
-    {
-        return Search(node->children[index], key);
-    }
+    return Search(node->children[index], key);
 }

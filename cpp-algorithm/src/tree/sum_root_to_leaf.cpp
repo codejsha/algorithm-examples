@@ -18,6 +18,7 @@ auto SumRootToLeaf(const BinaryTree::Node<int>* tree, int partial_path_sum, cons
     return SumRootToLeaf(tree->left, partial_path_sum, base)
            + SumRootToLeaf(tree->right, partial_path_sum, base);
 }
+
 auto TreeSumRootToLeaf::SumRootToLeafDecimal(const BinaryTree::Node<int>* tree) -> int
 {
     return SumRootToLeaf(tree, 0, 10);

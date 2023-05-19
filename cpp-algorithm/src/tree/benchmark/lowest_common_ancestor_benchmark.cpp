@@ -31,6 +31,7 @@ static void BM_FindLowestCommonAncestor(benchmark::State& state)
         LowestCommonAncestor::FindLowestCommonAncestor(&node1, &node6, &node7);
     }
 }
+
 BENCHMARK(BM_FindLowestCommonAncestor);
 
 static void BM_FindLowestCommonAncestor2(benchmark::State& state)
@@ -72,6 +73,7 @@ static void BM_FindLowestCommonAncestor2(benchmark::State& state)
         LowestCommonAncestor::FindLowestCommonAncestor2(&node1, &node6, &node7);
     }
 }
+
 BENCHMARK(BM_FindLowestCommonAncestor2);
 
 BENCHMARK_MAIN();

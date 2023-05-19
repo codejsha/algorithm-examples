@@ -40,14 +40,11 @@ auto QuickSelect::QuickSelectAlgorithm(std::vector<int>& array, const int left, 
     {
         return array[pivot_index];
     }
-    else if (k < pivot_index)
+    if (k < pivot_index)
     {
         return QuickSelectAlgorithm(array, left, pivot_index - 1, k);
     }
-    else
-    {
-        return QuickSelectAlgorithm(array, pivot_index + 1, right, k);
-    }
+    return QuickSelectAlgorithm(array, pivot_index + 1, right, k);
 }
 
 auto QuickSelect::FindKthSmallestElement(std::vector<int>& array, const int k) -> int

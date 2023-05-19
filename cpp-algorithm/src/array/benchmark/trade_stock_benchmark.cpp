@@ -10,6 +10,7 @@ static void BM_BuyAndSellStockOnceBruteForce(benchmark::State& state)
         TradeStock::BuyAndSellStockOnceBruteForce(prices);
     }
 }
+
 BENCHMARK(BM_BuyAndSellStockOnceBruteForce);
 
 static void BM_BuyAndSellStockOnce(benchmark::State& state)
@@ -20,6 +21,7 @@ static void BM_BuyAndSellStockOnce(benchmark::State& state)
         TradeStock::BuyAndSellStockOnce(prices);
     }
 }
+
 BENCHMARK(BM_BuyAndSellStockOnce);
 
 static void BM_BuyAndSellStockTwice(benchmark::State& state)
@@ -30,6 +32,7 @@ static void BM_BuyAndSellStockTwice(benchmark::State& state)
         TradeStock::BuyAndSellStockTwice(prices);
     }
 }
+
 BENCHMARK(BM_BuyAndSellStockTwice);
 
 BENCHMARK_MAIN();

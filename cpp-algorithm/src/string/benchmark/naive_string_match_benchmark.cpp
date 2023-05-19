@@ -9,6 +9,7 @@ static void BM_NaiveStringMatcher(benchmark::State& state)
         NaiveStringMatch::NaiveStringMatcher("eceyeye", "eye");
     }
 }
+
 BENCHMARK(BM_NaiveStringMatcher);
 
 BENCHMARK_MAIN();

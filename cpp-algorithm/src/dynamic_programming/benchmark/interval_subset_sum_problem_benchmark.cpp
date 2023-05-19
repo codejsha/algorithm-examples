@@ -10,6 +10,7 @@ static void BM_SubsetSum1(benchmark::State& state)
         IntervalSubset::SubsetSum1(seq);
     }
 }
+
 BENCHMARK(BM_SubsetSum1);
 
 static void BM_SubsetSum2(benchmark::State& state)
@@ -20,6 +21,7 @@ static void BM_SubsetSum2(benchmark::State& state)
         IntervalSubset::SubsetSum2(seq);
     }
 }
+
 BENCHMARK(BM_SubsetSum2);
 
 static void BM_DivideAndConquerSubsetSum(benchmark::State& state)
@@ -30,6 +32,7 @@ static void BM_DivideAndConquerSubsetSum(benchmark::State& state)
         IntervalSubset::DivideAndConquerSubsetSum(seq, 0, static_cast<int>(seq.size() - 1));
     }
 }
+
 BENCHMARK(BM_DivideAndConquerSubsetSum);
 
 static void BM_DynamicProgrammingSubsetSum(benchmark::State& state)
@@ -40,6 +43,7 @@ static void BM_DynamicProgrammingSubsetSum(benchmark::State& state)
         IntervalSubset::DynamicProgrammingSubsetSum(seq);
     }
 }
+
 BENCHMARK(BM_DynamicProgrammingSubsetSum);
 
 BENCHMARK_MAIN();

@@ -17,10 +17,7 @@ auto ActivitySelection::RecursiveActivitySelector(const std::vector<int>& start,
 
         return activities;
     }
-    else
-    {
-        return {};
-    }
+    return {};
 }
 
 auto ActivitySelection::GreedyActivitySelector(const std::vector<int>& start, const std::vector<int>& finish) -> std::vector<int>

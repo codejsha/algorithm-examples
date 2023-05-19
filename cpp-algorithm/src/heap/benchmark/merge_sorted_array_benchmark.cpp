@@ -13,6 +13,7 @@ static void BM_MergeSortedArray(benchmark::State& state)
         MergeSortedArray::MergeSortedArray(arr1, arr2, arr3);
     }
 }
+
 BENCHMARK(BM_MergeSortedArray);
 
 BENCHMARK_MAIN();

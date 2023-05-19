@@ -10,6 +10,7 @@ static void BM_PlusOne(benchmark::State& state)
         ArbitraryPrecision::PlusOne(number);
     }
 }
+
 BENCHMARK(BM_PlusOne);
 
 static void BM_StringAddition(benchmark::State& state)
@@ -21,6 +22,7 @@ static void BM_StringAddition(benchmark::State& state)
         ArbitraryPrecision::StringAddition(number1, number2);
     }
 }
+
 BENCHMARK(BM_StringAddition);
 
 static void BM_Multiply(benchmark::State& state)
@@ -32,6 +34,7 @@ static void BM_Multiply(benchmark::State& state)
         ArbitraryPrecision::Multiply(number1, number2);
     }
 }
+
 BENCHMARK(BM_Multiply);
 
 BENCHMARK_MAIN();

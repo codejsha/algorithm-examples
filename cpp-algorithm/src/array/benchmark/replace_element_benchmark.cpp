@@ -10,6 +10,7 @@ static void BM_ReplaceAndRemoveString1(benchmark::State& state)
         ReplaceElement::ReplaceAndRemoveString1(arr, "a", "b");
     }
 }
+
 BENCHMARK(BM_ReplaceAndRemoveString1);
 
 static void BM_ReplaceAndRemoveString2(benchmark::State& state)
@@ -20,6 +21,7 @@ static void BM_ReplaceAndRemoveString2(benchmark::State& state)
         ReplaceElement::ReplaceAndRemoveString2(arr, "a", "b");
     }
 }
+
 BENCHMARK(BM_ReplaceAndRemoveString2);
 
 static void BM_TelexEncoding(benchmark::State& state)
@@ -33,6 +35,7 @@ static void BM_TelexEncoding(benchmark::State& state)
         ReplaceElement::TelexEncoding(v);
     }
 }
+
 BENCHMARK(BM_TelexEncoding);
 
 BENCHMARK_MAIN();

@@ -15,6 +15,7 @@ static void BM_IsListPalindrome(benchmark::State& state)
         ListPalindrome::IsListPalindrome(node1);
     }
 }
+
 BENCHMARK(BM_IsListPalindrome);
 
 BENCHMARK_MAIN();

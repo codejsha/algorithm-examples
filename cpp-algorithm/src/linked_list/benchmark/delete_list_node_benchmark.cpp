@@ -14,6 +14,7 @@ static void BM_DeleteNodeFromList(benchmark::State& state)
         DeleteListNode::DeleteNodeFromList(node3);
     }
 }
+
 BENCHMARK(BM_DeleteNodeFromList);
 
 static void BM_DeleteNodeKthLast(benchmark::State& state)
@@ -28,6 +29,7 @@ static void BM_DeleteNodeKthLast(benchmark::State& state)
         DeleteListNode::DeleteNodeKthLast(node1, 2);
     }
 }
+
 BENCHMARK(BM_DeleteNodeKthLast);
 
 static void BM_DeleteDuplicateNode(benchmark::State& state)
@@ -45,6 +47,7 @@ static void BM_DeleteDuplicateNode(benchmark::State& state)
         DeleteListNode::DeleteNodeKthLast(node1, 2);
     }
 }
+
 BENCHMARK(BM_DeleteDuplicateNode);
 
 BENCHMARK_MAIN();

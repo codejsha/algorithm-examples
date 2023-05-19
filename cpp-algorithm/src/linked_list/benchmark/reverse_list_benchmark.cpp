@@ -15,6 +15,7 @@ static void BM_ReverseSubList(benchmark::State& state)
         ReverseList::ReverseSubList(node1, 2, 4);
     }
 }
+
 BENCHMARK(BM_ReverseSubList);
 
 BENCHMARK_MAIN();

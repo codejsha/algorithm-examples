@@ -10,6 +10,7 @@ static void BM_CanReachEnd(benchmark::State& state)
         AdvancingThrough::CanReachEnd(v);
     }
 }
+
 BENCHMARK(BM_CanReachEnd);
 
 BENCHMARK_MAIN();

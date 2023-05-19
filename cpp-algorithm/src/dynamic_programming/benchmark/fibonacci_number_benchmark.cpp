@@ -11,6 +11,7 @@ static void BM_FibonacciDynamicTopDown(benchmark::State& state)
         Fibonacci::FibonacciDynamicTopDown(number, memo);
     }
 }
+
 BENCHMARK(BM_FibonacciDynamicTopDown);
 
 static void BM_FibonacciDynamicBottomUp(benchmark::State& state)
@@ -21,6 +22,7 @@ static void BM_FibonacciDynamicBottomUp(benchmark::State& state)
         Fibonacci::FibonacciDynamicBottomUp(number);
     }
 }
+
 BENCHMARK(BM_FibonacciDynamicBottomUp);
 
 BENCHMARK_MAIN();

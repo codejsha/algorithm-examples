@@ -11,14 +11,17 @@ namespace BinaryTree
         T key;
         Node* left;
         Node* right;
+
         Node()
             : key{}, left{nullptr}, right{nullptr}
         {
         }
+
         explicit Node(T key)
             : key{key}, left{nullptr}, right{nullptr}
         {
         }
+
         Node(T key, Node* left, Node* right)
             : key{key}, left{left}, right{right}
         {
@@ -39,10 +42,12 @@ namespace BinaryTree
             : key{}, parent{nullptr}, left{nullptr}, right{nullptr}
         {
         }
+
         explicit ExtendedNode(T key)
             : key{key}, parent{nullptr}, left{nullptr}, right{nullptr}
         {
         }
+
         ExtendedNode(T key, ExtendedNode* parent, ExtendedNode* left, ExtendedNode* right)
             : key{key}, parent{parent}, left{left}, right{right}
         {
@@ -63,10 +68,12 @@ namespace BinaryTree
             : key{}, left{nullptr}, right{nullptr}, next{nullptr}
         {
         }
+
         explicit NextExtendedNode(T key)
             : key{key}, left{nullptr}, right{nullptr}, next{nullptr}
         {
         }
+
         NextExtendedNode(T key, NextExtendedNode* left, NextExtendedNode* right, NextExtendedNode* next)
             : key{key}, left{left}, right{right}, next{nullptr}
         {

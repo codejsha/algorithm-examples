@@ -9,6 +9,7 @@ static void BM_CountBits(benchmark::State& state)
         ComputingParity::CountBits(state.range(0));
     }
 }
+
 BENCHMARK(BM_CountBits)->Arg(0b1011)->Arg(0b10001000);
 
 static void BM_Parity(benchmark::State& state)
@@ -18,6 +19,7 @@ static void BM_Parity(benchmark::State& state)
         ComputingParity::Parity(state.range(0));
     }
 }
+
 BENCHMARK(BM_Parity)->Arg(0b1011)->Arg(0b10001000);
 
 static void BM_ParityDropLowestBits(benchmark::State& state)
@@ -27,6 +29,7 @@ static void BM_ParityDropLowestBits(benchmark::State& state)
         ComputingParity::ParityDropLowestBits(state.range(0));
     }
 }
+
 BENCHMARK(BM_ParityDropLowestBits)->Arg(0b1011)->Arg(0b10001000);
 
 static void BM_ParityLookupTable(benchmark::State& state)
@@ -36,6 +39,7 @@ static void BM_ParityLookupTable(benchmark::State& state)
         ComputingParity::ParityLookupTable(state.range(0));
     }
 }
+
 BENCHMARK(BM_ParityLookupTable)->Arg(0b11101010);
 
 BENCHMARK_MAIN();

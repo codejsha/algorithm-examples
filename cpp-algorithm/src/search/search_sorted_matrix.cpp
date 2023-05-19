@@ -11,7 +11,7 @@ auto SearchSortedMatrix::SearchSortedMatrix(const std::vector<std::vector<int>>&
         {
             return true;
         }
-        else if (matrix[row][col] > key)
+        if (matrix[row][col] > key)
         {
             --col;
         }

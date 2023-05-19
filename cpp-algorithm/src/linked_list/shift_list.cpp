@@ -10,7 +10,7 @@ auto ShiftList::CyclicallyRightShiftList(std::shared_ptr<LinkedList::Node<int>>&
 
     // get the tail and compute the length of the list
     auto tail = list;
-    int length = 1;
+    auto length = 1;
     while (tail->next)
     {
         ++length;

@@ -14,6 +14,7 @@ static void BM_CyclicallyRightShiftList(benchmark::State& state)
         ShiftList::CyclicallyRightShiftList(node1, 2);
     }
 }
+
 BENCHMARK(BM_CyclicallyRightShiftList);
 
 BENCHMARK_MAIN();

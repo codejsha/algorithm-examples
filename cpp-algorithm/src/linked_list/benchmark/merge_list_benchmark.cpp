@@ -17,6 +17,7 @@ static void BM_MergeTwoSortedLinkedList(benchmark::State& state)
         MergeList::MergeTwoSortedLinkedList(node_a1, node_b1);
     }
 }
+
 BENCHMARK(BM_MergeTwoSortedLinkedList);
 
 static void BM_MergeEvenOddLinkedList(benchmark::State& state)
@@ -31,6 +32,7 @@ static void BM_MergeEvenOddLinkedList(benchmark::State& state)
         MergeList::MergeEvenOddLinkedList(node1);
     }
 }
+
 BENCHMARK(BM_MergeEvenOddLinkedList);
 
 BENCHMARK_MAIN();

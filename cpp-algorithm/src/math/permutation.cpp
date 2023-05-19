@@ -12,13 +12,10 @@ void Permutation::Permutation(const std::string& str, const std::string& prefix)
         std::cout << prefix << std::endl;
         return;
     }
-    else
+    for (auto i = 0; i < size; ++i)
     {
-        for (auto i = 0; i < size; ++i)
-        {
-            const auto rem = str.substr(0, i) + str.substr(i + 1);
-            Permutation(rem, prefix + str[i]);
-        }
+        const auto rem = str.substr(0, i) + str.substr(i + 1);
+        Permutation(rem, prefix + str[i]);
     }
 }
 

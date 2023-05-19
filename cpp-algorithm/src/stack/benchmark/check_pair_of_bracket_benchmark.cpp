@@ -12,6 +12,7 @@ static void BM_CheckPairOfBracket(benchmark::State& state, Args&&... args)
             PairOfBracket::CheckPairOfBracket(std::get<0>(args_tuple)));
     }
 }
+
 BENCHMARK_CAPTURE(BM_CheckPairOfBracket, ()[]{}, "()[]{}");
 BENCHMARK_CAPTURE(BM_CheckPairOfBracket, ([]){()}, "([]){()}");
 BENCHMARK_CAPTURE(BM_CheckPairOfBracket, [()[]{()()}], "[()[]{()()}]");

@@ -17,6 +17,7 @@ static void BM_AddTwoNumbers(benchmark::State& state)
         ListArithmetic::AddTwoNumbers(node_a1, node_b1);
     }
 }
+
 BENCHMARK(BM_AddTwoNumbers);
 
 BENCHMARK_MAIN();

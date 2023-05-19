@@ -40,6 +40,7 @@ static void BM_BTree_Insert(benchmark::State& state, Args&&... args)
         tree.Insert(tree.root, std::get<0>(args_tuple));
     }
 }
+
 BENCHMARK_CAPTURE(BM_BTree_Insert, B, 'B');
 BENCHMARK_CAPTURE(BM_BTree_Insert, Q, 'Q');
 BENCHMARK_CAPTURE(BM_BTree_Insert, L, 'L');
@@ -88,6 +89,7 @@ static void BM_BTree_Search(benchmark::State& state, Args&&... args)
         tree.Search(tree.root, std::get<0>(args_tuple));
     }
 }
+
 BENCHMARK_CAPTURE(BM_BTree_Search, B, 'B');
 BENCHMARK_CAPTURE(BM_BTree_Search, Q, 'Q');
 BENCHMARK_CAPTURE(BM_BTree_Search, L, 'L');

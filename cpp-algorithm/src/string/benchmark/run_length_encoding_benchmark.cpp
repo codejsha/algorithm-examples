@@ -11,6 +11,7 @@ static void BM_RunLengthEncoding(benchmark::State& state, Args&&... args)
         RunLengthEncoding::RunLengthEncoding(std::get<0>(args_tuple));
     }
 }
+
 BENCHMARK_CAPTURE(BM_RunLengthEncoding, aaaabcccaa, "aaaabcccaa");
 BENCHMARK_CAPTURE(BM_RunLengthEncoding, eeeffffee, "eeeffffee");
 
@@ -23,6 +24,7 @@ static void BM_RunLengthDecoding(benchmark::State& state, Args&&... args)
         RunLengthEncoding::RunLengthDecoding(std::get<0>(args_tuple));
     }
 }
+
 BENCHMARK_CAPTURE(BM_RunLengthDecoding, 4a1b3c2a, "4a1b3c2a");
 BENCHMARK_CAPTURE(BM_RunLengthDecoding, 3e4f2e, "3e4f2e");
 

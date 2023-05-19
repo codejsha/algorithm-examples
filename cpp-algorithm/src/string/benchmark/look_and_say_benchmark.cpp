@@ -9,6 +9,7 @@ static void BM_LookAndSayProblem(benchmark::State& state)
         LookAndSay::LookAndSayProblem("13112221");
     }
 }
+
 BENCHMARK(BM_LookAndSayProblem);
 
 BENCHMARK_MAIN();

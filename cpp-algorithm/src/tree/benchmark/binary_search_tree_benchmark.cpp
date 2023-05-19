@@ -17,6 +17,7 @@ static void BM_BinarySearchTree_PreorderTraversal(benchmark::State& state)
         tree.PreorderTraversal(tree.GetRoot(), result);
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_PreorderTraversal);
 
 static void BM_BinarySearchTree_InorderTraversal(benchmark::State& state)
@@ -34,6 +35,7 @@ static void BM_BinarySearchTree_InorderTraversal(benchmark::State& state)
         tree.PreorderTraversal(tree.GetRoot(), result);
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_InorderTraversal);
 
 static void BM_BinarySearchTree_PostorderTraversal(benchmark::State& state)
@@ -51,6 +53,7 @@ static void BM_BinarySearchTree_PostorderTraversal(benchmark::State& state)
         tree.PreorderTraversal(tree.GetRoot(), result);
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_PostorderTraversal);
 
 static void BM_BinarySearchTree_Minimum(benchmark::State& state)
@@ -67,6 +70,7 @@ static void BM_BinarySearchTree_Minimum(benchmark::State& state)
         tree.Minimum(tree.GetRoot());
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_Minimum);
 
 static void BM_BinarySearchTree_Maximum(benchmark::State& state)
@@ -83,6 +87,7 @@ static void BM_BinarySearchTree_Maximum(benchmark::State& state)
         tree.Maximum(tree.GetRoot());
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_Maximum);
 
 static void BM_BinarySearchTree_Predecessor(benchmark::State& state)
@@ -99,6 +104,7 @@ static void BM_BinarySearchTree_Predecessor(benchmark::State& state)
         tree.Predecessor(state.range(0));
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_Predecessor)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
 
 static void BM_BinarySearchTree_Successor(benchmark::State& state)
@@ -115,6 +121,7 @@ static void BM_BinarySearchTree_Successor(benchmark::State& state)
         tree.Successor(state.range(0));
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_Successor)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
 
 static void BM_BinarySearchTree_IterativeSearch(benchmark::State& state)
@@ -131,6 +138,7 @@ static void BM_BinarySearchTree_IterativeSearch(benchmark::State& state)
         tree.IterativeSearch(tree.GetRoot(), state.range(0));
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_IterativeSearch)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
 
 static void BM_BinarySearchTree_RecursiveSearch(benchmark::State& state)
@@ -147,6 +155,7 @@ static void BM_BinarySearchTree_RecursiveSearch(benchmark::State& state)
         tree.RecursiveSearch(tree.GetRoot(), state.range(0));
     }
 }
+
 BENCHMARK(BM_BinarySearchTree_RecursiveSearch)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
 
 BENCHMARK_MAIN();
