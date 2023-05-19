@@ -709,7 +709,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
   - $F_0 = 0$
   - $F_1 = 1$
   - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
-- Interval subset sum: [c++](cpp-algorithm/src/dynamic_programming)
+- Interval subset sum (`SubsetSum1`, `SubsetSum2`, `DivideAndConquerSubsetSum`, `DynamicProgrammingSubsetSum`): [c++](cpp-algorithm/src/dynamic_programming) | Interval subset sum problem is that finds the maximum sum of a subset of intervals.
 - Longest common subsequence: [c++](cpp-algorithm/src/dynamic_programming)
 - Rod cutting: [c++](cpp-algorithm/src/dynamic_programming) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 

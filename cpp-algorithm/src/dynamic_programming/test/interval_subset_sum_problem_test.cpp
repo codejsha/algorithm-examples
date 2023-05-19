@@ -2,21 +2,21 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(IntervalSubset, Simple1)
+GTEST_TEST(IntervalSubset, SubsetSum1)
 {
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
 
-    const auto result = IntervalSubset::SimpleSubsetSum1(seq);
+    const auto result = IntervalSubset::SubsetSum1(seq);
     EXPECT_EQ(expected, result);
 }
 
-GTEST_TEST(IntervalSubset, Simple2)
+GTEST_TEST(IntervalSubset, SubsetSum2)
 {
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
 
-    const auto result = IntervalSubset::SimpleSubsetSum2(seq);
+    const auto result = IntervalSubset::SubsetSum2(seq);
     EXPECT_EQ(expected, result);
 }
 

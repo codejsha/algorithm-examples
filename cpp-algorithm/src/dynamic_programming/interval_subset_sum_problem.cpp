@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-auto IntervalSubset::SimpleSubsetSum1(const std::vector<int>& seq) -> int
+auto IntervalSubset::SubsetSum1(const std::vector<int>& seq) -> int
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
@@ -12,10 +12,13 @@ auto IntervalSubset::SimpleSubsetSum1(const std::vector<int>& seq) -> int
         for (auto next = prev; next < size; ++next)
         {
             auto sum = 0;
+
+            // sum of subset [prev, next]
             for (auto loop_index = prev; loop_index <= next; ++loop_index)
             {
                 sum += seq[loop_index];
             }
+
             max = std::max(max, sum);
         }
     }
@@ -23,7 +26,7 @@ auto IntervalSubset::SimpleSubsetSum1(const std::vector<int>& seq) -> int
     return max;
 }
 
-auto IntervalSubset::SimpleSubsetSum2(const std::vector<int>& seq) -> int
+auto IntervalSubset::SubsetSum2(const std::vector<int>& seq) -> int
 {
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
@@ -54,6 +57,7 @@ auto IntervalSubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, cons
     const auto right_max = DivideAndConquerSubsetSum(seq, mid + 1, high);
 
     // cross subset
+    // based on mid, find max of left subset and right subset
     auto left_cross_max = 0;
     auto right_cross_max = 0;
     auto left_sum = 0;
@@ -69,6 +73,7 @@ auto IntervalSubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, cons
         right_cross_max = std::max(right_cross_max, right_sum);
     }
 
+    // return max of left subset, right subset, and cross subset
     return std::max(std::max(left_max, right_max), left_cross_max + right_cross_max);
 }
 

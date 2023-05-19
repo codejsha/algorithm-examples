@@ -5,9 +5,37 @@
 
 namespace IntervalSubset
 {
-    auto SimpleSubsetSum1(const std::vector<int>& seq) -> int;
-    auto SimpleSubsetSum2(const std::vector<int>& seq) -> int;
+    /**
+     * @brief Find the maximum sum of a contiguous subsequence in a given sequence.
+     * @param seq integer sequence
+     * @return maximum sum of subset
+     */
+    auto SubsetSum1(const std::vector<int>& seq) -> int;
+
+    /**
+     * @brief Find the maximum sum of a contiguous subsequence in a given sequence.
+     * @param seq integer sequence
+     * @return maximum sum of subset
+     */
+    auto SubsetSum2(const std::vector<int>& seq) -> int;
+
+    /**
+     * @brief Find the maximum sum of a contiguous subsequence in a given sequence.
+     * This algorithm uses a divide-and-conquer approach.
+     * @details This approach calculates left subset, right subset and cross subset.
+     * @param seq integer sequence
+     * @param low lower index
+     * @param high higher index
+     * @return maximum sum of subset
+     */
     auto DivideAndConquerSubsetSum(const std::vector<int>& seq, int low, int high) -> int;
+
+    /**
+     * @brief Find the maximum sum of a contiguous subsequence in a given sequence.
+     * This algorithm uses a dynamic programming approach.
+     * @param seq integer sequence
+     * @return maximum sum of subset
+     */
     auto DynamicProgrammingSubsetSum(const std::vector<int>& seq) -> int;
 }
 
