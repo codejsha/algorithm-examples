@@ -3,9 +3,8 @@
 #include <limits>
 #include <unordered_map>
 
-auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(
-    const std::vector<std::string>& paragraph,
-    const std::vector<std::string>& keywords)
+auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(const std::vector<std::string>& paragraph,
+                                                          const std::vector<std::string>& keywords)
     -> std::tuple<int, int>
 {
     // keep track of the number of keywords that have been covered
@@ -62,9 +61,8 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(
     return result;
 }
 
-auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(
-    const std::vector<std::string>& paragraph,
-    const std::vector<std::string>& keywords)
+auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(const std::vector<std::string>& paragraph,
+                                                                      const std::vector<std::string>& keywords)
     -> std::tuple<int, int>
 {
     // map each keyword to its index in the keywords vector
@@ -96,7 +94,8 @@ auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(
             else if (shortest_subarray_length[keyword_index - 1] != std::numeric_limits<int>::max())
             {
                 const auto distance_to_previous_keyword = i - last_occurrence[keyword_index - 1];
-                shortest_subarray_length[keyword_index] = distance_to_previous_keyword + shortest_subarray_length[keyword_index - 1];
+                shortest_subarray_length[keyword_index] =
+                    distance_to_previous_keyword + shortest_subarray_length[keyword_index - 1];
             }
             last_occurrence[keyword_index] = i;
 

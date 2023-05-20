@@ -1,4 +1,5 @@
 #include "combination.h"
+
 #include "sequence_util.h"
 
 void Combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, const int subset_size)

@@ -22,7 +22,8 @@ GTEST_TEST(FindSmallestSubarrayCoveringSet, SingleMatch)
 
 GTEST_TEST(FindSmallestSubarrayCoveringSet, MultipleMatches)
 {
-    const std::vector<std::string> paragraph{"apple", "banana", "apple", "apple", "dog", "cat", "apple", "dog", "banana", "apple", "cat", "dog"};
+    const std::vector<std::string> paragraph{"apple", "banana", "apple", "apple", "dog", "cat",
+                                             "apple", "dog", "banana", "apple", "cat", "dog"};
     const std::vector<std::string> keywords{"banana", "cat"};
     const auto result = SmallestSubarray::FindSmallestSubarrayCoveringSubset(paragraph, keywords);
     EXPECT_EQ(8, std::get<0>(result));
@@ -49,7 +50,8 @@ GTEST_TEST(FindSmallestSubarraySequentiallyCoveringSubset, SingleMatch)
 
 GTEST_TEST(FindSmallestSubarraySequentiallyCoveringSubset, MultipleMatches)
 {
-    const std::vector<std::string> paragraph{"apple", "banana", "apple", "apple", "dog", "cat", "apple", "dog", "banana", "apple", "cat", "dog"};
+    const std::vector<std::string> paragraph{"apple", "banana", "apple", "apple", "dog", "cat",
+                                             "apple", "dog", "banana", "apple", "cat", "dog"};
     const std::vector<std::string> keywords{"banana", "cat"};
     const auto result = SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(paragraph, keywords);
     EXPECT_EQ(8, std::get<0>(result));

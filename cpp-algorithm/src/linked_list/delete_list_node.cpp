@@ -6,7 +6,8 @@ void DeleteListNode::DeleteNodeFromList(std::shared_ptr<LinkedList::Node<int>>& 
     node_to_delete->next = node_to_delete->next->next;
 }
 
-auto DeleteListNode::DeleteNodeKthLast(std::shared_ptr<LinkedList::Node<int>>& list, int k) -> std::shared_ptr<LinkedList::Node<int>>
+auto DeleteListNode::DeleteNodeKthLast(std::shared_ptr<LinkedList::Node<int>>& list, int k)
+    -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, list});
 
@@ -29,7 +30,8 @@ auto DeleteListNode::DeleteNodeKthLast(std::shared_ptr<LinkedList::Node<int>>& l
     return dummy_head->next;
 }
 
-auto DeleteListNode::DeleteDuplicateNode(std::shared_ptr<LinkedList::Node<int>>& list) -> std::shared_ptr<LinkedList::Node<int>>
+auto DeleteListNode::DeleteDuplicateNode(std::shared_ptr<LinkedList::Node<int>>& list)
+    -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto iter = list;
     while (iter)

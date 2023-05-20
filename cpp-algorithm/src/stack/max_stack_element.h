@@ -10,10 +10,7 @@ namespace MaxStackElement
     class Stack
     {
     public:
-        bool Empty() const
-        {
-            return std::empty(element_with_cached_max_);
-        }
+        bool Empty() const { return std::empty(element_with_cached_max_); }
 
         int Max() const
         {
@@ -37,8 +34,7 @@ namespace MaxStackElement
 
         void Push(const int x)
         {
-            element_with_cached_max_.emplace(
-                ElementWithCachedMax{x, std::max(x, Empty() ? x : Max())});
+            element_with_cached_max_.emplace(ElementWithCachedMax{x, std::max(x, Empty() ? x : Max())});
         }
 
     private:

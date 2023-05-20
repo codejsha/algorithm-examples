@@ -14,7 +14,8 @@ namespace IntersectTwoSortedArray
      * @param arr2 second number array
      * @return number array of intersection
      */
-    auto IntersectTwoSortedArrayLoopJoin(const std::vector<int>& arr1, const std::vector<int>& arr2) -> std::vector<int>;
+    auto IntersectTwoSortedArrayLoopJoin(const std::vector<int>& arr1, const std::vector<int>& arr2)
+        -> std::vector<int>;
 
     /**
      * @brief Compute the intersection of two sorted arrays.
@@ -25,7 +26,8 @@ namespace IntersectTwoSortedArray
      * @param arr2 second number array
      * @return number array of intersection
      */
-    auto IntersectTwoSortedArrayLoopJoin2(const std::vector<int>& arr1, const std::vector<int>& arr2) -> std::vector<int>;
+    auto IntersectTwoSortedArrayLoopJoin2(const std::vector<int>& arr1, const std::vector<int>& arr2)
+        -> std::vector<int>;
 
     /**
      * @brief Compute the intersection of two sorted arrays.

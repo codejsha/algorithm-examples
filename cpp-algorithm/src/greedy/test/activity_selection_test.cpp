@@ -12,8 +12,7 @@ GTEST_TEST(ActivitySelection, RecursiveActivitySelection)
     constexpr auto index = 0;
     const auto size = static_cast<int>(start_times.size());
 
-    auto result = ActivitySelection::RecursiveActivitySelector(
-        start_times, end_times, index, size);
+    auto result = ActivitySelection::RecursiveActivitySelector(start_times, end_times, index, size);
     std::ranges::reverse(result);
 
     EXPECT_EQ(expected, result);

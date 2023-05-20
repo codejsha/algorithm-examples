@@ -9,8 +9,10 @@
 /// @return the index of the pivot element
 /// @note
 /// Comparison Explanation:
-/// - Finding k-th smallest element: This comparison is used to find the k-th smallest element: @code if (arr[j] <= pivot) @endcode
-/// - Finding k-th largest element: This comparison is used to find the k-th largest element: @code if (arr[j] >= pivot) @endcode
+/// - Finding k-th smallest element: This comparison is used to find the k-th smallest element:
+///     @code if (arr[j] <= pivot) @endcode
+/// - Finding k-th largest element: This comparison is used to find the k-th largest element:
+///     @code if (arr[j] >= pivot) @endcode
 auto Partition(std::vector<int>& array, const int left, const int right) -> int
 {
     const auto pivot = array[right];

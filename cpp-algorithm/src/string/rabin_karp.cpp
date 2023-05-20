@@ -13,8 +13,7 @@ auto RabinKarp::RabinKarpMatcher1(const std::string& text, const std::string& pa
     for (auto i = 0; i <= static_cast<int>(text.size()) - static_cast<int>(pattern.size()); ++i)
     {
         const auto next_hash = std::hash<std::string>{}(text.substr(i, pattern.size()));
-        if (next_hash == pattern_hash
-            && text.substr(i, pattern.size()) == pattern)
+        if (next_hash == pattern_hash && text.substr(i, pattern.size()) == pattern)
         {
             result.emplace_back(i);
         }

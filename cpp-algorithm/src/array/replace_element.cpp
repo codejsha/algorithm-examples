@@ -1,7 +1,7 @@
 #include "replace_element.h"
 
-auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr,
-    const std::string& replace_str, const std::string& remove_str) -> std::vector<std::string>
+auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr, const std::string& replace_str,
+                                             const std::string& remove_str) -> std::vector<std::string>
 {
     auto write_index = 0;
     auto a_count = 0;
@@ -37,8 +37,8 @@ auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr,
     return std::vector<std::string>{arr.begin(), arr.begin() + final_size};
 }
 
-auto ReplaceElement::ReplaceAndRemoveString2(std::vector<std::string>& arr,
-    const std::string& replace_str, const std::string& remove_str) -> std::vector<std::string>
+auto ReplaceElement::ReplaceAndRemoveString2(std::vector<std::string>& arr, const std::string& replace_str,
+                                             const std::string& remove_str) -> std::vector<std::string>
 {
     std::erase(arr, remove_str);
     for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
@@ -77,7 +77,8 @@ auto ReplaceElement::TelexEncoding(std::vector<std::string>& arr) -> std::vector
         }
         else if (arr[i] == "!")
         {
-            auto str = std::vector<std::string>{"E", "X", "C", "L", "A", "M", "A", "T", "I", "O", "N", "_", "M", "A", "R", "K"};
+            auto str = std::vector<std::string>{"E", "X", "C", "L", "A", "M", "A", "T",
+                                                "I", "O", "N", "_", "M", "A", "R", "K"};
             arr.erase(arr.begin() + i);
             arr.insert(arr.begin() + i, str.begin(), str.end());
         }

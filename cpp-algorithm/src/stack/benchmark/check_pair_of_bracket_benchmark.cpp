@@ -8,8 +8,7 @@ static void BM_CheckPairOfBracket(benchmark::State& state, Args&&... args)
     auto args_tuple = std::make_tuple(std::move(args)...);
     for (auto _ : state)
     {
-        benchmark::DoNotOptimize(
-            PairOfBracket::CheckPairOfBracket(std::get<0>(args_tuple)));
+        benchmark::DoNotOptimize(PairOfBracket::CheckPairOfBracket(std::get<0>(args_tuple)));
     }
 }
 

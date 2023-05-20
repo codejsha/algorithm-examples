@@ -12,16 +12,14 @@ namespace MergeList
     /// @param list1 the head of the first list
     /// @param list2 the head of the second list
     /// @return the head of merged sorted linked list
-    auto MergeTwoSortedLinkedList(
-        const std::shared_ptr<LinkedList::Node<int>>& list1,
-        const std::shared_ptr<LinkedList::Node<int>>& list2)
+    auto MergeTwoSortedLinkedList(const std::shared_ptr<LinkedList::Node<int>>& list1,
+                                  const std::shared_ptr<LinkedList::Node<int>>& list2)
         -> std::shared_ptr<LinkedList::Node<int>>;
 
     /// @brief Merge even and odd nodes in a singly linked list.
     /// @param list the head of the list
     /// @return the head of the even-odd merged list
-    auto MergeEvenOddLinkedList(
-        const std::shared_ptr<LinkedList::Node<int>>& list)
+    auto MergeEvenOddLinkedList(const std::shared_ptr<LinkedList::Node<int>>& list)
         -> std::shared_ptr<LinkedList::Node<int>>;
 }
 

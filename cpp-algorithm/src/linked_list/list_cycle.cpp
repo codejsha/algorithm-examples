@@ -15,7 +15,8 @@ void AdvanceListByDifference(int difference, std::shared_ptr<LinkedList::Node<in
 /// @param list1 the head of the first list
 /// @param list2 the head of the second list
 /// @return overlapping distance between list1 and list2
-auto OverlappingDistance(std::shared_ptr<LinkedList::Node<int>>& list1, std::shared_ptr<LinkedList::Node<int>>& list2) -> int
+auto OverlappingDistance(std::shared_ptr<LinkedList::Node<int>>& list1, std::shared_ptr<LinkedList::Node<int>>& list2)
+    -> int
 {
     auto distance = 0;
     while (list1 != list2)
@@ -120,9 +121,8 @@ auto ListCycle::HasCycle3(const std::shared_ptr<LinkedList::Node<int>>& list) ->
     return -1;
 }
 
-auto ListCycle::OverlappingNoCycleList(
-    std::shared_ptr<LinkedList::Node<int>>& list1,
-    std::shared_ptr<LinkedList::Node<int>>& list2)
+auto ListCycle::OverlappingNoCycleList(std::shared_ptr<LinkedList::Node<int>>& list1,
+                                       std::shared_ptr<LinkedList::Node<int>>& list2)
     -> std::shared_ptr<LinkedList::Node<int>>
 {
     const auto list1_length = LinkedList::Length(list1);
@@ -139,9 +139,8 @@ auto ListCycle::OverlappingNoCycleList(
     return list1;
 }
 
-auto ListCycle::OverlappingCycleList(
-    std::shared_ptr<LinkedList::Node<int>>& list1,
-    std::shared_ptr<LinkedList::Node<int>>& list2)
+auto ListCycle::OverlappingCycleList(std::shared_ptr<LinkedList::Node<int>>& list1,
+                                     std::shared_ptr<LinkedList::Node<int>>& list2)
     -> std::shared_ptr<LinkedList::Node<int>>
 {
     auto root1 = HasCycle1(list1);

@@ -14,8 +14,7 @@ auto Fibonacci::FibonacciDynamicTopDown(const int number, std::vector<int>& memo
     {
         return memo[number];
     }
-    memo[number] = FibonacciDynamicTopDown(number - 1, memo)
-                   + FibonacciDynamicTopDown(number - 2, memo);
+    memo[number] = FibonacciDynamicTopDown(number - 1, memo) + FibonacciDynamicTopDown(number - 2, memo);
     return memo[number];
 }
 

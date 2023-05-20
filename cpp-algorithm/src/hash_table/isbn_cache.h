@@ -11,14 +11,10 @@ namespace IsbnCache
     class LruCache
     {
     public:
-        LruCache(size_t capacity)
-        {
-        }
+        LruCache(size_t capacity) {}
 
         explicit LruCache(int capacity)
-            : capacity_(capacity)
-        {
-        }
+            : capacity_(capacity) {}
 
         /// @brief Lookup ISBN in cache.
         /// @param isbn the ISBN to search for

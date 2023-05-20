@@ -23,9 +23,8 @@ auto OnlineDataMedian::FindMedian(std::deque<int>& stream) -> std::vector<double
             max_heap.pop();
         }
 
-        result.emplace_back(min_heap.size() == max_heap.size()
-                                ? (min_heap.top() + max_heap.top()) / 2.0
-                                : min_heap.top());
+        result.emplace_back(min_heap.size() == max_heap.size() ? (min_heap.top() + max_heap.top()) / 2.0
+                                                               : min_heap.top());
     }
 
     return result;

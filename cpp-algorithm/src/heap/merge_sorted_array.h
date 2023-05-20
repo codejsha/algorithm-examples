@@ -12,8 +12,8 @@ namespace MergeSortedArray
     /// @tparam T parameter pack of sorted arrays
     /// @param vectors k sorted integer arrays
     /// @return a single sorted array
-    template <typename... T> auto MergeSortedArray(T... vectors)
-        -> std::priority_queue<int, std::vector<int>, std::less<int>>
+    template <typename... T>
+    auto MergeSortedArray(T... vectors) -> std::priority_queue<int, std::vector<int>, std::less<int>>
     {
         auto queue = std::priority_queue<int>{};
         const auto length = static_cast<int>(sizeof...(vectors));
@@ -31,8 +31,7 @@ namespace MergeSortedArray
             }
 
             // check if all vectors are empty
-            if (std::all_of(vector_arr.begin(), vector_arr.end(), [](const auto& v)
-                    { return v.empty(); }))
+            if (std::all_of(vector_arr.begin(), vector_arr.end(), [](const auto& v) { return v.empty(); }))
             {
                 break;
             }

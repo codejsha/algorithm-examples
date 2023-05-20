@@ -3,7 +3,8 @@
 #include <algorithm>
 #include <unordered_map>
 
-auto FindAnagram::FindAnagramMappings(const std::vector<std::string>& dictionary) -> std::vector<std::vector<std::string>>
+auto FindAnagram::FindAnagramMappings(const std::vector<std::string>& dictionary)
+    -> std::vector<std::vector<std::string>>
 {
     std::unordered_map<std::string, std::vector<std::string>> dictionary_map;
     for (const auto& word : dictionary)

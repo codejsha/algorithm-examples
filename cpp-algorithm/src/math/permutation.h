@@ -15,7 +15,8 @@ namespace Permutation
     /// @param permutation permutation array
     /// @param arr array
     /// @return result array
-    auto ApplyPermutationWithAdditionalSpace(const std::vector<int>& permutation, const std::vector<char>& arr) -> std::vector<char>;
+    auto ApplyPermutationWithAdditionalSpace(const std::vector<int>& permutation, const std::vector<char>& arr)
+        -> std::vector<char>;
 
     /// @brief Permute the elements of an array. (in-place)
     /// @param permutation permutation array

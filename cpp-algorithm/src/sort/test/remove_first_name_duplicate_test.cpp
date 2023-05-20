@@ -11,7 +11,6 @@ GTEST_TEST(EliminateDuplicate, Successful1)
     EXPECT_EQ(expected, seq);
 }
 
-
 GTEST_TEST(EliminateFirstNameDuplicate, Successful1)
 {
     std::vector<std::string> seq = {"Ian Botham", "David Gower", "Ian Bell", "Ian Chappell"};

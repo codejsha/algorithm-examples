@@ -42,7 +42,7 @@ auto CommonSubsequence::LongestCommonSubsequenceLength(const std::string& seq1, 
 }
 
 void CommonSubsequence::LongestCommonSubsequence(const std::string& seq1, const gsl_matrix_char* direction_matrix,
-    const int length1, const int length2, std::string& result)
+                                                 const int length1, const int length2, std::string& result)
 {
     if ((length1 == 0) || (length2 == 0))
     {
@@ -65,7 +65,7 @@ void CommonSubsequence::LongestCommonSubsequence(const std::string& seq1, const 
 }
 
 void CommonSubsequence::PrintOptimalMatrix(const std::string& seq1, const std::string& seq2,
-    const gsl_matrix_char* direction_matrix)
+                                           const gsl_matrix_char* direction_matrix)
 {
     const auto seq_length1 = static_cast<int>(seq1.length());
     const auto seq_length2 = static_cast<int>(seq2.length());

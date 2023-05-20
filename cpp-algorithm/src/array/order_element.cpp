@@ -23,8 +23,7 @@ auto OrderElement::Rearrange(std::vector<int>& numbers) -> std::vector<int>
 {
     for (auto i = 1; std::size(numbers); ++i)
     {
-        if ((!(i % 2) && numbers[i - 1] < numbers[i])
-            || ((i % 2) && numbers[i - 1] > numbers[i]))
+        if ((!(i % 2) && numbers[i - 1] < numbers[i]) || ((i % 2) && numbers[i - 1] > numbers[i]))
         {
             std::swap(numbers[i - 1], numbers[i]);
         }

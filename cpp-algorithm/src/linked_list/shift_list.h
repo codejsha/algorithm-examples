@@ -13,7 +13,8 @@ namespace ShiftList
     /// @param list the head of the list
     /// @param k k shifts
     /// @return the head of modified list
-    auto CyclicallyRightShiftList(std::shared_ptr<LinkedList::Node<int>>& list, int k) -> std::shared_ptr<LinkedList::Node<int>>;
+    auto CyclicallyRightShiftList(std::shared_ptr<LinkedList::Node<int>>& list, int k)
+        -> std::shared_ptr<LinkedList::Node<int>>;
 }
 
 #endif

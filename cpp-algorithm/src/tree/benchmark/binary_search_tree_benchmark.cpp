@@ -105,7 +105,18 @@ static void BM_BinarySearchTree_Predecessor(benchmark::State& state)
     }
 }
 
-BENCHMARK(BM_BinarySearchTree_Predecessor)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
+BENCHMARK(BM_BinarySearchTree_Predecessor)
+    ->Arg(15)
+    ->Arg(6)
+    ->Arg(18)
+    ->Arg(3)
+    ->Arg(7)
+    ->Arg(17)
+    ->Arg(20)
+    ->Arg(2)
+    ->Arg(4)
+    ->Arg(13)
+    ->Arg(9);
 
 static void BM_BinarySearchTree_Successor(benchmark::State& state)
 {
@@ -122,7 +133,18 @@ static void BM_BinarySearchTree_Successor(benchmark::State& state)
     }
 }
 
-BENCHMARK(BM_BinarySearchTree_Successor)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
+BENCHMARK(BM_BinarySearchTree_Successor)
+    ->Arg(15)
+    ->Arg(6)
+    ->Arg(18)
+    ->Arg(3)
+    ->Arg(7)
+    ->Arg(17)
+    ->Arg(20)
+    ->Arg(2)
+    ->Arg(4)
+    ->Arg(13)
+    ->Arg(9);
 
 static void BM_BinarySearchTree_IterativeSearch(benchmark::State& state)
 {
@@ -139,7 +161,18 @@ static void BM_BinarySearchTree_IterativeSearch(benchmark::State& state)
     }
 }
 
-BENCHMARK(BM_BinarySearchTree_IterativeSearch)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
+BENCHMARK(BM_BinarySearchTree_IterativeSearch)
+    ->Arg(15)
+    ->Arg(6)
+    ->Arg(18)
+    ->Arg(3)
+    ->Arg(7)
+    ->Arg(17)
+    ->Arg(20)
+    ->Arg(2)
+    ->Arg(4)
+    ->Arg(13)
+    ->Arg(9);
 
 static void BM_BinarySearchTree_RecursiveSearch(benchmark::State& state)
 {
@@ -156,6 +189,17 @@ static void BM_BinarySearchTree_RecursiveSearch(benchmark::State& state)
     }
 }
 
-BENCHMARK(BM_BinarySearchTree_RecursiveSearch)->Arg(15)->Arg(6)->Arg(18)->Arg(3)->Arg(7)->Arg(17)->Arg(20)->Arg(2)->Arg(4)->Arg(13)->Arg(9);
+BENCHMARK(BM_BinarySearchTree_RecursiveSearch)
+    ->Arg(15)
+    ->Arg(6)
+    ->Arg(18)
+    ->Arg(3)
+    ->Arg(7)
+    ->Arg(17)
+    ->Arg(20)
+    ->Arg(2)
+    ->Arg(4)
+    ->Arg(13)
+    ->Arg(9);
 
 BENCHMARK_MAIN();

@@ -32,7 +32,8 @@ namespace RodCutting
     /// @return the maximum revenue
     auto BottomUpCutRod(const std::map<int, int>& price, int length) -> int;
 
-    /// @brief Rod cutting algorithm that computes the maximum revenue and the optimal size of the first piece for given rod length.
+    /// @brief Rod cutting algorithm that computes the maximum revenue and the optimal size of the first piece for given
+    /// rod length.
     /// @param price prices for rod length
     /// @param length length of a rod
     /// @return the maximum revenue and the optimal size of the first piece

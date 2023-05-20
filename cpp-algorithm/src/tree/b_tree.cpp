@@ -13,27 +13,19 @@ void BTree::Tree::SplitChild(Node* node, int index)
 
     // split keys of the left child
     // copy keys from median+1 to the end
-    auto right_keys = std::vector<char>(
-        left_child->keys.begin() + degree,
-        left_child->keys.end());
+    auto right_keys = std::vector<char>(left_child->keys.begin() + degree, left_child->keys.end());
     right_child->keys = std::move(right_keys);
     // get median key
     auto median_key = left_child->keys[degree - 1];
     // erase keys from median to the end
-    left_child->keys.erase(
-        left_child->keys.begin() + degree - 1,
-        left_child->keys.end());
+    left_child->keys.erase(left_child->keys.begin() + degree - 1, left_child->keys.end());
 
     // split children of the left child
     if (left_child->is_leaf == false)
     {
-        auto right_children = std::vector<Node*>(
-            left_child->children.begin() + degree,
-            left_child->children.end());
+        auto right_children = std::vector<Node*>(left_child->children.begin() + degree, left_child->children.end());
         right_child->children = std::move(right_children);
-        left_child->children.erase(
-            left_child->children.begin() + degree,
-            left_child->children.end());
+        left_child->children.erase(left_child->children.begin() + degree, left_child->children.end());
     }
 
     //// insert a new right node,

@@ -107,7 +107,7 @@ GTEST_TEST(ConstructTreeFromMarkerPreorder, PreorderTraversal)
     //                       /  \
 
     auto preorder = std::vector<char>{'H', 'B', 'F', NULL, NULL, 'E', 'A', NULL, NULL, NULL,
-        'C', NULL, 'D', NULL, 'G', 'I', NULL, NULL, NULL};
+                                      'C', NULL, 'D', NULL, 'G', 'I', NULL, NULL, NULL};
 
     auto root = ConstructBinarySearchTree::ConstructTreeFromMarkerPreorder(preorder);
     auto tree = BinarySearchTree::Tree<char>{};

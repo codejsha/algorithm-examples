@@ -11,8 +11,8 @@ namespace ReplaceElement
     /// @param replace_str replace string
     /// @param remove_str remove string
     /// @return result array
-    auto ReplaceAndRemoveString1(std::vector<std::string>& arr,
-        const std::string& replace_str, const std::string& remove_str) -> std::vector<std::string>;
+    auto ReplaceAndRemoveString1(std::vector<std::string>& arr, const std::string& replace_str,
+                                 const std::string& remove_str) -> std::vector<std::string>;
 
     /// @brief Replace element and remove element in the array.
     /// Use some STL algorithms.
@@ -20,8 +20,8 @@ namespace ReplaceElement
     /// @param replace_str replace string
     /// @param remove_str remove string
     /// @return result array
-    auto ReplaceAndRemoveString2(std::vector<std::string>& arr,
-        const std::string& replace_str, const std::string& remove_str) -> std::vector<std::string>;
+    auto ReplaceAndRemoveString2(std::vector<std::string>& arr, const std::string& replace_str,
+                                 const std::string& remove_str) -> std::vector<std::string>;
 
     /// @brief Telex encoding for punctuation marks.
     /// Replace '.' with 'DOT', ',' with 'COMMA', '?' with 'QUESTION_MARK', '!' with 'EXCLAMATION_MARK'.

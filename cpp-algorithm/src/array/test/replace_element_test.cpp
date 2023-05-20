@@ -36,7 +36,8 @@ GTEST_TEST(ReplaceElement, TelexEncoding)
     EXPECT_EQ(expected_question, result_question);
 
     auto arr_exclamation = std::vector<std::string>{"!"};
-    auto expected_exclamation = std::vector<std::string>{"E", "X", "C", "L", "A", "M", "A", "T", "I", "O", "N", "_", "M", "A", "R", "K"};
+    auto expected_exclamation =
+        std::vector<std::string>{"E", "X", "C", "L", "A", "M", "A", "T", "I", "O", "N", "_", "M", "A", "R", "K"};
     auto result_exclamation = ReplaceElement::TelexEncoding(arr_exclamation);
     EXPECT_EQ(expected_exclamation, result_exclamation);
 }

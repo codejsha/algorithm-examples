@@ -19,7 +19,8 @@ void Permutation::Permutation(const std::string& str, const std::string& prefix)
     }
 }
 
-auto Permutation::ApplyPermutationWithAdditionalSpace(const std::vector<int>& permutation, const std::vector<char>& arr) -> std::vector<char>
+auto Permutation::ApplyPermutationWithAdditionalSpace(const std::vector<int>& permutation, const std::vector<char>& arr)
+    -> std::vector<char>
 {
     std::vector<char> result(arr.size());
     for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
@@ -42,7 +43,8 @@ auto Permutation::ApplyPermutationBySwap(std::vector<int>& permutation, std::vec
     return arr;
 }
 
-auto Permutation::InversePermutation(const std::vector<int>& permutation, const std::vector<char>& arr) -> std::vector<int>
+auto Permutation::InversePermutation(const std::vector<int>& permutation, const std::vector<char>& arr)
+    -> std::vector<int>
 {
     std::vector<int> result(arr.size());
     for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
@@ -60,8 +62,7 @@ auto Permutation::NextPermutation(std::vector<int>& permutation) -> std::vector<
         return {};
     }
 
-    auto leastUpperBound = std::upper_bound(
-        permutation.rbegin(), inversionPoint, *inversionPoint);
+    auto leastUpperBound = std::upper_bound(permutation.rbegin(), inversionPoint, *inversionPoint);
 
     std::iter_swap(inversionPoint, leastUpperBound);
     std::reverse(permutation.rbegin(), inversionPoint);
@@ -71,15 +72,13 @@ auto Permutation::NextPermutation(std::vector<int>& permutation) -> std::vector<
 
 auto Permutation::PreviousPermutation(std::vector<int>& permutation) -> std::vector<int>
 {
-    auto inversionPoint = std::is_sorted_until(
-        permutation.rbegin(), permutation.rend(), std::greater<>());
+    auto inversionPoint = std::is_sorted_until(permutation.rbegin(), permutation.rend(), std::greater<>());
     if (inversionPoint == permutation.rend())
     {
         return {};
     }
 
-    auto leastUpperBound = std::upper_bound(
-        permutation.rbegin(), inversionPoint, *inversionPoint, std::greater<>());
+    auto leastUpperBound = std::upper_bound(permutation.rbegin(), inversionPoint, *inversionPoint, std::greater<>());
 
     std::iter_swap(inversionPoint, leastUpperBound);
     std::reverse(permutation.rbegin(), inversionPoint);

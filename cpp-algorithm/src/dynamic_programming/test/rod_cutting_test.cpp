@@ -4,10 +4,10 @@
 
 GTEST_TEST(RodCutting, Simple)
 {
-    const auto price = std::map<int, int>{
-        {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
-    const auto expected = std::map<int, int>{
-        {1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
+    const auto price =
+        std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
+    const auto expected =
+        std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
     const auto result1 = RodCutting::CutRod(price, 1);
     const auto result2 = RodCutting::CutRod(price, 2);
@@ -34,10 +34,10 @@ GTEST_TEST(RodCutting, Simple)
 
 GTEST_TEST(RodCutting, DynamicProgrammingTopDown)
 {
-    const auto price = std::map<int, int>{
-        {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
-    const auto expected = std::map<int, int>{
-        {1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
+    const auto price =
+        std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
+    const auto expected =
+        std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
     const auto result1 = RodCutting::MemoizedCutRod(price, 1);
     const auto result2 = RodCutting::MemoizedCutRod(price, 2);
@@ -64,10 +64,10 @@ GTEST_TEST(RodCutting, DynamicProgrammingTopDown)
 
 GTEST_TEST(RodCutting, DynamicProgrammingBottomUp)
 {
-    const auto price = std::map<int, int>{
-        {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
-    const auto expected = std::map<int, int>{
-        {1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
+    const auto price =
+        std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
+    const auto expected =
+        std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
     const auto result1 = RodCutting::BottomUpCutRod(price, 1);
     const auto result2 = RodCutting::BottomUpCutRod(price, 2);
@@ -97,8 +97,16 @@ GTEST_TEST(RodCutting, DynamicProgrammingExtendedBottomUp)
     const auto price = std::map<int, int>{
         {1, 1}, {2, 5}, {3, 8}, {4, 9}, {5, 10}, {6, 17}, {7, 17}, {8, 20}, {9, 24}, {10, 30}};
     const auto expected = std::map<int, std::tuple<int, int>>{
-        {1, {1, 1}}, {2, {5, 2}}, {3, {8, 3}}, {4, {10, 2}}, {5, {13, 2}},
-        {6, {17, 6}}, {7, {18, 1}}, {8, {22, 2}}, {9, {25, 3}}, {10, {30, 10}}};
+        {1, {1, 1}},
+        {2, {5, 2}},
+        {3, {8, 3}},
+        {4, {10, 2}},
+        {5, {13, 2}},
+        {6, {17, 6}},
+        {7, {18, 1}},
+        {8, {22, 2}},
+        {9, {25, 3}},
+        {10, {30, 10}}};
 
     const auto result1 = RodCutting::ExtendedBottomUpCutRod(price, 1);
     const auto result2 = RodCutting::ExtendedBottomUpCutRod(price, 2);

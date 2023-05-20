@@ -3,7 +3,8 @@
 #include <stdexcept>
 #include <unordered_set>
 
-auto OptimizedLca::FindOptimizedLowestCommonAncestor(const BinaryTree::ExtendedNode<int>* node1, const BinaryTree::ExtendedNode<int>* node2)
+auto OptimizedLca::FindOptimizedLowestCommonAncestor(const BinaryTree::ExtendedNode<int>* node1,
+                                                     const BinaryTree::ExtendedNode<int>* node2)
     -> const BinaryTree::ExtendedNode<int>*
 {
     auto iter1 = node1;

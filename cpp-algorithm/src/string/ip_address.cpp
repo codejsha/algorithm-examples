@@ -34,8 +34,7 @@ auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::st
                 const auto fourth = str.substr(i + j + k);
                 if (IsValidPart(first) && IsValidPart(second) && IsValidPart(third) && IsValidPart(fourth))
                 {
-                    result.push_back(std::format("{}.{}.{}.{}",
-                        first, second, third, fourth));
+                    result.push_back(std::format("{}.{}.{}.{}", first, second, third, fourth));
                 }
             }
         }
@@ -61,8 +60,7 @@ auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::st
                 const auto fourth = str.substr(i + j + k);
                 if (IsValidPart(first) && IsValidPart(second) && IsValidPart(third) && IsValidPart(fourth))
                 {
-                    result.push_back(fmt::format("{}.{}.{}.{}",
-                        first, second, third, fourth));
+                    result.push_back(fmt::format("{}.{}.{}.{}", first, second, third, fourth));
                 }
             }
         }

@@ -16,11 +16,7 @@ namespace Huffman
         int freq;
 
         HuffmanNode(const int key, const char ch, const int freq)
-            : left(nullptr),
-              right(nullptr),
-              key(key),
-              ch(ch),
-              freq(freq)
+            : left(nullptr), right(nullptr), key(key), ch(ch), freq(freq)
         {
         }
     };
@@ -29,10 +25,7 @@ namespace Huffman
     class MinComparator
     {
     public:
-        auto operator()(const HuffmanNode* l, const HuffmanNode* r) const -> bool
-        {
-            return (l->freq > r->freq);
-        }
+        auto operator()(const HuffmanNode* l, const HuffmanNode* r) const -> bool { return (l->freq > r->freq); }
     };
 
     /// @brief Huffman code algorithm.

@@ -1,6 +1,7 @@
 #include "shift_list.h"
 
-auto ShiftList::CyclicallyRightShiftList(std::shared_ptr<LinkedList::Node<int>>& list, int k) -> std::shared_ptr<LinkedList::Node<int>>
+auto ShiftList::CyclicallyRightShiftList(std::shared_ptr<LinkedList::Node<int>>& list, int k)
+    -> std::shared_ptr<LinkedList::Node<int>>
 {
     // empty list
     if (!list)

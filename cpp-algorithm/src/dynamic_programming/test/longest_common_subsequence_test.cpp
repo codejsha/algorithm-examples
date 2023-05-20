@@ -14,8 +14,7 @@ GTEST_TEST(CommonSubsequence, LongestCommonSubsequenceLength)
     const auto matrix = CommonSubsequence::LongestCommonSubsequenceLength(seq1, seq2);
     CommonSubsequence::PrintOptimalMatrix(seq1, seq2, std::get<1>(matrix));
     auto result = std::string{};
-    CommonSubsequence::LongestCommonSubsequence(seq1, std::get<1>(matrix),
-        seq_length1, seq_length2, result);
+    CommonSubsequence::LongestCommonSubsequence(seq1, std::get<1>(matrix), seq_length1, seq_length2, result);
 
     EXPECT_EQ(expected, result);
 }

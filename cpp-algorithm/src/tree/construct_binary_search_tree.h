@@ -20,11 +20,10 @@ namespace ConstructBinarySearchTree
     /// @param inorder_end end index of inorder map
     /// @param inorder_map inorder hash table
     /// @return the root of the subtree
-    template <typename T> auto ConstructTreeFromPreorderInorderHelper(
-        std::vector<T>& preorder, std::vector<T>& inorder,
-        int preorder_start, int preorder_end, int inorder_start, int inorder_end,
-        std::unordered_map<T, int>& inorder_map)
-        -> BinaryTree::ExtendedNode<T>*
+    template <typename T>
+    auto ConstructTreeFromPreorderInorderHelper(std::vector<T>& preorder, std::vector<T>& inorder, int preorder_start,
+                                                int preorder_end, int inorder_start, int inorder_end,
+                                                std::unordered_map<T, int>& inorder_map) -> BinaryTree::ExtendedNode<T>*
     {
         if (preorder_start > preorder_end || inorder_start > inorder_end)
         {
@@ -35,10 +34,12 @@ namespace ConstructBinarySearchTree
 
         auto inorder_root_idx = inorder_map.at(root->key);
         auto left_tree_size = inorder_root_idx - inorder_start;
-        root->left = ConstructTreeFromPreorderInorderHelper(preorder, inorder,
-            preorder_start + 1, preorder_start + left_tree_size, inorder_start, inorder_root_idx - 1, inorder_map);
-        root->right = ConstructTreeFromPreorderInorderHelper(preorder, inorder,
-            preorder_start + left_tree_size + 1, preorder_end, inorder_root_idx + 1, inorder_end, inorder_map);
+        root->left = ConstructTreeFromPreorderInorderHelper(preorder, inorder, preorder_start + 1,
+                                                            preorder_start + left_tree_size, inorder_start,
+                                                            inorder_root_idx - 1, inorder_map);
+        root->right =
+            ConstructTreeFromPreorderInorderHelper(preorder, inorder, preorder_start + left_tree_size + 1, preorder_end,
+                                                   inorder_root_idx + 1, inorder_end, inorder_map);
         return root;
     }
 
@@ -52,15 +53,17 @@ namespace ConstructBinarySearchTree
     /// @param preorder preorder traversal result
     /// @param inorder inorder traversal result
     /// @return the root of the constructed tree
-    template <typename T> auto ConstructTreeFromPreorderInorder(std::vector<T>& preorder, std::vector<T>& inorder) -> BinaryTree::ExtendedNode<T>*
+    template <typename T>
+    auto ConstructTreeFromPreorderInorder(std::vector<T>& preorder, std::vector<T>& inorder)
+        -> BinaryTree::ExtendedNode<T>*
     {
         auto inorder_map = std::unordered_map<T, int>();
         for (auto i = 0; i < inorder.size(); ++i)
         {
             inorder_map.emplace(inorder[i], i);
         }
-        return ConstructTreeFromPreorderInorderHelper(preorder, inorder,
-            0, preorder.size() - 1, 0, inorder.size() - 1, inorder_map);
+        return ConstructTreeFromPreorderInorderHelper(preorder, inorder, 0, preorder.size() - 1, 0, inorder.size() - 1,
+                                                      inorder_map);
     }
 
     /// @brief Construct the subtree from the given postorder traversal with marker.
@@ -70,7 +73,9 @@ namespace ConstructBinarySearchTree
     /// @param preorder preorder traversal result
     /// @param subtree_idx_pointer subtree index pointer
     /// @return the root of the subtree
-    template <typename T> auto ConstructTreeFromMarkerPreorderHelper(std::vector<T>& preorder, int& subtree_idx_pointer) -> BinaryTree::ExtendedNode<T>*
+    template <typename T>
+    auto ConstructTreeFromMarkerPreorderHelper(std::vector<T>& preorder, int& subtree_idx_pointer)
+        -> BinaryTree::ExtendedNode<T>*
     {
         if (subtree_idx_pointer >= preorder.size())
         {
@@ -99,7 +104,8 @@ namespace ConstructBinarySearchTree
     /// @tparam T the type of the key
     /// @param preorder preorder traversal result
     /// @return the root of the constructed tree
-    template <typename T> auto ConstructTreeFromMarkerPreorder(std::vector<T>& preorder) -> BinaryTree::ExtendedNode<T>*
+    template <typename T>
+    auto ConstructTreeFromMarkerPreorder(std::vector<T>& preorder) -> BinaryTree::ExtendedNode<T>*
     {
         auto subtree_idx_pointer = 0;
         return ConstructTreeFromMarkerPreorderHelper(preorder, subtree_idx_pointer);

@@ -13,7 +13,8 @@ namespace DeleteListNode
     /// @param list the head of the list
     /// @param k kth last
     /// @return the head of modified list
-    auto DeleteNodeKthLast(std::shared_ptr<LinkedList::Node<int>>& list, int k) -> std::shared_ptr<LinkedList::Node<int>>;
+    auto DeleteNodeKthLast(std::shared_ptr<LinkedList::Node<int>>& list, int k)
+        -> std::shared_ptr<LinkedList::Node<int>>;
 
     /// @brief Delete duplicate nodes from a singly linked list.
     /// @details The list is ordered by value in ascending order.

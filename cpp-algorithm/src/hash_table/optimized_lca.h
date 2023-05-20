@@ -10,7 +10,8 @@ namespace OptimizedLca
     /// @param node1 the first node
     /// @param node2 the second node
     /// @return the lowest common ancestor of node1 and node2
-    auto FindOptimizedLowestCommonAncestor(const BinaryTree::ExtendedNode<int>* node1, const BinaryTree::ExtendedNode<int>* node2)
+    auto FindOptimizedLowestCommonAncestor(const BinaryTree::ExtendedNode<int>* node1,
+                                           const BinaryTree::ExtendedNode<int>* node2)
         -> const BinaryTree::ExtendedNode<int>*;
 }
 #endif

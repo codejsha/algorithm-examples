@@ -37,10 +37,7 @@ namespace Dijkstra
     class MinComparator
     {
     public:
-        auto operator()(const Vertex* l, const Vertex* r) const -> bool
-        {
-            return (l->distance > r->distance);
-        }
+        auto operator()(const Vertex* l, const Vertex* r) const -> bool { return (l->distance > r->distance); }
     };
 
     /**

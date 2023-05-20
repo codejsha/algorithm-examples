@@ -11,8 +11,8 @@ namespace ActivitySelection
     /// @param index index of activity
     /// @param size size of activities
     /// @return the resulting set of selected activities
-    auto RecursiveActivitySelector(const std::vector<int>& start, const std::vector<int>& finish,
-        int index, int size) -> std::vector<int>;
+    auto RecursiveActivitySelector(const std::vector<int>& start, const std::vector<int>& finish, int index, int size)
+        -> std::vector<int>;
 
     /// @brief Activity selection problem using greedy algorithm.
     /// @param start start times of activities

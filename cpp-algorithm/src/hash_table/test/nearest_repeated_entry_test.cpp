@@ -36,9 +36,8 @@ GTEST_TEST(FindNearestRepeatedEntry, TwoWordsRepeated)
 
 GTEST_TEST(FindNearestRepeatedEntry, SomeWordsRepeated)
 {
-    const std::vector<std::string> paragraph =
-        {"All", "work", "and", "no", "play", "makes", "for", "no", "work", "no",
-            "fun", "and", "no", "results"};
+    const std::vector<std::string> paragraph = {"All", "work", "and", "no", "play", "makes", "for",
+                                                "no", "work", "no", "fun", "and", "no", "results"};
     constexpr auto expected = 2;
     const auto actual = NearestRepeatedEntry::FindNearestRepeatedEntry(paragraph);
     EXPECT_EQ(expected, actual);

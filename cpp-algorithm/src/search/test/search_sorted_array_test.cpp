@@ -44,8 +44,7 @@ GTEST_TEST(SearchSortedArray, SearchEntryEqualToItsIndex)
     const auto array = std::vector{-2, 0, 2, 3, 6, 7, 9};
     const auto expected = std::vector{2, 3};
     const auto result = SearchSortedArray::SearchEntryEqualToItsIndex(array);
-    const auto is_entry = std::ranges::find_if(array, [](auto x)
-        { return (x == 2) || (x == 3); });
+    const auto is_entry = std::ranges::find_if(array, [](auto x) { return (x == 2) || (x == 3); });
     EXPECT_TRUE(*is_entry);
 }
 

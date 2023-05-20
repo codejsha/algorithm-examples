@@ -13,15 +13,9 @@ namespace ClosestStar
         double y;
         double z;
 
-        [[nodiscard]] auto Distance() const -> double
-        {
-            return std::sqrt((x * x) + (y * y) + (z * z));
-        }
+        [[nodiscard]] auto Distance() const -> double { return std::sqrt((x * x) + (y * y) + (z * z)); }
 
-        [[nodiscard]] auto operator<(const Star& other) const -> bool
-        {
-            return Distance() < other.Distance();
-        }
+        [[nodiscard]] auto operator<(const Star& other) const -> bool { return Distance() < other.Distance(); }
     };
 
     /// @brief Find the closest star.

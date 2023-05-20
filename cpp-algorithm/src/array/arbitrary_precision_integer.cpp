@@ -77,10 +77,7 @@ auto ArbitraryPrecision::Multiply(std::vector<int>& num1, std::vector<int>& num2
         }
     }
 
-    result = {
-        std::ranges::find_if_not(begin(result), end(result), [](int i)
-            { return i == 0; }),
-        end(result)};
+    result = {std::ranges::find_if_not(begin(result), end(result), [](int i) { return i == 0; }), end(result)};
 
     if (std::empty(result))
     {
