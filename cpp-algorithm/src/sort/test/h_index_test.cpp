@@ -2,9 +2,16 @@
 
 #include <gtest/gtest.h>
 
-GTEST_TEST(HIndex, Successful1)
+GTEST_TEST(HIndex1, Successful)
 {
     auto citations = std::vector<int>{1, 4, 1, 4, 2, 1, 3, 5, 6};
     constexpr auto expected = 4;
-    EXPECT_EQ(expected, HIndex::HIndex(citations));
+    EXPECT_EQ(expected, HIndex::HIndex1(citations));
+}
+
+GTEST_TEST(HIndex2, Successful)
+{
+    auto citations = std::vector<int>{1, 4, 1, 4, 2, 1, 3, 5, 6};
+    constexpr auto expected = 4;
+    EXPECT_EQ(expected, HIndex::HIndex2(citations));
 }

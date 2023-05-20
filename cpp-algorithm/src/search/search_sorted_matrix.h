@@ -4,7 +4,8 @@
 
 namespace SearchSortedMatrix
 {
-    /// @brief Search in a 2D sorted array.
+    /// @brief Search a key in a sorted 2D array.
+    /// @details The 2D array is sorted in ascending order from left to right and top to bottom.
     /// @param matrix sorted 2D array
     /// @param key the key to search for
     /// @return true if the key is found, false otherwise
