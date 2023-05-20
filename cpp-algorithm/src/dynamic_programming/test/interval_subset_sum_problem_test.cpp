@@ -24,8 +24,10 @@ GTEST_TEST(IntervalSubset, DivideAndConquer)
 {
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     constexpr auto expected = 8;
+    constexpr auto low = 0;
+    const auto high = static_cast<int>(seq.size() - 1);
 
-    const auto result = IntervalSubset::DivideAndConquerSubsetSum(seq, 0, static_cast<int>(seq.size() - 1));
+    const auto result = IntervalSubset::DivideAndConquerSubsetSum(seq, low, high);
     EXPECT_EQ(expected, result);
 }
 

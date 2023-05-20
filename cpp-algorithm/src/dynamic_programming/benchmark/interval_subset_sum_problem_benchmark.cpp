@@ -29,7 +29,9 @@ static void BM_DivideAndConquerSubsetSum(benchmark::State& state)
     const auto seq = std::vector<int>{3, -1, 2, -1, 5};
     for (auto _ : state)
     {
-        IntervalSubset::DivideAndConquerSubsetSum(seq, 0, static_cast<int>(seq.size() - 1));
+        constexpr auto low = 0;
+        const auto high = static_cast<int>(seq.size() - 1);
+        IntervalSubset::DivideAndConquerSubsetSum(seq, low, high);
     }
 }
 

@@ -1,7 +1,7 @@
 #include "merge_two_sorted_array.h"
 
 void MergeTwoSortedArray::MergeTwoSortedArray(
-    std::vector<int>& seq1, const int m, 
+    std::vector<int>& seq1, const int m,
     const std::vector<int>& seq2, const int n)
 {
     auto i = m - 1;
