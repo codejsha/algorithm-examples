@@ -983,6 +983,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 - H-Index (`HIndex`), EPI#13.3: [c++](cpp-algorithm/src/sort) | Compute the researcher's h-index given a citation count array. The h-index is the largest number `h` such that `h` articles have at least `h` citations each.
 - Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI#13.1: [c++](cpp-algorithm/src/sort) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
+- Merge intervals (`MergeIntervals`), EPI#13.7, LeetCode#merge-intervals: [c++](cpp-algorithm/src/sort) | Given a collection of intervals, merge all overlapping intervals.
 - Merge two sorted arrays (`MergeTwoSortedArray`), EPI#13.2, LeetCode#merge-sorted-array: [c++](cpp-algorithm/src/sort) | Merge two sorted array. Merge the second array into the first array.
 - Remove first-name duplicates (`EliminateFirstNameDuplicate`), EPI#13.4: [c++](cpp-algorithm/src/sort) | Given an array of names, remove the duplicates of the first name.
 
