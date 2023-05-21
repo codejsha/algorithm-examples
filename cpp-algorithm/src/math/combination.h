@@ -1,15 +1,34 @@
 #ifndef CPP_ALGORITHM_COMBINATION_H
 #define CPP_ALGORITHM_COMBINATION_H
 
+#include <string>
 #include <vector>
 
 namespace Combination
 {
-    /// @brief Selection of all possible combinations of elements in a sequence.
-    /// @param seq sequence of elements
-    /// @param selected_items selected elements
-    /// @param subset_size size of the subset
-    void SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, int subset_size);
+    /**
+     * \brief Generate all possible combinations of integer elements in a sequence.
+     * \param seq sequence of integer elements
+     * \param k size of the subset
+     * \return combinations of integer elements
+     */
+    auto GenerateCombination(const std::vector<int>& seq, int k) -> std::vector<std::vector<int>>;
+
+    /**
+     * \brief Generate all possible combinations of string elements in a sequence.
+     * \param seq sequence of string elements
+     * \param k size of the subset
+     * \return combinations of string elements
+     */
+    auto GenerateCombination(const std::vector<std::string>& seq, int k) -> std::vector<std::vector<std::string>>;
+
+    /**
+     * \brief Generate all possible combinations of chars in a string.
+     * \param str given string
+     * \param k size of the subset
+     * \return combinations of chars in a string
+     */
+    auto GenerateCombination(const std::string& str, int k) -> std::vector<std::string>;
 }
 
 #endif

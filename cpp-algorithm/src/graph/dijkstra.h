@@ -15,8 +15,8 @@
 namespace Dijkstra
 {
     /**
-     * @brief Vertex of Dijkstra algorithm.
-     * @details Each vertex has a unique id, a set of neighbors, a predecessor and a distance.
+     * \brief Vertex of Dijkstra algorithm.
+     * \details Each vertex has a unique id, a set of neighbors, a predecessor and a distance.
      */
     struct Vertex
     {
@@ -32,7 +32,7 @@ namespace Dijkstra
     };
 
     /**
-     * @brief Comparator for priority queue.
+     * \brief Comparator for priority queue.
      */
     class MinComparator
     {
@@ -41,23 +41,23 @@ namespace Dijkstra
     };
 
     /**
-     * @brief Graph of Dijkstra algorithm.
+     * \brief Graph of Dijkstra algorithm.
      */
     class Graph
     {
     public:
         /**
-         * @brief Dijkstra algorithm.
-         * @details A single source shortest path algorithm that handle non-negative edge weights.
+         * \brief Dijkstra algorithm.
+         * \details A single source shortest path algorithm that handle non-negative edge weights.
          * It find the shortest path between two vertices in a graph.
          * Relaxation is the process of updating the distance of a vertex, when a shorter path is found.
-         * @param source source vertex
+         * \param source source vertex
          */
         void DijkstraAlgorithm(Vertex& source);
 
         /**
-         * @brief Reordering elements of the queue.
-         * @param min_queue minimum priority queue
+         * \brief Reordering elements of the queue.
+         * \param min_queue minimum priority queue
          */
         void ReorderQueue(std::priority_queue<Vertex*, std::vector<Vertex*>, MinComparator>& min_queue);
 

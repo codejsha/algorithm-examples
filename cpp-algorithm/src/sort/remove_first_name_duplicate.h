@@ -7,14 +7,14 @@
 namespace RemoveFirstNameDuplicate
 {
     /**
-     * @brief Remove the duplicate elements in a sequence.
-     * @param seq sequence of names
+     * \brief Remove the duplicate elements in a sequence.
+     * \param seq sequence of names
      */
     void EliminateDuplicate(std::vector<std::string>& seq);
 
     /**
-     * @brief Remove the duplicate elements in a sequence.
-     * @param seq sequence of names
+     * \brief Remove the duplicate elements in a sequence.
+     * \param seq sequence of names
      */
     void EliminateFirstNameDuplicate(std::vector<std::string>& seq);
 }

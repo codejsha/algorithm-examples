@@ -1,24 +1,71 @@
 #include "combination.h"
 
-#include "sequence_util.h"
-
-void Combination::SelectItem(std::vector<int>& seq, std::vector<int>& selected_items, const int subset_size)
+void GenerateCombinationHelper(const std::vector<int>& seq, const int k, std::vector<std::vector<int>>& result, std::vector<int>& current, const int start)
 {
-    const auto size = static_cast<int>(seq.size());
-
-    if (subset_size == 0)
+    if (static_cast<int>(current.size()) == k)
     {
-        if (selected_items[0] < selected_items[1])
-        {
-            Util::PrintSequence(selected_items);
-        }
+        result.push_back(current);
         return;
     }
 
-    for (auto i = 0; i < size; ++i)
+    for (auto i = start; i < static_cast<int>(seq.size()); ++i)
     {
-        selected_items.push_back(seq[i]);
-        SelectItem(seq, selected_items, subset_size - 1);
-        selected_items.pop_back();
+        current.push_back(seq[i]);
+        GenerateCombinationHelper(seq, k, result, current, i + 1);
+        current.pop_back();
     }
+}
+
+auto Combination::GenerateCombination(const std::vector<int>& seq, const int k) -> std::vector<std::vector<int>>
+{
+    std::vector<std::vector<int>> result;
+    std::vector<int> combination;
+    GenerateCombinationHelper(seq, k, result, combination, 0);
+    return result;
+}
+
+void GenerateCombinationHelper(const std::vector<std::string>& seq, const int k, std::vector<std::vector<std::string>>& result, std::vector<std::string>& current, const int start)
+{
+    if (static_cast<int>(current.size()) == k)
+    {
+        result.push_back(current);
+        return;
+    }
+    for (auto i = start; i < static_cast<int>(seq.size()); ++i)
+    {
+        current.push_back(seq[i]);
+        GenerateCombinationHelper(seq, k, result, current, i + 1);
+        current.pop_back();
+    }
+}
+
+auto Combination::GenerateCombination(const std::vector<std::string>& seq, const int k) -> std::vector<std::vector<std::string>>
+{
+    std::vector<std::vector<std::string>> result;
+    std::vector<std::string> combination;
+    GenerateCombinationHelper(seq, k, result, combination, 0);
+    return result;
+}
+
+void GenerateCombinationHelper(const std::string& str, const int k, std::vector<std::string>& result, const std::string& current, const int start)
+{
+    if (k == 0)
+    {
+        result.push_back(current);
+        return;
+    }
+
+    for (auto i = start; i <= static_cast<int>(str.length()) - k; ++i)
+    {
+        auto new_current = current + str[i];
+        GenerateCombinationHelper(str, k - 1, result, new_current, i + 1);
+    }
+}
+
+auto Combination::GenerateCombination(const std::string& str, const int k) -> std::vector<std::string>
+{
+    std::vector<std::string> result;
+    const std::string combination;
+    GenerateCombinationHelper(str, k, result, combination, 0);
+    return result;
 }
