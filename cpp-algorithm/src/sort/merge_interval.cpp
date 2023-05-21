@@ -22,7 +22,7 @@ auto MergeInterval::MergeIntervals(std::vector<std::vector<int>>& intervals)
 
     for (const auto& interval : intervals)
     {
-        // current interval does not overlap
+        // if current interval does not overlap with previous
         if (result.back()[1] < interval[0])
         {
             result.emplace_back(interval);

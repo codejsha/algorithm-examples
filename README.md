@@ -732,7 +732,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 - Base expansion (base $b$ expansion of $n$): [python](python-algorithm/algorithm/math) | Constructing the base $b$ expansion of an integer $n$. Such as binary, octal, decimal, hexadecimal expansion, etc.
 - Binary operation (`addition`): [python](python-algorithm/algorithm/math)
-- Combination: [c++](cpp-algorithm/src/math) | Find the number of ways to choose $k$ items from $n$ items.
+- Combination (`GenerateCombination`): [c++](cpp-algorithm/src/math) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
 - Greatest common divisor (GCD): [python](python-algorithm/algorithm/math) | Find the greatest common divisor of two numbers.
 - Inverse of matrix: Inverse of matrix is a mathematical algorithm that finds the inverse of a matrix.
