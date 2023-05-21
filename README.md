@@ -986,6 +986,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 - Merge intervals (`MergeIntervals`), EPI#13.7, LeetCode#merge-intervals: [c++](cpp-algorithm/src/sort) | Given a collection of intervals, merge all overlapping intervals.
 - Merge two sorted arrays (`MergeTwoSortedArray`), EPI#13.2, LeetCode#merge-sorted-array: [c++](cpp-algorithm/src/sort) | Merge two sorted array. Merge the second array into the first array.
 - Remove first-name duplicates (`EliminateFirstNameDuplicate`), EPI#13.4: [c++](cpp-algorithm/src/sort) | Given an array of names, remove the duplicates of the first name.
+- Union of intervals (`UnionOfIntervals`), EPI#13.8: [c++](cpp-algorithm/src/sort) | Given a set of intervals, compute their union.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
