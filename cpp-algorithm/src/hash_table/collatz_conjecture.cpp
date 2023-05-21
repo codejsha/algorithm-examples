@@ -39,7 +39,7 @@ auto CollatzConjecture::FindNumbersSatisfyingCollatzConjecture(const long long n
 {
     std::vector<long long> satisfied_numbers;
     std::unordered_map<long long, std::vector<long long>> hash_table;
-    for (auto i = 1LL; i < number; i++)
+    for (auto i = 1LL; i < number; ++i)
     {
         // if the Collatz sequence ends with 1, then satisfies the Collatz conjecture
         if (auto sequence = GenerateCollatzSequence(i, hash_table); sequence.back() == 1)
