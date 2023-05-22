@@ -16,28 +16,28 @@ Each project is configured in specific environments, as described below:
 
 ## Table of Contents
 
-- [DATA STRUCTURES](#data-structures)
-  - [:train: ARRAY](#train-array)
-  - [:chart\_with\_upwards\_trend: GRAPH](#chart_with_upwards_trend-graph)
-  - [:key: HASH TABLE](#key-hash-table)
-  - [:rocket: HEAP](#rocket-heap)
-  - [:paperclips: LINKED LIST](#paperclips-linked-list)
-  - [:walking: QUEUE](#walking-queue)
-  - [:hamburger: STACK](#hamburger-stack)
-  - [:deciduous\_tree: TREE](#deciduous_tree-tree)
-- [TOPICS](#topics)
-  - [:jigsaw: DYNAMIC PROGRAMMING](#jigsaw-dynamic-programming)
-  - [:clock9: GREEDY](#clock9-greedy)
-  - [:triangular\_ruler: MATHEMATICS](#triangular_ruler-mathematics)
-  - [:1234: PRIMITIVE TYPE](#1234-primitive-type)
-  - [:mag: SEARCH](#mag-search)
-  - [:abc: SORT](#abc-sort)
-  - [:page\_facing\_up: STRING](#page_facing_up-string)
-- [REFERENCES](#references)
+- [Data structures](#data-structures)
+  - [:train: Array](#train-array)
+  - [:chart\_with\_upwards\_trend: Graph](#chart_with_upwards_trend-graph)
+  - [:key: Hash table](#key-hash-table)
+  - [:rocket: Heap](#rocket-heap)
+  - [:paperclips: Linked list](#paperclips-linked-list)
+  - [:walking: Queue](#walking-queue)
+  - [:hamburger: Stack](#hamburger-stack)
+  - [:deciduous\_tree: Tree](#deciduous_tree-tree)
+- [Topics](#topics)
+  - [:jigsaw: Dynamic programming](#jigsaw-dynamic-programming)
+  - [:clock9: Greedy](#clock9-greedy)
+  - [:triangular\_ruler: Mathematics](#triangular_ruler-mathematics)
+  - [:1234: Primitive type](#1234-primitive-type)
+  - [:mag: Search](#mag-search)
+  - [:abc: Sort](#abc-sort)
+  - [:page\_facing\_up: String](#page_facing_up-string)
+- [References](#references)
 
-## DATA STRUCTURES
+## Data structures
 
-### :train: ARRAY
+### :train: Array
 
 **C++ declaration/methods**
 
@@ -147,7 +147,7 @@ Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to st
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :chart_with_upwards_trend: GRAPH
+### :chart_with_upwards_trend: Graph
 
 - Shortest path algorithm
   - Single-source: Bellman-Ford algorithm, Dijkstra's algorithm
@@ -385,18 +385,19 @@ algorithm PushRelabel(G):
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :key: HASH TABLE
+### :key: Hash table
 
 **C++ declaration/methods**
 
 ```cpp
+// map
 auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), find("b"), end(), erase("a"), size(), empty()
+// set
 auto set = std::unordered_set{1, 2, 3, 4, 5};
 insert(42), emplace(42), find(42), end(), erase(42), size(), empty()
-
 // tuple
-auto result = std::tuple{-1, -1};
+auto t = std::tuple{-1, -1};
 
 // transform
 std::ranges::transform(nums, std::inserter(map, map.end()),
@@ -423,9 +424,11 @@ sample_counter.update([1, 1, 2, 2, 3])
 **Java declaration/methods**
 
 ```java
+// map
 var map = new HashMap<String, Integer>();
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
+// set
 var set = new HashSet<Integer>();
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator()
 
@@ -450,7 +453,7 @@ Collections.unmodifiableSortedSet(set);
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :rocket: HEAP
+### :rocket: Heap
 
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
 
@@ -489,7 +492,7 @@ contains(1), clear(), iterator()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :paperclips: LINKED LIST
+### :paperclips: Linked list
 
 In Python, there is no built-in type or library for LinkedList.
 
@@ -538,7 +541,7 @@ iterator(), listIterator()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :walking: QUEUE
+### :walking: Queue
 
 **C++ declaration/methods**
 
@@ -576,7 +579,7 @@ var list = new ArrayList<>(deque);          // deque to list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :hamburger: STACK
+### :hamburger: Stack
 
 **C++ declaration/methods**
 
@@ -615,15 +618,17 @@ var list = new ArrayList<>(stack);          // stack to list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :deciduous_tree: TREE
+### :deciduous_tree: Tree
 
 The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
 
 **C++ declaration/methods (binary search tree based)**
 
 ```cpp
+// map
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
+// set
 auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 ```
@@ -699,9 +704,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-## TOPICS
+## Topics
 
-### :jigsaw: DYNAMIC PROGRAMMING
+### :jigsaw: Dynamic programming
 
 **Examples**
 
@@ -715,7 +720,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :clock9: GREEDY
+### :clock9: Greedy
 
 **Examples**
 
@@ -726,7 +731,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :triangular_ruler: MATHEMATICS
+### :triangular_ruler: Mathematics
 
 **Examples**
 
@@ -749,7 +754,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :1234: PRIMITIVE TYPE
+### :1234: Primitive type
 
 **C++ declaration/methods**
 
@@ -831,13 +836,15 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :mag: SEARCH
+### :mag: Search
 
 **C++ declaration/methods**
 
 ```cpp
+// map
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
+// set
 auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 
@@ -888,7 +895,7 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :abc: SORT
+### :abc: Sort
 
 **C++ declaration/methods**
 
@@ -901,8 +908,8 @@ std::ranges::stable_sort(v);  // merge sort
 
 ```python
 number_list: list[int] = [1, 2, 3, 4, 5]
-number_list.sort()      # in-place
-sorted(number_list)     # return a new list(copy)
+number_list.sort()              # in-place
+result = sorted(number_list)    # return a new list(copy)
 ```
 
 **Java declaration/methods**
@@ -990,13 +997,17 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-### :page_facing_up: STRING
+### :page_facing_up: String
 
 **C++ declaration/methods**
 
 ```cpp
 auto str = std::string{"hello"};
 append("_world"), push_back('!'), pop_back(), insert(5, "_world"), substr(0, 5), compare("hello_world")
+
+// string stream
+std::stringstream ss(str);
+good(), bad(), fail(), eof(), clear(), operator<<(), operator>>()
 ```
 
 **Python declaration/functions**
@@ -1058,7 +1069,7 @@ var str = collection.stream()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-## REFERENCES
+## References
 
 - Introduction to Algorithms, 3rd Edition, by CLRS
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
