@@ -4,42 +4,42 @@
 #include <bitset>
 #include <ranges>
 
-auto ArbitraryPrecision::PlusOne(std::vector<int> v) -> std::vector<int>
+auto ArbitraryPrecision::PlusOne(std::vector<int> number_array) -> std::vector<int>
 {
-    ++v.back();
+    ++number_array.back();
 
-    for (auto i = static_cast<int>(v.size()) - 1; i > 0 && v[i] == 10; --i)
+    for (auto i = static_cast<int>(number_array.size()) - 1; i > 0 && number_array[i] == 10; --i)
     {
-        v[i] = 0;
-        ++v[i - 1];
+        number_array[i] = 0;
+        ++number_array[i - 1];
     }
 
-    if (v[0] == 10)
+    if (number_array[0] == 10)
     {
-        v[0] = 1;
-        v.emplace_back(0);
+        number_array[0] = 1;
+        number_array.emplace_back(0);
     }
-    return v;
+    return number_array;
 }
 
-auto ArbitraryPrecision::StringAddition(const std::string& str1, const std::string& str2) -> std::vector<int>
+auto ArbitraryPrecision::StringAddition(const std::string& number_string1, const std::string& number_string2) -> std::vector<int>
 {
-    const auto size1 = static_cast<int>(str1.size());
-    const auto size2 = static_cast<int>(str2.size());
+    const auto size1 = static_cast<int>(number_string1.size());
+    const auto size2 = static_cast<int>(number_string2.size());
 
     const auto larger = size1 >= size2 ? size1 : size2;
     auto sum = std::vector<int>(larger);
 
     for (auto i = size1 - 1; i >= 0; --i)
     {
-        sum[i] += str1.at(i) == '1' ? 1 : 0;
+        sum[i] += number_string1.at(i) == '1' ? 1 : 0;
     }
 
     auto carry = 0;
     for (auto i = size2 - 1; i >= 0; --i)
     {
         sum[i] += carry;
-        sum[i] += str2.at(i) == '1' ? 1 : 0;
+        sum[i] += number_string2.at(i) == '1' ? 1 : 0;
 
         if (sum[i] >= 2)
         {
@@ -60,24 +60,24 @@ auto ArbitraryPrecision::StringAddition(const std::string& str1, const std::stri
     return sum;
 }
 
-auto ArbitraryPrecision::Multiply(std::vector<int>& num1, std::vector<int>& num2) -> std::vector<int>
+auto ArbitraryPrecision::Multiply(std::vector<int>& number_array1, std::vector<int>& number_array2) -> std::vector<int>
 {
-    const auto sign = ((num1.front() < 0) ^ (num2.front() < 0)) ? -1 : 1;
-    num1.front() = std::abs(num1.front());
-    num2.front() = std::abs(num2.front());
+    const auto sign = ((number_array1.front() < 0) ^ (number_array2.front() < 0)) ? -1 : 1;
+    number_array1.front() = std::abs(number_array1.front());
+    number_array2.front() = std::abs(number_array2.front());
 
-    std::vector<int> result(num1.size() + num2.size(), 0);
-    for (auto i = static_cast<int>(num1.size()) - 1; i >= 0; --i)
+    std::vector<int> result(number_array1.size() + number_array2.size(), 0);
+    for (auto i = static_cast<int>(number_array1.size()) - 1; i >= 0; --i)
     {
-        for (auto j = static_cast<int>(num2.size()) - 1; j >= 0; --j)
+        for (auto j = static_cast<int>(number_array2.size()) - 1; j >= 0; --j)
         {
-            result[i + j + 1] += num1[i] * num2[j];
+            result[i + j + 1] += number_array1[i] * number_array2[j];
             result[i + j] += result[i + j + 1] / 10;
             result[i + j + 1] %= 10;
         }
     }
 
-    result = {std::ranges::find_if_not(begin(result), end(result), [](int i) { return i == 0; }), end(result)};
+    result = {std::ranges::find_if_not(begin(result), end(result), [](const int i) { return i == 0; }), end(result)};
 
     if (std::empty(result))
     {
