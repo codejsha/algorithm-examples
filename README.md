@@ -994,6 +994,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 - Merge two sorted arrays (`MergeTwoSortedArray`), EPI#13.2, LeetCode#merge-sorted-array: [c++](cpp-algorithm/src/sort) | Merge two sorted array. Merge the second array into the first array.
 - Partitioning and sorting an array with many repeated entries (`GroupByAge`), EPI#13.9: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Given an array of objects with an age field, reorder the array so that objects of equal age appear together. They should be sorted in ascending order of age, and the order of objects with the same age is not important.
 - Remove first-name duplicates (`EliminateFirstNameDuplicate`), EPI#13.4: [c++](cpp-algorithm/src/sort) | Given an array of names, remove the duplicates of the first name.
+- Team photo day (`SortPlayerByHeight`), EPI#13.10: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Given two arrays of numbers, for team photos, players are arranged in front and back rows and then photographed. The players in the back row must necessarily be taller than those in the front row. Additionally, all players in a row should belong to the same team.
 - Union of intervals (`UnionOfIntervals`), EPI#13.8: [c++](cpp-algorithm/src/sort) | Given a set of intervals, compute their union.
 
 [:arrow_up_small: back to toc](#table-of-contents)
