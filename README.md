@@ -992,6 +992,7 @@ Collections.sort(list); // timsort (insertion sort + merge sort)
 - Intersection of two sorted arrays (`IntersectTwoSortedArray`), EPI#13.1: [c++](cpp-algorithm/src/sort) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
 - Merge intervals (`MergeIntervals`), EPI#13.7, LeetCode#merge-intervals: [c++](cpp-algorithm/src/sort) | Given a collection of intervals, merge all overlapping intervals.
 - Merge two sorted arrays (`MergeTwoSortedArray`), EPI#13.2, LeetCode#merge-sorted-array: [c++](cpp-algorithm/src/sort) | Merge two sorted array. Merge the second array into the first array.
+- Partitioning and sorting an array with many repeated entries (`GroupByAge`), EPI#13.9: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Given an array of objects with an age field, reorder the array so that objects of equal age appear together. They should be sorted in ascending order of age, and the order of objects with the same age is not important.
 - Remove first-name duplicates (`EliminateFirstNameDuplicate`), EPI#13.4: [c++](cpp-algorithm/src/sort) | Given an array of names, remove the duplicates of the first name.
 - Union of intervals (`UnionOfIntervals`), EPI#13.8: [c++](cpp-algorithm/src/sort) | Given a set of intervals, compute their union.
 
