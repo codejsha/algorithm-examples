@@ -755,16 +755,34 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 ### :triangular_ruler: Mathematics
 
-**Examples**
+**C++ declaration/methods**
 
-- Base expansion (base $b$ expansion of $n$): [python](python-algorithm/algorithm/math) | Constructing the base $b$ expansion of an integer $n$. Such as binary, octal, decimal, hexadecimal expansion, etc.
-- Binary operation (`addition`): [python](python-algorithm/algorithm/math)
+```cpp
+std::numeric_limits<int>::min(), std::numeric_limits<float>::max(), std::numeric_limits<double>::infinity()
+std::abs(-34), std::fabs(-3.14), std::ceil(2.17), std::floor(3.14), std::min(x, -4), std::max(3.14, y), pow(2.17, 3.14), log(7.12), sqrt(225) // cmath
+```
+
+**Python declaration/functions**
+
+```python
+float('inf'), float('-inf'), math.inf, -math.inf
+math.fabs(-34.5), math.ceil(2.17), math.floor(3.14), math.max(x, -3), math.min(x, 3.14), math.pow(2.71, 3.15), math.round(3.14), math.sqrt(225) # math
+```
+
+**Java declaration/methods**
+
+```java
+Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, Boolean.TRUE
+Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x, 3.14), Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225) // math
+```
+
+**Mathematical algorithms**
+
 - Combination (`GenerateCombination`): [c++](cpp-algorithm/src/math) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD): [python](python-algorithm/algorithm/math) | Find the greatest common divisor of two numbers.
-- Inverse of matrix: Inverse of matrix is a mathematical algorithm that finds the inverse of a matrix.
-- Least common multiple (LCM): [python](python-algorithm/algorithm/math) | Find the least common multiple of two numbers.
-- Matrix multiplication: [python](python-algorithm/algorithm/math) | This is the product of two matrices.
+- Greatest common divisor (GCD): [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the greatest common divisor of two numbers.
+- Integer factorization: [c++](cpp-algorithm/src/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
+- Least common multiple (LCM): [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the least common multiple of two numbers.
 - Miller-Rabin primality test: [c++](cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
 - Permutation (`Permutation`): [c++](cpp-algorithm/src/math) | Find the permutation of a set of items.
 - Permutation (`ApplyPermutationWithAdditionalSpace`, `ApplyPermutationBySwap`): [c++](cpp-algorithm/src/math) | Permute the elements of an array
@@ -774,6 +792,13 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Simplex algorithm: Simplex algorithm is a mathematical algorithm that finds the optimal solution to a linear programming problem.
 - System of linear equations: System of linear equations is a mathematical algorithm that finds the solution to a system of linear equations.
 
+**Examples**
+
+- Base expansion (base $b$ expansion of $n$): [python](python-algorithm/algorithm/math) | Constructing the base $b$ expansion of an integer $n$. Such as binary, octal, decimal, hexadecimal expansion, etc.
+- Binary operation (`addition`): [python](python-algorithm/algorithm/math)
+- Inverse of matrix: Inverse of matrix is a mathematical algorithm that finds the inverse of a matrix.
+- Matrix multiplication: [python](python-algorithm/algorithm/math) | This is the product of two matrices.
+
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :1234: Primitive type
@@ -782,7 +807,7 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 ```cpp
 std::to_string(42), std::swap(x, y)
-std::numeric_limits<int>::min(), std::numeric_limits<float>::max(), std::numeric_limits<double>::infinity() // constants
+std::numeric_limits<int>::min(), std::numeric_limits<float>::max(), std::numeric_limits<double>::infinity()
 std::abs(-34), std::fabs(-3.14), std::ceil(2.17), std::floor(3.14), std::min(x, -4), std::max(3.14, y), pow(2.17, 3.14), log(7.12), sqrt(225) // cmath
 std::stoi("42"), std::stod("3.14"), std::stoi("42", nullptr, 16), std::stoi("1000010", nullptr, 2) // string -> int/double/hex/binary
 std::bitset<8>(42), std::bitset<8>(3.14), std::bitset<8>(0x42), std::bitset<8>(0b1000010) // int/double/hex/binary -> bitset
@@ -799,7 +824,7 @@ const auto d = std::generate_canonical<double, 10>(generator);  // floating poin
 **Python declaration/functions**
 
 ```python
-float('inf'), float('-inf')     # constants
+float('inf'), float('-inf'), math.inf, -math.inf
 math.fabs(-34.5), math.ceil(2.17), math.floor(3.14), math.max(x, -3), math.min(x, 3.14), math.pow(2.71, 3.15), math.round(3.14), math.sqrt(225) # math
 abs(-34), min(number_list), max(number_list), sum(number_list), sorted(number_list)
 len(sample_string), len(number_list), len(sample_dict)  # length
@@ -825,7 +850,7 @@ random.choice(number_list)
 **Java declaration/methods**
 
 ```java
-Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, Boolean.TRUE  // constants
+Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, Boolean.TRUE
 Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x, 3.14), Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225) // math
 Integer.valueOf("1"), Double.valueOf("3.14"), Boolean.valueOf("true"), Float.toString(3.14f)  // reference type
 Integer.parseInt("42"), Double.parseDouble("3.14")  // primitive type
