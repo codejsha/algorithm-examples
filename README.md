@@ -102,26 +102,35 @@ all(x % 2 == 0 for x in number_list)
 **Java declaration/methods**
 
 ```java
-var array = new int[]{1, 2, 3, 4, 5};
+var arr = new int[]{1, 2, 3, 4, 5};
+
 // Arrays
-binarySearch(array, 3), equals(array, another_arr), copyOf(array, array.length), copyOfRange(array, 0, array.length),
-sort(array), sort(array, 0, array.length), fill(array, 42), fill(array, 0, array.length, 42),
+import java.util.Arrays;
+binarySearch(arr, 3), equals(arr, another_arr), copyOf(arr, arr.length), copyOfRange(arr, 0, arr.length),
+sort(arr), sort(arr, 0, arr.length), fill(arr, 42), fill(arr, 0, arr.length, 42),
 // Arrays.stream()
 anyMatch(x -> x % 2 == 0), allMatch(x -> x % 2 == 0), noneMatch(x -> x % 2 == 0),
 count(), sum(), min(), max(), average(), map(x -> x * 2).toArray(), filter(x -> x % 2 == 0).count()
+
 // Collections
+import java.util.Collections;
 sort(list), binarySearch(list, 3), min(list), max(list), swap(list, 0, 1), replaceAll(list, 1, 2),
 frequency(list, 1), reverse(list), rotate(list, 1), shuffle(list), unmodifiableList(list)
 // list
-var list = Arrays.asList(boxedArray);       // Arrays.stream(array).boxed().toArray(Integer[]::new);
-sort(Comparator.naturalOrder()), sort(Comparator.reverseOrder())
+import java.util.List;
+import java.util.Comparator;
+import java.util.List;
+var list = Arrays.asList(boxedArray);
+Arrays.stream(arr).boxed().collect(Collectors.toList())
+sort(), sort(Comparator.naturalOrder()), sort(Comparator.reverseOrder())
 
-Arrays.stream(array).boxed().toArray(Integer[]::new)    // int[] to Integer[]
-Arrays.stream(array).mapToObj(String::valueOf).toArray(String[]::new)   // int[] to String[]
-String.join(", ", strArray)     // array to string
-str.split(", ")                 // string to array
-List.of(array), Arrays.asList(array)  // array to list
+Arrays.stream(arr).boxed().toArray(Integer[]::new)                    // int[] to Integer[]
+Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new)   // int[] to String[]
+String.join(", ", arr)                          // array to string
+str.split(""), str.split(" "), str.split(", ")  // string to array
+List.of(arr), Arrays.asList(arr)                // array to list
 Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to string array
+ArrayList<>(Arrays.stream(arr).sorted().toList())           // array to sorted list
 ```
 
 **Examples**
@@ -425,13 +434,17 @@ sample_counter.update([1, 1, 2, 2, 3])
 
 ```java
 // map
+import java.util.HashMap;
 var map = new HashMap<String, Integer>();
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
+
 // set
+import java.util.HashSet;
 var set = new HashSet<Integer>();
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator()
 
+import java.util.Collections;
 Collections.unmodifiableMap(map);
 Collections.unmodifiableSet(set);
 Collections.unmodifiableSortedMap(map);
@@ -477,6 +490,7 @@ heapq.heappush(number_list, 6), heapq.heappop(number_list), heapq.heapreplace(nu
 **Java declaration/methods**
 
 ```java
+import java.util.PriorityQueue;
 var queue = new PriorityQueue<Integer>();
 add(1), peek(), poll(), remove(), size(), isEmpty(),
 contains(1), clear(), iterator()
@@ -511,13 +525,17 @@ push_front(4), emplace_front(5), pop_front(), reverse(), sort()
 **Java declaration/methods**
 
 ```java
-var list = new LinkedList<Integer>();   // doubly linked list
+// doubly linked list
+import java.util.LinkedList;
+var list = new LinkedList<Integer>();
 add(1), addAll(List.of(2, 3, 4, 5)),
 remove(0), removeFirst(), removeLast(), removeIf(x -> x % 2 == 0), subList(1, 3),
 get(0), getFirst(), getLast(), size(), isEmpty(), contains(1), containsAll(List.of(1, 2, 3)),
 iterator(), listIterator()
 
-var list = new ArrayList<Integer>();    // dynamically resized array
+// dynamically resized array
+import java.util.ArrayList;
+var list = new ArrayList<Integer>();
 add(1), addAll(List.of(2, 3, 4, 5)), remove(0), subList(1, 3),
 get(0), size(), isEmpty(), contains(3), containsAll(List.of(3, 4)),
 iterator(), listIterator()
@@ -565,6 +583,7 @@ append(6), appendleft(7), pop(), popleft()
 **Java declaration/methods**
 
 ```java
+import java.util.ArrayDeque;
 var deque = new ArrayDeque<Integer>();
 add(1), remove(), pop(), size(), isEmpty(), contains(1), clear(),
 offerFirst(6), offerLast(7), pollFirst(), pollLast(), peekFirst(), peekLast(),
@@ -600,6 +619,7 @@ append(4), pop()
 **Java declaration/methods**
 
 ```java
+import java.util.Stack;
 var stack = new Stack<Integer>();
 push(1), add(1, 2), addAll(anotherList), pop(), peek(), size(), isEmpty()
 contains(1), search(1), size(),
@@ -646,6 +666,7 @@ sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
 
 ```java
 // TreeMap (based on red-black tree)
+import java.util.TreeMap;
 var treeMap = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
@@ -653,6 +674,7 @@ firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey(
 headMap("c"), tailMap("c"), subMap("a", "c"), descendingMap(), descendingKeySet()
 
 // treeSet (based on red-black tree)
+import java.util.TreeSet;
 var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator(), descendingIterator(),
 first(), last(), lower(3), higher(3), floor(3), ceiling(3), pollFirst(), pollLast(),
@@ -807,13 +829,20 @@ Integer.MIN_VALUE, Float.MAX_VALUE, Double.POSITIVE_INFINITY, Double.NEGATIVE_IN
 Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x, 3.14), Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225) // math
 Integer.valueOf("1"), Double.valueOf("3.14"), Boolean.valueOf("true"), Float.toString(3.14f)  // reference type
 Integer.parseInt("42"), Double.parseDouble("3.14")  // primitive type
-Integer.parseInt("1000010", 2), Integer.parseInt("52", 8), Integer.parseInt("2a", 16) // string -> binary/octal/hex
-Integer.toBinaryString(42), Integer.toHexString(42), Integer.toOctalString(42)  // int -> binary/hex/octal string
-new BitSet(16), set(0), set(0, 8), set(0, 8, true)  // bitset
 Double.compare(x, 1.23) == 0, Integer.compare(x, 2) == 0  // comparing values
 
+// bitwise operation
+Integer.parseInt("1000010", 2), Integer.parseInt("52", 8), Integer.parseInt("2a", 16) // string -> binary/octal/hex
+Integer.toBinaryString(42), Integer.toHexString(42), Integer.toOctalString(42)  // int -> binary/hex/octal string
+Integer.bitCount(42)    // number of 1-bits
+
+// bitset
+import java.util.BitSet;
+new BitSet(16), set(0), set(0, 8), set(0, 8, true)
+
 // random values
-var random = new Random();  // java.util.Random
+import java.util.Random;
+var random = new Random();
 var randomInt = random.nextInt(100);      // [0, 100)
 var randomLong = random.nextLong();       // [0, 2^48)
 var randomDouble = random.nextDouble();   // [0.0, 1.0)
@@ -867,6 +896,7 @@ bisect.bisect_left(number_list, 3), bisect.bisect_right(number_list, 3), bisect.
 **Java declaration/methods**
 
 ```java
+import java.util.*;
 var array = new int[]{1, 2, 3, 4, 5};
 var arrayList = new ArrayList<Integer>(List.of(1, 2, 3, 4, 5));
 var linkedList = new LinkedList<Integer>(List.of(1, 2, 3, 4, 5));
@@ -875,6 +905,8 @@ var linkedHashSet = new LinkedHashSet<Integer>(List.of(1, 2, 3, 4, 5));
 var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
 
 // binary search
+import java.util.Arrays;
+import java.util.Collections;
 Arrays.binarySearch(array, 3)             // for array
 Collections.binarySearch(arrayList, 3);   // for list
 ```
@@ -914,7 +946,11 @@ result = sorted(number_list)    # return a new list(copy)
 
 **Java declaration/methods**
 
+`Arrays.sort()` and `Collections.sort()` sort the array and list in ascending order in-place.
+
 ```java
+import java.util.Arrays;
+import java.util.Collections;
 Arrays.sort(array);     // dual pivot quick sort (primitive types)
                         // timsort (insertion sort + merge sort) (reference types)
 Collections.sort(list); // timsort (insertion sort + merge sort)
@@ -1047,6 +1083,11 @@ append("!"), insert(0, "Hello"), delete(0, 5), deleteCharAt(0),
 length(), charAt(0), indexOf("Java"), lastIndexOf("Java"),
 reverse(), replace(0, 5, "World"), substring(0, 5), toString()
 subSequence(0, 5), chars()
+
+// character
+var ch = new Character('a');
+isDigit('0'), isLetter('a'), isLetterOrDigit('a'),
+isLowerCase('a'), isUpperCase('A'), toLowerCase('A'), toUpperCase('a')
 
 // list/stack/deque to string
 var str = collection.stream()
