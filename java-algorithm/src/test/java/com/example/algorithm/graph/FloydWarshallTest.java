@@ -1,16 +1,11 @@
 package com.example.algorithm.graph;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@ExtendWith(MockitoExtension.class)
-@Slf4j
 class FloydWarshallTest {
     static final int INF = 99999;
 
@@ -44,8 +39,8 @@ class FloydWarshallTest {
     @Test
     void testFloydWarshallPositiveWeight() {
         var matrix = new int[][]{
-                { 0, 3, INF, 5},
-                { 2, 0, INF, 4},
+                {0, 3, INF, 5},
+                {2, 0, INF, 4},
                 {INF, 1, 0, INF},
                 {INF, INF, 2, 0}
         };

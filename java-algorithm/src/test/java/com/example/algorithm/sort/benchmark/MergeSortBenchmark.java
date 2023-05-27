@@ -14,8 +14,6 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 public class MergeSortBenchmark {
-    public MergeSort mergeSort;
-
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
                 .include(MergeSortBenchmark.class.getSimpleName())
@@ -25,7 +23,6 @@ public class MergeSortBenchmark {
 
     @Setup
     public void setUp() {
-        mergeSort = new MergeSort();
     }
 
     @TearDown(Level.Invocation)
@@ -36,6 +33,6 @@ public class MergeSortBenchmark {
     @Benchmark
     public void testMergeSort1() {
         var array = new int[]{64, 32, 16, 8, 4};
-        mergeSort.mergeSort(array, 0, array.length - 1);
+        MergeSort.mergeSort(array, 0, array.length - 1);
     }
 }

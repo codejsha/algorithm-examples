@@ -3,7 +3,7 @@ package com.example.algorithm.sort;
 import static com.example.algorithm.util.ElementUtil.swap;
 
 public class BubbleSort {
-    public int[] bubbleSort(int[] array) {
+    public static int[] bubbleSort(int[] array) {
         for (var i = 0; i < array.length; i++) {
             for (var j = array.length - 1; j > i; j--) {
                 if (array[j] < array[j - 1]) {

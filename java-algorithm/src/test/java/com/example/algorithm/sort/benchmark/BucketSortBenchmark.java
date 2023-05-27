@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 public class BucketSortBenchmark {
-    public BucketSort bucketSort;
-
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
                 .include(BucketSortBenchmark.class.getSimpleName())
@@ -26,7 +24,6 @@ public class BucketSortBenchmark {
 
     @Setup
     public void setUp() {
-        bucketSort = new BucketSort();
     }
 
     @TearDown(Level.Invocation)
@@ -37,6 +34,6 @@ public class BucketSortBenchmark {
     @Benchmark
     public void testBucketSort1(Blackhole blackhole) {
         var array = new Double[]{0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68};
-        blackhole.consume(bucketSort.bucketSort(array));
+        blackhole.consume(BucketSort.bucketSort(array));
     }
 }

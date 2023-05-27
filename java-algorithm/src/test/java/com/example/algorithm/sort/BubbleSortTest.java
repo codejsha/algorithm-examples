@@ -1,19 +1,13 @@
 package com.example.algorithm.sort;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.mockito.Mockito.spy;
 
-@ExtendWith(MockitoExtension.class)
-@Slf4j
 class BubbleSortTest {
     int[] array;
 
@@ -35,8 +29,7 @@ class BubbleSortTest {
 
     @Test
     void testBubbleSort() {
-        var bubbleSort = spy(new BubbleSort());
-        var result = bubbleSort.bubbleSort(array);
+        var result = BubbleSort.bubbleSort(array);
         assertArrayEquals(new int[]{6, 19, 26, 31, 49, 64, 71, 85}, result);
     }
 }

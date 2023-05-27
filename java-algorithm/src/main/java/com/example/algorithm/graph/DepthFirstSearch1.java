@@ -8,6 +8,7 @@ import java.util.LinkedList;
 public class DepthFirstSearch1 {
     /**
      * Perform depth-first search
+     *
      * @param edges  the edges of the graph
      * @param source the source vertex
      * @param dest   the destination vertex
@@ -20,6 +21,7 @@ public class DepthFirstSearch1 {
 
     /**
      * Depth-first search.
+     *
      * @param edges   the edges of the graph
      * @param source  the source vertex
      * @param dest    the destination vertex

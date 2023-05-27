@@ -1,17 +1,11 @@
 package com.example.algorithm.sort;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.mockito.Mockito.spy;
 
-@ExtendWith(MockitoExtension.class)
-@Slf4j
 class HeapSortTest {
     int[] array;
 
@@ -27,8 +21,7 @@ class HeapSortTest {
 
     @Test
     void testHeapSort() {
-        var heapSort = spy(new HeapSort());
-        var result = heapSort.heapSort(array);
+        var result = HeapSort.heapSort(array);
         assertArrayEquals(new int[]{1, 2, 3, 4, 7, 8, 9, 10, 14, 16}, result);
     }
 }

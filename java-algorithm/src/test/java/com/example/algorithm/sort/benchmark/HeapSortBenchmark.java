@@ -16,8 +16,6 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 public class HeapSortBenchmark {
-    public HeapSort heapSort;
-
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
                 .include(HeapSortBenchmark.class.getSimpleName())
@@ -27,7 +25,6 @@ public class HeapSortBenchmark {
 
     @Setup
     public void setUp() {
-        heapSort = new HeapSort();
     }
 
     @TearDown(Level.Invocation)
@@ -38,6 +35,6 @@ public class HeapSortBenchmark {
     @Benchmark
     public void testHeapSort1(Blackhole blackhole) {
         var array = new int[]{4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
-        blackhole.consume(heapSort.heapSort(array));
+        blackhole.consume(HeapSort.heapSort(array));
     }
 }

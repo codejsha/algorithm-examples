@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 public class BubbleSortBenchmark {
-    public BubbleSort bubbleSort;
-
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
                 .include(BubbleSortBenchmark.class.getSimpleName())
@@ -26,7 +24,6 @@ public class BubbleSortBenchmark {
 
     @Setup
     public void setUp() {
-        bubbleSort = new BubbleSort();
     }
 
     @TearDown(Level.Invocation)
@@ -37,12 +34,12 @@ public class BubbleSortBenchmark {
     @Benchmark
     public void testBubbleSort1(Blackhole blackhole) {
         var array = new int[]{31, 64, 49, 85, 71, 26, 6, 19};
-        blackhole.consume(bubbleSort.bubbleSort(array));
+        blackhole.consume(BubbleSort.bubbleSort(array));
     }
 
     @Benchmark
     public void testBubbleSort2(Blackhole blackhole) {
         var array = new int[]{31, 64, 49, 85, 71, 26, 6, 19, 31, 64, 49, 85, 71, 26, 6, 19};
-        blackhole.consume(bubbleSort.bubbleSort(array));
+        blackhole.consume(BubbleSort.bubbleSort(array));
     }
 }

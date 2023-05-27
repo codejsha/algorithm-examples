@@ -9,6 +9,7 @@ import java.util.LinkedList;
 public class BellmanFord1 {
     /**
      * Perform Bellman-Ford algorithm
+     *
      * @param edges  the edges of the graph
      * @param weight the weight of the edges
      * @param source the source vertex

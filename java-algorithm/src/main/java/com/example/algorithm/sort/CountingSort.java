@@ -3,7 +3,7 @@ package com.example.algorithm.sort;
 import java.util.Arrays;
 
 public class CountingSort {
-    public int[] countingSort(int[] array) {
+    public static int[] countingSort(int[] array) {
         var size = array.length;
         var output = new int[size];
 

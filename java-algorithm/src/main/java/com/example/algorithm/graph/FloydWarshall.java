@@ -10,6 +10,7 @@ public class FloydWarshall {
      * <p>
      * Time complexity: O(V^3)
      * Space complexity: O(V^2)
+     *
      * @param matrix adjacency matrix
      * @return shortest path matrix
      */
@@ -19,9 +20,10 @@ public class FloydWarshall {
         // initialize the shortest path matrix
         var dist = new int[length][length];
         for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length; j++) {
-                dist[i][j] = matrix[i][j];
-            }
+            // for (var j = 0; j < length; j++) {
+            //     dist[i][j] = matrix[i][j];
+            // }
+            System.arraycopy(matrix[i], 0, dist[i], 0, length);
         }
 
         // compute the shortest path weight
@@ -41,6 +43,7 @@ public class FloydWarshall {
      * <p>
      * Time complexity: O(V^3)
      * Space complexity: O(V^2)
+     *
      * @param matrix adjacency matrix
      * @return shortest path matrix
      */
@@ -50,9 +53,10 @@ public class FloydWarshall {
         // initialize the shortest path matrix
         var dist = new int[length][length];
         for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length; j++) {
-                dist[i][j] = matrix[i][j];
-            }
+            // for (var j = 0; j < length; j++) {
+            //     dist[i][j] = matrix[i][j];
+            // }
+            System.arraycopy(matrix[i], 0, dist[i], 0, length);
         }
 
         // compute the shortest path weight
@@ -69,6 +73,7 @@ public class FloydWarshall {
 
     /**
      * Initialize adjacency matrix
+     *
      * @param matrix adjacency matrix
      * @return initialized adjacency matrix
      */
@@ -91,6 +96,7 @@ public class FloydWarshall {
 
     /**
      * Print the adjacency matrix.
+     *
      * @param matrix adjacency matrix
      */
     private static void printMatrix(int[][] matrix) {

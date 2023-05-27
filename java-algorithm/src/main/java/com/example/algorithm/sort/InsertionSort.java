@@ -1,7 +1,7 @@
 package com.example.algorithm.sort;
 
 public class InsertionSort {
-    public int[] insertionSort(int[] array) {
+    public static int[] insertionSort(int[] array) {
         for (var i = 1; i < array.length; i++) {
             var key = array[i];
             var j = i - 1;
@@ -14,7 +14,7 @@ public class InsertionSort {
         return array;
     }
 
-    public Double[] insertionSort(Double[] array) {
+    public static Double[] insertionSort(Double[] array) {
         for (var i = 1; i < array.length; i++) {
             var key = array[i];
             var j = i - 1;

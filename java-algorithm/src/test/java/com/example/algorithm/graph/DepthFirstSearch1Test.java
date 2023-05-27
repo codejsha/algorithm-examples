@@ -1,15 +1,11 @@
 package com.example.algorithm.graph;
 
-import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@ExtendWith(MockitoExtension.class)
-@Slf4j
 class DepthFirstSearch1Test {
     @BeforeEach
     void setUp() {

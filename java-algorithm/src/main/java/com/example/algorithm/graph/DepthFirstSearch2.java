@@ -6,6 +6,7 @@ package com.example.algorithm.graph;
 public class DepthFirstSearch2 {
     /**
      * Perform depth first search
+     *
      * @param matrix adjacency matrix representing a graph
      * @param source the source vertex
      * @param dest   the destination vertex
@@ -18,6 +19,7 @@ public class DepthFirstSearch2 {
 
     /**
      * Depth-first search.
+     *
      * @param matrix  adjacency matrix representing a graph
      * @param source  the source vertex
      * @param dest    the destination vertex

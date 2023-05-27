@@ -1,16 +1,11 @@
 package com.example.algorithm.graph;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ExtendWith(MockitoExtension.class)
-@Slf4j
 class MazeProblemTest {
     @BeforeEach
     void setUp() {
@@ -47,7 +42,7 @@ class MazeProblemTest {
 
     @Test
     void testSearchMazePathCase3() {
-        var maze = new int [][] {
+        var maze = new int[][]{
                 {1, 0, 0, 0},
                 {1, 1, 0, 1},
                 {0, 1, 0, 0},
@@ -58,7 +53,7 @@ class MazeProblemTest {
 
     @Test
     void testSearchMazePathCase4() {
-        var maze = new int [][] {
+        var maze = new int[][]{
                 {1, 0, 0, 0, 0},
                 {1, 1, 0, 1, 0},
                 {0, 1, 1, 1, 0},

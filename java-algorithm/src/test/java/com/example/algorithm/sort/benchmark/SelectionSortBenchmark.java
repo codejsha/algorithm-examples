@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 public class SelectionSortBenchmark {
-    public SelectionSort selectionSort;
-
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
                 .include(SelectionSortBenchmark.class.getSimpleName())
@@ -26,7 +24,6 @@ public class SelectionSortBenchmark {
 
     @Setup
     public void setUp() {
-        selectionSort = new SelectionSort();
     }
 
     @TearDown(Level.Invocation)
@@ -37,6 +34,6 @@ public class SelectionSortBenchmark {
     @Benchmark
     public void testSelectionSort1(Blackhole blackhole) {
         var array = new int[]{64, 32, 16, 8, 4};
-        blackhole.consume(selectionSort.selectionSort(array));
+        blackhole.consume(SelectionSort.selectionSort(array));
     }
 }

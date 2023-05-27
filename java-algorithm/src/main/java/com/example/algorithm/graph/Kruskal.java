@@ -10,6 +10,7 @@ public class Kruskal {
      * Kruskal's algorithm for finding the minimum spanning tree of a graph.
      * <p>
      * Time complexity: O(E log V)
+     *
      * @param graph The graph to find the minimum spanning tree of.
      * @return The minimum spanning tree of the graph.
      */
@@ -33,6 +34,7 @@ public class Kruskal {
      * Kruskal's algorithm for finding the minimum spanning tree of a graph.
      * <p>
      * Time complexity: O(E log V)
+     *
      * @param graph The graph to find the minimum spanning tree of.
      * @return The minimum spanning tree of the graph.
      */
@@ -56,6 +58,7 @@ public class Kruskal {
      * Kruskal's algorithm for finding the minimum spanning tree of a graph.
      * <p>
      * Time complexity: O(E log V)
+     *
      * @param graph The graph to find the minimum spanning tree of.
      * @return The edges of the minimum spanning tree of the graph.
      */
@@ -79,6 +82,7 @@ public class Kruskal {
     /**
      * Find the representative of the set containing the vertex.
      * Path compression is used to improve the performance.
+     *
      * @param vertex the vertex
      * @return the representative of the set
      */
@@ -92,6 +96,7 @@ public class Kruskal {
     /**
      * Union two sets containing the vertices.
      * Union by rank is used to improve the performance.
+     *
      * @param u the vertex of the first set
      * @param v the vertex of the second set
      */

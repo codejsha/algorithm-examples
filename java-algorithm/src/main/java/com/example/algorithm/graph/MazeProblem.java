@@ -14,7 +14,7 @@ public class MazeProblem {
             if (point.x == m - 1 && point.y == n - 1) {
                 return point.distance;
             }
-            if (point.x -1 >= 0 && maze[point.x - 1][point.y] == 1) {
+            if (point.x - 1 >= 0 && maze[point.x - 1][point.y] == 1) {
                 maze[point.x - 1][point.y] = 0;
                 queue.add(new Coordinate(point.x - 1, point.y, point.distance + 1));
             }

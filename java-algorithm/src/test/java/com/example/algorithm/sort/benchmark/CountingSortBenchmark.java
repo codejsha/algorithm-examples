@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 public class CountingSortBenchmark {
-    public CountingSort countingSort;
-
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
                 .include(CountingSortBenchmark.class.getSimpleName())
@@ -26,7 +24,6 @@ public class CountingSortBenchmark {
 
     @Setup
     public void setUp() {
-        countingSort = new CountingSort();
     }
 
     @TearDown(Level.Invocation)
@@ -37,6 +34,6 @@ public class CountingSortBenchmark {
     @Benchmark
     public void testCountingSort1(Blackhole blackhole) {
         var array = new int[]{2, 5, 3, 0, 2, 3, 0, 3};
-        blackhole.consume(countingSort.countingSort(array));
+        blackhole.consume(CountingSort.countingSort(array));
     }
 }

@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class BucketSort {
-    private final InsertionSort insertionSort = new InsertionSort();
-
-    public Double[] bucketSort(Double[] array) {
+    public static Double[] bucketSort(Double[] array) {
         var size = array.length;
         var bucket = new ArrayList<LinkedList<Double>>();
         for (var i = 0; i < size; i++) {
@@ -19,7 +17,7 @@ public class BucketSort {
         }
 
         for (var i = 0; i < size; i++) {
-            array = insertionSort.insertionSort(array);
+            InsertionSort.insertionSort(array);
         }
         return array;
     }

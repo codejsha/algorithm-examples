@@ -3,7 +3,7 @@ package com.example.algorithm.sort;
 import java.util.Arrays;
 
 public class MergeSort {
-    public void mergeSort(int[] array, int start, int end) {
+    public static void mergeSort(int[] array, int start, int end) {
         if (start < end) {
             var middle = Math.floorDiv(start + end, 2);
             mergeSort(array, start, middle);
@@ -12,7 +12,7 @@ public class MergeSort {
         }
     }
 
-    private void merge(int[] array, int start, int middle, int end) {
+    private static void merge(int[] array, int start, int middle, int end) {
         var leftSize = middle - start + 1;
         var rightSize = end - middle;
 

@@ -3,7 +3,7 @@ package com.example.algorithm.sort;
 import static com.example.algorithm.util.ElementUtil.swap;
 
 public class HeapSort {
-    public int[] heapSort(int[] array) {
+    public static int[] heapSort(int[] array) {
         var heapSize = array.length;
         buildMaxHeap(array);
         for (var i = heapSize - 1; i > 0; i--) {
@@ -14,7 +14,7 @@ public class HeapSort {
         return array;
     }
 
-    private void buildMaxHeap(int[] array) {
+    private static void buildMaxHeap(int[] array) {
         var heapSize = array.length;
         var loopIndex = Math.subtractExact(Math.floorDiv(heapSize, 2), 1);
 
@@ -23,7 +23,7 @@ public class HeapSort {
         }
     }
 
-    private void maxHeapify(int[] array, int heapSize, int index) {
+    private static void maxHeapify(int[] array, int heapSize, int index) {
         var largest = index;
         var leftIndex = 2 * index + 1; // 2n + 1
         var rightIndex = 2 * index + 2; // 2n + 2

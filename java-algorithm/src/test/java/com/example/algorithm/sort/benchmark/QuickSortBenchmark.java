@@ -14,8 +14,6 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 public class QuickSortBenchmark {
-    public QuickSort quickSort;
-
     public static void main(String[] args) throws Exception {
         var options = new OptionsBuilder()
                 .include(QuickSortBenchmark.class.getSimpleName())
@@ -25,7 +23,6 @@ public class QuickSortBenchmark {
 
     @Setup
     public void setUp() {
-        quickSort = new QuickSort();
     }
 
     @TearDown(Level.Invocation)
@@ -36,6 +33,6 @@ public class QuickSortBenchmark {
     @Benchmark
     public void testQuickSort1() {
         var array = new int[]{2, 8, 7, 1, 3, 5, 6, 4};
-        quickSort.quickSort(array, 0, array.length - 1);
+        QuickSort.quickSort(array, 0, array.length - 1);
     }
 }

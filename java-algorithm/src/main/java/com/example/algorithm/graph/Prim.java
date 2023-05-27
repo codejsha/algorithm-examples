@@ -13,6 +13,7 @@ public class Prim {
      * Prim's algorithm for finding the minimum spanning tree of a graph.
      * <p>
      * Time complexity: O(E log V)
+     *
      * @param graph The graph to find the minimum spanning tree of.
      * @return The minimum spanning tree of the graph.
      */
@@ -48,6 +49,7 @@ public class Prim {
      * Prim's algorithm for finding the minimum spanning tree of a graph.
      * <p>
      * Time complexity: O(E log V)
+     *
      * @param graph The graph to find the minimum spanning tree of.
      * @return The vertices of the minimum spanning tree of the graph.
      */
@@ -79,6 +81,7 @@ public class Prim {
      * Prim's algorithm for finding the minimum spanning tree of a graph.
      * <p>
      * Time complexity: O(E log V)
+     *
      * @param graph The graph to find the minimum spanning tree of.
      * @return The edges of the minimum spanning tree of the graph.
      */
