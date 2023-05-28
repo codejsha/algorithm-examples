@@ -116,8 +116,8 @@ count(), sum(), min(), max(), average(), map(x -> x * 2).toArray(), filter(x -> 
 import java.util.Collections;
 sort(list), binarySearch(list, 3), min(list), max(list), swap(list, 0, 1), replaceAll(list, 1, 2),
 frequency(list, 1), reverse(list), rotate(list, 1), shuffle(list), unmodifiableList(list)
+
 // list
-import java.util.List;
 import java.util.Comparator;
 import java.util.List;
 var list = Arrays.asList(boxedArray);
@@ -402,11 +402,15 @@ algorithm PushRelabel(G):
 // map
 auto map = std::unordered_map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), find("b"), end(), erase("a"), size(), empty()
+
 // set
 auto set = std::unordered_set{1, 2, 3, 4, 5};
 insert(42), emplace(42), find(42), end(), erase(42), size(), empty()
+
 // tuple
-auto t = std::tuple{-1, -1};
+auto t1 = std::tuple{-1, -1};
+auto t2 = std::make_tuple(-1, -1);
+auto [x, y] = t1;
 
 // transform
 std::ranges::transform(nums, std::inserter(map, map.end()),
@@ -419,12 +423,15 @@ std::ranges::transform(nums, std::inserter(map, map.end()),
 # set
 number_set: set[int] = set()
 add(1), update([2, 3, 4])
+
 # dictionary
 sample_dict: dict[str, int] = {'a': 1, 'b': 2, 'c': 3}
+
 # defaultdict
 sample_dict: collections.defaultdict[str, int] = collections.defaultdict(int)
 sample_dict['a'] = 1
 sample_dict.update({'b': 2, 'c': 3})
+
 # counter
 sample_counter: collections.Counter = collections.Counter()
 sample_counter.update([1, 1, 2, 2, 3])
@@ -621,9 +628,9 @@ append(4), pop()
 ```java
 import java.util.Stack;
 var stack = new Stack<Integer>();
-push(1), add(1, 2), addAll(anotherList), pop(), peek(), size(), isEmpty()
+push(1), add(1, 2), addAll(anotherList), pop(), peek(), size(), isEmpty(),
 contains(1), search(1), size(),
-remove(1), removeIf(x -> x == 1), clear()
+remove(1), removeIf(x -> x == 1), clear(),
 iterator(), listIterator()
 
 var array = stack.toArray(Integer[]::new);  // stack to array
@@ -648,6 +655,7 @@ The tree is a specific type of graph. A tree is an undirected graph in which any
 // map
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
+
 // set
 auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
@@ -898,6 +906,7 @@ var randomBoolean = random.nextBoolean(); // true/false
 // map
 auto map = std::map<std::string, int>{{"a", 1}, {"b", 2}};
 insert({"c", 3}), emplace("d", 4), erase("a"), find("b"), size(), empty(), equal_range("c")
+
 // set
 auto set = std::set{1, 2, 3, 4, 5};
 insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
