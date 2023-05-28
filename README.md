@@ -104,6 +104,9 @@ all(x % 2 == 0 for x in number_list)
 ```java
 var arr = new int[]{1, 2, 3, 4, 5};
 
+// 2d array (m by n matrix)
+var matrix = new int[m][n];
+
 // Arrays
 import java.util.Arrays;
 binarySearch(arr, 3), equals(arr, another_arr), copyOf(arr, arr.length), copyOfRange(arr, 0, arr.length),
@@ -451,11 +454,19 @@ import java.util.HashSet;
 var set = new HashSet<Integer>();
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator()
 
+// unmodifiable
 import java.util.Collections;
 Collections.unmodifiableMap(map);
 Collections.unmodifiableSet(set);
 Collections.unmodifiableSortedMap(map);
 Collections.unmodifiableSortedSet(set);
+
+// stream
+int[] result = map.entrySet().stream()
+        .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+        .map(Map.Entry::getKey)
+        .mapToInt(Integer::parseInt)
+        .toArray();
 ```
 
 **Examples**
@@ -984,10 +995,16 @@ result = sorted(number_list)    # return a new list(copy)
 
 ```java
 import java.util.Arrays;
+Arrays.sort(arr);           // dual pivot quick sort (primitive types)
+                            // timsort (insertion sort + merge sort) (reference types)
+Arrays.sort(arr, Comparator.comparingInt(String::length));
+Arrays.sort(arr, Comparator.comparingInt(String::length).reversed());
+
 import java.util.Collections;
-Arrays.sort(array);     // dual pivot quick sort (primitive types)
-                        // timsort (insertion sort + merge sort) (reference types)
-Collections.sort(list); // timsort (insertion sort + merge sort)
+Collections.sort(list);     // timsort (insertion sort + merge sort)
+list.sort(Comparator.naturalOrder());
+list.sort(Comparator.reverseOrder());
+list.sort(Comparator.comparingInt(String::length));
 ```
 
 **Sorting algorithms**
