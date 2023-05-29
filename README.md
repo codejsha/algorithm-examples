@@ -135,17 +135,20 @@ str.split(""), str.split(" "), str.split(", ")  // string to array
 str.toCharArray()                               // string to char array
 str.chars().toArray()                           // string to int array
 
+// boxing
 var v = Arrays.stream(arr).boxed().toArray(Integer[]::new);                     // int[] to Integer[]
 var v = Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new);    // int[] to String[]
 var v = Arrays.stream(arr).boxed().collect(Collectors.toList());                // int[] to List<Integer>
 
+// integer sequence
 var arr = IntStream.range(0, speeds.length).toArray();          // range to int array in [0, n)
 var arr = IntStream.rangeClosed(1, speeds.length).toArray();    // range to int array in [1, n]
 var list = IntStream.range(0, speeds.length).boxed().collect(Collectors.toList());  // range to list
 
 var list = List.of(arr);        // array to list
 var list = Arrays.asList(arr);  // array to list
-var arr = list.toArray(String[]::new);  // string list to string array
+var arr = strList.toArray(String[]::new);  // List<String> to String[]
+var arr = intList.stream().mapToInt(Integer::intValue).toArray();  // List<Integer> to int[]
 var list = Arrays.stream(arr).boxed().sorted().collect(Collectors.toCollection(ArrayList::new));    // array to sorted list
 ```
 
