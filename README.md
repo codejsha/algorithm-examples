@@ -1,5 +1,7 @@
 # Algorithm Examples
 
+<!-- markdownlint-disable MD033 MD036 -->
+
 ![C++ CMake Build](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Build](https://github.com/codejsha/algorithm-examples/actions/workflows/python.yml/badge.svg) ![Java Gradle Build](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
 
 [English](README.md) | [Korean](README_ko-KR.md)
@@ -127,13 +129,24 @@ var list = Arrays.asList(boxedArray);
 Arrays.stream(arr).boxed().collect(Collectors.toList())
 sort(), sort(Comparator.naturalOrder()), sort(Comparator.reverseOrder())
 
-Arrays.stream(arr).boxed().toArray(Integer[]::new)                    // int[] to Integer[]
-Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new)   // int[] to String[]
+// string
 String.join(", ", arr)                          // array to string
 str.split(""), str.split(" "), str.split(", ")  // string to array
-List.of(arr), Arrays.asList(arr)                // array to list
-Arrays.asList("foo", "bar", "baz").toArray(String[]::new)   // string list to string array
-ArrayList<>(Arrays.stream(arr).sorted().toList())           // array to sorted list
+str.toCharArray()                               // string to char array
+str.chars().toArray()                           // string to int array
+
+var v = Arrays.stream(arr).boxed().toArray(Integer[]::new);                     // int[] to Integer[]
+var v = Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new);    // int[] to String[]
+var v = Arrays.stream(arr).boxed().collect(Collectors.toList());                // int[] to List<Integer>
+
+var arr = IntStream.range(0, speeds.length).toArray();          // range to int array in [0, n)
+var arr = IntStream.rangeClosed(1, speeds.length).toArray();    // range to int array in [1, n]
+var list = IntStream.range(0, speeds.length).boxed().collect(Collectors.toList());  // range to list
+
+var list = List.of(arr);        // array to list
+var list = Arrays.asList(arr);  // array to list
+var arr = list.toArray(String[]::new);  // string list to string array
+var list = Arrays.stream(arr).boxed().sorted().collect(Collectors.toCollection(ArrayList::new));    // array to sorted list
 ```
 
 **Examples**
@@ -1172,3 +1185,5 @@ var str = collection.stream()
 - Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash
 
 [:arrow_up_small: back to toc](#table-of-contents)
+
+<!-- markdownlint-enable MD033 MD036 -->
