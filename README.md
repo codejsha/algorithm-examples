@@ -493,7 +493,7 @@ int[] result = map.entrySet().stream()
 - Find anagrams (`FindAnagramMappings`): [c++](cpp-algorithm/src/hash_table) | Given an array of strings, group anagrams together.
 - Find smallest subarray covering all values (`FindSmallestSubarrayCoveringSubset`), EPI#12.6: [c++](cpp-algorithm/src/hash_table) | Find the smallest subarray that covers all the elements in a set.
 - Find smallest subarray sequentially covering all values (`FindSmallestSubarraySequentiallyCoveringSubset`), EPI#12.7: [c++](cpp-algorithm/src/hash_table) | Find the smallest subarray that sequentially covers all the elements in a set.
-- ISBN cache, EPI#12.3: [c++](cpp-algorithm/src/hash_table) | Implement a LRU cache for ISBN lookups.
+- ISBN cache, EPI#12.3: [c++](cpp-algorithm/src/hash_table) | Implement a LRU (Least Recently Used) cache for ISBN lookups.
 - Nearest repeated entry (`FindNearestRepeatedEntry`), EPI#12.5: [c++](cpp-algorithm/src/hash_table) | Find the nearest repeated entry in an array of strings.
 - Optimized lowest common ancestor (`FindOptimizedLowestCommonAncestor`), EPI#12.4: [c++](cpp-algorithm/src/hash_table) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
 - Palindromic permutation (`IsPalindromePermutation`), EPI#12.1: [c++](cpp-algorithm/src/hash_table) | Given a string, determine if a permutation of the string could form a palindrome.
@@ -526,6 +526,7 @@ heapq.heappush(number_list, 6), heapq.heappop(number_list), heapq.heapreplace(nu
 ```java
 import java.util.PriorityQueue;
 var queue = new PriorityQueue<Integer>();
+var queue = new PriorityQueue<Integer>(Collections.reverseOrder());
 add(1), peek(), poll(), remove(), size(), isEmpty(),
 contains(1), clear(), iterator()
 ```
@@ -702,7 +703,9 @@ sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
 ```java
 // TreeMap (based on red-black tree)
 import java.util.TreeMap;
-var treeMap = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
+var map = new TreeMap<Integer, Integer>();
+var map = new TreeMap<Integer, Integer>(Collections.reverseOrder());
+var map = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
 firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey("b"),pollFirstEntry(), pollLastEntry(),
@@ -710,7 +713,9 @@ headMap("c"), tailMap("c"), subMap("a", "c"), descendingMap(), descendingKeySet(
 
 // treeSet (based on red-black tree)
 import java.util.TreeSet;
-var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
+var set = new TreeSet<Integer>();
+var set = new TreeSet<Integer>(Collections.reverseOrder());
+var set = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator(), descendingIterator(),
 first(), last(), lower(3), higher(3), floor(3), ceiling(3), pollFirst(), pollLast(),
 headSet(3), tailSet(3), subSet(2, 4), descendingSet()
