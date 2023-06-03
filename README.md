@@ -464,11 +464,14 @@ import java.util.HashMap;
 var map = new HashMap<String, Integer>();
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
+var keys = map.keySet().toArray(String[]::new);
+var values = map.values().toArray(Integer[]::new);
 
 // set
 import java.util.HashSet;
 var set = new HashSet<Integer>();
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator()
+var arr = set.toArray(Integer[]::new);
 
 // unmodifiable
 import java.util.Collections;
@@ -899,8 +902,13 @@ Double.compare(x, 1.23) == 0, Integer.compare(x, 2) == 0  // comparing values
 
 // bitwise operation
 Integer.parseInt("1000010", 2), Integer.parseInt("52", 8), Integer.parseInt("2a", 16) // string -> binary/octal/hex
-Integer.toBinaryString(42), Integer.toHexString(42), Integer.toOctalString(42)  // int -> binary/hex/octal string
-Integer.bitCount(42)    // number of 1-bits
+Integer.toBinaryString(42), Integer.toHexString(42), Integer.toOctalString(42)      // int -> binary/hex/octal string
+Integer.toString(num, base)     // int -> string with base
+Integer.bitCount(42)            // number of 1-bits
+Long.parseLong("1000010", 2), Long.parseLong("52", 8), Long.parseLong("2a", 16) // string -> binary/octal/hex
+Long.toBinaryString(42), Long.toHexString(42), Long.toOctalString(42)       // long -> binary/hex/octal string
+Long.toString(num, base)    // long -> string with base
+Long.bitCount(42)           // number of 1-bits
 
 // bitset
 import java.util.BitSet;
