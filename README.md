@@ -829,6 +829,7 @@ Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x,
 - Permutation (`InversePermutation`): [c++](cpp-algorithm/src/math)
 - Permutation (`NextPermutation`/`PreviousPermutation`): [c++](cpp-algorithm/src/math) | Compute the next/previous permutation.
 - Permutation (`KthPermutation`): [c++](cpp-algorithm/src/math) | Compute the $k$-th permutation.
+- Prime number (`isPrime`): [java](java-algorithm/src/main/java/com/example/algorithm/math) | Check whether a given number is prime.
 - Simplex algorithm: Simplex algorithm is a mathematical algorithm that finds the optimal solution to a linear programming problem.
 - System of linear equations: System of linear equations is a mathematical algorithm that finds the solution to a system of linear equations.
 
