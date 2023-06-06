@@ -111,8 +111,8 @@ var matrix = new int[m][n];
 
 // Arrays
 import java.util.Arrays;
-binarySearch(arr, 3), equals(arr, another_arr), copyOf(arr, arr.length), copyOfRange(arr, 0, arr.length),
-sort(arr), sort(arr, 0, arr.length), fill(arr, 42), fill(arr, 0, arr.length, 42),
+binarySearch(arr, 3), equals(arr, another_arr), copyOf(arr, arr.length), copyOfRange(arr, from, to),
+sort(arr), sort(arr, from, to), fill(arr, 42), fill(arr, from, to, 42),
 // Arrays.stream()
 anyMatch(x -> x % 2 == 0), allMatch(x -> x % 2 == 0), noneMatch(x -> x % 2 == 0),
 count(), sum(), min(), max(), average(), map(x -> x * 2).toArray(), filter(x -> x % 2 == 0).count()
@@ -282,22 +282,7 @@ algorithm Dijkstra(G, source):
                 v.parent = u
 ```
 
-- Edmonds-Karp algorithm:
-
-```txt
-algorithm EdmondsKarp(G, source, sink):
-    // Initialize flow
-    for each edge (u, v) in G.E:
-        f(u, v) = 0
-
-    while there exists an augmenting path P from source to sink in residual graph Gf:
-        cf(P) = min{cf(u, v) | (u, v) in P}
-        for each edge (u, v) in P:
-            f(u, v) = f(u, v) + cf(P)
-            f(v, u) = f(v, u) - cf(P)
-    return f
-```
-
+- Edmonds-Karp algorithm
 - Floyd-Warshall algorithm: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A all pairs shortest paths algorithm.
 
 ```txt
@@ -322,39 +307,8 @@ algorithm FloydWarshall(G):
     return d
 ```
 
-- Ford-Fulkerson algorithm:
-
-```txt
-algorithm FordFulkerson(G, s, t):
-    f = 0
-    while there exists an augmenting path p from s to t in Gf:
-        cf(p) = min{cf(u, v) | (u, v) in p}
-        for each edge (u, v) in p:
-            f(u, v) = f(u, v) + cf(p)
-            f(v, u) = f(v, u) - cf(p)
-        f = f + cf(p)
-    return f
-```
-
+- Ford-Fulkerson algorithm
 - Johnson's algorithm: A all pairs shortest paths algorithm. This is a combination of Dijkstra's algorithm and the Bellman-Ford algorithm. It may be faster than Floyd–Warshall on sparse graphs.
-
-```txt
-algorithm Johnson(G):
-    G' = G ∪ {(s, v) | v in G.V}
-    for each v in G.V:
-        (s, v).weight = 0
-    if BellmanFord(G', s) == false:
-        return false
-    for each edge (u, v) in G.E:
-        w(u, v) = w(u, v) + h(u) - h(v)
-    for each u in G.V:
-        Dijkstra(G, w, u)
-    for each u in G.V:
-        for each v in G.V:
-            d[u, v] = d[u, v] + h(v) - h(u)
-    return d
-```
-
 - Kruskal's algorithm: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph. The algorithm uses path compression (FIND-SET) and union by rank (UNION) to improve the performance.
 
 ```txt
@@ -388,23 +342,6 @@ algorithm Prim(G, root):
 ```
 
 - Push-relabel algorithm
-
-```txt
-algorithm PushRelabel(G):
-    for each v in G.V:
-        v.height = 0
-        v.excess = 0
-    source.height = |G.V|
-    for each edge (u, v) in G.E:
-        push(u, v)
-    while there exists a vertex u with excess > 0:
-        if u has a neighbor v with height < u.height:
-            push(u, v)
-        else:
-            relabel(u)
-    return f
-```
-
 - Viterbi algorithm: A shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
 
 **Examples**
@@ -1162,13 +1099,14 @@ String.valueOf(123)
 var sb = new StringBuilder();
 append("!"), insert(0, "Hello"), delete(0, 5), deleteCharAt(0),
 length(), charAt(0), indexOf("Java"), lastIndexOf("Java"),
-reverse(), replace(0, 5, "World"), substring(0, 5), toString()
+reverse(), replace(0, 5, "World"), substring(0, 5), toString(),
 subSequence(0, 5), chars()
 
 // character
 var ch = new Character('a');
-isDigit('0'), isLetter('a'), isLetterOrDigit('a'),
-isLowerCase('a'), isUpperCase('A'), toLowerCase('A'), toUpperCase('a')
+Character.isDigit('0'), Character.isLetter('a'), Character.isLetterOrDigit('a'), Character.isAlphabetic('a'),
+Character.isLowerCase('a'), Character.isUpperCase('A'), Character.toLowerCase('A'), Character.toUpperCase('a'),
+Character.isWhitespace(' ')
 
 // list/stack/deque to string
 var str = collection.stream()
