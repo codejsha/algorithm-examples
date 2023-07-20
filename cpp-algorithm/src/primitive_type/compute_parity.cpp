@@ -2,16 +2,6 @@
 
 #include <array>
 
-auto BuildTable() -> std::array<short, 1 << 16>
-{
-    std::array<short, 1 << 16> result{};
-    for (auto i = 0; i < (1 << 16); ++i)
-    {
-        result[i] = ComputingParity::Parity(i);
-    }
-    return result;
-}
-
 auto ComputingParity::CountBits(unsigned int x) -> short
 {
     short num_bits = 0;
@@ -41,6 +31,16 @@ auto ComputingParity::ParityDropLowestBits(unsigned long long x) -> short
     {
         result ^= 1;
         x &= (x - 1);
+    }
+    return result;
+}
+
+auto BuildTable() -> std::array<short, 1 << 16>
+{
+    std::array<short, 1 << 16> result{};
+    for (auto i = 0; i < (1 << 16); ++i)
+    {
+        result[i] = ComputingParity::Parity(i);
     }
     return result;
 }

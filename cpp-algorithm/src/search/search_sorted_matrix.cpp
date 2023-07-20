@@ -10,7 +10,7 @@ bool SearchSortedMatrix::SearchSortedMatrix(const std::vector<std::vector<int>>&
     // matrix is empty, return false
     if (matrix.empty() || matrix[0].empty())
     {
-        return false; 
+        return false;
     }
 
     const auto row_size = static_cast<int>(matrix.size());
