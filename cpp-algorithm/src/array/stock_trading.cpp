@@ -1,8 +1,8 @@
-#include "trade_stock.h"
+#include "stock_trading.h"
 
 #include <limits>
 
-auto TradeStock::BuyAndSellStockOnceBruteForce(const std::vector<int>& prices) -> double
+auto StockTrading::BuyAndSellStockOnceBruteForce(const std::vector<int>& prices) -> double
 {
     auto max_profit = 0.0;
 
@@ -20,7 +20,7 @@ auto TradeStock::BuyAndSellStockOnceBruteForce(const std::vector<int>& prices) -
     return max_profit;
 }
 
-auto TradeStock::BuyAndSellStockOnce(const std::vector<int>& prices) -> double
+auto StockTrading::BuyAndSellStockOnce(const std::vector<int>& prices) -> double
 {
     auto min_price_so_far = std::numeric_limits<double>::infinity();
     auto max_profit = 0.0;
@@ -35,7 +35,7 @@ auto TradeStock::BuyAndSellStockOnce(const std::vector<int>& prices) -> double
     return max_profit;
 }
 
-auto TradeStock::BuyAndSellStockTwice(const std::vector<double>& prices) -> double
+auto StockTrading::BuyAndSellStockTwice(const std::vector<double>& prices) -> double
 {
     double max_total_profit = 0;
     std::vector<double> first_buy_sell_profits(prices.size(), 0);
