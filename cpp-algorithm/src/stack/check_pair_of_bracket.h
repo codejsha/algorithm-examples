@@ -5,9 +5,11 @@
 
 namespace PairOfBracket
 {
-    /// @brief Checks if the input string contains bracket pairs and is well-formed.
-    /// @param input The input string.
-    /// @return True if the input string contains a pair of bracket, false otherwise.
+    /**
+     * \brief Checks if the input string contains bracket pairs and is well-formed.
+     * \param input The input string.
+     * \return True if the input string contains a pair of bracket, false otherwise.
+     */
     auto CheckPairOfBracket(const std::string& input) -> bool;
 }
 #endif

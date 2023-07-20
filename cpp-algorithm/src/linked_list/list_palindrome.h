@@ -5,9 +5,11 @@
 
 namespace ListPalindrome
 {
-    /// @brief Check if a singly linked list is a palindrome.
-    /// @param list the head of the list
-    /// @return whether the list is a palindrome
+    /**
+     * \brief Check if a singly linked list is a palindrome.
+     * \param list the head of the list
+     * \return whether the list is a palindrome
+     */
     auto IsListPalindrome(const std::shared_ptr<LinkedList::Node<int>>& list) -> bool;
 }
 

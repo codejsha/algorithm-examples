@@ -3,7 +3,6 @@
 
 namespace RectangleIntersection
 {
-    /// @brief Rectangle structure.
     struct Rectangle
     {
         int X;
@@ -12,16 +11,20 @@ namespace RectangleIntersection
         int Height;
     };
 
-    /// @brief Check if two rectangles intersect.
-    /// @param r1 rectangle 1
-    /// @param r2 rectangle 2
-    /// @return result
+    /**
+     * \brief Check if two rectangles intersect.
+     * \param r1 rectangle 1
+     * \param r2 rectangle 2
+     * \return result
+     */
     auto IntersectRectangle(const Rectangle& r1, const Rectangle& r2) -> Rectangle;
 
-    /// @brief Check the intersection of two rectangles.
-    /// @param r1 rectangle 1
-    /// @param r2 rectangle 2
-    /// @return Whether two rectangles intersect
+    /**
+     * \brief Check the intersection of two rectangles.
+     * \param r1 rectangle 1
+     * \param r2 rectangle 2
+     * \return Whether two rectangles intersect
+     */
     auto IsIntersect(const Rectangle& r1, const Rectangle& r2) -> bool;
 }
 

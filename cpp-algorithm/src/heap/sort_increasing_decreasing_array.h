@@ -5,9 +5,11 @@
 
 namespace IncreasingDecreasingArray
 {
-    /// @brief Sort an increasing-decreasing array.
-    /// @param arr increasing-decreasing array
-    /// @return sorted array
+    /**
+     * \brief Sort an increasing-decreasing array.
+     * \param arr increasing-decreasing array
+     * \return sorted array
+     */
     auto SortIncreasingDecreasingArray(const std::vector<int>& arr) -> std::vector<int>;
 }
 

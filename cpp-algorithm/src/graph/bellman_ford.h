@@ -26,10 +26,12 @@ namespace BellmanFord
         void AddVertex(Vertex& v);
         void AddEdge(Vertex& u, Vertex& v, int weight);
 
-        /// @brief Bellman-Ford algorithm. Find the shortest path from a source vertex to all other vertices.
-        /// @details A single source shortest path algorithm that can handle negative edge weights.
-        /// It finds the shortest path from a source vertex to all other vertices in a weighted graph.
-        /// @param source source vertex
+        /**
+         * \brief Bellman-Ford algorithm. Find the shortest path from a source vertex to all other vertices.
+         * \details A single source shortest path algorithm that can handle negative edge weights.
+         * It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+         * \param source source vertex
+         */
         void BellmanFordAlgorithm(Vertex& source);
 
         std::vector<Vertex*> vertices;

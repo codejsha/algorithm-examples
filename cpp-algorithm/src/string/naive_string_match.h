@@ -6,10 +6,12 @@
 
 namespace NaiveStringMatch
 {
-    /// @brief Find all occurrences of a pattern in a text.
-    /// @param text input text
-    /// @param pattern find pattern
-    /// @return position of pattern in text
+    /**
+     * \brief Find all occurrences of a pattern in a text.
+     * \param text input text
+     * \param pattern find pattern
+     * \return position of pattern in text
+     */
     auto NaiveStringMatcher(const std::string& text, const std::string& pattern) -> std::vector<int>;
 }
 

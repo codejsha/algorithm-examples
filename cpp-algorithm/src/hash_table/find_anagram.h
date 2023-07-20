@@ -6,9 +6,11 @@
 
 namespace FindAnagram
 {
-    /// @brief Find the anagram mappings.
-    /// @param dictionary the dictionary of words
-    /// @return the anagram mappings
+    /**
+     * \brief Find the anagram mappings.
+     * \param dictionary the dictionary of words
+     * \return the anagram mappings
+     */
     auto FindAnagramMappings(const std::vector<std::string>& dictionary) -> std::vector<std::vector<std::string>>;
 }
 

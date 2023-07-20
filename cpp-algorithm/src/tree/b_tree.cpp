@@ -4,8 +4,8 @@ void BTree::Tree::SplitChild(Node* node, int index)
 {
     auto left_child = node->children[index];
 
-    //// create a right child node,
-    //// and split keys, children of the left child node
+    // create a right child node,
+    // and split keys, children of the left child node
 
     // create right child
     auto right_child = new Node{};
@@ -28,8 +28,8 @@ void BTree::Tree::SplitChild(Node* node, int index)
         left_child->children.erase(left_child->children.begin() + degree, left_child->children.end());
     }
 
-    //// insert a new right node,
-    //// and move the median key to the parent node
+    // insert a new right node,
+    // and move the median key to the parent node
 
     // move the median key to parent node
     node->keys.insert(node->keys.begin() + index, median_key);

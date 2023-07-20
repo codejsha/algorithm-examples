@@ -18,11 +18,13 @@ namespace ClosestStar
         [[nodiscard]] auto operator<(const Star& other) const -> bool { return Distance() < other.Distance(); }
     };
 
-    /// @brief Find the closest star.
-    /// @details Given a list of stars and their coordinates in a 3D space, find the closest star.
-    /// @param stars a list of stars
-    /// @param k number of closest stars to find
-    /// @return the closest star
+    /**
+     * \brief Find the closest star.
+     * \details Given a list of stars and their coordinates in a 3D space, find the closest star.
+     * \param stars a list of stars
+     * \param k number of closest stars to find
+     * \return the closest star
+     */
     auto FindClosestStar(std::vector<Star>& stars, int k) -> std::priority_queue<Star>;
 
 }

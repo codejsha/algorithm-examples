@@ -6,10 +6,12 @@
 
 namespace NearestRepeatedEntry
 {
-    /// @brief Find the nearest repeated entry in an array of strings.
-    /// @details Given an array of strings, find the distance between the closest pair of equal entries.
-    /// @param paragraph an array of strings
-    /// @return the distance between the closest pair of equal entries
+    /**
+     * \brief Find the nearest repeated entry in an array of strings.
+     * \details Given an array of strings, find the distance between the closest pair of equal entries.
+     * \param paragraph an array of strings
+     * \return the distance between the closest pair of equal entries
+     */
     auto FindNearestRepeatedEntry(const std::vector<std::string>& paragraph) -> int;
 }
 

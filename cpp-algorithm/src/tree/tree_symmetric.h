@@ -5,15 +5,19 @@
 
 namespace TreeSymmetric
 {
-    /// @brief Whether the binary tree is symmetric or not.
-    /// @param tree the root of the tree
-    /// @return whether the tree is symmetric
+    /**
+     * \brief Whether the binary tree is symmetric or not.
+     * \param tree the root of the tree
+     * \return whether the tree is symmetric
+     */
     auto IsSymmetric(const BinaryTree::Node<int>* tree) -> bool;
 
-    /// @brief Check whether a binary tree is symmetric.
-    /// @param left the left subtree of the tree
-    /// @param right the right subtree of the tree
-    /// @return whether the tree is symmetric
+    /**
+     * \brief Check whether a binary tree is symmetric.
+     * \param left the left subtree of the tree
+     * \param right the right subtree of the tree
+     * \return whether the tree is symmetric
+     */
     auto CheckSymmetric(const BinaryTree::Node<int>* left, const BinaryTree::Node<int>* right) -> bool;
 }
 

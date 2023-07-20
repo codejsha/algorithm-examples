@@ -3,8 +3,10 @@
 
 namespace BinaryTree
 {
-    /// @brief Binary tree node.
-    /// @tparam T the type of the key
+    /**
+     * \brief Binary tree node.
+     * \tparam T the type of the key
+     */
     template <typename T>
     struct Node
     {
@@ -22,8 +24,10 @@ namespace BinaryTree
             : key{key}, left{left}, right{right} {}
     };
 
-    /// @brief Extended binary tree node with parent pointer.
-    /// @tparam T the type of the key
+    /**
+     * \brief Extended binary tree node with parent pointer.
+     * \tparam T the type of the key
+     */
     template <typename T>
     struct ExtendedNode
     {
@@ -44,8 +48,10 @@ namespace BinaryTree
         }
     };
 
-    /// @brief Extended binary tree node with next pointer.
-    /// @tparam T the type of the key
+    /**
+     * \brief Extended binary tree node with next pointer.
+     * \tparam T the type of the key
+     */
     template <typename T>
     struct NextExtendedNode
     {
@@ -66,10 +72,12 @@ namespace BinaryTree
         }
     };
 
-    /// @brief Get the height of a binary tree.
-    /// @tparam T the type of the key
-    /// @param node the root of the tree
-    /// @return the height of the tree
+    /**
+     * \brief Get the height of a binary tree.
+     * \tparam T the type of the key
+     * \param node the root of the tree
+     * \return the height of the tree
+     */
     template <typename T>
     auto ExtendedNodeTreeDepth(const ExtendedNode<T>* node) -> int
     {

@@ -24,16 +24,20 @@ namespace BinarySearchTree
         auto Predecessor(T key) -> BinaryTree::ExtendedNode<T>*;
         auto Successor(T key) -> BinaryTree::ExtendedNode<T>*;
 
-        /// @brief Recursive call to find the node
-        /// @param node reference node
-        /// @param key key to search for
-        /// @return found node
+        /**
+         * \brief Recursive call to find the node
+         * \param node reference node
+         * \param key key to search for
+         * \return found node
+         */
         auto IterativeSearch(BinaryTree::ExtendedNode<T>* node, T key) -> BinaryTree::ExtendedNode<T>*;
 
-        /// @brief Iterative call to find a node
-        /// @param node reference node
-        /// @param key key to search for
-        /// @return found node
+        /**
+         * \brief Iterative call to find a node
+         * \param node reference node
+         * \param key key to search for
+         * \return found node
+         */
         auto RecursiveSearch(BinaryTree::ExtendedNode<T>* node, T key) -> BinaryTree::ExtendedNode<T>*;
 
         void PreorderTraversal(BinaryTree::ExtendedNode<T>* node, std::vector<T>& result);

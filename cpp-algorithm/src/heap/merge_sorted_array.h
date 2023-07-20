@@ -6,12 +6,14 @@
 
 namespace MergeSortedArray
 {
-    /// @brief Merge sorted arrays into a single sorted array.
-    /// @details Given k sorted integer arrays, merge them into a single sorted array.
-    /// The arrays are sorted in ascending order.
-    /// @tparam T parameter pack of sorted arrays
-    /// @param vectors k sorted integer arrays
-    /// @return a single sorted array
+    /**
+     * \brief Merge sorted arrays into a single sorted array.
+     * \details Given k sorted integer arrays, merge them into a single sorted array.
+     * The arrays are sorted in ascending order.
+     * \tparam T parameter pack of sorted arrays
+     * \param vectors k sorted integer arrays
+     * \return a single sorted array
+     */
     template <typename... T>
     auto MergeSortedArray(T... vectors) -> std::priority_queue<int, std::vector<int>, std::less<int>>
     {

@@ -5,7 +5,9 @@
 
 namespace DutchFlag
 {
-    /// @brief Color enum
+    /**
+     * \brief Color enum
+     */
     enum Color
     {
         Red,
@@ -13,22 +15,28 @@ namespace DutchFlag
         Blue
     };
 
-    /// @brief Dutch national flag problem.
-    /// @param pivot_index pivot index
-    /// @param arr input array
-    /// @return result array
+    /**
+     * \brief Dutch national flag problem.
+     * \param pivot_index pivot index
+     * \param arr input array
+     * \return result array
+     */
     auto DutchFlagPartition1(int pivot_index, std::vector<Color>& arr) -> std::vector<Color>;
 
-    /// @brief Dutch national flag problem.
-    /// @param pivot_index pivot index
-    /// @param arr input array
-    /// @return result array
+    /**
+     * \brief Dutch national flag problem.
+     * \param pivot_index pivot index
+     * \param arr input array
+     * \return result array
+     */
     auto DutchFlagPartition2(int pivot_index, std::vector<Color>& arr) -> std::vector<Color>;
 
-    /// @brief Dutch national flag problem.
-    /// @param pivot_index pivot index
-    /// @param arr input array
-    /// @return result array
+    /**
+     * \brief Dutch national flag problem.
+     * \param pivot_index pivot index
+     * \param arr input array
+     * \return result array
+     */
     auto DutchFlagPartition3(int pivot_index, std::vector<Color>& arr) -> std::vector<Color>;
 }
 

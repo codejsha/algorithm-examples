@@ -7,9 +7,11 @@
 
 namespace LeafNodeList
 {
-    /// @brief Create a list of leaf nodes.
-    /// @param root the root of the tree
-    /// @return leaf node list
+    /**
+     * \brief Create a list of leaf nodes.
+     * \param root the root of the tree
+     * \return leaf node list
+     */
     auto CreateLeafNodeList(BinaryTree::Node<int>* root) -> std::vector<BinaryTree::Node<int>*>;
 }
 

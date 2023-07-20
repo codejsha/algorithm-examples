@@ -5,8 +5,10 @@
 
 namespace PrintStack
 {
-    /// @brief Print the linked list in reverse order using stack.
-    /// @param head the head of the stack
+    /**
+     * \brief Print the linked list in reverse order using stack.
+     * \param head the head of the stack
+     */
     void PrintLinkedListInReverseOrder(const std::shared_ptr<LinkedList::Node<int>>& head);
 }
 

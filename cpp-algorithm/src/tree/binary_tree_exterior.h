@@ -7,9 +7,11 @@
 
 namespace BinaryTreeExterior
 {
-    /// @brief Create a list of exterior nodes.
-    /// @param root the root of the tree
-    /// @return exterior node list
+    /**
+     * \brief Create a list of exterior nodes.
+     * \param root the root of the tree
+     * \return exterior node list
+     */
     auto CreateExteriorNodeList(BinaryTree::Node<char>* root) -> std::vector<BinaryTree::Node<char>*>;
 }
 

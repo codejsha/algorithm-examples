@@ -5,9 +5,11 @@
 
 namespace AdvancingThrough
 {
-    /// @brief Advance through the array to the last index.
-    /// @param max_advance_steps maximum number of steps that can be taken from each index
-    /// @return either reach the end or not
+    /**
+     * \brief Advance through the array to the last index.
+     * \param max_advance_steps maximum number of steps that can be taken from each index
+     * \return either reach the end or not
+     */
     auto CanReachEnd(const std::vector<int>& max_advance_steps) -> bool;
 }
 

@@ -5,14 +5,18 @@
 
 namespace OrderElement
 {
-    /// @brief Order even and odd numbers in the array.
-    /// @param arr numbers
+    /**
+     * \brief Order even and odd numbers in the array.
+     * \param arr numbers
+     */
     void EvenOdd(std::vector<int>& arr);
 
-    /// @brief Rearrange arrays to have a specific order.
-    /// A[0] <= A[1] >= A[2] <= A[3] >= A[4] <= A[5] >= ...
-    /// @param numbers input array
-    /// @return ordered array
+    /**
+     * \brief Rearrange arrays to have a specific order.
+     * A[0] <= A[1] >= A[2] <= A[3] >= A[4] <= A[5] >= ...
+     * \param numbers input array
+     * \return ordered array
+     */
     auto Rearrange(std::vector<int>& numbers) -> std::vector<int>;
 }
 

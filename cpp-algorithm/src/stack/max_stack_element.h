@@ -6,7 +6,9 @@
 
 namespace MaxStackElement
 {
-    /// @brief Custom stack that stores the maximum element.
+    /**
+     * \brief Custom stack that stores the maximum element.
+     */
     class Stack
     {
     public:
@@ -44,8 +46,10 @@ namespace MaxStackElement
             int max;
         };
 
-        /// @brief Caches the maximum element in the stack.
-        /// @details Caches the maximum among the elements below the current element.
+        /**
+         * \brief Caches the maximum element in the stack.
+         * \details Caches the maximum among the elements below the current element.
+         */
         std::stack<ElementWithCachedMax> element_with_cached_max_;
     };
 }

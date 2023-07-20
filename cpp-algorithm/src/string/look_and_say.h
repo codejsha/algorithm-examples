@@ -5,9 +5,11 @@
 
 namespace LookAndSay
 {
-    /// @brief Look and say problem.
-    /// @param input input string
-    /// @return result string
+    /**
+     * \brief Look and say problem.
+     * \param input input string
+     * \return result string
+     */
     auto LookAndSayProblem(const std::string& input) -> std::string;
 }
 

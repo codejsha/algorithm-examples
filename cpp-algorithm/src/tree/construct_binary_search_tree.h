@@ -8,18 +8,20 @@
 
 namespace ConstructBinarySearchTree
 {
-    /// @brief Construct the subtree from the given preorder and inorder traversal.
-    /// This is a helper function for ConstructTreeFromPreorderInorder.
-    /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T the type of the key
-    /// @param preorder preorder traversal result
-    /// @param inorder inorder traversal result
-    /// @param preorder_start start index of preorder map
-    /// @param preorder_end end index of preorder map
-    /// @param inorder_start start index of inorder map
-    /// @param inorder_end end index of inorder map
-    /// @param inorder_map inorder hash table
-    /// @return the root of the subtree
+    /**
+     * \brief Construct the subtree from the given preorder and inorder traversal.
+     * This is a helper function for ConstructTreeFromPreorderInorder.
+     * \note In this operation, the parent pointer of struct Node is ignored.
+     * \tparam T the type of the key
+     * \param preorder preorder traversal result
+     * \param inorder inorder traversal result
+     * \param preorder_start start index of preorder map
+     * \param preorder_end end index of preorder map
+     * \param inorder_start start index of inorder map
+     * \param inorder_end end index of inorder map
+     * \param inorder_map inorder hash table
+     * \return the root of the subtree
+     */
     template <typename T>
     auto ConstructTreeFromPreorderInorderHelper(std::vector<T>& preorder, std::vector<T>& inorder, int preorder_start,
                                                 int preorder_end, int inorder_start, int inorder_end,
@@ -43,16 +45,18 @@ namespace ConstructBinarySearchTree
         return root;
     }
 
-    /// @brief Construct a binary search tree from preorder and inorder traversal.
-    /// @details The preorder traversal is the root node, then the left subtree, then the right subtree.
-    /// The inorder traversal is the left subtree, then the root node, then the right subtree.
-    /// The time complexity is O(n). It takes O(n) to create the hash table and O(1) for each node in recursion.
-    /// When the height is h, the space complexity is O(n+h) = O(n).
-    /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T the type of the key
-    /// @param preorder preorder traversal result
-    /// @param inorder inorder traversal result
-    /// @return the root of the constructed tree
+    /**
+     * \brief Construct a binary search tree from preorder and inorder traversal.
+     * \details The preorder traversal is the root node, then the left subtree, then the right subtree.
+     * The inorder traversal is the left subtree, then the root node, then the right subtree.
+     * The time complexity is O(n). It takes O(n) to create the hash table and O(1) for each node in recursion.
+     * When the height is h, the space complexity is O(n+h) = O(n).
+     * \note In this operation, the parent pointer of struct Node is ignored.
+     * \tparam T the type of the key
+     * \param preorder preorder traversal result
+     * \param inorder inorder traversal result
+     * \return the root of the constructed tree
+     */
     template <typename T>
     auto ConstructTreeFromPreorderInorder(std::vector<T>& preorder, std::vector<T>& inorder)
         -> BinaryTree::ExtendedNode<T>*
@@ -66,13 +70,15 @@ namespace ConstructBinarySearchTree
                                                       inorder_map);
     }
 
-    /// @brief Construct the subtree from the given postorder traversal with marker.
-    /// This is a helper function for ConstructTreeFromPreorderInorder.
-    /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T the type of the key
-    /// @param preorder preorder traversal result
-    /// @param subtree_idx_pointer subtree index pointer
-    /// @return the root of the subtree
+    /**
+     * \brief Construct the subtree from the given postorder traversal with marker.
+     * This is a helper function for ConstructTreeFromPreorderInorder.
+     * \note In this operation, the parent pointer of struct Node is ignored.
+     * \tparam T the type of the key
+     * \param preorder preorder traversal result
+     * \param subtree_idx_pointer subtree index pointer
+     * \return the root of the subtree
+     */
     template <typename T>
     auto ConstructTreeFromMarkerPreorderHelper(std::vector<T>& preorder, int& subtree_idx_pointer)
         -> BinaryTree::ExtendedNode<T>*
@@ -98,12 +104,14 @@ namespace ConstructBinarySearchTree
         return root;
     }
 
-    /// @brief Construct a binary search tree from preorder traversal with marker.
-    /// @details When the count of nodes is n, the time complexity is O(n).
-    /// @note In this operation, the parent pointer of struct Node is ignored.
-    /// @tparam T the type of the key
-    /// @param preorder preorder traversal result
-    /// @return the root of the constructed tree
+    /**
+     * \brief Construct a binary search tree from preorder traversal with marker.
+     * \details When the count of nodes is n, the time complexity is O(n).
+     * \note In this operation, the parent pointer of struct Node is ignored.
+     * \tparam T the type of the key
+     * \param preorder preorder traversal result
+     * \return the root of the constructed tree
+     */
     template <typename T>
     auto ConstructTreeFromMarkerPreorder(std::vector<T>& preorder) -> BinaryTree::ExtendedNode<T>*
     {

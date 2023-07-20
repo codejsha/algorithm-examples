@@ -7,7 +7,9 @@
 
 namespace IsbnCache
 {
-    /// @brief Least recently used cache for ISBNs.
+    /**
+     * \brief Least recently used cache for ISBNs.
+     */
     class LruCache
     {
     public:
@@ -16,9 +18,11 @@ namespace IsbnCache
         explicit LruCache(int capacity)
             : capacity_(capacity) {}
 
-        /// @brief Lookup ISBN in cache.
-        /// @param isbn the ISBN to search for
-        /// @return price if the ISBN is in the cache, -1 otherwise
+        /**
+         * \brief Lookup ISBN in cache.
+         * \param isbn the ISBN to search for
+         * \return price if the ISBN is in the cache, -1 otherwise
+         */
         auto Lookup(const std::string& isbn) -> int
         {
             if (auto it = price_table_.find(isbn); it == price_table_.end())
@@ -33,9 +37,11 @@ namespace IsbnCache
             }
         }
 
-        /// @brief Insert an ISBN into the cache.
-        /// @param isbn the ISBN to insert
-        /// @param price the price of the book
+        /**
+         * \brief Insert an ISBN into the cache.
+         * \param isbn the ISBN to insert
+         * \param price the price of the book
+         */
         void Insert(const std::string& isbn, int price)
         {
             if (auto it = price_table_.find(isbn); it != price_table_.end())
@@ -54,9 +60,11 @@ namespace IsbnCache
             }
         }
 
-        /// @brief Erase an ISBN from the cache.
-        /// @param isbn the ISBN to erase
-        /// @return true if the ISBN was in the cache, false otherwise
+        /**
+         * \brief Erase an ISBN from the cache.
+         * \param isbn the ISBN to erase
+         * \return true if the ISBN was in the cache, false otherwise
+         */
         auto Erase(const std::string& isbn) -> bool
         {
             if (auto it = price_table_.find(isbn); it == price_table_.end())
@@ -74,9 +82,11 @@ namespace IsbnCache
     private:
         using Table = std::unordered_map<std::string, std::pair<std::list<std::string>::iterator, int>>;
 
-        /// @brief Move an ISBN to the front of the queue.
-        /// @param isbn the ISBN to move
-        /// @param it the iterator to the ISBN in the queue
+        /**
+         * \brief Move an ISBN to the front of the queue.
+         * \param isbn the ISBN to move
+         * \param it the iterator to the ISBN in the queue
+         */
         void MoveToFront(const std::string& isbn, const Table::iterator& it)
         {
             lru_queue_.erase(it->second.first);

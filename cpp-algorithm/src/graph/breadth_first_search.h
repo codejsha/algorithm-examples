@@ -30,11 +30,13 @@ namespace Bfs
     class Graph
     {
     public:
-        /// @brief Breadth first search algorithm.
-        /// @details A search algorithm that traverses a graph layer by layer.
-        /// @param start starting vertex
-        /// @param goal goal vertex
-        /// @return goal vertex
+        /**
+         * \brief Breadth first search algorithm.
+         * \details A search algorithm that traverses a graph layer by layer.
+         * \param start starting vertex
+         * \param goal goal vertex
+         * \return goal vertex
+         */
         static auto BreadthFirstSearch(Vertex& start, const Vertex& goal) -> Vertex*;
 
         void AddVertex(Vertex& v);

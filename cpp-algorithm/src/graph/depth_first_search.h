@@ -31,17 +31,21 @@ namespace Dfs
     class Graph
     {
     public:
-        /// @brief Depth first search algorithm.
-        /// @details Traverses a graph by exploring as far as possible along each branch before backtracking.
-        /// @param source source node
-        /// @param dest destination node
-        /// @return destination node
+        /**
+         * \brief Depth first search algorithm.
+         * \details Traverses a graph by exploring as far as possible along each branch before backtracking.
+         * \param source source node
+         * \param dest destination node
+         * \return destination node
+         */
         static auto DepthFirstSearch(Vertex& source, const Vertex& dest) -> Vertex*;
 
-        /// @brief Depth first search algorithm.
-        /// @details Traverses a graph by exploring as far as possible along each branch before backtracking.
-        /// Each vertex is initially white, is grayed when it is discovered and is black when it is finished.
-        /// This guarantees that each vertex ends up it exactly one depth-first tree, so that trees are disjoint.
+        /**
+         * \brief Depth first search algorithm.
+         * \details Traverses a graph by exploring as far as possible along each branch before backtracking.
+         * Each vertex is initially white, is grayed when it is discovered and is black when it is finished.
+         * This guarantees that each vertex ends up it exactly one depth-first tree, so that trees are disjoint.
+         */
         void DepthFirstSearch2(Vertex& source);
 
         void AddVertex(Vertex& v);

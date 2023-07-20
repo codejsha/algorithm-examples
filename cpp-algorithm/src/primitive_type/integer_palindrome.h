@@ -3,9 +3,11 @@
 
 namespace IntegerPalindrome
 {
-    /// @brief Check if a number is a palindrome.
-    /// @param x input number
-    /// @return whether the number is a palindrome
+    /**
+     * \brief Check if a number is a palindrome.
+     * \param x input number
+     * \return whether the number is a palindrome
+     */
     auto IsPalindromeNumber(int x) -> bool;
 }
 
