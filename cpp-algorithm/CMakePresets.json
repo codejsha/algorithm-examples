@@ -1,5 +1,10 @@
 {
-    "version": 3,
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25,
+        "patch": 0
+    },
     "configurePresets": [
         {
             "name": "windows-base",
@@ -16,7 +21,7 @@
                 "lhs": "${hostSystemName}",
                 "rhs": "Windows"
             },
-            "toolchainFile": "$env{VCPKG_ROOT}\\scripts\\buildsystems\\vcpkg.cmake"
+            "toolchainFile": "$env{USERPROFILE}\\tools\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
         },
         {
             "name": "x64-debug",
@@ -65,10 +70,10 @@
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "installDir": "${sourceDir}/out/install/${presetName}",
             "cacheVariables": {
-              "CMAKE_C_COMPILER": "gcc-10",
-              "CMAKE_CXX_COMPILER": "g++-10",
-              "CMAKE_MAKE_PROGRAM": "/usr/bin/ninja"
-          },
+                "CMAKE_C_COMPILER": "gcc-10",
+                "CMAKE_CXX_COMPILER": "g++-10",
+                "CMAKE_MAKE_PROGRAM": "/usr/bin/ninja"
+            },
             "condition": {
                 "type": "equals",
                 "lhs": "${hostSystemName}",

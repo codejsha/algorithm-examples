@@ -1,3 +1,4 @@
+enable_testing()
 find_package(GSL REQUIRED)
 find_package(GTest REQUIRED)
 

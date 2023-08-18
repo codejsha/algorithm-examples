@@ -1,3 +1,4 @@
+enable_testing()
 find_package(fmt REQUIRED)
 find_package(GTest REQUIRED)
 
