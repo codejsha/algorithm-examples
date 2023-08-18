@@ -471,11 +471,14 @@ add(1), peek(), poll(), remove(), size(), isEmpty(),
 contains(1), clear(), iterator()
 ```
 
+**Heap algorithms**
+
+- Fibonacci heap
+
 **Examples**
 
 - Compute the k closest stars (`FindClosestStar`): [c++](cpp-algorithm/src/heap) | Find the $k$ closest stars to the earth. The stars are represented by a sequence of points(coordinates).
 - Compute the median of a sequence of numbers (`FindMedian`): [c++](cpp-algorithm/src/heap) | Find the median of a sequence of numbers. The median is the number separating the higher half of a data sample from the lower half.
-- Fibonacci heap
 - Merge sorted arrays (`MergeSortedArray`): [c++](cpp-algorithm/src/heap) | Merge k sorted arrays into one heap.
 - Sort an increasing-decreasing array (`SortIncreasingDecreasingArray`): [c++](cpp-algorithm/src/heap) | Sort an array that is repeatedly increasing then decreasing.
 
@@ -684,12 +687,18 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Inorder traversal (left, root, right): best choice for applications where internal vertices must be explored in-order.
 - Postorder traversal (left, right, root): best choice for applications where leaves need to be explored before internal vertices.
 
-**Examples**
+**Tree algorithms**
 
 - AVL tree
 - B-tree: [c++](cpp-algorithm/src/tree) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
-- Balanced tree status: [c++](cpp-algorithm/src/tree) | Whether the binary tree is balanced or not.
 - Binary search tree: [c++](cpp-algorithm/src/tree) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
+- Red-black tree
+- Trie
+- van Emde Boas tree (vEB tree)
+
+**Examples**
+
+- Balanced tree status: [c++](cpp-algorithm/src/tree) | Whether the binary tree is balanced or not.
 - Binary tree exterior (`CreateExteriorNodeList`): [c++](cpp-algorithm/src/tree) | Create a vector of exterior nodes in a binary tree.
 - Construct binary tree from preorder and inorder traversal (`ConstructTreeFromPreorderInorder`): [c++](cpp-algorithm/src/tree) | Construct a binary search tree from preorder and inorder traversal. This task has $O(n)$ time complexity.
 - Construct binary tree from preorder with marker (`ConstructTreeFromMarkerPreorder`): [c++](cpp-algorithm/src/tree) | Construct a binary search tree from preorder traversal with marker. This task has $O(n)$ time complexity.
@@ -697,12 +706,9 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 - Lowest common ancestor (`FindLowestCommonAncestor`): [c++](cpp-algorithm/src/tree) | Find the lowest common ancestor of two nodes in a binary tree.
 - Lowest common ancestor with parent pointer (`FindLowestCommonAncestor2`): [c++](cpp-algorithm/src/tree) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
 - Populate right sibling (`PopulateRightSibling`): [c++](cpp-algorithm/src/tree) | Populate the right sibling of a binary tree.
-- Red-black search tree
 - Root to leaf path corresponding to the given sum (`HasKeySum`): [c++](cpp-algorithm/src/tree) | Whether the tree has a root-leaf path equal to the given sum.
 - Sum of root to leaf (`SumRootToLeafDecimal`, `SumRootToLeafBinary`): [c++](cpp-algorithm/src/tree) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
 - Tree symmetric: [c++](cpp-algorithm/src/tree) | Whether the binary tree is symmetric or not.
-- Trie
-- van Emde Boas tree (vEB tree)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -860,16 +866,19 @@ var randomDouble = random.nextDouble();   // [0.0, 1.0)
 var randomBoolean = random.nextBoolean(); // true/false
 ```
 
-**Examples**
+**Primitive type algorithms**
 
 - Arithmetic operation (`Multiply`/`Divide`), EPI#4.5, EPI#4.6: [c++](cpp-algorithm/src/primitive_type) | Calculate the product/fraction of two numbers without using arithmetic operators.
+- Power operation, EPI#4.7: [c++](cpp-algorithm/src/primitive_type) | Compute repeated squaring $x^y$.
+
+**Examples**
+
 - Computing parity of word (`CountBits`): [c++](cpp-algorithm/src/primitive_type) | Count the number of bits that are set to 1.
 - Computing parity of word (`Parity`), EPI#4.1: [c++](cpp-algorithm/src/primitive_type) | Compute parity of word.
 - Computing parity of word (`ParityDropLowestBits`), EPI#4.1: [c++](cpp-algorithm/src/primitive_type) | Compute parity by dropping the lowest set bit.
 - Computing parity of word (`ParityLookupTable`), EPI#4.1: [c++](cpp-algorithm/src/primitive_type) | Compute parity by caching the results.
 - Generate random number, EPI#4.10: [c++](cpp-algorithm/src/primitive_type) | Generate a random number in a range with equal probability.
 - Integer palindrome, EPI#4.9: [c++](cpp-algorithm/src/primitive_type) | Check if a number is a palindrome.
-- Power operation, EPI#4.7: [c++](cpp-algorithm/src/primitive_type) | Compute repeated squaring $x^y$.
 - Rectangle intersection, EPI#4.11: [c++](cpp-algorithm/src/primitive_type) | Check if two rectangles intersect.
 - Reverse digits, EPI#4.8: [c++](cpp-algorithm/src/primitive_type) | Reverse the digits of a given integer.
 - Swap bit, EPI#4.2: [c++](cpp-algorithm/src/primitive_type) | Swap the bits at indices $i$ and $j$.
@@ -923,14 +932,17 @@ Arrays.binarySearch(array, 3)             // for array
 Collections.binarySearch(arrayList, 3);   // for list
 ```
 
-**Examples**
+**Search algorithms**
 
 - Binary search: [python](python-algorithm/algorithm/search) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
-- Find k-th smallest/largest element in an array (`FindKthSmallestElement`/`FindKthLargestElement`), EPI#11.8: [c++](cpp-algorithm/src/search) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
-- Find the minimum and maximum elements in an array (`FindMinMax`), EPI#11.7: [c++](cpp-algorithm/src/search)
 - Integer square root (`ComputeIntegerSquareRoot`), EPI#11.4: [c++](cpp-algorithm/src/search) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
 - Linear search: [python](python-algorithm/algorithm/search) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
 - Quick select algorithm (`QuickSelectAlgorithm`): [c++](cpp-algorithm/src/search) | QuickSelect is an algorithm used to select the k-th smallest (or largest) element in an unordered list of elements.
+
+**Examples**
+
+- Find k-th smallest/largest element in an array (`FindKthSmallestElement`/`FindKthLargestElement`), EPI#11.8: [c++](cpp-algorithm/src/search) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
+- Find the minimum and maximum elements in an array (`FindMinMax`), EPI#11.7: [c++](cpp-algorithm/src/search)
 - Search a sorted array for entry equal to its index (`SearchEntryEqualToItsIndex`), EPI#11.2: [c++](cpp-algorithm/src/search)
 - Search a sorted array for the first greater than a key (`SearchFirstGreaterThanKey`): [c++](cpp-algorithm/src/search)
 - Search a sorted array for the first occurrence of a key (`SearchFirstOfKey`), EPI#11.1: [c++](cpp-algorithm/src/search)
@@ -1114,17 +1126,20 @@ var str = collection.stream()
     .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
 ```
 
+**String algorithms**
+
+- Finite automata
+- Knuth-Morris-Pratt algorithm (KMP)
+- Naive string matching: [c++](cpp-algorithm/src/string), [python](python-algorithm/algorithm/string) | Find all occurrences of a pattern in a string.
+- Rabin-Karp algorithm, EPI#6.12: [c++](cpp-algorithm/src/string) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
+
 **Examples**
 
 - Convert string (`IntToString`, `StringToInt`), EPI#6.1: [c++](cpp-algorithm/src/string) | Convert integer to string and vice versa.
-- Finite automata
 - IP address validation, EPI#6.9: [c++](cpp-algorithm/src/string) | Validate IPv4 address that is in the form of `x.x.x.x` where `x` is a number between 0 and 255.
-- Knuth-Morris-Pratt algorithm (KMP)
 - Look and say problem, EPI#6.7: [c++](cpp-algorithm/src/string)
-- Naive string matching: [c++](cpp-algorithm/src/string), [python](python-algorithm/algorithm/string) | Find all occurrences of a pattern in a string.
 - Palindrome, EPI#6.5: [c++](cpp-algorithm/src/string) | Check if a string is palindromic.
 - Print sine wave pattern string (`SineWaveString` and `PrintSineWaveString`), EPI#6.10: [c++](cpp-algorithm/src/string) | Print a string in sine wave pattern.
-- Rabin-Karp algorithm, EPI#6.12: [c++](cpp-algorithm/src/string) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
 - Roman number (`VerifyRomanString`), EPI#6.8: [c++](cpp-algorithm/src/string) | Verify if a string is a valid roman number.
 - Roman number (`RomanStringToInteger`), EPI#6.8: [c++](cpp-algorithm/src/string) | Convert a roman number to integer.
 - Run-length encoding (RLE), EPI#6.11: [c++](cpp-algorithm/src/string) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
