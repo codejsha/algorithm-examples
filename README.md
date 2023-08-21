@@ -943,6 +943,7 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 - Find k-th smallest/largest element in an array (`FindKthSmallestElement`/`FindKthLargestElement`), EPI#11.8: [c++](cpp-algorithm/src/search) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
 - Find the minimum and maximum elements in an array (`FindMinMax`), EPI#11.7: [c++](cpp-algorithm/src/search)
+- Search a codon(combinations of three nucleotides) in a gene (`linear_contains`, `binary_contains`), CCSP#2.1: [python](python-algorithm/src/search) | Search a codon(combinations of three nucleotides) in a gene using linear search and binary search.
 - Search a sorted array for entry equal to its index (`SearchEntryEqualToItsIndex`), EPI#11.2: [c++](cpp-algorithm/src/search)
 - Search a sorted array for the first greater than a key (`SearchFirstGreaterThanKey`): [c++](cpp-algorithm/src/search)
 - Search a sorted array for the first occurrence of a key (`SearchFirstOfKey`), EPI#11.1: [c++](cpp-algorithm/src/search)
@@ -1153,6 +1154,7 @@ var str = collection.stream()
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
 - Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
 - Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash
+- Classic Computer Science Problems in Python, by David Kopec
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
