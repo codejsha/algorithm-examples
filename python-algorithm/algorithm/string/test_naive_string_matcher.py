@@ -9,4 +9,4 @@ from algorithm.string.naive_string_search import naive_string_matcher
 ], ids=["successful"])
 def test_naive_string_matcher(benchmark, text, pattern, expected):
     result = benchmark(naive_string_matcher, text, pattern)
-    assert result == expected
+    assert expected == result

@@ -10,4 +10,4 @@ from algorithm.search.linear_search import linear_search
 ], ids=["successful1", "successful2"])
 def test_linear_search(benchmark, sequence, target, expected):
     result = benchmark(linear_search, sequence, target)
-    assert result == expected
+    assert expected == result

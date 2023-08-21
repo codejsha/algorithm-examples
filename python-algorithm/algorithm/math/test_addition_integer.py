@@ -9,4 +9,4 @@ from algorithm.math.binary_operation import addition_binary_number
 ], ids=["successful"])
 def test_addition_of_binary_number(benchmark, a, b, expected):
     result = benchmark(addition_binary_number, a, b)
-    assert result == expected
+    assert expected == result

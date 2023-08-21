@@ -11,4 +11,4 @@ from algorithm.math.base_expansion import base_expansion
 ], ids=["base8", "base16", "base2"])
 def test_base_expansion(benchmark, number, base, expected):
     result = benchmark(base_expansion, number, base)
-    assert result == expected
+    assert expected == result

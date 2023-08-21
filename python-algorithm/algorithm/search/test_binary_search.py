@@ -10,4 +10,4 @@ from algorithm.search.binary_search import binary_search
 ], ids=["successful1", "successful2"])
 def test_binary_search(benchmark, sequence, target, expected):
     result = benchmark(binary_search, sequence, target)
-    assert result == expected
+    assert expected == result

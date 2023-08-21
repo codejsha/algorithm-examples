@@ -12,7 +12,7 @@ from algorithm.math.least_common_multiple import lcm
 def test_lcm(benchmark, pair, expected):
     assert is_positive_integer(*pair) is True
     result = benchmark(lcm, *pair)
-    assert result == expected
+    assert expected == result
 
 
 def is_positive_integer(a: int, b: int) -> bool:

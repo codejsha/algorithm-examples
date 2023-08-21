@@ -21,4 +21,4 @@ lecture3 = {'title': 'lecture3',
 ], ids=["successful"])
 def test_interval_scheduling_lecture(benchmark, lectures, expected):
     result = benchmark(interval_scheduling_lecture, lectures)
-    assert result == expected
+    assert expected == result

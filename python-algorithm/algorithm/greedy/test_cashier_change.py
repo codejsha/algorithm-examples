@@ -10,4 +10,4 @@ from algorithm.greedy.cashier_change import cashier_change
 ], ids=["successful1", "successful2"])
 def test_cashier_change(benchmark, denominations, price, expected):
     result = benchmark(cashier_change, denominations, price)
-    assert result == expected
+    assert expected == result

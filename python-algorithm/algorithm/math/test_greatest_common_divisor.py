@@ -12,7 +12,7 @@ from algorithm.math.greatest_common_divisor import gcd_euclidean, gcd_euclidean_
 def test_gcd_euclidean(benchmark, pair, expected):
     assert is_positive_integer(*pair) is True
     result = benchmark(gcd_euclidean, *pair)
-    assert result == expected
+    assert expected == result
 
 
 @pytest.mark.benchmark(group="gcd_euclidean_divmod")
@@ -24,7 +24,7 @@ def test_gcd_euclidean(benchmark, pair, expected):
 def test_gcd_euclidean_divmod(benchmark, pair, expected):
     assert is_positive_integer(*pair) is True
     result = benchmark(gcd_euclidean_divmod, *pair)
-    assert result == expected
+    assert expected == result
 
 
 @pytest.mark.benchmark(group="gcd_extended_euclidean")
@@ -36,7 +36,7 @@ def test_gcd_euclidean_divmod(benchmark, pair, expected):
 def test_gcd_extended_euclidean(benchmark, pair, expected):
     assert is_positive_integer(*pair) is True
     result = benchmark(gcd_extended_euclidean, *pair)
-    assert result == expected
+    assert expected == result
 
 
 def is_positive_integer(a: int, b: int) -> bool:
