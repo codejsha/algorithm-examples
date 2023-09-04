@@ -1151,11 +1151,11 @@ var str = collection.stream()
 
 ## References
 
-- Introduction to Algorithms, 3rd Edition, by CLRS
+- Introduction to Algorithms, 3rd Edition, by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein (CLRS)
 - Discrete Mathematics and Its Applications, 8th Edition, by Kenneth H. Rosen
-- Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell
-- Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash
-- Classic Computer Science Problems in Python, by David Kopec
+- Cracking the Coding Interview, 6th Edition, by Gayle Laakmann McDowell | *CTCI*
+- Elements of Programming Interviews, 2nd Edition, by Adnan Aziz, Tsung-Hsien Lee and Amit Prakash | *EPI*
+- Classic Computer Science Problems in Python, by David Kopec | *CCSP*
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
