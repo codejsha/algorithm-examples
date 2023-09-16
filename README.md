@@ -13,7 +13,7 @@ This repository is an implementation of algorithms, data structures, and problem
 Each project is configured in specific environments, as described below:
 
 - C++ project: C++20 / [CMake](https://cmake.org/) build / [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) packages / [vcpkg](https://github.com/microsoft/vcpkg) package manager
-- Python project: Python 3.11 / [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages / [pip](https://pip.pypa.io/en/stable/) package manager
+- Python project: Python 3.11 / [Poetry](https://python-poetry.org/) / [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages
 - Java project: Java 17 / [Gradle](https://gradle.org/) build / [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) libraries
 
 ## Table of Contents
