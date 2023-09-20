@@ -1,8 +1,6 @@
 #include "arbitrary_precision_integer.h"
 
 #include <algorithm>
-#include <bitset>
-#include <ranges>
 
 auto ArbitraryPrecision::PlusOne(std::vector<int> number_array) -> std::vector<int>
 {

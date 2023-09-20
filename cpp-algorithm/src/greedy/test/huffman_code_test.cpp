@@ -1,7 +1,6 @@
 #include "huffman_code.h"
 
 #include <gtest/gtest.h>
-#include <ranges>
 
 GTEST_TEST(HuffmanCode, HuffmanCode)
 {
