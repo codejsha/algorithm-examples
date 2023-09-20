@@ -1,7 +1,6 @@
 #include "remove_first_name_duplicate.h"
 
 #include <algorithm>
-#include <ranges>
 
 void RemoveFirstNameDuplicate::EliminateDuplicate(std::vector<std::string>& seq)
 {

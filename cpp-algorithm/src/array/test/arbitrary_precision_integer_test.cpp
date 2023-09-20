@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <gtest/gtest.h>
-#include <ranges>
 
 GTEST_TEST(ArbitraryPrecision, PlusOne)
 {
