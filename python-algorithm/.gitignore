@@ -589,3 +589,4 @@ FodyWeavers.xsd
 ### Others
 
 .idea/
+poetry.lock
