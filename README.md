@@ -1159,4 +1159,3 @@ var str = collection.stream()
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
-<!-- markdownlint-enable MD033 MD036 -->
