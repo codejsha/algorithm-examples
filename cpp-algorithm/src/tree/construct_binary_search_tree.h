@@ -89,7 +89,7 @@ namespace ConstructBinarySearchTree
         }
 
         auto subtree_root = preorder[subtree_idx_pointer];
-        if (subtree_root == NULL)
+        if (subtree_root == '\0')
         {
             return nullptr;
         }

@@ -106,14 +106,14 @@ GTEST_TEST(ConstructTreeFromMarkerPreorder, PreorderTraversal)
     //                        I
     //                       /  \
 
-    auto preorder = std::vector<char>{'H', 'B', 'F', NULL, NULL, 'E', 'A', NULL, NULL, NULL,
-                                      'C', NULL, 'D', NULL, 'G', 'I', NULL, NULL, NULL};
+    auto preorder = std::vector<char>{'H', 'B', 'F', '\0', '\0', 'E', 'A', '\0', '\0', '\0',
+                                      'C', '\0', 'D', '\0', 'G', 'I', '\0', '\0', '\0'};
 
     auto root = ConstructBinarySearchTree::ConstructTreeFromMarkerPreorder(preorder);
     auto tree = BinarySearchTree::Tree<char>{};
     auto result = std::vector<char>{};
     tree.PreorderTraversal(root, result);
-    preorder.erase(std::ranges::remove(preorder, NULL).begin(), preorder.end());
+    preorder.erase(std::ranges::remove(preorder, '\0').begin(), preorder.end());
 
     ASSERT_EQ(static_cast<int>(preorder.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
