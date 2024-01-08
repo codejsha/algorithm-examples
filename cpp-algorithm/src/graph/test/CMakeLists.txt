@@ -1,4 +1,3 @@
-enable_testing()
 find_package(GTest REQUIRED)
 
 if(WIN32)
@@ -11,7 +10,7 @@ include_directories(${CMAKE_SOURCE_DIR}/src/graph)
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
     add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/graph/${target_name}.cpp")
-    target_link_libraries(${target} PRIVATE GTest::gtest GTest::gtest_main ${ARGN})
+    target_link_libraries(${target} PRIVATE GTest::gtest_main ${ARGN})
     if(MSVC)
         ### Edit and Continue for CMake projects
         target_compile_options(${target} PUBLIC "/Zi")
@@ -22,7 +21,7 @@ endmacro()
 
 macro(add_target_header_test target)
     add_executable(${target} "${target}.cpp")
-    target_link_libraries(${target} PRIVATE GTest::gtest GTest::gtest_main ${ARGN})
+    target_link_libraries(${target} PRIVATE GTest::gtest_main ${ARGN})
     if(MSVC)
         ### Edit and Continue for CMake projects
         target_compile_options(${target} PUBLIC "/Zi")
