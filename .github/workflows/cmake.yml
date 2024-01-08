@@ -21,6 +21,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set variables
+        run: |
+          echo "BUILD_TYPE_LOWERCASE=$(echo ${BUILD_TYPE} | tr '[:upper:]' '[:lower:]')" >> ${GITHUB_ENV}
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -38,12 +42,12 @@ jobs:
         run: ./vcpkg install gsl:x64-linux gtest:x64-linux benchmark:x64-linux fmt:x64-linux
 
       - name: Configure CMake
-        run: cmake --preset linux-release -S ${{github.workspace}}/cpp-algorithm -B ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-release
+        run: cmake --preset linux-${{env.BUILD_TYPE_LOWERCASE}} -S ${{github.workspace}}/cpp-algorithm -B ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-${{env.BUILD_TYPE_LOWERCASE}}
 
       - name: Build
-        working-directory: ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-release
+        working-directory: ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-${{env.BUILD_TYPE_LOWERCASE}}
         run: cmake --build . --config ${{env.BUILD_TYPE}} --target all --parallel 6
 
       - name: Test
-        working-directory: ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-release
+        working-directory: ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-${{env.BUILD_TYPE_LOWERCASE}}
         run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
