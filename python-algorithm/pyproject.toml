@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-algorithm"
+name = "algorithm"
 version = "1.0.0"
 description = "Algorithm examples for Python"
 authors = ["Jinseong Ha"]
