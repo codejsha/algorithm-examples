@@ -125,12 +125,13 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 ### Others
-/.idea/
-/.vs/
-/.vscode/
-/out/
-/cmake-build-debug/
-/cmake-build-debug-visual-studio/
-/cmake-build-release/
-/cmake-build-release-visual-studio/
-/Folder.DotSettings.user
+.idea/
+.vs/
+.vscode/
+out/
+cmake-build-debug/
+cmake-build-debug-visual-studio/
+cmake-build-release/
+cmake-build-release-visual-studio/
+Folder.DotSettings.user
+README_link.md
