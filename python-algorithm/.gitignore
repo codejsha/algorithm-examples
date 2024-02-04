@@ -589,5 +589,4 @@ FodyWeavers.xsd
 ### Others
 
 .idea/
-poetry.lock
 README_link.md
