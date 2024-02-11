@@ -347,6 +347,7 @@ algorithm Prim(G, root):
 **Examples**
 
 - Maze problem: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
+- Minimum spanning tree (Kruskal, Prim, Boruvka), CCSP#4.4.2: [python](python-algorithm/algorithm/graph/test)(test) | Find the minimum spanning tree of a graph.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
