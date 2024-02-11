@@ -3,9 +3,9 @@ import pytest
 from algorithm.math.greatest_common_divisor import gcd_euclidean, gcd_euclidean_divmod, gcd_extended_euclidean
 
 
-@pytest.mark.benchmark(group="gcd_euclidean")
+@pytest.mark.benchmark(group='gcd_euclidean')
 @pytest.mark.parametrize(
-    argnames="pair, expected",
+    argnames='pair, expected',
     argvalues=[
         ((24, 36), 12),
         ((17, 22), 1),
@@ -13,13 +13,13 @@ from algorithm.math.greatest_common_divisor import gcd_euclidean, gcd_euclidean_
     ])
 def test_gcd_euclidean(benchmark, pair, expected):
     assert is_positive_integer(*pair) is True
-    result = benchmark(gcd_euclidean, *pair)
-    assert expected == result
+    gcd = benchmark(gcd_euclidean, *pair)
+    assert expected == gcd
 
 
-@pytest.mark.benchmark(group="gcd_euclidean_divmod")
+@pytest.mark.benchmark(group='gcd_euclidean_divmod')
 @pytest.mark.parametrize(
-    argnames="pair, expected",
+    argnames='pair, expected',
     argvalues=[
         ((24, 36), 12),
         ((17, 22), 1),
@@ -27,13 +27,13 @@ def test_gcd_euclidean(benchmark, pair, expected):
     ])
 def test_gcd_euclidean_divmod(benchmark, pair, expected):
     assert is_positive_integer(*pair) is True
-    result = benchmark(gcd_euclidean_divmod, *pair)
-    assert expected == result
+    gcd = benchmark(gcd_euclidean_divmod, *pair)
+    assert expected == gcd
 
 
-@pytest.mark.benchmark(group="gcd_extended_euclidean")
+@pytest.mark.benchmark(group='gcd_extended_euclidean')
 @pytest.mark.parametrize(
-    argnames="pair, expected",
+    argnames='pair, expected',
     argvalues=[
         ((24, 36), (12, -1, 1)),
         ((17, 22), (1, -9, 7)),
@@ -41,8 +41,8 @@ def test_gcd_euclidean_divmod(benchmark, pair, expected):
     ])
 def test_gcd_extended_euclidean(benchmark, pair, expected):
     assert is_positive_integer(*pair) is True
-    result = benchmark(gcd_extended_euclidean, *pair)
-    assert expected == result
+    gcd = benchmark(gcd_extended_euclidean, *pair)
+    assert expected == gcd
 
 
 def is_positive_integer(a: int, b: int) -> bool:

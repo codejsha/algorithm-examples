@@ -1,8 +1,10 @@
 def addition_binary_number(number1: str, number2: str) -> str:
     """
-    Addition of binary numbers
+    Add two binary numbers which are represented as strings.
+    :param number1: number string 1
+    :param number2: number string 2
+    :return: sum of the two binary numbers
     """
-
     result = []
     carry = 0
     number1 = number1[::-1]
