@@ -1,6 +1,6 @@
 def interval_scheduling_lecture(lectures: list[dict]) -> list[dict]:
     """
-    Greedy algorithm to schedule lectures.
+    Schedule lectures to maximize the number of lectures that can be attended. This uses the greedy algorithm.
     :param lectures: list of lectures
     :return: list of scheduled lectures
     """

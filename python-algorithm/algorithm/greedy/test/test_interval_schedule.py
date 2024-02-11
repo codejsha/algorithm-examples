@@ -17,9 +17,9 @@ lecture3 = {'title': 'lecture3',
 
 @pytest.mark.benchmark(group='interval_scheduling_lecture')
 @pytest.mark.parametrize(
-    argnames='lectures, expected',
+    argnames='lectures, expected_schedule',
     argvalues=[([lecture1, lecture2, lecture3], [lecture2, lecture3])],
     ids=['case1'])
-def test_interval_scheduling_lecture(benchmark, lectures, expected):
+def test_interval_scheduling_lecture(benchmark, lectures, expected_schedule):
     result = benchmark(interval_scheduling_lecture, lectures)
-    assert expected == result
+    assert expected_schedule == result
