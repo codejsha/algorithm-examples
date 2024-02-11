@@ -156,7 +156,7 @@ var list = Arrays.stream(arr).boxed().sorted().collect(Collectors.toCollection(A
 
 - Advancing through an array, EPI#5.4: [c++](cpp-algorithm/src/array) | Advance through the array to the last index.
 - Arbitrary precision operation - increment an arbitrary-precision integer, EPI#5.2: [c++](cpp-algorithm/src/array)(`PlusOne`) | Add one to the number represented by the vector.
-- Arbitrary precision operation - add two arbitrary-precision integers: [c++](cpp-algorithm/src/array)((`StringAddition`)) | Add two numbers represented by strings.
+- Arbitrary precision operation - add two arbitrary-precision integers: [c++](cpp-algorithm/src/array)(`StringAddition`) | Add two numbers represented by strings.
 - Arbitrary precision operation - multiply two arbitrary-precision integers, EPI#5.3: [c++](cpp-algorithm/src/array)(`Multiply`) | Multiply two numbers represented by vectors.
 - Delete duplicates from a sorted array, EPI#5.5: [c++](cpp-algorithm/src/array)(`DeleteDuplicates`) | Delete duplicate elements in the array.
 - Delete duplicates from a sorted array: [c++](cpp-algorithm/src/array)(`DeleteDuplicateElements`) | Delete duplicate elements in the array.
@@ -260,7 +260,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
+- Dijkstra's algorithm: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -994,9 +994,9 @@ list.sort(Comparator.comparingInt(String::length));
 
 | **Case**    | **Time complexity** | **Remarks**                                                                             |
 | :---------- | :-----------------: | :-------------------------------------------------------------------------------------- |
-| **Best**    |       $O(n)$        | when the input list is already sorted in the desired order                              |
+| **Best**    |       $O(n)$        | when the input list is already sorted in the desired order (ascending or descending)    |
 | **Worst**   |      $O(n^2)$       | when the input list is already sorted in the reverse order of the desired sorting order |
-| **Average** |      $O(n^2)$       |                                                                                         |
+| **Average** |      $O(n^2)$       | when the input list is in jumbled order                                                 |
 
 - Bucket sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>(`n` is the number of elements and `k` is the number of buckets)
 
@@ -1008,11 +1008,11 @@ list.sort(Comparator.comparingInt(String::length));
 
 - Counting sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort.<br>(`n` is the number of elements and `k` is the range of input values)
 
-| **Case**    | **Time complexity** | **Remarks**                                          |
-| ----------- | :-----------------: | ---------------------------------------------------- |
-| **Best**    |     $O(n + k)$      | when the input elements have a small range of values |
-| **Worst**   |     $O(n + k)$      | when the input elements have a large range of values |
-| **Average** |     $O(n + k)$      |                                                      |
+| **Case**    | **Time complexity** | **Remarks**                                             |
+| ----------- | :-----------------: | ------------------------------------------------------- |
+| **Best**    |     $O(n + k)$      | when the input elements have a small range of values    |
+| **Worst**   |     $O(n + k)$      | when the input elements have a large range of values    |
+| **Average** |     $O(n + k)$      | when the elements are distributed randomly in the array |
 
 - Heap sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>(`n` is the number of elements)
 
@@ -1062,7 +1062,7 @@ list.sort(Comparator.comparingInt(String::length));
 - Merge two sorted arrays, EPI#13.2, LeetCode#merge-sorted-array: [c++](cpp-algorithm/src/sort)(`MergeTwoSortedArray`) | Merge two sorted array. Merge the second array into the first array.
 - Partitioning and sorting an array with many repeated entries, EPI#13.9: [java](java-algorithm/src/main/java/com/example/algorithm/sort)(`GroupByAge`) | Given an array of objects with an age field, reorder the array so that objects of equal age appear together. They should be sorted in ascending order of age, and the order of objects with the same age is not important.
 - Remove first-name duplicates, EPI#13.4: [c++](cpp-algorithm/src/sort)(`EliminateFirstNameDuplicate`) | Given an array of names, remove the duplicates of the first name.
-- Salary threadhold, EPI#13.12: [java](java-algorithm/src/main/java/com/example/algorithm/sort)(`SalaryThreshold`) | Given an array of salaries and a budget, compute the salary cap so that the total salaries equal the budget.
+- Salary threshold, EPI#13.12: [java](java-algorithm/src/main/java/com/example/algorithm/sort)(`SalaryThreshold`) | Given an array of salaries and a budget, compute the salary cap so that the total salaries equal the budget.
 - Team photo day, EPI#13.10: [java](java-algorithm/src/main/java/com/example/algorithm/sort)(`SortPlayerByHeight`) | Given two arrays of numbers, for team photos, players are arranged in front and back rows and then photographed. The players in the back row must necessarily be taller than those in the front row. Additionally, all players in a row should belong to the same team.
 - Union of intervals, EPI#13.8: [c++](cpp-algorithm/src/sort)(`UnionOfIntervals`) | Given a set of intervals, compute their union.
 
