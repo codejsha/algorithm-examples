@@ -3,9 +3,9 @@ import pytest
 from algorithm.math.greatest_common_divisor import gcd_euclidean, gcd_euclidean_divmod, gcd_extended_euclidean
 
 
-@pytest.mark.benchmark(group="gcd_euclidean")
+@pytest.mark.benchmark(group='gcd_euclidean')
 @pytest.mark.parametrize(
-    argnames="pair, expected",
+    argnames='pair, expected',
     argvalues=[
         ((24, 36), 12),
         ((17, 22), 1),
@@ -17,9 +17,9 @@ def test_gcd_euclidean(benchmark, pair, expected):
     assert expected == result
 
 
-@pytest.mark.benchmark(group="gcd_euclidean_divmod")
+@pytest.mark.benchmark(group='gcd_euclidean_divmod')
 @pytest.mark.parametrize(
-    argnames="pair, expected",
+    argnames='pair, expected',
     argvalues=[
         ((24, 36), 12),
         ((17, 22), 1),
@@ -31,9 +31,9 @@ def test_gcd_euclidean_divmod(benchmark, pair, expected):
     assert expected == result
 
 
-@pytest.mark.benchmark(group="gcd_extended_euclidean")
+@pytest.mark.benchmark(group='gcd_extended_euclidean')
 @pytest.mark.parametrize(
-    argnames="pair, expected",
+    argnames='pair, expected',
     argvalues=[
         ((24, 36), (12, -1, 1)),
         ((17, 22), (1, -9, 7)),

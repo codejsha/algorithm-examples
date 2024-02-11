@@ -3,9 +3,9 @@ import pytest
 from algorithm.math.least_common_multiple import lcm
 
 
-@pytest.mark.benchmark(group="lcm")
+@pytest.mark.benchmark(group='lcm')
 @pytest.mark.parametrize(
-    argnames="pair, expected",
+    argnames='pair, expected',
     argvalues=[
         ((24, 36), 72),
         ((17, 22), 374),
