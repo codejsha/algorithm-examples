@@ -10,8 +10,8 @@ from algorithm.search.generic_search import generic_linear_contains, generic_bin
     ],
     ids=['found'])
 def test_generic_linear_contains(benchmark, elements, target, expected):
-    result = benchmark(generic_linear_contains, elements, target)
-    assert expected == result
+    has_key = benchmark(generic_linear_contains, elements, target)
+    assert expected == has_key
 
 
 @pytest.mark.benchmark(group='binary_contains')
@@ -23,5 +23,5 @@ def test_generic_linear_contains(benchmark, elements, target, expected):
     ],
     ids=['found', 'not_found'])
 def test_generic_binary_contains(benchmark, elements, target, expected):
-    result = benchmark(generic_binary_contains, elements, target)
-    assert expected == result
+    has_key = benchmark(generic_binary_contains, elements, target)
+    assert expected == has_key

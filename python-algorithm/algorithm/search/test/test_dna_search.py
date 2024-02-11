@@ -15,8 +15,8 @@ from algorithm.search.dna_search import Nucleotide, string_to_gene, linear_conta
     ],
     ids=['found', 'not_found'])
 def test_linear_contains(benchmark, gene, key_codon, expected):
-    result = benchmark(linear_contains, gene, key_codon)
-    assert expected == result
+    has_key = benchmark(linear_contains, gene, key_codon)
+    assert expected == has_key
 
 
 @pytest.mark.benchmark(group='binary_contains')
@@ -32,5 +32,5 @@ def test_linear_contains(benchmark, gene, key_codon, expected):
     ],
     ids=['found', 'not_found'])
 def test_binary_contains(benchmark, gene, key_codon, expected):
-    result = benchmark(binary_contains, gene, key_codon)
-    assert expected == result
+    has_key = benchmark(binary_contains, gene, key_codon)
+    assert expected == has_key
