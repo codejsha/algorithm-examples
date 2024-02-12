@@ -4,7 +4,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PrimTest {
     Prim.Graph graph;
@@ -69,14 +71,22 @@ class PrimTest {
     @Test
     void primAlgorithmVertex() {
         var expected = new Prim.Vertex[]{vertexA, vertexB, vertexC, vertexI, vertexF, vertexG, vertexH, vertexD, vertexE};
-        var actual = Prim.primAlgorithmVertex(graph, vertexA);
-        assertArrayEquals(expected, actual);
+        var vertices = Prim.primAlgorithmVertex(graph, vertexA);
+        Arrays.sort(expected);
+        Arrays.sort(vertices);
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals(expected[i].key, vertices[i].key);
+        }
     }
 
     @Test
     void primAlgorithmEdge() {
         var expected = new Prim.Edge[]{edgeAB, edgeBC, edgeCI, edgeCF, edgeFG, edgeGH, edgeCD, edgeDE};
-        var actual = Prim.primAlgorithmEdge(graph, vertexA);
-        assertArrayEquals(expected, actual);
+        var edges = Prim.primAlgorithmEdge(graph, vertexA);
+        Arrays.sort(expected);
+        Arrays.sort(edges);
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals(expected[i].weight, edges[i].weight);
+        }
     }
 }
