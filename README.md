@@ -187,7 +187,7 @@ var list = Arrays.stream(arr).boxed().sorted().collect(Collectors.toCollection(A
 **Graph algorithms**
 
 - A\* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
-- Bellman-Ford algorithm: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+- Bellman-Ford algorithm, CLRS#24.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
 ```txt
 algorithm BellmanFord(G, source):
@@ -210,7 +210,7 @@ algorithm BellmanFord(G, source):
     return true
 ```
 
-- Breadth-first search (BFS), CCSP#4.3.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph), [python(test)](python-algorithm/algorithm/graph/test) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
+- Breadth-first search (BFS), CLRS#22.2, CCSP#4.3.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph), [python(test)](python-algorithm/algorithm/graph/test) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
 
 ```txt
 algorithm BFS(G, source):
@@ -235,7 +235,7 @@ algorithm BFS(G, source):
         u.color = BLACK
 ```
 
-- Depth-first search (DFS): [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
+- Depth-first search (DFS), CLRS#22.3: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
 
 ```txt
 algorithm DFS(G):
@@ -260,7 +260,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm, CCSP#4.5.1: [c++](cpp-algorithm/src/graph),[python](python-algorithm/algorithm/graph/test)(test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
+- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](cpp-algorithm/src/graph), [python](python-algorithm/algorithm/graph/test)(test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -283,7 +283,7 @@ algorithm Dijkstra(G, source):
 ```
 
 - Edmonds-Karp algorithm
-- Floyd-Warshall algorithm: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A all pairs shortest paths algorithm.
+- Floyd-Warshall algorithm, CLRS#25.2: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A all pairs shortest paths algorithm.
 
 ```txt
 algorithm InitializeAdjacencyMatrix(G):
@@ -307,9 +307,9 @@ algorithm FloydWarshall(G):
     return d
 ```
 
-- Ford-Fulkerson algorithm
-- Johnson's algorithm: A all pairs shortest paths algorithm. This is a combination of Dijkstra's algorithm and the Bellman-Ford algorithm. It may be faster than Floyd–Warshall on sparse graphs.
-- Kruskal's algorithm: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph. The algorithm uses path compression (FIND-SET) and union by rank (UNION) to improve the performance.
+- Ford-Fulkerson algorithm, CLRS#26.2
+- Johnson's algorithm, CLRS#25.3: A all pairs shortest paths algorithm. This is a combination of Dijkstra's algorithm and the Bellman-Ford algorithm. It may be faster than Floyd–Warshall on sparse graphs.
+- Kruskal's algorithm, CLRS#23.2, CLRS#21.1: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A minimum spanning tree algorithm. It finds a minimum spanning forest of an undirected edge-weighted graph. The algorithm uses path compression (FIND-SET) and union by rank (UNION) to improve the performance.
 
 ```txt
 algorithm Kruskal(G, w):
@@ -323,8 +323,8 @@ algorithm Kruskal(G, w):
     return Set
 ```
 
-- Maximum bipartite matching
-- Prim's algorithm: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
+- Maximum bipartite matching, CLRS#26.3
+- Prim's algorithm, CLRS#23.2: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A minimum spanning tree algorithm. It is a greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
 
 ```txt
 algorithm Prim(G, root):
@@ -341,17 +341,19 @@ algorithm Prim(G, root):
                 v.key = w(u, v)
 ```
 
-- Push-relabel algorithm
+- Push-relabel algorithm, CLRS#26.4
 - Viterbi algorithm: A shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
 
 **Examples**
 
 - Maze problem: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
-- Minimum spanning tree (Kruskal, Prim, Boruvka), CCSP#4.4.2: [python](python-algorithm/algorithm/graph/test)(test) | Find the minimum spanning tree of a graph.
+- Minimum spanning tree (Kruskal, Prim, Boruvka), CLRS#23, CCSP#4.4.2: [python](python-algorithm/algorithm/graph/test)(test) | Find the minimum spanning tree of a graph. cf. Kruskal(CLRS#23.2, CLRS#21.1), Prim(CLRS#23.2)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :key: Hash table
+
+(CLRS#11)
 
 **C++ declaration/methods**
 
@@ -474,7 +476,7 @@ contains(1), clear(), iterator()
 
 **Heap algorithms**
 
-- Fibonacci heap
+- Fibonacci heap, CLRS#19
 
 **Examples**
 
@@ -487,7 +489,7 @@ contains(1), clear(), iterator()
 
 ### :paperclips: Linked list
 
-In Python, there is no built-in type or library for LinkedList.
+A linked list is a data structure that consists of a sequence of elements, where each element points to the next. (CLRS#10.2)<br>In Python, there is no built-in type or library for LinkedList.
 
 **C++ declaration/methods**
 
@@ -540,6 +542,8 @@ iterator(), listIterator()
 
 ### :walking: Queue
 
+A queue is a data structure that implements the FIFO (first-in, first-out) policy. It has the following operations: enqueue (insert an element), dequeue (delete the least recently inserted element). (CLRS#10.1)
+
 **C++ declaration/methods**
 
 ```cpp
@@ -578,6 +582,8 @@ var list = new ArrayList<>(deque);          // deque to list
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :hamburger: Stack
+
+A stack is a data structure that implements the LIFO (last-in, first-out) policy. It has the following operations: push (insert an element), pop (delete the most recently inserted element). (CLRS#10.1)
 
 **C++ declaration/methods**
 
@@ -691,11 +697,11 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 **Tree algorithms**
 
 - AVL tree
-- B-tree: [c++](cpp-algorithm/src/tree) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
-- Binary search tree: [c++](cpp-algorithm/src/tree) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
-- Red-black tree
+- B-tree, CLRS#18: [c++](cpp-algorithm/src/tree) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
+- Binary search tree, CLRS#12: [c++](cpp-algorithm/src/tree) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
+- Red-black tree, CLRS#13
 - Trie
-- van Emde Boas tree (vEB tree)
+- van Emde Boas tree (vEB tree), CLRS#20
 
 **Examples**
 
@@ -717,6 +723,8 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 ### :jigsaw: Dynamic programming
 
+(CLRS#15)
+
 **Examples**
 
 - Fibonacci number: [c++](cpp-algorithm/src/dynamic_programming) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
@@ -724,18 +732,20 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
   - $F_1 = 1$
   - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
 - Interval subset sum (`SubsetSum1`, `SubsetSum2`, `DivideAndConquerSubsetSum`, `DynamicProgrammingSubsetSum`): [c++](cpp-algorithm/src/dynamic_programming) | Interval subset sum problem is that finds the maximum sum of a subset of intervals.
-- Longest common subsequence: [c++](cpp-algorithm/src/dynamic_programming)
-- Rod cutting: [c++](cpp-algorithm/src/dynamic_programming) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
+- Longest common subsequence, CLRS#15.4: [c++](cpp-algorithm/src/dynamic_programming)
+- Rod cutting, CLRS#15.1: [c++](cpp-algorithm/src/dynamic_programming) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :clock9: Greedy
 
+(CLRS#16)
+
 **Examples**
 
-- Activity selection: [c++](cpp-algorithm/src/greedy) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
+- Activity selection problem, CLRS#16.1: [c++](cpp-algorithm/src/greedy) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
 - Cashier's change: [python](python-algorithm/algorithm/greedy) | Cashier's change problem is that finds the minimum number of coins required to make change for a given amount of money.
-- Huffman code: [c++](cpp-algorithm/src/greedy) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
+- Huffman code, CLRS#16.3: [c++](cpp-algorithm/src/greedy) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
 - Interval scheduling: [python](python-algorithm/algorithm/greedy) | Interval scheduling problem is that finds the minimum number of intervals required to schedule a set of activities(lectures).
 
 [:arrow_up_small: back to toc](#table-of-contents)
@@ -767,14 +777,14 @@ Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x,
 
 - Combination: [c++](cpp-algorithm/src/math)(`GenerateCombination`) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD): [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the greatest common divisor of two numbers.
+- Greatest common divisor (GCD), CLRS#31.2: [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the greatest common divisor of two numbers.
 - Integer factorization: [c++](cpp-algorithm/src/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
 - Least common multiple (LCM): [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the least common multiple of two numbers.
-- Miller-Rabin primality test: [c++](cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
+- Miller-Rabin primality test, , CLRS#31.8: [c++](cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
 - Permutation: [c++](cpp-algorithm/src/math)(`Permutation`) | Find the permutation of a set of items.
 - Permutation, EPI#5.10: [c++](cpp-algorithm/src/math)(`ApplyPermutationWithAdditionalSpace`, `ApplyPermutationBySwap`) | Permute the elements of an array
 - Permutation: [c++](cpp-algorithm/src/math)(`InversePermutation`)
-- Permutation, EPI#5.11: [c++](cpp-algorithm/src/math)(`NextPermutation`/`PreviousPermutation`) | Compute the next/previous permutation.
+- Permutation, EPI#5.11: [c++](cpp-algorithm/src/math)(`NextPermutation`, `PreviousPermutation`) | Compute the next/previous permutation.
 - Permutation, EPI#5.11: [c++](cpp-algorithm/src/math)(`KthPermutation`) | Compute the $k$-th permutation.
 - Prime number: [java](java-algorithm/src/main/java/com/example/algorithm/math)(`isPrime`) | Check whether a given number is prime.
 - Simplex algorithm: Simplex algorithm is a mathematical algorithm that finds the optimal solution to a linear programming problem.
@@ -869,7 +879,7 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 **Primitive type algorithms**
 
-- Arithmetic operation, EPI#4.5, EPI#4.6: [c++](cpp-algorithm/src/primitive_type)(`Multiply`/`Divide`) | Calculate the product/fraction of two numbers without using arithmetic operators.
+- Arithmetic operation, EPI#4.5, EPI#4.6: [c++](cpp-algorithm/src/primitive_type)(`Multiply`, `Divide`) | Calculate the product/fraction of two numbers without using arithmetic operators.
 - Power operation, EPI#4.7: [c++](cpp-algorithm/src/primitive_type) | Compute repeated squaring $x^y$.
 
 **Examples**
@@ -903,7 +913,7 @@ insert(42), emplace(42), erase(42), find(42), size(), equal_range(3)
 std::ranges::find(v, 42)
 std::ranges::find(v, 42)
 std::ranges::find_if(v, [](auto x) { return x % 2 == 0; })
-std::ranges::find_end(v, sub_v).begin() // cf. result - v.begin()
+std::ranges::find_end(v, sub_v).begin() // result - v.begin()
 std::ranges::binary_search(v, 42)
 std::ranges::lower_bound(v, 42)
 std::ranges::upper_bound(v, 42)
@@ -942,7 +952,7 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 **Examples**
 
-- Find k-th smallest/largest element in an array, EPI#11.8: [c++](cpp-algorithm/src/search)(`FindKthSmallestElement`/`FindKthLargestElement`) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
+- Find k-th smallest/largest element in an array, EPI#11.8: [c++](cpp-algorithm/src/search)(`FindKthSmallestElement`, `FindKthLargestElement`) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
 - Find the minimum and maximum elements in an array, EPI#11.7: [c++](cpp-algorithm/src/search)(`FindMinMax`)
 - Search a codon(combinations of three nucleotides) in a gene, CCSP#2.1: [python](python-algorithm/algorithm/search)(`linear_contains`, `binary_contains`) | Search a codon(combinations of three nucleotides) in a gene using linear search and binary search.
 - Search an element in generic list, CCSP#2.1: [python](python-algorithm/algorithm/search)(`generic_linear_contains`, `generic_linear_contains`) | Search an element in generic list using linear search and binary search.
@@ -991,7 +1001,7 @@ list.sort(Comparator.comparingInt(String::length));
 
 **Sorting algorithms**
 
-- Bubble sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>(`n` is the number of elements)
+- Bubble sort, CLRS#2-problems2.2: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                             |
 | :---------- | :-----------------: | :-------------------------------------------------------------------------------------- |
@@ -999,7 +1009,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       | when the input list is already sorted in the reverse order of the desired sorting order |
 | **Average** |      $O(n^2)$       | when the input list is in jumbled order                                                 |
 
-- Bucket sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>(`n` is the number of elements and `k` is the number of buckets)
+- Bucket sort, CLRS#8.4: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>(`n` is the number of elements and `k` is the number of buckets)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                                    |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------------- |
@@ -1007,7 +1017,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       | when all elements are placed into a single bucket                                                              |
 | **Average** |       $O(n)$        |                                                                                                                |
 
-- Counting sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort.<br>(`n` is the number of elements and `k` is the range of input values)
+- Counting sort, CLRS#8.2: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort (CLRS#8.3).<br>(`n` is the number of elements and `k` is the range of input values)
 
 | **Case**    | **Time complexity** | **Remarks**                                             |
 | ----------- | :-----------------: | ------------------------------------------------------- |
@@ -1015,7 +1025,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |     $O(n + k)$      | when the input elements have a large range of values    |
 | **Average** |     $O(n + k)$      | when the elements are distributed randomly in the array |
 
-- Heap sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>(`n` is the number of elements)
+- Heap sort, CLRS#6: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -1023,7 +1033,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Insertion sort: [c++](cpp-algorithm/src/sort), [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>(`n` is the number of elements)
+- Insertion sort, CLRS#2.1: [c++](cpp-algorithm/src/sort), [java](java-algorithm/src/main/java/com/example/algorithm/sort) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>(`n` is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                     |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------- |
@@ -1031,7 +1041,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       | if the list is sorted in reverse order.<br>this case has quadratic running time |
 | **Average** |      $O(n^2)$       | this case has quadratic running time                                            |
 
-- Merge sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | divide and conquer algorithm
+- Merge sort, CLRS#2.3: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                           |
 | ----------- | :-----------------: | ----------------------------------------------------------------------------------------------------- |
@@ -1039,7 +1049,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |    $O(n log n)$     |                                                                                                       |
 | **Average** |    $O(n log n)$     |                                                                                                       |
 
-- Quick sort: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | divide and conquer algorithm
+- Quick sort, CLRS#7: [java](java-algorithm/src/main/java/com/example/algorithm/sort) | divide and conquer algorithm
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -1131,10 +1141,10 @@ var str = collection.stream()
 
 **String algorithms**
 
-- Finite automata
-- Knuth-Morris-Pratt algorithm (KMP)
-- Naive string matching: [c++](cpp-algorithm/src/string), [python](python-algorithm/algorithm/string) | Find all occurrences of a pattern in a string.
-- Rabin-Karp algorithm, EPI#6.12: [c++](cpp-algorithm/src/string) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
+- Finite automata, CLRS#32.3
+- Knuth-Morris-Pratt algorithm (KMP), CLRS#32.4
+- Naive string matching, CLRS#32.1: [c++](cpp-algorithm/src/string), [python](python-algorithm/algorithm/string) | Find all occurrences of a pattern in a string.
+- Rabin-Karp algorithm, CLRS#32.2, EPI#6.12: [c++](cpp-algorithm/src/string) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
 
 **Examples**
 
@@ -1146,7 +1156,7 @@ var str = collection.stream()
 - Roman number, EPI#6.8: [c++](cpp-algorithm/src/string)(`VerifyRomanString`) | Verify if a string is a valid roman number.
 - Roman number, EPI#6.8: [c++](cpp-algorithm/src/string)(`RomanStringToInteger`) | Convert a roman number to integer.
 - Run-length encoding (RLE), EPI#6.11: [c++](cpp-algorithm/src/string) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
-- Spreadsheet column decoding/encoding, EPI#6.3: [c++](cpp-algorithm/src/string)(`DecodingSheetColumnId`/`EncodingSheetColumnId`) | Convert a spreadsheet column id to integer and vice versa.
+- Spreadsheet column decoding/encoding, EPI#6.3: [c++](cpp-algorithm/src/string)(`DecodingSheetColumnId`, `EncodingSheetColumnId`) | Convert a spreadsheet column id to integer and vice versa.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
