@@ -1,5 +1,7 @@
 package com.example.algorithm.graph;
 
+import com.google.common.base.Objects;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.PriorityQueue;
@@ -126,12 +128,31 @@ public class Prim {
         }
     }
 
-    public static class Vertex {
+    public static class Vertex implements Comparable<Vertex> {
         char key;
         Set<Edge> edges = new HashSet<>();
 
         public Vertex(char key) {
             this.key = key;
+        }
+
+        @Override
+        public int compareTo(Vertex other) {
+            return Character.compare(this.key, other.key);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Vertex vertex = (Vertex) o;
+            return key == vertex.key
+                    && Objects.equal(edges, vertex.edges);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(key);
         }
     }
 
@@ -148,7 +169,22 @@ public class Prim {
 
         @Override
         public int compareTo(Edge other) {
-            return Integer.compare(weight, other.weight);
+            return Integer.compare(this.weight, other.weight);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Edge edge = (Edge) o;
+            return weight == edge.weight
+                    && Objects.equal(source, edge.source)
+                    && Objects.equal(sink, edge.sink);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(source, sink, weight);
         }
     }
 }
