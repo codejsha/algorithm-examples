@@ -471,34 +471,34 @@ int[] result = map.entrySet().stream()
 import com.google.common.collect.*;
 Map<String, Integer> map = Maps.newHashMap();
 Set<Integer> set = Sets.newHashSet();
-EnumMap<City, Country> map = Maps.newEnumMap(City.class);
-LinkedHashMap<String, Integer> map = Maps.newLinkedHashMap();
-LinkedHashSet<Integer> set = Sets.newLinkedHashSet();
+Map<City, Country> map = Maps.newEnumMap(City.class);
+Map<String, Integer> map = Maps.newLinkedHashMap();
+Set<Integer> set = Sets.newLinkedHashSet();
 
 // guava multiset (implements Multiset<E>)
 import com.google.common.collect.*;
-HashMultiset<String> multiset = HashMultiset.create();
-TreeMultiset<String> multiset = TreeMultiset.create();
-LinkedHashMultiset<String> multiset = LinkedHashMultiset.create();
-ConcurrentHashMultiset<String> multiset = ConcurrentHashMultiset.create();
-ImmutableMultiset<String> multiset = ImmutableMultiset.of("a", "b", "c");
+Multiset<String> multiset = HashMultiset.create();
+Multiset<String> multiset = TreeMultiset.create();
+Multiset<String> multiset = LinkedHashMultiset.create();
+Multiset<String> multiset = ConcurrentHashMultiset.create();
+Multiset<String> multiset = ImmutableMultiset.of("a", "b", "c");
 
 // guava multimap (implements Multimap<K, V>)
 import com.google.common.collect.*;
-ArrayListMultimap<String, Integer> multimap = ArrayListMultimap.create();
-HashMultimap<String, Integer> multimap = HashMultimap.create();
-LinkedListMultimap<String, Integer> multimap = LinkedListMultimap.create();
-LinkedHashMultimap<String, Integer> multimap = LinkedHashMultimap.create();
-TreeMultimap<String, Integer> multimap = TreeMultimap.create();
-ImmutableListMultimap<String, Integer> multimap = ImmutableListMultimap.of("a", 1, "a", 2, "b", 3);
-ImmutableSetMultimap<String, Integer> multimap = ImmutableSetMultimap.of("a", 1, "a", 2, "b", 3);
+Multimap<String, Integer> multimap = ArrayListMultimap.create();
+Multimap<String, Integer> multimap = HashMultimap.create();
+Multimap<String, Integer> multimap = LinkedListMultimap.create();
+Multimap<String, Integer> multimap = LinkedHashMultimap.create();
+Multimap<String, Integer> multimap = TreeMultimap.create();
+Multimap<String, Integer> multimap = ImmutableListMultimap.of("a", 1, "a", 2, "b", 3);
+Multimap<String, Integer> multimap = ImmutableSetMultimap.of("a", 1, "a", 2, "b", 3);
 
 // guava bimap (implements BiMap<K, V>, Map<K, V>)
 import com.google.common.collect.*;
-HashBiMap<String, Integer> bimap = HashBiMap.create();
-ImmutableBiMap<String, Integer> bimap = ImmutableBiMap.of("a", 1, "b", 2);
-EnumBiMap<City, Country> bimap = EnumBiMap.create(City.class, Country.class);
-EnumHashBiMap<City, Integer> bimap = EnumHashBiMap.create(City.class);
+BiMap<String, Integer> bimap = HashBiMap.create();
+BiMap<String, Integer> bimap = ImmutableBiMap.of("a", 1, "b", 2);
+BiMap<City, Country> bimap = EnumBiMap.create(City.class, Country.class);
+BiMap<City, Integer> bimap = EnumHashBiMap.create(City.class);
 
 // guava table (implements Table<R, C, V>)
 import com.google.common.collect.*;
@@ -555,7 +555,7 @@ contains(1), clear(), iterator()
 
 // guava
 import com.google.common.collect.*;
-PriorityQueue<Integer> queue = Queues.newPriorityQueue();
+Queue<Integer> queue = Queues.newPriorityQueue();
 ```
 
 **Heap algorithms**
@@ -667,7 +667,7 @@ var list = new ArrayList<>(deque);          // deque to list
 
 // guava
 import com.google.common.collect.*;
-ArrayDeque<Integer> deque = Queues.newArrayDeque();
+Deque<Integer> deque = Queues.newArrayDeque();
 ```
 
 **Examples**
@@ -765,8 +765,8 @@ headSet(3), tailSet(3), subSet(2, 4), descendingSet()
 
 // guava
 import com.google.common.collect.*;
-TreeMap<Integer, Integer> map = Maps.newTreeMap();
-TreeSet<Integer> set = Sets.newTreeSet();
+Map<Integer, Integer> map = Maps.newTreeMap();
+Set<Integer> set = Sets.newTreeSet();
 ```
 
 **Properties of Trees**
