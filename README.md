@@ -150,6 +150,11 @@ var list = Arrays.asList(arr);  // array to list
 var arr = strList.toArray(String[]::new);  // List<String> to String[]
 var arr = intList.stream().mapToInt(Integer::intValue).toArray();  // List<Integer> to int[]
 var list = Arrays.stream(arr).boxed().sorted().collect(Collectors.toCollection(ArrayList::new));    // array to sorted list
+
+// guava
+import com.google.common.collect.*;
+List<String> list = Lists.newArrayList();
+List<String> list = Lists.asList(boxedArray);
 ```
 
 **Examples**
@@ -184,10 +189,42 @@ var list = Arrays.stream(arr).boxed().sorted().collect(Collectors.toCollection(A
 - Minimum spanning tree algorithm: Kruskal's algorithm, Prim's algorithm
 - Maximum flow algorithm: Edmonds-Karp algorithm, Ford-Fulkerson algorithm, Push-relabel algorithm, Maximum bipartite matching
 
+**Python declaration/functions**
+
+```python
+# networkx
+import networkx
+graph = networkx.Graph()
+
+# edges
+edges = [(seattle, chicago), (seattle, san_francisco), ...]
+graph.add_edges_from(edges)
+
+# weighted edges
+weighted_edges = [(seattle, chicago, 1737), (seattle, san_francisco, 678), ...]
+graph.add_weighted_edges_from(weighted_edges)
+
+# operations
+networkx.bfs_layers(graph, "Boston")
+networkx.minimum_spanning_tree(graph, algorithm="kruskal")
+networkx.dijkstra_path(graph, "Los Angeles", "Boston")
+```
+
+**Java declaration/methods**
+
+```java
+// guava graph
+import com.google.common.graph.*;
+MutableGraph<Integer> graph = GraphBuilder.undirected().build();
+MutableValueGraph<City, Distance> roads = ValueGraphBuilder.directed()
+        .incidentEdgeOrder(ElementOrder.stable())
+        .build();
+```
+
 **Graph algorithms**
 
 - A\* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
-- Bellman-Ford algorithm, CLRS#24.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+- Bellman-Ford algorithm, CLRS#24.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
 ```txt
 algorithm BellmanFord(G, source):
@@ -260,7 +297,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](cpp-algorithm/src/graph), [python](python-algorithm/algorithm/graph/test)(test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It find the shortest path between two vertices in a graph.
+- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](cpp-algorithm/src/graph), [python](python-algorithm/algorithm/graph/test)(test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It finds the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -342,7 +379,7 @@ algorithm Prim(G, root):
 ```
 
 - Push-relabel algorithm, CLRS#26.4
-- Viterbi algorithm: A shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
+- Viterbi algorithm: Shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
 
 **Examples**
 
@@ -413,19 +450,62 @@ var set = new HashSet<Integer>();
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator()
 var arr = set.toArray(Integer[]::new);
 
-// unmodifiable
-import java.util.Collections;
-Collections.unmodifiableMap(map);
-Collections.unmodifiableSet(set);
-Collections.unmodifiableSortedMap(map);
-Collections.unmodifiableSortedSet(set);
+// enum map
+import java.util.EnumMap;
+Map<City, Integer> map = new EnumMap<>(City.class);
 
-// stream
+// linked hash map, linked hash set
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+var map = new LinkedHashMap<String, Integer>();
+var set = new LinkedHashSet<Integer>();
+
+// unboxing
 int[] result = map.entrySet().stream()
         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
         .map(Map.Entry::getKey)
         .mapToInt(Integer::parseInt)
         .toArray();
+
+// guava
+import com.google.common.collect.*;
+Map<String, Integer> map = Maps.newHashMap();
+Set<Integer> set = Sets.newHashSet();
+EnumMap<City, Country> map = Maps.newEnumMap(City.class);
+LinkedHashMap<String, Integer> map = Maps.newLinkedHashMap();
+LinkedHashSet<Integer> set = Sets.newLinkedHashSet();
+
+// guava multiset (implements Multiset<E>)
+import com.google.common.collect.*;
+HashMultiset<String> multiset = HashMultiset.create();
+TreeMultiset<String> multiset = TreeMultiset.create();
+LinkedHashMultiset<String> multiset = LinkedHashMultiset.create();
+ConcurrentHashMultiset<String> multiset = ConcurrentHashMultiset.create();
+ImmutableMultiset<String> multiset = ImmutableMultiset.of("a", "b", "c");
+
+// guava multimap (implements Multimap<K, V>)
+import com.google.common.collect.*;
+ArrayListMultimap<String, Integer> multimap = ArrayListMultimap.create();
+HashMultimap<String, Integer> multimap = HashMultimap.create();
+LinkedListMultimap<String, Integer> multimap = LinkedListMultimap.create();
+LinkedHashMultimap<String, Integer> multimap = LinkedHashMultimap.create();
+TreeMultimap<String, Integer> multimap = TreeMultimap.create();
+ImmutableListMultimap<String, Integer> multimap = ImmutableListMultimap.of("a", 1, "a", 2, "b", 3);
+ImmutableSetMultimap<String, Integer> multimap = ImmutableSetMultimap.of("a", 1, "a", 2, "b", 3);
+
+// guava bimap (implements BiMap<K, V>, Map<K, V>)
+import com.google.common.collect.*;
+HashBiMap<String, Integer> bimap = HashBiMap.create();
+ImmutableBiMap<String, Integer> bimap = ImmutableBiMap.of("a", 1, "b", 2);
+EnumBiMap<City, Country> bimap = EnumBiMap.create(City.class, Country.class);
+EnumHashBiMap<City, Integer> bimap = EnumHashBiMap.create(City.class);
+
+// guava table (implements Table<R, C, V>)
+import com.google.common.collect.*;
+Table<Vertex, Vertex, Double> weightedGraph = HashBasedTable.create();
+Table<Vertex, Vertex, Double> weightedGraph = TreeBasedTable.create();
+Table<Vertex, Vertex, Double> weightedGraph = ArrayTable.create(Arrays.asList(v1, v2), Arrays.asList(v3, v4));
+Table<Vertex, Vertex, Double> weightedGraph = ImmutableTable.of(v1, v2, 4.0);
 ```
 
 **Examples**
@@ -434,11 +514,11 @@ int[] result = map.entrySet().stream()
 - Anonymous words constructible: [c++](cpp-algorithm/src/hash_table)(`IsWordConstructibleFromMagazine`) | Check if a letter can be written using the words in a magazine.
 - Collatz conjecture, EPI#12.11: [c++](cpp-algorithm/src/hash_table)(`FindNumbersSatisfyingCollatzConjecture`) | Find the numbers satisfying the Collatz conjecture.
 - Find anagrams: [c++](cpp-algorithm/src/hash_table)(`FindAnagramMappings`) | Given an array of strings, group anagrams together.
-- Find smallest subarray covering all values, EPI#12.6: [c++](cpp-algorithm/src/hash_table)(`FindSmallestSubarrayCoveringSubset`) | Find the smallest subarray that covers all the elements in a set.
-- Find smallest subarray sequentially covering all values, EPI#12.7: [c++](cpp-algorithm/src/hash_table)(`FindSmallestSubarraySequentiallyCoveringSubset`) | Find the smallest subarray that sequentially covers all the elements in a set.
-- ISBN cache, EPI#12.3: [c++](cpp-algorithm/src/hash_table) | Implement a LRU (Least Recently Used) cache for ISBN lookups.
+- Find the smallest subarray covering all values, EPI#12.6: [c++](cpp-algorithm/src/hash_table)(`FindSmallestSubarrayCoveringSubset`) | Find the smallest subarray that covers all the elements in a set.
+- Find the smallest subarray sequentially covering all values, EPI#12.7: [c++](cpp-algorithm/src/hash_table)(`FindSmallestSubarraySequentiallyCoveringSubset`) | Find the smallest subarray that sequentially covers all the elements in a set.
+- ISBN cache, EPI#12.3: [c++](cpp-algorithm/src/hash_table) | Implement an LRU (Least Recently Used) cache for ISBN lookups.
 - Nearest repeated entry, EPI#12.5: [c++](cpp-algorithm/src/hash_table)(`FindNearestRepeatedEntry`) | Find the nearest repeated entry in an array of strings.
-- Optimized lowest common ancestor, EPI#12.4: [c++](cpp-algorithm/src/hash_table)(`FindOptimizedLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
+- Optimized the lowest common ancestor, EPI#12.4: [c++](cpp-algorithm/src/hash_table)(`FindOptimizedLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
 - Palindromic permutation, EPI#12.1: [c++](cpp-algorithm/src/hash_table)(`IsPalindromePermutation`) | Given a string, determine if a permutation of the string could form a palindrome.
 
 [:arrow_up_small: back to toc](#table-of-contents)
@@ -472,6 +552,10 @@ var queue = new PriorityQueue<Integer>();
 var queue = new PriorityQueue<Integer>(Collections.reverseOrder());
 add(1), peek(), poll(), remove(), size(), isEmpty(),
 contains(1), clear(), iterator()
+
+// guava
+import com.google.common.collect.*;
+PriorityQueue<Integer> queue = Queues.newPriorityQueue();
 ```
 
 **Heap algorithms**
@@ -520,6 +604,11 @@ var list = new ArrayList<Integer>();
 add(1), addAll(List.of(2, 3, 4, 5)), remove(0), subList(1, 3),
 get(0), size(), isEmpty(), contains(3), containsAll(List.of(3, 4)),
 iterator(), listIterator()
+
+// guava
+import com.google.common.collect.*;
+List<Integer> list = Lists.newLinkedList();
+List<Integer> list = Lists.newArrayList();
 ```
 
 **Examples**
@@ -575,6 +664,10 @@ iterator(), descendingIterator()
 
 var array = deque.toArray(Integer[]::new);  // deque to array
 var list = new ArrayList<>(deque);          // deque to list
+
+// guava
+import com.google.common.collect.*;
+ArrayDeque<Integer> deque = Queues.newArrayDeque();
 ```
 
 **Examples**
@@ -669,6 +762,11 @@ var set = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator(), descendingIterator(),
 first(), last(), lower(3), higher(3), floor(3), ceiling(3), pollFirst(), pollLast(),
 headSet(3), tailSet(3), subSet(2, 4), descendingSet()
+
+// guava
+import com.google.common.collect.*;
+TreeMap<Integer, Integer> map = Maps.newTreeMap();
+TreeSet<Integer> set = Sets.newTreeSet();
 ```
 
 **Properties of Trees**
@@ -780,7 +878,7 @@ Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x,
 - Greatest common divisor (GCD), CLRS#31.2: [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the greatest common divisor of two numbers.
 - Integer factorization: [c++](cpp-algorithm/src/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
 - Least common multiple (LCM): [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the least common multiple of two numbers.
-- Miller-Rabin primality test, , CLRS#31.8: [c++](cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
+- Miller-Rabin primality test, CLRS#31.8: [c++](cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
 - Permutation: [c++](cpp-algorithm/src/math)(`Permutation`) | Find the permutation of a set of items.
 - Permutation, EPI#5.10: [c++](cpp-algorithm/src/math)(`ApplyPermutationWithAdditionalSpace`, `ApplyPermutationBySwap`) | Permute the elements of an array
 - Permutation: [c++](cpp-algorithm/src/math)(`InversePermutation`)
@@ -832,11 +930,11 @@ int("1000010", 2), int("52", 8), int("2a", 16)  # string -> binary/octal/hex
 bin(42), oct(42), hex(42)       # int -> binary/octal/hex
 ascii('a'), chr(97), ord('a')   # unicode <-> ascii code
 
-### copy
+# copy
 copy.deepcopy(number_list) # deep copy
 copy.copy(number_list)     # shallow copy
 
-### random
+# random
 random.randrange(28)       # [0, 28)
 random.randrange(1, 100)   # [1, 100)
 random.randrange(8, 16)    # [8, 16)
@@ -867,6 +965,12 @@ Long.bitCount(42)           // number of 1-bits
 // bitset
 import java.util.BitSet;
 new BitSet(16), set(0), set(0, 8), set(0, 8, true)
+
+// hex digits
+import java.util.HexFormat;
+HexFormat hex = HexFormat.of();
+byte b = 127;
+String byteStr = hex.toHexDigits(b);
 
 // random values
 import java.util.Random;
