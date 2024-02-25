@@ -1,5 +1,5 @@
 ---
-name: C++ CMake Build
+name: C++ CMake Test
 
 on:
   # push:
