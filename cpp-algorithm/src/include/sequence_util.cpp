@@ -5,7 +5,7 @@
 
 void Util::PrintSequence(const std::vector<int>& seq)
 {
-    for (const auto element : seq)
+    for (const int element : seq)
     {
         std::printf("%d ", element);
     }
@@ -20,7 +20,7 @@ auto Util::GenerateSequence(const int size, const int min, const int max) -> std
     std::uniform_int_distribution<> distribution(min, max);
 
     seq.reserve(size);
-    for (auto count = 0; count < size; ++count)
+    for (int count = 0; count < size; ++count)
     {
         seq.push_back(distribution(generator));
     }

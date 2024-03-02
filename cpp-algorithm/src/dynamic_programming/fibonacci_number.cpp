@@ -35,7 +35,7 @@ auto Fibonacci::FibonacciDynamicBottomUp(const int number) -> int
     memo[0] = 0;
     memo[1] = 1;
 
-    for (auto i = 2; i < number; ++i)
+    for (int i = 2; i < number; ++i)
     {
         memo[i] = memo[i - 1] + memo[i - 2];
     }

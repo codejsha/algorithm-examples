@@ -31,7 +31,7 @@ void Dijkstra::Graph::ReorderQueue(std::priority_queue<Vertex*, std::vector<Vert
     auto queue = std::priority_queue<Vertex*, std::vector<Vertex*>, MinComparator>{};
     const auto min_queue_size = static_cast<int>(min_queue.size());
 
-    for (auto i = 0; i < min_queue_size; ++i)
+    for (int i = 0; i < min_queue_size; ++i)
     {
         queue.push(min_queue.top());
         min_queue.pop();

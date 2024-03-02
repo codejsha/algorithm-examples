@@ -7,7 +7,7 @@ std::vector<int> IntersectTwoSortedArray::IntersectTwoSortedArrayLoopJoin(const 
                                                                           const std::vector<int>& arr2)
 {
     std::vector<int> intersection;
-    for (auto i = 1; i < static_cast<int>(arr1.size()); ++i)
+    for (int i = 1; i < static_cast<int>(arr1.size()); ++i)
     {
         if (arr1[i] != arr1[i - 1] && std::ranges::find(arr2, arr1[i]) != arr2.end())
         {
@@ -21,7 +21,7 @@ std::vector<int> IntersectTwoSortedArray::IntersectTwoSortedArrayLoopJoin2(const
                                                                            const std::vector<int>& arr2)
 {
     std::vector<int> intersection;
-    for (auto i = 1; i < static_cast<int>(arr1.size()); ++i)
+    for (int i = 1; i < static_cast<int>(arr1.size()); ++i)
     {
         if ((arr1[i] != arr1[i - 1]) && std::ranges::binary_search(arr2, arr1[i]))
         {

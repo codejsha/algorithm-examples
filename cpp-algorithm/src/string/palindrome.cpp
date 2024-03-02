@@ -2,7 +2,7 @@
 
 auto Palindrome::IsPalindromic1(const std::string& str) -> bool
 {
-    for (auto i = 0; i < static_cast<int>(str.length()) / 2; ++i)
+    for (int i = 0; i < static_cast<int>(str.length()) / 2; ++i)
     {
         if (str[i] != str[str.length() - 1 - i])
         {
@@ -14,7 +14,7 @@ auto Palindrome::IsPalindromic1(const std::string& str) -> bool
 
 auto Palindrome::IsPalindromic2(const std::string& str) -> bool
 {
-    for (auto i = 0, j = static_cast<int>(str.length()) - 1; i < j; ++i, --j)
+    for (int i = 0, j = static_cast<int>(str.length()) - 1; i < j; ++i, --j)
     {
         if (str[i] != str[j])
         {

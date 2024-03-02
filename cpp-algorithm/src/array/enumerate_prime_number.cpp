@@ -8,12 +8,12 @@ auto EnumeratePrime::GeneratePrimes(int n) -> std::vector<int>
     std::deque<bool> is_prime(n + 1, true);
 
     is_prime[0] = is_prime[1] = false;
-    for (auto p = 2; p <= n; ++p)
+    for (int p = 2; p <= n; ++p)
     {
         if (is_prime[p])
         {
             primes.push_back(p);
-            for (auto i = p * 2; i <= n; i += p)
+            for (int i = p * 2; i <= n; i += p)
             {
                 is_prime[i] = false;
             }

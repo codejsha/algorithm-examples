@@ -17,7 +17,7 @@ auto GenerateRandomNumber::GenerateUniformRandomNumber(const int lower_bound, co
     do
     {
         result = 0;
-        for (auto i = 0; (1 << i) < number_of_outcomes; ++i)
+        for (int i = 0; (1 << i) < number_of_outcomes; ++i)
         {
             result = (result << 1) | ZeroOneRandom();
         }

@@ -4,7 +4,7 @@
 
 void BellmanFord::Graph::BellmanFordAlgorithm(Vertex& source)
 {
-    for (auto i = 0; i < static_cast<int>(vertices.size()) - 1; ++i)
+    for (int i = 0; i < static_cast<int>(vertices.size()) - 1; ++i)
     {
         for (auto& [u, v] : adjacency_list)
         {
