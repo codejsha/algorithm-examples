@@ -5,7 +5,7 @@ auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr, cons
 {
     auto write_index = 0;
     auto a_count = 0;
-    for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
+    for (int i = 0; i < static_cast<int>(arr.size()); ++i)
     {
         if (arr[i] != remove_str)
         {
@@ -41,7 +41,7 @@ auto ReplaceElement::ReplaceAndRemoveString2(std::vector<std::string>& arr, cons
                                              const std::string& remove_str) -> std::vector<std::string>
 {
     std::erase(arr, remove_str);
-    for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
+    for (int i = 0; i < static_cast<int>(arr.size()); ++i)
     {
         if (arr[i] == replace_str)
         {
@@ -55,7 +55,7 @@ auto ReplaceElement::ReplaceAndRemoveString2(std::vector<std::string>& arr, cons
 
 auto ReplaceElement::TelexEncoding(std::vector<std::string>& arr) -> std::vector<std::string>
 {
-    for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
+    for (int i = 0; i < static_cast<int>(arr.size()); ++i)
     {
         if (arr[i] == ".")
         {

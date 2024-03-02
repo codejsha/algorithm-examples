@@ -2,10 +2,10 @@
 
 auto Sort::SelectionSort(std::vector<int>& seq) -> std::vector<int>
 {
-    for (auto prev = 0; prev < static_cast<int>(seq.size()); ++prev)
+    for (int prev = 0; prev < static_cast<int>(seq.size()); ++prev)
     {
         auto min_index = prev;
-        for (auto next = prev + 1; next < static_cast<int>(seq.size()); ++next)
+        for (int next = prev + 1; next < static_cast<int>(seq.size()); ++next)
         {
             if (seq[min_index] > seq[next])
             {

@@ -12,7 +12,7 @@ void Permutation::Permutation(const std::string& str, const std::string& prefix)
         std::cout << prefix << std::endl;
         return;
     }
-    for (auto i = 0; i < size; ++i)
+    for (int i = 0; i < size; ++i)
     {
         const auto rem = str.substr(0, i) + str.substr(i + 1);
         Permutation(rem, prefix + str[i]);
@@ -23,7 +23,7 @@ auto Permutation::ApplyPermutationWithAdditionalSpace(const std::vector<int>& pe
     -> std::vector<char>
 {
     std::vector<char> result(arr.size());
-    for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
+    for (int i = 0; i < static_cast<int>(arr.size()); ++i)
     {
         result[permutation[i]] = arr[i];
     }
@@ -32,7 +32,7 @@ auto Permutation::ApplyPermutationWithAdditionalSpace(const std::vector<int>& pe
 
 auto Permutation::ApplyPermutationBySwap(std::vector<int>& permutation, std::vector<char>& arr) -> std::vector<char>
 {
-    for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
+    for (int i = 0; i < static_cast<int>(arr.size()); ++i)
     {
         while (permutation[i] != i)
         {
@@ -47,7 +47,7 @@ auto Permutation::InversePermutation(const std::vector<int>& permutation, const 
     -> std::vector<int>
 {
     std::vector<int> result(arr.size());
-    for (auto i = 0; i < static_cast<int>(arr.size()); ++i)
+    for (int i = 0; i < static_cast<int>(arr.size()); ++i)
     {
         result[permutation[i]] = i;
     }

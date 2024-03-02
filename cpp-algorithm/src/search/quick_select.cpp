@@ -18,7 +18,7 @@ auto Partition(std::vector<int>& array, const int left, const int right) -> int
     const auto pivot = array[right];
     auto i = left - 1;
 
-    for (auto j = left; j < right; ++j)
+    for (int j = left; j < right; ++j)
     {
         if (array[j] <= pivot)
         {

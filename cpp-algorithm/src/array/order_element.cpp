@@ -21,7 +21,7 @@ void OrderElement::EvenOdd(std::vector<int>& arr)
 
 auto OrderElement::Rearrange(std::vector<int>& numbers) -> std::vector<int>
 {
-    for (auto i = 1; std::size(numbers); ++i)
+    for (int i = 1; std::size(numbers); ++i)
     {
         if ((!(i % 2) && numbers[i - 1] < numbers[i]) || ((i % 2) && numbers[i - 1] > numbers[i]))
         {

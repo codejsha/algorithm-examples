@@ -8,7 +8,7 @@ void GenerateCombinationHelper(const std::vector<int>& seq, const int k, std::ve
         return;
     }
 
-    for (auto i = start; i < static_cast<int>(seq.size()); ++i)
+    for (int i = start; i < static_cast<int>(seq.size()); ++i)
     {
         current.push_back(seq[i]);
         GenerateCombinationHelper(seq, k, result, current, i + 1);
@@ -31,7 +31,7 @@ void GenerateCombinationHelper(const std::vector<std::string>& seq, const int k,
         result.push_back(current);
         return;
     }
-    for (auto i = start; i < static_cast<int>(seq.size()); ++i)
+    for (int i = start; i < static_cast<int>(seq.size()); ++i)
     {
         current.push_back(seq[i]);
         GenerateCombinationHelper(seq, k, result, current, i + 1);
@@ -55,7 +55,7 @@ void GenerateCombinationHelper(const std::string& str, const int k, std::vector<
         return;
     }
 
-    for (auto i = start; i <= static_cast<int>(str.length()) - k; ++i)
+    for (int i = start; i <= static_cast<int>(str.length()) - k; ++i)
     {
         auto new_current = current + str[i];
         GenerateCombinationHelper(str, k - 1, result, new_current, i + 1);
