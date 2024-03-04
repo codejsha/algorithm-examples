@@ -587,6 +587,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 ### Others
-
 .idea/
+.benchmarks/
 README_link.md
