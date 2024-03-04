@@ -5,15 +5,15 @@
 auto PrintString::SineWaveString(const std::string& str) -> std::string
 {
     auto result = std::string{};
-    for (auto i = 1; i < static_cast<int>(str.size()); i += 4)
+    for (int i = 1; i < static_cast<int>(str.size()); i += 4)
     {
         result += str[i];
     }
-    for (auto i = 0; i < static_cast<int>(str.size()); i += 2)
+    for (int i = 0; i < static_cast<int>(str.size()); i += 2)
     {
         result += str[i];
     }
-    for (auto i = 3; i < static_cast<int>(str.size()); i += 4)
+    for (int i = 3; i < static_cast<int>(str.size()); i += 4)
     {
         result += str[i];
     }
@@ -23,7 +23,7 @@ auto PrintString::SineWaveString(const std::string& str) -> std::string
 
 void PrintString::PrintSineWaveString(const std::string& str)
 {
-    for (auto i = 1; i < static_cast<int>(str.size()); i += 4)
+    for (int i = 1; i < static_cast<int>(str.size()); i += 4)
     {
         if (i == 1)
         {
@@ -35,7 +35,7 @@ void PrintString::PrintSineWaveString(const std::string& str)
         }
     }
     std::cout << std::endl;
-    for (auto i = 0; i < static_cast<int>(str.size()); i += 2)
+    for (int i = 0; i < static_cast<int>(str.size()); i += 2)
     {
         if (i == 0)
         {
@@ -47,7 +47,7 @@ void PrintString::PrintSineWaveString(const std::string& str)
         }
     }
     std::cout << std::endl;
-    for (auto i = 3; i < static_cast<int>(str.size()); i += 4)
+    for (int i = 3; i < static_cast<int>(str.size()); i += 4)
     {
         if (i == 3)
         {

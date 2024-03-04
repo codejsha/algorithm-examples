@@ -6,7 +6,7 @@ auto ArbitraryPrecision::PlusOne(std::vector<int> number_array) -> std::vector<i
 {
     ++number_array.back();
 
-    for (auto i = static_cast<int>(number_array.size()) - 1; i > 0 && number_array[i] == 10; --i)
+    for (int i = static_cast<int>(number_array.size()) - 1; i > 0 && number_array[i] == 10; --i)
     {
         number_array[i] = 0;
         ++number_array[i - 1];
@@ -28,13 +28,13 @@ auto ArbitraryPrecision::StringAddition(const std::string& number_string1, const
     const auto larger = size1 >= size2 ? size1 : size2;
     auto sum = std::vector<int>(larger);
 
-    for (auto i = size1 - 1; i >= 0; --i)
+    for (int i = size1 - 1; i >= 0; --i)
     {
         sum[i] += number_string1.at(i) == '1' ? 1 : 0;
     }
 
     auto carry = 0;
-    for (auto i = size2 - 1; i >= 0; --i)
+    for (int i = size2 - 1; i >= 0; --i)
     {
         sum[i] += carry;
         sum[i] += number_string2.at(i) == '1' ? 1 : 0;
@@ -65,9 +65,9 @@ auto ArbitraryPrecision::Multiply(std::vector<int>& number_array1, std::vector<i
     number_array2.front() = std::abs(number_array2.front());
 
     std::vector<int> result(number_array1.size() + number_array2.size(), 0);
-    for (auto i = static_cast<int>(number_array1.size()) - 1; i >= 0; --i)
+    for (int i = static_cast<int>(number_array1.size()) - 1; i >= 0; --i)
     {
-        for (auto j = static_cast<int>(number_array2.size()) - 1; j >= 0; --j)
+        for (int j = static_cast<int>(number_array2.size()) - 1; j >= 0; --j)
         {
             result[i + j + 1] += number_array1[i] * number_array2[j];
             result[i + j] += result[i + j + 1] / 10;

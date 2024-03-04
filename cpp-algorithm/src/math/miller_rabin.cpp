@@ -69,7 +69,7 @@ auto MillerRabin::MillerRabinPrimalityTest(const int number, const int repeats) 
         d /= 2;
     }
 
-    for (auto i = 0; i < repeats; ++i)
+    for (int i = 0; i < repeats; ++i)
     {
         if (!Witness(d, number))
         {

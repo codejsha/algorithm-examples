@@ -7,14 +7,14 @@ auto IntervalSubset::SubsetSum1(const std::vector<int>& seq) -> int
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
 
-    for (auto prev = 0; prev < size; ++prev)
+    for (int prev = 0; prev < size; ++prev)
     {
-        for (auto next = prev; next < size; ++next)
+        for (int next = prev; next < size; ++next)
         {
             auto sum = 0;
 
             // sum of subset [prev, next]
-            for (auto loop_index = prev; loop_index <= next; ++loop_index)
+            for (int loop_index = prev; loop_index <= next; ++loop_index)
             {
                 sum += seq[loop_index];
             }
@@ -31,10 +31,10 @@ auto IntervalSubset::SubsetSum2(const std::vector<int>& seq) -> int
     const auto size = static_cast<int>(seq.size());
     auto max = std::numeric_limits<int>::min();
 
-    for (auto prev = 0; prev < size; ++prev)
+    for (int prev = 0; prev < size; ++prev)
     {
         auto sum = 0;
-        for (auto next = prev; next < size; ++next)
+        for (int next = prev; next < size; ++next)
         {
             sum += seq[next];
             max = std::max(max, sum);
@@ -62,12 +62,12 @@ auto IntervalSubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, cons
     auto right_cross_max = 0;
     auto left_sum = 0;
     auto right_sum = 0;
-    for (auto index = mid; index >= low; --index)
+    for (int index = mid; index >= low; --index)
     {
         left_sum += seq[index];
         left_cross_max = std::max(left_cross_max, left_sum);
     }
-    for (auto index = mid + 1; index <= high; ++index)
+    for (int index = mid + 1; index <= high; ++index)
     {
         right_sum += seq[index];
         right_cross_max = std::max(right_cross_max, right_sum);
@@ -83,7 +83,7 @@ auto IntervalSubset::DynamicProgrammingSubsetSum(const std::vector<int>& seq) ->
     auto max = std::numeric_limits<int>::min();
     auto sum = 0;
 
-    for (auto index = 0; index < size; ++index)
+    for (int index = 0; index < size; ++index)
     {
         sum = std::max(sum + seq[index], seq[index]);
         max = std::max(max, sum);

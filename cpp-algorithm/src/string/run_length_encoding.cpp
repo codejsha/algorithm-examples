@@ -5,7 +5,7 @@ auto RunLengthEncoding::RunLengthEncoding(const std::string& str) -> std::string
     auto count = 0;
     auto result = std::string{};
 
-    for (auto i = 0; i < static_cast<int>(str.size()); ++i)
+    for (int i = 0; i < static_cast<int>(str.size()); ++i)
     {
         ++count;
 

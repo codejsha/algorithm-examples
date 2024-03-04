@@ -11,7 +11,7 @@ auto PairOfBracket::CheckPairOfBracket(const std::string& input) -> bool
         {']', '['},
         {'}', '{'}};
 
-    for (auto ch : input)
+    for (char ch : input)
     {
         if (!bracket_pairs.contains(ch))
         {
