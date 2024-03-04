@@ -13,7 +13,7 @@ This repository is an implementation of algorithms, data structures, and problem
 Each project is configured in specific environments, as described below:
 
 - C++ project: C++20 / [CMake](https://cmake.org/) build / [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) packages / [vcpkg](https://github.com/microsoft/vcpkg) package manager
-- Python project: Python 3.11 / [Poetry](https://python-poetry.org/) / [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [NetworkX](https://networkx.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages
+- Python project: Python 3.11 / [Poetry](https://python-poetry.org/) build / [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [NetworkX](https://networkx.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages
 - Java project: Java 21 / [Gradle](https://gradle.org/) build / [Guava](https://github.com/google/guava), [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) libraries
 
 ## Table of Contents
@@ -75,7 +75,7 @@ reversed(number_list)   # return an iterator
 number_list.sort()      # in-place
 sorted(number_list)     # return a new list(copy)
 del(number_list[0])     # delete the first element
-del(number_list[0:2])   # removes the slice
+del(number_list[0:2])   # remove the slice
 bisect.bisect_left(number_list, 3), bisect.bisect_right(number_list, 3), bisect.bisect(number_list, 3)
 bisect.insort_left(number_list, 3), bisect.insort_right(number_list, 3), bisect.insort(number_list, 3)
 
@@ -1167,7 +1167,7 @@ list.sort(Comparator.comparingInt(String::length));
 | ----------- | :-----------------: | ------------------------------------------------------------------------------------ |
 | **Best**    |      $O(n^2)$       | if the list is already sorted                                                        |
 | **Worst**   |      $O(n^2)$       | when sorted in ascending order, if you want to sort in descending order (vice versa) |
-| **Average** |      $O(n^2)$       |                                                                                      |
+| **Average** |      $O(n^2)$       | when the input list is in jumbled order                                              |
 
 **Examples**
 
