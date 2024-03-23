@@ -14,7 +14,7 @@ Each project is configured in specific environments, as described below:
 
 - C++ project: C++20 / [CMake](https://cmake.org/) build / [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) packages / [vcpkg](https://github.com/microsoft/vcpkg) package manager
 - Python project: Python 3.11 / [Poetry](https://python-poetry.org/) build / [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [NetworkX](https://networkx.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages
-- Java project: Java 21 / [Gradle](https://gradle.org/) build / [Guava](https://github.com/google/guava), [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) libraries
+- Java project: Java 21 / [Gradle](https://gradle.org/) build / [Google Guava](https://github.com/google/guava), [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) libraries
 
 ## Table of Contents
 
@@ -744,7 +744,7 @@ sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
 **Java declaration/methods (binary search tree based)**
 
 ```java
-// TreeMap (based on red-black tree)
+// tree map (based on red-black tree)
 import java.util.TreeMap;
 var map = new TreeMap<Integer, Integer>();
 var map = new TreeMap<Integer, Integer>(Collections.reverseOrder());
@@ -754,7 +754,7 @@ keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a",
 firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey("b"),pollFirstEntry(), pollLastEntry(),
 headMap("c"), tailMap("c"), subMap("a", "c"), descendingMap(), descendingKeySet()
 
-// treeSet (based on red-black tree)
+// tree set (based on red-black tree)
 import java.util.TreeSet;
 var set = new TreeSet<Integer>();
 var set = new TreeSet<Integer>(Collections.reverseOrder());
