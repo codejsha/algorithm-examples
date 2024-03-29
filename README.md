@@ -18,6 +18,8 @@ Each project is configured in specific environments, as described below:
 
 ## Table of Contents
 
+- [Project Environments](#project-environments)
+- [Table of Contents](#table-of-contents)
 - [Data structures](#data-structures)
   - [:train: Array](#train-array)
   - [:chart\_with\_upwards\_trend: Graph](#chart_with_upwards_trend-graph)
