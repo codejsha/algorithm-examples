@@ -106,13 +106,14 @@ all(x % 2 == 0 for x in number_list)
 **Java declaration/methods**
 
 ```java
-var arr = new int[]{1, 2, 3, 4, 5};
+int[] arr = new int[]{1, 2, 3, 4, 5};   // array
+int[][] matrix = new int[m][n];         // 2d array (m by n matrix)
+```
 
-// 2d array (m by n matrix)
-var matrix = new int[m][n];
+```java
+import java.util.*;
 
 // Arrays
-import java.util.Arrays;
 binarySearch(arr, 3), equals(arr, another_arr), copyOf(arr, arr.length), copyOfRange(arr, from, to),
 sort(arr), sort(arr, from, to), fill(arr, 42), fill(arr, from, to, 42),
 // Arrays.stream()
@@ -120,13 +121,10 @@ anyMatch(x -> x % 2 == 0), allMatch(x -> x % 2 == 0), noneMatch(x -> x % 2 == 0)
 count(), sum(), min(), max(), average(), map(x -> x * 2).toArray(), filter(x -> x % 2 == 0).count()
 
 // Collections
-import java.util.Collections;
 sort(list), binarySearch(list, 3), min(list), max(list), swap(list, 0, 1), replaceAll(list, 1, 2),
 frequency(list, 1), reverse(list), rotate(list, 1), shuffle(list), unmodifiableList(list)
 
 // list
-import java.util.Comparator;
-import java.util.List;
 var list = Arrays.asList(boxedArray);
 Arrays.stream(arr).boxed().collect(Collectors.toList())
 sort(), sort(Comparator.naturalOrder()), sort(Comparator.reverseOrder())
@@ -138,14 +136,14 @@ str.toCharArray()                               // string to char array
 str.chars().toArray()                           // string to int array
 
 // boxing
-var v = Arrays.stream(arr).boxed().toArray(Integer[]::new);                     // int[] to Integer[]
-var v = Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new);    // int[] to String[]
-var v = Arrays.stream(arr).boxed().collect(Collectors.toList());                // int[] to List<Integer>
+var arr1 = Arrays.stream(arr).boxed().toArray(Integer[]::new);                     // int[] to Integer[]
+var arr2 = Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new);    // int[] to String[]
+var arr3 = Arrays.stream(arr).boxed().collect(Collectors.toList());                // int[] to List<Integer>
 
 // integer sequence
-var arr = IntStream.range(0, speeds.length).toArray();          // range to int array in [0, n)
-var arr = IntStream.rangeClosed(1, speeds.length).toArray();    // range to int array in [1, n]
-var list = IntStream.range(0, speeds.length).boxed().collect(Collectors.toList());  // range to list
+var arr = IntStream.range(0, n).toArray();          // range to int array in [0, n)
+var arr = IntStream.rangeClosed(1, n).toArray();    // range to int array in [1, n]
+var list = IntStream.range(0, n).boxed().toList();  // range to list
 
 var list = List.of(arr);        // array to list
 var list = Arrays.asList(arr);  // array to list
@@ -438,29 +436,26 @@ sample_counter.update([1, 1, 2, 2, 3])
 **Java declaration/methods**
 
 ```java
+import java.util.*;
+
 // map
-import java.util.HashMap;
-var map = new HashMap<String, Integer>();
+Map<String, Integer> map = new HashMap<>();
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
 var keys = map.keySet().toArray(String[]::new);
 var values = map.values().toArray(Integer[]::new);
 
 // set
-import java.util.HashSet;
-var set = new HashSet<Integer>();
+Set<Integer> set = new HashSet<>();
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator()
 var arr = set.toArray(Integer[]::new);
 
 // enum map
-import java.util.EnumMap;
 Map<City, Integer> map = new EnumMap<>(City.class);
 
 // linked hash map, linked hash set
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-var map = new LinkedHashMap<String, Integer>();
-var set = new LinkedHashSet<Integer>();
+Map<String, Integer> map = new LinkedHashMap<>();
+Set<Integer> set = new LinkedHashSet<>();
 
 // unboxing
 int[] result = map.entrySet().stream()
@@ -478,7 +473,6 @@ Map<String, Integer> map = Maps.newLinkedHashMap();
 Set<Integer> set = Sets.newLinkedHashSet();
 
 // guava multiset (implements Multiset<E>)
-import com.google.common.collect.*;
 Multiset<String> multiset = HashMultiset.create();
 Multiset<String> multiset = TreeMultiset.create();
 Multiset<String> multiset = LinkedHashMultiset.create();
@@ -486,7 +480,6 @@ Multiset<String> multiset = ConcurrentHashMultiset.create();
 Multiset<String> multiset = ImmutableMultiset.of("a", "b", "c");
 
 // guava multimap (implements Multimap<K, V>)
-import com.google.common.collect.*;
 Multimap<String, Integer> multimap = ArrayListMultimap.create();
 Multimap<String, Integer> multimap = HashMultimap.create();
 Multimap<String, Integer> multimap = LinkedListMultimap.create();
@@ -496,14 +489,12 @@ Multimap<String, Integer> multimap = ImmutableListMultimap.of("a", 1, "a", 2, "b
 Multimap<String, Integer> multimap = ImmutableSetMultimap.of("a", 1, "a", 2, "b", 3);
 
 // guava bimap (implements BiMap<K, V>, Map<K, V>)
-import com.google.common.collect.*;
 BiMap<String, Integer> bimap = HashBiMap.create();
 BiMap<String, Integer> bimap = ImmutableBiMap.of("a", 1, "b", 2);
 BiMap<City, Country> bimap = EnumBiMap.create(City.class, Country.class);
 BiMap<City, Integer> bimap = EnumHashBiMap.create(City.class);
 
 // guava table (implements Table<R, C, V>)
-import com.google.common.collect.*;
 Table<Vertex, Vertex, Double> weightedGraph = HashBasedTable.create();
 Table<Vertex, Vertex, Double> weightedGraph = TreeBasedTable.create();
 Table<Vertex, Vertex, Double> weightedGraph = ArrayTable.create(Arrays.asList(v1, v2), Arrays.asList(v3, v4));
@@ -549,9 +540,9 @@ heapq.heappush(number_list, 6), heapq.heappop(number_list), heapq.heapreplace(nu
 **Java declaration/methods**
 
 ```java
-import java.util.PriorityQueue;
-var queue = new PriorityQueue<Integer>();
-var queue = new PriorityQueue<Integer>(Collections.reverseOrder());
+import java.util.*;
+Queue<Integer> queue = new PriorityQueue<>();
+Queue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
 add(1), peek(), poll(), remove(), size(), isEmpty(),
 contains(1), clear(), iterator()
 
@@ -592,17 +583,17 @@ push_front(4), emplace_front(5), pop_front(), reverse(), sort()
 **Java declaration/methods**
 
 ```java
+import java.util.*;
+
 // doubly linked list
-import java.util.LinkedList;
-var list = new LinkedList<Integer>();
+List<Integer> list = new LinkedList<>();
 add(1), addAll(List.of(2, 3, 4, 5)),
 remove(0), removeFirst(), removeLast(), removeIf(x -> x % 2 == 0), subList(1, 3),
 get(0), getFirst(), getLast(), size(), isEmpty(), contains(1), containsAll(List.of(1, 2, 3)),
 iterator(), listIterator()
 
 // dynamically resized array
-import java.util.ArrayList;
-var list = new ArrayList<Integer>();
+List<Integer> list = new ArrayList<>();
 add(1), addAll(List.of(2, 3, 4, 5)), remove(0), subList(1, 3),
 get(0), size(), isEmpty(), contains(3), containsAll(List.of(3, 4)),
 iterator(), listIterator()
@@ -657,8 +648,8 @@ append(6), appendleft(7), pop(), popleft()
 **Java declaration/methods**
 
 ```java
-import java.util.ArrayDeque;
-var deque = new ArrayDeque<Integer>();
+import java.util.*;
+Deque<Integer> deque = new ArrayDeque<>();
 add(1), remove(), pop(), size(), isEmpty(), contains(1), clear(),
 offerFirst(6), offerLast(7), pollFirst(), pollLast(), peekFirst(), peekLast(),
 addFirst(8), addLast(9), removeFirst(), removeLast(), getFirst(), getLast(),
@@ -699,8 +690,8 @@ append(4), pop()
 **Java declaration/methods**
 
 ```java
-import java.util.Stack;
-var stack = new Stack<Integer>();
+import java.util.*;
+Stack<Integer> stack = new Stack<>();
 push(1), add(1, 2), addAll(anotherList), pop(), peek(), size(), isEmpty(),
 contains(1), search(1), size(),
 remove(1), removeIf(x -> x == 1), clear(),
@@ -746,21 +737,21 @@ sort_dict = SortedDict({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})
 **Java declaration/methods (binary search tree based)**
 
 ```java
+import java.util.*;
+
 // tree map (based on red-black tree)
-import java.util.TreeMap;
-var map = new TreeMap<Integer, Integer>();
-var map = new TreeMap<Integer, Integer>(Collections.reverseOrder());
-var map = new TreeMap<String, Integer>(Map.of("a", 1, "b", 2, "c", 3));
+Map<Integer, Integer> map = new TreeMap<>();
+Map<Integer, Integer> map = new TreeMap<>(Collections.reverseOrder());
+Map<String, Integer> map = new TreeMap<>(Map.of("a", 1, "b", 2, "c", 3));
 put("a", 1), putIfAbsent("b", 2), get("a"), getOrDefault("f", 6), remove("a"), size(), isEmpty(),
 keySet(), values(), entrySet(), containsKey("a"), containsValue(1), replace("a", 2), clear()
 firstKey(), lastKey(), lowerKey("b"), higherKey("b"), floorKey("b"), ceilingKey("b"),pollFirstEntry(), pollLastEntry(),
 headMap("c"), tailMap("c"), subMap("a", "c"), descendingMap(), descendingKeySet()
 
 // tree set (based on red-black tree)
-import java.util.TreeSet;
-var set = new TreeSet<Integer>();
-var set = new TreeSet<Integer>(Collections.reverseOrder());
-var set = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
+Set<Integer> set = new TreeSet<>();
+Set<Integer> set = new TreeSet<>(Collections.reverseOrder());
+Set<Integer> set = new TreeSet<>(List.of(1, 2, 3, 4, 5));
 add(1), remove(1), size(), isEmpty(), contains(1), clear(), iterator(), descendingIterator(),
 first(), last(), lower(3), higher(3), floor(3), ceiling(3), pollFirst(), pollLast(),
 headSet(3), tailSet(3), subSet(2, 4), descendingSet()
@@ -965,11 +956,11 @@ Long.toString(num, base)    // long -> string with base
 Long.bitCount(42)           // number of 1-bits
 
 // bitset
-import java.util.BitSet;
+import java.util.*;
 new BitSet(16), set(0), set(0, 8), set(0, 8, true)
 
 // hex digits
-import java.util.HexFormat;
+import java.util.*;
 HexFormat hex = HexFormat.of();
 byte b = 127;
 String byteStr = hex.toHexDigits(b);
@@ -1035,16 +1026,15 @@ bisect.bisect_left(number_list, 3), bisect.bisect_right(number_list, 3), bisect.
 
 ```java
 import java.util.*;
-var array = new int[]{1, 2, 3, 4, 5};
-var arrayList = new ArrayList<Integer>(List.of(1, 2, 3, 4, 5));
-var linkedList = new LinkedList<Integer>(List.of(1, 2, 3, 4, 5));
-var hashSet = new HashSet<Integer>(List.of(1, 2, 3, 4, 5));
-var linkedHashSet = new LinkedHashSet<Integer>(List.of(1, 2, 3, 4, 5));
-var treeSet = new TreeSet<Integer>(List.of(1, 2, 3, 4, 5));
+
+int[] array = new int[]{1, 2, 3, 4, 5};
+List<Integer> arrayList = new ArrayList<>(List.of(1, 2, 3, 4, 5));
+List<Integer> linkedList = new LinkedList<>(List.of(1, 2, 3, 4, 5));
+Set<Integer> hashSet = new HashSet<>(List.of(1, 2, 3, 4, 5));
+Set<Integer> linkedHashSet = new LinkedHashSet<>(List.of(1, 2, 3, 4, 5));
+Set<Integer> treeSet = new TreeSet<>(List.of(1, 2, 3, 4, 5));
 
 // binary search
-import java.util.Arrays;
-import java.util.Collections;
 Arrays.binarySearch(array, 3)             // for array
 Collections.binarySearch(arrayList, 3);   // for list
 ```
@@ -1092,13 +1082,15 @@ result = sorted(number_list)    # return a new list(copy)
 `Arrays.sort()` and `Collections.sort()` sort the array and list in ascending order in-place.
 
 ```java
-import java.util.Arrays;
+import java.util.*;
+
+// Arrays
 Arrays.sort(arr);           // dual pivot quick sort (primitive types)
                             // timsort (insertion sort + merge sort) (reference types)
 Arrays.sort(arr, Comparator.comparingInt(String::length));
 Arrays.sort(arr, Comparator.comparingInt(String::length).reversed());
 
-import java.util.Collections;
+// Collections
 Collections.sort(list);     // timsort (insertion sort + merge sort)
 list.sort(Comparator.naturalOrder());
 list.sort(Comparator.reverseOrder());
