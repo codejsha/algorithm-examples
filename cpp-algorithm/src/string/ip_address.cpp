@@ -22,11 +22,11 @@ auto IsValidPart(const std::string& str) -> bool
 auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::string>
 {
     auto result = std::vector<std::string>{};
-    for (auto i = 1; i < 4 && i < static_cast<int>(str.size()); ++i)
+    for (int i = 1; i < 4 && i < static_cast<int>(str.size()); ++i)
     {
-        for (auto j = 1; j < 4 && i + j < static_cast<int>(str.size()); ++j)
+        for (int j = 1; j < 4 && i + j < static_cast<int>(str.size()); ++j)
         {
-            for (auto k = 1; k < 4 && i + j + k < static_cast<int>(str.size()); ++k)
+            for (int k = 1; k < 4 && i + j + k < static_cast<int>(str.size()); ++k)
             {
                 const auto first = str.substr(0, i);
                 const auto second = str.substr(i, j);
@@ -48,11 +48,11 @@ auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::st
 auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::string>
 {
     auto result = std::vector<std::string>{};
-    for (auto i = 1; i < 4 && i < static_cast<int>(str.size()); ++i)
+    for (int i = 1; i < 4 && i < static_cast<int>(str.size()); ++i)
     {
-        for (auto j = 1; j < 4 && i + j < static_cast<int>(str.size()); ++j)
+        for (int j = 1; j < 4 && i + j < static_cast<int>(str.size()); ++j)
         {
-            for (auto k = 1; k < 4 && i + j + k < static_cast<int>(str.size()); ++k)
+            for (int k = 1; k < 4 && i + j + k < static_cast<int>(str.size()); ++k)
             {
                 const auto first = str.substr(0, i);
                 const auto second = str.substr(i, j);

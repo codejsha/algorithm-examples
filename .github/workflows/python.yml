@@ -1,5 +1,5 @@
 ---
-name: Python Build
+name: Python Poetry Test
 
 on:
   # push:
@@ -16,19 +16,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.11"
 
       - name: Install dependencies
         working-directory: ${{github.workspace}}/python-algorithm
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./requirements.txt
+          pip install poetry
+          poetry install --with test
 
       - name: Test
         working-directory: ${{github.workspace}}/python-algorithm
-        run: pytest
+        run: poetry run pytest

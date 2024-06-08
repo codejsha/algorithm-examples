@@ -10,7 +10,7 @@ auto HIndex::HIndex1(std::vector<int>& citations) -> int
     // std::sort(citations.begin(), citations.end(), std::greater<>());
 
     auto h_index = 0;
-    for (auto i = 0; i < static_cast<int>(citations.size()); ++i)
+    for (int i = 0; i < static_cast<int>(citations.size()); ++i)
     {
         // if current citation is greater than or equal to the number of papers
         if (citations[i] >= i + 1)
@@ -32,7 +32,7 @@ auto HIndex::HIndex2(std::vector<int>& citations) -> int
     std::ranges::sort(citations, std::greater<>{});
     // std::sort(citations.begin(), citations.end(), std::greater<>());
 
-    for (auto i = 0; i < static_cast<int>(citations.size()); ++i)
+    for (int i = 0; i < static_cast<int>(citations.size()); ++i)
     {
         // if current citation is less than the number of papers
         if (citations[i] < i + 1)

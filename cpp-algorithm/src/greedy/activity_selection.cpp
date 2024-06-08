@@ -29,7 +29,7 @@ auto ActivitySelection::GreedyActivitySelector(const std::vector<int>& start, co
     selected.push_back(0);
 
     auto index = 0;
-    for (auto i = 1; i < size; ++i)
+    for (int i = 1; i < size; ++i)
     {
         if (start[i] >= finish[index])
         {

@@ -38,7 +38,7 @@ auto ComputingParity::ParityDropLowestBits(unsigned long long x) -> short
 auto BuildTable() -> std::array<short, 1 << 16>
 {
     std::array<short, 1 << 16> result{};
-    for (auto i = 0; i < (1 << 16); ++i)
+    for (int i = 0; i < (1 << 16); ++i)
     {
         result[i] = ComputingParity::Parity(i);
     }

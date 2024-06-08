@@ -9,7 +9,7 @@ auto NearestRepeatedEntry::FindNearestRepeatedEntry(const std::vector<std::strin
     auto nearest_repeated_distance = std::numeric_limits<int>::max();
 
     // iterate over the array
-    for (auto i = 0; i < static_cast<int>(paragraph.size()); ++i)
+    for (int i = 0; i < static_cast<int>(paragraph.size()); ++i)
     {
         // if the current word has been seen before,
         // update the nearest repeated distance

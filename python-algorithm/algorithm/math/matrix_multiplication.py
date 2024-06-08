@@ -3,12 +3,12 @@ import numpy as np
 
 def multiply_matrix(matrix_a: np.array, matrix_b: np.array) -> np.array:
     """
-    Function that performs matrix multiplication
-
-    return np.dot(matrix_a, matrix_b)
+    Function that performs matrix multiplication.
+    If you use numpy, it is np.dot(matrix_a, matrix_b)
+    :param matrix_a: matrix1
+    :param matrix_b: matrix2
+    :return: the result of matrix multiplication
     """
-
-    # m x n matrix
     m = matrix_a.shape[0]
     n = matrix_b.shape[1]
     matrix_c = np.zeros((m, n))

@@ -28,7 +28,7 @@ auto ConvertString::IntToString(int number) -> std::string
 auto ConvertString::StringToInt(const std::string& str) -> int
 {
     auto number = 0;
-    for (auto i : str)
+    for (char i : str)
     {
         number = (number * 10) + (i - '0');
     }

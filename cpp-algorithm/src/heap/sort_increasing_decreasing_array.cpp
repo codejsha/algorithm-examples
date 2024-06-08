@@ -24,7 +24,7 @@ auto IncreasingDecreasingArray::SortIncreasingDecreasingArray(const std::vector<
         return sorted_arr;
     }
 
-    for (auto i = 1; i < static_cast<int>(arr.size()); ++i)
+    for (int i = 1; i < static_cast<int>(arr.size()); ++i)
     {
         if (arr[i - 1] < arr[i])
         {

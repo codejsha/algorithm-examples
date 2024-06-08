@@ -1,14 +1,9 @@
-# Visual Studio generated .editorconfig file with C++ settings.
+# EditorConfig file with C++ settings
+
 root = true
 
 [*.{c++,cc,cpp,cppm,cxx,h,h++,hh,hpp,hxx,inl,ipp,ixx,tlh,tli}]
-
-# Visual C++ Code Style settings
-
 cpp_generate_documentation_comments = doxygen_slash_star
-
-# Visual C++ Formatting settings
-
 cpp_indent_braces = false
 cpp_indent_multi_line_relative_to = innermost_parenthesis
 cpp_indent_within_parentheses = indent

@@ -6,9 +6,9 @@ auto StockTrading::BuyAndSellStockOnceBruteForce(const std::vector<int>& prices)
 {
     auto max_profit = 0.0;
 
-    for (auto i = 0; i < static_cast<int>(prices.size()); ++i)
+    for (int i = 0; i < static_cast<int>(prices.size()); ++i)
     {
-        for (auto j = i + 1; j < static_cast<int>(prices.size()); ++j)
+        for (int j = i + 1; j < static_cast<int>(prices.size()); ++j)
         {
             if (const auto profit = prices[j] - prices[i]; profit > max_profit)
             {
@@ -41,7 +41,7 @@ auto StockTrading::BuyAndSellStockTwice(const std::vector<double>& prices) -> do
     std::vector<double> first_buy_sell_profits(prices.size(), 0);
     auto min_price_so_far = std::numeric_limits<double>::infinity();
 
-    for (auto i = 0; i < static_cast<int>(prices.size()); ++i)
+    for (int i = 0; i < static_cast<int>(prices.size()); ++i)
     {
         min_price_so_far = std::min(min_price_so_far, prices[i]);
         max_total_profit = std::max(max_total_profit, prices[i] - min_price_so_far);
@@ -49,7 +49,7 @@ auto StockTrading::BuyAndSellStockTwice(const std::vector<double>& prices) -> do
     }
 
     auto max_price_so_far = std::numeric_limits<double>::min();
-    for (auto i = static_cast<int>(prices.size()) - 1; i > 0; --i)
+    for (int i = static_cast<int>(prices.size()) - 1; i > 0; --i)
     {
         max_price_so_far = std::max(max_price_so_far, prices[i]);
         max_total_profit = std::max(max_total_profit, max_price_so_far - prices[i] + first_buy_sell_profits[i]);

@@ -1,7 +1,7 @@
 from typing import TypeVar, Iterable, Tuple, List, Sequence
 
 T = TypeVar('T')
-C = TypeVar("C", bound="Comparable")
+C = TypeVar('C', bound='Comparable')
 
 
 def generic_linear_contains(iterable: Iterable[T], key: T) -> bool:

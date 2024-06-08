@@ -9,7 +9,7 @@ auto FindMinMax::FindMinMax(const std::vector<int>& array) -> std::pair<int, int
     std::tie(global_min, global_max) = std::minmax(array[0], array[1]);
 
     // compare 2 elements at a time
-    for (auto i = 2; i < static_cast<int>(array.size()); i += 2)
+    for (int i = 2; i < static_cast<int>(array.size()); i += 2)
     {
         // compare two adjacent elements
         const auto& [local_min, local_max] = std::minmax(array[i], array[i + 1]);
