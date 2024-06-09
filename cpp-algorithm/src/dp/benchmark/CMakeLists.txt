@@ -2,11 +2,11 @@ find_package(GSL REQUIRED)
 find_package(benchmark REQUIRED)
 
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
-include_directories(${CMAKE_SOURCE_DIR}/src/dynamic_programming)
+include_directories(${CMAKE_SOURCE_DIR}/src/dp)
 
 macro(add_target_benchmark target)
     string(REPLACE "_benchmark" "" target_name ${target})
-    add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/dynamic_programming/${target_name}.cpp")
+    add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/dp/${target_name}.cpp")
     target_link_libraries(${target} PRIVATE benchmark::benchmark_main ${ARGN})
     target_compile_definitions(${target} PUBLIC -DBENCHMARK_STATIC_DEFINE)
     if(MSVC)
