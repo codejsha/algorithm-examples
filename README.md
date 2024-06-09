@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable MD033 MD036 -->
 
-![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/python.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
+![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/poetry.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
 
 [English](README.md) | [Korean](README_ko-KR.md)
 
@@ -30,7 +30,7 @@ Each project is configured in specific environments, as described below:
   - [:hamburger: Stack](#hamburger-stack)
   - [:deciduous\_tree: Tree](#deciduous_tree-tree)
 - [Topics](#topics)
-  - [:jigsaw: Dynamic programming](#jigsaw-dynamic-programming)
+  - [:jigsaw: Dynamic programming (DP)](#jigsaw-dynamic-programming-dp)
   - [:clock9: Greedy](#clock9-greedy)
   - [:triangular\_ruler: Mathematics](#triangular_ruler-mathematics)
   - [:1234: Primitive type](#1234-primitive-type)
@@ -503,16 +503,16 @@ Table<Vertex, Vertex, Double> weightedGraph = ImmutableTable.of(v1, v2, 4.0);
 
 **Examples**
 
-- Anonymous letter constructible, EPI#12.2: [c++](cpp-algorithm/src/hash_table)(`IsLetterConstructibleFromMagazine`) | Check if a letter can be written using the characters in a magazine.
-- Anonymous words constructible: [c++](cpp-algorithm/src/hash_table)(`IsWordConstructibleFromMagazine`) | Check if a letter can be written using the words in a magazine.
-- Collatz conjecture, EPI#12.11: [c++](cpp-algorithm/src/hash_table)(`FindNumbersSatisfyingCollatzConjecture`) | Find the numbers satisfying the Collatz conjecture.
-- Find anagrams: [c++](cpp-algorithm/src/hash_table)(`FindAnagramMappings`) | Given an array of strings, group anagrams together.
-- Find the smallest subarray covering all values, EPI#12.6: [c++](cpp-algorithm/src/hash_table)(`FindSmallestSubarrayCoveringSubset`) | Find the smallest subarray that covers all the elements in a set.
-- Find the smallest subarray sequentially covering all values, EPI#12.7: [c++](cpp-algorithm/src/hash_table)(`FindSmallestSubarraySequentiallyCoveringSubset`) | Find the smallest subarray that sequentially covers all the elements in a set.
-- ISBN cache, EPI#12.3: [c++](cpp-algorithm/src/hash_table) | Implement an LRU (Least Recently Used) cache for ISBN lookups.
-- Nearest repeated entry, EPI#12.5: [c++](cpp-algorithm/src/hash_table)(`FindNearestRepeatedEntry`) | Find the nearest repeated entry in an array of strings.
-- Optimized the lowest common ancestor, EPI#12.4: [c++](cpp-algorithm/src/hash_table)(`FindOptimizedLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
-- Palindromic permutation, EPI#12.1: [c++](cpp-algorithm/src/hash_table)(`IsPalindromePermutation`) | Given a string, determine if a permutation of the string could form a palindrome.
+- Anonymous letter constructible, EPI#12.2: [c++](cpp-algorithm/src/hashtable)(`IsLetterConstructibleFromMagazine`) | Check if a letter can be written using the characters in a magazine.
+- Anonymous words constructible: [c++](cpp-algorithm/src/hashtable)(`IsWordConstructibleFromMagazine`) | Check if a letter can be written using the words in a magazine.
+- Collatz conjecture, EPI#12.11: [c++](cpp-algorithm/src/hashtable)(`FindNumbersSatisfyingCollatzConjecture`) | Find the numbers satisfying the Collatz conjecture.
+- Find anagrams: [c++](cpp-algorithm/src/hashtable)(`FindAnagramMappings`) | Given an array of strings, group anagrams together.
+- Find the smallest subarray covering all values, EPI#12.6: [c++](cpp-algorithm/src/hashtable)(`FindSmallestSubarrayCoveringSubset`) | Find the smallest subarray that covers all the elements in a set.
+- Find the smallest subarray sequentially covering all values, EPI#12.7: [c++](cpp-algorithm/src/hashtable)(`FindSmallestSubarraySequentiallyCoveringSubset`) | Find the smallest subarray that sequentially covers all the elements in a set.
+- ISBN cache, EPI#12.3: [c++](cpp-algorithm/src/hashtable) | Implement an LRU (Least Recently Used) cache for ISBN lookups.
+- Nearest repeated entry, EPI#12.5: [c++](cpp-algorithm/src/hashtable)(`FindNearestRepeatedEntry`) | Find the nearest repeated entry in an array of strings.
+- Optimized the lowest common ancestor, EPI#12.4: [c++](cpp-algorithm/src/hashtable)(`FindOptimizedLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
+- Palindromic permutation, EPI#12.1: [c++](cpp-algorithm/src/hashtable)(`IsPalindromePermutation`) | Given a string, determine if a permutation of the string could form a palindrome.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -606,19 +606,19 @@ List<Integer> list = Lists.newArrayList();
 
 **Examples**
 
-- Add list-based integers, EPI#7.13: [c++](cpp-algorithm/src/linked_list)(`AddTwoNumbers`) | Add two numbers represented by linked list.
-- Delete a node from linked list, EPI#7.6: [c++](cpp-algorithm/src/linked_list)(`DeleteNodeFromList`) | Delete a node from a linked list.
-- Delete duplicate nodes from sorted linked list, EPI#7.8: [c++](cpp-algorithm/src/linked_list)(`DeleteDuplicateNode`) | Delete duplicate nodes from a sorted linked list.
-- Delete the k-th last node from linked list, EPI#7.7: [c++](cpp-algorithm/src/linked_list)(`DeleteNodeKthLast`) | Delete the $k$-th last node from a linked list.
-- Implement cyclic right shift for a singly linked list, EPI#7.9: [c++](cpp-algorithm/src/linked_list)(`CyclicallyRightShiftList`) | Implement cyclic right shift for a singly linked list.
-- Linked list has a cycle, EPI#7.3: [c++](cpp-algorithm/src/linked_list)(`HasCycle1`, `HasCycle2`, `HasCycle3`) | Determine that a linked list has a cycle.
-- List pivoting, EPI#7.12: [c++](cpp-algorithm/src/linked_list)(`ListPivoting`) | Rearrange nodes smaller than pivot to the left and larger than pivot to the right.
-- Merge even and odd nodes in linked list, EPI#7.10: [c++](cpp-algorithm/src/linked_list)(`MergeEvenOddLinkedList`) | Merge even and odd nodes in a singly linked list.
-- Merge two sorted linked lists, EPI#7.1: [c++](cpp-algorithm/src/linked_list)(`MergeTwoSortedLinkedList`) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
-- Palindrome list, EPI#7.11: [c++](cpp-algorithm/src/linked_list)(`IsListPalindrome`) | Determine that a linked list is a palindrome.
-- Reverse a single sublist, EPI#7.2: [c++](cpp-algorithm/src/linked_list)(`ReverseSubList`) | Reverse a single sublist of a linked list.
-- Two linked lists overlap, EPI#7.4: [c++](cpp-algorithm/src/linked_list)(`OverlappingNoCycleList`) | Determine that two linked lists without cycle overlap.
-- Two linked lists with cycles overlap, EPI#7.5 [c++](cpp-algorithm/src/linked_list)(`OverlappingCycleList`) | Determine that two linked lists with cycle overlap.
+- Add list-based integers, EPI#7.13: [c++](cpp-algorithm/src/linkedlist)(`AddTwoNumbers`) | Add two numbers represented by linked list.
+- Delete a node from linked list, EPI#7.6: [c++](cpp-algorithm/src/linkedlist)(`DeleteNodeFromList`) | Delete a node from a linked list.
+- Delete duplicate nodes from sorted linked list, EPI#7.8: [c++](cpp-algorithm/src/linkedlist)(`DeleteDuplicateNode`) | Delete duplicate nodes from a sorted linked list.
+- Delete the k-th last node from linked list, EPI#7.7: [c++](cpp-algorithm/src/linkedlist)(`DeleteNodeKthLast`) | Delete the $k$-th last node from a linked list.
+- Implement cyclic right shift for a singly linked list, EPI#7.9: [c++](cpp-algorithm/src/linkedlist)(`CyclicallyRightShiftList`) | Implement cyclic right shift for a singly linked list.
+- Linked list has a cycle, EPI#7.3: [c++](cpp-algorithm/src/linkedlist)(`HasCycle1`, `HasCycle2`, `HasCycle3`) | Determine that a linked list has a cycle.
+- List pivoting, EPI#7.12: [c++](cpp-algorithm/src/linkedlist)(`ListPivoting`) | Rearrange nodes smaller than pivot to the left and larger than pivot to the right.
+- Merge even and odd nodes in linked list, EPI#7.10: [c++](cpp-algorithm/src/linkedlist)(`MergeEvenOddLinkedList`) | Merge even and odd nodes in a singly linked list.
+- Merge two sorted linked lists, EPI#7.1: [c++](cpp-algorithm/src/linkedlist)(`MergeTwoSortedLinkedList`) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
+- Palindrome list, EPI#7.11: [c++](cpp-algorithm/src/linkedlist)(`IsListPalindrome`) | Determine that a linked list is a palindrome.
+- Reverse a single sublist, EPI#7.2: [c++](cpp-algorithm/src/linkedlist)(`ReverseSubList`) | Reverse a single sublist of a linked list.
+- Two linked lists overlap, EPI#7.4: [c++](cpp-algorithm/src/linkedlist)(`OverlappingNoCycleList`) | Determine that two linked lists without cycle overlap.
+- Two linked lists with cycles overlap, EPI#7.5 [c++](cpp-algorithm/src/linkedlist)(`OverlappingCycleList`) | Determine that two linked lists with cycle overlap.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -812,19 +812,19 @@ Set<Integer> set = Sets.newTreeSet();
 
 ## Topics
 
-### :jigsaw: Dynamic programming
+### :jigsaw: Dynamic programming (DP)
 
 (CLRS#15)
 
 **Examples**
 
-- Fibonacci number: [c++](cpp-algorithm/src/dynamic_programming) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
+- Fibonacci number: [c++](cpp-algorithm/src/dp) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
   - $F_0 = 0$
   - $F_1 = 1$
   - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
-- Interval subset sum (`SubsetSum1`, `SubsetSum2`, `DivideAndConquerSubsetSum`, `DynamicProgrammingSubsetSum`): [c++](cpp-algorithm/src/dynamic_programming) | Interval subset sum problem is that finds the maximum sum of a subset of intervals.
-- Longest common subsequence, CLRS#15.4: [c++](cpp-algorithm/src/dynamic_programming)
-- Rod cutting, CLRS#15.1: [c++](cpp-algorithm/src/dynamic_programming) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
+- Interval subset sum (`SubsetSum1`, `SubsetSum2`, `DivideAndConquerSubsetSum`, `DynamicProgrammingSubsetSum`): [c++](cpp-algorithm/src/dp) | Interval subset sum problem is that finds the maximum sum of a subset of intervals.
+- Longest common subsequence, CLRS#15.4: [c++](cpp-algorithm/src/dp)
+- Rod cutting, CLRS#15.1: [c++](cpp-algorithm/src/dp) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -976,20 +976,20 @@ var randomBoolean = random.nextBoolean(); // true/false
 
 **Primitive type algorithms**
 
-- Arithmetic operation, EPI#4.5, EPI#4.6: [c++](cpp-algorithm/src/primitive_type)(`Multiply`, `Divide`) | Calculate the product/fraction of two numbers without using arithmetic operators.
-- Power operation, EPI#4.7: [c++](cpp-algorithm/src/primitive_type) | Compute repeated squaring $x^y$.
+- Arithmetic operation, EPI#4.5, EPI#4.6: [c++](cpp-algorithm/src/primitive)(`Multiply`, `Divide`) | Calculate the product/fraction of two numbers without using arithmetic operators.
+- Power operation, EPI#4.7: [c++](cpp-algorithm/src/primitive) | Compute repeated squaring $x^y$.
 
 **Examples**
 
-- Computing parity of word: [c++](cpp-algorithm/src/primitive_type)(`CountBits`) | Count the number of bits that are set to 1.
-- Computing parity of word, EPI#4.1: [c++](cpp-algorithm/src/primitive_type)(`Parity`) | Compute parity of word.
-- Computing parity of word, EPI#4.1: [c++](cpp-algorithm/src/primitive_type)(`ParityDropLowestBits`) | Compute parity by dropping the lowest set bit.
-- Computing parity of word, EPI#4.1: [c++](cpp-algorithm/src/primitive_type)(`ParityLookupTable`) | Compute parity by caching the results.
-- Generate random number, EPI#4.10: [c++](cpp-algorithm/src/primitive_type) | Generate a random number in a range with equal probability.
-- Integer palindrome, EPI#4.9: [c++](cpp-algorithm/src/primitive_type) | Check if a number is a palindrome.
-- Rectangle intersection, EPI#4.11: [c++](cpp-algorithm/src/primitive_type) | Check if two rectangles intersect.
-- Reverse digits, EPI#4.8: [c++](cpp-algorithm/src/primitive_type) | Reverse the digits of a given integer.
-- Swap bit, EPI#4.2: [c++](cpp-algorithm/src/primitive_type) | Swap the bits at indices $i$ and $j$.
+- Computing parity of word: [c++](cpp-algorithm/src/primitive)(`CountBits`) | Count the number of bits that are set to 1.
+- Computing parity of word, EPI#4.1: [c++](cpp-algorithm/src/primitive)(`Parity`) | Compute parity of word.
+- Computing parity of word, EPI#4.1: [c++](cpp-algorithm/src/primitive)(`ParityDropLowestBits`) | Compute parity by dropping the lowest set bit.
+- Computing parity of word, EPI#4.1: [c++](cpp-algorithm/src/primitive)(`ParityLookupTable`) | Compute parity by caching the results.
+- Generate random number, EPI#4.10: [c++](cpp-algorithm/src/primitive) | Generate a random number in a range with equal probability.
+- Integer palindrome, EPI#4.9: [c++](cpp-algorithm/src/primitive) | Check if a number is a palindrome.
+- Rectangle intersection, EPI#4.11: [c++](cpp-algorithm/src/primitive) | Check if two rectangles intersect.
+- Reverse digits, EPI#4.8: [c++](cpp-algorithm/src/primitive) | Reverse the digits of a given integer.
+- Swap bit, EPI#4.2: [c++](cpp-algorithm/src/primitive) | Swap the bits at indices $i$ and $j$.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 

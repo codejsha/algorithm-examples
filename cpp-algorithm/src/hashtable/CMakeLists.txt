@@ -1,5 +1,5 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
-include_directories(${CMAKE_SOURCE_DIR}/src/hash_table)
+include_directories(${CMAKE_SOURCE_DIR}/src/hashtable)
 include_directories(${CMAKE_SOURCE_DIR}/src/tree)
 
 macro(add_library_target target)

@@ -1,5 +1,5 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
-include_directories(${CMAKE_SOURCE_DIR}/src/linked_list)
+include_directories(${CMAKE_SOURCE_DIR}/src/linkedlist)
 
 macro(add_library_target target)
     add_library(${target} STATIC "${target}.cpp")
