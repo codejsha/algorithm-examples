@@ -869,7 +869,7 @@ Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x,
 
 - Combination: [c++](cpp-algorithm/src/math)(`GenerateCombination`) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD), CLRS#31.2: [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the greatest common divisor of two numbers.
+- Greatest common divisor (GCD), CLRS#31.2: [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math), [go](go-algorithm/internal/math) | Find the greatest common divisor of two numbers.
 - Integer factorization: [c++](cpp-algorithm/src/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
 - Least common multiple (LCM): [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the least common multiple of two numbers.
 - Miller-Rabin primality test, CLRS#31.8: [c++](cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
