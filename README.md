@@ -2,11 +2,11 @@
 
 <!-- markdownlint-disable MD033 MD036 -->
 
-![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/poetry.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
+![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/poetry.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg) ![Go Test](https://github.com/codejsha/algorithm-examples/actions/workflows/go.yml/badge.svg)
 
 [English](README.md) | [Korean](README_ko-KR.md)
 
-This repository is an implementation of algorithms, data structures, and problem-solving. These are written in C++, Python, and Java, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java). Run tests to perform methods/functions on the algorithmic logic.
+This repository is an implementation of algorithms, data structures, and problem-solving. These are written in C++, Python, Java, and Go, and each language uses the following test framework/package: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java), [go test](https://pkg.go.dev/cmd/go)(Go). Run tests to perform methods/functions on the algorithmic logic.
 
 ## Project Environments
 
@@ -15,6 +15,7 @@ Each project is configured in specific environments, as described below:
 - C++ project: C++20 / [CMake](https://cmake.org/) build / [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) packages / [vcpkg](https://github.com/microsoft/vcpkg) package manager
 - Python project: Python 3.11 / [Poetry](https://python-poetry.org/) build / [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [NetworkX](https://networkx.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/) packages
 - Java project: Java 21 / [Gradle](https://gradle.org/) build / [Google Guava](https://github.com/google/guava), [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh) libraries
+- Go project: Go 1.22 / Go build / [Testify](https://github.com/stretchr/testify) package
 
 ## Table of Contents
 
