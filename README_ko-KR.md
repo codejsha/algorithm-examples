@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable MD033 MD036 -->
 
-![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/python.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
+![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/poetry.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
 
 [English](README.md) | [Korean](README_ko-KR.md)
 
