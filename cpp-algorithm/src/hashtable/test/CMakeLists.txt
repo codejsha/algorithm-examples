@@ -5,12 +5,12 @@ if(WIN32)
 endif(WIN32)
 
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
-include_directories(${CMAKE_SOURCE_DIR}/src/hash_table)
+include_directories(${CMAKE_SOURCE_DIR}/src/hashtable)
 include_directories(${CMAKE_SOURCE_DIR}/src/tree)
 
 macro(add_target_test target)
     string(REPLACE "_test" "" target_name ${target})
-    add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/hash_table/${target_name}.cpp")
+    add_executable(${target} "${target}.cpp" "${CMAKE_SOURCE_DIR}/src/hashtable/${target_name}.cpp")
     target_link_libraries(${target} PRIVATE GTest::gtest_main ${ARGN})
     if(MSVC)
         ### Edit and Continue for CMake projects
