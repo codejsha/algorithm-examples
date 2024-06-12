@@ -1,5 +1,5 @@
 .PHONY: all
-all: fmt clean build test
+all: download verify test
 
 .PHONY: fmt
 fmt:
@@ -8,6 +8,14 @@ fmt:
 .PHONY: clean
 clean:
 	go clean
+
+.PHONY: download
+download:
+	go mod download -x
+
+.PHONY: verify
+verify:
+	go mod verify
 
 .PHONY: build
 build:
