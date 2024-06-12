@@ -21,6 +21,7 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
+          # prettier-ignore
           distribution: 'temurin'
           java-version: '21'
 

@@ -21,6 +21,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
+          # prettier-ignore
           python-version: '3.12'
 
       - name: Install dependencies
