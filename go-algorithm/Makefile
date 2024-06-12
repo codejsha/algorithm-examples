@@ -1,6 +1,9 @@
 .PHONY: all
 all: download verify test
 
+.PHONY: module
+module: download verify
+
 .PHONY: fmt
 fmt:
 	go fmt ./...
