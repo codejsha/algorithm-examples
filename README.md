@@ -300,7 +300,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](cpp-algorithm/src/graph), [python](python-algorithm/algorithm/graph/test)(test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It finds the shortest path between two vertices in a graph.
+- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](cpp-algorithm/src/graph), [python(test)](python-algorithm/algorithm/graph/test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It finds the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -387,7 +387,7 @@ algorithm Prim(G, root):
 **Examples**
 
 - Maze problem: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
-- Minimum spanning tree (Kruskal, Prim, Boruvka), CLRS#23, CCSP#4.4.2: [python](python-algorithm/algorithm/graph/test)(test) | Find the minimum spanning tree of a graph. cf. Kruskal(CLRS#23.2, CLRS#21.1), Prim(CLRS#23.2)
+- Minimum spanning tree (Kruskal, Prim, Boruvka), CLRS#23, CCSP#4.4.2: [python(test)](python-algorithm/algorithm/graph/test) | Find the minimum spanning tree of a graph. cf. Kruskal(CLRS#23.2, CLRS#21.1), Prim(CLRS#23.2)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
