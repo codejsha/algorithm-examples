@@ -300,7 +300,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](cpp-algorithm/src/graph), [python](python-algorithm/algorithm/graph/test)(test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It finds the shortest path between two vertices in a graph.
+- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](cpp-algorithm/src/graph), [python(test)](python-algorithm/algorithm/graph/test), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that handle non-negative edge weights. It finds the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -387,7 +387,7 @@ algorithm Prim(G, root):
 **Examples**
 
 - Maze problem: [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
-- Minimum spanning tree (Kruskal, Prim, Boruvka), CLRS#23, CCSP#4.4.2: [python](python-algorithm/algorithm/graph/test)(test) | Find the minimum spanning tree of a graph. cf. Kruskal(CLRS#23.2, CLRS#21.1), Prim(CLRS#23.2)
+- Minimum spanning tree (Kruskal, Prim, Boruvka), CLRS#23, CCSP#4.4.2: [python(test)](python-algorithm/algorithm/graph/test) | Find the minimum spanning tree of a graph. cf. Kruskal(CLRS#23.2, CLRS#21.1), Prim(CLRS#23.2)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -871,7 +871,7 @@ Math.abs(-34.5), Math.ceil(2.17), Math.floor(3.14), Math.max(x, -3), Math.min(x,
 
 - Combination: [c++](cpp-algorithm/src/math)(`GenerateCombination`) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD), CLRS#31.2: [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math), [go](go-algorithm/internal/math) | Find the greatest common divisor of two numbers.
+- Greatest common divisor (GCD), CLRS#31.2: [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math), [go](go-algorithm/pkg/math) | Find the greatest common divisor of two numbers.
 - Integer factorization: [c++](cpp-algorithm/src/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
 - Least common multiple (LCM): [python](python-algorithm/algorithm/math), [java](java-algorithm/src/main/java/com/example/algorithm/math) | Find the least common multiple of two numbers.
 - Miller-Rabin primality test, CLRS#31.8: [c++](cpp-algorithm/src/math) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
