@@ -5,17 +5,17 @@ import (
 	"testing"
 )
 
-func TestGCD(t *testing.T) {
-	assert.Equal(t, 12, NumberTuple{24, 36}.gcd())
-	assert.Equal(t, 1, NumberTuple{17, 22}.gcd())
-	assert.Equal(t, 20, NumberTuple{120, 500}.gcd())
+func TestGCDEuclidean(t *testing.T) {
+	assert.Equal(t, 12, GCDEuclidean(24, 36))
+	assert.Equal(t, 1, GCDEuclidean(17, 22))
+	assert.Equal(t, 20, GCDEuclidean(120, 500))
 }
 
-func TestGCDExtended(t *testing.T) {
-	d1, _, _ := NumberTuple{24, 36}.gcdExtended()
+func TestGCDEuclideanExtended(t *testing.T) {
+	d1, _, _ := GCDEuclideanExtended(24, 36)
 	assert.Equal(t, 12, d1)
-	d2, _, _ := NumberTuple{17, 22}.gcdExtended()
+	d2, _, _ := GCDEuclideanExtended(17, 22)
 	assert.Equal(t, 1, d2)
-	d3, _, _ := NumberTuple{120, 500}.gcdExtended()
+	d3, _, _ := GCDEuclideanExtended(120, 500)
 	assert.Equal(t, 20, d3)
 }
