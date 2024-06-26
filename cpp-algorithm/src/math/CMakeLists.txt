@@ -1,11 +1,11 @@
 include_directories(${CMAKE_SOURCE_DIR}/src/include)
 
 macro(add_library_target target)
-    add_library(${target} STATIC "${target}.cpp")
-    target_link_libraries(${target} PRIVATE ${ARGN})
-    set_property(TARGET ${target} PROPERTY CXX_STANDARD 20)
+    string(REPLACE ".cpp" "" target_name ${target})
+    add_library(${target_name} STATIC ${target})
+    target_link_libraries(${target_name} PRIVATE ${ARGN})
 endmacro()
 
-add_library_target(combination sequence_util)
-add_library_target(miller_rabin)
-add_library_target(permutation)
+add_library_target(combination.cpp sequence_util)
+add_library_target(miller_rabin.cpp)
+add_library_target(permutation.cpp)
