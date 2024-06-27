@@ -1,4 +1,5 @@
 import pytest
+
 from algorithm.search.generic_search import generic_linear_contains, generic_binary_contains
 
 
