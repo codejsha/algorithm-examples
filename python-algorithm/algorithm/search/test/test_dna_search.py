@@ -1,4 +1,5 @@
 import pytest
+
 from algorithm.search.dna_search import Nucleotide, string_to_gene, linear_contains, binary_contains
 
 
