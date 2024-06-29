@@ -226,7 +226,7 @@ MutableValueGraph<City, Distance> roads = ValueGraphBuilder.directed()
 
 **Graph algorithms**
 
-- A\* search algorithm: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
+- A\* search algorithm, CCSP#2.2.5: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
 - Bellman-Ford algorithm, CLRS#24.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A single source the shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
 ```txt
@@ -250,7 +250,7 @@ algorithm BellmanFord(G, source):
     return true
 ```
 
-- Breadth-first search (BFS), CLRS#22.2, CCSP#4.3.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph), [python(test)](python-algorithm/algorithm/graph/test) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
+- Breadth-first search (BFS), CLRS#22.2, CCSP#2.2.4, CCSP#4.3.1: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph), [python(test)](python-algorithm/algorithm/graph/test) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
 
 ```txt
 algorithm BFS(G, source):
@@ -275,7 +275,7 @@ algorithm BFS(G, source):
         u.color = BLACK
 ```
 
-- Depth-first search (DFS), CLRS#22.3: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
+- Depth-first search (DFS), CLRS#22.3, CCSP#2.2.3: [c++](cpp-algorithm/src/graph), [java](java-algorithm/src/main/java/com/example/algorithm/graph) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
 
 ```txt
 algorithm DFS(G):
@@ -1051,9 +1051,9 @@ Collections.binarySearch(arrayList, 3);   // for list
 
 **Examples**
 
+- DNA search (Search a codon(combinations of three nucleotides) in a gene), CCSP#2.1: [python](python-algorithm/algorithm/search)(`linear_contains`, `binary_contains`) | Search a codon(combinations of three nucleotides) in a gene using linear search and binary search.
 - Find k-th smallest/largest element in an array, EPI#11.8: [c++](cpp-algorithm/src/search)(`FindKthSmallestElement`, `FindKthLargestElement`) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
 - Find the minimum and maximum elements in an array, EPI#11.7: [c++](cpp-algorithm/src/search)(`FindMinMax`)
-- Search a codon(combinations of three nucleotides) in a gene, CCSP#2.1: [python](python-algorithm/algorithm/search)(`linear_contains`, `binary_contains`) | Search a codon(combinations of three nucleotides) in a gene using linear search and binary search.
 - Search an element in generic list, CCSP#2.1: [python](python-algorithm/algorithm/search)(`generic_linear_contains`, `generic_linear_contains`) | Search an element in generic list using linear search and binary search.
 - Search a sorted array for entry equal to its index, EPI#11.2: [c++](cpp-algorithm/src/search)(`SearchEntryEqualToItsIndex`)
 - Search a sorted array for the first greater than a key: [c++](cpp-algorithm/src/search)(`SearchFirstGreaterThanKey`)
