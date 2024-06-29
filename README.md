@@ -1249,6 +1249,7 @@ var str = collection.stream()
 
 **Examples**
 
+- Bit compression, CCSP#1.2: [python](python-algorithm/algorithm/string) | Compress a string using bit manipulation.
 - Convert string, EPI#6.1: [c++](cpp-algorithm/src/string)(`IntToString`, `StringToInt`) | Convert integer to string and vice versa.
 - IP address validation, EPI#6.9: [c++](cpp-algorithm/src/string) | Validate IPv4 address that is in the form of _x.x.x.x_ where _x_ is a number between 0 and 255.
 - Look and say problem, EPI#6.7: [c++](cpp-algorithm/src/string)
