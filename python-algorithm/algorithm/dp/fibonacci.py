@@ -63,7 +63,7 @@ def fibonacci_generator(n: int) -> Generator[int, None, None]:
     """
     Calculate the Fibonacci number of the given number using generator approach.
     :param n: input number
-    :return: Fibonacci number
+    :return: generator of Fibonacci numbers
     """
     yield 0  # special case
     if n > 0:
