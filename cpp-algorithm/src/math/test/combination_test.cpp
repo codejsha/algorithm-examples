@@ -69,7 +69,7 @@ GTEST_TEST(GenerateCombination, KGreaterThanStringLength)
 {
     const std::string seq = "abcd";
     constexpr int k = 5;
-    constexpr auto expected = std::vector<std::string>{};
+    const auto expected = std::vector<std::string>{};
     const auto result = Combination::GenerateCombination(seq, k);
     EXPECT_EQ(expected, result);
 }
@@ -78,7 +78,7 @@ GTEST_TEST(GenerateCombination, EmptyString)
 {
     const std::string seq;
     constexpr int k = 3;
-    constexpr auto expected = std::vector<std::string>{};
+    const auto expected = std::vector<std::string>{};
     const auto result = Combination::GenerateCombination(seq, k);
     EXPECT_EQ(expected, result);
 }
