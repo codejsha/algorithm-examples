@@ -11,7 +11,7 @@ GTEST_TEST(ShiftList, CyclicallyRightShiftList)
 
     auto expected = std::vector<int>{0, -4, 3, 2};
     auto result = ShiftList::CyclicallyRightShiftList(node1, 2);
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;

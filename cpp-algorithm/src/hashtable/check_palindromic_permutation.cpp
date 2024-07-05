@@ -5,7 +5,7 @@
 auto CheckPalindromicPermutation::IsPalindromePermutation(const std::string& str) -> bool
 {
     std::unordered_set<char> char_set;
-    for (const auto& ch : str)
+    for (const char& ch : str)
     {
         if (char_set.contains(ch))
         {

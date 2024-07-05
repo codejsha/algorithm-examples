@@ -5,7 +5,7 @@
 
 auto PairOfBracket::CheckPairOfBracket(const std::string& input) -> bool
 {
-    auto stack = std::stack<char>{};
+    std::stack<char> stack;
     const std::unordered_map<char, char> bracket_pairs = {
         {')', '('},
         {']', '['},

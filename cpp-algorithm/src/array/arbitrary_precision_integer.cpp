@@ -20,12 +20,14 @@ auto ArbitraryPrecision::PlusOne(std::vector<int> number_array) -> std::vector<i
     return number_array;
 }
 
-auto ArbitraryPrecision::StringAddition(const std::string& number_string1, const std::string& number_string2) -> std::vector<int>
+auto ArbitraryPrecision::StringAddition(const std::string& number_string1,
+                                        const std::string& number_string2)
+    -> std::vector<int>
 {
-    const auto size1 = static_cast<int>(number_string1.size());
-    const auto size2 = static_cast<int>(number_string2.size());
+    const int size1 = static_cast<int>(number_string1.size());
+    const int size2 = static_cast<int>(number_string2.size());
 
-    const auto larger = size1 >= size2 ? size1 : size2;
+    const int larger = size1 >= size2 ? size1 : size2;
     auto sum = std::vector<int>(larger);
 
     for (int i = size1 - 1; i >= 0; --i)
@@ -33,7 +35,7 @@ auto ArbitraryPrecision::StringAddition(const std::string& number_string1, const
         sum[i] += number_string1.at(i) == '1' ? 1 : 0;
     }
 
-    auto carry = 0;
+    int carry = 0;
     for (int i = size2 - 1; i >= 0; --i)
     {
         sum[i] += carry;
@@ -58,9 +60,11 @@ auto ArbitraryPrecision::StringAddition(const std::string& number_string1, const
     return sum;
 }
 
-auto ArbitraryPrecision::Multiply(std::vector<int>& number_array1, std::vector<int>& number_array2) -> std::vector<int>
+auto ArbitraryPrecision::Multiply(std::vector<int>& number_array1,
+                                  std::vector<int>& number_array2)
+    -> std::vector<int>
 {
-    const auto sign = ((number_array1.front() < 0) ^ (number_array2.front() < 0)) ? -1 : 1;
+    const int sign = ((number_array1.front() < 0) ^ (number_array2.front() < 0)) ? -1 : 1;
     number_array1.front() = std::abs(number_array1.front());
     number_array2.front() = std::abs(number_array2.front());
 
@@ -75,7 +79,8 @@ auto ArbitraryPrecision::Multiply(std::vector<int>& number_array1, std::vector<i
         }
     }
 
-    result = {std::ranges::find_if_not(begin(result), end(result), [](const int i) { return i == 0; }), end(result)};
+    result = {std::ranges::find_if_not(begin(result), end(result), [](const int i) { return i == 0; }),
+              end(result)};
 
     if (std::empty(result))
     {

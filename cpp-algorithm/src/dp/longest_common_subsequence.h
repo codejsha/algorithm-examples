@@ -24,8 +24,11 @@ namespace CommonSubsequence
      * \param length2 length of the string sequence 2
      * \param result LCS string
      */
-    void LongestCommonSubsequence(const std::string& seq1, const gsl_matrix_char* direction_matrix, int length1,
-                                  int length2, std::string& result);
+    void LongestCommonSubsequence(const std::string& seq1,
+                                  const gsl_matrix_char* direction_matrix,
+                                  int length1,
+                                  int length2,
+                                  std::string& result);
 
     /**
      * \brief Print table of LCS lengths
@@ -33,7 +36,9 @@ namespace CommonSubsequence
      * \param seq2 string sequence 2
      * \param direction_matrix direction matrix
      */
-    void PrintOptimalMatrix(const std::string& seq1, const std::string& seq2, const gsl_matrix_char* direction_matrix);
+    void PrintOptimalMatrix(const std::string& seq1,
+                            const std::string& seq2,
+                            const gsl_matrix_char* direction_matrix);
 }
 
 #endif

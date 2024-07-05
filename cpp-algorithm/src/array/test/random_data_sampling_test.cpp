@@ -5,12 +5,12 @@
 
 GTEST_TEST(RandomDataSampling, OfflineRandomSampling)
 {
-    constexpr auto k = 3;
+    constexpr int k = 3;
     auto arr = std::vector<int>{3, 7, 5, 11};
     const auto result = RandomDataSampling::OfflineRandomSampling(k, arr);
 
     std::stringstream stream;
-    for (const auto& item : result)
+    for (const int& item : result)
     {
         stream << item << " ";
     }
@@ -21,12 +21,12 @@ GTEST_TEST(RandomDataSampling, OfflineRandomSampling)
 
 GTEST_TEST(RandomDataSampling, ComputeRandomPermutation)
 {
-    constexpr auto k = 3;
+    constexpr int k = 3;
     auto arr = std::vector<int>{3, 7, 5, 11};
     const auto result = RandomDataSampling::ComputeRandomPermutation(k);
 
     std::stringstream stream;
-    for (const auto& item : result)
+    for (const int& item : result)
     {
         stream << item << " ";
     }

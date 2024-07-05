@@ -2,7 +2,7 @@
 
 auto PowerOperation::Power(double x, const int y) -> double
 {
-    auto result = 1.0;
+    double result = 1.0;
     long long power = y;
 
     if (y < 0)

@@ -14,7 +14,7 @@ GTEST_TEST(MergeList, MergeTwoSortedLinkedList1)
 
     auto result = MergeList::MergeTwoSortedLinkedList(node_a1, node_b1);
     const auto expected = std::vector<int>{1, 1, 2, 3, 4, 4};
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;
@@ -32,7 +32,7 @@ GTEST_TEST(MergeList, MergeTwoSortedLinkedList2)
 
     auto result = MergeList::MergeTwoSortedLinkedList(node_a1, node_b1);
     const auto expected = std::vector<int>{2, 3, 5, 7, 11};
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;
@@ -48,7 +48,7 @@ GTEST_TEST(MergeList, MergeEvenOddLinkedList)
 
     auto result = MergeList::MergeEvenOddLinkedList(node1);
     const auto expected = std::vector<int>{3, 0, 2, -4};
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;

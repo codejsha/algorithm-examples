@@ -26,7 +26,7 @@ auto BalancedTree::CheckBalanced(const BinaryTree::ExtendedNode<int>* tree) -> B
         return {false, 0};
     }
 
-    const auto is_balanced = std::abs(left_height - right_height) <= 1;
-    const auto height = std::max(left_height, right_height) + 1;
+    const bool is_balanced = std::abs(left_height - right_height) <= 1;
+    const int height = std::max(left_height, right_height) + 1;
     return {is_balanced, height};
 }

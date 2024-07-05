@@ -4,8 +4,8 @@
 
 GTEST_TEST(IsPalindromePermutation, BasicCase1)
 {
-    const auto str = "edified";
-    constexpr auto expected = true;
-    const auto result = CheckPalindromicPermutation::IsPalindromePermutation(str);
+    const std::string str = "edified";
+    constexpr bool expected = true;
+    const bool result = CheckPalindromicPermutation::IsPalindromePermutation(str);
     EXPECT_EQ(expected, result);
 }

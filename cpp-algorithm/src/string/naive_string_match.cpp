@@ -2,7 +2,7 @@
 
 auto NaiveStringMatch::NaiveStringMatcher(const std::string& text, const std::string& pattern) -> std::vector<int>
 {
-    auto position = std::vector<int>{};
+    std::vector<int> position;
     for (int i = 0; i < static_cast<int>(text.size()) - static_cast<int>(pattern.size()) + 1; ++i)
     {
         for (int j = 0; j < static_cast<int>(pattern.size()); ++j)

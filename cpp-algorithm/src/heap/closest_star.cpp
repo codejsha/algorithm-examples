@@ -4,7 +4,7 @@
 
 auto ClosestStar::FindClosestStar(std::vector<Star>& stars, const int k) -> std::priority_queue<Star>
 {
-    auto max_heap = std::priority_queue<Star>{};
+    std::priority_queue<Star> max_heap;
 
     while (!stars.empty())
     {

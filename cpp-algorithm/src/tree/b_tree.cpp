@@ -40,7 +40,7 @@ void BTree::Tree::SplitChild(Node* node, int index)
 
 void BTree::Tree::InsertNonFull(Node* node, char key)
 {
-    auto key_count = static_cast<int>(node->keys.size());
+    int key_count = static_cast<int>(node->keys.size());
 
     // insert key to leaf node
     if (node->is_leaf == true)
@@ -94,8 +94,8 @@ void BTree::Tree::Insert(Node* node, char key)
 
 auto BTree::Tree::Search(Node* node, char key) -> std::pair<Node*, const int>
 {
-    auto index = 0;
-    auto key_count = static_cast<int>(node->keys.size());
+    int index = 0;
+    int key_count = static_cast<int>(node->keys.size());
 
     // find the smallest index that key <= node->Keys[index]
     while ((key_count > index) && (key > node->keys[index]))

@@ -1,10 +1,12 @@
 #include "replace_element.h"
 
-auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr, const std::string& replace_str,
-                                             const std::string& remove_str) -> std::vector<std::string>
+auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr,
+                                             const std::string& replace_str,
+                                             const std::string& remove_str)
+    -> std::vector<std::string>
 {
-    auto write_index = 0;
-    auto a_count = 0;
+    int write_index = 0;
+    int a_count = 0;
     for (int i = 0; i < static_cast<int>(arr.size()); ++i)
     {
         if (arr[i] != remove_str)
@@ -17,9 +19,9 @@ auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr, cons
         }
     }
 
-    auto current_index = write_index - 1;
+    int current_index = write_index - 1;
     write_index = write_index + a_count - 1;
-    auto final_size = write_index + 1;
+    const int final_size = write_index + 1;
     while (current_index >= 0)
     {
         if (arr[current_index] == replace_str)
@@ -37,8 +39,10 @@ auto ReplaceElement::ReplaceAndRemoveString1(std::vector<std::string>& arr, cons
     return std::vector<std::string>{arr.begin(), arr.begin() + final_size};
 }
 
-auto ReplaceElement::ReplaceAndRemoveString2(std::vector<std::string>& arr, const std::string& replace_str,
-                                             const std::string& remove_str) -> std::vector<std::string>
+auto ReplaceElement::ReplaceAndRemoveString2(std::vector<std::string>& arr,
+                                             const std::string& replace_str,
+                                             const std::string& remove_str)
+    -> std::vector<std::string>
 {
     std::erase(arr, remove_str);
     for (int i = 0; i < static_cast<int>(arr.size()); ++i)

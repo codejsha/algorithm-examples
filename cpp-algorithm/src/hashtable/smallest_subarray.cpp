@@ -9,7 +9,7 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(const std::vector<std:
 {
     // keep track of the number of keywords that have been covered
     std::unordered_map<std::string, int> keywords_to_cover;
-    for (const auto& keyword : keywords)
+    for (const std::string& keyword : keywords)
     {
         ++keywords_to_cover[keyword];
     }
@@ -20,7 +20,7 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(const std::vector<std:
     for (int left_index = 0, right_index = 0; right_index < static_cast<int>(paragraph.size()); ++right_index)
     {
         // decrement the number of keywords that need to be covered
-        const auto& right_word = paragraph[right_index];
+        const std::string& right_word = paragraph[right_index];
         if (const auto it = keywords_to_cover.find(right_word);
             it != keywords_to_cover.end())
         {
@@ -43,7 +43,7 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(const std::vector<std:
             }
 
             // increment the number of keywords that need to be covered
-            const auto& left_word = paragraph[left_index];
+            const std::string& left_word = paragraph[left_index];
             if (const auto it = keywords_to_cover.find(left_word);
                 it != keywords_to_cover.end())
             {
@@ -75,15 +75,15 @@ auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(const std:
     auto last_occurrence = std::vector(keywords.size(), -1);
     auto shortest_subarray_length = std::vector(keywords.size(), std::numeric_limits<int>::max());
 
-    auto shortest_distance = std::numeric_limits<int>::max();
+    int shortest_distance = std::numeric_limits<int>::max();
     auto result = std::make_tuple(-1, -1);
 
     for (int i = 0; i < static_cast<int>(paragraph.size()); ++i)
     {
-        if (const auto& word = paragraph[i];
+        if (const std::string& word = paragraph[i];
             keywords_to_index.contains(word))
         {
-            const auto keyword_index = keywords_to_index.find(word)->second;
+            const int keyword_index = keywords_to_index.find(word)->second;
 
             // if keyword is the first one in the keywords vector
             if (keyword_index == 0)
@@ -93,7 +93,7 @@ auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(const std:
             // if the shortest subarray length of the previous keyword is not infinite
             else if (shortest_subarray_length[keyword_index - 1] != std::numeric_limits<int>::max())
             {
-                const auto distance_to_previous_keyword = i - last_occurrence[keyword_index - 1];
+                const int distance_to_previous_keyword = i - last_occurrence[keyword_index - 1];
                 shortest_subarray_length[keyword_index] =
                     distance_to_previous_keyword + shortest_subarray_length[keyword_index - 1];
             }

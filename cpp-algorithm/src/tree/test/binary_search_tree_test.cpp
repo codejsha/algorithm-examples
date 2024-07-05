@@ -20,17 +20,17 @@ GTEST_TEST(BinarySearchTree, PreorderTraversal)
     const auto expected = std::vector<int>{15, 6, 3, 2, 4, 7, 13, 9, 18, 17, 20};
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    auto result = std::vector<int>{};
+    std::vector<int> result;
     tree.PreorderTraversal(tree.GetRoot(), result);
     ASSERT_EQ(static_cast<int>(expected.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto is_equal = std::ranges::equal(expected, result);
+    const bool is_equal = std::ranges::equal(expected, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
@@ -51,17 +51,17 @@ GTEST_TEST(BinarySearchTree, InorderTraversal)
     const auto expected = std::vector<int>{2, 3, 4, 6, 7, 9, 13, 15, 17, 18, 20};
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    auto result = std::vector<int>{};
+    std::vector<int> result;
     tree.InorderTraversal(tree.GetRoot(), result);
     ASSERT_EQ(static_cast<int>(expected.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto is_equal = std::ranges::equal(expected, result);
+    const bool is_equal = std::ranges::equal(expected, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
@@ -82,17 +82,17 @@ GTEST_TEST(BinarySearchTree, PostorderTraversal)
     const auto expected = std::vector<int>{2, 4, 3, 9, 13, 7, 6, 17, 20, 18, 15};
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    auto result = std::vector<int>{};
+    std::vector<int> result;
     tree.PostorderTraversal(tree.GetRoot(), result);
     ASSERT_EQ(static_cast<int>(expected.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto is_equal = std::ranges::equal(expected, result);
+    const bool is_equal = std::ranges::equal(expected, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
@@ -113,7 +113,7 @@ GTEST_TEST(BinarySearchTree, Minimum)
     const auto expected = *std::ranges::min_element(keys);
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
@@ -136,10 +136,10 @@ GTEST_TEST(BinarySearchTree, Maximum)
     //          9
 
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    const auto expected = *std::ranges::max_element(keys);
+    const int expected = *std::ranges::max_element(keys);
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
@@ -162,15 +162,15 @@ GTEST_TEST(BinarySearchTree, Predecessor)
     //          9
 
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    constexpr auto expected = 13;
+    constexpr int expected = 13;
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    const auto result = tree.Predecessor(15)->key;
+    const int result = tree.Predecessor(15)->key;
     EXPECT_EQ(expected, result);
 }
 
@@ -188,15 +188,15 @@ GTEST_TEST(BinarySearchTree, Successor)
     //          9
 
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    constexpr auto expected = 17;
+    constexpr int expected = 17;
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    const auto result = tree.Successor(15)->key;
+    const int result = tree.Successor(15)->key;
     EXPECT_EQ(expected, result);
 }
 
@@ -214,15 +214,15 @@ GTEST_TEST(BinarySearchTree, IterativeSearch)
     //          9
 
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    const auto expected = keys.back();
+    const int expected = keys.back();
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    const auto result = tree.IterativeSearch(tree.GetRoot(), keys.back())->key;
+    const int result = tree.IterativeSearch(tree.GetRoot(), keys.back())->key;
     EXPECT_EQ(expected, result);
 }
 
@@ -240,15 +240,15 @@ GTEST_TEST(BinarySearchTree, RecursiveSearch)
     //          9
 
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
-    const auto expected = keys.back();
+    const int expected = keys.back();
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    const auto result = tree.RecursiveSearch(tree.GetRoot(), keys.back())->key;
+    const int result = tree.RecursiveSearch(tree.GetRoot(), keys.back())->key;
     EXPECT_EQ(expected, result);
 }
 
@@ -268,15 +268,15 @@ GTEST_TEST(BinarySearchTree, Delete_1)
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Delete(tree.GetRoot(), key);
-        auto result = std::vector<int>{};
+        std::vector<int> result;
         tree.InorderTraversal(tree.GetRoot(), result);
     }
 }
@@ -297,15 +297,15 @@ GTEST_TEST(BinarySearchTree, Delete_2)
     const auto keys = std::vector<int>{8, 3, 10, 1, 6, 14, 4, 7, 13};
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
 
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Delete(tree.GetRoot(), key);
-        auto result = std::vector<int>{};
+        std::vector<int> result;
         tree.InorderTraversal(tree.GetRoot(), result);
     }
 }

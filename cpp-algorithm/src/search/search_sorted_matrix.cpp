@@ -13,12 +13,12 @@ bool SearchSortedMatrix::SearchSortedMatrix(const std::vector<std::vector<int>>&
         return false;
     }
 
-    const auto row_size = static_cast<int>(matrix.size());
-    const auto col_size = static_cast<int>(matrix[0].size());
+    const int row_size = static_cast<int>(matrix.size());
+    const int col_size = static_cast<int>(matrix[0].size());
 
     // start from top right corner
-    auto row = 0;
-    auto col = static_cast<int>(matrix[0].size() - 1);
+    int row = 0;
+    int col = static_cast<int>(matrix[0].size() - 1);
 
     while (IsNotOutOfRange(row, col, row_size, col_size))
     {

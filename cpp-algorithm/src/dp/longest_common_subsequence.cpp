@@ -5,8 +5,8 @@
 auto CommonSubsequence::LongestCommonSubsequenceLength(const std::string& seq1, const std::string& seq2)
     -> std::tuple<gsl_matrix_int*, gsl_matrix_char*>
 {
-    const auto seq_length1 = static_cast<int>(seq1.length());
-    const auto seq_length2 = static_cast<int>(seq2.length());
+    const int seq_length1 = static_cast<int>(seq1.length());
+    const int seq_length2 = static_cast<int>(seq2.length());
 
     auto length_matrix = gsl_matrix_int_calloc(seq_length1 + 1, seq_length2 + 1);
     gsl_matrix_int_set_zero(length_matrix);
@@ -41,8 +41,11 @@ auto CommonSubsequence::LongestCommonSubsequenceLength(const std::string& seq1, 
     return std::make_tuple(length_matrix, direction_matrix);
 }
 
-void CommonSubsequence::LongestCommonSubsequence(const std::string& seq1, const gsl_matrix_char* direction_matrix,
-                                                 const int length1, const int length2, std::string& result)
+void CommonSubsequence::LongestCommonSubsequence(const std::string& seq1,
+                                                 const gsl_matrix_char* direction_matrix,
+                                                 const int length1,
+                                                 const int length2,
+                                                 std::string& result)
 {
     if ((length1 == 0) || (length2 == 0))
     {
@@ -64,11 +67,12 @@ void CommonSubsequence::LongestCommonSubsequence(const std::string& seq1, const 
     }
 }
 
-void CommonSubsequence::PrintOptimalMatrix(const std::string& seq1, const std::string& seq2,
+void CommonSubsequence::PrintOptimalMatrix(const std::string& seq1,
+                                           const std::string& seq2,
                                            const gsl_matrix_char* direction_matrix)
 {
-    const auto seq_length1 = static_cast<int>(seq1.length());
-    const auto seq_length2 = static_cast<int>(seq2.length());
+    const int seq_length1 = static_cast<int>(seq1.length());
+    const int seq_length2 = static_cast<int>(seq2.length());
 
     std::cout << "  j ";
     for (int i = 0; i < seq_length2; ++i)

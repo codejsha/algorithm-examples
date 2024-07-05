@@ -1,8 +1,10 @@
 #include "leaf_node_list.h"
 
-/// @brief Add leaf nodes to the list.
-/// @param root the root of the tree
-/// @param leaf_node_list leaf node list
+/**
+ * \brief Add leaf nodes to the list.
+ * \param root the root of the tree
+ * \param leaf_node_list leaf node list
+ */
 void AddLeafNodeToList(BinaryTree::Node<int>* root, std::vector<BinaryTree::Node<int>*>& leaf_node_list)
 {
     if (root == nullptr)

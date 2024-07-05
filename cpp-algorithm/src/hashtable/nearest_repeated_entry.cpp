@@ -6,7 +6,7 @@
 auto NearestRepeatedEntry::FindNearestRepeatedEntry(const std::vector<std::string>& paragraph) -> int
 {
     std::unordered_map<std::string, int> last_occurrence;
-    auto nearest_repeated_distance = std::numeric_limits<int>::max();
+    int nearest_repeated_distance = std::numeric_limits<int>::max();
 
     // iterate over the array
     for (int i = 0; i < static_cast<int>(paragraph.size()); ++i)

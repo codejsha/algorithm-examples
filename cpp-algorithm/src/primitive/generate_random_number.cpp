@@ -11,8 +11,8 @@ auto ZeroOneRandom() -> int
 
 auto GenerateRandomNumber::GenerateUniformRandomNumber(const int lower_bound, const int upper_bound) -> int
 {
-    auto result = 0;
-    const auto number_of_outcomes = upper_bound - lower_bound + 1;
+    int result = 0;
+    const int number_of_outcomes = upper_bound - lower_bound + 1;
 
     do
     {

@@ -4,7 +4,7 @@ auto Add(unsigned long long a, unsigned long long b) -> unsigned long long
 {
     while (b)
     {
-        const auto carry = a & b;
+        const unsigned long long carry = a & b;
         a = a ^ b;
         b = carry << 1;
     }
@@ -28,9 +28,9 @@ auto ArithmeticOperation::Multiply(unsigned long long x, unsigned long long y) -
 
 auto ArithmeticOperation::Divide(int x, int y) -> int
 {
-    auto result = 0;
-    auto power = 32;
-    auto y_power = static_cast<unsigned long long>(y) << power;
+    int result = 0;
+    int power = 32;
+    unsigned long long y_power = static_cast<unsigned long long>(y) << power;
 
     while (x >= y)
     {

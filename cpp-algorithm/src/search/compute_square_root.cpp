@@ -2,13 +2,13 @@
 
 auto ComputeSquareRoot::ComputeIntegerSquareRoot(const int k) -> int
 {
-    auto left = 0;
-    auto right = k;
+    int left = 0;
+    int right = k;
 
     while (left <= right)
     {
-        auto mid = left + (right - left) / 2;
-        auto mid_squared = mid * mid;
+        const int mid = left + (right - left) / 2;
+        const int mid_squared = mid * mid;
 
         if (mid_squared <= k)
         {
