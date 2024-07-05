@@ -4,7 +4,7 @@
 
 auto MillerRabin::ModularExponentiation(int base, int exponent, const int mod) -> int
 {
-    auto result = 1;
+    int result = 1;
     while (exponent > 0)
     {
         if (exponent % 2 == 1)
@@ -22,8 +22,8 @@ auto MillerRabin::Witness(int exponent, const int number) -> bool
     std::random_device rd;
     std::mt19937 generator(rd());
     std::uniform_int_distribution distribution(2, number - 1);
-    const auto random = distribution(generator);
-    auto x = ModularExponentiation(random, exponent, number);
+    const int random = distribution(generator);
+    int x = ModularExponentiation(random, exponent, number);
 
     if (x == 1 || x == number - 1)
     {
@@ -63,7 +63,7 @@ auto MillerRabin::MillerRabinPrimalityTest(const int number, const int repeats) 
         return false;
     }
 
-    auto d = number - 1;
+    int d = number - 1;
     while (d % 2 == 0)
     {
         d /= 2;

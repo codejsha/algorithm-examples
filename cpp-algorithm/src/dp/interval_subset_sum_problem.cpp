@@ -4,14 +4,14 @@
 
 auto IntervalSubset::SubsetSum1(const std::vector<int>& seq) -> int
 {
-    const auto size = static_cast<int>(seq.size());
-    auto max = std::numeric_limits<int>::min();
+    const int size = static_cast<int>(seq.size());
+    int max = std::numeric_limits<int>::min();
 
     for (int prev = 0; prev < size; ++prev)
     {
         for (int next = prev; next < size; ++next)
         {
-            auto sum = 0;
+            int sum = 0;
 
             // sum of subset [prev, next]
             for (int loop_index = prev; loop_index <= next; ++loop_index)
@@ -28,12 +28,12 @@ auto IntervalSubset::SubsetSum1(const std::vector<int>& seq) -> int
 
 auto IntervalSubset::SubsetSum2(const std::vector<int>& seq) -> int
 {
-    const auto size = static_cast<int>(seq.size());
-    auto max = std::numeric_limits<int>::min();
+    const int size = static_cast<int>(seq.size());
+    int max = std::numeric_limits<int>::min();
 
     for (int prev = 0; prev < size; ++prev)
     {
-        auto sum = 0;
+        int sum = 0;
         for (int next = prev; next < size; ++next)
         {
             sum += seq[next];
@@ -52,16 +52,16 @@ auto IntervalSubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, cons
     }
 
     // left subset and right subset
-    const auto mid = static_cast<int>(std::floor((low + high) / 2));
-    const auto left_max = DivideAndConquerSubsetSum(seq, low, mid);
-    const auto right_max = DivideAndConquerSubsetSum(seq, mid + 1, high);
+    const int mid = static_cast<int>(std::floor((low + high) / 2));
+    const int left_max = DivideAndConquerSubsetSum(seq, low, mid);
+    const int right_max = DivideAndConquerSubsetSum(seq, mid + 1, high);
 
     // cross subset
     // based on mid, find max of left subset and right subset
-    auto left_cross_max = 0;
-    auto right_cross_max = 0;
-    auto left_sum = 0;
-    auto right_sum = 0;
+    int left_cross_max = 0;
+    int right_cross_max = 0;
+    int left_sum = 0;
+    int right_sum = 0;
     for (int index = mid; index >= low; --index)
     {
         left_sum += seq[index];
@@ -79,9 +79,9 @@ auto IntervalSubset::DivideAndConquerSubsetSum(const std::vector<int>& seq, cons
 
 auto IntervalSubset::DynamicProgrammingSubsetSum(const std::vector<int>& seq) -> int
 {
-    const auto size = static_cast<int>(seq.size());
-    auto max = std::numeric_limits<int>::min();
-    auto sum = 0;
+    const int size = static_cast<int>(seq.size());
+    int max = std::numeric_limits<int>::min();
+    int sum = 0;
 
     for (int index = 0; index < size; ++index)
     {

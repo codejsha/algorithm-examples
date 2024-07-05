@@ -4,7 +4,7 @@
 
 static void BM_FibonacciDynamicTopDown(benchmark::State& state)
 {
-    constexpr auto number = 8;
+    constexpr int number = 8;
     auto memo = std::vector<int>(number + 1, -1);
     for (auto _ : state)
     {
@@ -16,7 +16,7 @@ BENCHMARK(BM_FibonacciDynamicTopDown);
 
 static void BM_FibonacciDynamicBottomUp(benchmark::State& state)
 {
-    constexpr auto number = 8;
+    constexpr int number = 8;
     for (auto _ : state)
     {
         Fibonacci::FibonacciDynamicBottomUp(number);

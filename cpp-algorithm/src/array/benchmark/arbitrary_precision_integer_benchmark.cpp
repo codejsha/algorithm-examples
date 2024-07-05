@@ -15,8 +15,8 @@ BENCHMARK(BM_PlusOne);
 
 static void BM_StringAddition(benchmark::State& state)
 {
-    const auto number1 = std::string{"101"};
-    const auto number2 = std::string{"101"};
+    const std::string number1 = "101";
+    const std::string number2 = "101";
     for (auto _ : state)
     {
         ArbitraryPrecision::StringAddition(number1, number2);

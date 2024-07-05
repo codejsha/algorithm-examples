@@ -9,7 +9,7 @@ auto DeleteElement::DeleteDuplicates(std::vector<int>& numbers) -> std::vector<i
         return {};
     }
 
-    auto write_index = 1;
+    int write_index = 1;
     for (int i = 1; i < static_cast<int>(numbers.size()); ++i)
     {
         if (numbers[write_index - 1] != numbers[i])

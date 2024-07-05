@@ -10,7 +10,7 @@ auto RodCutting::CutRod(const std::map<int, int>& price, const int length) -> in
         return 0;
     }
 
-    auto max_revenue = std::numeric_limits<int>::min();
+    int max_revenue = std::numeric_limits<int>::min();
 
     for (int i = 1; i <= length; ++i)
     {
@@ -28,7 +28,7 @@ auto RodCutting::MemoizedCutRod(const std::map<int, int>& price, const int lengt
 
 auto RodCutting::MemoizedCutRodAux(const std::map<int, int>& price, const int length, std::vector<int>& memo) -> int
 {
-    auto max_revenue = std::numeric_limits<int>::min();
+    int max_revenue = std::numeric_limits<int>::min();
 
     if (memo[length] >= 0)
     {
@@ -59,7 +59,7 @@ auto RodCutting::BottomUpCutRod(const std::map<int, int>& price, const int lengt
 
     for (int i = 1; i <= length; ++i)
     {
-        auto max_revenue = std::numeric_limits<int>::min();
+        int max_revenue = std::numeric_limits<int>::min();
         for (int j = 1; j <= i; ++j)
         {
             max_revenue = std::max(max_revenue, price.at(j) + memo[i - j]);
@@ -81,7 +81,7 @@ auto RodCutting::ExtendedBottomUpCutRod(const std::map<int, int>& price, const i
 
     for (int i = 1; i <= length; ++i)
     {
-        auto max_revenue = std::numeric_limits<int>::min();
+        int max_revenue = std::numeric_limits<int>::min();
         for (int j = 1; j <= i; ++j)
         {
             if (max_revenue < price.at(j) + memo[i - j])

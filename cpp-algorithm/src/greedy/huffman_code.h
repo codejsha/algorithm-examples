@@ -45,7 +45,7 @@ namespace Huffman
      * \param code prefix code
      * \param result result of tree traversal
      */
-    void TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result);
+    void TraversalHuffmanCode(const HuffmanNode* root, const std::string& code, std::map<char, std::string>& result);
 }
 
 #endif

@@ -7,7 +7,7 @@ auto roman_set =
 
 auto RomanNumber::VerifyRomanString(const std::string& str) -> bool
 {
-    auto is_except = false;
+    bool is_except = false;
 
     for (int i = 0; i < static_cast<int>(str.size() - 1); ++i)
     {
@@ -26,10 +26,10 @@ auto RomanNumber::VerifyRomanString(const std::string& str) -> bool
 
 auto RomanNumber::RomanStringToInteger(const std::string& str) -> int
 {
-    auto sum = 0;
+    int sum = 0;
     for (int i = static_cast<int>(str.size() - 1); i >= 0; --i)
     {
-        const auto value = roman_set[str[i]];
+        const int value = roman_set[str[i]];
         if (i > 0 && roman_set[str[i - 1]] < value)
         {
             sum += value - roman_set[str[i - 1]];

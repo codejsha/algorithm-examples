@@ -7,12 +7,13 @@ auto AnonymousLetter::IsLetterConstructibleFromMagazine(const std::string& lette
 {
     // count the number of times each character appears in the letter
     std::unordered_map<char, int> char_frequency_for_letter;
-    for (const auto& ch : letter)
+    for (const char& ch : letter)
     {
         ++char_frequency_for_letter[ch];
     }
+
     // check if the characters in magazine can cover characters in letter
-    for (const auto& ch : magazine)
+    for (const char& ch : magazine)
     {
         const auto it = char_frequency_for_letter.find(ch);
         if (it != char_frequency_for_letter.end())
@@ -29,21 +30,26 @@ auto AnonymousLetter::IsLetterConstructibleFromMagazine(const std::string& lette
             }
         }
     }
+
     return char_frequency_for_letter.empty();
 }
 
-/// @brief Split a string into words.
-/// @param str a string
-/// @return a map of words and their frequencies
+/**
+ * \brief Split a string into words.
+ * \param str a string
+ * \return a map of words and their frequencies
+ */
 auto SplitIntoWords(const std::string& str) -> std::unordered_map<std::string, int>
 {
     std::unordered_map<std::string, int> word_frequency;
     std::istringstream iss(str);
     std::string word;
+
     while (iss >> word)
     {
         ++word_frequency[word];
     }
+
     return word_frequency;
 }
 
@@ -51,6 +57,7 @@ auto AnonymousLetter::IsWordConstructibleFromMagazine(const std::string& letter,
 {
     // count the number of times each word appears in the letter
     auto word_frequency_for_letter = SplitIntoWords(letter);
+
     // check if the words in magazine can cover words in letter
     for (const auto& [fst, snd] : SplitIntoWords(magazine))
     {
@@ -69,5 +76,6 @@ auto AnonymousLetter::IsWordConstructibleFromMagazine(const std::string& letter,
             }
         }
     }
+
     return word_frequency_for_letter.empty();
 }

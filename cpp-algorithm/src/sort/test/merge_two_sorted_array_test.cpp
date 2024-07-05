@@ -5,9 +5,9 @@
 GTEST_TEST(MergeTwoSortedArray, Successful1)
 {
     auto nums1 = std::vector<int>{5, 13, 17, 0, 0, 0, 0};
-    const auto m = 3;
-    auto nums2 = std::vector<int>{3, 7, 11, 19};
-    const auto n = 4;
+    constexpr int m = 3;
+    const auto nums2 = std::vector<int>{3, 7, 11, 19};
+    constexpr int n = 4;
     const auto merged = std::vector<int>{3, 5, 7, 11, 13, 17, 19};
 
     MergeTwoSortedArray::MergeTwoSortedArray(nums1, m, nums2, n);
@@ -25,9 +25,9 @@ GTEST_TEST(MergeTwoSortedArray, Successful1)
 GTEST_TEST(MergeTwoSortedArray, Successful2)
 {
     auto nums1 = std::vector<int>{1, 2, 3, 0, 0, 0};
-    const auto m = 3;
-    auto nums2 = std::vector<int>{2, 5, 6};
-    const auto n = 3;
+    constexpr int m = 3;
+    const auto nums2 = std::vector<int>{2, 5, 6};
+    constexpr int n = 3;
     const auto merged = std::vector<int>{1, 2, 2, 3, 5, 6};
 
     MergeTwoSortedArray::MergeTwoSortedArray(nums1, m, nums2, n);

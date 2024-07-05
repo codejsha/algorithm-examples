@@ -8,7 +8,7 @@ auto ReverseList::ReverseSubList(std::shared_ptr<LinkedList::Node<int>> list, in
     auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, std::move(list)});
     auto sublist_head = dummy_head;
 
-    auto k = 1;
+    int k = 1;
     while (k++ < start)
     {
         sublist_head = sublist_head->next;

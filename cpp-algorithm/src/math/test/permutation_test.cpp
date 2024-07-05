@@ -4,7 +4,7 @@
 
 GTEST_TEST(Permutation, Permutation)
 {
-    const auto str = "abc";
+    const std::string str = "abc";
 
     Permutation::Permutation(str, "");
     // result:
@@ -62,7 +62,7 @@ GTEST_TEST(Permutation, PreviousPermutation)
 GTEST_TEST(Permutation, KthPermutation)
 {
     auto permutation = std::vector<int>{1, 2, 3};
-    constexpr auto kth = 4;
+    constexpr int kth = 4;
     const auto expected = std::vector<int>{2, 3, 1};
     const auto result = Permutation::KthPermutation(permutation, kth);
     EXPECT_EQ(expected, result);

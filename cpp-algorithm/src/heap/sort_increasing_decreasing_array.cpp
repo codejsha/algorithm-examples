@@ -5,9 +5,10 @@
 
 auto IncreasingDecreasingArray::SortIncreasingDecreasingArray(const std::vector<int>& arr) -> std::vector<int>
 {
-    auto sorted_arr = std::vector<int>{};
-    auto increasing = true;
-    auto is_transition = false;
+    std::vector<int> sorted_arr;
+    bool increasing = true;
+    bool is_transition = false;
+
     auto begin = arr.begin();
     auto end = arr.begin();
 

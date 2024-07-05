@@ -2,8 +2,8 @@
 
 auto RunLengthEncoding::RunLengthEncoding(const std::string& str) -> std::string
 {
-    auto count = 0;
-    auto result = std::string{};
+    int count = 0;
+    std::string result;
 
     for (int i = 0; i < static_cast<int>(str.size()); ++i)
     {
@@ -21,10 +21,10 @@ auto RunLengthEncoding::RunLengthEncoding(const std::string& str) -> std::string
 
 auto RunLengthEncoding::RunLengthDecoding(const std::string& str) -> std::string
 {
-    auto count = 0;
-    auto result = std::string{};
+    int count = 0;
+    std::string result;
 
-    for (const auto& c : str)
+    for (const char& c : str)
     {
         if (std::isdigit(c))
         {

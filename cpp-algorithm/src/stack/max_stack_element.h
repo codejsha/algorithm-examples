@@ -29,7 +29,7 @@ namespace MaxStackElement
             {
                 throw std::length_error("Empty stack!");
             }
-            const auto pop_element = element_with_cached_max_.top().element;
+            const int pop_element = element_with_cached_max_.top().element;
             element_with_cached_max_.pop();
             return pop_element;
         }

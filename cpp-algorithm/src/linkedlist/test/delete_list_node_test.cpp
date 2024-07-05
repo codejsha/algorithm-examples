@@ -10,7 +10,7 @@ GTEST_TEST(DeleteListNode, DeleteNodeFromList)
     auto node1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node2});
 
     DeleteListNode::DeleteNodeFromList(node3);
-    const auto length = LinkedList::Length(node1);
+    const int length = LinkedList::Length(node1);
     EXPECT_EQ(3, length);
 }
 
@@ -22,11 +22,11 @@ GTEST_TEST(DeleteListNode, DeleteNodeKthLast)
     auto node1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node2});
 
     auto result = DeleteListNode::DeleteNodeKthLast(node1, 2);
-    const auto length = LinkedList::Length(result);
+    const int length = LinkedList::Length(result);
     EXPECT_EQ(3, length);
 
     const auto expected = std::vector<int>{3, 2, -4};
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;
@@ -44,11 +44,11 @@ GTEST_TEST(DeleteListNode, DeleteDuplicateNode)
     auto node1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{2, node2});
 
     auto result = DeleteListNode::DeleteDuplicateNode(node1);
-    const auto length = LinkedList::Length(result);
+    const int length = LinkedList::Length(result);
     EXPECT_EQ(5, length);
 
     const auto expected = std::vector<int>{2, 3, 5, 7, 11};
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;

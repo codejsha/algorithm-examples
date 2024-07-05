@@ -2,11 +2,13 @@
 
 #include <algorithm>
 
-/// @brief Find the lowest common ancestor and the number of target nodes in the subtree.
-/// @param tree the root of the tree
-/// @param node1 the first node
-/// @param node2 the second node
-/// @return the number of target nodes and the lowest common ancestor of the two nodes
+/**
+ * \brief Find the lowest common ancestor and the number of target nodes in the subtree.
+ * \param tree the root of the tree
+ * \param node1 the first node
+ * \param node2 the second node
+ * \return the number of target nodes and the lowest common ancestor of the two nodes
+ */
 auto LcaHelper(const BinaryTree::Node<int>* tree, const BinaryTree::Node<int>* node1,
                const BinaryTree::Node<int>* node2) -> LowestCommonAncestor::Status
 {
@@ -24,7 +26,7 @@ auto LcaHelper(const BinaryTree::Node<int>* tree, const BinaryTree::Node<int>* n
     {
         return right_result;
     }
-    const auto num_target_nodes =
+    const int num_target_nodes =
         left_result.num_target_nodes + right_result.num_target_nodes + (tree == node1) + (tree == node2);
     return {num_target_nodes, num_target_nodes == 2 ? tree : nullptr};
 }
@@ -43,8 +45,8 @@ auto LowestCommonAncestor::FindLowestCommonAncestor2(const BinaryTree::ExtendedN
 {
     auto iter1 = node1;
     auto iter2 = node2;
-    const auto depth1 = ExtendedNodeTreeDepth(iter1);
-    const auto depth2 = ExtendedNodeTreeDepth(iter2);
+    const int depth1 = ExtendedNodeTreeDepth(iter1);
+    const int depth2 = ExtendedNodeTreeDepth(iter2);
 
     if (depth2 > depth1)
     {

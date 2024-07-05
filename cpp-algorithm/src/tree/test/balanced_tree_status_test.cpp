@@ -19,7 +19,7 @@ GTEST_TEST(BalancedTree, IsBalanced_1)
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9};
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }
@@ -41,7 +41,7 @@ GTEST_TEST(BalancedTree, IsBalanced_2)
     const auto keys = std::vector<int>{15, 6, 18, 3, 7, 17, 20, 2, 4, 13};
 
     auto tree = BinarySearchTree::Tree<int>{};
-    for (const auto key : keys)
+    for (const int key : keys)
     {
         tree.Insert(key);
     }

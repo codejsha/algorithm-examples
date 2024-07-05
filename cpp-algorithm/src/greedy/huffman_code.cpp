@@ -17,7 +17,7 @@ auto Huffman::HuffmanCode(const std::map<int, char>& freq_map) -> HuffmanNode*
         const auto right = min_queue.top();
         min_queue.pop();
 
-        const auto key = left->key + right->key;
+        const int key = left->key + right->key;
         auto node = new HuffmanNode{key, '-', left->freq + right->freq};
         node->left = left;
         node->right = right;
@@ -28,7 +28,7 @@ auto Huffman::HuffmanCode(const std::map<int, char>& freq_map) -> HuffmanNode*
     return min_queue.top();
 }
 
-void Huffman::TraversalHuffmanCode(const HuffmanNode* root, std::string code, std::map<char, std::string>& result)
+void Huffman::TraversalHuffmanCode(const HuffmanNode* root, const std::string& code, std::map<char, std::string>& result)
 {
     if (root == nullptr)
     {

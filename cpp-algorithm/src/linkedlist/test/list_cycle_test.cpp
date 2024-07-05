@@ -72,7 +72,7 @@ GTEST_TEST(ListCycle, HasCycle3_1)
     const auto node1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{3, node2});
     node4->next = node2;
 
-    const auto result = ListCycle::HasCycle3(node1);
+    const int result = ListCycle::HasCycle3(node1);
     EXPECT_EQ(1, result);
 }
 
@@ -82,7 +82,7 @@ GTEST_TEST(ListCycle, HasCycle3_2)
     const auto node1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{1, node2});
     node2->next = node1;
 
-    const auto result = ListCycle::HasCycle3(node1);
+    const int result = ListCycle::HasCycle3(node1);
     EXPECT_EQ(0, result);
 }
 
@@ -90,7 +90,7 @@ GTEST_TEST(ListCycle, HasCycle3_3)
 {
     const auto node1 = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{1, nullptr});
 
-    const auto result = ListCycle::HasCycle3(node1);
+    const int result = ListCycle::HasCycle3(node1);
     EXPECT_EQ(-1, result);
 }
 

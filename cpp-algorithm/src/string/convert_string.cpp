@@ -2,8 +2,8 @@
 
 auto ConvertString::IntToString(int number) -> std::string
 {
-    auto str = std::string{};
-    auto is_negative = false;
+    std::string str;
+    bool is_negative = false;
     if (number < 0)
     {
         is_negative = true;
