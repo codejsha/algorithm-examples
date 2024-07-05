@@ -4,9 +4,9 @@
 
 GTEST_TEST(PrintString, SineWaveString)
 {
-    const auto str = "Hello_World!";
-    const auto result = PrintString::SineWaveString(str);
-    const auto expected = "e_lHloWrdlo!";
+    const std::string str = "Hello_World!";
+    const std::string result = PrintString::SineWaveString(str);
+    const std::string expected = "e_lHloWrdlo!";
     EXPECT_EQ(expected, result);
 
     PrintString::PrintSineWaveString("Hello_World!");

@@ -9,16 +9,16 @@ GTEST_TEST(RodCutting, Simple)
     const auto expected =
         std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
-    const auto result1 = RodCutting::CutRod(price, 1);
-    const auto result2 = RodCutting::CutRod(price, 2);
-    const auto result3 = RodCutting::CutRod(price, 3);
-    const auto result4 = RodCutting::CutRod(price, 4);
-    const auto result5 = RodCutting::CutRod(price, 5);
-    const auto result6 = RodCutting::CutRod(price, 6);
-    const auto result7 = RodCutting::CutRod(price, 7);
-    const auto result8 = RodCutting::CutRod(price, 8);
-    const auto result9 = RodCutting::CutRod(price, 9);
-    const auto result10 = RodCutting::CutRod(price, 10);
+    const int result1 = RodCutting::CutRod(price, 1);
+    const int result2 = RodCutting::CutRod(price, 2);
+    const int result3 = RodCutting::CutRod(price, 3);
+    const int result4 = RodCutting::CutRod(price, 4);
+    const int result5 = RodCutting::CutRod(price, 5);
+    const int result6 = RodCutting::CutRod(price, 6);
+    const int result7 = RodCutting::CutRod(price, 7);
+    const int result8 = RodCutting::CutRod(price, 8);
+    const int result9 = RodCutting::CutRod(price, 9);
+    const int result10 = RodCutting::CutRod(price, 10);
 
     ASSERT_EQ(expected.at(1), result1);
     ASSERT_EQ(expected.at(2), result2);
@@ -39,16 +39,16 @@ GTEST_TEST(RodCutting, DynamicProgrammingTopDown)
     const auto expected =
         std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
-    const auto result1 = RodCutting::MemoizedCutRod(price, 1);
-    const auto result2 = RodCutting::MemoizedCutRod(price, 2);
-    const auto result3 = RodCutting::MemoizedCutRod(price, 3);
-    const auto result4 = RodCutting::MemoizedCutRod(price, 4);
-    const auto result5 = RodCutting::MemoizedCutRod(price, 5);
-    const auto result6 = RodCutting::MemoizedCutRod(price, 6);
-    const auto result7 = RodCutting::MemoizedCutRod(price, 7);
-    const auto result8 = RodCutting::MemoizedCutRod(price, 8);
-    const auto result9 = RodCutting::MemoizedCutRod(price, 9);
-    const auto result10 = RodCutting::MemoizedCutRod(price, 10);
+    const int result1 = RodCutting::MemoizedCutRod(price, 1);
+    const int result2 = RodCutting::MemoizedCutRod(price, 2);
+    const int result3 = RodCutting::MemoizedCutRod(price, 3);
+    const int result4 = RodCutting::MemoizedCutRod(price, 4);
+    const int result5 = RodCutting::MemoizedCutRod(price, 5);
+    const int result6 = RodCutting::MemoizedCutRod(price, 6);
+    const int result7 = RodCutting::MemoizedCutRod(price, 7);
+    const int result8 = RodCutting::MemoizedCutRod(price, 8);
+    const int result9 = RodCutting::MemoizedCutRod(price, 9);
+    const int result10 = RodCutting::MemoizedCutRod(price, 10);
 
     ASSERT_EQ(expected.at(1), result1);
     ASSERT_EQ(expected.at(2), result2);
@@ -69,16 +69,16 @@ GTEST_TEST(RodCutting, DynamicProgrammingBottomUp)
     const auto expected =
         std::map<int, int>{{1, 1}, {2, 5}, {3, 8}, {4, 10}, {5, 13}, {6, 17}, {7, 18}, {8, 22}, {9, 25}, {10, 30}};
 
-    const auto result1 = RodCutting::BottomUpCutRod(price, 1);
-    const auto result2 = RodCutting::BottomUpCutRod(price, 2);
-    const auto result3 = RodCutting::BottomUpCutRod(price, 3);
-    const auto result4 = RodCutting::BottomUpCutRod(price, 4);
-    const auto result5 = RodCutting::BottomUpCutRod(price, 5);
-    const auto result6 = RodCutting::BottomUpCutRod(price, 6);
-    const auto result7 = RodCutting::BottomUpCutRod(price, 7);
-    const auto result8 = RodCutting::BottomUpCutRod(price, 8);
-    const auto result9 = RodCutting::BottomUpCutRod(price, 9);
-    const auto result10 = RodCutting::BottomUpCutRod(price, 10);
+    const int result1 = RodCutting::BottomUpCutRod(price, 1);
+    const int result2 = RodCutting::BottomUpCutRod(price, 2);
+    const int result3 = RodCutting::BottomUpCutRod(price, 3);
+    const int result4 = RodCutting::BottomUpCutRod(price, 4);
+    const int result5 = RodCutting::BottomUpCutRod(price, 5);
+    const int result6 = RodCutting::BottomUpCutRod(price, 6);
+    const int result7 = RodCutting::BottomUpCutRod(price, 7);
+    const int result8 = RodCutting::BottomUpCutRod(price, 8);
+    const int result9 = RodCutting::BottomUpCutRod(price, 9);
+    const int result10 = RodCutting::BottomUpCutRod(price, 10);
 
     ASSERT_EQ(expected.at(1), result1);
     ASSERT_EQ(expected.at(2), result2);

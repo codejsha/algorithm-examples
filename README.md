@@ -227,6 +227,8 @@ MutableValueGraph<City, Distance> roads = ValueGraphBuilder.directed()
 
 **Graph algorithms**
 
+> NOTE: In the following, the C++ implementations are currently only available on MSVC.
+
 - A\* search algorithm, CCSP#2.2.5: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
 - Bellman-Ford algorithm, CLRS#24.1: [c++](cpp-algorithm/src/cpp-algorithm/src/graph/bellman_ford.h), [java#1](java-algorithm/src/main/java/com/example/algorithm/graph/BellmanFord1.java), [java#2](java-algorithm/src/main/java/com/example/algorithm/graph/BellmanFord2.java) | A single source the shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
@@ -386,6 +388,8 @@ algorithm Prim(G, root):
 - Viterbi algorithm: Shortest stochastic path algorithm. It solves with additional probabilistic weights on each node.
 
 **Examples**
+
+> NOTE: In the following, the C++ implementations are currently only available on MSVC.
 
 - Maze problem: [java](java-algorithm/src/main/java/com/example/algorithm/graph/MazeProblem.java) | A maze problem is that find a path from the start to the goal. The maze is represented by a graph. The start and the goal are represented by vertices. The path is represented by a sequence of vertices.
 - Minimum spanning tree (Kruskal, Prim, Boruvka), CLRS#23, CCSP#4.4.2: [python(test)](python-algorithm/algorithm/graph/test/test_minimum_spanning_tree.py) | Find the minimum spanning tree of a graph. cf. Kruskal(CLRS#23.2, CLRS#21.1), Prim(CLRS#23.2)

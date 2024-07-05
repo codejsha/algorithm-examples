@@ -57,7 +57,7 @@ void GenerateCombinationHelper(const std::string& str, const int k, std::vector<
 
     for (int i = start; i <= static_cast<int>(str.length()) - k; ++i)
     {
-        auto new_current = current + str[i];
+        std::string new_current = current + str[i];
         GenerateCombinationHelper(str, k - 1, result, new_current, i + 1);
     }
 }

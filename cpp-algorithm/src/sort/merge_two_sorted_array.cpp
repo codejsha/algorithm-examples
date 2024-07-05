@@ -1,11 +1,10 @@
 #include "merge_two_sorted_array.h"
 
-void MergeTwoSortedArray::MergeTwoSortedArray(std::vector<int>& seq1, const int m, const std::vector<int>& seq2,
-                                              const int n)
+void MergeTwoSortedArray::MergeTwoSortedArray(std::vector<int>& seq1, const int m, const std::vector<int>& seq2, const int n)
 {
-    auto i = m - 1;
-    auto j = n - 1;
-    auto k = m + n - 1;
+    int i = m - 1;
+    int j = n - 1;
+    int k = m + n - 1;
 
     while (i >= 0 && j >= 0)
     {

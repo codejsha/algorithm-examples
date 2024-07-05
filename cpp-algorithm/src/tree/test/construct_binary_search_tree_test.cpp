@@ -23,13 +23,13 @@ GTEST_TEST(ConstructTreeFromPreorderInorder, PreorderTraversal)
     auto root = ConstructBinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
 
     auto tree = BinarySearchTree::Tree<int>{};
-    auto result = std::vector<int>{};
+    std::vector<int> result;
     tree.PreorderTraversal(root, result);
 
     ASSERT_EQ(static_cast<int>(preorder.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto is_equal = std::ranges::equal(preorder, result);
+    const bool is_equal = std::ranges::equal(preorder, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
@@ -52,13 +52,13 @@ GTEST_TEST(ConstructTreeFromPreorderInorder, InorderTraversal)
     auto root = ConstructBinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
 
     auto tree = BinarySearchTree::Tree<int>{};
-    auto result = std::vector<int>{};
+    std::vector<int> result;
     tree.InorderTraversal(root, result);
 
     ASSERT_EQ(static_cast<int>(inorder.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto is_equal = std::ranges::equal(inorder, result);
+    const bool is_equal = std::ranges::equal(inorder, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
@@ -82,13 +82,13 @@ GTEST_TEST(ConstructTreeFromPreorderInorder, PostorderTraversal)
     auto root = ConstructBinarySearchTree::ConstructTreeFromPreorderInorder(preorder, inorder);
 
     auto tree = BinarySearchTree::Tree<int>{};
-    auto result = std::vector<int>{};
+    std::vector<int> result;
     tree.PostorderTraversal(root, result);
 
     ASSERT_EQ(static_cast<int>(expected.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto is_equal = std::ranges::equal(expected, result);
+    const bool is_equal = std::ranges::equal(expected, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }
 
@@ -111,13 +111,13 @@ GTEST_TEST(ConstructTreeFromMarkerPreorder, PreorderTraversal)
 
     auto root = ConstructBinarySearchTree::ConstructTreeFromMarkerPreorder(preorder);
     auto tree = BinarySearchTree::Tree<char>{};
-    auto result = std::vector<char>{};
+    std::vector<char> result;
     tree.PreorderTraversal(root, result);
     preorder.erase(std::ranges::remove(preorder, '\0').begin(), preorder.end());
 
     ASSERT_EQ(static_cast<int>(preorder.size()), static_cast<int>(result.size()))
         << "Vectors input and result are of unequal length";
 
-    const auto is_equal = std::ranges::equal(preorder, result);
+    const bool is_equal = std::ranges::equal(preorder, result);
     EXPECT_EQ(true, is_equal) << "Vectors input and result differ" << std::endl;
 }

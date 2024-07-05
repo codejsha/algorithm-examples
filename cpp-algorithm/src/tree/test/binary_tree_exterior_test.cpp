@@ -41,7 +41,7 @@ GTEST_TEST(BinaryTreeExterior, CreateExteriorNodeList)
     const auto expected = std::vector{'A', 'B', 'D', 'H', 'I', 'K', 'F', 'G', 'C'};
     const auto result = BinaryTreeExterior::CreateExteriorNodeList(&node1);
 
-    auto result_values = std::vector<char>{};
+    std::vector<char> result_values;
     for (const auto& node : result)
     {
         result_values.push_back(node->key);

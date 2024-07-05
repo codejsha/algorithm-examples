@@ -4,7 +4,7 @@
 
 auto PrintString::SineWaveString(const std::string& str) -> std::string
 {
-    auto result = std::string{};
+    std::string result;
     for (int i = 1; i < static_cast<int>(str.size()); i += 4)
     {
         result += str[i];

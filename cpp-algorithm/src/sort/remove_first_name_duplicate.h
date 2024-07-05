@@ -18,5 +18,4 @@ namespace RemoveFirstNameDuplicate
      */
     void EliminateFirstNameDuplicate(std::vector<std::string>& seq);
 }
-
 #endif

@@ -4,8 +4,8 @@
 
 GTEST_TEST(GenerateCombination, ValidIntInput1)
 {
-    const auto seq = std::vector<int>{2, 4, 6, 8};
-    constexpr auto k = 2;
+    const std::vector<int> seq = {2, 4, 6, 8};
+    constexpr int k = 2;
     const auto expected = std::vector<std::vector<int>>{
         {2, 4},
         {2, 6},
@@ -19,8 +19,8 @@ GTEST_TEST(GenerateCombination, ValidIntInput1)
 
 GTEST_TEST(GenerateCombination, ValidIntInput2)
 {
-    const auto seq = std::vector<int>{0, 1, 2, 3, 4, 5};
-    constexpr auto k = 2;
+    const std::vector<int> seq = {0, 1, 2, 3, 4, 5};
+    constexpr int k = 2;
     const auto expected = std::vector<std::vector<int>>{
         {0, 1},
         {0, 2},
@@ -43,8 +43,8 @@ GTEST_TEST(GenerateCombination, ValidIntInput2)
 
 GTEST_TEST(GenerateCombination, ValidStringArrayInput1)
 {
-    const auto seq = std::vector<std::string>{"a", "b", "c"};
-    constexpr auto k = 2;
+    const std::vector<std::string> seq = {"a", "b", "c"};
+    constexpr int k = 2;
     const auto expected = std::vector<std::vector<std::string>>{
         {"a", "b"},
         {"a", "c"},
@@ -55,8 +55,8 @@ GTEST_TEST(GenerateCombination, ValidStringArrayInput1)
 
 GTEST_TEST(GenerateCombination, ValidStringInput1)
 {
-    const auto seq = "abc";
-    constexpr auto k = 2;
+    const std::string seq = "abc";
+    constexpr int k = 2;
     const auto expected = std::vector<std::string>{
         "ab",
         "ac",
@@ -67,26 +67,26 @@ GTEST_TEST(GenerateCombination, ValidStringInput1)
 
 GTEST_TEST(GenerateCombination, KGreaterThanStringLength)
 {
-    const auto seq = "abcd";
-    constexpr auto k = 5;
-    const auto expected = std::vector<std::string>{};
+    const std::string seq = "abcd";
+    constexpr int k = 5;
+    constexpr auto expected = std::vector<std::string>{};
     const auto result = Combination::GenerateCombination(seq, k);
     EXPECT_EQ(expected, result);
 }
 
 GTEST_TEST(GenerateCombination, EmptyString)
 {
-    const auto seq = "";
-    constexpr auto k = 3;
-    const auto expected = std::vector<std::string>{};
+    const std::string seq;
+    constexpr int k = 3;
+    constexpr auto expected = std::vector<std::string>{};
     const auto result = Combination::GenerateCombination(seq, k);
     EXPECT_EQ(expected, result);
 }
 
 GTEST_TEST(GenerateCombination, KZero)
 {
-    const auto seq = "abc";
-    constexpr auto k = 0;
+    const std::string seq = "abc";
+    constexpr int k = 0;
     const auto expected = std::vector<std::string>{""};
     const auto result = Combination::GenerateCombination(seq, k);
     EXPECT_EQ(expected, result);
@@ -94,8 +94,8 @@ GTEST_TEST(GenerateCombination, KZero)
 
 GTEST_TEST(GenerateCombination, SingleCharacterString)
 {
-    const auto seq = "a";
-    constexpr auto k = 1;
+    const std::string seq = "a";
+    constexpr int k = 1;
     const auto expected = std::vector<std::string>{"a"};
     const auto result = Combination::GenerateCombination(seq, k);
     EXPECT_EQ(expected, result);

@@ -2,7 +2,7 @@
 
 #include <deque>
 
-auto EnumeratePrime::GeneratePrimes(int n) -> std::vector<int>
+auto EnumeratePrime::GeneratePrimes(const int n) -> std::vector<int>
 {
     std::vector<int> primes;
     std::deque<bool> is_prime(n + 1, true);

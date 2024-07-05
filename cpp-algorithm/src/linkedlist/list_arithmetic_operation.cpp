@@ -6,7 +6,7 @@ auto ListArithmetic::AddTwoNumbers(std::shared_ptr<LinkedList::Node<int>>& list1
 {
     auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
     auto iter = dummy_head;
-    auto carry = 0;
+    int carry = 0;
 
     while (list1 || list2 || carry)
     {

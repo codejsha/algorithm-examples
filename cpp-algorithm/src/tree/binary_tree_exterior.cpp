@@ -1,8 +1,10 @@
 #include "binary_tree_exterior.h"
 
-/// @brief Create a list of left exterior nodes.
-/// @param root the root node of the subtree
-/// @param exterior_nodes left exterior nodes
+/**
+ * \brief Create a list of left exterior nodes.
+ * \param root the root node of the subtree
+ * \param exterior_nodes left exterior nodes
+ */
 void CreateLeftBoundary(BinaryTree::Node<char>* root, std::vector<BinaryTree::Node<char>*>& exterior_nodes)
 {
     if (root == nullptr || (root->left == nullptr && root->right == nullptr))
@@ -21,9 +23,11 @@ void CreateLeftBoundary(BinaryTree::Node<char>* root, std::vector<BinaryTree::No
     }
 }
 
-/// @brief Create a list of right exterior nodes.
-/// @param root the root node of the subtree
-/// @param exterior_nodes right exterior nodes
+/**
+ * \brief Create a list of right exterior nodes.
+ * \param root the root node of the subtree
+ * \param exterior_nodes right exterior nodes
+ */
 void CreateRightBoundary(BinaryTree::Node<char>* root, std::vector<BinaryTree::Node<char>*>& exterior_nodes)
 {
     if (root == nullptr || (root->left == nullptr && root->right == nullptr))
@@ -42,9 +46,11 @@ void CreateRightBoundary(BinaryTree::Node<char>* root, std::vector<BinaryTree::N
     }
 }
 
-/// @brief Create a list of leaf exterior nodes.
-/// @param root the root node of the subtree
-/// @param exterior_nodes leaf exterior nodes
+/**
+ * \brief Create a list of leaf exterior nodes.
+ * \param root the root node of the subtree
+ * \param exterior_nodes leaf exterior nodes
+ */
 void CreateLeafBoundary(BinaryTree::Node<char>* root, std::vector<BinaryTree::Node<char>*>& exterior_nodes)
 {
     if (root == nullptr)

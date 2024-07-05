@@ -2,8 +2,8 @@
 
 void OrderElement::EvenOdd(std::vector<int>& arr)
 {
-    auto next_even = 0;
-    auto next_odd = static_cast<int>(arr.size()) - 1;
+    int next_even = 0;
+    int next_odd = static_cast<int>(arr.size()) - 1;
 
     while (next_even < next_odd)
     {

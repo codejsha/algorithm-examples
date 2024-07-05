@@ -14,7 +14,7 @@ GTEST_TEST(ListArithmetic, AddTwoNumbers)
 
     auto expected = std::vector<int>{0, 2, 3, 1};
     auto result = ListArithmetic::AddTwoNumbers(node_a1, node_b1);
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;

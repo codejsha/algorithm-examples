@@ -188,26 +188,26 @@ GTEST_TEST(BTree, Search)
     tree.Insert(tree.root, 'F');
 
     // search B
-    constexpr auto ch1 = 'B';
+    constexpr char ch1 = 'B';
     auto [node1, key1] = tree.Search(tree.root, ch1);
-    const auto result_key1 = node1->keys[key1];
+    const char result_key1 = node1->keys[key1];
     ASSERT_EQ(ch1, result_key1);
 
     // search Q
-    constexpr auto ch2 = 'Q';
+    constexpr char ch2 = 'Q';
     auto [node2, key2] = tree.Search(tree.root, ch2);
-    const auto result_key2 = node2->keys[key2];
+    const char result_key2 = node2->keys[key2];
     ASSERT_EQ(ch2, result_key2);
 
     // search L
-    constexpr auto ch3 = 'L';
+    constexpr char ch3 = 'L';
     auto [node3, key3] = tree.Search(tree.root, ch3);
-    const auto result_key3 = node3->keys[key3];
+    const char result_key3 = node3->keys[key3];
     ASSERT_EQ(ch3, result_key3);
 
     // search F
-    constexpr auto ch4 = 'F';
+    constexpr char ch4 = 'F';
     auto [node4, key4] = tree.Search(tree.root, ch4);
-    const auto result_key4 = node4->keys[key4];
+    const char result_key4 = node4->keys[key4];
     ASSERT_EQ(ch4, result_key4);
 }

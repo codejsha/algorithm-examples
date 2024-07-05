@@ -15,7 +15,7 @@ GTEST_TEST(OrderListNode, ListPivoting)
     auto expected = std::vector<int>{3, 2, 2, 5, 7, 11, 11};
     auto result = OrderListNode::ListPivoting(node1, 7);
     EXPECT_EQ(expected.size(), LinkedList::Length(result));
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;

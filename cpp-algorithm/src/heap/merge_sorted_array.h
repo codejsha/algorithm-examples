@@ -17,8 +17,8 @@ namespace MergeSortedArray
     template <typename... T>
     auto MergeSortedArray(T... vectors) -> std::priority_queue<int, std::vector<int>, std::less<int>>
     {
-        auto queue = std::priority_queue<int>{};
-        const auto length = static_cast<int>(sizeof...(vectors));
+        std::priority_queue<int> queue;
+        const int length = static_cast<int>(sizeof...(vectors));
         auto vector_arr = std::vector<std::vector<int>>{vectors...};
 
         while (true)

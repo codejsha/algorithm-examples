@@ -8,7 +8,7 @@ auto OnlineDataMedian::FindMedian(std::deque<int>& stream) -> std::vector<double
     auto min_heap = std::priority_queue<int, std::vector<int>, std::greater<>>{};
     // max heap to store the smaller half elements
     auto max_heap = std::priority_queue<int>{};
-    auto result = std::vector<double>{};
+    std::vector<double> result;
 
     while (!stream.empty())
     {

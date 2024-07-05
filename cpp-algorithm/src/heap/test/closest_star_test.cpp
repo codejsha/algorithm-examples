@@ -4,7 +4,7 @@
 
 GTEST_TEST(ClosestStar, FindClosestStar)
 {
-    auto stars = std::vector<ClosestStar::Star>{};
+    std::vector<ClosestStar::Star> stars;
     stars.push_back({1, 2, 3});
     stars.push_back({4, 5, 6});
     stars.push_back({7, 8, 9});

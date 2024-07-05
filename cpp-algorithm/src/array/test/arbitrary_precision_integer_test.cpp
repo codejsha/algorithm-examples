@@ -13,8 +13,8 @@ GTEST_TEST(ArbitraryPrecision, PlusOne)
 
 GTEST_TEST(ArbitraryPrecision, StringAddition)
 {
-    const auto number1 = std::string{"101"};
-    const auto number2 = std::string{"101"};
+    const std::string number1 = "101";
+    const std::string number2 = "101";
     const auto expected = std::vector<int>{1, 0, 1, 0};
     auto result = ArbitraryPrecision::StringAddition(number1, number2);
     std::ranges::reverse(result.begin(), result.end());

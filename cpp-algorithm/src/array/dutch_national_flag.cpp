@@ -34,7 +34,7 @@ auto DutchFlag::DutchFlagPartition2(const int pivot_index, std::vector<Color>& a
 {
     const auto pivot = arr[pivot_index];
 
-    auto smaller = 0;
+    int smaller = 0;
     for (int i = 0; i < static_cast<Color>(arr.size()); ++i)
     {
         if (arr[i] < pivot)
@@ -43,7 +43,7 @@ auto DutchFlag::DutchFlagPartition2(const int pivot_index, std::vector<Color>& a
         }
     }
 
-    auto larger = static_cast<Color>(arr.size()) - 1;
+    int larger = static_cast<Color>(arr.size()) - 1;
     for (int i = static_cast<Color>(arr.size()) - 1; i >= 0; --i)
     {
         if (arr[i] > pivot)
@@ -59,8 +59,8 @@ auto DutchFlag::DutchFlagPartition3(const int pivot_index, std::vector<Color>& a
 {
     const auto pivot = arr[pivot_index];
 
-    auto smaller = 0;
-    auto equal = 0;
+    int smaller = 0;
+    int equal = 0;
     int larger = static_cast<Color>(arr.size());
 
     while (equal < larger)

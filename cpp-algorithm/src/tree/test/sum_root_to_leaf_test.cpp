@@ -15,8 +15,8 @@ GTEST_TEST(SumRootToLeaf, SumRootToLeafDecimal)
     node1.left = &node2;
     node1.right = &node3;
 
-    constexpr auto expected = 25;
-    const auto result = TreeSumRootToLeaf::SumRootToLeafDecimal(&node1);
+    constexpr int expected = 25;
+    const int result = TreeSumRootToLeaf::SumRootToLeafDecimal(&node1);
 
     EXPECT_EQ(expected, result);
 }
@@ -44,8 +44,8 @@ GTEST_TEST(SumRootToLeaf, SumRootToLeafBinary)
     node_c.left = &node_f;
     node_c.right = &node_g;
 
-    constexpr auto expected = 0b10110;
-    const auto result = TreeSumRootToLeaf::SumRootToLeafBinary(&node_a);
+    constexpr int expected = 0b10110;
+    const int result = TreeSumRootToLeaf::SumRootToLeafBinary(&node_a);
 
     EXPECT_EQ(expected, result);
 }

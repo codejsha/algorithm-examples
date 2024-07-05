@@ -27,7 +27,7 @@ BENCHMARK(BM_DeleteDuplicateElements);
 static void BM_DeleteSpecificElements(benchmark::State& state)
 {
     auto numbers = std::vector<int>{2, 3, 5, 5, 7, 11, 11, 11, 13};
-    constexpr auto element = 11;
+    constexpr int element = 11;
     for (auto _ : state)
     {
         DeleteElement::DeleteSpecificElements(numbers, element);

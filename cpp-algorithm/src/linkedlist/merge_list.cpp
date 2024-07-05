@@ -32,7 +32,7 @@ auto MergeList::MergeEvenOddLinkedList(const std::shared_ptr<LinkedList::Node<in
     auto even_dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
     auto odd_dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
     auto tails = std::vector{even_dummy_head, odd_dummy_head};
-    auto turn = 0;
+    int turn = 0;
 
     for (auto iter = list; iter; iter = iter->next)
     {

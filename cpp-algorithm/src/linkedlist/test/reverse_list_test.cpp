@@ -12,7 +12,7 @@ GTEST_TEST(ReverseList, ReverseSubList)
 
     const auto expected = std::vector<int>{11, 3, 5, 7, 2};
     auto result = ReverseList::ReverseSubList(node1, 2, 4);
-    for (const auto& i : expected)
+    for (const int& i : expected)
     {
         ASSERT_EQ(i, result->data);
         result = result->next;

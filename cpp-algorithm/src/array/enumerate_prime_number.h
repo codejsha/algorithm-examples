@@ -6,9 +6,9 @@
 namespace EnumeratePrime
 {
     /**
-     * brief Enumerate prime numbers in the range.
-     * param n upper bound
-     * return prime numbers
+     * \brief Enumerate prime numbers in the range.
+     * \param n upper bound
+     * \return prime numbers
      */
     auto GeneratePrimes(int n) -> std::vector<int>;
 }

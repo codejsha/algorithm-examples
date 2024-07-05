@@ -12,7 +12,7 @@ auto IsValidPart(const std::string& str) -> bool
         return false;
     }
 
-    const auto value = std::stoi(str);
+    const int value = std::stoi(str);
     return value >= 0 && value <= 255;
 }
 
@@ -21,17 +21,17 @@ auto IsValidPart(const std::string& str) -> bool
 
 auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::string>
 {
-    auto result = std::vector<std::string>{};
+    std::vector<std::string> result;
     for (int i = 1; i < 4 && i < static_cast<int>(str.size()); ++i)
     {
         for (int j = 1; j < 4 && i + j < static_cast<int>(str.size()); ++j)
         {
             for (int k = 1; k < 4 && i + j + k < static_cast<int>(str.size()); ++k)
             {
-                const auto first = str.substr(0, i);
-                const auto second = str.substr(i, j);
-                const auto third = str.substr(i + j, k);
-                const auto fourth = str.substr(i + j + k);
+                const std::string first = str.substr(0, i);
+                const std::string second = str.substr(i, j);
+                const std::string third = str.substr(i + j, k);
+                const std::string fourth = str.substr(i + j + k);
                 if (IsValidPart(first) && IsValidPart(second) && IsValidPart(third) && IsValidPart(fourth))
                 {
                     result.push_back(std::format("{}.{}.{}.{}", first, second, third, fourth));
@@ -47,17 +47,17 @@ auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::st
 
 auto IpAddress::GetValidIpAddress(const std::string& str) -> std::vector<std::string>
 {
-    auto result = std::vector<std::string>{};
+    std::vector<std::string> result;
     for (int i = 1; i < 4 && i < static_cast<int>(str.size()); ++i)
     {
         for (int j = 1; j < 4 && i + j < static_cast<int>(str.size()); ++j)
         {
             for (int k = 1; k < 4 && i + j + k < static_cast<int>(str.size()); ++k)
             {
-                const auto first = str.substr(0, i);
-                const auto second = str.substr(i, j);
-                const auto third = str.substr(i + j, k);
-                const auto fourth = str.substr(i + j + k);
+                const std::string first = str.substr(0, i);
+                const std::string second = str.substr(i, j);
+                const std::string third = str.substr(i + j, k);
+                const std::string fourth = str.substr(i + j + k);
                 if (IsValidPart(first) && IsValidPart(second) && IsValidPart(third) && IsValidPart(fourth))
                 {
                     result.push_back(fmt::format("{}.{}.{}.{}", first, second, third, fourth));
