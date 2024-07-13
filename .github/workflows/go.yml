@@ -2,16 +2,16 @@
 name: Go Test
 
 on:
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - 'go-algorithm/**'
-  # schedule:
-  #   - cron: '0 0 * * *'
+  # at 08:00 on day-of-month 1
+  schedule:
+    # prettier-ignore
+    - cron: '0 8 1 * *'
   workflow_dispatch:
 
 jobs:
+  check-links:
+    uses: ./.github/workflows/link-check.yml
+
   build:
     runs-on: ubuntu-latest
 
