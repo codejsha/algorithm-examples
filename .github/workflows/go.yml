@@ -23,6 +23,8 @@ jobs:
         with:
           # prettier-ignore
           go-version: '1.22'
+          cache: true
+          cache-dependency-path: '**/go.sum'
 
       - name: Download dependencies
         working-directory: ${{github.workspace}}/go-algorithm
