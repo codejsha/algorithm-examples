@@ -1091,7 +1091,7 @@ Collections.binarySearch(arrayList, 3);   // for list
 - DNA search (Search a codon(combinations of three nucleotides) in a gene), CCSP#2.1: [python](/python-algorithm/algorithm/search/dna_search.py)(`linear_contains`, `binary_contains`) | Search a codon(combinations of three nucleotides) in a gene using linear search and binary search.
 - Find k-th smallest/largest element in an array, EPI#11.8: [c++](/cpp-algorithm/src/search/quick_select.h)(`FindKthSmallestElement`, `FindKthLargestElement`) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
 - Find the minimum and maximum elements in an array, EPI#11.7: [c++](/cpp-algorithm/src/search/find_min_max.h)(`FindMinMax`)
-- Search an element in generic list, CCSP#2.1: [python](/python-algorithm/algorithm/search/generic_search.py)(`generic_linear_contains`, `generic_linear_contains`) | Search an element in generic list using linear search and binary search.
+- Search an element in generic list, CCSP#2.1: [python](/python-algorithm/algorithm/search/generic_search.py)(`generic_linear_contains`, `generic_binary_contains`) | Search an element in generic list using linear search or binary search.
 - Search a sorted array
   - entry equal to its index, EPI#11.2: [c++](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchEntryEqualToItsIndex`)
   - the first greater than a key: [c++](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchFirstGreaterThanKey`)
