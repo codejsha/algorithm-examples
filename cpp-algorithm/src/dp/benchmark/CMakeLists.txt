@@ -19,6 +19,4 @@ endmacro()
 
 add_target_benchmark(fibonacci_number_benchmark.cpp)
 add_target_benchmark(interval_subset_sum_problem_benchmark.cpp)
-# add_target_benchmark(longest_common_subsequence_benchmark.cpp GSL::gsl)
-# add_target_benchmark(matrix_chain_benchmark.cpp)
 add_target_benchmark(rod_cutting_benchmark.cpp)
