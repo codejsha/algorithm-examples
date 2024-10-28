@@ -6,23 +6,25 @@
 namespace RandomDataSampling
 {
     /**
-     * \brief Randomly select k elements from the array.
+     * \brief Select the k elements randomly from the array with uniform probability.
+     * Let A be an array with n distinct elements. Design an algorithm to return a random subset of k elements from A, where every subset has an equal chance of being chosen.
      * \param k sample size
      * \param arr input array
      * \return result array
      */
     auto OfflineRandomSampling(int k, std::vector<int>& arr) -> std::vector<int>;
 
-    // TODO: Implement OnlineRandomSampling
     /**
-     * \brief Randomly select k elements from the array.
+     * \brief Select the k elements randomly from the array with uniform probability.
+     * Design an algorithm that reads data and creates a random subset of size k, where each item has an equal chance of being included.
      * \param begin begin iterator
      * \param end end iterator
      * \param k sample size
      * \return result array
      */
-    auto OnlineRandomSampling(const std::vector<int>::const_iterator& begin,
-                              const std::vector<int>::const_iterator& end, int k)
+    auto OnlineRandomSampling(std::vector<int>::const_iterator begin,
+                              std::vector<int>::const_iterator end,
+                              int k)
         -> std::vector<int>;
 
     /**
