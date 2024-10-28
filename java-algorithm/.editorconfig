@@ -346,7 +346,7 @@ ij_java_wrap_long_lines = false
 ij_java_wrap_semicolon_after_call_chain = false
 
 [*.less]
-indent_size = 2
+ij_less_indent_size = 2
 ij_less_align_closing_brace_with_properties = false
 ij_less_blank_lines_around_nested_selector = 1
 ij_less_blank_lines_between_blocks = 1
@@ -369,9 +369,9 @@ ij_less_use_double_quotes = true
 ij_less_value_alignment = 0
 
 [*.proto]
-indent_size = 2
-tab_width = 2
-ij_continuation_indent_size = 4
+ij_protobuf_indent_size = 2
+ij_protobuf_continuation_indent_size = 4
+ij_protobuf_tab_width = 2
 ij_protobuf_keep_blank_lines_in_code = 1
 ij_protobuf_keep_indents_on_empty_lines = false
 ij_protobuf_keep_line_breaks = true
@@ -382,7 +382,7 @@ ij_protobuf_spaces_within_braces = false
 ij_protobuf_spaces_within_brackets = false
 
 [*.sass]
-indent_size = 2
+ij_sass_indent_size = 2
 ij_sass_align_closing_brace_with_properties = false
 ij_sass_blank_lines_around_nested_selector = 1
 ij_sass_blank_lines_between_blocks = 1
@@ -404,9 +404,9 @@ ij_sass_use_double_quotes = true
 ij_sass_value_alignment = 0
 
 [*.scala]
-indent_size = 2
-tab_width = 2
-ij_continuation_indent_size = 2
+ij_scala_indent_size = 2
+ij_scala_continuation_indent_size = 2
+ij_scala_tab_width = 2
 ij_scala_align_composite_pattern = true
 ij_scala_align_extends_with = 0
 ij_scala_align_group_field_declarations = false
@@ -605,7 +605,7 @@ ij_scala_wrap_first_method_in_call_chain = false
 ij_scala_wrap_long_lines = false
 
 [*.scss]
-indent_size = 2
+ij_scss_indent_size = 2
 ij_scss_align_closing_brace_with_properties = false
 ij_scss_blank_lines_around_nested_selector = 1
 ij_scss_blank_lines_between_blocks = 1
@@ -628,9 +628,9 @@ ij_scss_use_double_quotes = true
 ij_scss_value_alignment = 0
 
 [*.vue]
-indent_size = 2
-tab_width = 2
-ij_continuation_indent_size = 4
+ij_vue_indent_size = 2
+ij_vue_continuation_indent_size = 4
+ij_vue_tab_width = 2
 ij_vue_indent_children_of_top_level = template
 ij_vue_interpolation_new_line_after_start_delimiter = true
 ij_vue_interpolation_new_line_before_end_delimiter = true
@@ -666,7 +666,8 @@ ij_xml_space_inside_empty_tag = false
 ij_xml_text_wrap = normal
 
 [{*.ats,*.cts,*.mts,*.ts}]
-ij_continuation_indent_size = 4
+ij_typescript_indent_size = 2
+ij_typescript_continuation_indent_size = 4
 ij_typescript_align_imports = false
 ij_typescript_align_multiline_array_initializer_expression = false
 ij_typescript_align_multiline_binary_operation = false
@@ -812,7 +813,7 @@ ij_typescript_spaces_within_brackets = false
 ij_typescript_spaces_within_catch_parentheses = false
 ij_typescript_spaces_within_for_parentheses = false
 ij_typescript_spaces_within_if_parentheses = false
-ij_typescript_spaces_within_imports = false
+ij_typescript_spaces_within_imports = true
 ij_typescript_spaces_within_interpolation_expressions = false
 ij_typescript_spaces_within_method_call_parentheses = false
 ij_typescript_spaces_within_method_parentheses = false
@@ -840,8 +841,8 @@ ij_typescript_while_on_new_line = false
 ij_typescript_wrap_comments = false
 
 [{*.bash,*.sh,*.zsh}]
-indent_size = 2
-tab_width = 2
+ij_shell_indent_size = 2
+ij_shell_tab_width = 2
 ij_shell_binary_ops_start_line = false
 ij_shell_keep_column_alignment_padding = false
 ij_shell_minify_program = false
@@ -850,7 +851,8 @@ ij_shell_switch_cases_indented = false
 ij_shell_use_unix_line_separator = true
 
 [{*.cjs,*.js}]
-ij_continuation_indent_size = 4
+ij_javascript_indent_size = 2
+ij_javascript_continuation_indent_size = 4
 ij_javascript_align_imports = false
 ij_javascript_align_multiline_array_initializer_expression = false
 ij_javascript_align_multiline_binary_operation = false
@@ -992,7 +994,7 @@ ij_javascript_spaces_within_brackets = false
 ij_javascript_spaces_within_catch_parentheses = false
 ij_javascript_spaces_within_for_parentheses = false
 ij_javascript_spaces_within_if_parentheses = false
-ij_javascript_spaces_within_imports = false
+ij_javascript_spaces_within_imports = true
 ij_javascript_spaces_within_interpolation_expressions = false
 ij_javascript_spaces_within_method_call_parentheses = false
 ij_javascript_spaces_within_method_parentheses = false
@@ -1250,22 +1252,22 @@ ij_dts_wrap_long_lines = false
 
 [{*.go,*.go2}]
 indent_style = tab
-ij_continuation_indent_size = 4
-ij_go_GROUP_CURRENT_PROJECT_IMPORTS = false
+ij_go_continuation_indent_size = 4
+ij_go_GROUP_CURRENT_PROJECT_IMPORTS = true
 ij_go_add_leading_space_to_comments = true
-ij_go_add_parentheses_for_single_import = false
+ij_go_add_parentheses_for_single_import = true
 ij_go_call_parameters_new_line_after_left_paren = true
 ij_go_call_parameters_right_paren_on_new_line = true
 ij_go_call_parameters_wrap = off
 ij_go_fill_paragraph_width = 80
-ij_go_group_stdlib_imports = false
-ij_go_import_sorting = gofmt
+ij_go_group_stdlib_imports = true
+ij_go_import_sorting = goimports
 ij_go_keep_indents_on_empty_lines = false
 ij_go_local_group_mode = project
 ij_go_local_package_prefixes =
-ij_go_move_all_imports_in_one_declaration = false
-ij_go_move_all_stdlib_imports_in_one_group = false
-ij_go_remove_redundant_import_aliases = false
+ij_go_move_all_imports_in_one_declaration = true
+ij_go_move_all_stdlib_imports_in_one_group = true
+ij_go_remove_redundant_import_aliases = true
 ij_go_run_go_fmt_on_reformat = true
 ij_go_use_back_quotes_for_imports = false
 ij_go_wrap_comp_lit = off
@@ -1283,7 +1285,7 @@ ij_go_wrap_func_result_newline_before_rparen = true
 [{*.gql,*.graphql,*.graphqls}]
 
 [{*.graphqlconfig,*.graphqlrc,*.har,*.jsb2,*.jsb3,*.json,*.jsonc,*.postman_collection,*.postman_collection.json,*.postman_environment,*.postman_environment.json,.babelrc,.eslintrc,.prettierrc,.stylelintrc,.ws-context,bowerrc,jest.config}]
-indent_size = 2
+ij_json_indent_size = 2
 ij_json_array_wrapping = split_into_lines
 ij_json_keep_blank_lines_in_code = 0
 ij_json_keep_indents_on_empty_lines = false
@@ -1328,8 +1330,8 @@ ij_html_space_inside_empty_tag = false
 ij_html_text_wrap = normal
 
 [{*.http,*.rest}]
-indent_size = 0
-ij_continuation_indent_size = 4
+ij_http-request_indent_size = 0
+ij_http-request_continuation_indent_size = 4
 ij_http-request_call_parameters_wrap = normal
 ij_http-request_method_parameters_wrap = split_into_lines
 ij_http-request_space_before_comma = true
@@ -1428,8 +1430,8 @@ ij_kotlin_wrap_expression_body_functions = 1
 ij_kotlin_wrap_first_method_in_call_chain = false
 
 [{*.markdown,*.md}]
-indent_size = 2
-tab_width = 2
+ij_markdown_indent_size = 2
+ij_markdown_tab_width = 2
 ij_markdown_force_one_space_after_blockquote_symbol = true
 ij_markdown_force_one_space_after_header_symbol = true
 ij_markdown_force_one_space_after_list_bullet = true
@@ -1483,9 +1485,9 @@ ij_mermaid_within_round = false
 ij_mermaid_within_square = false
 
 [{*.pb,*.textproto,*.txtpb}]
-indent_size = 2
-tab_width = 2
-ij_continuation_indent_size = 4
+ij_prototext_indent_size = 2
+ij_prototext_continuation_indent_size = 4
+ij_prototext_tab_width = 2
 ij_prototext_keep_blank_lines_in_code = 1
 ij_prototext_keep_indents_on_empty_lines = false
 ij_prototext_keep_line_breaks = true
@@ -1569,7 +1571,7 @@ ij_python_use_continuation_indent_for_parameters = true
 ij_python_wrap_long_lines = false
 
 [{*.qml,*.qmltypes}]
-ij_continuation_indent_size = 4
+ij_qmllang_continuation_indent_size = 4
 ij_qmllang_align_imports = false
 ij_qmllang_align_multiline_array_initializer_expression = false
 ij_qmllang_align_multiline_binary_operation = false
@@ -1751,7 +1753,7 @@ ij_qute_keep_indents_on_empty_lines = false
 ij_toml_keep_indents_on_empty_lines = false
 
 [{*.yaml,*.yml,.clang-format,.clang-tidy,_clang-format}]
-indent_size = 2
+ij_yaml_indent_size = 2
 ij_yaml_align_values_properties = do_not_align
 ij_yaml_autoinsert_sequence_marker = true
 ij_yaml_block_mapping_on_new_line = false
