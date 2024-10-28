@@ -19,6 +19,22 @@ GTEST_TEST(RandomDataSampling, OfflineRandomSampling)
     EXPECT_EQ(k, static_cast<int>(result.size()));
 }
 
+GTEST_TEST(RandomDataSampling, OnlineRandomSampling)
+{
+    constexpr int k = 3;
+    auto arr = std::vector<int>{3, 7, 5, 11};
+    const auto result = RandomDataSampling::OnlineRandomSampling(arr.cbegin(), arr.cend(), k);
+
+    std::stringstream stream;
+    for (const int& item : result)
+    {
+        stream << item << " ";
+    }
+    std::cout << stream.str() << std::endl;
+
+    EXPECT_EQ(k, static_cast<int>(result.size()));
+}
+
 GTEST_TEST(RandomDataSampling, ComputeRandomPermutation)
 {
     constexpr int k = 3;
