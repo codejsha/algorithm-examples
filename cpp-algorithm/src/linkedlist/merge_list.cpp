@@ -6,7 +6,7 @@ auto MergeList::MergeTwoSortedLinkedList(const std::shared_ptr<LinkedList::Node<
                                          const std::shared_ptr<LinkedList::Node<int>>& list2)
     -> std::shared_ptr<LinkedList::Node<int>>
 {
-    auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
+    const auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
     auto tail = dummy_head;
     auto iter1 = list1;
     auto iter2 = list2;
@@ -29,8 +29,8 @@ auto MergeList::MergeEvenOddLinkedList(const std::shared_ptr<LinkedList::Node<in
         return list;
     }
 
-    auto even_dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
-    auto odd_dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
+    const auto even_dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
+    const auto odd_dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
     auto tails = std::vector{even_dummy_head, odd_dummy_head};
     int turn = 0;
 

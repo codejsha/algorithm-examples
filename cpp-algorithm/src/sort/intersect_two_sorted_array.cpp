@@ -35,8 +35,8 @@ std::vector<int> IntersectTwoSortedArray::IntersectTwoSortedArray(const std::vec
                                                                   const std::vector<int>& arr2)
 {
     std::vector<int> intersection;
-    auto i = 0;
-    auto j = 0;
+    int i = 0;
+    int j = 0;
     while (i < static_cast<int>(arr1.size()) && j < static_cast<int>(arr2.size()))
     {
         if (arr1[i] == arr2[j] && (i == 0 || arr1[i] != arr1[i - 1]))

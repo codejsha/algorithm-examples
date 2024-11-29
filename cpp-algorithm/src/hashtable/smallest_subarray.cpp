@@ -14,8 +14,8 @@ auto SmallestSubarray::FindSmallestSubarrayCoveringSubset(const std::vector<std:
         ++keywords_to_cover[keyword];
     }
 
-    auto result = std::make_tuple(-1, -1);
-    auto remaining_to_cover = keywords.size();
+    std::tuple<int, int> result = std::make_tuple(-1, -1);
+    size_t remaining_to_cover = keywords.size();
 
     for (int left_index = 0, right_index = 0; right_index < static_cast<int>(paragraph.size()); ++right_index)
     {
@@ -72,11 +72,11 @@ auto SmallestSubarray::FindSmallestSubarraySequentiallyCoveringSubset(const std:
         keywords_to_index[keywords[i]] = i;
     }
 
-    auto last_occurrence = std::vector(keywords.size(), -1);
-    auto shortest_subarray_length = std::vector(keywords.size(), std::numeric_limits<int>::max());
+    std::vector<int> last_occurrence = std::vector(keywords.size(), -1);
+    std::vector<int> shortest_subarray_length = std::vector(keywords.size(), std::numeric_limits<int>::max());
 
     int shortest_distance = std::numeric_limits<int>::max();
-    auto result = std::make_tuple(-1, -1);
+    std::tuple<int, int> result = std::make_tuple(-1, -1);
 
     for (int i = 0; i < static_cast<int>(paragraph.size()); ++i)
     {

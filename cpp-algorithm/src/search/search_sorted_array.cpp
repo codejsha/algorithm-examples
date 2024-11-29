@@ -58,7 +58,7 @@ auto SearchSortedArray::SearchEntryEqualToItsIndex(const std::vector<int>& array
 
     while (left <= right)
     {
-        auto mid = left + ((right - left) / 2);
+        int mid = left + ((right - left) / 2);
         if (array[mid] > mid)
         {
             right = mid - 1;
