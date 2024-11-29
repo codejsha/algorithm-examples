@@ -128,10 +128,5 @@ fabric.properties
 .idea/
 .vs/
 .vscode/
-out/
-cmake-build-debug/
-cmake-build-debug-visual-studio/
-cmake-build-release/
-cmake-build-release-visual-studio/
-Folder.DotSettings.user
 README_link.md
+!/Makefile
