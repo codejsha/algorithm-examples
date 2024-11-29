@@ -56,7 +56,7 @@ auto SplitIntoWords(const std::string& str) -> std::unordered_map<std::string, i
 auto AnonymousLetter::IsWordConstructibleFromMagazine(const std::string& letter, const std::string& magazine) -> bool
 {
     // count the number of times each word appears in the letter
-    auto word_frequency_for_letter = SplitIntoWords(letter);
+    std::unordered_map<std::string, int> word_frequency_for_letter = SplitIntoWords(letter);
 
     // check if the words in magazine can cover words in letter
     for (const auto& [fst, snd] : SplitIntoWords(magazine))

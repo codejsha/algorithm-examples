@@ -2,22 +2,22 @@
 
 <!-- markdownlint-disable MD033 MD036 -->
 
-![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/poetry.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg) ![Go Test](https://github.com/codejsha/algorithm-examples/actions/workflows/go.yml/badge.svg)
+![C++ CMake Test](https://github.com/codejsha/algorithm-examples/actions/workflows/cmake.yml/badge.svg) ![Python Poetry Test](https://github.com/codejsha/algorithm-examples/actions/workflows/poetry.yml/badge.svg) ![Go Test](https://github.com/codejsha/algorithm-examples/actions/workflows/go.yml/badge.svg) ![Java Gradle Test](https://github.com/codejsha/algorithm-examples/actions/workflows/gradle.yml/badge.svg)
 
 [English](README.md) | [Korean](README_ko-KR.md)
 
-This repository is an implementation of algorithms, data structures, and problem-solving. These are written in C++, Python, Java, and Go, and each language uses the following test framework: [Google Test](https://google.github.io/googletest/)(C++), [pytest](https://docs.pytest.org/)(Python), [JUnit](https://junit.org/)(Java), [go test](https://pkg.go.dev/cmd/go)(Go). Run tests to perform methods/functions on the algorithmic logic.
+This repository provides examples of algorithms, data structures, and problem-solving approaches for practical applications. These examples are implemented in C++, Python, Go, and Java, with each language utilizing its own test framework. Running the tests allows you to execute methods or functions on the underlying algorithmic logic.
 
 ## Project Environments
 
 Each project is configured in specific environments, as described below:
 
 | Language | Version | Build                                | Packages                                                                                                                                                                                                              | Remarks                                     |
-|----------|---------|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| -------- | ------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | C++      | C++20   | [CMake](https://cmake.org/)          | [GNU Scientific Library (GSL)](https://www.gnu.org/software/gsl/), [Google Test](https://google.github.io/googletest/), [Google Benchmark](https://github.com/google/benchmark), [fmt](https://github.com/fmtlib/fmt) | [vcpkg](https://github.com/microsoft/vcpkg) |
 | Python   | 3.12    | [Poetry](https://python-poetry.org/) | [NumPy](https://numpy.org/), [SciPy](https://www.scipy.org/), [NetworkX](https://networkx.org/), [pytest](https://docs.pytest.org/), [pytest-benchmark](https://pytest-benchmark.readthedocs.io/en/latest/)           |                                             |
+| Go       | 1.22    | [Go](https://pkg.go.dev/cmd/go)      | [Gonum](https://github.com/gonum/gonum), [Testify](https://github.com/stretchr/testify)                                                                                                                               |                                             |
 | Java     | 21      | [Gradle](https://gradle.org/)        | [Google Guava](https://github.com/google/guava), [JUnit](https://junit.org/), [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh)                                                                     |                                             |
-| Go       | 1.22    | [Go](https://pkg.go.dev/cmd/go)      | [Testify](https://github.com/stretchr/testify)                                                                                                                                                                        |                                             |
 
 ## Table of Contents
 
@@ -47,6 +47,7 @@ Each project is configured in specific environments, as described below:
 ### :train: Array
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -160,29 +161,32 @@ import com.google.common.collect.*;
 List<String> list = Lists.newArrayList();
 List<String> list = Lists.asList(boxedArray);
 ```
+
 <!-- @formatter:on -->
 
 **Examples**
 
-- Advancing through an array, EPI#5.4: [c++](/cpp-algorithm/src/array/advancing_through.h) | Advance through the array to the last index.
+- Advancing through an array, EPI#5.4: [cpp](/cpp-algorithm/src/array/advancing_through.h) | Advance through the array to the last index.
 - Arbitrary precision operation
-  - increment an arbitrary-precision integer, EPI#5.2: [c++](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`PlusOne`) | Add one to the number represented by the vector.
-  - add two arbitrary-precision integers: [c++](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`StringAddition`) | Add two numbers represented by strings.
-  - multiply two arbitrary-precision integers, EPI#5.3: [c++](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`Multiply`) | Multiply two numbers represented by vectors.
-- Delete duplicates from a sorted array, EPI#5.5: [c++](/cpp-algorithm/src/array/delete_element.h)(`DeleteDuplicates`, `DeleteDuplicateElements`) | Delete duplicate elements in the array.
-- Delete specific elements from a sorted array: [c++](/cpp-algorithm/src/array/delete_element.h)(`DeleteSpecificElements`) | Delete specific elements in the array.
-- Dutch national flags problem, EPI#5.1: [c++](/cpp-algorithm/src/array/dutch_national_flag.h)
-- Enumerate prime numbers, EPI#5.9: [c++](/cpp-algorithm/src/array/enumerate_prime_number.h) | Enumerate prime numbers in the range.
-- Order elements in an array by even and odd: [c++](/cpp-algorithm/src/array/order_element.h)(`EvenOdd`) | Order even and odd numbers in the array.
-- Order elements in an array by specified order, EPI#5.8: [c++](/cpp-algorithm/src/array/order_element.h)(`Rearrange`) | Rearrange arrays to have a specific order.
-- Random data sampling - offline, EPI#5.12: [c++](/cpp-algorithm/src/array/random_data_sampling.h)(`OfflineRandomSampling`) | Randomly select $\textit{k}$ elements from the array.
-- Random data sampling - compute permutation, EPI#5.14: [c++](/cpp-algorithm/src/array/random_data_sampling.h)(`ComputeRandomPermutation`) | Compute permutation of the array generated by random sampling.
+  - increment an arbitrary-precision integer, EPI#5.2: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`PlusOne`) | Add one to the number represented by the vector.
+  - add two arbitrary-precision integers: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`StringAddition`) | Add two numbers represented by strings.
+  - multiply two arbitrary-precision integers, EPI#5.3: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`Multiply`) | Multiply two numbers represented by vectors.
+- Delete duplicates from a sorted array, EPI#5.5: [cpp](/cpp-algorithm/src/array/delete_element.h)(`DeleteDuplicates`, `DeleteDuplicateElements`) | Delete duplicate elements in the array.
+- Delete specific elements from a sorted array: [cpp](/cpp-algorithm/src/array/delete_element.h)(`DeleteSpecificElements`) | Delete specific elements in the array.
+- Dutch national flags problem, EPI#5.1: [cpp](/cpp-algorithm/src/array/dutch_national_flag.h)
+- Enumerate prime numbers, EPI#5.9: [cpp](/cpp-algorithm/src/array/enumerate_prime_number.h) | Enumerate prime numbers in the range.
+- Order elements in an array by even and odd: [cpp](/cpp-algorithm/src/array/order_element.h)(`EvenOdd`) | Order even and odd numbers in the array.
+- Order elements in an array by specified order, EPI#5.8: [cpp](/cpp-algorithm/src/array/order_element.h)(`Rearrange`) | Rearrange arrays to have a specific order.
+- Random data sampling: Select the k elements randomly from the array with uniform probability.
+  - offline, EPI#5.12: [cpp](/cpp-algorithm/src/array/random_data_sampling.h)(`OfflineRandomSampling`) | Design an algorithm to return a random subset of $k$ elements from an array.
+  - online, EPI#5.13: [cpp](/cpp-algorithm/src/array/random_data_sampling.h)(`OnlineRandomSampling`) | Design an algorithm that reads data and creates a random subset of size $k$.
+  - compute permutation, EPI#5.14: [cpp](/cpp-algorithm/src/array/random_data_sampling.h)(`ComputeRandomPermutation`) | Compute permutation of the array generated by random sampling.
 - Replace elements
-  - replace and remove: [c++](/cpp-algorithm/src/array/replace_element.h)(`ReplaceAndRemoveString1`, `ReplaceAndRemoveString2`) | Replace element and remove element in the array.
-  - telex encoding: [c++](/cpp-algorithm/src/array/replace_element.h)(`TelexEncoding`) | Telex encoding for punctuation marks.
+  - replace and remove: [cpp](/cpp-algorithm/src/array/replace_element.h)(`ReplaceAndRemoveString1`, `ReplaceAndRemoveString2`) | Replace element and remove element in the array.
+  - telex encoding: [cpp](/cpp-algorithm/src/array/replace_element.h)(`TelexEncoding`) | Telex encoding for punctuation marks.
 - Stock trading
-  - buy and sell a stock once, EPI#5.6: [c++](/cpp-algorithm/src/array/stock_trading.h)(`BuyAndSellStockOnceBruteForce`, `BuyAndSellStockOnce`)
-  - buy and sell a stock twice, EPI#5.7: [c++](/cpp-algorithm/src/array/stock_trading.h)(`BuyAndSellStockTwice`)
+  - buy and sell a stock once, EPI#5.6: [cpp](/cpp-algorithm/src/array/stock_trading.h)(`BuyAndSellStockOnceBruteForce`, `BuyAndSellStockOnce`)
+  - buy and sell a stock twice, EPI#5.7: [cpp](/cpp-algorithm/src/array/stock_trading.h)(`BuyAndSellStockTwice`)
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -196,6 +200,7 @@ List<String> list = Lists.asList(boxedArray);
 - Maximum flow algorithm: Edmonds-Karp algorithm, Ford-Fulkerson algorithm, Push-relabel algorithm, Maximum bipartite matching
 
 <!-- @formatter:off -->
+
 **Python declaration/functions**
 
 ```python
@@ -228,6 +233,7 @@ MutableValueGraph<City, Distance> roads = ValueGraphBuilder.directed()
         .incidentEdgeOrder(ElementOrder.stable())
         .build();
 ```
+
 <!-- @formatter:on -->
 
 **Graph algorithms**
@@ -235,7 +241,7 @@ MutableValueGraph<City, Distance> roads = ValueGraphBuilder.directed()
 > NOTE: In the following, the C++ implementations are currently only available on MSVC.
 
 - A\* search algorithm, CCSP#2.2.5: A single-pair shortest path algorithm. This is a variant of Dijkstra's algorithm using heuristics to try to speed up the search.
-- Bellman-Ford algorithm, CLRS#24.1: [c++](/cpp-algorithm/src/graph/bellman_ford.h), [java#1](/java-algorithm/src/main/java/com/example/algorithm/graph/BellmanFord1.java), [java#2](/java-algorithm/src/main/java/com/example/algorithm/graph/BellmanFord2.java) | A single source the shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
+- Bellman-Ford algorithm, CLRS#24.1: [cpp](/cpp-algorithm/src/graph/bellman_ford.h), [java#1](/java-algorithm/src/main/java/com/example/algorithm/graph/BellmanFord1.java), [java#2](/java-algorithm/src/main/java/com/example/algorithm/graph/BellmanFord2.java) | A single source the shortest path algorithm that can handle negative edge weights. It finds the shortest path from a source vertex to all other vertices in a weighted graph.
 
 ```txt
 algorithm BellmanFord(G, source):
@@ -258,7 +264,7 @@ algorithm BellmanFord(G, source):
     return true
 ```
 
-- Breadth-first search (BFS), CLRS#22.2, CCSP#2.2.4, CCSP#4.3.1: [c++](/cpp-algorithm/src/graph/breadth_first_search.h), [python(test)](/python-algorithm/algorithm/graph/test/test_breadth_first_search.py), [java#1](/java-algorithm/src/main/java/com/example/algorithm/graph/BreadthFirstSearch1.java), [java#2](/java-algorithm/src/main/java/com/example/algorithm/graph/BreadthFirstSearch2.java) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
+- Breadth-first search (BFS), CLRS#22.2, CCSP#2.2.4, CCSP#4.3.1: [cpp](/cpp-algorithm/src/graph/breadth_first_search.h), [python(test)](/python-algorithm/algorithm/graph/test/test_breadth_first_search.py), [java#1](/java-algorithm/src/main/java/com/example/algorithm/graph/BreadthFirstSearch1.java), [java#2](/java-algorithm/src/main/java/com/example/algorithm/graph/BreadthFirstSearch2.java) | A search algorithm that traverses a graph layer by layer. Check the shortest path and compute the distance from the source vertex to all other vertices.
 
 ```txt
 algorithm BFS(G, source):
@@ -283,7 +289,7 @@ algorithm BFS(G, source):
         u.color = BLACK
 ```
 
-- Depth-first search (DFS), CLRS#22.3, CCSP#2.2.3: [c++](/cpp-algorithm/src/graph/depth_first_search.h), [java#1](/java-algorithm/src/main/java/com/example/algorithm/graph/DepthFirstSearch1.java), [java#2](/java-algorithm/src/main/java/com/example/algorithm/graph/DepthFirstSearch2.java), [java#3](/java-algorithm/src/main/java/com/example/algorithm/graph/DepthFirstSearch3.java) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
+- Depth-first search (DFS), CLRS#22.3, CCSP#2.2.3: [cpp](/cpp-algorithm/src/graph/depth_first_search.h), [java#1](/java-algorithm/src/main/java/com/example/algorithm/graph/DepthFirstSearch1.java), [java#2](/java-algorithm/src/main/java/com/example/algorithm/graph/DepthFirstSearch2.java), [java#3](/java-algorithm/src/main/java/com/example/algorithm/graph/DepthFirstSearch3.java) | A search algorithm that traverses a graph by exploring as far as possible along each branch before backtracking. Check to exists cycle in a graph.
 
 ```txt
 algorithm DFS(G):
@@ -308,7 +314,7 @@ algorithm DFS-VISIT(G, u):
     u.finished = time
 ```
 
-- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [c++](/cpp-algorithm/src/graph/dijkstra.h), [python(test)](/python-algorithm/algorithm/graph/test/test_dijkstra.py), [java](/java-algorithm/src/main/java/com/example/algorithm/graph/Dijkstra.java) | A single source the shortest path algorithm that handle non-negative edge weights. It finds the shortest path between two vertices in a graph.
+- Dijkstra's algorithm, CLRS#24.3, CCSP#4.5.1: [cpp](/cpp-algorithm/src/graph/dijkstra.h), [python(test)](/python-algorithm/algorithm/graph/test/test_dijkstra.py), [java](/java-algorithm/src/main/java/com/example/algorithm/graph/Dijkstra.java) | A single source the shortest path algorithm that handle non-negative edge weights. It finds the shortest path between two vertices in a graph.
 
 ```txt
 algorithm Dijkstra(G, source):
@@ -406,6 +412,7 @@ algorithm Prim(G, root):
 (CLRS#11)
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -514,20 +521,21 @@ Table<Vertex, Vertex, Double> weightedGraph = TreeBasedTable.create();
 Table<Vertex, Vertex, Double> weightedGraph = ArrayTable.create(Arrays.asList(v1, v2), Arrays.asList(v3, v4));
 Table<Vertex, Vertex, Double> weightedGraph = ImmutableTable.of(v1, v2, 4.0);
 ```
+
 <!-- @formatter:on -->
 
 **Examples**
 
-- Anonymous letter or words constructible, EPI#12.2: [c++](/cpp-algorithm/src/hashtable/anonymous_letter.h)(`IsLetterConstructibleFromMagazine`, `IsWordConstructibleFromMagazine`) | Check if a letter can be written using the characters/words in a magazine.
-- Collatz conjecture, EPI#12.11: [c++](/cpp-algorithm/src/hashtable/collatz_conjecture.h)(`FindNumbersSatisfyingCollatzConjecture`) | Find the numbers satisfying the Collatz conjecture.
-- Find anagrams: [c++](/cpp-algorithm/src/hashtable/find_anagram.h)(`FindAnagramMappings`) | Given an array of strings, group anagrams together.
+- Anonymous letter or words constructible, EPI#12.2: [cpp](/cpp-algorithm/src/hashtable/anonymous_letter.h)(`IsLetterConstructibleFromMagazine`, `IsWordConstructibleFromMagazine`) | Check if a letter can be written using the characters/words in a magazine.
+- Collatz conjecture, EPI#12.11: [cpp](/cpp-algorithm/src/hashtable/collatz_conjecture.h)(`FindNumbersSatisfyingCollatzConjecture`) | Find the numbers satisfying the Collatz conjecture.
+- Find anagrams: [cpp](/cpp-algorithm/src/hashtable/find_anagram.h)(`FindAnagramMappings`) | Given an array of strings, group anagrams together.
 - Find the smallest subarray
-  - covering all values, EPI#12.6: [c++](/cpp-algorithm/src/hashtable/smallest_subarray.h)(`FindSmallestSubarrayCoveringSubset`) | Find the smallest subarray that covers all the elements in a set.
-  - sequentially covering all values, EPI#12.7: [c++](/cpp-algorithm/src/hashtable/smallest_subarray.h)(`FindSmallestSubarraySequentiallyCoveringSubset`) | Find the smallest subarray that sequentially covers all the elements in a set.
-- ISBN cache, EPI#12.3: [c++](/cpp-algorithm/src/hashtable/isbn_cache.h) | Implement an LRU (Least Recently Used) cache for ISBN lookups.
-- Nearest repeated entry, EPI#12.5: [c++](/cpp-algorithm/src/hashtable/nearest_repeated_entry.h)(`FindNearestRepeatedEntry`) | Find the nearest repeated entry in an array of strings.
-- Optimized the lowest common ancestor (LCA), EPI#12.4: [c++](/cpp-algorithm/src/hashtable/optimized_lca.h)(`FindOptimizedLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
-- Palindromic permutation, EPI#12.1: [c++](/cpp-algorithm/src/hashtable/check_palindromic_permutation.h)(`IsPalindromePermutation`) | Given a string, determine if a permutation of the string could form a palindrome.
+  - covering all values, EPI#12.6: [cpp](/cpp-algorithm/src/hashtable/smallest_subarray.h)(`FindSmallestSubarrayCoveringSubset`) | Find the smallest subarray that covers all the elements in a set.
+  - sequentially covering all values, EPI#12.7: [cpp](/cpp-algorithm/src/hashtable/smallest_subarray.h)(`FindSmallestSubarraySequentiallyCoveringSubset`) | Find the smallest subarray that sequentially covers all the elements in a set.
+- ISBN cache, EPI#12.3: [cpp](/cpp-algorithm/src/hashtable/isbn_cache.h) | Implement an LRU (Least Recently Used) cache for ISBN lookups.
+- Nearest repeated entry, EPI#12.5: [cpp](/cpp-algorithm/src/hashtable/nearest_repeated_entry.h)(`FindNearestRepeatedEntry`) | Find the nearest repeated entry in an array of strings.
+- Optimized the lowest common ancestor (LCA), EPI#12.4: [cpp](/cpp-algorithm/src/hashtable/optimized_lca.h)(`FindOptimizedLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree using a hash table. This traverses together until node1 and node2 meet.
+- Palindromic permutation, EPI#12.1: [cpp](/cpp-algorithm/src/hashtable/check_palindromic_permutation.h)(`IsPalindromePermutation`) | Given a string, determine if a permutation of the string could form a palindrome.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -536,6 +544,7 @@ Table<Vertex, Vertex, Double> weightedGraph = ImmutableTable.of(v1, v2, 4.0);
 A min-heap/max-heap is ideal for maintaining a collection of elements when we need to add arbitrary values and extract the smallest/largest element.
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -566,6 +575,7 @@ contains(1), clear(), iterator()
 import com.google.common.collect.*;
 Queue<Integer> queue = Queues.newPriorityQueue();
 ```
+
 <!-- @formatter:on -->
 
 **Heap algorithms**
@@ -574,10 +584,10 @@ Queue<Integer> queue = Queues.newPriorityQueue();
 
 **Examples**
 
-- Compute the k closest stars: [c++](/cpp-algorithm/src/heap/closest_star.h)(`FindClosestStar`) | Find the $k$ closest stars to the earth. The stars are represented by a sequence of points(coordinates).
-- Compute the median of a sequence of numbers: [c++](/cpp-algorithm/src/heap/online_data_median.h)(`FindMedian`) | Find the median of a sequence of numbers. The median is the number separating the higher half of a data sample from the lower half.
-- Merge sorted arrays: [c++](/cpp-algorithm/src/heap/merge_sorted_array.h)(`MergeSortedArray`) | Merge k sorted arrays into one heap.
-- Sort an increasing-decreasing array: [c++](/cpp-algorithm/src/heap/sort_increasing_decreasing_array.h)(`SortIncreasingDecreasingArray`) | Sort an array that is repeatedly increasing then decreasing.
+- Compute the k closest stars: [cpp](/cpp-algorithm/src/heap/closest_star.h)(`FindClosestStar`) | Find the $k$ closest stars to the earth. The stars are represented by a sequence of points(coordinates).
+- Compute the median of a sequence of numbers: [cpp](/cpp-algorithm/src/heap/online_data_median.h)(`FindMedian`) | Find the median of a sequence of numbers. The median is the number separating the higher half of a data sample from the lower half.
+- Merge sorted arrays: [cpp](/cpp-algorithm/src/heap/merge_sorted_array.h)(`MergeSortedArray`) | Merge k sorted arrays into one heap.
+- Sort an increasing-decreasing array: [cpp](/cpp-algorithm/src/heap/sort_increasing_decreasing_array.h)(`SortIncreasingDecreasingArray`) | Sort an array that is repeatedly increasing then decreasing.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -586,6 +596,7 @@ Queue<Integer> queue = Queues.newPriorityQueue();
 A linked list is a data structure that consists of a sequence of elements, where each element points to the next. (CLRS#10.2)<br>In Python, there is no built-in type or library for LinkedList.
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -621,26 +632,27 @@ import com.google.common.collect.*;
 List<Integer> list = Lists.newLinkedList();
 List<Integer> list = Lists.newArrayList();
 ```
+
 <!-- @formatter:on -->
 
 **Examples**
 
-- Add list-based integers, EPI#7.13: [c++](/cpp-algorithm/src/linkedlist/list_arithmetic_operation.h)(`AddTwoNumbers`) | Add two numbers represented by linked list.
+- Add list-based integers, EPI#7.13: [cpp](/cpp-algorithm/src/linkedlist/list_arithmetic_operation.h)(`AddTwoNumbers`) | Add two numbers represented by linked list.
 - Delete nodes from linked list
-  - a node from linked list, EPI#7.6: [c++](/cpp-algorithm/src/linkedlist/delete_list_node.h)(`DeleteNodeFromList`) | Delete a node from a linked list.
-  - the k-th last node from linked list, EPI#7.7: [c++](/cpp-algorithm/src/linkedlist/delete_list_node.h)(`DeleteNodeKthLast`) | Delete the $k$-th last node from a linked list.
-  - duplicate nodes from sorted linked list, EPI#7.8: [c++](/cpp-algorithm/src/linkedlist/delete_list_node.h)(`DeleteDuplicateNode`) | Delete duplicate nodes from a sorted linked list.
-- Implement cyclic right shift for a singly linked list, EPI#7.9: [c++](/cpp-algorithm/src/linkedlist/shift_list.h)(`CyclicallyRightShiftList`) | Implement cyclic right shift for a singly linked list.
-- Linked list has a cycle, EPI#7.3: [c++](/cpp-algorithm/src/linkedlist/list_cycle.h)(`HasCycle1`, `HasCycle2`, `HasCycle3`) | Determine that a linked list has a cycle.
-- List pivoting, EPI#7.12: [c++](/cpp-algorithm/src/linkedlist/order_list_node.h)(`ListPivoting`) | Rearrange nodes smaller than pivot to the left and larger than pivot to the right.
+  - a node from linked list, EPI#7.6: [cpp](/cpp-algorithm/src/linkedlist/delete_list_node.h)(`DeleteNodeFromList`) | Delete a node from a linked list.
+  - the k-th last node from linked list, EPI#7.7: [cpp](/cpp-algorithm/src/linkedlist/delete_list_node.h)(`DeleteNodeKthLast`) | Delete the $k$-th last node from a linked list.
+  - duplicate nodes from sorted linked list, EPI#7.8: [cpp](/cpp-algorithm/src/linkedlist/delete_list_node.h)(`DeleteDuplicateNode`) | Delete duplicate nodes from a sorted linked list.
+- Implement cyclic right shift for a singly linked list, EPI#7.9: [cpp](/cpp-algorithm/src/linkedlist/shift_list.h)(`CyclicallyRightShiftList`) | Implement cyclic right shift for a singly linked list.
+- Linked list has a cycle, EPI#7.3: [cpp](/cpp-algorithm/src/linkedlist/list_cycle.h)(`HasCycle1`, `HasCycle2`, `HasCycle3`) | Determine that a linked list has a cycle.
+- List pivoting, EPI#7.12: [cpp](/cpp-algorithm/src/linkedlist/order_list_node.h)(`ListPivoting`) | Rearrange nodes smaller than pivot to the left and larger than pivot to the right.
 - Merge linked lists
-  - even and odd nodes in linked list, EPI#7.10: [c++](/cpp-algorithm/src/linkedlist/merge_list.h)(`MergeEvenOddLinkedList`) | Merge even and odd nodes in a singly linked list.
-  - two sorted linked lists, EPI#7.1: [c++](/cpp-algorithm/src/linkedlist/merge_list.h)(`MergeTwoSortedLinkedList`) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
-- Palindrome list, EPI#7.11: [c++](/cpp-algorithm/src/linkedlist/list_palindrome.h)(`IsListPalindrome`) | Determine that a linked list is a palindrome.
-- Reverse a single sublist, EPI#7.2: [c++](/cpp-algorithm/src/linkedlist/reverse_list.h)(`ReverseSubList`) | Reverse a single sublist of a linked list.
+  - even and odd nodes in linked list, EPI#7.10: [cpp](/cpp-algorithm/src/linkedlist/merge_list.h)(`MergeEvenOddLinkedList`) | Merge even and odd nodes in a singly linked list.
+  - two sorted linked lists, EPI#7.1: [cpp](/cpp-algorithm/src/linkedlist/merge_list.h)(`MergeTwoSortedLinkedList`) | Merge two sorted linked lists. In worst-case, this task has $O(n + m)$ time complexity, where $n$ and $m$ are the length of the lists.
+- Palindrome list, EPI#7.11: [cpp](/cpp-algorithm/src/linkedlist/list_palindrome.h)(`IsListPalindrome`) | Determine that a linked list is a palindrome.
+- Reverse a single sublist, EPI#7.2: [cpp](/cpp-algorithm/src/linkedlist/reverse_list.h)(`ReverseSubList`) | Reverse a single sublist of a linked list.
 - Linked lists overlap
-  - two linked lists overlap, EPI#7.4: [c++](/cpp-algorithm/src/linkedlist/list_cycle.h)(`OverlappingNoCycleList`) | Determine that two linked lists without cycle overlap.
-  - two linked lists with cycles overlap, EPI#7.5 [c++](/cpp-algorithm/src/linkedlist/list_cycle.h)(`OverlappingCycleList`) | Determine that two linked lists with cycle overlap.
+  - two linked lists overlap, EPI#7.4: [cpp](/cpp-algorithm/src/linkedlist/list_cycle.h)(`OverlappingNoCycleList`) | Determine that two linked lists without cycle overlap.
+  - two linked lists with cycles overlap, EPI#7.5 [cpp](/cpp-algorithm/src/linkedlist/list_cycle.h)(`OverlappingCycleList`) | Determine that two linked lists with cycle overlap.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -649,6 +661,7 @@ List<Integer> list = Lists.newArrayList();
 A queue is a data structure that implements the FIFO (first-in, first-out) policy. It has the following operations: enqueue (insert an element), dequeue (delete the least recently inserted element). (CLRS#10.1)
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -685,6 +698,7 @@ var list = new ArrayList<>(deque);          // deque to list
 import com.google.common.collect.*;
 Deque<Integer> deque = Queues.newArrayDeque();
 ```
+
 <!-- @formatter:on -->
 
 **Examples**
@@ -727,9 +741,9 @@ var list = new ArrayList<>(stack);          // stack to list
 
 **Examples**
 
-- Pair of bracket: [c++](/cpp-algorithm/src/stack/check_pair_of_bracket.h)(`CheckPairOfBracket`) | Checks if the input string contains bracket pairs and is well-formed.
-- Print linked list in reverse order: [c++](/cpp-algorithm/src/stack/print_stack.h)(`PrintLinkedListInReverseOrder`) | Print the linked list in reverse order using stack.
-- Max stack element: [c++](/cpp-algorithm/src/stack/max_stack_element.h) | Implement stack that caches max value.
+- Pair of bracket: [cpp](/cpp-algorithm/src/stack/check_pair_of_bracket.h)(`CheckPairOfBracket`) | Checks if the input string contains bracket pairs and is well-formed.
+- Print linked list in reverse order: [cpp](/cpp-algorithm/src/stack/print_stack.h)(`PrintLinkedListInReverseOrder`) | Print the linked list in reverse order using stack.
+- Max stack element: [cpp](/cpp-algorithm/src/stack/max_stack_element.h) | Implement stack that caches max value.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -738,6 +752,7 @@ var list = new ArrayList<>(stack);          // stack to list
 The tree is a specific type of graph. A tree is an undirected graph in which any two vertices are connected by exactly one path. It is connected without cycles.
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods (binary search tree based)**
 
 ```cpp
@@ -786,6 +801,7 @@ import com.google.common.collect.*;
 Map<Integer, Integer> map = Maps.newTreeMap();
 Set<Integer> set = Sets.newTreeSet();
 ```
+
 <!-- @formatter:on -->
 
 **Properties of Trees**
@@ -814,28 +830,28 @@ Set<Integer> set = Sets.newTreeSet();
 **Tree algorithms**
 
 - AVL tree
-- B-tree, CLRS#18: [c++](/cpp-algorithm/src/tree/b_tree.h) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
-- Binary search tree, CLRS#12: [c++](/cpp-algorithm/src/tree/binary_search_tree.h) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
+- B-tree, CLRS#18: [cpp](/cpp-algorithm/src/tree/b_tree.h) | B-tree is a self-balancing data structure which can have many child nodes. It is commonly used in auxiliary storage devices and database system. B-tree has the following properties: 1) Nodes have lower and upper bounds on the number of keys they can contain. (represent using degree $t$) 2) Every node other than the root must have at least $t-1$ keys. 3) Every node may contain at most $2t-1$ keys.
+- Binary search tree, CLRS#12: [cpp](/cpp-algorithm/src/tree/binary_search_tree.h) | In binary search tree, all internal nodes are stored in ordered state. If $y$ is a child of $x$ and $y$ is a node in the left subtree, then $y.key \leq x.key$, and if $y$ is a node in the right subtree, then $y.key \geq x.key$.
 - Red-black tree, CLRS#13
 - Trie
 - van Emde Boas tree (vEB tree), CLRS#20
 
 **Examples**
 
-- Balanced tree status: [c++](/cpp-algorithm/src/tree/balanced_tree_status.h) | Whether the binary tree is balanced or not.
-- Binary tree exterior: [c++](/cpp-algorithm/src/tree/binary_tree_exterior.h)(`CreateExteriorNodeList`) | Create a vector of exterior nodes in a binary tree.
+- Balanced tree status: [cpp](/cpp-algorithm/src/tree/balanced_tree_status.h) | Whether the binary tree is balanced or not.
+- Binary tree exterior: [cpp](/cpp-algorithm/src/tree/binary_tree_exterior.h)(`CreateExteriorNodeList`) | Create a vector of exterior nodes in a binary tree.
 - Construct binary tree
-  - from preorder and inorder traversal: [c++](/cpp-algorithm/src/tree/construct_binary_search_tree.h)(`ConstructTreeFromPreorderInorder`) | Construct a binary search tree from preorder and inorder traversal. This task has $O(n)$ time complexity.
-  - from preorder with marker: [c++](/cpp-algorithm/src/tree/construct_binary_search_tree.h)(`ConstructTreeFromMarkerPreorder`) | Construct a binary search tree from preorder traversal with marker. This task has $O(n)$ time complexity.
-- Leaf node list: [c++](/cpp-algorithm/src/tree/leaf_node_list.h)(`CreateLeafNodeList`) | Create a vector of leaf nodes in a binary tree.
+  - from preorder and inorder traversal: [cpp](/cpp-algorithm/src/tree/construct_binary_search_tree.h)(`ConstructTreeFromPreorderInorder`) | Construct a binary search tree from preorder and inorder traversal. This task has $O(n)$ time complexity.
+  - from preorder with marker: [cpp](/cpp-algorithm/src/tree/construct_binary_search_tree.h)(`ConstructTreeFromMarkerPreorder`) | Construct a binary search tree from preorder traversal with marker. This task has $O(n)$ time complexity.
+- Leaf node list: [cpp](/cpp-algorithm/src/tree/leaf_node_list.h)(`CreateLeafNodeList`) | Create a vector of leaf nodes in a binary tree.
 - Lowest common ancestor
-  - two nodes: [c++](/cpp-algorithm/src/tree/lowest_common_ancestor.h)(`FindLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree.
-  - two nodes with parent pointer: [c++](/cpp-algorithm/src/tree/lowest_common_ancestor.h)(`FindLowestCommonAncestor2`) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
-- Populate right sibling: [c++](/cpp-algorithm/src/tree/right_sibling.h)(`PopulateRightSibling`) | Populate the right sibling of a binary tree.
+  - two nodes: [cpp](/cpp-algorithm/src/tree/lowest_common_ancestor.h)(`FindLowestCommonAncestor`) | Find the lowest common ancestor of two nodes in a binary tree.
+  - two nodes with parent pointer: [cpp](/cpp-algorithm/src/tree/lowest_common_ancestor.h)(`FindLowestCommonAncestor2`) | Find the lowest common ancestor of two nodes in a binary tree. The nodes have parent pointers.
+- Populate right sibling: [cpp](/cpp-algorithm/src/tree/right_sibling.h)(`PopulateRightSibling`) | Populate the right sibling of a binary tree.
 - Sum of root to leaf
-  - root to leaf path corresponding to the given sum: [c++](/cpp-algorithm/src/tree/sum_root_to_leaf.h)(`HasKeySum`) | Whether the tree has a root-leaf path equal to the given sum.
-  - decimal and binary representation: [c++](/cpp-algorithm/src/tree/sum_root_to_leaf.h)(`SumRootToLeafDecimal`, `SumRootToLeafBinary`) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
-- Tree symmetric: [c++](/cpp-algorithm/src/tree/tree_symmetric.h) | Whether the binary tree is symmetric or not.
+  - root to leaf path corresponding to the given sum: [cpp](/cpp-algorithm/src/tree/sum_root_to_leaf.h)(`HasKeySum`) | Whether the tree has a root-leaf path equal to the given sum.
+  - decimal and binary representation: [cpp](/cpp-algorithm/src/tree/sum_root_to_leaf.h)(`SumRootToLeafDecimal`, `SumRootToLeafBinary`) | Sum of all root to leaf paths in a binary tree (decimal and binary representation).
+- Tree symmetric: [cpp](/cpp-algorithm/src/tree/tree_symmetric.h) | Whether the binary tree is symmetric or not.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -847,13 +863,13 @@ Set<Integer> set = Sets.newTreeSet();
 
 **Examples**
 
-- Fibonacci number, CCSP#1.1: [c++](/cpp-algorithm/src/dp/fibonacci_number.h),[python](/python-algorithm/algorithm/dp/fibonacci.py) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$th number in the sequence. The Fibonacci sequence is defined as follows:
+- Fibonacci number, CCSP#1.1: [cpp](/cpp-algorithm/src/dp/fibonacci_number.h),[python](/python-algorithm/algorithm/dp/fibonacci.py) | Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding numbers. Fibonacci number is $n$-th number in the sequence. The Fibonacci sequence is defined as follows:
   - $F_0 = 0$
   - $F_1 = 1$
   - $F_n = F_{n-1} + F_{n-2}$ (for $n > 1$)
-- Interval subset sum: [c++](/cpp-algorithm/src/dp/interval_subset_sum_problem.h)(`SubsetSum1`, `SubsetSum2`, `DivideAndConquerSubsetSum`, `DynamicProgrammingSubsetSum`) | Interval subset sum problem is that finds the maximum sum of a subset of intervals.
-- Longest common subsequence, CLRS#15.4: [c++](/cpp-algorithm/src/dp/longest_common_subsequence.h)
-- Rod cutting, CLRS#15.1: [c++](/cpp-algorithm/src/dp/rod_cutting.h) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
+- Interval subset sum: [cpp](/cpp-algorithm/src/dp/interval_subset_sum_problem.h)(`SubsetSum1`, `SubsetSum2`, `DivideAndConquerSubsetSum`, `DynamicProgrammingSubsetSum`) | Interval subset sum problem is that finds the maximum sum of a subset of intervals.
+- Longest common subsequence, CLRS#15.4: [cpp](/cpp-algorithm/src/dp/longest_common_subsequence.h)
+- Rod cutting, CLRS#15.1: [cpp](/cpp-algorithm/src/dp/rod_cutting.h) | Rod cutting is a problem of cutting a rod into pieces of a given length to determine the maximum profit.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
@@ -863,9 +879,9 @@ Set<Integer> set = Sets.newTreeSet();
 
 **Examples**
 
-- Activity selection problem, CLRS#16.1: [c++](/cpp-algorithm/src/greedy/activity_selection.h) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
+- Activity selection problem, CLRS#16.1: [cpp](/cpp-algorithm/src/greedy/activity_selection.h) | Activity selection problem using greedy algorithm or recursive approach. This is similar to the Interval scheduling problem.
 - Cashier's change: [python](/python-algorithm/algorithm/greedy/cashier_change.py) | Cashier's change problem is that finds the minimum number of coins required to make change for a given amount of money.
-- Huffman code, CLRS#16.3: [c++](/cpp-algorithm/src/greedy/huffman_code.h) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
+- Huffman code, CLRS#16.3: [cpp](/cpp-algorithm/src/greedy/huffman_code.h) | Huffman code constructs optimal prefix codes. This is always represented by a full binary tree.
 - Interval scheduling: [python](/python-algorithm/algorithm/greedy/interval_schedule.py) | Interval scheduling problem is that finds the minimum number of intervals required to schedule a set of activities(lectures).
 
 [:arrow_up_small: back to toc](#table-of-contents)
@@ -902,18 +918,18 @@ Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225)
 
 **Mathematical algorithms**
 
-- Combination: [c++](/cpp-algorithm/src/math/combination.h)(`GenerateCombination`) | Find the number of ways to choose $k$ items from $n$ items.
+- Combination: [cpp](/cpp-algorithm/src/math/combination.h)(`GenerateCombination`) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD), CLRS#31.2: [python](/python-algorithm/algorithm/math/greatest_common_divisor.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/GreatestCommonDivisor.java), [go](/go-algorithm/pkg/math/greatest_common_divisor.go) | Find the greatest common divisor of two numbers.
+- Greatest common divisor (GCD), CLRS#31.2: [python](/python-algorithm/algorithm/math/greatest_common_divisor.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/GreatestCommonDivisor.java), [golang](/go-algorithm/pkg/math/greatest_common_divisor.go) | Find the greatest common divisor of two numbers.
 - Integer factorization: [java](/java-algorithm/src/main/java/com/example/algorithm/math/IntegerFactorization.java) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
-- Least common multiple (LCM): [python](/python-algorithm/algorithm/math/least_common_multiple.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/LeastCommonMultiple.java), [go](/go-algorithm/pkg/math/least_common_multiple.go) | Find the least common multiple of two numbers.
-- Miller-Rabin primality test, CLRS#31.8: [c++](/cpp-algorithm/src/math/miller_rabin.h) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
+- Least common multiple (LCM): [python](/python-algorithm/algorithm/math/least_common_multiple.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/LeastCommonMultiple.java), [golang](/go-algorithm/pkg/math/least_common_multiple.go) | Find the least common multiple of two numbers.
+- Miller-Rabin primality test, CLRS#31.8: [cpp](/cpp-algorithm/src/math/miller_rabin.h) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
 - Permutation
-  - given string: [c++](/cpp-algorithm/src/math/permutation.h)(`Permutation`) | Find the permutation of a set of items from given string.
-  - elements of an array, EPI#5.10: [c++](/cpp-algorithm/src/math/permutation.h)(`ApplyPermutationWithAdditionalSpace`, `ApplyPermutationBySwap`) | Permute the elements of an array
-  - inverse permutation: [c++](/cpp-algorithm/src/math/permutation.h)(`InversePermutation`)
-  - next/previous permutation, EPI#5.11: [c++](/cpp-algorithm/src/math/permutation.h)(`NextPermutation`, `PreviousPermutation`) | Compute the next/previous permutation.
-  - $k$-th permutation, EPI#5.11: [c++](/cpp-algorithm/src/math/permutation.h)(`KthPermutation`) | Compute the $k$-th permutation.
+  - given string: [cpp](/cpp-algorithm/src/math/permutation.h)(`Permutation`) | Find the permutation of a set of items from given string.
+  - elements of an array, EPI#5.10: [cpp](/cpp-algorithm/src/math/permutation.h)(`ApplyPermutationWithAdditionalSpace`, `ApplyPermutationBySwap`) | Permute the elements of an array
+  - inverse permutation: [cpp](/cpp-algorithm/src/math/permutation.h)(`InversePermutation`)
+  - next/previous permutation, EPI#5.11: [cpp](/cpp-algorithm/src/math/permutation.h)(`NextPermutation`, `PreviousPermutation`) | Compute the next/previous permutation.
+  - $k$-th permutation, EPI#5.11: [cpp](/cpp-algorithm/src/math/permutation.h)(`KthPermutation`) | Compute the $k$-th permutation.
 - Prime number: [java](/java-algorithm/src/main/java/com/example/algorithm/math/PrimeNumber.java)(`isPrime`) | Check whether a given number is prime.
 - Simplex algorithm: Simplex algorithm is a mathematical algorithm that finds the optimal solution to a linear programming problem.
 - System of linear equations: System of linear equations is a mathematical algorithm that finds the solution to a system of linear equations.
@@ -930,6 +946,7 @@ Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225)
 ### :1234: Primitive type
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -1013,27 +1030,29 @@ var randomLong = random.nextLong();       // [0, 2^48)
 var randomDouble = random.nextDouble();   // [0.0, 1.0)
 var randomBoolean = random.nextBoolean(); // true/false
 ```
+
 <!-- @formatter:on -->
 
 **Primitive type algorithms**
 
-- Arithmetic operation, EPI#4.5, EPI#4.6: [c++](/cpp-algorithm/src/primitive/arithmetic_operation.h)(`Multiply`, `Divide`) | Calculate the product/fraction of two numbers without using arithmetic operators.
-- Power operation, EPI#4.7: [c++](/cpp-algorithm/src/primitive/power_operation.h) | Compute repeated squaring $x^y$.
+- Arithmetic operation, EPI#4.5, EPI#4.6: [cpp](/cpp-algorithm/src/primitive/arithmetic_operation.h)(`Multiply`, `Divide`) | Calculate the product/fraction of two numbers without using arithmetic operators.
+- Power operation, EPI#4.7: [cpp](/cpp-algorithm/src/primitive/power_operation.h) | Compute repeated squaring $x^y$.
 
 **Examples**
 
-- Computing parity of word, EPI#4.1: [c++](/cpp-algorithm/src/primitive/compute_parity.h)(`CountBits`, `Parity`, `ParityDropLowestBits`, `ParityLookupTable`)
-- Generate random number, EPI#4.10: [c++](/cpp-algorithm/src/primitive/generate_random_number.h) | Generate a random number in a range with equal probability.
-- Integer palindrome, EPI#4.9: [c++](/cpp-algorithm/src/primitive/integer_palindrome.h) | Check if a number is a palindrome.
-- Rectangle intersection, EPI#4.11: [c++](/cpp-algorithm/src/primitive/rectangle_intersection.h) | Check if two rectangles intersect.
-- Reverse digits, EPI#4.8: [c++](/cpp-algorithm/src/primitive/reverse_digit.h) | Reverse the digits of a given integer.
-- Swap bit, EPI#4.2: [c++](/cpp-algorithm/src/primitive/swap_bit.h) | Swap the bits at indices $i$ and $j$.
+- Computing parity of word, EPI#4.1: [cpp](/cpp-algorithm/src/primitive/compute_parity.h)(`CountBits`, `Parity`, `ParityDropLowestBits`, `ParityLookupTable`)
+- Generate random number, EPI#4.10: [cpp](/cpp-algorithm/src/primitive/generate_random_number.h) | Generate a random number in a range with equal probability.
+- Integer palindrome, EPI#4.9: [cpp](/cpp-algorithm/src/primitive/integer_palindrome.h) | Check if a number is a palindrome.
+- Rectangle intersection, EPI#4.11: [cpp](/cpp-algorithm/src/primitive/rectangle_intersection.h) | Check if two rectangles intersect.
+- Reverse digits, EPI#4.8: [cpp](/cpp-algorithm/src/primitive/reverse_digit.h) | Reverse the digits of a given integer.
+- Swap bit, EPI#4.2: [cpp](/cpp-algorithm/src/primitive/swap_bit.h) | Swap the bits at indices $i$ and $j$.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :mag: Search
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -1077,33 +1096,35 @@ Set<Integer> treeSet = new TreeSet<>(List.of(1, 2, 3, 4, 5));
 Arrays.binarySearch(array, 3)             // for array
 Collections.binarySearch(arrayList, 3);   // for list
 ```
+
 <!-- @formatter:on -->
 
 **Search algorithms**
 
 - Binary search: [python](/python-algorithm/algorithm/search/binary_search.py) | Binary search is a search algorithm that finds the position of a target value within a sorted array.
-- Integer square root, EPI#11.4: [c++](/cpp-algorithm/src/search/compute_square_root.h)(`ComputeIntegerSquareRoot`) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
+- Integer square root, EPI#11.4: [cpp](/cpp-algorithm/src/search/compute_square_root.h)(`ComputeIntegerSquareRoot`) | Compute the integer square root of a given integer. This function returns the largest integer whose square is less than or equal to the given integer.
 - Linear search: [python](/python-algorithm/algorithm/search/linear_search.py) | Linear search is a search algorithm that compares x successively with each term of the list until a match is found.
-- Quick select algorithm: [c++](/cpp-algorithm/src/search/quick_select.h)(`QuickSelectAlgorithm`) | QuickSelect is an algorithm used to select the k-th smallest (or largest) element in an unordered list of elements.
+- Quick select algorithm: [cpp](/cpp-algorithm/src/search/quick_select.h)(`QuickSelectAlgorithm`) | QuickSelect is an algorithm used to select the k-th smallest (or largest) element in an unordered list of elements.
 
 **Examples**
 
 - DNA search (Search a codon(combinations of three nucleotides) in a gene), CCSP#2.1: [python](/python-algorithm/algorithm/search/dna_search.py)(`linear_contains`, `binary_contains`) | Search a codon(combinations of three nucleotides) in a gene using linear search and binary search.
-- Find k-th smallest/largest element in an array, EPI#11.8: [c++](/cpp-algorithm/src/search/quick_select.h)(`FindKthSmallestElement`, `FindKthLargestElement`) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
-- Find the minimum and maximum elements in an array, EPI#11.7: [c++](/cpp-algorithm/src/search/find_min_max.h)(`FindMinMax`)
+- Find k-th smallest/largest element in an array, EPI#11.8: [cpp](/cpp-algorithm/src/search/quick_select.h)(`FindKthSmallestElement`, `FindKthLargestElement`) | Find the k-th smallest/largest element in an array using the quickselect algorithm (`QuickSelectAlgorithm`).
+- Find the minimum and maximum elements in an array, EPI#11.7: [cpp](/cpp-algorithm/src/search/find_min_max.h)(`FindMinMax`)
 - Search an element in generic list, CCSP#2.1: [python](/python-algorithm/algorithm/search/generic_search.py)(`generic_linear_contains`, `generic_binary_contains`) | Search an element in generic list using linear search or binary search.
 - Search a sorted array
-  - entry equal to its index, EPI#11.2: [c++](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchEntryEqualToItsIndex`)
-  - the first greater than a key: [c++](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchFirstGreaterThanKey`)
-  - the first occurrence of a key, EPI#11.1: [c++](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchFirstOfKey`)
-  - search a cyclically sorted array for the smallest element, EPI#11.3: [c++](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchSmallestElementInCyclicallySortedArray`)
-- Search in a 2D sorted array(matrix), EPI#11.6: [c++](/cpp-algorithm/src/search/search_sorted_matrix.h)(`SearchSortedMatrix`) | Search in a 2D sorted array(matrix) for a given element.
+  - entry equal to its index, EPI#11.2: [cpp](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchEntryEqualToItsIndex`)
+  - the first greater than a key: [cpp](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchFirstGreaterThanKey`)
+  - the first occurrence of a key, EPI#11.1: [cpp](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchFirstOfKey`)
+  - search a cyclically sorted array for the smallest element, EPI#11.3: [cpp](/cpp-algorithm/src/search/search_sorted_array.h)(`SearchSmallestElementInCyclicallySortedArray`)
+- Search in a 2D sorted array(matrix), EPI#11.6: [cpp](/cpp-algorithm/src/search/search_sorted_matrix.h)(`SearchSortedMatrix`) | Search in a 2D sorted array(matrix) for a given element.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :abc: Sort
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -1138,6 +1159,7 @@ list.sort(Comparator.naturalOrder());
 list.sort(Comparator.reverseOrder());
 list.sort(Comparator.comparingInt(String::length));
 ```
+
 <!-- @formatter:on -->
 
 **Sorting algorithms**
@@ -1174,7 +1196,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Insertion sort, CLRS#2.1: [c++](/cpp-algorithm/src/sort/sort.h), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/InsertionSort.java) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>($\textit{n}$ is the number of elements)
+- Insertion sort, CLRS#2.1: [cpp](/cpp-algorithm/src/sort/sort.h), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/InsertionSort.java) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>($\textit{n}$ is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                     |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------- |
@@ -1198,7 +1220,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Selection sort: [c++](/cpp-algorithm/src/sort/sort.h), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/SelectionSort.java)
+- Selection sort: [cpp](/cpp-algorithm/src/sort/sort.h), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/SelectionSort.java)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                          |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------------ |
@@ -1208,21 +1230,22 @@ list.sort(Comparator.comparingInt(String::length));
 
 **Examples**
 
-- H-Index, EPI#13.3: [c++](/cpp-algorithm/src/sort/h_index.h) | Compute the researcher's h-index given a citation count array. The h-index is the largest number $\textit{h}$ such that $\textit{h}$ articles have at least $\textit{h}$ citations each.
-- Intersection of two sorted arrays, EPI#13.1: [c++](/cpp-algorithm/src/sort/intersect_two_sorted_array.h)(`IntersectTwoSortedArray`) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
-- Merge intervals, EPI#13.7, LeetCode#merge-intervals: [c++](/cpp-algorithm/src/sort/merge_interval.h)(`MergeIntervals`) | Given a collection of intervals, merge all overlapping intervals.
-- Merge two sorted arrays, EPI#13.2, LeetCode#merge-sorted-array: [c++](/cpp-algorithm/src/sort/merge_two_sorted_array.h)(`MergeTwoSortedArray`) | Merge two sorted array. Merge the second array into the first array.
+- H-Index, EPI#13.3: [cpp](/cpp-algorithm/src/sort/h_index.h) | Compute the researcher's h-index given a citation count array. The h-index is the largest number $\textit{h}$ such that $\textit{h}$ articles have at least $\textit{h}$ citations each.
+- Intersection of two sorted arrays, EPI#13.1: [cpp](/cpp-algorithm/src/sort/intersect_two_sorted_array.h)(`IntersectTwoSortedArray`) | Compute the intersection of two sorted array. The input arrays may have duplicate entries, but the output should be free of duplicates.
+- Merge intervals, EPI#13.7, LeetCode#merge-intervals: [cpp](/cpp-algorithm/src/sort/merge_interval.h)(`MergeIntervals`) | Given a collection of intervals, merge all overlapping intervals.
+- Merge two sorted arrays, EPI#13.2, LeetCode#merge-sorted-array: [cpp](/cpp-algorithm/src/sort/merge_two_sorted_array.h)(`MergeTwoSortedArray`) | Merge two sorted array. Merge the second array into the first array.
 - Partitioning and sorting an array with many repeated entries, EPI#13.9: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/SortRepeatedEntry.java)(`groupByAge`) | Given an array of objects with an age field, reorder the array so that objects of equal age appear together. They should be sorted in ascending order of age, and the order of objects with the same age is not important.
-- Remove first-name duplicates, EPI#13.4: [c++](/cpp-algorithm/src/sort/remove_first_name_duplicate.h)(`EliminateFirstNameDuplicate`) | Given an array of names, remove the duplicates of the first name.
+- Remove first-name duplicates, EPI#13.4: [cpp](/cpp-algorithm/src/sort/remove_first_name_duplicate.h)(`EliminateFirstNameDuplicate`) | Given an array of names, remove the duplicates of the first name.
 - Salary threshold, EPI#13.12: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/SalaryThreshold.java)(`computeSalaryThreshold`) | Given an array of salaries and a budget, compute the salary cap so that the total salaries equal the budget.
 - Team photo day, EPI#13.10: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/SortPlayerByHeight.java) | Given two arrays of numbers, for team photos, players are arranged in front and back rows and then photographed. The players in the back row must necessarily be taller than those in the front row. Additionally, all players in a row should belong to the same team.
-- Union of intervals, EPI#13.8: [c++](/cpp-algorithm/src/sort/union_interval.h)(`UnionOfIntervals`) | Given a set of intervals, compute their union.
+- Union of intervals, EPI#13.8: [cpp](/cpp-algorithm/src/sort/union_interval.h)(`UnionOfIntervals`) | Given a set of intervals, compute their union.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 
 ### :page_facing_up: String
 
 <!-- @formatter:off -->
+
 **C++ declaration/methods**
 
 ```cpp
@@ -1280,28 +1303,29 @@ var str = collection.stream()
     .map(String::valueOf)
     .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
 ```
+
 <!-- @formatter:on -->
 
 **String algorithms**
 
 - Finite automata, CLRS#32.3
 - Knuth-Morris-Pratt algorithm (KMP), CLRS#32.4
-- Naive string matching, CLRS#32.1: [c++](/cpp-algorithm/src/string/naive_string_match.h), [python](/python-algorithm/algorithm/string/naive_string_search.py) | Find all occurrences of a pattern in a string.
-- Rabin-Karp algorithm, CLRS#32.2, EPI#6.12: [c++](/cpp-algorithm/src/string/rabin_karp.h) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
+- Naive string matching, CLRS#32.1: [cpp](/cpp-algorithm/src/string/naive_string_match.h), [python](/python-algorithm/algorithm/string/naive_string_search.py) | Find all occurrences of a pattern in a string.
+- Rabin-Karp algorithm, CLRS#32.2, EPI#6.12: [cpp](/cpp-algorithm/src/string/rabin_karp.h) | Use the hash function to find all occurrences of a pattern in a string. It has $\theta(\text{pattern-size})$ preprocessing time and $\theta((\text{text-size} - \text{pattern-size} + 1) \text{pattern-size})$ time complexity.
 
 **Examples**
 
 - Bit compression, CCSP#1.2: [python](/python-algorithm/algorithm/string/bit_compression.py) | Compress a gene string using bit manipulation.
-- Convert string, EPI#6.1: [c++](/cpp-algorithm/src/string/convert_string.h)(`IntToString`, `StringToInt`) | Convert integer to string and vice versa.
-- IP address validation, EPI#6.9: [c++](/cpp-algorithm/src/string/ip_address.h) | Validate IPv4 address that is in the form of 'x.x.x.x' where $\textit{x}$ is a number between 0 and 255.
-- Look and say problem, EPI#6.7: [c++](/cpp-algorithm/src/string/look_and_say.h)
-- Palindrome, EPI#6.5: [c++](/cpp-algorithm/src/string/palindrome.h) | Check if a string is palindromic.
-- Print sine wave pattern string, EPI#6.10: [c++](/cpp-algorithm/src/string/print_string.h)(`SineWaveString` and `PrintSineWaveString`) | Print a string in sine wave pattern.
+- Convert string, EPI#6.1: [cpp](/cpp-algorithm/src/string/convert_string.h)(`IntToString`, `StringToInt`) | Convert integer to string and vice versa.
+- IP address validation, EPI#6.9: [cpp](/cpp-algorithm/src/string/ip_address.h) | Validate IPv4 address that is in the form of 'x.x.x.x' where $\textit{x}$ is a number between 0 and 255.
+- Look and say problem, EPI#6.7: [cpp](/cpp-algorithm/src/string/look_and_say.h)
+- Palindrome, EPI#6.5: [cpp](/cpp-algorithm/src/string/palindrome.h) | Check if a string is palindromic.
+- Print sine wave pattern string, EPI#6.10: [cpp](/cpp-algorithm/src/string/print_string.h)(`SineWaveString` and `PrintSineWaveString`) | Print a string in sine wave pattern.
 - Roman number string
-  - verify roman number string, EPI#6.8: [c++](/cpp-algorithm/src/string/roman_number.h)(`VerifyRomanString`) | Verify if a string is a valid roman number.
-  - convert roman number string to integer, EPI#6.8: [c++](/cpp-algorithm/src/string/roman_number.h)(`RomanStringToInteger`) | Convert a roman number to integer.
-- Run-length encoding (RLE), EPI#6.11: [c++](/cpp-algorithm/src/string/run_length_encoding.h) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
-- Spreadsheet column decoding/encoding, EPI#6.3: [c++](/cpp-algorithm/src/string/sheet_encoding.h)(`DecodingSheetColumnId`, `EncodingSheetColumnId`) | Convert a spreadsheet column id to integer and vice versa.
+  - verify roman number string, EPI#6.8: [cpp](/cpp-algorithm/src/string/roman_number.h)(`VerifyRomanString`) | Verify if a string is a valid roman number.
+  - convert roman number string to integer, EPI#6.8: [cpp](/cpp-algorithm/src/string/roman_number.h)(`RomanStringToInteger`) | Convert a roman number to integer.
+- Run-length encoding (RLE), EPI#6.11: [cpp](/cpp-algorithm/src/string/run_length_encoding.h) | Run-length encoding is a simple form of data compression in which runs of data are stored as a single data value and count.
+- Spreadsheet column decoding/encoding, EPI#6.3: [cpp](/cpp-algorithm/src/string/sheet_encoding.h)(`DecodingSheetColumnId`, `EncodingSheetColumnId`) | Convert a spreadsheet column id to integer and vice versa.
 
 [:arrow_up_small: back to toc](#table-of-contents)
 

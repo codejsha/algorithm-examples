@@ -15,7 +15,7 @@ auto ActivitySelection::RecursiveActivitySelector(const std::vector<int>& start,
 
     if (sub_index < size)
     {
-        auto activities = RecursiveActivitySelector(start, finish, sub_index, size);
+        std::vector<int> activities = RecursiveActivitySelector(start, finish, sub_index, size);
         activities.push_back(sub_index);
 
         return activities;

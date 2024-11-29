@@ -41,12 +41,13 @@ jobs:
         run: ./vcpkg install gsl:x64-linux gtest:x64-linux benchmark:x64-linux fmt:x64-linux
 
       - name: Configure CMake
-        run: cmake --preset linux-${{env.BUILD_TYPE_LOWERCASE}} -S ${{github.workspace}}/cpp-algorithm -B ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-${{env.BUILD_TYPE_LOWERCASE}}
+        working-directory: ${{github.workspace}}/cpp-algorithm
+        run: make configure
 
       - name: Build
-        working-directory: ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-${{env.BUILD_TYPE_LOWERCASE}}
-        run: cmake --build . --config ${{env.BUILD_TYPE}} --target all --parallel 6
+        working-directory: ${{github.workspace}}/cpp-algorithm
+        run: make build
 
       - name: Test
-        working-directory: ${{github.workspace}}/cpp-algorithm/out/build/linux-x64-${{env.BUILD_TYPE_LOWERCASE}}
-        run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
+        working-directory: ${{github.workspace}}/cpp-algorithm
+        run: make test

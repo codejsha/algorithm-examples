@@ -56,13 +56,13 @@ auto Permutation::InversePermutation(const std::vector<int>& permutation, const 
 
 auto Permutation::NextPermutation(std::vector<int>& permutation) -> std::vector<int>
 {
-    auto inversionPoint = std::is_sorted_until(permutation.rbegin(), permutation.rend());
+    const auto inversionPoint = std::is_sorted_until(permutation.rbegin(), permutation.rend());
     if (inversionPoint == permutation.rend())
     {
         return {};
     }
 
-    auto leastUpperBound = std::upper_bound(permutation.rbegin(), inversionPoint, *inversionPoint);
+    const auto leastUpperBound = std::upper_bound(permutation.rbegin(), inversionPoint, *inversionPoint);
 
     std::iter_swap(inversionPoint, leastUpperBound);
     std::reverse(permutation.rbegin(), inversionPoint);
@@ -72,13 +72,13 @@ auto Permutation::NextPermutation(std::vector<int>& permutation) -> std::vector<
 
 auto Permutation::PreviousPermutation(std::vector<int>& permutation) -> std::vector<int>
 {
-    auto inversionPoint = std::is_sorted_until(permutation.rbegin(), permutation.rend(), std::greater<>());
+    const auto inversionPoint = std::is_sorted_until(permutation.rbegin(), permutation.rend(), std::greater<>());
     if (inversionPoint == permutation.rend())
     {
         return {};
     }
 
-    auto leastUpperBound = std::upper_bound(permutation.rbegin(), inversionPoint, *inversionPoint, std::greater<>());
+    const auto leastUpperBound = std::upper_bound(permutation.rbegin(), inversionPoint, *inversionPoint, std::greater<>());
 
     std::iter_swap(inversionPoint, leastUpperBound);
     std::reverse(permutation.rbegin(), inversionPoint);

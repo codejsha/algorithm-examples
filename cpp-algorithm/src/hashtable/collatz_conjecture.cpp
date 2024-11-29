@@ -21,13 +21,13 @@ auto CollatzConjecture::GenerateCollatzSequence(const long long number,
     // if number is even, then divide it by 2
     if (number % 2 == 0)
     {
-        auto sub_sequence = GenerateCollatzSequence(number / 2, hash_table);
+        std::vector<long long> sub_sequence = GenerateCollatzSequence(number / 2, hash_table);
         sequence.insert(sequence.end(), sub_sequence.begin(), sub_sequence.end());
     }
     // if number is odd, then multiply it by 3 and add 1
     else
     {
-        auto sub_sequence = GenerateCollatzSequence(number * 3 + 1, hash_table);
+        std::vector<long long> sub_sequence = GenerateCollatzSequence(number * 3 + 1, hash_table);
         sequence.insert(sequence.end(), sub_sequence.begin(), sub_sequence.end());
     }
 
@@ -42,7 +42,7 @@ auto CollatzConjecture::FindNumbersSatisfyingCollatzConjecture(const long long n
     for (long long i = 1LL; i < number; ++i)
     {
         // if the Collatz sequence ends with 1, then satisfies the Collatz conjecture
-        if (auto sequence = GenerateCollatzSequence(i, hash_table); sequence.back() == 1)
+        if (std::vector<long long> sequence = GenerateCollatzSequence(i, hash_table); sequence.back() == 1)
         {
             satisfied_numbers.push_back(i);
         }

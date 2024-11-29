@@ -10,7 +10,7 @@ auto IntegerPalindrome::IsPalindromeNumber(int x) -> bool
     }
 
     const int num_digits = static_cast<int>(std::floor(log10(x))) + 1;
-    auto msd_mask = static_cast<int>(std::pow(10, num_digits - 1));
+    int msd_mask = static_cast<int>(std::pow(10, num_digits - 1));
 
     for (int i = 0; i < (num_digits / 2); ++i)
     {

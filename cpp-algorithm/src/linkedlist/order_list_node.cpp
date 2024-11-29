@@ -3,9 +3,9 @@
 auto OrderListNode::ListPivoting(const std::shared_ptr<LinkedList::Node<int>>& list, int x)
     -> std::shared_ptr<LinkedList::Node<int>>
 {
-    auto less_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
-    auto equal_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
-    auto greater_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
+    const auto less_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
+    const auto equal_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
+    const auto greater_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, nullptr});
 
     auto less_iter = less_head;
     auto equal_iter = equal_head;
