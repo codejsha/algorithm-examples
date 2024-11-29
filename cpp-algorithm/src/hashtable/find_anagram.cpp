@@ -9,7 +9,7 @@ auto FindAnagram::FindAnagramMappings(const std::vector<std::string>& dictionary
     std::unordered_map<std::string, std::vector<std::string>> dictionary_map;
     for (const std::string& word : dictionary)
     {
-        auto sorted_word = word;
+        std::string sorted_word = word;
         std::ranges::sort(sorted_word);
         dictionary_map[sorted_word].emplace_back(word);
     }

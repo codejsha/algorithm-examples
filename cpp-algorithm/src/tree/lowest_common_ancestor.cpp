@@ -53,7 +53,7 @@ auto LowestCommonAncestor::FindLowestCommonAncestor2(const BinaryTree::ExtendedN
         std::swap(iter1, iter2);
     }
 
-    auto depth_diff = std::abs(depth1 - depth2);
+    int depth_diff = std::abs(depth1 - depth2);
     while (depth_diff--)
     {
         iter1 = iter1->parent;

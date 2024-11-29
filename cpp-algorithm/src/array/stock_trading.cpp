@@ -27,7 +27,7 @@ auto StockTrading::BuyAndSellStockOnce(const std::vector<int>& prices) -> double
 
     for (double price : prices)
     {
-        auto max_profit_sell_today = price - min_price_so_far;
+        double max_profit_sell_today = price - min_price_so_far;
         max_profit = std::max(max_profit, max_profit_sell_today);
         min_price_so_far = std::min(min_price_so_far, price);
     }

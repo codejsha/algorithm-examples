@@ -2,28 +2,28 @@
 
 void BTree::Tree::SplitChild(Node* node, int index)
 {
-    auto left_child = node->children[index];
+    Node* left_child = node->children[index];
 
     // create a right child node,
     // and split keys, children of the left child node
 
     // create right child
-    auto right_child = new Node{};
+    Node* right_child = new Node{};
     right_child->is_leaf = left_child->is_leaf;
 
     // split keys of the left child
     // copy keys from median+1 to the end
-    auto right_keys = std::vector<char>(left_child->keys.begin() + degree, left_child->keys.end());
+    std::vector<char> right_keys = std::vector<char>(left_child->keys.begin() + degree, left_child->keys.end());
     right_child->keys = std::move(right_keys);
     // get median key
-    auto median_key = left_child->keys[degree - 1];
+    const char median_key = left_child->keys[degree - 1];
     // erase keys from median to the end
     left_child->keys.erase(left_child->keys.begin() + degree - 1, left_child->keys.end());
 
     // split children of the left child
     if (left_child->is_leaf == false)
     {
-        auto right_children = std::vector<Node*>(left_child->children.begin() + degree, left_child->children.end());
+        std::vector<Node*> right_children = std::vector<Node*>(left_child->children.begin() + degree, left_child->children.end());
         right_child->children = std::move(right_children);
         left_child->children.erase(left_child->children.begin() + degree, left_child->children.end());
     }
@@ -75,11 +75,11 @@ void BTree::Tree::InsertNonFull(Node* node, char key)
 
 void BTree::Tree::Insert(Node* node, char key)
 {
-    auto root_node = node;
+    Node* root_node = node;
 
     if (static_cast<int>(node->keys.size()) == 2 * degree - 1)
     {
-        auto new_node = new Node{};
+        Node* new_node = new Node{};
         root = new_node;
         new_node->is_leaf = false;
         new_node->children.push_back(root_node);

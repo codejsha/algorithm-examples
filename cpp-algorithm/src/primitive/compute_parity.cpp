@@ -49,7 +49,7 @@ auto ComputingParity::ParityLookupTable(const unsigned long long x) -> short
 {
     constexpr int mask_size = 16;
     constexpr int bit_mask = 0xFFFF;
-    static auto precomputed_parity = BuildTable();
+    static std::array<short, 1 << 16> precomputed_parity = BuildTable();
 
     return precomputed_parity[x >> (3 * mask_size)]
            ^ precomputed_parity[(x >> (2 * mask_size)) & bit_mask]

@@ -8,7 +8,7 @@ auto ClosestStar::FindClosestStar(std::vector<Star>& stars, const int k) -> std:
 
     while (!stars.empty())
     {
-        auto star = stars.back();
+        Star star = stars.back();
         stars.pop_back();
 
         if (static_cast<int>(max_heap.size()) < k)
