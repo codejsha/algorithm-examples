@@ -1188,7 +1188,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |     $O(n + k)$      | when the input elements have a large range of values    |
 | **Average** |     $O(n + k)$      | when the elements are distributed randomly in the array |
 
-- Heap sort, CLRS#6: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/HeapSort.java) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>($\textit{n}$ is the number of elements)
+- Heap sort, CLRS#6: [golang](go-algorithm/pkg/sort/heap_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/HeapSort.java) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>($\textit{n}$ is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
