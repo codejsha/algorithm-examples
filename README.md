@@ -1172,7 +1172,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       | when the input list is already sorted in the reverse order of the desired sorting order |
 | **Average** |      $O(n^2)$       | when the input list is in jumbled order                                                 |
 
-- Bucket sort, CLRS#8.4: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BucketSort.java) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the number of buckets)
+- Bucket sort, CLRS#8.4: [golang](go-algorithm/pkg/sort/bucket_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BucketSort.java) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the number of buckets)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                                    |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------------- |
