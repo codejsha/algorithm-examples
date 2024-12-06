@@ -7,19 +7,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class GreatestCommonDivisorTest {
     @Test
     void gcdValidInput() {
-        var a = 8;
-        var b = 12;
-        var expected = 4;
-        var actual = GreatestCommonDivisor.gcd(a, b);
+        int a = 8;
+        int b = 12;
+        int expected = 4;
+        int actual = GreatestCommonDivisor.gcd(a, b);
         assertEquals(expected, actual);
     }
 
     @Test
     void gcdRecursiveValidInput() {
-        var a = 8;
-        var b = 12;
-        var expected = 4;
-        var actual = GreatestCommonDivisor.gcdRecursive(a, b);
+        int a = 8;
+        int b = 12;
+        int expected = 4;
+        int actual = GreatestCommonDivisor.gcdRecursive(a, b);
         assertEquals(expected, actual);
     }
 }

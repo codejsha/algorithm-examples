@@ -15,11 +15,11 @@ public class FloydWarshall {
      * @return shortest path matrix
      */
     public static int[][] floydWarshall(int[][] matrix) {
-        var length = matrix.length;
+        int length = matrix.length;
 
         // initialize the shortest path matrix
-        var dist = new int[length][length];
-        for (var i = 0; i < length; i++) {
+        int[][] dist = new int[length][length];
+        for (int i = 0; i < length; i++) {
             // for (var j = 0; j < length; j++) {
             //     dist[i][j] = matrix[i][j];
             // }
@@ -27,9 +27,9 @@ public class FloydWarshall {
         }
 
         // compute the shortest path weight
-        for (var k = 0; k < length; k++) {
-            for (var i = 0; i < length; i++) {
-                for (var j = 0; j < length; j++) {
+        for (int k = 0; k < length; k++) {
+            for (int i = 0; i < length; i++) {
+                for (int j = 0; j < length; j++) {
                     dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
                 }
             }
@@ -48,11 +48,11 @@ public class FloydWarshall {
      * @return shortest path matrix
      */
     public static int[][] floydWarshallPositiveWeight(int[][] matrix) {
-        var length = matrix.length;
+        int length = matrix.length;
 
         // initialize the shortest path matrix
-        var dist = new int[length][length];
-        for (var i = 0; i < length; i++) {
+        int[][] dist = new int[length][length];
+        for (int i = 0; i < length; i++) {
             // for (var j = 0; j < length; j++) {
             //     dist[i][j] = matrix[i][j];
             // }
@@ -60,9 +60,9 @@ public class FloydWarshall {
         }
 
         // compute the shortest path weight
-        for (var k = 0; k < length; k++) {
-            for (var i = 0; i < length; i++) {
-                for (var j = 0; j < length; j++) {
+        for (int k = 0; k < length; k++) {
+            for (int i = 0; i < length; i++) {
+                for (int j = 0; j < length; j++) {
                     if (dist[i][k] + dist[k][j] < dist[i][j])
                         dist[i][j] = dist[i][k] + dist[k][j];
                 }
@@ -78,10 +78,10 @@ public class FloydWarshall {
      * @return initialized adjacency matrix
      */
     public static int[][] initializeMatrix(int[][] matrix) {
-        var length = matrix.length;
-        var newMatrix = new int[length][length];
-        for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length; j++) {
+        int length = matrix.length;
+        int[][] newMatrix = new int[length][length];
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
                 if (i == j) {
                     newMatrix[i][j] = 0;
                 } else if (matrix[i][j] != 0) {
@@ -100,9 +100,9 @@ public class FloydWarshall {
      * @param matrix adjacency matrix
      */
     private static void printMatrix(int[][] matrix) {
-        var length = matrix.length;
-        for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length; j++) {
+        int length = matrix.length;
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
                 if (matrix[i][j] == INF)
                     System.out.print("INF ");
                 else

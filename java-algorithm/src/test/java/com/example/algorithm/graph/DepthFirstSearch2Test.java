@@ -17,16 +17,15 @@ class DepthFirstSearch2Test {
 
     @Test
     void testDepthFirstSearch() {
-        var adjacencyMatrix = new int[][]{
+        int[][] adjacencyMatrix = new int[][]{
                 {0, 1, 0, 1, 0, 0},
                 {0, 0, 0, 0, 1, 0},
                 {0, 0, 0, 0, 0, 1},
                 {0, 1, 0, 0, 0, 0},
                 {0, 0, 0, 1, 0, 0},
                 {0, 0, 0, 0, 0, 1},
-
         };
-        var shortestDistance = DepthFirstSearch2.performDepthFirstSearch(adjacencyMatrix, 0, 3);
+        int shortestDistance = DepthFirstSearch2.performDepthFirstSearch(adjacencyMatrix, 0, 3);
         assertEquals(2, shortestDistance);
     }
 }

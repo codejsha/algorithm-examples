@@ -15,9 +15,9 @@ class BubbleSortTest {
     void setUp() {
         // data preparation (size 8, lower bound 1, upper bound 100, seed 42)
         // array data: [31, 64, 49, 85, 71, 26, 6, 19]
-        var size = 8;
-        var min = 1;
-        var max = 100;
+        int size = 8;
+        int min = 1;
+        int max = 100;
         var random = new Random(42);
         array = random.ints(size, min, max + 1).toArray();
     }

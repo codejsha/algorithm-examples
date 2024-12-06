@@ -4,13 +4,13 @@ import java.util.LinkedList;
 
 public class MazeProblem {
     public static int searchMazePath(int[][] maze) {
-        var m = maze.length;
-        var n = maze[0].length;
+        int m = maze.length;
+        int n = maze[0].length;
         var queue = new LinkedList<Coordinate>();
         var start = new Coordinate(0, 0, 1);
         queue.add(start);
         while (!queue.isEmpty()) {
-            var point = queue.poll();
+            Coordinate point = queue.poll();
             if (point.x == m - 1 && point.y == n - 1) {
                 return point.distance;
             }

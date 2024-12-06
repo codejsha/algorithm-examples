@@ -13,7 +13,7 @@ public class DepthFirstSearch2 {
      * @return the distance from source to dest
      */
     public static int performDepthFirstSearch(int[][] matrix, int source, int dest) {
-        var visited = new boolean[matrix.length];
+        boolean[] visited = new boolean[matrix.length];
         return depthFirstSearch(matrix, source, dest, visited) - 1;
     }
 
@@ -31,9 +31,9 @@ public class DepthFirstSearch2 {
             return 0;
         }
         visited[source] = true;
-        for (var i = 0; i < matrix.length; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             if (matrix[source][i] == 1 && !visited[i]) {
-                var result = depthFirstSearch(matrix, i, dest, visited);
+                int result = depthFirstSearch(matrix, i, dest, visited);
                 if (result != -1) {
                     return result + 1;
                 }

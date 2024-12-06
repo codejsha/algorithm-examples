@@ -4,8 +4,8 @@ import static com.example.algorithm.util.ElementUtil.swap;
 
 public class BubbleSort {
     public static int[] bubbleSort(int[] array) {
-        for (var i = 0; i < array.length; i++) {
-            for (var j = array.length - 1; j > i; j--) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = array.length - 1; j > i; j--) {
                 if (array[j] < array[j - 1]) {
                     swap(array, j - 1, j);
                 }

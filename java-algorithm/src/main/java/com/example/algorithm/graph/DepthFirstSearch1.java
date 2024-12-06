@@ -33,11 +33,11 @@ public class DepthFirstSearch1 {
         if (source.equals(dest)) {
             return visited.toArray(String[]::new);
         }
-        for (var edge : edges) {
-            var u = edge[0];
-            var v = edge[1];
+        for (String[] edge : edges) {
+            String u = edge[0];
+            String v = edge[1];
             if (u.equals(source) && !visited.contains(v)) {
-                var path = depthFirstSearch(edges, v, dest, visited);
+                String[] path = depthFirstSearch(edges, v, dest, visited);
                 if (path != null) {
                     return path;
                 }

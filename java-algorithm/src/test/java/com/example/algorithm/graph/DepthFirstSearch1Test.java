@@ -17,7 +17,7 @@ class DepthFirstSearch1Test {
 
     @Test
     void testDepthFirstSearch() {
-        var edges = new String[][]{
+        String[][] edges = new String[][]{
                 {"u", "v"},
                 {"u", "x"},
                 {"v", "y"},
@@ -26,7 +26,7 @@ class DepthFirstSearch1Test {
                 {"y", "x"},
                 {"z", "z"}
         };
-        var path = DepthFirstSearch1.performDepthFirstSearch(edges, "u", "y");
+        String[] path = DepthFirstSearch1.performDepthFirstSearch(edges, "u", "y");
         assertArrayEquals(new String[]{"u", "v", "y"}, path);
     }
 }

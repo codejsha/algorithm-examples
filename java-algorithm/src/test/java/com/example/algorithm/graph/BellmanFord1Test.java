@@ -18,7 +18,7 @@ class BellmanFord1Test {
 
     @Test
     void testBellmanFordAlgorithm() {
-        var edges = new int[][]{
+        int[][] edges = new int[][]{
                 {0, 1},
                 {0, 3},
                 {1, 2},
@@ -30,11 +30,11 @@ class BellmanFord1Test {
                 {4, 0},
                 {4, 2}
         };
-        var weights = new int[]{6, 7, 5, 8, -4, -2, -3, 9, 2, 7};
-        var predecessorArray = BellmanFord1.bellmanFordAlgorithm(edges, weights, 0);
+        int[] weights = new int[]{6, 7, 5, 8, -4, -2, -3, 9, 2, 7};
+        int[] predecessorArray = BellmanFord1.bellmanFordAlgorithm(edges, weights, 0);
         BellmanFord1.printPath(predecessorArray, 0, 2);
-        var shortestPath = BellmanFord1.shortestPath(predecessorArray, 0, 2);
-        var shortestDistance = BellmanFord1.shortestDistance(predecessorArray, 0, 2);
+        int[] shortestPath = BellmanFord1.shortestPath(predecessorArray, 0, 2);
+        int shortestDistance = BellmanFord1.shortestDistance(predecessorArray, 0, 2);
         assertArrayEquals(new int[]{0, 3, 2}, shortestPath);
         assertEquals(2, shortestDistance);
     }

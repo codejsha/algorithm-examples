@@ -70,8 +70,8 @@ class PrimTest {
 
     @Test
     void primAlgorithmVertex() {
-        var expected = new Prim.Vertex[]{vertexA, vertexB, vertexC, vertexI, vertexF, vertexG, vertexH, vertexD, vertexE};
-        var vertices = Prim.primAlgorithmVertex(graph, vertexA);
+        Prim.Vertex[] expected = new Prim.Vertex[]{vertexA, vertexB, vertexC, vertexI, vertexF, vertexG, vertexH, vertexD, vertexE};
+        Prim.Vertex[] vertices = Prim.primAlgorithmVertex(graph, vertexA);
         Arrays.sort(expected);
         Arrays.sort(vertices);
         for (int i = 0; i < expected.length; i++) {
@@ -81,8 +81,8 @@ class PrimTest {
 
     @Test
     void primAlgorithmEdge() {
-        var expected = new Prim.Edge[]{edgeAB, edgeBC, edgeCI, edgeCF, edgeFG, edgeGH, edgeCD, edgeDE};
-        var edges = Prim.primAlgorithmEdge(graph, vertexA);
+        Prim.Edge[] expected = new Prim.Edge[]{edgeAB, edgeBC, edgeCI, edgeCF, edgeFG, edgeGH, edgeCD, edgeDE};
+        Prim.Edge[] edges = Prim.primAlgorithmEdge(graph, vertexA);
         Arrays.sort(expected);
         Arrays.sort(edges);
         for (int i = 0; i < expected.length; i++) {

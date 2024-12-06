@@ -12,11 +12,11 @@ public class BreadthFirstSearch2 {
         var queue = new ArrayDeque<Vertex>();
         queue.add(source);
         while (!queue.isEmpty()) {
-            var u = queue.poll();
+            Vertex u = queue.poll();
             if (u == dest) {
                 return u;
             }
-            for (var v : u.neighbors) {
+            for (Vertex v : u.neighbors) {
                 if (!v.visited) {
                     v.visited = true;
                     v.distance = u.distance + 1;
@@ -30,7 +30,7 @@ public class BreadthFirstSearch2 {
 
     public static Vertex[] getShortestPath(Vertex dest) {
         var path = new ArrayList<Vertex>();
-        for (var vertex = dest; vertex != null; vertex = vertex.previous) {
+        for (Vertex vertex = dest; vertex != null; vertex = vertex.previous) {
             path.add(vertex);
         }
         Collections.reverse(path);
