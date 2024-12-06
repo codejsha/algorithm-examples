@@ -1196,7 +1196,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Insertion sort, CLRS#2.1: [cpp](/cpp-algorithm/src/sort/sort.h), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/InsertionSort.java) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>($\textit{n}$ is the number of elements)
+- Insertion sort, CLRS#2.1: [cpp](/cpp-algorithm/src/sort/sort.h), [golang](go-algorithm/pkg/sort/insertion_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/InsertionSort.java) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>($\textit{n}$ is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                     |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------- |
