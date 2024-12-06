@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergeSort {
     public static void mergeSort(int[] array, int start, int end) {
         if (start < end) {
-            var middle = Math.floorDiv(start + end, 2);
+            int middle = Math.floorDiv(start + end, 2);
             mergeSort(array, start, middle);
             mergeSort(array, middle + 1, end);
             merge(array, start, middle, end);
@@ -13,18 +13,18 @@ public class MergeSort {
     }
 
     private static void merge(int[] array, int start, int middle, int end) {
-        var leftSize = middle - start + 1;
-        var rightSize = end - middle;
+        int leftSize = middle - start + 1;
+        int rightSize = end - middle;
 
-        var leftArray = Arrays.copyOfRange(array, start, middle + 1);
-        var rightArray = Arrays.copyOfRange(array, middle + 1, end + 1);
+        int[] leftArray = Arrays.copyOfRange(array, start, middle + 1);
+        int[] rightArray = Arrays.copyOfRange(array, middle + 1, end + 1);
 
-        var i = 0;
-        var j = 0;
-        var outOfLeft = false;
-        var outOfRight = false;
+        int i = 0;
+        int j = 0;
+        boolean outOfLeft = false;
+        boolean outOfRight = false;
 
-        for (var k = start; k < end + 1; k++) {
+        for (int k = start; k < end + 1; k++) {
             if (leftSize <= i) {
                 outOfLeft = true;
             }

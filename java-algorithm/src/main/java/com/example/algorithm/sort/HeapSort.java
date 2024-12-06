@@ -4,9 +4,9 @@ import static com.example.algorithm.util.ElementUtil.swap;
 
 public class HeapSort {
     public static int[] heapSort(int[] array) {
-        var heapSize = array.length;
+        int heapSize = array.length;
         buildMaxHeap(array);
-        for (var i = heapSize - 1; i > 0; i--) {
+        for (int i = heapSize - 1; i > 0; i--) {
             swap(array, 0, i);
             heapSize--;
             maxHeapify(array, heapSize, 0);
@@ -15,18 +15,18 @@ public class HeapSort {
     }
 
     private static void buildMaxHeap(int[] array) {
-        var heapSize = array.length;
-        var loopIndex = Math.subtractExact(Math.floorDiv(heapSize, 2), 1);
+        int heapSize = array.length;
+        int loopIndex = Math.subtractExact(Math.floorDiv(heapSize, 2), 1);
 
-        for (var i = loopIndex; i > -1; i--) {
+        for (int i = loopIndex; i > -1; i--) {
             maxHeapify(array, heapSize, i);
         }
     }
 
     private static void maxHeapify(int[] array, int heapSize, int index) {
-        var largest = index;
-        var leftIndex = 2 * index + 1; // 2n + 1
-        var rightIndex = 2 * index + 2; // 2n + 2
+        int largest = index;
+        int leftIndex = 2 * index + 1; // 2n + 1
+        int rightIndex = 2 * index + 2; // 2n + 2
 
         if ((leftIndex < heapSize) && (array[largest] < array[leftIndex])) {
             largest = leftIndex;

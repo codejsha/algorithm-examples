@@ -20,17 +20,17 @@ public class Prim {
      * @return The minimum spanning tree of the graph.
      */
     public static Graph primAlgorithm(Graph graph) {
-        var mst = new Graph();
+        Graph mst = new Graph();
         var queue = new PriorityQueue<Edge>();
         var visited = new HashSet<Vertex>();
-        var start = graph.vertices.iterator().next();
+        Vertex start = graph.vertices.iterator().next();
         mst.addVertex(start);
         visited.add(start);
         queue.addAll(start.edges);
         while (!queue.isEmpty()) {
-            var edge = queue.poll();
-            var u = edge.source;
-            var v = edge.sink;
+            Edge edge = queue.poll();
+            Vertex u = edge.source;
+            Vertex v = edge.sink;
             if (visited.contains(u) && visited.contains(v)) {
                 continue;
             }
@@ -61,9 +61,9 @@ public class Prim {
         visited.add(start);
         queue.addAll(start.edges);
         while (!queue.isEmpty()) {
-            var edge = queue.poll();
-            var u = edge.source;
-            var v = edge.sink;
+            Edge edge = queue.poll();
+            Vertex u = edge.source;
+            Vertex v = edge.sink;
             if (visited.contains(u) && visited.contains(v)) {
                 continue;
             }
@@ -94,9 +94,9 @@ public class Prim {
         visited.add(start);
         queue.addAll(start.edges);
         while (!queue.isEmpty()) {
-            var edge = queue.poll();
-            var u = edge.source;
-            var v = edge.sink;
+            Edge edge = queue.poll();
+            Vertex u = edge.source;
+            Vertex v = edge.sink;
             if (visited.contains(u) && visited.contains(v)) {
                 continue;
             }

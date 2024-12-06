@@ -15,13 +15,13 @@ public class Kruskal {
      * @return The minimum spanning tree of the graph.
      */
     public static Graph kruskalAlgorithm(Graph graph) {
-        var mst = new Graph();
+        Graph mst = new Graph();
         var queue = new PriorityQueue<Edge>();
         queue.addAll(graph.edges);
         while (!queue.isEmpty()) {
-            var edge = queue.poll();
-            var u = edge.source;
-            var v = edge.sink;
+            Edge edge = queue.poll();
+            Vertex u = edge.source;
+            Vertex v = edge.sink;
             if (findSet(u) != findSet(v)) {
                 mst.addEdge(edge);
                 union(u, v);
@@ -39,13 +39,13 @@ public class Kruskal {
      * @return The minimum spanning tree of the graph.
      */
     public static Graph kruskalAlgorithmSorted(Graph graph) {
-        var mst = new Graph();
-        var sortedEdges = new ArrayList<>(graph.edges);
+        Graph mst = new Graph();
+        var sortedEdges = new ArrayList<Edge>(graph.edges);
         sortedEdges.sort(Comparator.comparing(Edge::getWeight)
                 .thenComparing(Edge::getSource).thenComparing(Edge::getSink));
-        for (var edge : sortedEdges) {
-            var u = edge.source;
-            var v = edge.sink;
+        for (Edge edge : sortedEdges) {
+            Vertex u = edge.source;
+            Vertex v = edge.sink;
             if (findSet(u) != findSet(v)) {
                 mst.addEdge(edge);
                 union(u, v);
@@ -63,14 +63,14 @@ public class Kruskal {
      * @return The edges of the minimum spanning tree of the graph.
      */
     public static Edge[] kruskalAlgorithmEdge(Graph graph) {
-        var mst = new Edge[graph.vertices.size() - 1];
-        var i = 0;
-        var sortedEdges = new ArrayList<>(graph.edges);
+        Edge[] mst = new Edge[graph.vertices.size() - 1];
+        int i = 0;
+        var sortedEdges = new ArrayList<Edge>(graph.edges);
         sortedEdges.sort(Comparator.comparing(Edge::getWeight)
                 .thenComparing(Edge::getSource).thenComparing(Edge::getSink));
-        for (var edge : sortedEdges) {
-            var u = edge.source;
-            var v = edge.sink;
+        for (Edge edge : sortedEdges) {
+            Vertex u = edge.source;
+            Vertex v = edge.sink;
             if (findSet(u) != findSet(v)) {
                 mst[i++] = edge;
                 union(u, v);
@@ -101,8 +101,8 @@ public class Kruskal {
      * @param v the vertex of the second set
      */
     private static void union(Vertex u, Vertex v) {
-        var uParent = findSet(u);
-        var vParent = findSet(v);
+        Vertex uParent = findSet(u);
+        Vertex vParent = findSet(v);
         if (uParent.rank > vParent.rank) {
             vParent.parent = uParent;
         } else if (uParent.rank < vParent.rank) {

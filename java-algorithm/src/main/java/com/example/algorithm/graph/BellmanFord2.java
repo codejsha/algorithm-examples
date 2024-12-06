@@ -8,11 +8,11 @@ import java.util.*;
 public class BellmanFord2 {
     public static void bellmanFordAlgorithm(Graph graph, Vertex source) {
         source.distance = 0;
-        for (var i = 0; i < graph.vertices.size() - 1; i++) {
+        for (int i = 0; i < graph.vertices.size() - 1; i++) {
             for (var edge : graph.edges.keySet()) {
-                var u = edge.keySet().iterator().next();
-                var v = edge.values().iterator().next();
-                var newDistance = u.distance + graph.edges.get(edge);
+                Vertex u = edge.keySet().iterator().next();
+                Vertex v = edge.values().iterator().next();
+                int newDistance = u.distance + graph.edges.get(edge);
                 if (u.distance != Integer.MAX_VALUE && newDistance < v.distance) {
                     v.distance = newDistance;
                     v.previous = u;
@@ -23,7 +23,7 @@ public class BellmanFord2 {
 
     public static Vertex[] shortestPath(Vertex dest) {
         var path = new ArrayList<Vertex>();
-        for (var vertex = dest; vertex != null; vertex = vertex.previous) {
+        for (Vertex vertex = dest; vertex != null; vertex = vertex.previous) {
             path.add(vertex);
         }
         Collections.reverse(path);
@@ -43,12 +43,11 @@ public class BellmanFord2 {
     }
 
     public static void printAllPaths(Graph graph) {
-        for (var v : graph.vertices) {
+        for (Vertex v : graph.vertices) {
             printPath(v);
             System.out.println();
         }
     }
-
 
     public static class Graph {
         Set<Vertex> vertices = new HashSet<>();

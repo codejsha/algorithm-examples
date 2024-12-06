@@ -12,10 +12,10 @@ public class SalaryThreshold {
      * @return salary threshold
      */
     public static int computeSalaryThreshold(Integer[] salaries, Integer target) {
-        var currentSalaries = Arrays.stream(salaries).sorted().toArray(Integer[]::new);
+        Integer[] currentSalaries = Arrays.stream(salaries).sorted().toArray(Integer[]::new);
 
         // total salary threshold
-        var sum = 0;
+        int sum = 0;
         for (Integer salary : salaries) {
             sum += salary;
         }
@@ -26,10 +26,10 @@ public class SalaryThreshold {
         }
 
         // compute salary threshold
-        var unadjustedSum = 0;
-        for (var i = 0; i < salaries.length; i++) {
-            var adjustedPeople = salaries.length - i;
-            var adjustedSum = currentSalaries[i] * adjustedPeople;
+        int unadjustedSum = 0;
+        for (int i = 0; i < salaries.length; i++) {
+            int adjustedPeople = salaries.length - i;
+            int adjustedSum = currentSalaries[i] * adjustedPeople;
             if (unadjustedSum + adjustedSum >= target) {
                 return (target - unadjustedSum) / adjustedPeople;
             }
