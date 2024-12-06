@@ -1,12 +1,52 @@
 package math
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestLCM(t *testing.T) {
-	assert.Equal(t, 72, LCM(24, 36))
-	assert.Equal(t, 374, LCM(17, 22))
-	assert.Equal(t, 3000, LCM(120, 500))
+func Test_LCM(t *testing.T) {
+	type args struct {
+		a int
+		b int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{
+			name: "Case 1",
+			args: args{
+				a: 24,
+				b: 36,
+			},
+			want: 72,
+		},
+		{
+			name: "Case 2",
+			args: args{
+				a: 17,
+				b: 22,
+			},
+			want: 374,
+		},
+		{
+			name: "Case 3",
+			args: args{
+				a: 120,
+				b: 500,
+			},
+			want: 3000,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := LCM(tt.args.a, tt.args.b)
+
+			assert.Equalf(t, tt.want, got, "LCM() got = %v, want %v", got, tt.want)
+		})
+	}
 }

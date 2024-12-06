@@ -920,9 +920,9 @@ Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225)
 
 - Combination: [cpp](/cpp-algorithm/src/math/combination.h)(`GenerateCombination`) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD), CLRS#31.2: [python](/python-algorithm/algorithm/math/greatest_common_divisor.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/GreatestCommonDivisor.java), [golang](/go-algorithm/pkg/math/greatest_common_divisor.go) | Find the greatest common divisor of two numbers.
+- Greatest common divisor (GCD), CLRS#31.2: [python](/python-algorithm/algorithm/math/greatest_common_divisor.py), [golang](/go-algorithm/pkg/math/greatest_common_divisor.go), [java](/java-algorithm/src/main/java/com/example/algorithm/math/GreatestCommonDivisor.java) | Find the greatest common divisor of two numbers.
 - Integer factorization: [java](/java-algorithm/src/main/java/com/example/algorithm/math/IntegerFactorization.java) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
-- Least common multiple (LCM): [python](/python-algorithm/algorithm/math/least_common_multiple.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/LeastCommonMultiple.java), [golang](/go-algorithm/pkg/math/least_common_multiple.go) | Find the least common multiple of two numbers.
+- Least common multiple (LCM): [python](/python-algorithm/algorithm/math/least_common_multiple.py), [golang](/go-algorithm/pkg/math/least_common_multiple.go), [java](/java-algorithm/src/main/java/com/example/algorithm/math/LeastCommonMultiple.java) | Find the least common multiple of two numbers.
 - Miller-Rabin primality test, CLRS#31.8: [cpp](/cpp-algorithm/src/math/miller_rabin.h) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
 - Permutation
   - given string: [cpp](/cpp-algorithm/src/math/permutation.h)(`Permutation`) | Find the permutation of a set of items from given string.
