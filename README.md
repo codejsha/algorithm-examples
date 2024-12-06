@@ -1180,7 +1180,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       | when all elements are placed into a single bucket                                                              |
 | **Average** |       $O(n)$        |                                                                                                                |
 
-- Counting sort, CLRS#8.2: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/CountingSort.java) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort (CLRS#8.3).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the range of input values)
+- Counting sort, CLRS#8.2: [golang](go-algorithm/pkg/sort/counting_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/CountingSort.java) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort (CLRS#8.3).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the range of input values)
 
 | **Case**    | **Time complexity** | **Remarks**                                             |
 | ----------- | :-----------------: | ------------------------------------------------------- |
