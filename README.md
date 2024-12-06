@@ -920,9 +920,9 @@ Math.pow(2.71, 3.15), Math.round(3.14), Math.sqrt(225)
 
 - Combination: [cpp](/cpp-algorithm/src/math/combination.h)(`GenerateCombination`) | Find the number of ways to choose $k$ items from $n$ items.
 - Fast Fourier transform: Fast Fourier transform is a mathematical algorithm that finds the discrete Fourier transform of a set of real numbers.
-- Greatest common divisor (GCD), CLRS#31.2: [python](/python-algorithm/algorithm/math/greatest_common_divisor.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/GreatestCommonDivisor.java), [golang](/go-algorithm/pkg/math/greatest_common_divisor.go) | Find the greatest common divisor of two numbers.
+- Greatest common divisor (GCD), CLRS#31.2: [python](/python-algorithm/algorithm/math/greatest_common_divisor.py), [golang](/go-algorithm/pkg/math/greatest_common_divisor.go), [java](/java-algorithm/src/main/java/com/example/algorithm/math/GreatestCommonDivisor.java) | Find the greatest common divisor of two numbers.
 - Integer factorization: [java](/java-algorithm/src/main/java/com/example/algorithm/math/IntegerFactorization.java) | Integer factorization is the process of determining which prime numbers divide a given positive integer.
-- Least common multiple (LCM): [python](/python-algorithm/algorithm/math/least_common_multiple.py), [java](/java-algorithm/src/main/java/com/example/algorithm/math/LeastCommonMultiple.java), [golang](/go-algorithm/pkg/math/least_common_multiple.go) | Find the least common multiple of two numbers.
+- Least common multiple (LCM): [python](/python-algorithm/algorithm/math/least_common_multiple.py), [golang](/go-algorithm/pkg/math/least_common_multiple.go), [java](/java-algorithm/src/main/java/com/example/algorithm/math/LeastCommonMultiple.java) | Find the least common multiple of two numbers.
 - Miller-Rabin primality test, CLRS#31.8: [cpp](/cpp-algorithm/src/math/miller_rabin.h) | Miller-Rabin primality test is a mathematical algorithm that finds whether a given number is prime.
 - Permutation
   - given string: [cpp](/cpp-algorithm/src/math/permutation.h)(`Permutation`) | Find the permutation of a set of items from given string.
@@ -1164,7 +1164,7 @@ list.sort(Comparator.comparingInt(String::length));
 
 **Sorting algorithms**
 
-- Bubble sort, CLRS#2-problems2.2: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BubbleSort.java) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>($\textit{n}$ is the number of elements)
+- Bubble sort, CLRS#2-problems2.2: [golang](go-algorithm/pkg/sort/bubble_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BubbleSort.java) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>($\textit{n}$ is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                             |
 | :---------- | :-----------------: | :-------------------------------------------------------------------------------------- |
@@ -1172,7 +1172,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       | when the input list is already sorted in the reverse order of the desired sorting order |
 | **Average** |      $O(n^2)$       | when the input list is in jumbled order                                                 |
 
-- Bucket sort, CLRS#8.4: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BucketSort.java) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the number of buckets)
+- Bucket sort, CLRS#8.4: [golang](go-algorithm/pkg/sort/bucket_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BucketSort.java) | Bucket sort is a sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket contains a range of values and the elements are sorted within these buckets using any of the suitable sorting algorithms (such as insertion sort, merge sort, selection sort).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the number of buckets)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                                                    |
 | ----------- | :-----------------: | -------------------------------------------------------------------------------------------------------------- |
@@ -1180,7 +1180,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |      $O(n^2)$       | when all elements are placed into a single bucket                                                              |
 | **Average** |       $O(n)$        |                                                                                                                |
 
-- Counting sort, CLRS#8.2: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/CountingSort.java) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort (CLRS#8.3).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the range of input values)
+- Counting sort, CLRS#8.2: [golang](go-algorithm/pkg/sort/counting_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/CountingSort.java) | Counting sort is a non-comparative sorting algorithm that sorts the elements of an array by counting the occurrences of each element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array. It is used as a subroutine in radix sort (CLRS#8.3).<br>($\textit{n}$ is the number of elements and $\textit{k}$ is the range of input values)
 
 | **Case**    | **Time complexity** | **Remarks**                                             |
 | ----------- | :-----------------: | ------------------------------------------------------- |
@@ -1188,7 +1188,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |     $O(n + k)$      | when the input elements have a large range of values    |
 | **Average** |     $O(n + k)$      | when the elements are distributed randomly in the array |
 
-- Heap sort, CLRS#6: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/HeapSort.java) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>($\textit{n}$ is the number of elements)
+- Heap sort, CLRS#6: [golang](go-algorithm/pkg/sort/heap_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/HeapSort.java) | Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort an array. It is used for the implementation of priority queue.<br>($\textit{n}$ is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks** |
 | ----------- | :-----------------: | ----------- |
@@ -1196,7 +1196,7 @@ list.sort(Comparator.comparingInt(String::length));
 | **Worst**   |    $O(n log n)$     |             |
 | **Average** |    $O(n log n)$     |             |
 
-- Insertion sort, CLRS#2.1: [cpp](/cpp-algorithm/src/sort/sort.h), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/InsertionSort.java) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>($\textit{n}$ is the number of elements)
+- Insertion sort, CLRS#2.1: [cpp](/cpp-algorithm/src/sort/sort.h), [golang](go-algorithm/pkg/sort/insertion_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/InsertionSort.java) | Insertion sort is a comparison-based sorting algorithm that builds the final sorted array one element at a time. One of the fastest algorithms for sorting very small arrays (around 10 elements).<br>($\textit{n}$ is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                     |
 | ----------- | :-----------------: | ------------------------------------------------------------------------------- |

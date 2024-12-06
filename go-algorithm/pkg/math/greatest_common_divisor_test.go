@@ -1,21 +1,97 @@
 package math
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestGCDEuclidean(t *testing.T) {
-	assert.Equal(t, 12, GCDEuclidean(24, 36))
-	assert.Equal(t, 1, GCDEuclidean(17, 22))
-	assert.Equal(t, 20, GCDEuclidean(120, 500))
+func Test_GCDEuclidean(t *testing.T) {
+	type args struct {
+		a int
+		b int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{
+			name: "Case 1",
+			args: args{
+				a: 24,
+				b: 36,
+			},
+			want: 12,
+		},
+		{
+			name: "Case 2",
+			args: args{
+				a: 17,
+				b: 22,
+			},
+			want: 1,
+		},
+		{
+			name: "Case 3",
+			args: args{
+				a: 120,
+				b: 500,
+			},
+			want: 20,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := GCDEuclidean(tt.args.a, tt.args.b)
+
+			assert.Equalf(t, tt.want, got, "GCDEuclidean(%v, %v)", tt.args.a, tt.args.b)
+		})
+	}
 }
 
-func TestGCDEuclideanExtended(t *testing.T) {
-	d1, _, _ := GCDEuclideanExtended(24, 36)
-	assert.Equal(t, 12, d1)
-	d2, _, _ := GCDEuclideanExtended(17, 22)
-	assert.Equal(t, 1, d2)
-	d3, _, _ := GCDEuclideanExtended(120, 500)
-	assert.Equal(t, 20, d3)
+func Test_GCDEuclideanExtended(t *testing.T) {
+	type args struct {
+		a int
+		b int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{
+			name: "Case 1",
+			args: args{
+				a: 24,
+				b: 36,
+			},
+			want: 12,
+		},
+		{
+			name: "Case 2",
+			args: args{
+				a: 17,
+				b: 22,
+			},
+			want: 1,
+		},
+		{
+			name: "Case 3",
+			args: args{
+				a: 120,
+				b: 500,
+			},
+			want: 20,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, _, _ := GCDEuclideanExtended(tt.args.a, tt.args.b)
+
+			assert.Equalf(t, tt.want, got, "GCDEuclideanExtended(%v, %v)", tt.args.a, tt.args.b)
+		})
+	}
 }
