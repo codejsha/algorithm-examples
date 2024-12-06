@@ -46,10 +46,10 @@ class DijkstraTest {
     @Test
     void testDijkstraAlgorithm() {
         Dijkstra.dijkstraAlgorithm(graph, vertexS);
-        var pathT = Dijkstra.getShortestPath(vertexT);
-        var pathX = Dijkstra.getShortestPath(vertexX);
-        var pathY = Dijkstra.getShortestPath(vertexY);
-        var pathZ = Dijkstra.getShortestPath(vertexZ);
+        Dijkstra.Vertex[] pathT = Dijkstra.getShortestPath(vertexT);
+        Dijkstra.Vertex[] pathX = Dijkstra.getShortestPath(vertexX);
+        Dijkstra.Vertex[] pathY = Dijkstra.getShortestPath(vertexY);
+        Dijkstra.Vertex[] pathZ = Dijkstra.getShortestPath(vertexZ);
         assertEquals(3, pathT.length);
         assertEquals(4, pathX.length);
         assertEquals(2, pathY.length);

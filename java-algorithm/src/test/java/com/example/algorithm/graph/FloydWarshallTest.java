@@ -19,14 +19,14 @@ class FloydWarshallTest {
 
     @Test
     void testFloydWarshall() {
-        var matrix = new int[][]{
+        int[][] matrix = new int[][]{
                 {0, 3, 8, INF, -4},
                 {INF, 0, INF, 1, 7},
                 {INF, 4, 0, INF, INF},
                 {2, INF, -5, 0, INF},
                 {INF, INF, INF, 6, 0}
         };
-        var expected = new int[][]{
+        int[][] expected = new int[][]{
                 {0, 1, -3, 2, -4},
                 {3, 0, -4, 1, -1},
                 {7, 4, 0, 5, 3},
@@ -38,13 +38,13 @@ class FloydWarshallTest {
 
     @Test
     void testFloydWarshallPositiveWeight() {
-        var matrix = new int[][]{
+        int[][] matrix = new int[][]{
                 {0, 3, INF, 5},
                 {2, 0, INF, 4},
                 {INF, 1, 0, INF},
                 {INF, INF, 2, 0}
         };
-        var expected = new int[][]{
+        int[][] expected = new int[][]{
                 {0, 3, 7, 5},
                 {2, 0, 6, 4},
                 {3, 1, 0, 5},

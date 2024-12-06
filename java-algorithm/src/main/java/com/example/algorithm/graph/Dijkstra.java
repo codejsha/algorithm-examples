@@ -11,10 +11,10 @@ public class Dijkstra {
         NavigableSet<Vertex> queue = new TreeSet<>();
         queue.add(source);
         while (!queue.isEmpty()) {
-            var u = queue.pollFirst();
+            Vertex u = queue.pollFirst();
             assert u != null;
-            for (var v : u.neighbors) {
-                var newDistance = u.distance + graph.edges.get(Map.of(u, v));
+            for (Vertex v : u.neighbors) {
+                int newDistance = u.distance + graph.edges.get(Map.of(u, v));
                 if (newDistance < v.distance) {
                     queue.remove(v);
                     v.distance = newDistance;
@@ -27,7 +27,7 @@ public class Dijkstra {
 
     public static Vertex[] getShortestPath(Vertex dest) {
         var path = new ArrayList<Vertex>();
-        for (var vertex = dest; vertex != null; vertex = vertex.previous) {
+        for (Vertex vertex = dest; vertex != null; vertex = vertex.previous) {
             path.add(vertex);
         }
         Collections.reverse(path);
@@ -47,7 +47,7 @@ public class Dijkstra {
     }
 
     public static void printAllPaths(Graph graph) {
-        for (var v : graph.vertices) {
+        for (Vertex v : graph.vertices) {
             printPath(v);
             System.out.println();
         }

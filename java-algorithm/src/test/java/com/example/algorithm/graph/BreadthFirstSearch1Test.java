@@ -27,7 +27,7 @@ class BreadthFirstSearch1Test {
         //         {"y", "x"},
         //         {"z", "z"}
         // };
-        var edges = new int[][]{
+        int[][] edges = new int[][]{
                 {0, 1},
                 {0, 3},
                 {1, 4},
@@ -36,7 +36,7 @@ class BreadthFirstSearch1Test {
                 {4, 3},
                 {5, 5}
         };
-        var distance = BreadthFirstSearch1.breadthFirstSearch(edges, 0, 4);
+        int distance = BreadthFirstSearch1.breadthFirstSearch(edges, 0, 4);
         assertEquals(2, distance);
     }
 
@@ -52,7 +52,7 @@ class BreadthFirstSearch1Test {
         //         {"y", "x"},
         //         {"z", "z"}
         // };
-        var edges = new int[][]{
+        int[][] edges = new int[][]{
                 {0, 1},
                 {0, 3},
                 {1, 4},
@@ -61,7 +61,7 @@ class BreadthFirstSearch1Test {
                 {4, 3},
                 {5, 5}
         };
-        var distance = BreadthFirstSearch1.breadthFirstSearchPreProcessingVersion(edges, 0, 4);
+        int distance = BreadthFirstSearch1.breadthFirstSearchPreProcessingVersion(edges, 0, 4);
         assertEquals(2, distance);
     }
 }

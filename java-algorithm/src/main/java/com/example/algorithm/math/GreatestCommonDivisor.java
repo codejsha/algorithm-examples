@@ -3,7 +3,7 @@ package com.example.algorithm.math;
 public class GreatestCommonDivisor {
     public static int gcd(int a, int b) {
         while (b != 0) {
-            var temp = a;
+            int temp = a;
             a = b;
             b = temp % b;
         }

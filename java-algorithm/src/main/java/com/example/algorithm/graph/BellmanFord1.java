@@ -16,17 +16,17 @@ public class BellmanFord1 {
      * @return the predecessor array of the shortest path
      */
     public static int[] bellmanFordAlgorithm(int[][] edges, int[] weight, int source) {
-        var vertices = Arrays.stream(edges).flatMapToInt(Arrays::stream).distinct().toArray();
-        var distance = new int[vertices.length];
-        var predecessor = new int[vertices.length];
+        int[] vertices = Arrays.stream(edges).flatMapToInt(Arrays::stream).distinct().toArray();
+        int[] distance = new int[vertices.length];
+        int[] predecessor = new int[vertices.length];
         Arrays.fill(distance, Integer.MAX_VALUE);
         Arrays.fill(predecessor, -1);
         distance[source] = 0;
-        for (var i = 0; i < vertices.length - 1; i++) {
-            for (var j = 0; j < edges.length; j++) {
-                var u = edges[j][0];
-                var v = edges[j][1];
-                var newDistance = distance[u] + weight[j];
+        for (int i = 0; i < vertices.length - 1; i++) {
+            for (int j = 0; j < edges.length; j++) {
+                int u = edges[j][0];
+                int v = edges[j][1];
+                int newDistance = distance[u] + weight[j];
                 if (distance[u] != Integer.MAX_VALUE && newDistance < distance[v]) {
                     distance[v] = newDistance;
                     predecessor[v] = u;
@@ -38,7 +38,7 @@ public class BellmanFord1 {
 
     public static int[] shortestPath(int[] predecessor, int source, int dest) {
         var path = new LinkedList<Integer>();
-        var current = dest;
+        int current = dest;
         while (current != source) {
             path.addFirst(current);
             current = predecessor[current];
@@ -48,8 +48,8 @@ public class BellmanFord1 {
     }
 
     public static int shortestDistance(int[] predecessor, int source, int dest) {
-        var distance = 0;
-        var current = dest;
+        int distance = 0;
+        int current = dest;
         while (current != source) {
             distance++;
             current = predecessor[current];

@@ -19,11 +19,11 @@ public class DepthFirstSearch3 {
         if (source == dest) {
             return source;
         }
-        for (var v : source.neighbors) {
+        for (Vertex v : source.neighbors) {
             if (!v.visited) {
                 v.previous = source;
                 v.distance = source.distance + 1;
-                var u = depthFirstSearch(v, dest);
+                Vertex u = depthFirstSearch(v, dest);
                 if (u != null) {
                     return u;
                 }
@@ -34,7 +34,7 @@ public class DepthFirstSearch3 {
 
     public static Vertex[] getShortestPath(Vertex dest) {
         var path = new ArrayList<Vertex>();
-        for (var vertex = dest; vertex != null; vertex = vertex.previous) {
+        for (Vertex vertex = dest; vertex != null; vertex = vertex.previous) {
             path.add(vertex);
         }
         Collections.reverse(path);

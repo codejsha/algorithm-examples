@@ -68,15 +68,15 @@ class KruskalTest {
 
     @Test
     void testKruskalAlgorithmForSorted() {
-        var expected = new Kruskal.Edge[]{edgeGH, edgeCI, edgeFG, edgeAB, edgeCF, edgeCD, edgeAH, edgeDE};
-        var actual = Kruskal.kruskalAlgorithmSorted(graph).edges.toArray(Kruskal.Edge[]::new);
+        Kruskal.Edge[] expected = new Kruskal.Edge[]{edgeGH, edgeCI, edgeFG, edgeAB, edgeCF, edgeCD, edgeAH, edgeDE};
+        Kruskal.Edge[] actual = Kruskal.kruskalAlgorithmSorted(graph).edges.toArray(Kruskal.Edge[]::new);
         assertArrayEquals(expected, actual);
     }
 
     @Test
     void testKruskalAlgorithmForSortedArray() {
-        var expected = new Kruskal.Edge[]{edgeGH, edgeCI, edgeFG, edgeAB, edgeCF, edgeCD, edgeAH, edgeDE};
-        var actual = Kruskal.kruskalAlgorithmEdge(graph);
+        Kruskal.Edge[] expected = new Kruskal.Edge[]{edgeGH, edgeCI, edgeFG, edgeAB, edgeCF, edgeCD, edgeAH, edgeDE};
+        Kruskal.Edge[] actual = Kruskal.kruskalAlgorithmEdge(graph);
         assertArrayEquals(expected, actual);
     }
 }

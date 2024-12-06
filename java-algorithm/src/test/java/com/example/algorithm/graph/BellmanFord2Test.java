@@ -46,10 +46,10 @@ class BellmanFord2Test {
     void testBellmanFordAlgorithm() {
         BellmanFord2.bellmanFordAlgorithm(graph, vertexS);
         BellmanFord2.printAllPaths(graph);
-        var pathT = BellmanFord2.shortestPath(vertexT);
-        var pathX = BellmanFord2.shortestPath(vertexX);
-        var pathY = BellmanFord2.shortestPath(vertexY);
-        var pathZ = BellmanFord2.shortestPath(vertexZ);
+        BellmanFord2.Vertex[] pathT = BellmanFord2.shortestPath(vertexT);
+        BellmanFord2.Vertex[] pathX = BellmanFord2.shortestPath(vertexX);
+        BellmanFord2.Vertex[] pathY = BellmanFord2.shortestPath(vertexY);
+        BellmanFord2.Vertex[] pathZ = BellmanFord2.shortestPath(vertexZ);
 
         assertEquals(4, pathT.length);
         assertEquals(3, pathX.length);

@@ -33,7 +33,8 @@ public class InsertionSortBenchmark {
 
     @Benchmark
     public void testInsertionSort1(Blackhole blackhole) {
-        var array = new int[]{64, 32, 16, 8, 4};
-        blackhole.consume(InsertionSort.insertionSort(array));
+        var array = new Integer[]{64, 32, 16, 8, 4};
+        InsertionSort.insertionSort(array);
+        blackhole.consume(array);
     }
 }

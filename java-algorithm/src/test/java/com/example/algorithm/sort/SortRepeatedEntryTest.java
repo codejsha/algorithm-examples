@@ -22,7 +22,7 @@ class SortRepeatedEntryTest {
         };
 
         var result = SortRepeatedEntry.groupByAge(people);
-        for (var i = 0; i < expected.length; i++) {
+        for (int i = 0; i < expected.length; i++) {
             assertTrue(result[i].endsWith(expected[i]));
         }
     }

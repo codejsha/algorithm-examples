@@ -17,7 +17,7 @@ class MazeProblemTest {
 
     @Test
     void testSearchMazePathCase1() {
-        var maze = new int[][]{
+        int[][] maze = new int[][]{
                 {1, 0, 1, 1, 1},
                 {1, 0, 1, 0, 1},
                 {1, 0, 1, 1, 1},
@@ -25,12 +25,11 @@ class MazeProblemTest {
                 {0, 0, 0, 0, 1}
         };
         assertEquals(11, MazeProblem.searchMazePath(maze));
-
     }
 
     @Test
     void testSearchMazePathCase2() {
-        var maze = new int[][]{
+        int[][] maze = new int[][]{
                 {1, 0, 1, 1, 1},
                 {1, 0, 1, 0, 1},
                 {1, 0, 1, 1, 1},
@@ -42,7 +41,7 @@ class MazeProblemTest {
 
     @Test
     void testSearchMazePathCase3() {
-        var maze = new int[][]{
+        int[][] maze = new int[][]{
                 {1, 0, 0, 0},
                 {1, 1, 0, 1},
                 {0, 1, 0, 0},
@@ -53,7 +52,7 @@ class MazeProblemTest {
 
     @Test
     void testSearchMazePathCase4() {
-        var maze = new int[][]{
+        int[][] maze = new int[][]{
                 {1, 0, 0, 0, 0},
                 {1, 1, 0, 1, 0},
                 {0, 1, 1, 1, 0},
