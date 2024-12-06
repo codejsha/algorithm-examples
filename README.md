@@ -1164,7 +1164,7 @@ list.sort(Comparator.comparingInt(String::length));
 
 **Sorting algorithms**
 
-- Bubble sort, CLRS#2-problems2.2: [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BubbleSort.java) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>($\textit{n}$ is the number of elements)
+- Bubble sort, CLRS#2-problems2.2: [golang](go-algorithm/pkg/sort/bubble_sort.go), [java](/java-algorithm/src/main/java/com/example/algorithm/sort/BubbleSort.java) | Bubble sort is a sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if needed.<br>($\textit{n}$ is the number of elements)
 
 | **Case**    | **Time complexity** | **Remarks**                                                                             |
 | :---------- | :-----------------: | :-------------------------------------------------------------------------------------- |
