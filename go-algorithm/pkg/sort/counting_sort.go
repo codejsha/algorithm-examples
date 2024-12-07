@@ -4,7 +4,7 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
-func countingSort[T constraints.Integer](arr []T) []T {
+func CountingSort[T constraints.Integer](arr []T) []T {
 	n := len(arr)
 	output := make([]T, n)
 

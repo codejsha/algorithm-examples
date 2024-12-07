@@ -4,23 +4,23 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
-func heapSort[T constraints.Integer](arr []T) {
+func HeapSort[T constraints.Integer](arr []T) {
 	n := len(arr)
-	_buildMaxHeap(arr)
+	buildMaxHeap(arr)
 	for i := n - 1; i > 0; i-- {
 		arr[0], arr[i] = arr[i], arr[0]
-		_maxHeapify(arr, 0, i)
+		maxHeapify(arr, 0, i)
 	}
 }
 
-func _buildMaxHeap[T constraints.Integer](arr []T) {
+func buildMaxHeap[T constraints.Integer](arr []T) {
 	n := len(arr)
 	for i := n/2 - 1; i >= 0; i-- {
-		_maxHeapify(arr, i, n)
+		maxHeapify(arr, i, n)
 	}
 }
 
-func _maxHeapify[T constraints.Integer](arr []T, i, n int) {
+func maxHeapify[T constraints.Integer](arr []T, i, n int) {
 	largest := i
 	for {
 		left := 2*i + 1
