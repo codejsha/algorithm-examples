@@ -33,9 +33,9 @@ func Test_bubbleSort(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			bubbleSort(tt.args.arr)
+			BubbleSort(tt.args.arr)
 
-			assert.Equalf(t, tt.want, tt.args.arr, "bubbleSort() got = %v, want %v", tt.args.arr, tt.want)
+			assert.Equalf(t, tt.want, tt.args.arr, "BubbleSort() got = %v, want %v", tt.args.arr, tt.want)
 		})
 	}
 }
