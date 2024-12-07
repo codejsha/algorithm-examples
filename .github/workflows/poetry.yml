@@ -4,8 +4,7 @@ name: Python Poetry Test
 on:
   # every day-of-month 1st at 00:00 UTC
   schedule:
-    # prettier-ignore
-    - cron: '0 0 1 * *'
+    - cron: "0 0 1 * *"
   workflow_dispatch:
 
 jobs:
@@ -21,8 +20,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          # prettier-ignore
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install dependencies
         working-directory: ${{github.workspace}}/python-algorithm
