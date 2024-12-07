@@ -3,8 +3,7 @@ name: Markdown Link Check
 on:
   # every sunday at 23:00 UTC
   schedule:
-    # prettier-ignore
-    - cron: '0 23 * * 0'
+    - cron: "0 23 * * 0"
   workflow_call:
   workflow_dispatch:
 
@@ -16,5 +15,4 @@ jobs:
       - uses: umbrelladocs/action-linkspector@v1
         with:
           fail_on_error: true
-          # prettier-ignore
-          config_file: '.config/linkspector.yml'
+          config_file: ".config/linkspector.yml"
