@@ -13,16 +13,16 @@ namespace BinarySearchTree
     public:
         Tree() = default;
 
-        [[nodiscard]] auto GetRoot() const -> BinaryTree::ExtendedNode<T>* { return root_; }
+        [[nodiscard]] BinaryTree::ExtendedNode<T>* GetRoot() const { return root_; }
 
         void Insert(T key);
-        auto Delete(BinaryTree::ExtendedNode<T>* current, T key) -> BinaryTree::ExtendedNode<T>*;
+        BinaryTree::ExtendedNode<T>* Delete(BinaryTree::ExtendedNode<T>* current, T key);
 
-        static auto Minimum(BinaryTree::ExtendedNode<T>* node) -> BinaryTree::ExtendedNode<T>*;
-        static auto Maximum(BinaryTree::ExtendedNode<T>* node) -> BinaryTree::ExtendedNode<T>*;
+        static BinaryTree::ExtendedNode<T>* Minimum(BinaryTree::ExtendedNode<T>* node);
+        static BinaryTree::ExtendedNode<T>* Maximum(BinaryTree::ExtendedNode<T>* node);
 
-        auto Predecessor(T key) -> BinaryTree::ExtendedNode<T>*;
-        auto Successor(T key) -> BinaryTree::ExtendedNode<T>*;
+        BinaryTree::ExtendedNode<T>* Predecessor(T key);
+        BinaryTree::ExtendedNode<T>* Successor(T key);
 
         /**
          * \brief Recursive call to find the node
@@ -30,7 +30,7 @@ namespace BinarySearchTree
          * \param key key to search for
          * \return found node
          */
-        auto IterativeSearch(BinaryTree::ExtendedNode<T>* node, T key) -> BinaryTree::ExtendedNode<T>*;
+        BinaryTree::ExtendedNode<T>* IterativeSearch(BinaryTree::ExtendedNode<T>* node, T key);
 
         /**
          * \brief Iterative call to find a node
@@ -38,7 +38,7 @@ namespace BinarySearchTree
          * \param key key to search for
          * \return found node
          */
-        auto RecursiveSearch(BinaryTree::ExtendedNode<T>* node, T key) -> BinaryTree::ExtendedNode<T>*;
+        BinaryTree::ExtendedNode<T>* RecursiveSearch(BinaryTree::ExtendedNode<T>* node, T key);
 
         void PreorderTraversal(BinaryTree::ExtendedNode<T>* node, std::vector<T>& result);
         void InorderTraversal(BinaryTree::ExtendedNode<T>* node, std::vector<T>& result);
@@ -91,7 +91,7 @@ namespace BinarySearchTree
     }
 
     template <typename T>
-    auto Tree<T>::Delete(BinaryTree::ExtendedNode<T>* current, T key) -> BinaryTree::ExtendedNode<T>*
+    BinaryTree::ExtendedNode<T>* Tree<T>::Delete(BinaryTree::ExtendedNode<T>* current, T key)
     {
         if (current == nullptr)
         {
@@ -135,7 +135,7 @@ namespace BinarySearchTree
     }
 
     template <typename T>
-    auto Tree<T>::Minimum(BinaryTree::ExtendedNode<T>* node) -> BinaryTree::ExtendedNode<T>*
+    BinaryTree::ExtendedNode<T>* Tree<T>::Minimum(BinaryTree::ExtendedNode<T>* node)
     {
         while (node->left != nullptr)
         {
@@ -145,7 +145,7 @@ namespace BinarySearchTree
     }
 
     template <typename T>
-    auto Tree<T>::Maximum(BinaryTree::ExtendedNode<T>* node) -> BinaryTree::ExtendedNode<T>*
+    BinaryTree::ExtendedNode<T>* Tree<T>::Maximum(BinaryTree::ExtendedNode<T>* node)
     {
         while (node->right != nullptr)
         {
@@ -155,7 +155,7 @@ namespace BinarySearchTree
     }
 
     template <typename T>
-    auto Tree<T>::Predecessor(T key) -> BinaryTree::ExtendedNode<T>*
+    BinaryTree::ExtendedNode<T>* Tree<T>::Predecessor(T key)
     {
         auto node = IterativeSearch(root_, key);
 
@@ -180,7 +180,7 @@ namespace BinarySearchTree
     }
 
     template <typename T>
-    auto Tree<T>::Successor(T key) -> BinaryTree::ExtendedNode<T>*
+    BinaryTree::ExtendedNode<T>* Tree<T>::Successor(T key)
     {
         auto node = IterativeSearch(root_, key);
 
@@ -205,7 +205,7 @@ namespace BinarySearchTree
     }
 
     template <typename T>
-    auto Tree<T>::IterativeSearch(BinaryTree::ExtendedNode<T>* node, T key) -> BinaryTree::ExtendedNode<T>*
+    BinaryTree::ExtendedNode<T>* Tree<T>::IterativeSearch(BinaryTree::ExtendedNode<T>* node, T key)
     {
         while ((node != nullptr) && (key != node->key))
         {
@@ -222,7 +222,7 @@ namespace BinarySearchTree
     }
 
     template <typename T>
-    auto Tree<T>::RecursiveSearch(BinaryTree::ExtendedNode<T>* node, T key) -> BinaryTree::ExtendedNode<T>*
+    BinaryTree::ExtendedNode<T>* Tree<T>::RecursiveSearch(BinaryTree::ExtendedNode<T>* node, T key)
     {
         if ((node == nullptr) || key == node->key)
         {

@@ -13,9 +13,9 @@ namespace ClosestStar
         double y;
         double z;
 
-        [[nodiscard]] auto Distance() const -> double { return std::sqrt((x * x) + (y * y) + (z * z)); }
+        [[nodiscard]] double Distance() const { return std::sqrt((x * x) + (y * y) + (z * z)); }
 
-        [[nodiscard]] auto operator<(const Star& other) const -> bool { return Distance() < other.Distance(); }
+        [[nodiscard]] bool operator<(const Star& other) const { return Distance() < other.Distance(); }
     };
 
     /**
@@ -25,7 +25,38 @@ namespace ClosestStar
      * \param k number of closest stars to find
      * \return the closest star
      */
-    auto FindClosestStar(std::vector<Star>& stars, int k) -> std::priority_queue<Star>;
-
+    std::priority_queue<Star> FindClosestStar(
+        std::vector<Star>& stars,
+        int k);
 }
+
+// ----------------------------------------------------------------------------
+inline std::priority_queue<ClosestStar::Star> ClosestStar::FindClosestStar(
+    std::vector<Star>& stars,
+    const int k)
+{
+    std::priority_queue<Star> max_heap;
+
+    while (!stars.empty())
+    {
+        Star star = stars.back();
+        stars.pop_back();
+
+        if (static_cast<int>(max_heap.size()) < k)
+        {
+            max_heap.push(star);
+        }
+        else
+        {
+            if (star.Distance() < max_heap.top().Distance())
+            {
+                max_heap.pop();
+                max_heap.push(star);
+            }
+        }
+    }
+
+    return max_heap;
+}
+
 #endif

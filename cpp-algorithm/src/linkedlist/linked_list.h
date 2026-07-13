@@ -16,24 +16,28 @@ namespace LinkedList
         std::shared_ptr<Node<T>> next;
     };
 
+    // ----------------------------------------------------------------------------
     /**
      * \brief Append a node to the end of a linked list.
      * \param node the head of the list
      * \param tail the tail of the list
      */
-    inline void AppendNode(std::shared_ptr<Node<int>>* node, std::shared_ptr<Node<int>>* tail)
+    inline void AppendNode(
+        std::shared_ptr<Node<int>>* node,
+        std::shared_ptr<Node<int>>* tail)
     {
         (*tail)->next = *node;
         *tail = *node;
         *node = (*node)->next;
     }
 
+    // ----------------------------------------------------------------------------
     /**
      * \brief Return by calculating the length of the list.
      * \param list the head of the list
      * \return length of list
      */
-    inline auto Length(std::shared_ptr<Node<int>> list) -> int
+    inline int Length(std::shared_ptr<Node<int>> list)
     {
         auto length = 0;
         while (list)

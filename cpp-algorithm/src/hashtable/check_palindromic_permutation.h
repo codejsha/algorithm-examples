@@ -2,6 +2,7 @@
 #define CPP_ALGORITHM_CHECK_PALINDROMIC_PERMUTATION_H
 
 #include <string>
+#include <unordered_set>
 
 namespace CheckPalindromicPermutation
 {
@@ -14,7 +15,26 @@ namespace CheckPalindromicPermutation
      * \param str a string
      * \return true if the string is a permutation of a palindrome, false otherwise
      */
-    auto IsPalindromePermutation(const std::string& str) -> bool;
+    bool IsPalindromePermutation(const std::string& str);
+}
+
+// ----------------------------------------------------------------------------
+inline bool CheckPalindromicPermutation::IsPalindromePermutation(const std::string& str)
+{
+    std::unordered_set<char> char_set;
+    for (const char& ch : str)
+    {
+        if (char_set.contains(ch))
+        {
+            char_set.erase(ch);
+        }
+        else
+        {
+            char_set.insert(ch);
+        }
+    }
+
+    return char_set.size() <= 1;
 }
 
 #endif

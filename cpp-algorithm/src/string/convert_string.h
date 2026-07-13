@@ -10,17 +10,54 @@ namespace ConvertString
      * \param number input number
      * \return number string
      */
-    auto IntToString(int number) -> std::string;
+    std::string IntToString(int number);
 
     /**
      * \brief Convert string to integer.
      * \param str input string
      * \return number
      */
-    auto StringToInt(const std::string& str) -> int;
+    int StringToInt(const std::string& str);
 
     // TODO: Implement ConvertBase
-    auto ConvertBase(const std::string& str, int b1, int b2) -> std::string;
+    std::string ConvertBase(const std::string& str, int b1, int b2);
+}
+
+// ----------------------------------------------------------------------------
+inline std::string ConvertString::IntToString(int number)
+{
+    std::string str;
+    bool is_negative = false;
+    if (number < 0)
+    {
+        is_negative = true;
+        number = -number;
+    }
+
+    do
+    {
+        str.push_back('0' + number % 10);
+        number /= 10;
+    } while (number > 0);
+
+    if (is_negative)
+    {
+        str.push_back('-');
+    }
+
+    std::reverse(str.begin(), str.end());
+    return str;
+}
+
+// ----------------------------------------------------------------------------
+inline int ConvertString::StringToInt(const std::string& str)
+{
+    int number = 0;
+    for (char i : str)
+    {
+        number = (number * 10) + (i - '0');
+    }
+    return number;
 }
 
 #endif

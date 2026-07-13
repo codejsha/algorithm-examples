@@ -12,7 +12,32 @@ namespace NaiveStringMatch
      * \param pattern find pattern
      * \return position of pattern in text
      */
-    auto NaiveStringMatcher(const std::string& text, const std::string& pattern) -> std::vector<int>;
+    std::vector<int> NaiveStringMatcher(
+        const std::string& text,
+        const std::string& pattern);
+}
+
+// ----------------------------------------------------------------------------
+inline std::vector<int> NaiveStringMatch::NaiveStringMatcher(
+    const std::string& text,
+    const std::string& pattern)
+{
+    std::vector<int> position;
+    for (int i = 0; i < static_cast<int>(text.size()) - static_cast<int>(pattern.size()) + 1; ++i)
+    {
+        for (int j = 0; j < static_cast<int>(pattern.size()); ++j)
+        {
+            if (text[i + j] != pattern[j])
+            {
+                break;
+            }
+            if (j == static_cast<int>(pattern.size()) - 1)
+            {
+                position.push_back(i);
+            }
+        }
+    }
+    return position;
 }
 
 #endif
