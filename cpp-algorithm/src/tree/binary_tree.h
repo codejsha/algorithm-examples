@@ -79,7 +79,7 @@ namespace BinaryTree
      * \return the height of the tree
      */
     template <typename T>
-    auto ExtendedNodeTreeDepth(const ExtendedNode<T>* node) -> int
+    int ExtendedNodeTreeDepth(const ExtendedNode<T>* node)
     {
         auto depth = 0;
         while (node->parent)

@@ -4,8 +4,7 @@ name: Java Gradle Test
 on:
   # every day-of-month 1st at 00:00 UTC
   schedule:
-    # prettier-ignore
-    - cron: '0 0 1 * *'
+    - cron: "0 0 1 * *"
   workflow_dispatch:
 
 jobs:
@@ -21,9 +20,8 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          # prettier-ignore
-          distribution: 'temurin'
-          java-version: '21'
+          distribution: "temurin"
+          java-version: "21"
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3

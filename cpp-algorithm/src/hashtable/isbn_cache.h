@@ -23,7 +23,7 @@ namespace IsbnCache
          * \param isbn the ISBN to search for
          * \return price if the ISBN is in the cache, -1 otherwise
          */
-        auto Lookup(const std::string& isbn) -> int
+        int Lookup(const std::string& isbn)
         {
             if (auto it = price_table_.find(isbn); it == price_table_.end())
             {
@@ -65,7 +65,7 @@ namespace IsbnCache
          * \param isbn the ISBN to erase
          * \return true if the ISBN was in the cache, false otherwise
          */
-        auto Erase(const std::string& isbn) -> bool
+        bool Erase(const std::string& isbn)
         {
             if (auto it = price_table_.find(isbn); it == price_table_.end())
             {

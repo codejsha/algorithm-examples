@@ -4,7 +4,7 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
-func insertionSort[T constraints.Integer](arr []T) {
+func InsertionSort[T constraints.Integer](arr []T) {
 	for i := 0; i < len(arr); i++ {
 		key := arr[i]
 		j := i - 1

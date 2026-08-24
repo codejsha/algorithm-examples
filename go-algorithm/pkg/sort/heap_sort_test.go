@@ -32,9 +32,9 @@ func Test_heapSort(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			heapSort(tt.args.arr)
+			HeapSort(tt.args.arr)
 
-			assert.Equalf(t, tt.want, tt.args.arr, "heapSort() got = %v, want %v", tt.args.arr, tt.want)
+			assert.Equalf(t, tt.want, tt.args.arr, "HeapSort() got = %v, want %v", tt.args.arr, tt.want)
 		})
 	}
 }

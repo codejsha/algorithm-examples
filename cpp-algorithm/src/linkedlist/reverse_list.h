@@ -3,6 +3,8 @@
 
 #include "linked_list.h"
 
+#include <utility>
+
 namespace ReverseList
 {
     /**
@@ -14,8 +16,37 @@ namespace ReverseList
      * \param finish end index of the sublist
      * \return the head of the list
      */
-    auto ReverseSubList(std::shared_ptr<LinkedList::Node<int>> list, int start, int finish)
-        -> std::shared_ptr<LinkedList::Node<int>>;
+    std::shared_ptr<LinkedList::Node<int>> ReverseSubList(
+        std::shared_ptr<LinkedList::Node<int>> list,
+        int start,
+        int finish);
+}
+
+// ----------------------------------------------------------------------------
+inline std::shared_ptr<LinkedList::Node<int>> ReverseList::ReverseSubList(
+    std::shared_ptr<LinkedList::Node<int>> list,
+    int start,
+    const int finish)
+{
+    const auto dummy_head = std::make_shared<LinkedList::Node<int>>(LinkedList::Node<int>{0, std::move(list)});
+    auto sublist_head = dummy_head;
+
+    int k = 1;
+    while (k++ < start)
+    {
+        sublist_head = sublist_head->next;
+    }
+
+    const auto sublist_iter = sublist_head->next;
+    while (start++ < finish)
+    {
+        auto temp = sublist_iter->next;
+        sublist_iter->next = temp->next;
+        temp->next = sublist_head->next;
+        sublist_head->next = temp;
+    }
+
+    return dummy_head->next;
 }
 
 #endif

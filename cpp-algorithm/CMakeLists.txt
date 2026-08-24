@@ -4,7 +4,7 @@ project(
         cpp_algorithm
         VERSION 1.0
         DESCRIPTION
-        "Algorithm examples for C++"
+        "Algorithm examples in C++"
         LANGUAGES CXX
 )
 

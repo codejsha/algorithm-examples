@@ -33,9 +33,9 @@ func Test_insertionSort(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			insertionSort(tt.args.arr)
+			InsertionSort(tt.args.arr)
 
-			assert.Equalf(t, tt.want, tt.args.arr, "insertionSort() got = %v, want %v", tt.args.arr, tt.want)
+			assert.Equalf(t, tt.want, tt.args.arr, "InsertionSort() got = %v, want %v", tt.args.arr, tt.want)
 		})
 	}
 }

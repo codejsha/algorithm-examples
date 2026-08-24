@@ -6,7 +6,7 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
-func bucketSort[T constraints.Integer](arr []T) []T {
+func BucketSort[T constraints.Integer](arr []T) []T {
 	n := len(arr)
 
 	var maxVal, minVal T
@@ -34,7 +34,7 @@ func bucketSort[T constraints.Integer](arr []T) []T {
 	}
 
 	for i := 0; i < n; i++ {
-		insertionSort(bucket[i])
+		InsertionSort(bucket[i])
 	}
 
 	sorted := make([]T, 0, n)

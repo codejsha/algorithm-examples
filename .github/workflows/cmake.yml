@@ -4,8 +4,7 @@ name: C++ CMake Test
 on:
   # every day-of-month 1st at 00:00 UTC
   schedule:
-    # prettier-ignore
-    - cron: '0 0 1 * *'
+    - cron: "0 0 1 * *"
   workflow_dispatch:
 
 env:

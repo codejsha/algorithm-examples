@@ -33,9 +33,9 @@ func Test_countingSort(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := countingSort(tt.args.arr)
+			got := CountingSort(tt.args.arr)
 
-			assert.Equalf(t, tt.want, got, "countingSort() got = %v, want %v", got, tt.want)
+			assert.Equalf(t, tt.want, got, "CountingSort() got = %v, want %v", got, tt.want)
 		})
 	}
 }

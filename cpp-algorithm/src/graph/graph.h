@@ -3,8 +3,8 @@
 
 namespace Graph
 {
-    auto InitializeAdjacencyMatrix(int row, int col, std::vector<std::vector<int, int>>& edges)
-        -> std::vector<std::vector<int>>
+    std::vector<std::vector<int>> InitializeAdjacencyMatrix(int row, int col, std::vector<std::vector<int, int>>& edges)
+
     {
         auto adjacency_matrix = std::vector<std::vector<int>>(row, std::vector<int>(col, 0));
         for (const auto& [x, y] : edges)
@@ -17,13 +17,13 @@ namespace Graph
         return adjacency_matrix;
     }
 
-    auto InitializeAdjacencyMatrixWithZero(int row, int col) -> std::vector<std::vector<int>>
+    std::vector<std::vector<int>> InitializeAdjacencyMatrixWithZero(int row, int col)
     {
         auto adjacency_matrix = std::vector<std::vector<int>>(row, std::vector<int>(col, 0));
         return adjacency_matrix;
     }
 
-    auto InitializeAdjacencyMatrixWithOne(int row, int col) -> std::vector<std::vector<int>>
+    std::vector<std::vector<int>> InitializeAdjacencyMatrixWithOne(int row, int col)
     {
         auto adjacency_matrix = std::vector<std::vector<int>>(row, std::vector<int>(col, 1));
         return adjacency_matrix;
