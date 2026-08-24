@@ -173,7 +173,7 @@ List<String> list = Lists.asList(boxedArray);
   - multiply two arbitrary-precision integers, EPI#5.3: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`Multiply`) | Multiply two numbers represented by vectors.
 - Delete duplicates from a sorted array, EPI#5.5: [cpp](/cpp-algorithm/src/array/delete_element.h)(`DeleteDuplicates`, `DeleteDuplicateElements`) | Delete duplicate elements in the array.
 - Delete specific elements from a sorted array: [cpp](/cpp-algorithm/src/array/delete_element.h)(`DeleteSpecificElements`) | Delete specific elements in the array.
-- Dutch national flags problem, EPI#5.1: [cpp](/cpp-algorithm/src/array/dutch_national_flag.h)
+- Dutch national flags problem, EPI#5.1: [cpp](/cpp-algorithm/src/array/dutch_national_flag.h)(`DutchFlagPartition1`, `DutchFlagPartition2`, `DutchFlagPartition3`) | Partition an array into three parts based on a pivot value.
 - Enumerate prime numbers, EPI#5.9: [cpp](/cpp-algorithm/src/array/enumerate_prime_number.h) | Enumerate prime numbers in the range.
 - Order elements in an array by even and odd: [cpp](/cpp-algorithm/src/array/order_element.h)(`EvenOdd`) | Order even and odd numbers in the array.
 - Order elements in an array by specified order, EPI#5.8: [cpp](/cpp-algorithm/src/array/order_element.h)(`Rearrange`) | Rearrange arrays to have a specific order.

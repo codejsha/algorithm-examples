@@ -6,7 +6,10 @@
 namespace DutchFlag
 {
     /**
-     * \brief Color enum
+     * \brief Colors used in the Dutch national flag problem.
+     * The array is partitioned around a pivot color so that all elements less than
+     * the pivot appear first, then equals, and finally elements greater than the
+     * pivot.
      */
     enum Color
     {
@@ -16,30 +19,38 @@ namespace DutchFlag
     };
 
     /**
-     * \brief Dutch national flag problem.
-     * \param pivot_index pivot index
-     * \param arr input array
-     * \return result array
+     * \brief Naive partitioning approach.
+     * Repeatedly scans the array to move smaller values left and larger values
+     * right. This is conceptually simple but not optimal.
+     * \param pivot_index Index of the pivot element.
+     * \param arr Input array to be partitioned in-place.
+     * \return The partitioned array.
      */
     std::vector<Color> DutchFlagPartition1(
         int pivot_index,
         std::vector<Color>& arr);
 
     /**
-     * \brief Dutch national flag problem.
-     * \param pivot_index pivot index
-     * \param arr input array
-     * \return result array
+     * \brief Two-pass partitioning approach.
+     * One pass moves values smaller than the pivot to the front, and another pass
+     * moves values larger than the pivot to the end. This is better than the
+     * naive version but still uses multiple scans.
+     * \param pivot_index Index of the pivot element.
+     * \param arr Input array to be partitioned in-place.
+     * \return The partitioned array.
      */
     std::vector<Color> DutchFlagPartition2(
         int pivot_index,
         std::vector<Color>& arr);
 
     /**
-     * \brief Dutch national flag problem.
-     * \param pivot_index pivot index
-     * \param arr input array
-     * \return result array
+     * \brief Three-way partitioning approach.
+     * This is the canonical Dutch national flag solution. It keeps three regions:
+     * [smaller than pivot], [equal to pivot], and [greater than pivot].
+     * The algorithm runs in O(n) time and uses O(1) extra space.
+     * \param pivot_index Index of the pivot element.
+     * \param arr Input array to be partitioned in-place.
+     * \return The partitioned array.
      */
     std::vector<Color> DutchFlagPartition3(
         int pivot_index,
@@ -52,10 +63,12 @@ inline std::vector<DutchFlag::Color> DutchFlag::DutchFlagPartition1(
     std::vector<Color>& arr)
 {
     const Color pivot = arr[pivot_index];
+    const int size = static_cast<Color>(arr.size());
 
-    for (int i = 0; i < static_cast<Color>(arr.size()); ++i)
+    // Move elements smaller than the pivot to the left
+    for (int i = 0; i < size; ++i)
     {
-        for (int j = i + 1; j < static_cast<Color>(arr.size()); ++j)
+        for (int j = i + 1; j < size; ++j)
         {
             if (arr[j] < pivot)
             {
@@ -64,7 +77,9 @@ inline std::vector<DutchFlag::Color> DutchFlag::DutchFlagPartition1(
             }
         }
     }
-    for (int i = static_cast<Color>(arr.size()) - 1; i >= 0; --i)
+
+    // Move elements larger than the pivot to the right
+    for (int i = size - 1; i >= 0; --i)
     {
         for (int j = i - 1; j >= 0; --j)
         {
@@ -85,9 +100,11 @@ inline std::vector<DutchFlag::Color> DutchFlag::DutchFlagPartition2(
     std::vector<Color>& arr)
 {
     const Color pivot = arr[pivot_index];
+    const int  size = static_cast<Color>(arr.size());
 
+    // Collect elements smaller than the pivot to the front
     int smaller = 0;
-    for (int i = 0; i < static_cast<Color>(arr.size()); ++i)
+    for (int i = 0; i < size; ++i)
     {
         if (arr[i] < pivot)
         {
@@ -95,8 +112,9 @@ inline std::vector<DutchFlag::Color> DutchFlag::DutchFlagPartition2(
         }
     }
 
-    int larger = static_cast<Color>(arr.size()) - 1;
-    for (int i = static_cast<Color>(arr.size()) - 1; i >= 0; --i)
+    // Collect elements larger than the pivot to the end
+    int larger = size - 1;
+    for (int i = size - 1; i >= 0; --i)
     {
         if (arr[i] > pivot)
         {
@@ -113,21 +131,29 @@ inline std::vector<DutchFlag::Color> DutchFlag::DutchFlagPartition3(
     std::vector<Color>& arr)
 {
     const Color pivot = arr[pivot_index];
+    const int size = static_cast<Color>(arr.size());
 
+    // [0, smaller): elements less than pivot
+    // [smaller, equal): elements equal to pivot
+    // [equal, larger): unprocessed region
+    // [larger, size): elements greater than pivot
     int smaller = 0;
     int equal = 0;
-    int larger = static_cast<Color>(arr.size());
+    int larger = size;
 
     while (equal < larger)
     {
+        // If the current element is smaller than the pivot, swap it to the smaller region
         if (arr[equal] < pivot)
         {
             std::swap(arr[smaller++], arr[equal++]);
         }
+        // If the current element is equal to the pivot, just move the equal pointer forward
         else if (arr[equal] == pivot)
         {
             ++equal;
         }
+        // If the current element is larger than the pivot, swap it to the larger region
         else
         {
             std::swap(arr[equal], arr[--larger]);
