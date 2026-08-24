@@ -9,7 +9,19 @@ namespace ReverseDigit
      * \param x input number
      * \return result number
      */
-    auto Reverse(int x) -> long long;
+    long long Reverse(int x);
+}
+
+// ----------------------------------------------------------------------------
+inline long long ReverseDigit::Reverse(int x)
+{
+    long long result = 0;
+    while (x)
+    {
+        result = result * 10 + x % 10;
+        x /= 10;
+    }
+    return result;
 }
 
 #endif

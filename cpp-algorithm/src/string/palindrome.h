@@ -11,7 +11,7 @@ namespace Palindrome
      * \param str input string
      * \return true if the string is palindromic, false otherwise
      */
-    auto IsPalindromic1(const std::string& str) -> bool;
+    bool IsPalindromic1(const std::string& str);
 
     /**
      * \brief Check if a string is palindromic.
@@ -19,7 +19,33 @@ namespace Palindrome
      * \param str input string
      * \return true if the string is palindromic, false otherwise
      */
-    auto IsPalindromic2(const std::string& str) -> bool;
+    bool IsPalindromic2(const std::string& str);
+}
+
+// ----------------------------------------------------------------------------
+inline bool Palindrome::IsPalindromic1(const std::string& str)
+{
+    for (int i = 0; i < static_cast<int>(str.length()) / 2; ++i)
+    {
+        if (str[i] != str[str.length() - 1 - i])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+// ----------------------------------------------------------------------------
+inline bool Palindrome::IsPalindromic2(const std::string& str)
+{
+    for (int i = 0, j = static_cast<int>(str.length()) - 1; i < j; ++i, --j)
+    {
+        if (str[i] != str[j])
+        {
+            return false;
+        }
+    }
+    return true;
 }
 
 #endif

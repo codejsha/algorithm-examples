@@ -9,7 +9,8 @@ namespace OrderElement
      * \brief Order even and odd numbers in the array.
      * \param arr numbers
      */
-    void EvenOdd(std::vector<int>& arr);
+    void EvenOdd(
+        std::vector<int>& arr);
 
     /**
      * \brief Rearrange arrays to have a specific order.
@@ -17,7 +18,43 @@ namespace OrderElement
      * \param numbers input array
      * \return ordered array
      */
-    auto Rearrange(std::vector<int>& numbers) -> std::vector<int>;
+    std::vector<int> Rearrange(
+        std::vector<int>& numbers);
+}
+
+// ----------------------------------------------------------------------------
+inline void OrderElement::EvenOdd(
+    std::vector<int>& arr)
+{
+    int next_even = 0;
+    int next_odd = static_cast<int>(arr.size()) - 1;
+
+    while (next_even < next_odd)
+    {
+        if (arr[next_even] % 2 == 0)
+        {
+            ++next_even;
+        }
+        else
+        {
+            std::swap(arr[next_even], arr[next_odd]);
+            --next_odd;
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+inline std::vector<int> OrderElement::Rearrange(
+    std::vector<int>& numbers)
+{
+    for (int i = 1; std::size(numbers); ++i)
+    {
+        if ((!(i % 2) && numbers[i - 1] < numbers[i]) || ((i % 2) && numbers[i - 1] > numbers[i]))
+        {
+            std::swap(numbers[i - 1], numbers[i]);
+        }
+    }
+    return numbers;
 }
 
 #endif
