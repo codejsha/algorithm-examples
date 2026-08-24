@@ -169,7 +169,7 @@ List<String> list = Lists.asList(boxedArray);
 - Advancing through an array, EPI#5.4: [cpp](/cpp-algorithm/src/array/advancing_through.h)(`CanReachEnd`) | Advance through the array to the last index.
 - Arbitrary precision operation
   - increment an arbitrary-precision integer, EPI#5.2: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`PlusOne`) | Add one to the number represented by the vector.
-  - add two arbitrary-precision integers: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`StringAddition`) | Add two numbers represented by strings.
+  - add two arbitrary-precision integers: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`StringAddition`) | Add two binary numbers represented by strings.
   - multiply two arbitrary-precision integers, EPI#5.3: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`Multiply`) | Multiply two numbers represented by vectors.
 - Delete duplicates from a sorted array, EPI#5.5: [cpp](/cpp-algorithm/src/array/delete_element.h)(`DeleteDuplicates`, `DeleteDuplicateElements`) | Delete duplicate elements in the array.
 - Delete specific elements from a sorted array: [cpp](/cpp-algorithm/src/array/delete_element.h)(`DeleteSpecificElements`) | Delete specific elements in the array.
