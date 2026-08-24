@@ -166,7 +166,7 @@ List<String> list = Lists.asList(boxedArray);
 
 **Examples**
 
-- Advancing through an array, EPI#5.4: [cpp](/cpp-algorithm/src/array/advancing_through.h) | Advance through the array to the last index.
+- Advancing through an array, EPI#5.4: [cpp](/cpp-algorithm/src/array/advancing_through.h)(`CanReachEnd`) | Advance through the array to the last index.
 - Arbitrary precision operation
   - increment an arbitrary-precision integer, EPI#5.2: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`PlusOne`) | Add one to the number represented by the vector.
   - add two arbitrary-precision integers: [cpp](/cpp-algorithm/src/array/arbitrary_precision_integer.h)(`StringAddition`) | Add two numbers represented by strings.
