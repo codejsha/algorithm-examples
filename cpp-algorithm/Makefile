@@ -24,6 +24,7 @@ clean:
 .PHONY: configure
 configure:
 	cmake --preset $(PRESET_NAME)
+	ln -sfn out/build/$(PRESET_NAME)/compile_commands.json compile_commands.json
 
 .PHONY: build
 build:
